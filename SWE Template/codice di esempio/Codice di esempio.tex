@@ -10,15 +10,14 @@
 \usepackage{titlesec}
 \usepackage{datetime}
 \setlength{\headsep}{50pt}  
-
 \fancypagestyle{plain}{
 	\fancyhf{}
 	\fancyhead[L]{\includegraphics[height=1.5cm]{Logos.png}}
-	\fancyhead[R]{\leftmark}{}{}
+	\fancyhead[R]{\leftmark}
 	\fancyfoot[L]{\today \    \currenttime}
 	\fancyfoot[R]{\thepage}
 }
-\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge\it}
+\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge}
 
 \pagestyle{plain}
 
