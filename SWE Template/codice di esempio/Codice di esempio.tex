@@ -1,0 +1,134 @@
+
+\documentclass[openany,12pt,a4paper]{report}
+
+\usepackage{helvet} 
+\usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[]{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{titlesec}
+\usepackage{datetime}
+\setlength{\headsep}{50pt}  
+
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyhead[L]{\includegraphics[height=1.5cm]{Logos.png}}
+	\fancyhead[R]{\leftmark}{}{}
+	\fancyfoot[L]{\today \    \currenttime}
+	\fancyfoot[R]{\thepage}
+}
+\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge\it}
+
+\pagestyle{plain}
+
+
+
+
+
+\begin{document}
+	
+\chapter{Titolo Capitolo}
+
+\section{Sezione}
+\label{Sezione}
+Sintesi circa del pdf di 7 pagine 
+\subsection{Sotto Sezione}
+\lipsum[20]
+
+
+\section{Liste e Tabelle}
+\lipsum[15]
+%usare solo in casi eccezionali chiude la pagina e inizia in quella successiva normalmente latex si arrangia ma ogni tanto è esteticamente orrendo
+\newpage
+
+\subsection{Lista Enumerata}
+\begin{enumerate}
+	\item{Punto1:} Oggetto 1 
+	\item{Punto2:} Oggetto 1 
+	\item{Punto3:} Oggetto 1 
+	\item{Punto4:} Oggetto 1 
+	\item{Punto5:} Oggetto 1 
+\end{enumerate}
+
+\subsection{Lista Puntata}
+\begin{itemize}
+	\item{Punto1:} Oggetto 1 
+	\item{Punto2:} Oggetto 1 
+	\item{Punto3:} Oggetto 1 
+	\item{Punto4:} Oggetto 1 
+	\item{Punto5:} Oggetto 1 
+\end{itemize}
+
+
+\subsection{Tabella}
+\begin{tabular}{ | l |  r | }
+	\hline
+	l per allineare a destra & r per allineare a sinistra \\
+	\hline
+	\& per finire il testo della cella  &\textbackslash\textbackslash per finire la riga \\
+	\hline
+	hline traccia una linea orizzontale \\
+	\hline
+	
+\end{tabular}
+
+
+\paragraph{}per evitare che il testo vada si affianchi alla tabella
+
+
+\chapter{Titolo Capitolo2}
+
+
+\section{Titolo Documento}
+Il titolo del documento si cambia sopra dentro fancypagestyle
+\section{Riferimenti}
+Per fare riferimenti ad altre parti usa il comando ref{nomelabel} e nella parte riferita laber{nomelabel}
+\ref{Sezione} 
+\section{Immagini}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=10cm,height=10cm]{Logos.png}
+	\caption{testo Immagine}
+\end{figure}
+
+\paragraph{}
+richiede graphicx che serve anche per lo header
+
+\chapter{Fine}
+\section{Piu informazioni}
+manuali latex ArteLaTeX.pdf(180 pagine) e easy latex.pdf(37 pagine)
+
+
+% Non mettere piu sezioni senza testo interno senno latex muore ,e non ha molto senso comunque
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+%	\section{Se Fai Questo Latex esplode}	
+\end{document}                       

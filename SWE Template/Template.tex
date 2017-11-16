@@ -1,0 +1,29 @@
+
+\documentclass[openany,12pt,a4paper]{report}
+
+\usepackage{helvet} 
+\usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[]{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{titlesec}
+\usepackage{datetime}
+\setlength{\headsep}{50pt}  
+
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyhead[L]{\includegraphics[height=1.5cm]{Logos.png}}
+	\fancyhead[R]{\leftmark}{}{}
+	\fancyfoot[L]{\today \    \currenttime}
+	\fancyfoot[R]{\thepage}
+}
+\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge\it}
+
+\pagestyle{plain}
+\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge\it}
+	
+ \pagestyle{plain}
+\begin{document}
+
+\end{document}                       
