@@ -1,0 +1,35 @@
+
+\documentclass[openany,12pt,a4paper]{report}
+
+\usepackage{subfiles}
+
+\usepackage{StileDoc}
+
+
+
+
+\title{Nome Documento}
+\author{}
+\date{\today}
+
+
+\begin{document}
+	\makeatletter
+	\begin{titlepage}
+		\begin{center}
+			{\huge \bfseries  \@title }\\[15ex] 
+			\includegraphics[width=0.5\linewidth]{./img/Logo.png}\\
+			[40ex] 
+			{\large \@date}
+		\end{center}
+	\end{titlepage}
+	\makeatother
+	\thispagestyle{empty}
+	\newpage
+	\tableofcontents
+	
+	%Aggiungere File da qua in poi
+	\subfile{./tex/NomeCapitolo1}
+	\subfile{./tex/NomeCapitolo2}
+
+	\end{document}                       
