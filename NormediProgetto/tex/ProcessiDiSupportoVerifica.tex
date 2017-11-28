@@ -1,0 +1,63 @@
+\documentclass[../NormeDiProgetto.tex]{subfiles}
+
+\begin{document}
+	
+\section{Verifica}
+\subsection{Scopo}
+Si occupa di accertare che non vengano introdotti errori nel prodotto a seguito dell’esecuzione delle attività dei processi svolti nella fase in esame.
+\subsection{Descrizione}
+Il processo è suddiviso in due attività:
+\begin{itemize}
+\item \textbf{Analisi:} consiste nell’analisi del codice sorgente e la sua successiva esecuzione.
+Viene effettuata tramite due tecniche, l’analisi statica e l’analisi dinamica;
+\item \textbf{Test:} definisce tutti i test che vengono eseguiti sul prodotto software.
+\end{itemize}
+\subsection{Analisi}
+\subsubsection{Analisi statica}
+L’analisi statica è una tecnica che permette di individuare anomalie all’interno di documenti
+e codice sorgente durante tutto il loro ciclo di vita. Si può realizzare tramite due
+tecniche diverse:
+\begin{itemize}
+\item \textbf{Walkthrough:} viene svolta effettuando una lettura a largo spettro. Si tratta
+di un’attività onerosa e collaborativa che richiede la cooperazione di più persone,
+essendo una tecnica non efficiente. Verrà utilizzata principalmente durante la prima
+parte del progetto, quando non tutti i membri del gruppo hanno piena padronanza
+e conoscenza delle Norme di Progetto e del Piano di Qualifica\ped{G}. Utilizzando questa
+tecnica è possibile stilare una lista di controllo contenente gli errori più comuni.
+\item \textbf{Inspection:} viene svolta una lettura mirata e strutturata, volta a localizzare gli
+errori segnalati nella lista di controllo, con il minor costo possibile. Tramite l’acquisizione
+di esperienza la lista di controllo viene progressivamente estesa, rendendo
+l’inspection via via più efficacie. Normalmente è effettuata da una persona sola.
+\end{itemize}
+\subsubsection{Analisi dinamica}
+L’analisi dinamica è una tecnica di analisi del prodotto software che richiede la sua esecuzione. Viene effettuata mediante dei test volti a verificare il funzionamento del prodotto e nel
+caso in cui vengano riscontrate anomalie ne permette l’identificazione.
+I test devono essere ripetibili, cioè deve essere possibile, dato lo stesso input e nello
+stesso ambiente, risalire allo stesso output. Per ogni test devono dunque essere definiti
+i seguenti parametri:
+\begin{itemize}
+\item \textbf{Ambiente:} il sistema hardware e software sul quale verrà eseguito il test del
+prodotto;
+\item \textbf{Stato iniziale:} lo stato iniziale dal quale il test viene eseguito;
+\item \textbf{Input:} l’input inserito;
+\item \textbf{Output:} l’output atteso;
+\item \textbf{Istruzioni aggiuntive:} ulteriori istruzioni su come va eseguito il test e su come
+vanno interpretati i risultati ottenuti.
+\end{itemize}
+\subsection{Test}
+\subsubsection{Test di unità}
+Il test di unità si pone come obiettivo primario l’isolare dal resto del codice la parte
+più piccola di software testabile nell’applicazione, chiamata unità, per stabilire se essa
+funziona esattamente come previsto.
+\subsubsection{Test di sistema}
+Il test di sistema determina la validazione del prodotto software finale e verifica dunque che esso soddisfi in modo completo i requisiti.
+\subsubsection{Test di regressione}
+Il test di regressione deve essere eseguito ad ogni modifica di un’implementazione\ped{G} del
+sistema. A tal fine è necessario eseguire sul codice modificato i test esistenti, in modo da
+stabilire se le modifiche apportate hanno alterato elementi precedentemente funzionanti.
+\subsubsection{Test di accettazione}
+Il test di accettazione prevede il collaudo\ped{G} del prodotto in presenza del proponente\ped{G} e,
+in caso del superamento di tale collaudo, ne consegue il rilascio ufficiale del prodotto
+sviluppato.
+
+\end{document}
