@@ -1,4 +1,4 @@
-\documentclass[./../NormediProgetto.tex]{subfiles}
+\documentclass[../NormediProgetto.tex]{subfiles}
 
 
 \begin{document}
@@ -91,7 +91,7 @@ dove:
 \item{\textbf{A:}} è l'indice principale. Viene incrementato dal \textit{Responsabile di Progetto} all’approvazione del documento e 
 corrisponde al numero di revisione.
 
-\item{\textbf{B:}} è l'indice di verifica. Viene incrementato dal \textit{Verificatore\ped{G}} ad ogni verifica. Quando viene incrementato A, riparte da 0.
+\item{\textbf{B:}} è l'indice di verifica. Viene incrementato dal \glossario{\textit{Verificatore}}{verificatore} ad ogni verifica. Quando viene incrementato A, riparte da 0.
 
 \item{\textbf{C:}} è l'indice di modifica. Viene incrementato dal redattore del documento ad ogni modifica. Quando viene incrementato B, riparte da 0.
 
@@ -103,7 +103,7 @@ corrisponde al numero di revisione.
 
 \begin{itemize}
 
-\item{\textbf{Glossario:}} ogni parola contenuta nel glossario deve essere marcata, alla sua prima occorrenza in ogni documento, in corsivo e con una G maiuscola a pedice (es: \textit{glossario\ped{G}});  
+\item{\textbf{Glossario:}} ogni parola contenuta nel glossario deve essere marcata, alla sua prima occorrenza in ogni documento, in corsivo e con una G maiuscola a pedice, questo verrà automaticamente fatto tramite la macro \{ \}glossario{termine}{riferimento al glossario} che stamperà il termine con la giusta formattazione (\textit{termine}\ped{G}) e controllerà che il suo riferimento sia presente nel glossario, dando un errore in compilazione se è assente;  
 
 \item{\textbf{Grassetto:}} viene applicato ai titoli e agli elementi di un elenco puntato seguiti da una descrizione, può essere usato anche per mettere in risalto parole significative; 
 
@@ -164,7 +164,7 @@ corrisponde al numero di revisione.
 \item{\textbf{SF:}} \textit{Studio di Fattibilità};
 \item{\textbf{PQ:}} \textit{Piano di Qualifica};
 \item{\textbf{ST:}} \textit{Specifica Tecnica};
-\item{\textbf{MU:}} \textit{Manuale utente\ped{G}};
+\item{\textbf{MU:}} \glossario{Manuale utente}{manuale utente};
 \item{\textbf{DP:}} \textit{Definizione di Prodotto};
 \item{\textbf{RR:}} Revisione dei requisiti;
 \item{\textbf{RP:}} Revisione di progettazione;
@@ -174,7 +174,7 @@ corrisponde al numero di revisione.
 \item{\textbf{Am:}} \textit{Amministratore di Progetto};
 \item{\textbf{An:}} \textit{Analista};
 \item{\textbf{Pt:}} \textit{Progettista};
-\item{\textbf{Pr:}} \textit{Programmatore\ped{G}};
+\item{\textbf{Pr:}} \glossario{Programmatore}{programmatore};
 \item{\textbf{Ve:}} \textit{Verificatore}.
 \end{itemize}
 
@@ -207,10 +207,10 @@ Ogni documento non formale completato dovrà essere sottoposto al \textit{Respon
 \subsubsection{\LaTeX{}}
 
 Per la stesura della documentazione è stato utilizzato il linguaggio \LaTeX{} per la sua flessibilità e facilità d'uso.
-Per la stesura del codice è stato utilizzato l’editor \textit{TexStudio\ped{G}}.
+Per la stesura del codice è stato utilizzato l’editor \glossario{TexStudio}{TexStudio}.
 
 \subsubsection{Lucidchart}
 
-Per la realizzazione di diagrammi illustrativi per i documenti viene utilizzata la piattaforma web \textit{Lucidchart\ped{G}}.
+Per la realizzazione di diagrammi illustrativi per i documenti viene utilizzata la piattaforma web \glossario{Lucidchart}{Lucidchart}.
 
 \end{document}

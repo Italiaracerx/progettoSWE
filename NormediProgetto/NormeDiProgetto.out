@@ -1,0 +1,96 @@
+\BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Scopo del Documento}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Glossario}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{Processi primari}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Fornitura}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.1.1}{Scopo}{section.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.1.2}{Rapporti di fornitura}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.3}{Studio di fattibilit\340}{section.2.1}% 8
+\BOOKMARK [3][-]{subsubsection.2.1.3.1}{Scopo}{subsection.2.1.3}% 9
+\BOOKMARK [3][-]{subsubsection.2.1.3.2}{Descrizione}{subsection.2.1.3}% 10
+\BOOKMARK [2][-]{subsection.2.1.4}{Piano di progetto}{section.2.1}% 11
+\BOOKMARK [3][-]{subsubsection.2.1.4.1}{Scopo}{subsection.2.1.4}% 12
+\BOOKMARK [3][-]{subsubsection.2.1.4.2}{Descrizione}{subsection.2.1.4}% 13
+\BOOKMARK [2][-]{subsection.2.1.5}{Piano di qualifica}{section.2.1}% 14
+\BOOKMARK [3][-]{subsubsection.2.1.5.1}{Scopo}{subsection.2.1.5}% 15
+\BOOKMARK [3][-]{subsubsection.2.1.5.2}{Descrizione}{subsection.2.1.5}% 16
+\BOOKMARK [1][-]{section.2.2}{Sviluppo}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.1}{Scopo}{section.2.2}% 18
+\BOOKMARK [2][-]{subsection.2.2.2}{Analisi dei Requisiti}{section.2.2}% 19
+\BOOKMARK [3][-]{subsubsection.2.2.2.1}{Scopo}{subsection.2.2.2}% 20
+\BOOKMARK [3][-]{subsubsection.2.2.2.2}{Descrizione}{subsection.2.2.2}% 21
+\BOOKMARK [3][-]{subsubsection.2.2.2.3}{Classificazione requisiti:}{subsection.2.2.2}% 22
+\BOOKMARK [3][-]{subsubsection.2.2.2.4}{Classificazione casi d\220uso:}{subsection.2.2.2}% 23
+\BOOKMARK [2][-]{subsection.2.2.3}{Progettazione}{section.2.2}% 24
+\BOOKMARK [3][-]{subsubsection.2.2.3.1}{Scopo:}{subsection.2.2.3}% 25
+\BOOKMARK [3][-]{subsubsection.2.2.3.2}{Descrizione}{subsection.2.2.3}% 26
+\BOOKMARK [2][-]{subsection.2.2.4}{Codifica}{section.2.2}% 27
+\BOOKMARK [3][-]{subsubsection.2.2.4.1}{Scopo:}{subsection.2.2.4}% 28
+\BOOKMARK [3][-]{subsubsection.2.2.4.2}{Descrizione}{subsection.2.2.4}% 29
+\BOOKMARK [0][-]{chapter.3}{Processi di supporto}{}% 30
+\BOOKMARK [1][-]{section.3.1}{Documentazione}{chapter.3}% 31
+\BOOKMARK [2][-]{subsection.3.1.1}{Scopo}{section.3.1}% 32
+\BOOKMARK [2][-]{subsection.3.1.2}{Descrizione}{section.3.1}% 33
+\BOOKMARK [2][-]{subsection.3.1.3}{Template}{section.3.1}% 34
+\BOOKMARK [2][-]{subsection.3.1.4}{Struttura dei documenti}{section.3.1}% 35
+\BOOKMARK [3][-]{subsubsection.3.1.4.1}{Prima pagina}{subsection.3.1.4}% 36
+\BOOKMARK [3][-]{subsubsection.3.1.4.2}{Registro delle modifiche}{subsection.3.1.4}% 37
+\BOOKMARK [3][-]{subsubsection.3.1.4.3}{Indice}{subsection.3.1.4}% 38
+\BOOKMARK [3][-]{subsubsection.3.1.4.4}{Contenuto principale}{subsection.3.1.4}% 39
+\BOOKMARK [3][-]{subsubsection.3.1.4.5}{Note a pi\350 di pagina}{subsection.3.1.4}% 40
+\BOOKMARK [2][-]{subsection.3.1.5}{Versionamento}{section.3.1}% 41
+\BOOKMARK [2][-]{subsection.3.1.6}{Norme tipografiche}{section.3.1}% 42
+\BOOKMARK [3][-]{subsubsection.3.1.6.1}{Stile del testo}{subsection.3.1.6}% 43
+\BOOKMARK [3][-]{subsubsection.3.1.6.2}{Elenchi puntati}{subsection.3.1.6}% 44
+\BOOKMARK [3][-]{subsubsection.3.1.6.3}{Formati}{subsection.3.1.6}% 45
+\BOOKMARK [3][-]{subsubsection.3.1.6.4}{Sigle}{subsection.3.1.6}% 46
+\BOOKMARK [2][-]{subsection.3.1.7}{Elementi grafici}{section.3.1}% 47
+\BOOKMARK [3][-]{subsubsection.3.1.7.1}{Tabelle}{subsection.3.1.7}% 48
+\BOOKMARK [3][-]{subsubsection.3.1.7.2}{Immagini}{subsection.3.1.7}% 49
+\BOOKMARK [2][-]{subsection.3.1.8}{Classificazione dei documenti}{section.3.1}% 50
+\BOOKMARK [3][-]{subsubsection.3.1.8.1}{Documenti informali}{subsection.3.1.8}% 51
+\BOOKMARK [3][-]{subsubsection.3.1.8.2}{Documenti formali}{subsection.3.1.8}% 52
+\BOOKMARK [2][-]{subsection.3.1.9}{Procedura di approvazione}{section.3.1}% 53
+\BOOKMARK [2][-]{subsection.3.1.10}{Strumenti}{section.3.1}% 54
+\BOOKMARK [3][-]{subsubsection.3.1.10.1}{LaTeX}{subsection.3.1.10}% 55
+\BOOKMARK [3][-]{subsubsection.3.1.10.2}{Lucidchart}{subsection.3.1.10}% 56
+\BOOKMARK [1][-]{section.3.2}{Verifica}{chapter.3}% 57
+\BOOKMARK [2][-]{subsection.3.2.1}{Scopo}{section.3.2}% 58
+\BOOKMARK [2][-]{subsection.3.2.2}{Descrizione}{section.3.2}% 59
+\BOOKMARK [2][-]{subsection.3.2.3}{Analisi}{section.3.2}% 60
+\BOOKMARK [3][-]{subsubsection.3.2.3.1}{Analisi statica}{subsection.3.2.3}% 61
+\BOOKMARK [3][-]{subsubsection.3.2.3.2}{Analisi dinamica}{subsection.3.2.3}% 62
+\BOOKMARK [2][-]{subsection.3.2.4}{Test}{section.3.2}% 63
+\BOOKMARK [3][-]{subsubsection.3.2.4.1}{Test di unit\340}{subsection.3.2.4}% 64
+\BOOKMARK [3][-]{subsubsection.3.2.4.2}{Test di sistema}{subsection.3.2.4}% 65
+\BOOKMARK [3][-]{subsubsection.3.2.4.3}{Test di regressione}{subsection.3.2.4}% 66
+\BOOKMARK [3][-]{subsubsection.3.2.4.4}{Test di accettazione}{subsection.3.2.4}% 67
+\BOOKMARK [0][-]{chapter.4}{Processi Organizzativi}{}% 68
+\BOOKMARK [1][-]{section.4.1}{Scopo}{chapter.4}% 69
+\BOOKMARK [1][-]{section.4.2}{Descrizione}{chapter.4}% 70
+\BOOKMARK [1][-]{section.4.3}{Ruoli di progetto}{chapter.4}% 71
+\BOOKMARK [2][-]{subsection.4.3.1}{Amministratore di Progetto}{section.4.3}% 72
+\BOOKMARK [2][-]{subsection.4.3.2}{Responsabile di Progetto}{section.4.3}% 73
+\BOOKMARK [2][-]{subsection.4.3.3}{Analista}{section.4.3}% 74
+\BOOKMARK [2][-]{subsection.4.3.4}{Progettista}{section.4.3}% 75
+\BOOKMARK [2][-]{subsection.4.3.5}{Verificatore}{section.4.3}% 76
+\BOOKMARK [2][-]{subsection.4.3.6}{Programmatore}{section.4.3}% 77
+\BOOKMARK [1][-]{section.4.4}{Procedure}{chapter.4}% 78
+\BOOKMARK [2][-]{subsection.4.4.1}{Gestione delle comunicazioni}{section.4.4}% 79
+\BOOKMARK [3][-]{subsubsection.4.4.1.1}{Comunicazioni interne}{subsection.4.4.1}% 80
+\BOOKMARK [3][-]{subsubsection.4.4.1.2}{Comunicazioni esterne}{subsection.4.4.1}% 81
+\BOOKMARK [2][-]{subsection.4.4.2}{Gestione degli incontri}{section.4.4}% 82
+\BOOKMARK [3][-]{subsubsection.4.4.2.1}{Incontri interni}{subsection.4.4.2}% 83
+\BOOKMARK [3][-]{subsubsection.4.4.2.2}{Incontri Esterni}{subsection.4.4.2}% 84
+\BOOKMARK [2][-]{subsection.4.4.3}{Gestione degli strumenti di coordinamento}{section.4.4}% 85
+\BOOKMARK [3][-]{subsubsection.4.4.3.1}{Ticketing}{subsection.4.4.3}% 86
+\BOOKMARK [2][-]{subsection.4.4.4}{Gestione degli strumenti di versionamento}{section.4.4}% 87
+\BOOKMARK [3][-]{subsubsection.4.4.4.1}{Repository}{subsection.4.4.4}% 88
+\BOOKMARK [3][-]{subsubsection.4.4.4.2}{Tipi di file e .gitignore}{subsection.4.4.4}% 89
+\BOOKMARK [3][-]{subsubsection.4.4.4.3}{Norme sui commit}{subsection.4.4.4}% 90
+\BOOKMARK [2][-]{subsection.4.4.5}{Gestione dei rischi}{section.4.4}% 91
+\BOOKMARK [1][-]{section.4.5}{Strumenti}{chapter.4}% 92
+\BOOKMARK [2][-]{subsection.4.5.1}{Sistema operativo}{section.4.5}% 93
+\BOOKMARK [2][-]{subsection.4.5.2}{Telegram}{section.4.5}% 94
+\BOOKMARK [2][-]{subsection.4.5.3}{GitHub}{section.4.5}% 95
+\BOOKMARK [2][-]{subsection.4.5.4}{Asana}{section.4.5}% 96

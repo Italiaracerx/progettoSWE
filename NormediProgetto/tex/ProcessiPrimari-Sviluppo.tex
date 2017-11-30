@@ -1,0 +1,75 @@
+\documentclass[../NomeDocumento.tex]{subfiles}
+
+
+
+\begin{document}
+	
+\section{Sviluppo}
+\subsection{Scopo}
+Questa sezione si prefigge come scopo la stesura delle attività che il gruppo di lavoro deve svolgere.
+\subsection{Analisi dei Requisiti}
+
+	\subsubsection{Scopo} Gli \glossario{analisti}{analista} devono individuare ed elencare i \glossario{requisiti}{requisito} del progetto da realizzare.
+	\subsubsection{Descrizione}
+	I requisiti dovranno essere estratti dal capitolato d’appalto, dai verbali di riunione e dallo studio dei casi d’uso. 
+	Il documento Analisi dei requisiti deve:
+	\begin{enumerate}
+		\item Descrivere il fine del progetto;
+		\item Fissare le funzionalità e i requisiti richiesti dal committente;
+		\item Definire tecniche di raffinamento e di miglioramento del prodotto e processo di sviluppo;
+		\item Definire tecniche per la revisione del codice;
+		\item Fornire ai \glossario{Verificatori}{verificatore} indicazioni per le attività di test.
+		\item Definire una stima dei costi.
+	\end{enumerate}
+	 Durante l’Analisi dei requisiti gli analisti analizzano individualmente le varie fonti, quindi, a seguito di una riunione, si confrontano e stilano le varie liste di requisiti suddivise per importanza. Le fonti per gli analisti sono:
+	\begin{enumerate}
+		\item Capitolati d’appalto: requisiti emersi dall’analisi del documento fornito dal committente;
+		\item Verbali esterni: requisiti emersi a seguito di colloqui con i responsabili dell’azienda committente;
+		\item Casi d'uso: requisiti emersi a seguito di uno o più casi d’uso analizzati.
+		\item Definire una stima dei costi.
+	\end{enumerate}
+	\subsubsection{Classificazione requisiti:} I requisiti devono essere suddivisi per importanza e classificati come segue: R[Importanza][Tipologia][Codice]. Inoltre, di ogni requisito si vuole tener traccia della fonte e deve essere definita una descrizione.
+		\begin{enumerate}
+			\item Ogni requisito può appartenere solo ad una delle classi di Importanza elencate di seguito:
+			\begin{itemize}
+				\item O (Requisito Obbligatorio): requisito fondamentale per la corretta realizzazione del progetto;
+				\item D (Requisito Desiderabile): requisito non fondamentale al progetto ma il cui soddisfacimento comporterebbe una maggiore completezza del prodotto;
+				\item F (Requisito Facoltativo): requisito non richiesto per il corretto funzionamento del prodotto ma che se incluso arricchirebbe il progetto. Prima di soddisfare il requisito è necessaria un’analisi di tempi e costi per evitare ritardi nella consegna e/o costi superiori a quelli preventivati.
+			\end{itemize}
+			\item Di seguito sono riportate le tipologie di requisito.
+			\begin{itemize}
+				\item V: Identifica un \glossario{requisito di vincolo}{requisito di vincolo};
+				\item F: Identifica un \glossario{requisito funzionale}{requisito funzionale};
+				\item P: Identifica un \glossario{requisito prestazionale}{requisito prestazionale};
+				\item Q: 
+				Identifica un \glossario{requisito di qualità}{requisito di qualita}.
+			\end{itemize}
+		\item Per concludere ogni requisito è formato da un codice numerico che lo indentifica in modo univoco.
+
+		\end{enumerate}
+		
+	\subsubsection{Classificazione casi d’uso:} 
+	I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo: UC[P][I].
+	\begin{itemize}
+		\item P (Codice Padre): Identifica il codice del caso d'uso da cui è stato generato il caso d'uso identificato, se non esiste il campo va tralasciato
+		\item I (Codice Identificativo): Identifica il caso d'uso univocamente.
+		\end{itemize}
+	
+
+\subsection{Progettazione} 
+\subsubsection{Scopo:} Questa attività si prefigge lo scopo di realizzare una possibile soluzione architetturale al progetto; inoltre, deve precedere la parte di codifica e seguire l’analisi dei requisiti.
+\subsubsection{Descrizione}
+La progettazione deve:
+\begin{itemize}
+\item Costruire un’architettura logica del progetto;
+\item Ottimizzare l’uso delle risorse;
+\item Garantire una determinata qualità del prodotto;
+\item Organizzare e dividere le parti del progetto in modo da poter ottenere componenti singole e facili da implementare attraverso la codifica. 
+\end{itemize}
+\subsection{Codifica}
+\subsubsection{Scopo:}Nella seguente sezione sono riporte le norme da seguire durante la programmazione da parte dei programmatori. Lo scopo di queste norme consiste nel dare delle linee guida ai programmatori in modo tale che il codice risulti leggibile e aiuti durante la fase di mantenimento, verifica e validazione.
+\subsubsection{Descrizione}
+Per le \emph{Code Convention} aderiremo alla GNU GCC \url{https://gcc.gnu.org/codingconventions.html}
+
+
+\end{document}

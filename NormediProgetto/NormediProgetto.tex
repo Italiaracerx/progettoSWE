@@ -1,34 +1,62 @@
 
+
 \documentclass[openany,12pt,a4paper]{report}
-
 \usepackage{subfiles}
-
+\usepackage[]{graphicx}
+\graphicspath{{./img/}{./../img/}}
 \usepackage{StileDoc}
-
-
-
-
 \title{Norme di Progetto}
 \author{}
 \date{\today}
+
+\loadglsentries{./Definizioni}
 
 
 \begin{document}
 	\makeatletter
 	\begin{titlepage}
+		\setlength{\headsep}{0pt}  
 		\begin{center}
-			{\huge \bfseries  \@title }\\[15ex] 
-			\includegraphics[width=0.5\linewidth]{./img/logo.png}\\
-			[40ex] 
-			{\large \@date}
+			{\huge \bfseries  \@title }\\[10ex]
+			\includegraphics[width=0.5\linewidth]{logo.png}\\[1em]
+			\textbf{\Large Informazioni Documento} \\[2em]
+			\bgroup
+			\def\arraystretch{1.5}
+			\begin{tabular}{l|l}
+				\textbf{Versione} & 1.0.0 \\
+				\textbf{Data redazione} & \large \@date \\
+				\textbf{Redattori} &  \\
+				\textbf{Verificatori} &  \\
+				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
+				 & Prof. Riccardo Cardin \\
+				 & Gruppo Graphite \\
+				\textbf{Uso} & Interno \\
+			\end{tabular}
+		\egroup
 		\end{center}
 	\end{titlepage}
 	\makeatother
+
 	\thispagestyle{empty}
 	\newpage
 	\tableofcontents
-	
 	%Aggiungere File da qua in poi
-	\subfile{./tex/NomeCapitolo1}
+	\subfile{./tex/Introduzione}
+	\subfile{./tex/ProcessiPrimari-Fornitura}
+	\subfile{./tex/ProcessiPrimari-Sviluppo}
+	\subfile{./tex/ProcessiDiSupporto-Documentazione}
+	\subfile{./tex/ProcessiDiSupporto-Verifica}
+	\subfile{./tex/ProcessiOrganizzativi}
+	
+	\end{document}    
 
-	\end{document}                       
+
+
+
+
+
+
+
+
+
+                   
