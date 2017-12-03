@@ -34,8 +34,14 @@ Per redarre la documentazione, il gruppo utilizza i seguenti strumenti:
 
 \begin{itemize}
     \item \textbf{LaTex}: per la stesura della documentazione viene utilizzato il linguaggio \LaTeX{}, data la sua flessibilità, potenza e facilità d'uso;
+    
     \item \textbf{TexStudio}: per la stesura del codice \LaTeX{} viene utilizzato l’editor \glossario{TexStudio}{TexStudio}, in virtù delle innumerevoli feature che offre gratuitamente e del fatto che si tratta di un'applicazione cross-platform supportata dai maggiori sistemi operativi;
+    
     \item \textbf{LucidChart}: per la realizzazione di diagrammi illustrativi per i documenti viene utilizzata la piattaforma web collaborativa \glossario{Lucidchart}{Lucidchart};
+    	
+    \item \textbf{Tracciamento requisiti e casi d'uso}: per catalogare i requisiti e i casi d'uso in modo veloce e automatizzato il gruppo utilizza l'applicativo web \glossario{Tender}{Tender};
+	
+	\item \textbf{Diagrammi UML}: per la produzione di diagrammi UML viene utilizzato \glossario{Astah}{Astah}. Lo strumento è accessibile al seguenti link: \\ \centerline{\url{http://astah.net/}}	
 \end{itemize}
 
 % ORGANIZZAZIONE INTERNA
@@ -47,9 +53,9 @@ Per redarre la documentazione, il gruppo utilizza i seguenti strumenti:
 \section{Descrizione}
 	
 	\begin{itemize}
-	    \item \textbf{Telegram}: Telegram è una applicazione di messaggistica nata come applicazione mobile e successivamente portata anche su Windows, Mac e varie distribuzioni Linux. Rispetto agli altri sistemi di messaggistica \glossario{Telegram} consente un facile passaggio di immagini e documenti in più formati mantenendo inoltre nel proprio cloud storage tali file per un agevole recupero su qualsiasi dispositivo. È possibile creare gruppi di utenti la cui chat ha il valore aggiunto di poter contenere sistemi automatici per l'organizzazione di sondaggi e la comunicazione di messaggi importanti da tenere in sovraimpressione.
+	    \item \textbf{Telegram}: \glossario{Telegram}{Telegram} è una applicazione di messaggistica nata come applicazione mobile e successivamente portata anche su Windows, Mac e varie distribuzioni Linux. Rispetto agli altri sistemi di messaggistica, Telegram consente un facile passaggio di immagini e documenti in più formati, mantenendo inoltre nel proprio cloud storage tali file per un agevole recupero su qualsiasi dispositivo. È possibile creare gruppi di utenti la cui chat ha il valore aggiunto di poter contenere sistemi automatici per l'organizzazione di sondaggi e la comunicazione di messaggi importanti da tenere in sovraimpressione;
 	    
-	    \item \textbf{GitHub}: è un servizio di \glossario{hosting}{hosting} per progetti software. Il sito è principalmente utilizzato dagli sviluppatori, che caricano il codice sorgente dei loro programmi e lo rendono scaricabile dagli utenti. Può essere utilizzato anche per la condivisione e la modifica di file di testo e documenti revisionabili. Un utente può interagire con lo sviluppatore tramite un sistema di issue tracking, pull request e commenti che permette di migliorare il codice della repository, risolvendo bug o aggiungendo funzionalità.
+	    \item \textbf{GitHub}: \glossario{Github}{Github} è un servizio di \glossario{hosting}{hosting} per progetti software. Il sito è principalmente utilizzato dagli sviluppatori, che caricano il codice sorgente dei loro programmi e lo rendono scaricabile dagli utenti, ma può essere utilizzato anche per la condivisione e la modifica di file di testo e documenti revisionabili. Un utente può interagire con lo sviluppatore tramite un sistema di issue tracking, pull request e commenti che permette di migliorare il codice della repository, risolvendo bug o aggiungendo funzionalità.
 	\end{itemize}
 
 % SVILUPPO
@@ -58,9 +64,40 @@ Per redarre la documentazione, il gruppo utilizza i seguenti strumenti:
 
 \section{Scopo}
 Il capitolo vuole esporre gli strumenti utilizzati per sviluppare il software richiesto dal progetto dal progetto. 
-
 \section{Descrizione}
 Per lo sviluppo software relativo al progetto, il gruppo utilizza i seguenti strumenti:
+
+\subsection{Sistema operativo}
+Il gruppo di progetto lavora sui seguenti sistemi operativi:
+\begin{itemize}
+	\item Ubuntu 17.10 x64;
+	\item Ubuntu 16.04 \glossario{LTS}{LTS} x64;
+	\item Windows 10 Home x64;
+	\item Windows 10 Pro x64;
+	\item Windows 7 Home Premium.
+\end{itemize}
+
+\subsection{IDE}
+Il gruppo di progetto lavora sul seguente IDE:
+\begin{itemize}
+    \item \textbf{Qt}: per la codifica relativa al software richiesto dal progetto il gruppo usa l'\glossario{IDE}{IDE} \glossario{Qt}{Qt}, in virtù della sua diffusione, potenza e semplicità d'uso. Qt è reperibile al seguente link: \\ \centerline{https://www.qt.io/}.
+\end{itemize}
+
+\subsection{Compilazione}
+Per la compilazione vengono utilizzati i seguenti strumenti:
+
+\begin{itemize}
+	\item \textbf{GCC}: il compilatore che verrà usato per la compilazione del software è il \glossario{GCC}{GCC} (GNU Compiler Collection). Il compilatore è reperibile al seguente link: \\ \centerline{\url{https://gcc.gnu.org/}};
+	
+	\item \textbf{Cmake}: per semplificare la compilazione verrà usato \glossario{Cmake}{Cmake}. Lo strumento è reperibile al seguente link: \\ \centerline{\url{https://cmake.org/}}.
+\end{itemize}
+
+\subsection{GUI}
+Per progettare l'interfaccia grafica vengono utilizzati i seguenti strumenti:
+
+\begin{item}
+    \item \textbf{Qt Creator}: per progettare l'interfaccia grafica viene utilizzato \glossario{Qt Creator}{Qt Creator}. Questo strumento permette di realizzare interfacce grafiche mediante le librerie grafiche Qt, diventate in questo ambito quasi uno standard per piattaforme Linux Based. Qt Creator è disponibile al seguente link: \\  \centerline{\url{https://www.qt.io/qt-features-libraries-apis-tools-and-ide/#ide}}.
+\end{item}
 
 % VERIFICA
 
@@ -68,7 +105,7 @@ Per lo sviluppo software relativo al progetto, il gruppo utilizza i seguenti str
 
 \section{Scopo}
 
-Il capitolo vuole esporre gli strumenti utilizzati eseguire controlli e verifiche sul codice e la documentazione relativi al progetto. 
+Il capitolo vuole esporre gli strumenti utilizzati al fine di eseguire controlli e verifiche sul codice e la documentazione relativi al progetto. 
 
 \section{Descrizione}
 
@@ -84,7 +121,7 @@ Per verificare la correttezza dell'ortografia nell'ambito della documentazione v
 \subsection{Analisi statica}
 Per l’analisi statica del codice vengono utilizzati i seguenti strumenti:
     \begin{itemize}
-        \item \textbf{Valgrind:} La \glossario{suite} di strumenti Valgrind fornisce numerosi strumenti di \glossario{debugging} e di \glossario{profiling} che aiutano a rendere i programmi più performanti e più corretti. Il più popolare di questi strumenti è chiamato Memcheck, che è in grado di rilevare molti errori relativi alla memoria comuni nei programmi C e C ++ e che possono causare arresti anomali e comportamenti imprevedibili. Valgrind è accessibile al seguente link: \\ \centerline{\url{http://valgrind.org/}}
+        \item \textbf{Valgrind:} La \glossario{suite} di strumenti Valgrind fornisce numerosi strumenti di \glossario{debugging} e di \glossario{profiling} che aiutano a rendere i programmi più performanti e più corretti. Il più popolare di questi strumenti è chiamato Memcheck, ed è in grado di rilevare molti errori relativi alla memoria comuni nei programmi C e C ++ e che possono causare arresti anomali e comportamenti imprevedibili. Valgrind è accessibile al seguente link: \\ \centerline{\url{http://valgrind.org/}}
     \end{itemize}
     
 \subsection{Analisi dinamica}
