@@ -1,5 +1,3 @@
-
-
 \documentclass[openany,12pt,a4paper]{report}
 \usepackage{subfiles}
 \usepackage[]{graphicx}
@@ -10,6 +8,14 @@
 \date{\today}
 
 \loadglsentries{./Definizioni}
+
+%da aggiungere per changelog
+\usepackage[owncaptions,tablegrid,tocentry]{vhistory}
+\renewcommand{\vhhistoryname}{ChangeLog}
+\renewcommand{\vhversionname}{Versione}
+\renewcommand{\vhdatename}{Data}
+\renewcommand{\vhauthorname}{Autore}
+\renewcommand{\vhchangename}{Modifiche}
 
 
 \begin{document}
@@ -39,7 +45,9 @@
 
 	\thispagestyle{empty}
 	\newpage
+	
 	\tableofcontents
+	\subfile{./tex/ChangeLog}
 	%Aggiungere File da qua in poi
 	\subfile{./tex/Introduzione}
 	\subfile{./tex/ProcessiPrimari-Fornitura}
