@@ -2,7 +2,7 @@
 \usepackage{StileDoc}
 \usepackage{hyperref}
 
-\title{Studio di Fattibilità}
+\title{Studio di fattibilità}
 \author{Matteo Rizzo}
 \date{\today}
 
@@ -21,8 +21,7 @@
 \section{Scopo}
 
 Lo studio di fattibilità ha l’obiettivo di descrivere le motivazioni che hanno portato
-il gruppo alla scelta del  \textit{capitolato\ped{G}} C3 e alla relativa esclusione degli altri
-capitolati proposti.
+il gruppo alla scelta del  \glossario{capitolato}{capitolato} C3 e alla relativa esclusione degli altri capitolati proposti.
 
 \section{Ambiguità}
 
@@ -65,39 +64,45 @@ il pedice "G".
 \section{Capitolato C3}
 
 \begin{itemize}
-    \item{Nome:} DeSpeect: interfaccia grafica per Speect;
-    \item{Proponente:} MIVOQ S.R.L.;
-    \item{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+    \item \textbf{Nome:} DeSpeect: interfaccia grafica per Speect;
+    \item \textbf{Proponente:} MIVOQ S.R.L.;
+    \item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 \end{itemize}
 
 \subsection{Descrizione}
 
 \subsection{Dominio applicativo}
 
+Il progetto si cala nell'ambito degli strumenti di supporto allo sviluppo, in particolare al debugging, di applicazioni che sfruttano la libreria Speect.
+
+
 \subsection{Dominio tecnologico}
 
 \begin{itemize}
-    \item{};
-    
-    \item{}.
+    \item \textbf{interfaccia grafica:} suite Qt, Speect, C++, json, gnu GCC.
 \end{itemize}
 
 \subsection{Aspetti positivi}
 
 \begin{itemize}
-    \item ;
+    \item il progetto ha lo scopo di realizzare un prodotto capace di dare supporto concreto allo sviluppo di applicazioni basate su una libreria open source reputata molto utile;
     
-    \item  .
+    \item alcune tecnologie richieste dal progetto sono già familiari ai membri del gruppo e apparentemente piuttosto diffuse nell'ambito di pertinenza;
+    
+    \item il prodotto da realizzare ha prospettive di grande adattabilità all'accrescersi e all'espandersi della libreria cui fornisce supporto.
 \end{itemize}
+
 \subsection{Fattori di rischio}
 
 \begin{itemize}
-    \item ;
+    \item A seguito di un'analisi iniziale, la libreria Speect sembra non essere particolarmente ben documentata;
     
-    \item .
+    \item L'istallazione della libreria Speect è ostica e complessa.
 \end{itemize}
 
 \subsection{Valutazione finale}
+
+Dall'esito dell'analisi del rapporto tra aspetti positivi e rischi concernenti la proposta di progetto, la nostra scelta ricade sul capitolato C3.
 
 \chapter{Analisi degli altri capitolati}
 
@@ -106,25 +111,25 @@ il pedice "G".
 \section{Capitolato C1}
 
 \begin{itemize}
-    \item{Nome:} AJarvis - Assistente Virtuale Cerimonie Agile;
-    \item{Proponente:} Zero12;
-    \item{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+    \item \textbf{Nome:} AJarvis - Assistente Virtuale Cerimonie Agile;
+    \item \textbf{Proponente:} Zero12;
+    \item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 \end{itemize}
 
 \subsection{Descrizione}
 
-Produzione di un’applicazione di Machine Learning in grado di ascoltare gli standup giornalieri sullo stato di avanzamento dei progetti, comprenderne i dialoghi, analizzarne il contenuto per fornire un’analisi dello standup estraendo dal contesto gli argomenti emersi.
+Produzione di un’applicazione di Machine Learning in grado di ascoltare gli stand up giornalieri sullo stato di avanzamento dei progetti, comprenderne i dialoghi e analizzarne il contenuto per fornire una sintesi dello stand up estraendo dal contesto gli argomenti emersi.
 
 \subsection{Dominio applicativo}
 
-Il progetto si inserisce nell'ambito dell'automatizzazione della creazione di report sulle riunioni standup aziendali nel contesto della progettazione \textit{Agile\ped{G}}.
+Il progetto si inserisce nell'ambito dell'automatizzazione della creazione di report sulle riunioni stand up aziendali nel contesto della progettazione \glossario{Agile}{Agile}.
 
 \subsection{Dominio tecnologico}
 
 \begin{itemize}
-    \item{Interfacce Web di registrazione e di reportistica delle analisi:} HTML5, CSS3, Javascript, AngularJS, PHP;
+    \item \textbf{Interfacce Web di registrazione e di reportistica delle analisi:} HTML5, CSS3, Javascript, AngularJS, PHP;
     
-    \item{Servizi Cloud:} tecnologie Google Cloud Platform per l’analisi dei dati e traduzione di voce in testo.
+    \item \textbf{Servizi Cloud:} tecnologie Google Cloud Platform per l’analisi dei dati e traduzione di voce in testo.
 \end{itemize}
 
 \subsection{Aspetti positivi}
@@ -134,12 +139,13 @@ Il progetto si inserisce nell'ambito dell'automatizzazione della creazione di re
     
     \item Possibilità di applicazione in un ambito aziendale concreto.
 \end{itemize}
+
 \subsection{Fattori di rischio}
 
 \begin{itemize}
     \item Complessità elevata nel produrre un prodotto di qualità utilizzando le tecnologie richieste, in particolare nel riconoscimento di più voci sovrapposte;
     
-    \item Il gruppo ritiene significativo che un prodotto così interessante sia condiviso sotto licenze \textit{open source\ped{G}}, ma così non è.
+    \item Il gruppo ritiene significativo che un prodotto così interessante sia condiviso sotto licenze \glossario{open source}{open source}, contrariamente a quanto sottolineato dalla proponente.
 \end{itemize}
 
 \subsection{Valutazione finale}
@@ -151,9 +157,9 @@ Nonostante l'interesse suscitato dalle tecnologie proposte, i loro limiti intrin
 \section{Capitolato C2}
 
 \begin{itemize}
-    \item{Nome:} BlockCV: blockchain per gestione di CV certificati;
-    \item{Proponente:} Ifin Sistemi Srl;
-    \item{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+    \item \textbf{Nome:} BlockCV: blockchain per gestione di CV certificati;
+    \item \textbf{Proponente:} Ifin Sistemi Srl;
+    \item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 \end{itemize}
 
 \subsection{Descrizione}
@@ -167,17 +173,17 @@ Si vuole ottenere un modello applicabile nell'attuale sistema lavorativo, in gra
 \subsection{Dominio tecnologico}
 
 \begin{itemize}
-    \item{Piattaforma blockchain:} Hyperledger Fabric, MongoDB, Cassandra;
+    \item \textbf{Piattaforma blockchain:} Hyperledger Fabric, MongoDB, Cassandra;
     
-    \item{Codifica:} Java EE;
+    \item \textbf{Codifica:} Java EE;
     
-    \item{Interfaccia grafica:} Framework Play o suite di componenti Vaadin Elements.
+    \item \textbf{Interfaccia grafica:} Framework Play o suite di componenti Vaadin Elements.
 \end{itemize}
 
 \subsection{Aspetti positivi}
 
 \begin{itemize}
-    \item Utilizzo di una tecnologia innovativa e in forte sviluppo;
+    \item Realizzazione del progetto basata sull'utilizzo di una tecnologia innovativa e in forte sviluppo;
     
     \item Obiettivo del progetto interessante e con forti risvolti pratici.
 \end{itemize}
@@ -199,9 +205,9 @@ Nonostante l'interesse suscitato dalle tecnologie proposte, l'elevata complessit
 \section{Capitolato C4}
 
 \begin{itemize}
-    \item{Nome:} ECoRe: Enterprise Content Recommendation;
-    \item{Proponente:} SIAV SPA;
-    \item{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+    \item \textbf{Nome:} ECoRe: Enterprise Content Recommendation;
+    \item \textbf{Proponente:} SIAV SPA;
+    \item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 \end{itemize}
 
 \subsection{Descrizione}
@@ -210,20 +216,20 @@ Realizzazione di un servizio proattivo in grado di suggerire all’utente che ac
 
 \subsection{Dominio applicativo}
 
-Il progetto si inserisce nell'ambito dell'enterprise search, ovvero dell’applicazione delle conoscenze e dei metodi del reperimento dell’informazione nel contesto della ricerca di informazioni all’interno di una organizzazione aziendale, e dei sistemi di raccomandazione, strumenti software in grado di suggerire contenuti utili all’utente.
+Il progetto si inserisce nell'ambito dell'enterprise search, ovvero dell’applicazione delle conoscenze e dei metodi del reperimento dell’informazione nel contesto della ricerca di informazioni all’interno di una organizzazione aziendale, e in quello dei sistemi di raccomandazione, strumenti software in grado di suggerire contenuti utili all’utente.
 
 \subsection{Dominio tecnologico}
 
 \begin{itemize}
-    \item{Motore di ricerca:} Apache SolR o ElasticSearch;
+    \item \textbf{Motore di ricerca:} Apache SolR o ElasticSearch;
     
-    \item{Libreria di apprendimento automatico con sezione dedicata alla raccomandazione:} Apache Mahout;
+    \item \textbf{Libreria di apprendimento automatico con sezione dedicata alla raccomandazione:} Apache Mahout;
     
-    \item{Misure di sicurezza:} Identity and Access Management Keycloak;
+    \item \textbf{Misure di sicurezza:} Identity and Access Management Keycloak;
     
-    \item{Importazione di dati provenienti da fonti web:} Apache Nutch;
+    \item \textbf{Importazione di dati provenienti da fonti web:} Apache Nutch;
     
-    \item{Documentazione:} Evernote.
+    \item \textbf{Documentazione:} Evernote.
 \end{itemize}
 
 \subsection{Aspetti positivi}
@@ -250,14 +256,14 @@ La notevole vastità di tecnologie richieste per la realizzazione del progetto e
 \section{Capitolato C5}
 
 \begin{itemize}
-    \item{Nome:} Ironworks;
-    \item{Proponente:} Zucchetti Software srl;
-    \item{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+    \item \textbf{Nome:} Ironworks;
+    \item \textbf{Proponente:} Zucchetti Software srl;
+    \item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 \end{itemize}
 
 \subsection{Descrizione}
 
-Realizzazione di un software di costruzione di \textit{diagrammi di robustezza\ped{G}} con la relativa generazione di codice Java per le entità persistenti.
+Realizzazione di un software di costruzione di diagrammi di robustezza con la relativa generazione di codice Java per le entità persistenti.
 
 \subsection{Dominio applicativo}
 
@@ -266,11 +272,11 @@ Il progetto si inserisce nell'ambito dell'automatizzazione della codifica allo s
 \subsection{Dominio tecnologico}
 
 \begin{itemize}
-    \item{Disegnatore diagrammi UML:} ArgoUML, StarUML, Software Idea Designer ecc...;
+    \item \textbf{Disegnatore diagrammi UML:} ArgoUML, StarUML, Software Idea Designer ecc...;
     
-    \item{Codifica parte lato server:} Java con server Tomcat o Javascript con server Node.Js.;
+    \item \textbf{Codifica parte lato server:} Java con server Tomcat o Javascript con server Node.Js.;
     
-    \item{Interfaccia grafica:} HTML5, CSS3, Javascript.
+    \item \textbf{Interfaccia grafica:} HTML5, CSS3, Javascript.
 \end{itemize}
 
 \subsection{Aspetti positivi}
@@ -296,9 +302,9 @@ Il progetto proposto ha raccolto l'interesse della totalità dei membri del grup
 \section{Capitolato C6}
 
 \begin{itemize}
-    \item{Nome:} Marvin: dimostratore di Uniweb su Ethereum;
-    \item{Proponente:} RedBabel;
-    \item{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+    \item \textbf{Nome:} Marvin: dimostratore di Uniweb su Ethereum;
+    \item \textbf{Proponente:} RedBabel;
+    \item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 \end{itemize}
 
 \subsection{Descrizione}
@@ -312,11 +318,11 @@ Il progetto si inserisce nell'ambito di una sperimentazione della tecnologia Blo
 \subsection{Dominio tecnologico}
 
 \begin{itemize}
-    \item{Interfaccia grafica:} HTML5, CCS3, Javascript ecc..;
+    \item \textbf{Interfaccia grafica:} HTML5, CCS3, Javascript ecc..;
     
-    \item{Interazione con Ethereum:} Truffle11 development framework;
+    \item \textbf{Interazione con Ethereum:} Truffle11 development framework;
     
-    \item{Misure di sicurezza:} Metamask.
+    \item \textbf{Misure di sicurezza:} Metamask.
 \end{itemize}
 
 \subsection{Aspetti positivi}
@@ -342,9 +348,9 @@ Nonostante l'interesse suscitato dalle tecnologie proposte, l'elevata complessit
 \section{Capitolato C7}
 
 \begin{itemize}
-    \item{Nome:} OpenAPM: cruscotto di Application Performance Management;
-    \item{Proponente:} Iks - Kirey Group;
-    \item{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+    \item \textbf{Nome:} OpenAPM: cruscotto di Application Performance Management;
+    \item \textbf{Proponente:} Iks - Kirey Group;
+    \item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 \end{itemize}
 
 \subsection{Descrizione}
@@ -358,15 +364,15 @@ Il progetto si inserisce nell'ambito degli APM(Application Performance Managment
 \subsection{Dominio tecnologico}
 
 \begin{itemize}
-    \item{Agent:} Java, PHP, Node.js, ElasticSearch;
+    \item \textbf{Agent:} Java, PHP, Node.js, ElasticSearch;
     
-    \item{Server:} Kibana, D3.js.
+    \item \textbf{Server:} Kibana, D3.js.
 \end{itemize}
 
 \subsection{Aspetti positivi}
 
 \begin{itemize}
-    \item Il progetto propone l'utilizzo di alcune tecnologie interessanti, innovative e \textit{open source\ped{G}};
+    \item Il progetto propone l'utilizzo di alcune tecnologie interessanti, innovative e open source;
     
     \item Lo scopo del progetto ha notevole utilità pratica.
 \end{itemize}
@@ -386,9 +392,9 @@ Nonostante l'interesse suscitato dalle tecnologie indicate e dallo scopo del pro
 \section{Capitolato C8}
 
 \begin{itemize}
-    \item{Nome:} TuTourSelf: piattaforma di prenotazioni per artisti in tournee;
-    \item{Proponente:} TuTourSelf S.r.l.;
-    \item{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+    \item \textbf{Nome:} TuTourSelf: piattaforma di prenotazioni per artisti in tournee;
+    \item \textbf{Proponente:} TuTourSelf S.r.l.;
+    \item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 \end{itemize}
 
 \subsection{Descrizione}
@@ -397,14 +403,14 @@ Realizzare una piattaforma web (con focus particolare sull'esperienza utente) ch
 
 \subsection{Dominio applicativo}
 
-Il progetto si inserisce nell'ambito delle Single Page Applications (SPA) con particolare attenzione all'esperienza utente.
+Il progetto si inserisce nell'ambito delle Single Page Applications (SPA), applicazioni web che possono essere usate o consultate su una singola pagina web con l'obiettivo di fornire una esperienza utente fluida e simile alle applicazioni desktop, con particolare attenzione all'esperienza utente.
 
 \subsection{Dominio tecnologico}
 
 \begin{itemize}
-    \item{Front-end:} HTML5, CSS, Javascript, REACT;
+    \item \textbf{Front-end:} HTML5, CSS, Javascript, REACT;
     
-    \item{Back-end:}  PHP, Ruby, Python, Java, MySQL.
+    \item \textbf{Back-end:}  PHP, Ruby, Python, Java, MySQL.
 \end{itemize}
 
 \subsection{Aspetti positivi}
