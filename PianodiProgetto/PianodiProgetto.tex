@@ -1,4 +1,8 @@
 \documentclass[openany,12pt,a4paper]{report}
+\usepackage{float}
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
 \usepackage{subfiles}
 \usepackage[]{graphicx}
 \graphicspath{{./img/}{./../img/}}
@@ -31,12 +35,14 @@
 			\begin{tabular}{l|l}
 				\textbf{Versione} & 1.0.0 \\
 				\textbf{Data redazione} & \large \@date \\
-				\textbf{Redattori} &  \\
-				\textbf{Verificatori} &  \\
+				\textbf{Responsabile} & Marco Focchiatti \\
+				\textbf{Redattori} & Kevin Silvestri \\ 
+								   & Samuele Modena \\
+				\textbf{Verificatori} & Matteo Rizzo \\
 				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
 				 & Prof. Riccardo Cardin \\
 				 & Gruppo Graphite \\
-				\textbf{Uso} & Esterno \\
+				\textbf{Uso} & Interno \\
 			\end{tabular}
 		\egroup
 		\end{center}
@@ -47,8 +53,23 @@
 	\newpage
 	
 	\tableofcontents
+	\listoffigures
+	\listoftables
+	
 	\subfile{./tex/ChangeLog}
 	%Aggiungere File da qua in poi
-	\subfile{./tex/AnalisiPianificazione}
+	subfile{./tex/AnalisiPianificazione}
+	\subfile{./tex/PreventivoConsuntivo}
 	
 	\end{document}    
+
+
+
+
+
+
+
+
+
+
+                   
