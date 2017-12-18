@@ -1,0 +1,75 @@
+\documentclass[openany,12pt,a4paper]{report}
+\usepackage{float}
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\usepackage{subfiles}
+\usepackage[]{graphicx}
+\graphicspath{{./img/}{./../img/}}
+\usepackage{StileDoc}
+\title{Piano di Progetto}
+\author{}
+\date{\today}
+
+\loadglsentries{../Glossario/Definizioni}
+
+%da aggiungere per changelog
+\usepackage[owncaptions,tablegrid,tocentry]{vhistory}
+\renewcommand{\vhhistoryname}{ChangeLog}
+\renewcommand{\vhversionname}{Versione}
+\renewcommand{\vhdatename}{Data}
+\renewcommand{\vhauthorname}{Autore}
+\renewcommand{\vhchangename}{Modifiche}
+
+
+\begin{document}
+	\makeatletter
+	\begin{titlepage}
+		\setlength{\headsep}{0pt}  
+		\begin{center}
+			{\huge \bfseries  \@title }\\[10ex]
+			\includegraphics[width=0.5\linewidth]{logo.png}\\[1em]
+			\textbf{\Large Informazioni Documento} \\[2em]
+			\bgroup
+			\def\arraystretch{1.5}
+			\begin{tabular}{l|l}
+				\textbf{Versione} & 1.0.0 \\
+				\textbf{Data redazione} & \large \@date \\
+				\textbf{Responsabile} & Marco Focchiatti \\
+				\textbf{Redattori} & Kevin Silvestri \\ 
+								   & Samuele Modena \\
+				\textbf{Verificatori} & Matteo Rizzo \\
+				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
+				 & Prof. Riccardo Cardin \\
+				 & Gruppo Graphite \\
+				\textbf{Uso} & Interno \\
+			\end{tabular}
+		\egroup
+		\end{center}
+	\end{titlepage}
+	\makeatother
+
+	\thispagestyle{empty}
+	\newpage
+	
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	\subfile{./tex/ChangeLog}
+	%Aggiungere File da qua in poi
+	subfile{./tex/AnalisiPianificazione}
+	\subfile{./tex/PreventivoConsuntivo}
+	
+	\end{document}    
+
+
+
+
+
+
+
+
+
+
+                   

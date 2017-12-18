@@ -1,0 +1,33 @@
+\usepackage{helvet} 
+\usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{titlesec}
+\usepackage{datetime}
+\usepackage{hyperref}
+\usepackage{subfiles}
+\usepackage{longtable}
+\setlength{\headsep}{50pt} 
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4} 
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyhead[L]{\includegraphics[height=1.5cm]{./img/Logo.png}}
+	\fancyhead[R]{\leftmark}
+	\fancyfoot[L]{\today \    \currenttime}
+	\fancyfoot[R]{\thepage}
+}
+\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge}
+
+\pagestyle{plain}
+\setlength{\headheight}{48pt}
+
+\usepackage{glossaries}
+\usepackage{subfiles}
+
+\newcommand{\glossario}[2] {
+\glsadd{#2}
+\textit{#1}
+\ped{G}
+ }

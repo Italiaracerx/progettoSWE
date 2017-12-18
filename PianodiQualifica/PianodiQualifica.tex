@@ -1,0 +1,569 @@
+\documentclass[openany,12pt,a4paper]{report}
+\usepackage{subfiles}
+\usepackage[]{graphicx}
+\graphicspath{{img/}{img/}}
+\usepackage{StileDoc}
+\title{Piano di qualifica}
+\author{Matteo Rizzo}
+\date{\today}
+
+%\loadglsentries{../Glossario/Definizioni}
+
+%da aggiungere per changelog
+\usepackage[owncaptions,tablegrid,tocentry]{vhistory}
+\renewcommand{\vhhistoryname}{ChangeLog}
+\renewcommand{\vhversionname}{Versione}
+\renewcommand{\vhdatename}{Data}
+\renewcommand{\vhauthorname}{Autore}
+\renewcommand{\vhchangename}{Modifiche}
+
+
+\begin{document}
+	\makeatletter
+	\begin{titlepage}
+		\setlength{\headsep}{0pt}  
+		\begin{center}
+			{\huge \bfseries  \@title }\\[10ex]
+			\includegraphics[width=0.5\linewidth]{img/logo.png}\\[1em]
+			\textbf{\Large Informazioni Documento} \\[2em]
+			\bgroup
+			\def\arraystretch{1.5}
+			\begin{tabular}{l|l}
+				\textbf{Versione} & 1.0.0 \\
+				\textbf{Data redazione} & \large \@date \\
+				\textbf{Redattori} &  Matteo Rizzo \\
+				\textbf{Verificatori} &  \\
+				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
+				 & Prof. Riccardo Cardin \\
+				 & Gruppo Graphite \\
+				\textbf{Uso} & Interno \\
+			\end{tabular}
+		\egroup
+		\end{center}
+	\end{titlepage}
+	\makeatother
+
+% INDICE
+ 
+\tableofcontents{}
+
+% INTRODUZIONE
+
+\chapter{Introduzione}
+
+    \section{Scopo del documento}
+    
+    Lo scopo del documento è quello di esporre le strategie, le tecnologie e le metriche che il gruppo Graphite adotta al fine di garantire le qualità di prodotto e di processo. Il documento ha dunque l'intento di chiarificare il \glossario{Sistema Qualità}{Sistema Qualità} instaurato e accettato dal gruppo in relazione al progetto corrente. Con l'obiettivo di rivelare e correggere in maniera efficace ed economica ogni errore, viene costantemente applicato un sistema di \glossario{verifica}{verifica} e \glossario{validazione}{validazione} ai processi e alle attività svolte.
+    
+    \section{Scopo del prodotto}
+    
+    Lo scopo del progetto è la realizzazione di un’interfaccia grafica per \glossario{Speect}{Speect} [Meraka Institute(2008-2013)], una libreria per la creazione di sistemi di sintesi vocale, che agevoli l’ispezione del suo stato interno durante il funzionamento e la scrittura di test per le sue funzionalità.
+    
+    \section{Ambiguità}
+    
+    Al fine di evitare ogni ambiguità relativa al linguaggio utilizzato nei documenti, viene fornito il Glossario v1.0.0, contenente la definizione dei termini in corsivo marcati con il pedice "G".
+    
+    \section{Riferimenti normativi}
+    
+    \begin{itemize}
+    
+        \item{Norme di progetto:} documento \textit{Norme di progetto v1.0.0}.
+        
+        \item{Capitolato d'appalto C3:} DeSpeect: interfaccia grafica per Speect \\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Progetto/C3.pdf}
+    
+    \end{itemize}
+    
+    \section{Riferimenti informativi}
+    
+    \begin{itemize}
+        \item Piano di Progetto v 1.0.0 ;
+        
+        \item Qualità di prodotto - Slide del corso \Ingegneria del
+        Software": 
+        \\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Dispense/L13.pdf};
+        
+        \item Qualità di processo - Slide del corso \Ingegneria del Software": \\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Dispense/L15.pdf};
+        
+        \item Software Engineering - Ian Sommerville - 9 th Edition (2010);
+        
+        \item Standard ISO/IEC 15504: 
+        \\ \url{https://en.wikipedia.org/wiki/ISO/IEC_15504};
+        
+        \item HM&S - SPICE Process Assessment Model: 
+        \\ \url{http://www.spice121.com/cms/en/about-spice-1-2-1.html};
+        
+        \item Standard ISO/IEC 9126:
+        \\ \url{https://en.wikipedia.org/wiki/ISO/IEC_9126};
+        
+        \item Ciclo di Deming (PDCA): 
+        \\ \url{https://en.wikipedia.org/wiki/PDCA};
+        
+        \item Complessità ciclomatica: 
+        \\url{https://it.wikipedia.org/wiki/Complessità_ciclomatica}.
+    \end{itemize}
+
+% VISIONE GENERALE DELLE STRATEGIE DI VERIFICA
+
+\chapter{Visione generale delle strategie di verifica}
+    
+    \section{Introduzione alle strategie di verifica}
+    
+    L'obiettivo della verifica è quello di ottenere un riscontro numericamente trattabile rispetto a determinati parametri inerenti la qualità, attraverso metodi che siano tempestivi, affidabili e possibilmente non invadenti.
+    Allo scopo di conseguire tali qualità minimizzando le risorse umane allocate all'attività di verifica, la strategia adottata ambisce alla massima automatizzazione della stessa attraverso strumenti appositamente configurati. Segue una descrizione della \glossario{pianificazione della qualità}{pianificazione della qualità}.
+    
+    \section{Definizione degli obiettivi di qualità}    
+        
+        \subsection{Qualità di processo}
+        
+        \subsubsection{Standard di riferimento}
+        
+        \glossario{ISO/IEC 15504}{ISO/IEC 15504}, anche noto come \glossario{SPICE}{SPICE}, è lo standard scelto per la definizione degli obiettivi di processo. Si rimanda all'appendice A.1 per un'approfondita descrizione di tale standard.
+        La scelta di SPICE è motivata dal fatto che esso fornisce gli strumenti utili a valutare la qualità di processo, parametro da tenere in grande considerazione per il conseguimento di un prodotto qualitativamente valido entro tempi prestabiliti. 
+        Per poter applicare correttamente SPICE, viene utilizzato il \textit{ciclo di Deming} o \glossario{ciclo di PDCA}{ciclo di PDCA}. Si rimanda all'appendice A.3 per un'approfondita descrizione del ciclo di Deming. Tale ciclo definisce un metodo di controllo orientato al miglioramento continuo del livello qualitativo dei processi, evitando nel contempo regressioni. il ciclo di Deming si applica solo conoscendo lo stato di maturità attuale dei processi di interesse, definendo specifici obiettivi di miglioramento, e studiando i risultati delle azioni migliorative sperimentate. Esistono dunque  stringenti precondizioni alla sua applicabilità, ovvero l'attuazione di processi ripetibili e misurabili, qualità di processo che il gruppo ha intenzione di perseguire.
+        
+        \subsubsection{Obiettivo}
+        
+        Il gruppo persegue almeno il livello \textit{Managed} rispetto ai suoi processi, con l'ambizione di conseguire il grado \textit{Predictable} o \textit{Optimizing}.  
+        
+        \subsection{Qualità di prodotto}
+        
+        \subsubsection{Standard di riferimento}
+        
+        \glossario{ISO/IEC 9126}{ISO/IEC 9126} è lo standard scelto per la definizione degli obiettivi di prodotto. Si rimanda all'appendice A.2 per un'approfondita descrizione di tale standard.
+        La scelta di ISO/IEC 9126 è motivata dal fatto che esso definisce delle metriche per la qualità interna esterna e in uso del software, qui approfondite nella sezione \textit{Misure e metriche}, utili a valutare il grado di raggiungimento degli obiettivi prefissati.
+        
+        \subsubsection{Obiettivo}
+        
+        Il gruppo ambisce a seguire pedissequamente i modelli descritti da ISO/IEC 9126 per la qualità interna, esterna ed in uso del software prodotto. 
+    
+    \section{Gestione dei processi di verifica e validazione}
+        
+    Il processo di verifica viene istanziato per ogni processo in esecuzione quando questo raggiunge un livello di maturità significativo, e/o in seguito a modiche notevoli del suo stato. Per ogni processo viene verificata la qualità dello stesso e del suo esito. 
+    Ognuno dei periodi descritti nel \textit{Piano di Progetto v1.0.0} produce degli esiti diversi, pertanto le procedure di verifica saranno specializzate e i loro risultati riportati in un'apposita appendice al termine di questo documento. 
+    Al processo di verifica segue quello di approvazione, nel quale il Responsabile si accerta che i risultati prodotti siano conformi con quanto atteso e accettabili dal punto di vista qualitativo.
+
+    \section{Scadenze temporali}
+    
+    Le procedure di controllo che vengono attuate allo scopo di garantire il rispetto delle scadenze temporali imposte dal progetto sono descritte nelle \textit{Norme di Progetto v1.0.0}. Ad ogni processo vengono assegnate precise date di inizio e di fine, precedute da un ben definito lasso temporale dedicato allo studio dell'oggetto del processo stesso.
+    
+    \section{Risorse}
+    
+    Il controllo eseguito per garantire il livello qualitativo di processi e prodotti necessita di risorse umane e tecnologiche. In relazione a questa attività, i ruoli di maggior rilievo sono il Responsabile di Progetto e il Verificatore, che rispettivamente si occupano del controllo di qualità del processo e del prodotto risultante. Una descrizione dettagliata di tali ruoli è reperibile nel documento \textit{Norme di Progetto v1.0.0}. 
+    Le risorse tecnologiche comprendono tutti gli strumenti software e hardware che vengono utilizzati per attuare le procedure di verifica, automatizzate e non. Una descrizione dettagliata di tali risorse è reperibile nel documento \textit{Norme di Progetto v1.0.0}. 
+
+
+% MISURE E METRICHE
+
+\chapter{Misure e metriche}
+
+\section{Introduzione alle misure e alle metriche}
+
+Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è necessario che il processo di verifica produca risultati quantificabili che sia possibile confrontare con delle costanti di riferimento. Vengono di seguito stabilite le metriche ed i valori di riferimento indicanti se i livelli qualitativi di processo e di prodotto sono in linea con gli obiettivi prefissati o meno. La presentazione di ogni metrica si articolerà nelle seguenti sottosezioni:
+
+\begin{itemize}
+    \item \textbf{Nome e descrizione:} illustrazione della metrica e del suo significato; 
+
+    \item \textbf{Range o valore minimo accettabile:} indica il range minimo (o la soglia minima), rispetto alla metrica di riferimento, in cui l'esito della verifica del processo o del prodotto deve ricadere perché si consideri garantito il livello qualitativo minimo richiesto;
+
+    \item \textbf{Range o valore ottimale:} indica il range di valori (o il valore) desiderabile, rispetto alla metrica di riferimento, in cui l'esito della verifica del processo o del prodotto deve ricadere perché si consideri ampiamente garantito il livello qualitativo richiesto.
+\end{itemize}
+
+% METRICHE PER DOCUMENTI
+
+\section{Metriche per i documenti}
+
+\subsection{Indice Gulpease}
+
+L’\glossario{indice Gulpease}{indice Gulpease} è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. Tale indice considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere. L'indice Gulpease si calcola con la seguente formula:
+
+\[ I\ped{Gulpease} = 89 + (300*(\textrm{\textit{numero delle frasi}}) - \frac{10*(\textrm{\textit{numero delle lettere}})}{(\textrm{\textit{numero delle parole}})} \]
+
+Il risultato è un valore compreso nell’intervallo tra 0 e 100, dove il valore 100 indica la
+più alta leggibilità, mentre 0 la più bassa. In generale risulta che testi con indice:
+
+\begin{itemize}
+    \item inferiore a 80 sono difficili da leggere per chi ha la licenza elementare; 
+    \item inferiore a 60 sono difficili da leggere per chi ha la licenza media;
+    \item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
+\end{itemize}
+
+Nonostante l'importanza riconosciuta all'indice Gulpease, il gruppo tiene conto delle seguenti considerazioni:
+\begin{itemize}
+    \item l'indice non rileva la comprensibilità del testo, il cui contenuto potrebbe essere totalmente incomprensibile ma ottenere ugualmente un buon valore; 
+    \item ai fini dei documenti vengono necessariamente usati termini tecnici possibilmente ostici ma insostituibili;
+    \item il gruppo decide di prediligere la chiarezza e la precisione del contenuto dei documenti anche qualora questa dovesse minarne (in modo superficiale) la leggibilità.
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{Range di accettazione:} [55, 100];
+    
+    \item \textbf{Range ottimale:} [65, 100]
+\end{itemize}
+
+% METRICHE PER I PROCESSI
+
+\section{Metriche per i processi}
+
+\subsection{Schedule Variance}
+
+La \glossario{Schedule Variance}{Schedule Variance} è una \glossario{metrica di progetto}{metrica di progetto} standard che indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella \glossario{baseline}{baseline}. Essa assume particolare rilievo dal punto di vista del cliente, che può monitorare il lavoro svolto dal fornitore, ma rappresenta anche un importante indicatore su cui basarsi nell'ambito della gestione delle risorse. La formula per il calcolo della Schedule Variance è la seguente:
+
+\[ SV = BCWP - BCWS \]
+
+Dove:
+
+\begin{itemize}
+    \item \textit{SV (Schedule Variance)}: indica la Schedule Variance;
+    \item \textit{BCWP (Budget Cost Work Performed)}: indica il valore delle attività realizzate alla data corrente;
+    \item \textit{BCWS (Budget Cost Work Scheduled)}: indica il costo pianificato per realizzare le attività di progetto alla data corrente.
+\end{itemize}
+
+Da cui:
+
+\begin{itemize}
+    \item \textit{$SV > 0$}: indica che il lavoro prodotto è in anticipo rispetto a quanto pianificato;
+    \item \textit{$SV = 0$}: indica che il lavoro prodotto è in linea rispetto a quanto pianificato;
+    \item \textit{$SV < 0$}: indica che il lavoro prodotto è in ritardo rispetto a quanto pianificato;
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{Range di accettazione:} $ SV \geq -5\%*BCWS $;
+    
+    \item \textbf{Range ottimale:} $ SV \geq 0 $.
+\end{itemize}
+
+\subsection{Budget Variance}
+
+La \glossario{Budget Variance}{Budget Variance} è una metrica di progetto standard che indica se si sta sforando, risparmiando o se si è in linea rispetto alla schedulazione delle attività di progetto pianificate nella baseline e al budget preventivato. Essa rappresenta un importante indicatore finanziario su cui basarsi nell'ambito della gestione delle risorse. La formula per il calcolo della Schedule Variance è la seguente:
+
+\[ BV = BCWS - ACWP \]
+
+Dove:
+
+\begin{itemize}
+    \item \textit{BV (Budget Variance)}: indica la Budget Variance;
+    \item \textit{BCWS (Budjet Cost Work Scheduled)}: indica il costo pianificato per realizzare le attività di progetto alla data corrente;
+    \item \textit{ACWP (Actual Cost of Work Performed)}: indica il costo effettivamente sostenuto per realizzare le attività di progetto alla data corrente.
+\end{itemize}
+
+Da cui:
+
+\begin{itemize}
+    \item \textit{$SV > 0$}: indica che si è consumato meno budget di quanto preventivato;
+    \item \textit{$SV = 0$}: indica che si è consumato tanto budget quanto preventivato;
+    \item \textit{$SV < 0$}: indica che si è consumato più budget di quanto preventivato;
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{Range di accettazione:} $ BV \geq -10\%*BCWS $;
+    
+    \item \textbf{Range ottimale:} $ BV \geq 0 $.
+\end{itemize}
+
+% METRICHE PER IL SOFTWARE
+
+\section{Metriche per il software}
+
+\subsection{Complessità ciclomatica}
+
+La \glossario{Complessità Ciclomatica}{Complessità Ciclomatica} (o complessità condizionale) è una metrica software utilizzata per misurare la complessità di un programma. 
+Nello specifico, essa stima la complessità di funzioni, moduli, metodi o classi di un programma. Il valore della Complessità Ciclomatica rappresenta quanto un metodo è complesso, tramite la misura del numero di cammini linearmente indipendenti che attraversano il \glossario{grafo}{grafo} di flusso di controllo. In tale grafo, i nodi rappresentano gruppi indivisibili di istruzioni. Un arco connette due nodi se le istruzioni di uno dei nodi possono essere eseguite
+direttamente dopo l'esecuzione delle istruzioni dell'altro nodo. Durante l’identificazione dei test, la Complessità Ciclomatica è inoltre utile per determinare il numero di casi di test necessari: l’indice di Complessità Ciclomatica è infatti un limite superiore al numero di test necessari per raggiungere la completa \glossario{copertura del codice}{copertura del codice} (o \textit{code coverage}) del modulo testato.
+Un valore troppo elevato indica un'eccessiva complessità del codice, cui consegue una complessa manutenzione, al contrario un valore ridotto potrebbe indicare una scarsa efficienza dei metodi.
+
+\begin{itemize}
+    \item \textbf{Range di accettazione:} [0, 15];
+    
+    \item \textbf{Range ottimale:} [0, 10].
+\end{itemize}
+
+\subsection{Copertura del codice}
+
+La Copertura del codice (o code coverage) indica la percentuale di istruzioni,  rispetto al totale, che vengono eseguite durante i test. Maggiore è il numero delle istruzioni testate e maggiore è la possibilità di individuare e risolvere errori di codifica.
+Un valore troppo basso indica che molte istruzioni non vengono testate, divenendo possibile causa di anomalie.
+
+\begin{itemize}
+    \item \textbf{Range di accettazione:} $ \textrm{\textit{percentuale di istruzioni testate}} \geq 60\% $;
+    
+    \item \textbf{Range ottimale:} $ \textrm{\textit{percentuale di istruzioni testate}} \geq 85\% $.
+\end{itemize}
+
+\subsection{Rapporto tra linee di codice e linee di commento}
+
+Il rapporto tra linee di codice (escluse le righe vuote) e linee di commento rappresenta un indice utile a stimare la manutenibilità del codice sorgente. Un rapporto troppo basso indica una scarsa documentazione del codice scritto, cui consegue una possibile elevata complessità nel manutenerlo.
+
+\begin{itemize}
+    \item \textbf{Range di accettazione:} $ \textrm{\textit{rapporto}} \geq 0.3\% $;
+    
+    \item \textbf{Range ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $.
+\end{itemize}
+
+\subsection{Numero di attributi per classe}
+
+Il numero di attributi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più piccole.
+
+\begin{itemize}
+    \item \textbf{Range di accettazione:} [0, 15];
+    
+    \item \textbf{Range ottimale:} [0, 8].
+\end{itemize}
+
+\subsection{Numero di metodi per classe}
+
+Il numero di metodi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più piccole.
+
+\begin{itemize}
+    \item \textbf{Range di accettazione:} [3, 10];
+    
+    \item \textbf{Range ottimale:} [3, 8].
+\end{itemize}
+
+\subsection{Numero di bug per linee di codice}
+
+Il numero di \glossario{bug}{bug} per linee di codice rappresenta un indice interessante per il monitoraggio del prodotto software a lungo termine. All’aumentare del codice prodotto consegue un incremento della probabilità
+di errori non rilevati. Risulta quindi utile monitorare il rapporto tra i difetti trovati e il codice in fase di incremento, con l'intento di ridurlo sempre di più.
+
+\begin{itemize}
+    \item \textbf{Range di accettazione:} [0, 60];
+    
+    \item \textbf{Range ottimale:} [0, 20].
+\end{itemize}
+
+\subsection{Livello di annidamento}
+
+Il livello di annidamento nei metodi (tenuto conto della presenza di strutture di controllo annidate) incide notevolmente sulla sua complessità e sulla sua conseguente manutenibilità.
+Un alto livello di annidamento all'interno di un metodo è dunque sintomo di codice di difficile manutenzione e suggerisce la possibilità di decomporlo in più metodi distinti.
+
+\begin{itemize}
+    \item \textbf{Range di accettazione:} [1, 5];
+    
+    \item \textbf{Range ottimale:} [1, 3].
+\end{itemize}
+
+\subsection{Stabilità}
+
+Il livello di stabilità di un software indica il rischio con una modifica apportata ad un \glossario{package}{package} influenzi il funzionamento dell'intero sistema. Il valore di instabilità è calcolato usando il grado di \glossario{accoppiamento}{accoppiamento} tramite la seguente formula:
+
+\[ \textrm{\textit{Instabilità}} = \frac{\textrm{\textit{Accoppiamento efferente}}}{\textrm{\textit{Accoppiamento efferente}} + \textrm{\textit{Accoppiamento afferente}}} \]
+
+Dove:
+
+\begin{itemize}
+    \item \textit{Accoppiamento efferente:} indica il grado di dipendenza delle classi di un package verso classi di package esterni. Un valore basso garantisce la stabilità del package indipendentemente dalle possibili modifiche al resto del sistema;
+    
+    \item \textit{Accoppiamento afferente:} indica il grado di utilità delle classi di un package verso classi esterne ad esso. Un valore troppo basso potrebbe essere indice di scarsa utilità della classe, dato che poche delle sue funzionalità sono usate al suo esterno. Al contrario, un valore troppo elevato può indicare un livello di dipendenza pericoloso del package in esame, che può portare ad effetti indesiderati nelle classi esterne in caso di modifiche. Un valore elevato, d'altro canto, non è necessariamente indice di un errore di progettazione bensì potrebbe indicare semplicemente la criticità del package in esame.
+\end{itemize}
+
+% GESTIONE AMMINISTRATIVA DELLA REVISIONE
+
+\chapter{Gestione amministrativa della revisione}
+
+\section{Gestione delle anomalie}
+
+\subsection{Definizione delle anomalie}
+
+L’identificazione delle anomalie è finalizzata alla loro risoluzione e rappresenta un importante dato per il monitoraggio dello stato del prodotto. Distinguere e catalogare le anomalie permette di organizzare (in particolar modo di priorizzare) e affinare le correzioni da attuare per eliminarle. Di seguito
+vengono quindi elencate le definizioni di anomalie (secondo glossario IEEE 610.12-90) adottate dal gruppo:
+
+\begin{itemize}
+    \item \textbf{Error:} differenza riscontrata tra risultato di una computazione e valore teorico atteso.
+    \item \textbf{Fault:} un passo, un processo o un dato definito in modo erroneo che corrisponde a quanto viene definito come bug.
+    \item \textbf{Failure:} il risultato di un fault.
+    \item \textbf{Mistake:} azione umana che produce un risultato errato.
+\end{itemize}
+
+\subsection{Procedura di segnalazione e correzione delle anomalie}
+
+Il membro del gruppo che dovesse rilevare una qualsiasi anomalia, ha il dovere di segnalarne la presenza aprendo un \glossario{issue}{issue} sul \glossario{repository}{repository} del gruppo nei termini indicati nelle \textit{Norme di Progetto v1.0.0}. Il Responsabile ha quindi l'incarico di visionare tale \textit{issue} e di delegarne ad un membro del gruppo la risoluzione. La selezione del membro incaricato è basata sulla distribuzione del carico di lavoro al momento della rilevazione dell'anomalia e predilige chi viene ritenuto responsabile di aver causato la stessa.  
+
+\section{Procedure di controllo per la qualità di processo}
+
+Le procedure di controllo per la qualità di processo hanno il fine di migliorare la qualità del
+prodotto e di diminuire costi e tempi di sviluppo. Il gruppo sceglie di adottare un sistema di controllo \textit{a maturità di processo}, che riflette le \glossario{best practice}{best practice} di management e le tecniche di
+sviluppo, ponendosi come obiettivo primario la qualità del prodotto e la prevedibilità dei processi. 
+Il miglioramento dei processi è un processo ciclico composto da tre sotto-processi:
+
+\begin{itemize}
+    \item \textbf{Misurazione:} in questo processo vengono misurati gli attributi del progetto con l'intento di allinearne gli obiettivi con le misurazioni effettuate. Si forma così una baseline che aiuta a comprendere l’effettiva efficacia dei miglioramenti;
+    
+    \item \textbf{Analisi:} in questo processo si tenta di identificare le problematiche e i colli di bottiglia dei processi;
+    
+    \item \textbf{Modifica:} sulla base delle problematiche riscontrate dagli esiti dei processi precedenti, vengono proposti dei cambiamenti migliorativi.
+\end{itemize}
+
+Nell'ambito del processo di verifica, il gruppo procederà nel seguente modo:
+
+\begin{enumerate}
+    \item Vengono effettuate le misurazioni pertinenti sui processi;
+    \item I dati ottenuti dalle misurazioni vengono analizzati nei i giorni precedenti alle consegne del materiale in revisione previste dal committente;
+    \item Sulla base dell'analisi si propongono dei cambiamenti migliorativi;
+    \item Si documentano i passi precedenti in una tabella, riportata in coda a questo documento.
+    \item Le modifiche al processo vengono implementate a partire dall’inizio del processo incrementale successivo. 
+\end{enumerate}
+
+\appendix
+
+% STANDARD DI QUALITà
+
+\chapter{Standard di qualità}
+
+% SPICE
+
+\section{Qualità di processo: ISO/IEC 15504}
+
+\subsection{Introduzione allo standard}
+
+Il modello ISO/IEC 15504, anche noto come SPICE (acronimo di Software Process Improvement and Capability Determination, dove per \textit{capability} si intende la capacità intesa come abilità di un processo nel raggiungere un obiettivo) è lo standard di riferimento per la valutazione oggettiva della qualità dei processi software e permette la misurazione indipendente della capacità di ogni processo tramite la classificazione di alcuni attributi, eseguita previo studio del range di risultati che la sua esecuzione restituisce. Perché possano contribuire al miglioramento dei processi, le singole valutazioni devono essere ripetibili, oggettive e fornire esiti comparabili. Gli attributi associati alle capacità di ogni processo sono:
+
+\begin{itemize}
+    \item \textbf{Process performance:} indica in quale misura sono raggiunti gli obiettivi fissati;
+    \item \textbf{Performance management:} indica il grado di organizzazione con cui sono raggiunti gli obiettivi fissati;
+    \item \textbf{Work product management:} indica in quale misura i prodotti sono gestiti correttamente per quanto riguarda documentazione, controllo e verifica;
+    \item \textbf{Process definition:} indica in quale misura il processo si appoggia agli standard; 
+    \item \textbf{Process distribution:} indica in quale misura il processo standard viene effettivamente rilasciato e distribuito come un processo definito in grado di raggiungere sempre gli stessi risultati;
+    \item \textbf{Process measurement:} indica il grado in cui i risultati delle misure sono utilizzati per garantire che il processo raggiunga i suoi obiettivi;
+    \item \textbf{Process control:} indica in quale misura il processo risulta stabile, capace e predicibile (entro certo limiti);
+    \item \textbf{Process change:} indica in quale misura le modifiche da apportare al processo sono identificate grazie ad una fase di analisi delle performance e allo studio di approcci innovativi;
+    \item \textbf{Process improvement:} indica in quale misura i cambiamenti all'organizzazione, alle performance e alla definizione del processo hanno un impatto effettivo che porta a raggiungere importanti obiettivi di miglioramento al processo.
+\end{itemize}
+
+\subsection{Classificazione dei processi}
+
+Gli attributi vengono misurati e classificati secondo uno dei seguenti livelli:
+
+\begin{itemize}
+    \item \textbf{N - not implemented:} il processo non possiede l'attributo o dimostra gravi carenze in merito;
+    \item \textbf{P - partially implemented:} esiste un approccio sistematico volto al possesso di un attributo già parzialmente ottenuto, ma alcuni aspetti non sono ancora prevedibili;
+    \item \textbf{L - largely implemented:} esiste un approccio sistematico volto al possesso di un attributo già significativamente ottenuto, ma l'attuazione varia nelle diverse unità;
+    \item \textbf{F - fully implemented:} l'attributo è stato completamente conseguito grazie ad un approccio sistematico e l'attuazione è uguale in tutte le unità.
+\end{itemize}
+
+Secondo la classificazione degli attributi, ad un processo viene assegnato uno dei seguenti livelli di capacità:
+
+\begin{itemize}
+    \item \textbf{Incomplete:} il processo è incompleto in quanto non è stato implementato, o fallisce nel raggiungere il proprio obiettivo. Questo livello non ha alcun attributo associato.
+    \item \textbf{Performed:} il processo è stato implementato e ha successo nel raggiungere il proprio obiettivo. L'attributo associato a questo livello è \textit{process performance}.
+    \item \textbf{Managed:} il processo, che già apparteneva al livello \textit{performed}, è implementato in maniera organizzata tramite pianificazione, controllo e correzione; i suoi prodotti sono sicuri. Gli attributi associati a questo livello sono \textit{performance management} e \textit{work product management}.
+    \item \textbf{Established:} il processo, che già apparteneva al livello \textit{managed}, è stato implementato come processo definito in grado di raggiungere sempre gli stessi risultati. Gli attributi associati a questo livello sono \textit{process definition} e \textit{process distribution}.
+    \item \textbf{Predictable:} il processo, che già apparteneva al livello \textit{established}, opera entro limiti definiti per raggiungere i propri risultati. Gli attributi associati a questo livello sono \textit{process control} e \textit{process measurement}.
+    \item \textbf{Optimizing:} il processo, che già apparteneva al livello \textit{predictable}, è oggetto di miglioramento continuo per raggiungere gli obiettivi di progetto. Gli attributi associati a questo livello sono \textit{process change} e \textit{process improvement}.
+\end{itemize}
+
+% ISO/IEC 9126
+    
+\section{Qualità di prodotto: ISO/IEC 9126}    
+
+\subsection{Introduzione allo standard}
+
+La sigla ISO/IEC 9126 individua una serie di normative e linee guida preposte a descrivere un modello di qualità del software. Nello specifico, esso definisce un modello (costituito da metriche qualitative che possono essere misurate in termini quantitativi) per:
+
+\begin{itemize}
+    \item \textbf{Qualità interna:} la qualità interna definisce metriche applicabili al codice sorgente utili a rilevarvi problemi che ne possano inficiare la qualità prima che il software venga eseguito. Essa viene rilevata tramite analisi statica e, idealmente, determina la qualità esterna;
+    
+    \item \textbf{Qualità esterna:} la qualità esterna definisce metriche applicabili al software in esecuzione utili a valutarne i comportamenti tramite test, rispetto agli obiettivi stabiliti. Essa viene rilevata tramite analisi dinamica e, idealmente, determina la qualità in uso;
+    
+    \item \textbf{Qualità in uso} la qualità in uso definisce metriche applicabili al solo prodotto finito e calato in reali condizioni di utilizzo.
+\end{itemize}
+
+\subsection{Modello della qualità interna e esterna del software}
+
+\begin{itemize}
+    \item \textbf{Funzionalità:} il software è tenuto a fornire funzionalità atte a soddisfare i bisogni evidenziati nell'Analisi dei Requisiti, e che permettano di operare nel \glossario{dominio applicativo}{dominio applicativo} desiderato. Nello specifico, esso deve avere le seguenti caratteristiche:
+
+    \begin{itemize}
+        \item \textbf{Appropriatezza:} ovvero la capacità di fornire funzionalità appropriate in relazione ad attività specifiche, e che permettano di raggiungere gli obiettivi fissati;
+        
+        \item \textbf{Accuratezza:} ovvero la capacità di fornire risultati corretti con la precisione richiesta;
+        
+        \item \textbf{Interoperabilità:} ovvero la capacità di interagire con dati sistemi;
+        
+        \item \textbf{Sicurezza:} ovvero la capacità di proteggere informazioni e dati.
+    \end{itemize}
+    
+    \item \textbf{Affidabilità:} il software è tenuto a mantenere un livello di prestazioni quando utilizzato in condizioni date situazioni critiche. Nello specifico, esso deve avere le seguenti caratteristiche:
+
+    \begin{itemize}
+        \item \textbf{Maturità:} ovvero la capacità di evitare errori durante l'esecuzione;
+        
+        \item \textbf{Robustezza:} ovvero la capacità di mantenere uno stato funzionante anche in caso di errori;
+        
+        \item \textbf{Recuperabilità:} ovvero la capacità di ripristinare prestazioni e dati in caso di errori o malfunzionamenti.
+    \end{itemize}
+
+    \item \textbf{Efficienza:} il software è tenuto a eseguire le proprie funzionalità minimizzando tempo, spazio e tutte le altre risorse di cui necessita per il suo corretto funzionamento;
+    
+    \item \textbf{Usabilità:}  il software è tenuto ad essere comprensibile, studiabile e pienamente utilizzabile dal suo \glossario{target}{target} di utenza. Nello specifico, esso deve avere le seguenti caratteristiche:
+    
+    \begin{itemize}
+        \item \textbf{Comprensibilità:} ovvero la capacità di essere inequivocabilmente chiaro rispetto alle proprie funzionalità e modalità di utilizzo;
+        \item \textbf{Apprendibilità:} ovvero la capacità di rendere palesi, studiabili e dunque apprendili le proprie applicazioni;
+        \item \textbf{Operabilità:} ovvero la capacità di essere pienamente utilizzabile e sotto il controllo dell'utente;
+        \item \textbf{Attrattiva:} ovvero la capacità di risultare interessante, utile e attraente nei confronti dell'utente.
+    \end{itemize}
+    
+    \item \textbf{Manutenibilità:} il software deve essere in grado di evolvere sulla base di a modifiche, correzioni e adattamenti. Nello specifico, esso deve avere le seguenti caratteristiche:
+    
+    \begin{itemize}
+        \item \textbf{Analizzabilità:} ovvero la capacità di essere analizzato agevolmente al fine di individuarne errori;
+        \item \textbf{Modificabilità:} ovvero la capacità di essere modificato agevolmente a livello di codice, progettazione o documentazione;
+        \item \textbf{Stabilità:} ovvero la capacità di evitare effetti indesiderati in seguito ad un modifica;
+        \item \textbf{Testabilità:} ovvero la capacità di poter essere agevolmente verificato e validato.
+    \end{itemize}
+    
+    \item \textbf{Portabilità:} il software deve poter essere trasportato da un ambiente hardware o software ad un altro, seguendo le evoluzioni tecnologiche. Nello specifico, esso deve avere le seguenti caratteristiche:
+    
+    \begin{itemize}
+        \item \textbf{Adattabilità:} ovvero la capacità di adattarsi a differenti ambienti senza la necessità di azioni specifiche;
+        \item \textbf{Installabilità:} ovvero la capacità di essere installato in un dato ambiente;
+        \item \textbf{Conformità:} ovvero la capacità di coesistere con altre applicazioni e di condividere efficientemente le risorse;
+        \item \textbf{Sostituibilità:} ovvero la capacità di sostituire un altro software, che abbia lo stesso scopo, nello stesso ambiente.
+    \end{itemize}
+
+\end{itemize}
+
+\subsection{Modello della qualità in uso del software}
+
+Il software è tenuto a permettere agli utenti di conseguire obiettivi specifici con:
+
+\begin{itemize}
+    \item \textbf{Efficacia:} il software deve effettivamente permettere agli utenti di raggiungere l'obiettivo fissato;
+    \item \textbf{Produttività:} il software deve utilizzare in maniera efficiente le risorse a lui necessarie;
+    \item \textbf{Soddisfazione:} il software deve soddisfare i bisogni degli utenti;
+    \item \textbf{Sicurezza:} il software deve detenere livelli di rischio accettabili rispetto a danni nei confronti di persone, apparecchiature e ambiente operativo.
+\end{itemize}
+
+% CICLO DI DEMING
+
+\section{Ciclo di Deming}
+
+Il ciclo di Deming (anche conosciuto come ciclo PDCA, l'acronimo di Plan-Do-Check-Act) è un metodo iterativo utilizzato per il controllo dei processi finalizzato al miglioramento continuo della loro qualità e, conseguentemente, della qualità dei prodotti. Ogni iterazione del ciclo consiste di quattro fasi:
+
+\begin{enumerate}
+    \item \textbf{Plan:} la fase di pianificazione degli obiettivi di miglioramento. Qui vengono definite le attività da svolgere, le risorse da assegnarvi e le scadenze utili allo scopo di raggiungere tali obiettivi;
+    \item \textbf{Do:} la fase in cui ciò che è stato precedentemente pianificato viene messo in atto;
+    \item \textbf{Check:} la fase di verifica in cui si accerta che la fase \textit{Do} sia stata eseguita rispettando la fase \textit{Plan} e che abbia ottenuto esiti positivi secondo date metriche;
+    \item \textbf{Act:} la fase di attuazione, in cui i processi che hanno beneficiato delle correzioni e delle modifiche eseguite vengono resi standard.
+\end{enumerate}
+
+% RESOCONTO DELLE ATTIVITà DI VERIFICA
+
+\chapter{Resoconto delle attività di verifica}
+
+\section{Riassunto delle attività di verifica per le revisioni}
+
+Nel periodo precedente alla consegna per la Revisione dei Requisiti vengono verificati i documenti redatti ed i processi eseguiti. I documenti sono verificati dai Verificatori secondo i criteri per l'analisi statica definiti nel documento \textit{Norme di Progetto v1.0.0}, applicando il sistema \glossario{Walkthrough}{Walkthrough} ed \glossario{Inspection}{Inspection}. In primo luogo, viene verificato il documento nella sua interezza, cercando eventuali errori presenti e trattandoli nel modo seguente:
+
+\begin{enumerate}
+    \item Correzione di errori grammaticali o di eventuali violazioni delle norme tipografiche definite nelle \textit{Norme di Progetto v 1.0.0};
+    \item  Segnalazione ed aggiunta alla lista di controllo degli errori più frequenti;
+    \item Applicazione del ciclo PDCA allo scopo di migliorare e velocizzare le future verifiche;
+\end{enumerate}
+
+In secondo luogo, viene applicato il metodo Inspection mediante l'uso della lista di controllo stilata sulla base dei documenti già sottoposti a verifica, con particolare enfasi sugli errori più comuni.
+
+Il tracciamento dei requisiti viene effettuato tramite il software \glossario{SWEgo}{SWEgo} e successivamente controllato manualmente per assicurarne la correttezza.
+Vengono infine controllati i documenti ed il processo stesso ponendo attenzione sul rispetto delle metriche proposte in questo documento, come approfondito nella sezione seguente.
+
+\section{Dettaglio delle verifiche tramite analisi}
+
+\end{document}
