@@ -6,19 +6,19 @@
 
 \section{Obiettivo del prodotto}
 
-Lo scopo del progetto consiste nel creare un applicativo software di supporto all’utilizzo di Speect(GLOSSARIO). L’applicazione che dobbiamo creare è una interfaccia grafica che aiuti i programmatori nello sviluppo dei plug-in per Speect. Nell’interfaccia utente si deve poter visualizzare e modificare i grafi delle \glossario{utterance}{utterance} di Speect. 
+Lo scopo del progetto consiste nel creare un applicativo software di supporto all’utilizzo di \glossario{Speect}{Speect}. L’applicazione che dobbiamo creare è una interfaccia grafica che aiuti i programmatori nello sviluppo dei plug-in per Speect. Nell’interfaccia utente si deve poter visualizzare e modificare i grafi delle \glossario{utterance}{utterance} di Speect. 
 
 
 \section{Funzioni del prodotto}
 L’interfaccia grafica permetterà di:
 \begin{itemize}
-	\item{} Caricare i file JSON(GLOSSARIO) utili all’inizializzazione di Speect;
+	\item{} Caricare i file \glossario{JSON}{JSON} utili all’inizializzazione di Speect;
 	\item{} Mostrare i grafi delle varie utterance;
 	\item{} Aggiunta, modifica e eliminazione degli archi dei nodi; 
 	\item{} La modifica dei campi dei nodi;
 	\item{} Disporre graficamente i nodi per permettere una lettura semplificata;
 	\item{} Ritornare il file audio generato da Speect;
-	\item{} Permettere una stampa grafica dei grafi;(???)
+	\item{} Permettere una stampa grafica dei grafi;
 	\item{} Poter visualizzare passo passo i grafi delle varie utterance in modo sequenziale, cioè l’utente potrà decidere quando eseguire e visualizzare il grafo della successiva utterance.	
 \end{itemize}
 
@@ -35,20 +35,31 @@ Il software realizzato dovrà rispettare vari requisiti:
 \begin{itemize}
 	\item{} Requisiti obbligatori:
 	\begin{itemize}
-		\item{}Realizzazione di una interfaccia grafica per Speect in grado di visualizzare dei risultati delle componenti di analisi linguistica;
+		\item{}Realizzazione di una interfaccia grafica per Speect in grado di:
+		\begin{itemize}
+			\item{}Caricare un \glossario{file Voice}{file Voice} con estensione JSON;
+			\item{} Inserire un input di testo, che verrà utilizzato in fase di compilazione;
+			\item{} Selezionare la metodologia di compilazione;
+			\item{} Compilazione mediante Speect delle informazioni fornite;
+			\item{} Visualizzare mediante grafico il grafo prodotto dalla compilazione;
+			\item{} Permettere all'utente di selezionare le relazioni del grafo da visualizzare;
+			\item{} Caricare e salvare lo stato di un grafo precedentemente realizzato;
+			\item{} Evidenziare un nodo dato un percorso riferito al grafo;
+			\item{} Dare la possibilità di salvare un file audio con estensione \glossario{WAV}{WAV} generato a seguito di una compilazione di Speect.
+		\end{itemize}
 		\item{}	Documentazione tecnica del software;
-		\item{}Salvare e caricare lo stato dell’analisi.
 	\end{itemize}
 	\item{} Requisiti desiderabili:
 	\begin{itemize}
 		\item{} Poter eseguire passo passo le varie utterance;
-		\item{}	Modificare gli archi che collegano i vari nodi dei grafi delle utterance.
+		\item{}	Modificare gli archi che collegano i vari nodi dei grafi delle utterance;
+		\item{} Selezionato un nodo dall'interfaccia grafica, visualizzare il percorso del grafo.
 	\end{itemize}
 	\item{} Requisiti opzionali:
 	\begin{itemize}
-		\item{} Possibilità di visualizzare percorsi su un grafo;(IN CHE SENSO? PAG 7 CAPITOLATO)
 		\item{}	Possibilità di confrontare visivamente due stati della struttura interna di Speect;
 		\item{} Possibilità di confrontare automaticamente due stati della struttura interna di Speect;
+		\item{}Modificare il file Voice di estensione JSON caricato nell'applicazione;
 		\item{}	Possibilità di manipolare la configurazione di Speect:
 		\begin{itemize}
 			\item{} Caricamento;
