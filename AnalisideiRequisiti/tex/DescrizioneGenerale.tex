@@ -2,5 +2,61 @@
 
 \begin{document}
 	
+\chapter{Descrizione generale}
+
+\section{Obiettivo del prodotto}
+
+Lo scopo del progetto consiste nel creare un applicativo software di supporto all’utilizzo di Speect(GLOSSARIO). L’applicazione che dobbiamo creare è una interfaccia grafica che aiuti i programmatori nello sviluppo dei plug-in per Speect. Nell’interfaccia utente si deve poter visualizzare e modificare i grafi delle \glossario{utterance}{utterance} di Speect. 
+
+
+\section{Funzioni del prodotto}
+L’interfaccia grafica permetterà di:
+\begin{itemize}
+	\item{} Caricare i file JSON(GLOSSARIO) utili all’inizializzazione di Speect;
+	\item{} Mostrare i grafi delle varie utterance;
+	\item{} Aggiunta, modifica e eliminazione degli archi dei nodi; 
+	\item{} La modifica dei campi dei nodi;
+	\item{} Disporre graficamente i nodi per permettere una lettura semplificata;
+	\item{} Ritornare il file audio generato da Speect;
+	\item{} Permettere una stampa grafica dei grafi;(???)
+	\item{} Poter visualizzare passo passo i grafi delle varie utterance in modo sequenziale, cioè l’utente potrà decidere quando eseguire e visualizzare il grafo della successiva utterance.	
+\end{itemize}
+
+
+\section{Caratteristiche degli utenti}
+Il software si rivolge prevalentemente a programmatori esperti che si occupano di sviluppare plug-in per Speect. L’utente deve avere aver installato nulla propria macchina Speect e deve conoscere la struttura di grafi ritornata dalle varie utterance.
+
+
+\section{Piattaforma di esecuzione}
+Sarà possibile eseguire il software su tutte le macchine desktop con sistema operativo Linux, dovranno essere presenti \glossario{CMAKE}{CMAKE}, \glossario{GCC}{GCC} e le librerie di \glossario{QT}{QT}. Comunque verranno utilizzate tecnologie presenti anche su sistemi Windows in questo modo sarà possibile la compilazione, però non verrà fornito un manuale di installazione per quest’ultima piattaforma.
+
+\section{Vincoli generali}
+Il software realizzato dovrà rispettare vari requisiti:
+\begin{itemize}
+	\item{} Requisiti obbligatori:
+	\begin{itemize}
+		\item{}Realizzazione di una interfaccia grafica per Speect in grado di visualizzare dei risultati delle componenti di analisi linguistica;
+		\item{}	Documentazione tecnica del software;
+		\item{}Salvare e caricare lo stato dell’analisi.
+	\end{itemize}
+	\item{} Requisiti desiderabili:
+	\begin{itemize}
+		\item{} Poter eseguire passo passo le varie utterance;
+		\item{}	Modificare gli archi che collegano i vari nodi dei grafi delle utterance.
+	\end{itemize}
+	\item{} Requisiti opzionali:
+	\begin{itemize}
+		\item{} Possibilità di visualizzare percorsi su un grafo;(IN CHE SENSO? PAG 7 CAPITOLATO)
+		\item{}	Possibilità di confrontare visivamente due stati della struttura interna di Speect;
+		\item{} Possibilità di confrontare automaticamente due stati della struttura interna di Speect;
+		\item{}	Possibilità di manipolare la configurazione di Speect:
+		\begin{itemize}
+			\item{} Caricamento;
+			\item{}	Modifica;
+			\item{} Salvataggio.
+		\end{itemize}
+	\end{itemize}
+	
+\end{itemize}
 
 \end{document}
