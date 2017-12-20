@@ -1,63 +1,178 @@
-\documentclass[../NormeDiProgetto.tex]{subfiles}
+\documentclass[../NormediProgetto.tex]{subfiles}
 
 \begin{document}
 	
+% NORME DI PROGETTO -> PROCESSI DI SUPPORTO -> VERIFICA & VALIDAZIONE
+	
+	
 \section{Verifica}
+
 \subsection{Scopo}
-Si occupa di accertare che non vengano introdotti errori nel prodotto a seguito dell’esecuzione delle attività dei processi svolti nella fase in esame.
+Il processo di verifica ha lo scopo di accertare che non vengano introdotti errori nel prodotto a seguito dello svolgimento delle attività dei processi.
+
 \subsection{Descrizione}
-Il processo è suddiviso in due attività:
+
+Il processo di verifica viene instanziato per ogni processo in esecuzione, qualora esso raggiunga un livello di maturità significativo o vi fossero modiche sostanziali al suo stato. Per ogni processo viene verificata la qualità dello stesso e dei suoi prodotti. Ognuno dei 5 periodi descritti nel Piano di Progetto v 4.0.0 produce degli esiti diversi, dunque le procedure di verifica saranno specializzate per ognuno di essi. Gli esiti delle attività di
+verifica sono riportati in un'appendice dedicata nel PQ. Concluso il processo di verifica, viene instanziato quello di validazione, in cui nuovi \textit{Verificatori} designati dal \textit{Responsabile} accertano che i risultati prodotti siano conformi agli obiettivi di qualità. Se l'esito del processo di validazione è positivo, il \textit{Responsabile di Progetto} provvede all'approvazione dei documenti e\o del software a lui sottoposti.
+In relazione alle attività di verifica, il gruppo si riferisce alle metriche descritte nelle sezioni §3 "Metriche e misure" del \textit{Piano di Qualifica v 1.0.0}.
+
 \begin{itemize}
-\item \textbf{Analisi:} consiste nell’analisi del codice sorgente e la sua successiva esecuzione.
-Viene effettuata tramite due tecniche, l’analisi statica e l’analisi dinamica;
-\item \textbf{Test:} definisce tutti i test che vengono eseguiti sul prodotto software.
+    \item \textbf{Analisi:} consiste nell’analisi del codice sorgente e la sua successiva esecuzione.
+    Viene effettuata tramite due tecniche, l’analisi statica e l’analisi dinamica;
+    \item \textbf{Test:} definisce tutti i test che vengono eseguiti sul prodotto software.
 \end{itemize}
-\subsection{Analisi}
+
+\subsection{Verifica dei processi} 
+L'esecuzione dei processi viene monitorata e documentato a fine periodo nell'appendice §B "Resoconto delle attività di verifica" nel PQ, secondo le metodologie indicate dallo standard \glossario{ISO/IEC 15504}{ISO/IEC 15504} illustrato in appendice §A.1 dello stesso.
+
+\subsection{Verifica dei prodotti}
+La verifica dei prodotti assume connotazioni differenti a seconda della tipologia di prodotto in esame: per i documenti si prediligono tecniche di analisi statica, per il software tecniche di analisi dinamica.
+
+\subsection{Verifica dei documenti}
+
 \subsubsection{Analisi statica}
-L’analisi statica è una tecnica che permette di individuare anomalie all’interno di documenti
-e codice sorgente durante tutto il loro ciclo di vita. Si può realizzare tramite due
-tecniche diverse:
+
+L’analisi statica è una tecnica che permette di individuare anomalie all’interno di documenti e codice sorgente durante tutto il loro ciclo di vita. Si può realizzare tramite due tecniche diverse:
+
 \begin{itemize}
-\item \textbf{Walkthrough:} viene svolta effettuando una lettura a largo spettro. Si tratta
-di un’attività onerosa e collaborativa che richiede la cooperazione di più persone,
-essendo una tecnica non efficiente. Verrà utilizzata principalmente durante la prima
-parte del progetto, quando non tutti i membri del gruppo hanno piena padronanza
-e conoscenza delle Norme di Progetto e del \glossario{Piano di Qualifica}{piano di qualifica}. Utilizzando questa
-tecnica è possibile stilare una lista di controllo contenente gli errori più comuni.
-\item \textbf{Inspection:} viene svolta una lettura mirata e strutturata, volta a localizzare gli
-errori segnalati nella lista di controllo, con il minor costo possibile. Tramite l’acquisizione
-di esperienza la lista di controllo viene progressivamente estesa, rendendo
-l’inspection via via più efficacie. Normalmente è effettuata da una persona sola.
+    \item \textbf{Walkthrough:} viene svolta effettuando una lettura a largo spettro. Si tratta di un’attività collaborativa onerosa e poco efficiente. Essa viene utilizzata principalmente durante la fase iniziale del progetto, in cui non tutti i membri del gruppo hanno piena padronanza e conoscenza delle Norme di Progetto e del PQ. Tramite analisi \textit{Walkthrough} è possibile stilare una lista di controllo contenente gli errori più comuni.
+    
+    \item \textbf{Inspection:} viene svolta una lettura mirata e strutturata, volta a localizzare gli errori segnalati nella lista di controllo con il minor costo possibile. Con l'incremento dell'esperienza, la lista di controllo viene progressivamente estesa rendendo l’\textit{inspection} via via più efficacie.
 \end{itemize}
+
+Il gruppo utilizza entrambe le tecniche di analisi statica e fa inoltre uso di uno strumento automatico per il calcolo dell'\glossario{indice Gulpease}{indice Gulpease}, la cui descrizione è illustrata nel documento \textit{Strumentazione}.
+
+\subsubsection{Procedura di verifica dei documenti}
+
+\begin{enumerate}
+    \item Assegnazione della issue di verifica ad un \textit{Verificatore} da parte del \textit{Responsabile di progetto};
+    
+    \item Controllo degli errori comuni secondo checklist;
+    
+    \item Lettura dei contenuti e correzione degli errori logici e sintattici;
+    
+    \item Tracciamento degli errori rilevati;
+    
+    \item Notifica dell'issue come \textit{verified} (precedentemente \textit{verify}).
+\end{enumerate}
+
+\subsection{Verifica del software}
+
+La verifica del software avviene mediante tecniche di analisi dinamica, con la creazione di test automatici e tramite misu-
+razioni apposite delle metriche illustrate in §3 \Metriche e Misure" del PQ.
+
 \subsubsection{Analisi dinamica}
-L’analisi dinamica è una tecnica di analisi del prodotto software che richiede la sua esecuzione. Viene effettuata mediante dei test volti a verificare il funzionamento del prodotto e nel
-caso in cui vengano riscontrate anomalie ne permette l’identificazione.
-I test devono essere ripetibili, cioè deve essere possibile, dato lo stesso input e nello
-stesso ambiente, risalire allo stesso output. Per ogni test devono dunque essere definiti
-i seguenti parametri:
+
+L’analisi dinamica è una tecnica di analisi del prodotto software che richiede la sua esecuzione. Viene effettuata mediante dei test volti a verificare il funzionamento del prodotto e nel caso in cui vengano riscontrate anomalie ne permette l’identificazione. I test devono essere ripetibili, cioè deve essere possibile, dato lo stesso input nello stesso ambiente, ottenere lo stesso output. Per ogni test devono dunque essere definiti i seguenti parametri:
+
 \begin{itemize}
-\item \textbf{Ambiente:} il sistema hardware e software sul quale verrà eseguito il test del
-prodotto;
-\item \textbf{Stato iniziale:} lo stato iniziale dal quale il test viene eseguito;
-\item \textbf{Input:} l’input inserito;
-\item \textbf{Output:} l’output atteso;
-\item \textbf{Istruzioni aggiuntive:} ulteriori istruzioni su come va eseguito il test e su come
-vanno interpretati i risultati ottenuti.
+    \item \textbf{Ambiente:} il sistema hardware e software sul quale verrà eseguito il test;
+    \item \textbf{Stato iniziale:} lo stato iniziale dal quale il test viene eseguito;
+    \item \textbf{Input:} l’input inserito;
+    \item \textbf{Output:} l’output atteso;
+    \item \textbf{Istruzioni aggiuntive:} ulteriori istruzioni su come eseguire il test e su come interpretare i risultati ottenuti.
 \end{itemize}
-\subsection{Test}
-\subsubsection{Test di unità}
-Il test di unità si pone come obiettivo primario l’isolare dal resto del codice la parte
-più piccola di software testabile nell’applicazione, chiamata unità, per stabilire se essa
-funziona esattamente come previsto.
-\subsubsection{Test di sistema}
-Il test di sistema determina la validazione del prodotto software finale e verifica dunque che esso soddisfi in modo completo i requisiti.
-\subsubsection{Test di regressione}
-Il test di regressione deve essere eseguito ad ogni modifica di un’\glossario{implementazione}{implementazione} del
-sistema. A tal fine è necessario eseguire sul codice modificato i test esistenti, in modo da
-stabilire se le modifiche apportate hanno alterato elementi precedentemente funzionanti.
-\subsubsection{Test di accettazione}
-Il test di accettazione prevede il \glossario{collaudo}{collaudo} del prodotto in presenza del \glossario{proponente}{proponente} e,
-in caso del superamento di tale collaudo, ne consegue il rilascio ufficiale del prodotto
-sviluppato.
+
+\subsubsection{Test}
+
+Di seguito vengono riportate le tipologie di test eseguite sul software prodotto:
+
+\begin{itemize}
+    \item \textbf{Test di unità:} i test di unità hanno l'obiettivo primario di isolare la parte più piccola di software testabile, indicata col nome di unità, per stabilire se essa funziona esattamente come previsto. Ogni test di unità deve avere almeno un metodo correlato da testare e deve rispettare la seguente nomenclatura:
+    
+    \centerline{TU[Progressivo]}
+
+    \item \textbf{Test di integrazione:} i test di integrazione valutano due o più unità già sottoposte a test come fossero un solo componente, testando le interfacce presenti tra loro al fine di rilevare eventuali inconsistenze. Risulta conveniente testare le unità a coppie aggiungendone gradualmente altre, così da poter rendere immediatamente tracciabile l'origine delle anomalie. Ogni test d'integrazione deve avere almeno un paio di componenti correlate da testare e rispettare la seguente nomenclatura:
+    
+    \centerline{TI[Progressivo]}
+    
+    \item \textbf{Test di regressione:} i test di regressione devono essere eseguiti ad ogni modifica di un’\glossario{implementazione}{implementazione} all'interno del sistema. A tal fine è necessario eseguire sul codice modificato i test esistenti, in modo da stabilire se le modifiche apportate hanno alterato elementi precedentemente funzionanti. Ogni test di regressione deve rispettare la seguente nomenclatura:
+
+    \centerline{TR[Progressivo]}
+    
+    \item \textbf{Test di sistema:} i test di sistema determinano la validazione del prodotto software finale e verificano dunque che esso soddisfi in modo completo i requisiti fissati. Ogni test di sistema deve avere un requisito correlato da testare e deve rispettare la seguente nomenclatura:
+    
+    \centerline{TS[Tipologia][Importanza][Codice]}
+
+    Dove Tipologia, Importanza e Codice sono dedotti dal requisito correlato che il test va a verificare.
+
+    \item \textbf{Test di accettazione:} il test di accettazione prevede il \glossario{collaudo}{collaudo} del prodotto in presenza del \glossario{proponente}{proponente} e, in caso del superamento di tale collaudo, ne consegue il rilascio ufficiale del prodotto sviluppato. Ogni test di validazione deve avere un requisito correlato da testare e deve rispettare la seguente nomenclatura:
+
+    \centerline{TV[Tipologia][Importanza][Codice]}
+
+    Dove Tipologia, Importanza e Codice sono dedotti dal requisito correlato che il test va a verificare.
+
+\end{itemize}
+
+
+\subsubsection{Procedura di verifica del software}
+
+\begin{enumerate}
+    \item Implementazione del codice;
+    
+    \item Commit del codice sul repository;
+    
+    \item Esecuzione della build;
+    
+    \item Esecuzione della suite di test;
+    
+    \item Esecuzione della build testata;
+    
+    \item Calcolo della copertura del codice e delle altre metriche pertinenti con relativa documentazione dei risultati.
+\end{enumerate}
+
+% VALIDAZIONE
+
+\section{Validazione}
+
+\subsection{Scopo}
+Il processo di validazione ha lo scopo di accertare se il prodotto software e relativa documentazione verificati sono conformi a quanto preventivato.
+
+\subsection{Descrizione}
+
+Questo processo consta di due principali attività:
+
+\begin{itemize}
+    \item Test di sistema e di validazione;
+    \iteme Collaudo;
+\end{itemize}
+
+Le attività svolte nel processo di validazione sono dunque le seguenti:
+
+\begin{itemize}
+    \item Pianificazione dei test da eseguire e relativo tracciamento;
+    
+    \item Conduzione di test che stressino il software nei suoi punti critici, ovvero laddove è più probabile il verificarsi di errori;
+    
+    \item Verifica del soddisfacimento dei requisiti secondo le informazioni di tracciamento.
+\end{itemize}
+
+È compito dei \textit{Progettisti} definire la pianificazione e la progettazione dei test. Compito dei \textit{Verificatori} è invece eseguirli e tracciarne i risultati tramite gli strumenti a ciò preposti. Per garantire la dovuta imparzialità nell'esecuzione, chi esegue un determinato test è necessariamente un membro del gruppo che non lo ha progettato ed implementato. Ad ulteriore garanzia di indipendenza, è intenzione del gruppo concordare un incontro con il committente in cui effettuare i test di sistema e validazione.
+
+\subsection{Procedura di validazione dei documenti}
+
+\begin{enumerate}
+    \item Assegnazione della issue relativa alla validazione ad un \textit{Verificatore} da parte del \textit{Responsabile};
+    
+    \item Calcolo dell'indice Gulpease e confronto del valore ottenuto con i parametri di riferimento;
+    
+    \item Se i risultati rilevati vengono ritenuti soddisfacenti, il documento viene approvato.
+\end{enumerate}
+
+\subsection{Procedura di validazione del software}
+
+\begin{enumerate}
+    \item Esecuzione dei test di unità;
+    
+    \item Esecuzione dei test di integrazione;
+    
+    \item Esecuzione dei test di sistema;
+    
+    \item Esecuzione dei test di validazione;
+\end{enumerate}
+
+\subsection{Collaudo}
+
+A seguito di una soddisfacente verifica e validazione del software, è intenzione del gruppo concordare un incontro con il Committente per eseguire un collaudo.
 
 \end{document}

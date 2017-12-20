@@ -3,27 +3,29 @@
 
 \begin{document}
 
+% NORME DI PROGETTO - PROCESSI DI SUPPORTO
+
 \chapter{Processi di supporto}
+
+% NORME DI PROGETTO - PROCESSI DI SUPPORTO - DOCUMENTAZIONE
 
 \section{Documentazione}
 
 \subsection{Scopo} 
 
-Lo scopo del processo di documentazione è descrivere l'insieme di regole adottate dal gruppo per la redazione della documentazione di progetto. 
-	
-\subsection{Descrizione}
+Lo scopo del processo di documentazione è descrivere l'insieme di regole adottate dal gruppo per la redazione della documentazione di progetto. Il gruppo si prefigge di definire in questo capitolo norme atte alla stesura di una documentazione il più possibile formale, corretta, coerente e coesa.
 
-Di seguito vengono descritte le norme adottate per la stesura di tutti i documenti riguardanti il progetto.
-
-\subsection{Template}
-
-Il gruppo utilizza un template \LaTeX{} appositamente codificato per uniformare l'aspetto dei documenti e velocizzare il processo di documentazione. Il template include frontespizio, registro delle mofiche, indice, piè di pagina e intestazione, elementi del documento approfonditi di seguito. 
+% STRUTTURA DEI DOCUMENTI
 
 \subsection{Struttura dei documenti}
 
+\subsubsection{Template}
+
+Il gruppo utilizza un template \LaTeX{} appositamente codificato per uniformare l'aspetto dei documenti e velocizzare il processo di documentazione. Il template include frontespizio, registro delle modifiche, indice, piè di pagina e intestazione, elementi del documento approfonditi di seguito. 
+
 \subsubsection{Frontespizio}
 
-La prima pagina di ogni documento è strutturata nel seguente modo:
+Il frontespizio di ogni documento è strutturato nel seguente modo:
 
 \begin{itemize}
     \item \textbf{Nome del documento:} indica il nome del documento (ex: Norme di progetto);
@@ -93,7 +95,7 @@ In caso di presenza in una pagina interna di note da esplicare, esse vanno indic
 
 \subsubsection{Contenuto principale}
 
-Il contenuto principale del documento è organizzato segue la seguente struttura gerarchica:
+Il contenuto principale del documento è organizzato secondo la seguente struttura gerarchica:
 
 \begin{enumerate}
     \item Capitolo
@@ -102,33 +104,50 @@ Il contenuto principale del documento è organizzato segue la seguente struttura
     \item Sottosottosezione
 \end{enumerate}
 
+\subsubsection{Verbali delle riunioni}
+
+I verbali delle riunioni sono redatti in base ad un template \LaTeX{} ad hoc che include sempre:
+
+\begin{itemize}
+    \item Data della riunione
+    
+    \item Membri presenti
+    
+    \item Ordine del giorno
+    
+    \item Esito sintetico della discussione
+\end{itemize}
+
+% NORME TIPOGRAFICHE
+
 \subsection{Norme tipografiche}
 
 \subsubsection{Stile del testo}
 
 \begin{itemize}
-
-\item{\textbf{Glossario:}} ogni parola contenuta nel glossario deve essere marcata, alla sua prima occorrenza in ogni documento, in corsivo e con una G maiuscola a pedice, questo verrà automaticamente fatto tramite la macro \{ \}glossario{termine}{riferimento al glossario} che stamperà il termine con la giusta formattazione (\textit{termine}\ped{G}) e controllerà che il suo riferimento sia presente nel glossario, dando un errore in compilazione se è assente;  
-
-\item{\textbf{Grassetto:}} viene applicato ai titoli e agli elementi di un elenco puntato seguiti da una descrizione, può essere usato anche per mettere in risalto parole significative; 
-
-\item{\textbf{Corsivo:}} Il corsivo dev’essere utilizzato per:
-\begin{itemize}
-\item citazioni;
-\item parole inserite nel glossario;
-\item attività del progetto;
-\item ruoli del progetto;
-\item riferimenti ad altri documenti;
-\item parole particolari solitamente poco usate o conosciute.
-\end{itemize}
-
-\item{\textbf{Maiuscolo:}} deve essere usato solo per gli acronimi.
+    
+    \item \textbf{Glossario:} ogni parola contenuta nel glossario deve essere marcata, solo alla sua prima occorrenza in ogni documento, in corsivo e con una G maiuscola a pedice. Tale formattazione viene assicurata dal comando \LaTeX{} \{ \}glossario{termine}{riferimento al glossario} che stampa il termine con la giusta formattazione (\textit{termine}\ped{G}) e controlla che il suo riferimento sia presente nel glossario, restituendo un errore di compilazione in caso contrario;  
+    
+    \item \textbf{Grassetto:} il grassetto viene applicato ai titoli e agli elementi di un elenco puntato seguiti da una descrizione. Esso può inoltre essere usato per mettere in particolare risalto termini significativi; 
+    
+    \item \textbf{Corsivo:} il corsivo viene utilizzato per:
+    \begin{itemize}
+        \item citazioni;
+        \item termini di glossario;
+        \item attività del progetto;
+        \item ruoli del progetto;
+        \item riferimenti ad altri documenti.
+    \end{itemize}
+    
+     Esso può inoltre essere usato per mettere in particolare risalto termini significativi;
+    
+    \item{\textbf{Maiuscolo:}} il maiuscolo viene usato solo per gli acronimi.
 
 \end{itemize}
 
 \subsubsection{Elenchi puntati}
 
- Gli elenchi puntati servono ad esprimere in modo sintetico un concetto, evitando frasi lunghe e discorsive. Ogni voce di un elenco puntato deve terminare con un punto e virgola, ad eccezione dell’ultima, che va terminata con un punto.
+Gli elenchi puntati servono ad esprimere in modo sintetico un concetto, evitando frasi lunghe e dispersive. Ogni voce di un elenco puntato termina con un punto e virgola, ad eccezione dell’ultima, che termina invece con un punto.
 
 \subsubsection{Formati}
 
@@ -151,11 +170,11 @@ Il contenuto principale del documento è organizzato segue la seguente struttura
 \item{\textbf{Nomi ricorrenti:}}
 \begin{itemize}
 \item{\textbf{Ruoli di progetto:}} ogni nome di ruolo di progetto viene scritto in corsivo e con l’iniziale maiuscola;
-\item{\textbf{Nomi dei documenti:}}  ogni nome di documento viene scritto in corsivo e con l’iniziale di ogni parola che non sia un articolo maiuscola;
+\item{\textbf{Nomi dei documenti:}} ogni nome di documento viene scritto in corsivo e con l’iniziale di ogni parola che non sia un articolo maiuscola;
 \item{\textbf{Nomi propri:}} ogni nome proprio di persona deve essere scritto nella forma \textit{Nome Cognome}.
 \end{itemize}
 
-\item{\textbf{Link:}} i link dovranno essere scritti attraverso il comando \LaTeX{} \textit{href}.
+\item{\textbf{Link:}} i link dovranno essere scritti attraverso il comando \LaTeX{} \textit{href} e sono distinti dal colore blu.
 \end{itemize}
 
 \subsubsection{Sigle}
@@ -163,48 +182,60 @@ Il contenuto principale del documento è organizzato segue la seguente struttura
 È previsto l’utilizzo delle seguenti sigle: 
 
 \begin{itemize}
-\item{\textbf{AR:}} \textit{Analisi dei Requisiti};
-\item{\textbf{PP:}} \textit{Piano di Progetto};
-\item{\textbf{NP:}} \textit{Norme di Progetto};
-\item{\textbf{SF:}} \textit{Studio di Fattibilità};
-\item{\textbf{PQ:}} \textit{Piano di Qualifica};
-\item{\textbf{ST:}} \textit{Specifica Tecnica};
-\item{\textbf{MU:}} \glossario{Manuale utente}{manuale utente};
-\item{\textbf{DP:}} \textit{Definizione di Prodotto};
-\item{\textbf{RR:}} Revisione dei requisiti;
-\item{\textbf{RP:}} Revisione di progettazione;
-\item{\textbf{RQ:}} Revisione di qualifica;
-\item{\textbf{RA:}} Revisione di accettazione;
-\item{\textbf{Re:}} \textit{Responsabile di Progetto};
-\item{\textbf{Am:}} \textit{Amministratore di Progetto};
-\item{\textbf{An:}} \textit{Analista};
-\item{\textbf{Pt:}} \textit{Progettista};
-\item{\textbf{Pr:}} \glossario{Programmatore}{programmatore};
-\item{\textbf{Ve:}} \textit{Verificatore}.
+    \item{\textbf{AR:}} \textit{Analisi dei Requisiti};
+    \item{\textbf{PP:}} \textit{Piano di Progetto};
+    \item{\textbf{NP:}} \textit{Norme di Progetto};
+    \item{\textbf{SF:}} \textit{Studio di Fattibilità};
+    \item{\textbf{PQ:}} \textit{Piano di Qualifica};
+    \item{\textbf{ST:}} \textit{Specifica Tecnica};
+    \item{\textbf{MU:}} \glossario{Manuale utente}{manuale utente};
+    \item{\textbf{DP:}} \textit{Definizione di Prodotto};
+    \item{\textbf{RR:}} Revisione dei requisiti;
+    \item{\textbf{RP:}} Revisione di progettazione;
+    \item{\textbf{RQ:}} Revisione di qualifica;
+    \item{\textbf{RA:}} Revisione di accettazione;
+    \item{\textbf{Re:}} \textit{Responsabile di Progetto};
+    \item{\textbf{Am:}} \textit{Amministratore di Progetto};
+    \item{\textbf{An:}} \textit{Analista};
+    \item{\textbf{Pt:}} \textit{Progettista};
+    \item{\textbf{Pr:}} \glossario{Programmatore}{programmatore};
+    \item{\textbf{Ve:}} \textit{Verificatore}.
 \end{itemize}
 
 \subsection{Elementi grafici}
 
 \subsubsection{Tabelle}
 
-Ogni tabella deve possedere una didascalia in cui deve comparire il numero identificativo, per agevolarne il tracciamento, ed una breve descrizione del suo contenuto.
+Ogni tabella è corredata da una didascalia in cui compare il suo numero identificativo (per agevolarne il tracciamento) ed una breve descrizione del suo contenuto.
 
 \subsubsection{Immagini}
 
-Ogni immagine deve essere centrata e separata dai paragrafi prima e dopo di essa. Le immagini devono avere una didascalia analoga a quella delle tabelle. Tutti i diagrammi UML vengono inseriti come immagini.
+Ogni immagine deve essere centrata e separata dai paragrafi a lei precedenti e successivi. Le immagini sono corredate da una didascalia analoga a quella delle tabelle. Tutti i diagrammi UML vengono inseriti come immagini.
 
 \subsection{Classificazione dei documenti}
 
-\subsubsection{Documenti informali}
+Ogni documento formale è classificato come documento Interno od Esterno, con le seguenti differenze:
 
-Tutte le versioni dei documenti che non siano state approvate dal \textit{Responsabile di Progetto} sono ritenute informali e, in quanto tali, sono considerate esclusivamente ad uso interno.
+\begin{itemize}
+    \item \textbf{Interno:} il documento ha utilizzo interno al gruppo Graphite;
+    \item \textbf{Esterno:} il documento viene condiviso con i Committenti e con la Proponente.
+\end{itemize}
 
-\subsubsection{Documenti formali}
+\subsection{Nomenclatura dei documenti}
 
-Una versione di un documento viene considerata formale quando è stata approvata dal \textit{Responsabile di Progetto}. Solo i documenti formali possono essere distribuiti all’esterno del gruppo. 
+I documenti formali, fatta eccezione per i Verbali di riunione, adottano il seguente sistema di nomenclatura:
 
-\subsection{Procedura di approvazione}
+\\ NomeDelDocumento vX.Y.Z
 
-Ogni documento non formale completato dovrà essere sottoposto al \textit{Responsabile di Progetto}, che a sua volta si occuperà di incaricare i \textit{Verificatori} di controllarne la correttezza del contenuto e della forma. Se vengono individuati degli errori, i \textit{Verificatori} li riporteranno al \textit{Responsabile di Progetto}, che a sua volta incaricherà il redattore del documento di correggerli. Questo ciclo va ripetuto fino a che il documento non è considerato corretto. Successivamente sarà sottoposto al Responsabile di Progetto, che potrà approvarlo o meno. Quando approvato, il documento verrà considerato un documento formale. In caso contrario il \textit{Responsabile di Progetto} dovrà comunicare le motivazioni per cui il documento non è stato approvato, specificando le modifiche da apportare.
+Dove:
+
+\begin{itemize}
+    \item \textbf{NomedelDocumento:} indica il nome del documento, senza spazi con lettera maiuscola per ogni parola che non sia un articolo o una preposizione;
+    
+    \item \textbf{vX.Y.Z:}  indica l'ultima versione del documento approvata dal \textit{Responsabile di Progetto}.
+\end{itemize}
+
+\subsection{Formato dei file}
+I file legati alla documentazione vengono salvati in formato .tex durante il loro ciclo di vita. Quando un documento raggiunge lo stato di "Approvato" viene creato un file in formato PDF contenente la versione del documento approvata dal \textit{Responsabile}.
 
 \end{document}
