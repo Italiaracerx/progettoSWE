@@ -1,10 +1,183 @@
-\documentclass[../NormediProgetto.tex]{subfiles}
-
+\documentclass[../AnalisideiRequisiti.tex]{subfiles}
 
 \begin{document}
-	\begin{table}[H]
-		\begin{tabular}{l | l}
-		0 & 0\\
-	\end{tabular}
-\end{table}
+	% Il comando UserCase accetta primo una label nel caso serva un link verso di lui \ref{label} poi 
+	% attore primario
+	% attore secondario
+	% Descrizione
+	% Precondi
+	% Post
+	% Scenari alternativi
+	% Flusso Eventi 
+	% e li scrive se un campo e vuoto verra ignorato e anche la sua identazione rimossa es: se non si mette attore secondario lasciando {} non verra scritta la riga attore secondario GL HF 
+	\chapter{Casi d'uso}
+	\section{UC1:File}
+	\UserCase
+	{UC1}
+	{Utente}
+	{}
+	{L'Utente vuole visualizare il menu File}
+	{Il programma è correttamente avviato}
+	{Viene mostrato il menu a tendina}
+	{}
+	{}
+	\section{UC2:Caricamento JSon}
+	\UserCase
+	{UC2}
+	{Utente}
+	{Speect}
+	{L'Utente vuole caricare un file JSon}
+	{Il programma è correttamente avviato}
+	{Viene inizializzato Speect con il file JSon selezionato e aggiornata la GUI}
+	{L'attore visualizza un messaggio di errore relativo al file \ref{UC2.1}}
+	{}
+	\section{UC2.1:Errore Caricamento JSon}
+	\UserCase
+	{UC2.1}
+	{Utente}
+	{Speect}
+	{Viene visualizzato un errore durante l'inizializzazione di Speect}
+	{L'Utente carica un file JSon non corretto}
+	{L'errore è visualizzato a schermo e nessuna operazione viene eseguita}
+	{}
+	{}
+	\section{UC3:Esporta Grafo}
+	\UserCase
+	{UC3}
+	{Utente}
+	{Speect}
+	{L'utente vuole esportare lo stato del grafo}
+	{Esiste un grafo esportabile}
+	{Il grafo viene esportato in file}
+	{ L'utente visualizza un messaggio di errore \ref{UC3.1}}
+	{}
+\section{UC3.1:Errore Esportazione Grafo}
+\UserCase
+{UC3.1}
+{Speect}
+{Utente}
+{Avviene un errore durante l'esportazione}
+{L'Utente ha cercato di esportare un grafo}
+{Viene visualizzato l'errore e nessuna operazione viene eseguita}
+{}
+{}
+\section{UC4:Importa Grafo}
+\UserCase
+{UC4}
+{Utente}
+{Speect}
+{L'utente vuole importare lo stato del grafo}
+{Esiste un grafo esportabile}
+{Il grafo viene importato da file}
+{L'utente visualizza un messaggio di errore \ref{UC4.1}}
+{}
+\section{UC4.1:Errore Importazione Grafo}
+\UserCase
+{UC4.1}
+{Speect}
+{Utente}
+{Avviene un errore durante l'importazione}
+{L'Utente ha cercato di importare un file scorretto}
+{Viene visualizzato l'errore e nessuna operazione viene eseguita}
+{}
+{}
+\section{UC5:Salvataggio Audio Prodotto}
+\UserCase
+{UC5}
+{Utente}
+{Speect}
+{L'utente vuole salvare l'audio}
+{L'input per produrre l'audio è corretto}
+{L'audio è salvato in un file}
+{L'utente visualizza un messaggio di errore \ref{UC5.1}}
+{}
+\section{UC5.1:Errore Salvataggio Audio}
+\UserCase
+{UC5.1}
+{Utente}
+{Speect}
+{Avviene un errore durante il salvataggio dell'audio}
+{L'Utente ha cercato di salvare un file audio}
+{Viene visualizzato l'errore e nessuna operazione viene eseguita}
+{}
+{}
+\section{UC6:Exit}
+\UserCase
+{UC6}
+{Utente}
+{}
+{L'Utente vuole chiudere l'applicazione }
+{L'applicazione sta funzionando}
+{L'applicazione viene terminata}
+{}
+{
+}
+
+\section{UC7:Selezione Utterance}
+\UserCase
+{UC7}
+{Utente}
+{}
+{L'Utente seleziona la Utterance desiderata }
+{Il file JSon è caricato correttamente}
+{Vengono mostrati gli Utterance Processors utilizzati da Speect per tale Utterance}
+{}
+{}
+
+\section{UC8:Submit di Testo}
+\UserCase
+{UC8}
+{Utente}
+{Speect}
+{L'Utente preme il tasto di Esecuzione }
+{Il file JSon è stato caricato e i campi dati sono compilati}
+{Speect elabora il testo selezionato e viene visualizzato il grafo}
+{L'utente visualizza un messaggio di errore \ref{UC8.1}}
+{}
+\section{UC8.1:Errore Esecuzione}
+\UserCase
+{UC8.1}
+{Speect}
+{Utente}
+{L'Utente visualizza a schermo l errore di esecuzione di Speect }
+{Speect ha fallito a eseguire la utterance e ha ritornato un errore}
+{Viene visualizzato un messaggio di errore all' utente}
+{}
+{}
+\section{UC9:Modifica Visualizzazione Layer}
+\UserCase
+{UC9}
+{Utente}
+{}
+{L'Utente sceglie quali relazioni mostrare}
+{Esiste un grafo visualizzato coerentemente alle opzioni selezionate}
+{Vengono mostrati tutti i layer di relazione selezionati}
+{}
+{}
+
+\section{UC10:Ricerca Path}
+\UserCase
+{UC10}
+{Utente}
+{Speect}
+{L'Utente scrive un path utilizzabile da speect per visualizzare tale nodo}
+{Esiste un grafo HRG(scusa Manfredi mi è venuto in mente adesso il nome e sono di fretta fixo dopo se non vuoi farlo tu)
+	corretto}
+{Se il path porta ad un nodo definito esso viene evidenziato}
+{}
+{}
+
+\section{UC11:Selezione Nodo}
+\UserCase
+{UC11}
+{Utente}
+{}
+{L'utente preme su un nodo per vedere le sue caratteristiche}
+{Esiste il nodo cliccato (boh mi pare stupida come pre visto che lo stiamo mostrando a schermo spero esista)}
+{Nella parte inferiore della interfaccia vengono mostrate le caratteristiche del nodo}
+{}
+{}
+
 \end{document}
+
+\textbf{}

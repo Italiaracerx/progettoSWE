@@ -20,7 +20,6 @@
 	\fancyfoot[R]{\thepage}
 }
 \titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge}
-
 \pagestyle{plain}
 \setlength{\headheight}{48pt}
 
@@ -32,3 +31,42 @@
 \textit{#1}
 \ped{G}
  }
+ \usepackage{tabulary}
+ 
+ \newcommand{\UserCase}[8]
+ {
+ 	\label{#1}
+ 		\begin{tabulary}{\linewidth}{p{5cm}|L c}
+ 			\if\relax\detokenize{#2}\relax
+ 			\else
+ 			Attore Principale & #2 &\\
+ 			\fi
+ 			\if\relax\detokenize{#3}\relax
+ 			\else
+ 			Attore Secondario & #3 &\\
+ 			\fi
+ 			\if\relax\detokenize{#4}\relax
+ 			\else
+ 			Descrizione & #4 &\\
+ 			\fi
+ 			\if\relax\detokenize{#5}\relax
+ 			\else
+ 			Precondizione & #5 &\\
+ 			\fi
+ 			\if\relax\detokenize{#6}\relax
+ 			\else
+ 			PostCondizione & #6 &\\
+ 			\fi
+ 			\if\relax\detokenize{#7}\relax
+ 			\else
+ 			Scenari Alternativi & #7 &\\
+ 			\fi\if\relax\detokenize{#8}\relax
+ 			\else
+ 			Flusso di Esecuzione & #8 &\\
+ 			\fi
+ 		\end{tabulary}
+ 
+ }
+
+ 
+ 
