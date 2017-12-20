@@ -1,5 +1,6 @@
 
 \usepackage{helvet} 
+\usepackage{xparse}
 \usepackage[utf8x]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{fancyhdr}
@@ -32,37 +33,40 @@
 \ped{G}
  }
  \usepackage{tabulary}
- 
+
+\newcommand{\refer}[1]{#1 \ped{\ref{#1}}}
+
+
  \newcommand{\UserCase}[8]
  {
  	\label{#1}
- 		\begin{tabulary}{\linewidth}{p{5cm}|L c}
+ 		\begin{tabulary}{\linewidth}{p{5cm}|p{8cm} c}
  			\if\relax\detokenize{#2}\relax
  			\else
- 			Attore Principale & #2 &\\
+ 			Attore Principale & #2 &\\[0.2cm]
  			\fi
  			\if\relax\detokenize{#3}\relax
  			\else
- 			Attore Secondario & #3 &\\
+ 			Attore Secondario & #3 &\\[0.2cm]
  			\fi
  			\if\relax\detokenize{#4}\relax
  			\else
- 			Descrizione & #4 &\\
+ 			Descrizione & #4 &\\[0.2cm]
  			\fi
  			\if\relax\detokenize{#5}\relax
  			\else
- 			Precondizione & #5 &\\
+ 			Precondizione & #5 &\\[0.2cm]
  			\fi
  			\if\relax\detokenize{#6}\relax
  			\else
- 			PostCondizione & #6 &\\
+ 			PostCondizione & #6 &\\[0.2cm]
  			\fi
  			\if\relax\detokenize{#7}\relax
  			\else
- 			Scenari Alternativi & #7 &\\
+ 			Scenari Alternativi & #7 &\\[0.2cm]
  			\fi\if\relax\detokenize{#8}\relax
  			\else
- 			Flusso di Esecuzione & #8 &\\
+ 			Flusso di Esecuzione & #8 &\\[0.2cm]
  			\fi
  		\end{tabulary}
  
