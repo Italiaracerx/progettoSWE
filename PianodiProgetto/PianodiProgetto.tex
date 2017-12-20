@@ -1,5 +1,6 @@
 \documentclass[openany,12pt,a4paper]{report}
 \usepackage{float}
+\usepackage[gen]{eurosym}
 \usepackage{chngcntr}
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
@@ -35,10 +36,10 @@
 			\begin{tabular}{l|l}
 				\textbf{Versione} & 1.0.0 \\
 				\textbf{Data redazione} & \large \@date \\
-				\textbf{Responsabile} & Marco Focchiatti \\
+				\textbf{Responsabile} & Matteo Rizzo \\
 				\textbf{Redattori} & Kevin Silvestri \\ 
 								   & Samuele Modena \\
-				\textbf{Verificatori} & Matteo Rizzo \\
+				\textbf{Verificatori} & Marco Focchiatti \\
 				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
 				 & Prof. Riccardo Cardin \\
 				 & Gruppo Graphite \\
@@ -58,7 +59,7 @@
 	
 	\subfile{./tex/changelog}
 	%Aggiungere File da qua in poi
-	subfile{./tex/AnalisiPianificazione}
+	\subfile{./tex/AnalisiPianificazione}
 	\subfile{./tex/PreventivoConsuntivo}
 	
 	\end{document}    

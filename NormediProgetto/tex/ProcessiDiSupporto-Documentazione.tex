@@ -9,93 +9,98 @@
 
 \subsection{Scopo} 
 
-Lo scopo di questo processo è descrivere tutte le regole adottate per la redazione della documentazione. 
+Lo scopo del processo di documentazione è descrivere l'insieme di regole adottate dal gruppo per la redazione della documentazione di progetto. 
 	
 \subsection{Descrizione}
 
-In questa sezione vengono descritte le regole adottate per la stesura di tutti i documenti riguardanti il progetto.
+Di seguito vengono descritte le norme adottate per la stesura di tutti i documenti riguardanti il progetto.
 
 \subsection{Template}
 
-È stato creato un template \LaTeX{} per uniformare la grafica dei documenti in modo da velocizzare il processo di documentazione.
+Il gruppo utilizza un template \LaTeX{} appositamente codificato per uniformare l'aspetto dei documenti e velocizzare il processo di documentazione. Il template include frontespizio, registro delle mofiche, indice, piè di pagina e intestazione, elementi del documento approfonditi di seguito. 
 
 \subsection{Struttura dei documenti}
 
-\subsubsection{Prima pagina}
+\subsubsection{Frontespizio}
 
 La prima pagina di ogni documento è strutturata nel seguente modo:
 
 \begin{itemize}
-    \item{\textbf{Logo del gruppo:}} primo elemento centrato in alto; 
-    \item{\textbf{Titolo:}} nome del documento, centrato e posizionato sotto il logo; 
-    \item{\textbf{Gruppo e progetto:}} nome del gruppo e del progetto, centrato e subito sotto al titolo del documento; 
-    \item{\textbf{Indirizzo e-mail del gruppo:}} centrato e sotto il nome del gruppo e del progetto; 
-    \item{\textbf{Tabella informativa:}}contiene le seguenti informazioni: 
-    \begin{itemize} 
-        \item versione del documento;
-        \item nome e cognome di chi ha svolto la redazione del documento; 
-        \item nome e cognome degli incaricati alla verifica del documento; 
-        \item nome e cognome dell'incaricato all’approvazione del documento;
-        \item tipo di uso; 
-        \item  destinatari del documento.
+    \item \textbf{Nome del documento:} indica il nome del documento (ex: Norme di progetto);
+    \item \textbf{Logo del gruppo:} il logo identificativo del gruppo Graphite;
+    \item \textbf{Informazioni sul documento:} tabella riassuntiva indicante le seguenti informazioni di spicco sul documento:
+        \begin{itemize}
+            \item \textbf{Versione:} indica un numero che identifica la versione corrente del documento. La struttura del numero di versionamento è approfondita di seguito in questa sezione;
+            \item \textbf{Data di redazione:} indica l'ultima data in cui il documento è stato modificato;
+            \item \textbf{Redattori:} indica il sottoinsieme dei membri del gruppo che ha partecipato alla redazione del documento;
+            \item \textbf{Verificatori:} indica il sottoinsieme dei membri del gruppo che ha partecipato alla verifica del documento;
+            \item \textbf{Distribuzione:} indica a chi è destinato il documento;
+            \item \textbf{Uso:} indica se l'uso del documento è interno o esterno al gruppo.
         \end{itemize}
-    \item {\textbf{Descrizione:}} sintetica del contenuto del documento.
+        
+\end{itemize}
+
+Ogni documento è accompagnato da un numero di versionamento, indicato nella tabella \textit{Informazioni sul documento}, dove ogni versione corrisponde ad una riga nel registro delle modifiche, che è espresso nel modo seguente:
+
+\[\textbf{v $\biggl\{$A$\biggr\}$.$\biggl\{$B$\biggr\}$.$\biggl\{$C$\biggr\}$}\]
+
+Dove:
+
+\begin{itemize}
+    \item{\textbf{A:}} è l'indice principale. Viene incrementato dal \textit{Responsabile di Progetto} all’approvazione del documento e 
+    corrisponde al numero di revisione.
+    \item{\textbf{B:}} è l'indice di verifica. Viene incrementato dal \glossario{\textit{Verificatore}}{verificatore} ad ogni verifica. Quando viene incrementato A, riparte da 0.
+    \item{\textbf{C:}} è l'indice di modifica. Viene incrementato dal redattore del documento ad ogni modifica. Quando viene incrementato B, riparte da 0.
 \end{itemize}
 
 \subsubsection{Registro delle modifiche}
 
-Posizionato dopo la prima pagina, il registro delle modifiche deve contenere tutte le modifiche apportate al documento stesso, indicando per ognuna:
+Segue il frontespizio il registro delle modifiche, che cataloga la totalità delle modifiche apportate al documento durante il suo sviluppo indicando per ognuna:
 
 \begin{itemize}
-\item versione del documento dopo la modifica;
-\item data della modifica;
-\item nome e cognome dell'autore della modifica;
-\item ruolo dell'autore della modifica;
-\item breve descrizione della modifica.
+    \item Versione del documento dopo la modifica;
+    \item Data della modifica;
+    \item Nome e cognome dell'autore della modifica;
+    \item Ruolo dell'autore della modifica;
+    \item Breve descrizione della modifica.
 \end{itemize}
 
 \subsubsection{Indice}
 
-Ogni documento deve avere un indice che ne agevoli la consultazione e permetta una visione generale degli argomenti trattati nel documento. L'indice è strutturato in gerarchie ed è posizionato dopo il registro delle modifiche.
+Ogni documento possiede un indice che ne agevola la consultazione e permette una visione generale degli argomenti trattati nello stesso. L'indice è strutturato gerarchicamente ed è collocato dopo il registro delle modifiche.
 
-\subsubsection{Contenuto principale}
+\subsubsection{Intestazione}
 
- Ad eccezione della prima, tutte le pagine devono contenere un’intestazione ed un piè di pagina. L’intestazione è strutturata nel seguente modo: 
+Fatta eccezione per il frontespizio, tutte le pagine del documento contengono un’intestazione. Essa contiene: 
 
 \begin{itemize}
-\item Logo del gruppo posto a sinistra;
-\item Il titolo del capitolo posto a destra;
+    \item \textbf{Logo del gruppo:} il logo identificativo del gruppo Graphite, collocato a sinistra;
+    \item \textbf{Titolo del capitolo:} indicazione del titolo del capitolo corrente, collocata a destra;
 \end{itemize}
 
-Il piè di pagina è così strutturato:
+\subsubsection{Piè di pagina}
+
+Fatta eccezione per il frontespizio, tutte le pagine del documento contengono un piè di pagina. Esso contiene: 
 
 \begin{itemize}
-\item Data e ora dell'ultima modifica del documento, posti a sinistra;
-\item Numerazione progressiva della pagina posta a destra.
+    \item \textbf{Data e ora:} indica data e ora dell'ultima modifica del documento, collocate a sinistra;
+    \item \textbf{Numero di pagina:} numerazione progressiva delle pagine, collocato a destra.
 \end{itemize}
 
 \subsubsection{Note a piè di pagina}
 
-In caso di presenza in una pagina interna di note da esplicare, esse vanno indicate nella pagina corrente, in basso a sinistra. Ogni nota deve riportare un numero e una descrizione.
+In caso di presenza in una pagina interna di note da esplicare, esse vanno indicate nella pagina corrente, in basso a sinistra. Ogni nota deve riportare un numero, corrispondente alla relativa parola o frase che la riferisce, e una descrizione.
 
-\subsection{Versionamento}
+\subsubsection{Contenuto principale}
 
-Ogni documento è accompagnato da un numero di versionamento, dove ogni versione corrisponde ad una riga nel registro delle modifiche, ed è espresso nel modo seguente:
+Il contenuto principale del documento è organizzato segue la seguente struttura gerarchica:
 
-\[\textbf{v $\biggl\{$A$\biggr\}$.$\biggl\{$B$\biggr\}$.$\biggl\{$C$\biggr\}$}\]
-
-dove:
-
-\begin{itemize}
-
-\item{\textbf{A:}} è l'indice principale. Viene incrementato dal \textit{Responsabile di Progetto} all’approvazione del documento e 
-corrisponde al numero di revisione.
-
-\item{\textbf{B:}} è l'indice di verifica. Viene incrementato dal \glossario{\textit{Verificatore}}{verificatore} ad ogni verifica. Quando viene incrementato A, riparte da 0.
-
-\item{\textbf{C:}} è l'indice di modifica. Viene incrementato dal redattore del documento ad ogni modifica. Quando viene incrementato B, riparte da 0.
-
-\end{itemize}
+\begin{enumerate}
+    \item Capitolo
+    \item Sezione
+    \item Sottosezione
+    \item Sottosottosezione
+\end{enumerate}
 
 \subsection{Norme tipografiche}
 
