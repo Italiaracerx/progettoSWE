@@ -7,6 +7,93 @@
 
 \chapter{Processi di supporto}
 
+% NORME DI PROGETTO - PROCESSI DI SUPPORTO - GESTIONE DELLA CONFIGURAZIONE
+
+\section{Gestione della configurazione}
+
+\subsection{Versionamento} 
+Ogni componente versionabile del progetto, nonché la documentazione formale, è versionata mediante la tecnologia \glossario{Git}{Git}, nello specifico utilizzando il servizio gratuito GitHub.
+Per la condivisione di materiale informale e/o non versionabile si predilige invece una cartella condivisa sullo spazio cloud offerto da \glossario{Google Drive}{Google Drive}. Le sopracitate tecnologie sono approfondite nel capitolo \textit{Strumentazione} di questo documento.
+
+\subsection{Controllo della configurazione}
+
+Per identificare e tracciare le richieste di cambiamenti, analizzare e valutare le modifiche effettuate e approvare o meno le quelle proposte, viene utilizzato il sistema di \glossario{issue}{issue} di Github. Le issue riportano nella loro descrizione la ragione della modifica effettuata, nonché la o le \glossario{commit}{commit} ad esse associate ed eventuali ulteriori issue correlate. 
+
+\subsection{Stato della configurazione}
+
+Successivamente ad ogni revisione, l'ultima commit effettuata viene marcata con un'etichetta di versione (essa costituirà la nuova \glossario{baseline}{baseline} di riferimento). L'esito delle revisioni vengono riportate in appendice al PQ con le relative correzioni da apportare ai prodotti oggetto della revisione.
+
+\subsection{Rilasci e consegne}
+
+I rilasci e le consegne dei prodotti software e della documentazione correlata sono sottoposti a verifica e validazione. Prima di ogni revisione viene consegnato al \textit{Committente}, secondo tempistiche stabilite dal PP e mezzi concordati, un archivio contenente tutta la documentazione richiesta in formato \glossario{PDF}{PDF}. La consegna è accompagnata da una Lettera di
+Presentazione, anch'essa inclusa nell'archivio.
+
+% NORME DI PROGETTO - PROCESSI DI SUPPORTO - GESTIONE DELLA QUALITà
+
+\section{Gestione della qualità}
+
+\subsection{Classificazione degli obiettivi}
+
+Gli obiettivi di qualità stabiliti nel PQ rispettano la seguente notazione:
+
+    \begin{center}
+        OQ[Tipo][Oggetto]*[ID]: [Nome]
+    \end{center}
+    
+Dove:
+
+\begin{itemize}
+    \item \textbf{Tipo:} indica se l'obiettivo si riferisce a prodotti o a processi. Può assumere i valori:
+    
+    \begin{itemize}
+        \item \textbf{P:} per indicare i processi;
+        \item \textbf{PP:} per indicare i prodotti;
+    \end{itemize}
+    
+    \item \textbf{Oggetto:} indica, per gli obiettivi di prodotto, se esso si riferisce a documentazione o a software. Può assumere i valori:
+    
+    \begin{itemize}
+        \item \textbf{D:} per indicare i documenti;
+        \item \textbf{S:} per indicare il software;
+    \end{itemize}
+    
+    \item \textbf{ID:} identifica univocamente l'obiettivo tramite un codice numerico incrementale;
+    
+    \item \textbf{Nome:} titolo dell'obiettivo;
+    
+    \item \textbf{Descrizione:} breve descrizione dell'obiettivo.
+\end{itemize}
+
+\subsection{Classificazione delle metriche}
+
+Le metriche stabilite nel PQ rispettano la seguente notazione:
+
+    \begin{center}
+        M[Tipo][Oggetto]*[ID]: [Titolo]
+    \end{center}
+    
+Dove:
+
+\begin{itemize}
+    \item \textbf{Tipo:} indica se la metrica si riferisce a prodotti o a processi. Può assumere i valori:
+    
+    \begin{itemize}
+        \item \textbf{P:} per indicare i processi;
+        \item \textbf{PP:} per indicare i prodotti;
+    \end{itemize}
+    
+    \item \textbf{Oggetto:} indica, per le metriche di prodotto, se esso si riferisce a documentazione o a software. Può assumere i valori:
+    
+    \begin{itemize}
+        \item \textbf{D:} per indicare i documenti;
+        \item \textbf{S:} per indicare il software;
+    \end{itemize}
+    
+    \item \textbf{ID:} identifica univocamente la metrica tramite un codice numerico incrementale;
+    
+    \item \textbf{Nome:} titolo della metrica.
+\end{itemize}
+
 % NORME DI PROGETTO - PROCESSI DI SUPPORTO - DOCUMENTAZIONE
 
 \section{Documentazione}
@@ -28,8 +115,8 @@ Il gruppo utilizza un template \LaTeX{} appositamente codificato per uniformare 
 Il frontespizio di ogni documento è strutturato nel seguente modo:
 
 \begin{itemize}
+    \item \textbf{Logo del gruppo:} il logo identificativo del gruppo;
     \item \textbf{Nome del documento:} indica il nome del documento (ex: Norme di progetto);
-    \item \textbf{Logo del gruppo:} il logo identificativo del gruppo Graphite;
     \item \textbf{Informazioni sul documento:} tabella riassuntiva indicante le seguenti informazioni di spicco sul documento:
         \begin{itemize}
             \item \textbf{Versione:} indica un numero che identifica la versione corrente del documento. La struttura del numero di versionamento è approfondita di seguito in questa sezione;
@@ -42,6 +129,7 @@ Il frontespizio di ogni documento è strutturato nel seguente modo:
         
 \end{itemize}
 
+\subsection{Nomenclatura di versionamento dei documenti}
 Ogni documento è accompagnato da un numero di versionamento, indicato nella tabella \textit{Informazioni sul documento}, dove ogni versione corrisponde ad una riga nel registro delle modifiche, che è espresso nel modo seguente:
 
 \[\textbf{v $\biggl\{$A$\biggr\}$.$\biggl\{$B$\biggr\}$.$\biggl\{$C$\biggr\}$}\]
@@ -57,13 +145,13 @@ Dove:
 
 \subsubsection{Registro delle modifiche}
 
-Segue il frontespizio il registro delle modifiche, che cataloga la totalità delle modifiche apportate al documento durante il suo sviluppo indicando per ognuna:
+Dopo il frontespizio segue il registro delle modifiche, che cataloga le modifiche apportate al documento durante il suo sviluppo indicando per ognuna:
 
 \begin{itemize}
     \item Versione del documento dopo la modifica;
     \item Data della modifica;
     \item Nome e cognome dell'autore della modifica;
-    \item Ruolo dell'autore della modifica;
+    %\item Ruolo dell'autore della modifica;
     \item Breve descrizione della modifica.
 \end{itemize}
 
@@ -98,25 +186,11 @@ In caso di presenza in una pagina interna di note da esplicare, esse vanno indic
 Il contenuto principale del documento è organizzato secondo la seguente struttura gerarchica:
 
 \begin{enumerate}
-    \item Capitolo
-    \item Sezione
-    \item Sottosezione
-    \item Sottosottosezione
+    \item Capitolo;
+    \item Sezione;
+    \item Sottosezione;
+    \item Sottosottosezione.
 \end{enumerate}
-
-\subsubsection{Verbali delle riunioni}
-
-I verbali delle riunioni sono redatti in base ad un template \LaTeX{} ad hoc che include sempre:
-
-\begin{itemize}
-    \item Data della riunione
-    
-    \item Membri presenti
-    
-    \item Ordine del giorno
-    
-    \item Esito sintetico della discussione
-\end{itemize}
 
 % NORME TIPOGRAFICHE
 
@@ -126,7 +200,7 @@ I verbali delle riunioni sono redatti in base ad un template \LaTeX{} ad hoc che
 
 \begin{itemize}
     
-    \item \textbf{Glossario:} ogni parola contenuta nel glossario deve essere marcata, solo alla sua prima occorrenza in ogni documento, in corsivo e con una G maiuscola a pedice. Tale formattazione viene assicurata dal comando \LaTeX{} \{ \}glossario{termine}{riferimento al glossario} che stampa il termine con la giusta formattazione (\textit{termine}\ped{G}) e controlla che il suo riferimento sia presente nel glossario, restituendo un errore di compilazione in caso contrario;  
+    \item \textbf{Glossario:} ogni parola contenuta nel glossario deve essere marcata, solo alla sua prima occorrenza in ogni documento, in corsivo e con una G maiuscola a pedice. Tale formattazione viene assicurata dalla macro \textit{\textbackslash glossario\{termine\}\{riferimento al glossario\}} che stampa il termine con la giusta formattazione (\textit{termine}\ped{G}) e controlla che il suo riferimento sia presente nel glossario, restituendo un errore di compilazione in caso contrario;  
     
     \item \textbf{Grassetto:} il grassetto viene applicato ai titoli e agli elementi di un elenco puntato seguiti da una descrizione. Esso può inoltre essere usato per mettere in particolare risalto termini significativi; 
     
@@ -139,7 +213,7 @@ I verbali delle riunioni sono redatti in base ad un template \LaTeX{} ad hoc che
         \item riferimenti ad altri documenti.
     \end{itemize}
     
-     Esso può inoltre essere usato per mettere in particolare risalto termini significativi;
+     Esso può inoltre essere usato per mettere in particolare risalto termini particolari solitamente poco usati o conosciuti;
     
     \item{\textbf{Maiuscolo:}} il maiuscolo viene usato solo per gli acronimi.
 
@@ -147,7 +221,7 @@ I verbali delle riunioni sono redatti in base ad un template \LaTeX{} ad hoc che
 
 \subsubsection{Elenchi puntati}
 
-Gli elenchi puntati servono ad esprimere in modo sintetico un concetto, evitando frasi lunghe e dispersive. Ogni voce di un elenco puntato termina con un punto e virgola, ad eccezione dell’ultima, che termina invece con un punto.
+Gli elenchi puntati servono ad esprimere in modo sintetico un concetto, evitando frasi lunghe e dispersive. Ogni voce di un elenco puntato termina con un punto e virgola, ad eccezione dell'ultima, che termina invece con un punto.
 
 \subsubsection{Formati}
 
@@ -174,7 +248,7 @@ Gli elenchi puntati servono ad esprimere in modo sintetico un concetto, evitando
 \item{\textbf{Nomi propri:}} ogni nome proprio di persona deve essere scritto nella forma \textit{Nome Cognome}.
 \end{itemize}
 
-\item{\textbf{Link:}} i link dovranno essere scritti attraverso il comando \LaTeX{} \textit{href} e sono distinti dal colore blu.
+\item{\textbf{Link:}} i link esterni devono essere scritti attraverso il comando \LaTeX{} \textit{url} e sono distinti dal colore blu. I link interni, per esempio quelli dell'indice, non vengono evidenziati.
 \end{itemize}
 
 \subsubsection{Sigle}
@@ -210,22 +284,58 @@ Ogni tabella è corredata da una didascalia in cui compare il suo numero identif
 
 \subsubsection{Immagini}
 
-Ogni immagine deve essere centrata e separata dai paragrafi a lei precedenti e successivi. Le immagini sono corredate da una didascalia analoga a quella delle tabelle. Tutti i diagrammi UML vengono inseriti come immagini.
+Ogni immagine deve essere centrata e separata dai paragrafi a lei precedenti e successivi. Le immagini sono corredate da una didascalia analoga a quella delle tabelle. Tutti i diagrammi vengono inseriti come immagini.
 
 \subsection{Classificazione dei documenti}
 
-Ogni documento formale è classificato come documento Interno od Esterno, con le seguenti differenze:
+\subsubsection{Documenti informali}
 
+Tutte le versioni dei documenti che non siano state approvate dal \textit{Responsabile di Progetto} sono ritenute informali e, in quanto tali, sono considerate esclusivamente ad uso interno.
+
+\subsubsection{Documenti formali}
+
+Una versione di un documento viene considerata formale quando è stata approvata dal \textit{Responsabile di Progetto}. Solo i documenti formali possono essere distribuiti all’esterno del gruppo.
+
+\subsubsection{Documenti interni}
+
+Un documento viene considerato interno quando il suo utilizzo è destinato al solo gruppo Graphite.
+
+\subsubsection{Documenti esterni}
+
+Un documento viene considerato esterno quando il documento viene condiviso con i Committenti e con la Proponente.
+
+\subsubsection{Verbali}
+
+Per ogni incontro interno o esterno è prevista la redazione di un verbale, contenente le seguenti informazioni:
 \begin{itemize}
-    \item \textbf{Interno:} il documento ha utilizzo interno al gruppo Graphite;
-    \item \textbf{Esterno:} il documento viene condiviso con i Committenti e con la Proponente.
+    \item \textbf{Informazioni generali:}
+    \begin{itemize}
+        \item Luogo;
+        \item Data;
+        \item Orario di inizio;
+        \item Orario di fine;
+        \item Assenti(se presenti);
+        \item Partecipanti esterni(nel caso fosse un incontro esterno);
+    \end{itemize}
+    \item \textbf{Resoconto:} contenente annotazioni riguardo gli argomenti discussi ed eventuali decisioni prese.
 \end{itemize}
+
+I verbali esterni dovranno avere la seguente nomenclatura:
+\[VE-DATA\]
+Mentre quelli interni la seguente:
+\[VI-DATA\]
+
+I verbali dovranno essere approvati dal \textit{Responsabile di Progetto} al termine di ogni incontro.
+
+\subsection{Ciclo di vita del documento}
+
+Ogni documento non formale completato dovrà essere sottoposto al \textit{Responsabile di Progetto}, che a sua volta si occuperà di incaricare i \textit{Verificatori} di controllarne la correttezza del contenuto e della forma. Se vengono individuati degli errori, i \textit{Verificatori} li riporteranno al \textit{Responsabile di Progetto}, che a sua volta incaricherà il redattore del documento di correggerli. Questo ciclo va ripetuto fino a che il documento non è considerato corretto. Successivamente sarà sottoposto al Responsabile di Progetto, che potrà approvarlo o meno. Quando approvato, il documento verrà considerato un documento formale. In caso contrario il \textit{Responsabile di Progetto} dovrà comunicare le motivazioni per cui il documento non è stato approvato, specificando le modifiche da apportare.
 
 \subsection{Nomenclatura dei documenti}
 
 I documenti formali, fatta eccezione per i Verbali di riunione, adottano il seguente sistema di nomenclatura:
 
-\centerline{NomeDelDocumento vX.Y.Z}
+\\ NomeDelDocumento vX.Y.Z
 
 Dove:
 
