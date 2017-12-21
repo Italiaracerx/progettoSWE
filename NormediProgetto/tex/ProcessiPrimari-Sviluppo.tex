@@ -8,7 +8,28 @@
 
 \subsection{Scopo}
 
-Questa sezione si prefigge come scopo la stesura delle attività che il gruppo di lavoro deve svolgere.
+Questo processo si prefigge come scopo la stesura delle attività che il gruppo di lavoro deve svolgere.
+
+\subsection{Descrizione}
+
+Per una corretta implementazione di tale processo le aspettative sono le seguenti:
+
+\begin{itemize}
+	\item realizzare un prodotto finale conforme alle richieste del proponente;
+	\item realizzare un prodotto finale soddisfacente i test di verifica;
+	\item realizzare un prodotto finale soddisfacente i test di validazione;
+	\item fissare gli obiettivi di \glossario{sviluppo}{sviluppo};
+	\item fissare i vincoli tecnologici;
+	\item fissare i vincoli di design.
+\end{itemize}
+
+Il processo di sviluppo si svolge in accordo con lo standard ISO/IEC 12207, pertanto si compone delle seguenti attività:
+
+\begin{itemize}
+	\item Analisi dei requisiti
+	\item Progettazione
+	\item Codifica
+\end{itemize}
 
 \subsection{Analisi dei Requisiti}
 
@@ -30,7 +51,7 @@ Questa sezione si prefigge come scopo la stesura delle attività che il gruppo d
 		\item Definire una stima dei costi.
 	\end{enumerate}
 
-	 Durante l’Analisi dei requisiti gli analisti analizzano individualmente le varie fonti, quindi, a seguito di una riunione, si confrontano e stilano le varie liste di requisiti suddivise per importanza. Le fonti per gli analisti sono:
+	Durante l’Analisi dei requisiti gli analisti analizzano individualmente le varie fonti, quindi, a seguito di una riunione, si confrontano e stilano le varie liste di requisiti suddivise per importanza. Le fonti per gli analisti sono:
 	 
 	\begin{enumerate}
 		\item Capitolati d’appalto: requisiti emersi dall’analisi del documento fornito dal committente;
@@ -39,18 +60,20 @@ Questa sezione si prefigge come scopo la stesura delle attività che il gruppo d
 		\item Definire una stima dei costi.
 	\end{enumerate}
 
-	\subsubsection{Classificazione requisiti:} 
+	\subsubsection{Classificazione requisiti} 
 	
-	I requisiti devono essere suddivisi per importanza e classificati come segue: R[Importanza][Tipologia][Codice]. Inoltre, di ogni requisito si vuole tener traccia della fonte e deve essere definita una descrizione.
+	I requisiti devono essere suddivisi per importanza e classificati come segue:
 	
-		\begin{enumerate}
-			\item Ogni requisito può appartenere solo ad una delle classi di Importanza elencate di seguito:
+	\centerline{R[Importanza][Tipologia][Codice]}
+	
+		\begin{itemize}
+			\item \textbf{Importanza:} Ogni requisito può appartenere solo ad una delle classi di Importanza elencate di seguito:
 			\begin{itemize}
 				\item O (Requisito Obbligatorio): requisito fondamentale per la corretta realizzazione del progetto;
 				\item D (Requisito Desiderabile): requisito non fondamentale al progetto ma il cui soddisfacimento comporterebbe una maggiore completezza del prodotto;
 				\item F (Requisito Facoltativo): requisito non richiesto per il corretto funzionamento del prodotto ma che se incluso arricchirebbe il progetto. Prima di soddisfare il requisito è necessaria un’analisi di tempi e costi per evitare ritardi nella consegna e/o costi superiori a quelli preventivati.
 			\end{itemize}
-			\item Di seguito sono riportate le tipologie di requisito.
+			\item \textbf{Tipologia:} Di seguito sono riportate le tipologie di requisito:
 			\begin{itemize}
 				\item V: Identifica un \glossario{requisito di vincolo}{requisito di vincolo};
 				\item F: Identifica un \glossario{requisito funzionale}{requisito funzionale};
@@ -58,43 +81,113 @@ Questa sezione si prefigge come scopo la stesura delle attività che il gruppo d
 				\item Q: 
 				Identifica un \glossario{requisito di qualità}{requisito di qualita}.
 			\end{itemize}
-		\item Per concludere ogni requisito è formato da un codice numerico che lo indentifica in modo univoco.
-		\end{enumerate}
-		
-	\subsubsection{Classificazione casi d’uso:} 
+		\item \textbf{Codice:} Ogni requisito è formato da un codice numerico che lo indentifica in modo univoco.
+		\end{itemize}
 	
-	I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo: UC[P][I].
+	%---DA RICONTROLLARE---
+	Il codice stabilito secondo la convenzione precedente, una volta associato ad un requisito, non potrà cambiare nel tempo.
+	
+	Ciascun requisito dovrà inoltre essere accompagnato dalle sue fonti, dalle sue relazioni di dipendenza con altri requisiti e da una descrizione che ne specifichi lo scopo. Sarà inoltre indicata l'importanza.
+	
+	%esempio di requisito
+	
+	%----------------------
+		
+	\subsubsection{Classificazione casi d’uso} 
+	
+	I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo: \centerline{UC[P]*.[I]}
 	
 	\begin{itemize}
 		\item P (Codice Padre): Identifica il codice del caso d'uso da cui è stato generato il caso d'uso identificato, se non esiste il campo va tralasciato
 		\item I (Codice Identificativo): Identifica il caso d'uso univocamente.
 	\end{itemize}
+
+	Ogni caso d'uso è inoltre definito secondo la seguente struttura:
+	\begin{itemize}
+		\item \textbf{ID:} Il codice del caso d'uso secondo la convenzione specificata precedentemente;
+		\item \textbf{Nome:} Specifica il titolo del caso d'uso;
+		\item \textbf{Attori:} Indica gli attori principali (ad esempio l'utente generico) e secondari (ad esempio entità di autenticazione esterne) del caso d'uso;
+		\item \textbf{Descrizione:} Riporta una breve descrizione del caso d'uso;
+		\item \textbf{Precondizione:} Specifica le condizioni che sono identificate come vere prima del verificarsi degli eventi del caso d'uso;
+		\item \textbf{Postcondizione:} Specifica le condizioni che sono identificate come vere dopo il verificarsi degli eventi del caso d'uso;
+		
+	%---DA RICONTROLLARE---
+		\item \textbf{Scenario principale:} Rappresenta il flusso degli eventi come lista numerata, specificando per ciascun evento: titolo, descrizione, attori coinvolti e casi d'uso generati;
+		\item \textbf{Inclusioni:} Usate per non descrivere più volte lo stesso flusso di eventi, inserendo il comportamento comune in un caso d'uso a parte;
+		\item \textbf{Estensioni:} Descrivono i casi d'uso che non fanno parte del flusso principale degli eventi, allo stesso modo di quanto descritto in "Scenario principale".
+	\end{itemize}
+
+	Alcuni casi d'uso possono essere associati ad un Diagramma UMLG 2.x dei casi d'uso
+	riportante lo stesso titolo e codice.
+	
+	%esempio di caso d'uso
+
+	%Tracciamento (vedi Visions Team --> NdP v4.0.0) 
+
+	%----------------------
+	
 	
 \subsection{Progettazione} 
 
-	\subsubsection{Scopo:} 
+	\subsubsection{Scopo} 
 
-	Questa attività si prefigge lo scopo di realizzare una possibile soluzione architetturale al progetto; inoltre, deve precedere la parte di codifica e seguire l’analisi dei requisiti.
+	L'attività di Progettazione deve obbligatoriamente precedere la produzione del software e consiste nel descrivere una soluzione del problema che sia soddisfacente per tutti gli \glossario{stakeholders}{stakeholders}.
 	
 	\subsubsection{Descrizione}
 	
-	La progettazione deve:
+	Essa serve a garantire che il prodotto sviluppato soddisfi le proprietà e i bisogni specificati nell'attività di analisi. La progettazione permette di:
 	
 	\begin{itemize}
 		\item Costruire un’architettura logica del progetto;
 		\item Ottimizzare l’uso delle risorse;
-		\item Garantire una determinata qualità del prodotto;
+		\item Garantire una determinata qualità del prodotto, perseguendo la \textit{correttezza per costruzione}: è questo il principio secondo il quale il software deve funzionare correttamente e soddisfare tutti i requisiti e i vincoli perché è stato progettato per farlo e per essere conforme ed efficacie. Si trova in netta contrapposizione alla \textit{correttezza per
+		correzione};
 		\item Organizzare e dividere le parti del progetto in modo da poter ottenere componenti singole e facili da implementare attraverso la codifica. 
 	\end{itemize}
+
+	E' compito dei Progettisti svolgere l'attività di Progettazione, definendo l'architettura logica del prodotto identificando componenti chiare, riusabili e coese, rimanendo nei costi fissati. L'architettura definita dovrà attenersi alle seguenti qualità:
+	\begin{itemize}
+		\item \textbf{Sufficienza:} dovrà soddisfare i requisiti definiti nel documento Analisi dei Requisiti;
+		\item \textbf{Comprensibilità:} dovrà essere capita dagli \glossario{stakeholders}{stakeholders} e quindi descritta in modo comprensibile, inoltre dovrà essere tracciabile sui requisiti;
+		\item \textbf{Modularità:} dovrà essere divisa in parti chiare e distinte, ognuna con la sua specifica funzione;
+		\item \textbf{Robustezza:} dovrà essere in grado di gestire malfunzionamenti in modo da rimanere operativa di fronte a situazioni erronee improvvise;
+		\item \textbf{Flessibilità:} dovrà permettere modifiche a costo contenuto nel caso in cui i requisiti dovessero evolversi o se ne dovessero aggiungere di nuovi;
+		\item \textbf{Riusabilità:} dovrà essere costruita in modo da poter permettere il riutilizzo di alcune sue parti;
+		\item \textbf{Efficienza:} dovrà soddisfare tutti i requisiti in modo tale da ridurre gli sprechi di tempo e spazio;
+		\item \textbf{Affidabilità:} dovrà garantire che i servizi esposti siano sempre disponibili, ovvero dovrà svolgere i suoi compiti quando viene usata;
+		\item \textbf{Disponibilità:} dovrà necessitare di tempo ridotto per la manutenzione in modo da garantire un servizio il più continuo possibile;
+		\item \textbf{Sicurezza:} dovrà essere sicura rispetto ad intrusioni e malfunzionamenti;
+		\item \textbf{Semplicità:} dovrà prediligere la semplicità, contenendo solo il necessario, rispetto ad una inutile complessità;
+		\item \textbf{Incapsulazione:} dovrà fare in modo che l'interno delle componenti non sia visibile dall'esterno, seguendo il principio del data hiding;
+		\item \textbf{Coesione:} dovrà raggruppare le parti secondo l'obiettivo a cui concorrono, in modo da avere maggiore manutenibilità e riusabilità;
+		\item \textbf{Basso accoppiamento:} non dovrà avere dipendenze indesiderabili.
+	\end{itemize}
+
+	\subsubsection{Design Patterns}
+	
+	Finita l'attività di Analisi, sarà compito dei Progettisti adottare opportune soluzioni progettuali a problemi ricorrenti. Tali soluzioni dovranno essere flessibili e consentire una certa libertà d'uso ai Programmatori. Per ogni \glossario{Design Pattern}{Design Pattern} utilizzato, esso andrà riportato all'interno del documento di \textit{Specifica Tecnica} riportando un diagramma che lo illustri e una descrizione testuale inerente la sua applicazione e utilità all'interno dell'architettura.
+	
+	\subsubsection{UML 2.0}
+	
+	Al fine di rendere più chiare le scelte progettuali adottate e ridurre le possibili ambiguità, sarà necessario fare largo uso di vari tipi di diagrammi \glossario{UML}{UML} 2.0, tra cui:
+	
+	\begin{itemize}
+		\item \textbf{Diagrammi delle classi:} definiscono relazioni, metodi e attributi di classi e tipi, astraendosi da un qualsiasi linguaggio di programmazione;
+		\item \textbf{Diagrammi dei \glossario{package}{package}:} illustrano raggruppamenti di classi che condividono la stessa causa di cambiamento e necessitano di essere riusate assieme;
+		\item \textbf{Diagrammi di sequenza:} servono a descrivere le interazioni che avvengono fra gli oggetti che devono implementare collettivamente un comportamento, rappresentando sequenze di azioni tramite scelte definite (ad esempio, una sequenza di invocazioni tra metodi);
+		\item \textbf{Diagrammi delle attività:} descrivono il flusso di operazioni di una attività (ad esempio un algoritmo), descrivendone la logica procedurale.
+	\end{itemize}
+
+	E' possibile inoltre fare uso di altre tipologie di diagrammi, come diagrammi delle componenti, di macchine a stati o di \glossario{deployment}{deployment}, se necessario.
 	
 	\subsection{Codifica}
 	
-	\subsubsection{Scopo:}
+	\subsubsection{Scopo}
 	
 	Nella seguente sezione sono riporte le norme da seguire durante la programmazione da parte dei programmatori. Lo scopo di queste norme consiste nel dare delle linee guida ai programmatori in modo tale che il codice risulti leggibile e aiuti durante la fase di mantenimento, verifica e validazione.
 
 	\subsubsection{Descrizione}
 	
-	Per le \emph{Code Convention} aderiremo alla GNU GCC \url{https://gcc.gnu.org/codingconventions.html}
+	Per le \emph{Coding Conventions} aderiremo alla GNU GCC \url{https://gcc.gnu.org/codingconventions.html}
 
 \end{document}
