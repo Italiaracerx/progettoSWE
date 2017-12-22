@@ -5,10 +5,9 @@
 	\chapter{Processi Organizzativi}
 	
 	\section{Scopo}
-	Lo scopo di questo processo è la creazione del documento \textit{Piano di Progetto}, utile ai membri del gruppo per organizzare e gestire i ruoli di ogni componente del progetto.
+	Lo scopo di questo processo è fornire norme e strumenti per organizzare il lavoro del gruppo per il corretto svolgimento del progetto.
 	
 	\section {Descrizione}
-	% inserire orari di lavoro
 	Durante questo processo sono trattati:
 	\begin{itemize}
 		\item Ruoli di progetto;
@@ -40,7 +39,7 @@
 	
 	\subsection {Responsabile di Progetto}
 	
-	Il \textit{Responsabile di Progetto} è il punto di riferimento sia per il \glossario{\textit{committente}}{committente} che per il \textit{fornitore}. Esso deve anche approvare le scelte prese dal gruppo e se ne assume la responsabilità. 
+	Il \textit{Responsabile di Progetto} è il punto di riferimento sia per il \glossario{committente}{committente} che per il \textit{fornitore}. Esso deve anche approvare le scelte prese dal gruppo e se ne assume la responsabilità. 
 	\\ \noindent Le sue mansioni sono:
 	
 	\begin{itemize}
@@ -97,16 +96,14 @@
 	
 	\subsubsection{Comunicazioni interne}
 	
-	Le comunicazioni interne avvengono tramite un tool di messaggistica di nome \glossario{\textit{Telegram}}{Telegram}. Tale strumento offre la possibilità di comunicare con il resto del team in modo formale e informale mettendo in risalto la comunicazione più importante valida in quel momento e lasciando la possibilità di inviare file di testo, immagini o file audio utili alla riuscita del progetto.
-	Non meno importante caratteristica è la portabilità di tale strumento su \glossario{dispositivi mobile}{dispositivo mobile} e sistemi operativi differenti senza dover usare tool esterni per il suo funzionamento.
-	\\ \noindent per comunicazioni formali e per ricevere notifiche riguardanti le modifiche della \glossario{\textit{repository}}{Repository} verrà usato un ulteriore tool di messaggistica di nome \glossario{\textit{Slack}}{Slack}
-
-%	\\ \noindent Per comunicazioni di tipo formale da mantenere più a lungo nel tempo in vista viene usato uno strumento di coordinamento di nome \glossario{\textit{Asana}}{Asana} che consente di aprire una o più conversazioni archiviabili una volta divenute poco attuali.
+	Le comunicazioni interne avvengono tramite un tool di messaggistica multi-piattaforma di nome \glossario{Slack}{Slack} con funzionalità specifiche per gruppi di lavoro. Tale strumento offre la possibilità di ricevere notifiche riguardanti le modifiche della \glossario{repository}{Repository} \glossario{GitHub}{GitHub}, creare canali tematici per rendere più efficiente lo scambio e il reperimento delle informazioni, condividere file ed immagini utili allo sviluppo del progetto.
+	\\ \noindent Per comunicazioni informali e per ricevere notifiche riguardanti le modifiche della \glossario{repository}{Repository} \glossario{GitHub}{GitHub} verrà usato un ulteriore tool di messaggistica di nome \glossario{Telegram}{Telegram}.
+	\\ \noindent Per mantenere sotto continuo controllo l'avanzamento dei lavori è prevista, almeno una volta a settimana, una conversazione su \textit{Slack} in cui ogni membro del gruppo indica lo stato di avanzamento del \glossario{Task}{task} assegnatogli.
 	
 	\subsubsection{Comunicazioni esterne}
 	
 	Il \textit{Responsabile del Progetto} è tenuto a mantenere le comunicazioni esterne utilizzando una cartella di posta elettronica appositamente creata:
-	\centerline{graphite.swe@gmail.com.}
+		\[graphite.swe@gmail.com.\]
 	Il \textit{Responsabile del Progetto} deve mantenere informati i restanti componenti del gruppo riguardo alle discussioni con terzi utilizzando i canali di comunicazione interna. 
 	\\ \noindent In ogni caso per evitare disguidi interni è previsto che alla ricezione di una mail sull'indirizzo di posta elettronica il messaggio venga inoltrato a tutti i componenti del gruppo.
 	
@@ -127,7 +124,7 @@
 	
 	\subsubsection{Ticketing}
 	
-	Per la suddivisione del carico di lavoro in \glossario{\textit{Task}}{task} equamente distribuiti tra tutti i componenti del gruppo viene utilizzata la piattaforma \glossario{\textit{Wrike}}{Wrike}. Tale compito è dato al \textit{Responsabile di Progetto}. \textit{Wrike} mostra in modo efficace nella propria interfaccia il quadro completo di tutti i Task inseriti con relativo status (completato, in corso o libero), persona assegnata e scadenza. Quando viene inserito, viene assegnato o cambia stato un Task viene inviata una mail ad ogni componente del gruppo e, per tutti i componenti che fanno uso dell'applicazione mobile, viene inviata una notifica sugli smartphone collegati a textit{Wrike}.
+	Per la suddivisione del carico di lavoro in Task equamente distribuiti tra tutti i componenti del gruppo viene utilizzata la piattaforma \glossario{Wrike}{Wrike}. Tale compito è dato al \textit{Responsabile di Progetto}. \textit{Wrike} mostra in modo efficace nella propria interfaccia il quadro completo di tutti i Task inseriti con relativo status (completato, in corso o libero), persona assegnata e scadenza. Quando viene inserito, viene assegnato o cambia stato un Task viene inviata una mail ad ogni componente del gruppo e, per tutti i componenti che fanno uso dell'applicazione mobile, viene inviata una notifica sugli smartphone collegati a \textit{Wrike}.
 	\\ \noindent L'assegnazione dei Task avviene secondo il seguente schema:
 	
 	\begin{itemize}
@@ -142,17 +139,17 @@
 	
 	\subsubsection{Repository}
 	
-	Per il versionamento e il salvataggio dei file è previsto l'utilizzo di repository su \glossario{\textit{GitHub}}{GitHub}. L'\textit{Amministratore di Progetto} si deve occupare della creazione dei repository. In seguito l'\textit{Amministratore} inserirà tutti i componenti del gruppo, i quali dovranno essere in possesso di un account personale, come collaboratori.
-	%da completare in seguito
-	\\ \noindent È previsto l'utilizzo di [.. numero..] repository:
+	Per il versionamento e il salvataggio dei file è previsto l'utilizzo di repository su GitHub. L'\textit{Amministratore di Progetto} si deve occupare della creazione dei repository. In seguito l'\textit{Amministratore} inserirà tutti i componenti del gruppo, i quali dovranno essere in possesso di un account personale, come collaboratori.
+	\\ \noindent È previsto l'utilizzo di un repository di nome \textit{progettoSWE} suddiviso nel seguente modo:
 	
 	\begin{itemize}	
-		\item Documents: contiene tutta la documentazione dell'attività di progetto.
+		\item \textbf{Documenti:} contiene la documentazione dell'attività di progetto.
+		\item \textbf{Prodotto:} contiene i file del prodotto da realizzare.
 	\end{itemize}
 	
 	\subsubsection{Tipi di file e .gitignore}
 	
-	Nelle cartelle contenenti tutti i documenti saranno presenti solamente i file .tex, .pdf, .jpg, .png. Le estensioni dei file generati automaticamente dalla compilazione sosno stati aggiungi a .gitignore, e quindi vengono ignorati e resi invisibili a \glossario{\textit{Git}}{Git}.
+	Nelle cartelle contenenti tutti i documenti saranno presenti solamente i file .tex, .pdf, .jpg, .png. Le estensioni dei file generati automaticamente dalla compilazione sosno stati aggiungi a .gitignore, e quindi vengono ignorati e resi invisibili a \glossario{Git}{Git}.
 	
 	\subsubsection{Norme sui commit}
 	
@@ -169,7 +166,7 @@
 		\item registrare ogni riscontro dei rischi nel \textit{Piano di Progetto v1.0.0};
 		\item aggiungere i nuovi rischi individuati nel \textit{Piano di Progetto v1.0.0};
 		\item individuare problemi non calcolati e monitorare i rischi già previsti;
-		\item ridefinire, se necessariom le strategie di progetto.
+		\item ridefinire, se necessario, le strategie di progetto.
 	\end{itemize}
 	
 	\section{Strumenti}
@@ -179,11 +176,16 @@
 	Il gruppo di progetto lavora sui seguenti sistemi operativi:
 	\begin{itemize}
 		\item Ubuntu 17.10 x64;
-		\item Ubuntu 16.04 \glossario{\textit{LTS}}{LTS} x64;
+		\item Ubuntu 16.04 \glossario{LTS}{LTS} x64;
 		\item Windows 10 Home x64;
 		\item Windows 10 Pro x64;
 		\item Windows 7 Home Premium.
 	\end{itemize}
+	
+	\subsection{Slack}
+	
+	\textit{Slack} è uno strumento di collaborazione aziendale utilizzato particolarmente per lo scambio di messaggi tra componenti di un team. L'idea di partenza di questo software è di essere un totale rimpiazzo degli scambi di E-mail e sms ma a questo si aggiunge la possibilità di aggiungere plugin per la notifica di attività annesse al proprio ambiente di lavoro.
+	\\ \noindent Verranno in particolare sfruttati i plugin per la notifica di attività sulla repository e per discussioni riguardo ai task presenti sulla piattaforma Wrike.
 	
 	\subsection{Telegram}
 	
@@ -191,14 +193,9 @@
 	
 	\subsection{GitHub}
 	
-	GitHub è un servizio di \glossario{\textit{hosting}}{hosting} per progetti software. 
+	GitHub è un servizio di \glossario{hosting}{hosting} per progetti software. 
 	Il sito è principalmente utilizzato dagli sviluppatori, che caricano il codice sorgente dei loro programmi e lo rendono scaricabile dagli utenti. Può essere utilizzato anche per la condivisione e la modifica di file di testo e documenti revisionabili.
 	\\ \noindent Un utente può interagire con lo sviluppatore tramite un sistema di issue tracking, pull request e commenti che permette di migliorare il codice della repository, risolvendo bug o aggiungendo funzionalità.
-	
-	\subsection{Asana}
-	
-	\textit{Asana} è un applicazione web disponibile anche per dispositivi mobile creata per aiutare i team a tracciare il loro lavoro. Si concentra nel permettere agli utenti di gestire progetti e Task online senza l'utilizzo di email.
-	\\ \noindent Ogni team può creare un proprio spazio di lavoro contenente progetti suddivisi in Task. In ogni Task gli utenti possono aggiungere note, commenti, allegati e tags. Gli utenti possono seguire i progetti e i task e, nel caso in cui uno di essi cambi di stato, ricevere aggiornamenti riguardo ai cambiamenti nelle rispettive caselle email e ricevere notifiche al riguardo sui telefoni.
 
 	\subsection{Wrike}
 
@@ -216,12 +213,6 @@
 
 	\textit{Git} è un software di controllo versione distribuito utilizzabile da interfaccia a riga di comando. Pensato per mantenere un grande progetto di sviluppo distribuito, Git supporta fortemente lo sviluppo non lineare del software.
 	\\ \noindent Tramite strumenti appositi è possibile creare più diramazioni di sviluppo del software con la garanzia di poter mantenere in locale la cronologia di sviluppo completa.
-	\\ \noindent In sostituzione ai comandi testuali molti membri del gruppo utilizzeranno \glossario{\textit{Gitkraken}}{Gitkraken} come interfaccia grafica per la gestione della repository.
-
-	\subsection{Slack}
-
-	\textit{Slack} è uno strumento di collaborazione aziendale utilizzato particolarmente per lo scambio di messaggi tra componenti di un team. L'idea di partenza di questo software è di essere un totale rimpiazzo degli scambi di E-mail e sms ma a questo si aggiunge la possibilità di aggiungere plugin per la notifica di attività annesse al proprio ambiente di lavoro.
-	\\ \noindent Verranno in particolare sfruttati i plugin per la notifica di attività sulla repository o per i promemoria riguardo ai task presenti sulla piattaforma Wrike.
-	
+	\\ \noindent In sostituzione ai comandi testuali molti membri del gruppo utilizzeranno \glossario{Gitkraken}{Gitkraken} come interfaccia grafica per la gestione della repository.
 
 \end{document}
