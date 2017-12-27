@@ -308,34 +308,52 @@ Un documento viene considerato esterno quando il documento viene condiviso con i
 
 Per ogni incontro interno o esterno è prevista la redazione di un verbale, contenente le seguenti informazioni:
 \begin{itemize}
-    \item \textbf{Informazioni generali:}
+    \item \textbf{Informazioni sull'incontro:}
     \begin{itemize}
-        \item Luogo;
-        \item Data;
-        \item Orario di inizio;
-        \item Orario di fine;
-        \item Assenti(se presenti);
-        \item Partecipanti esterni(nel caso fosse un incontro esterno);
+        \item \textbf{Luogo}: indica il luogo in cui si svolge la riunione. In caso di videochiamate, questo campo può essere riempito con la voce \textit{"Videochiamata"} e/o con il punto di ritrovo in cui si è svolta (ex: Aula AC150, Torre Archimede (Videochiamata));
+        \item \textbf{Data:} indica la data in cui si è svolto l'incontro;
+        \item \textbf{Orari:} indica orari di inizio e di fine dell'incontro;
+        \item \textbf{Assenti:} indica, se dovessero essercene, i membri del gruppo assenti all'incontro;
+        \item \textbf{Partecipanti esterni:} indica, se dovessero essercene, eventuali partecipanti esterni presenzianti all'incontro;
     \end{itemize}
-    \item \textbf{Resoconto:} contenente annotazioni riguardo gli argomenti discussi ed eventuali decisioni prese.
+    
+    \item \textbf{Ragioni dell'incontro:} indica le ragioni che hanno spinto ad indire l'incontro in esame. In questa sezione viene inserito l'eventuale ordine del giorno.
+    
+    \item \textbf{Resoconto:} contiene annotazioni riguardo gli argomenti discussi e capisaldi dell'incontro.
+    
+    \item \textbf{Tracciamento delle decisioni:} indica eventuali decisioni prese durante l'incontro, tracciate mediante il seguente codice:
+    
+        \[V[Tipologia]-[Data incontro].[ID]\]
+    
+    Dove:
+    
+    \begin{itemize}
+        \item \textbf{Tipologia:} indica se il verbale è interno oppure esterno;
+        \item \textbf{Data incontro:} indica la data in cui si è svolto l'incontro in formato \textit{GGMMAAAA};
+        \item \textbf{ID:} è un codice identificativo numerico incrementale.
+    \end{itemize}
+    
 \end{itemize}
 
 I verbali esterni dovranno avere la seguente nomenclatura:
+
 \[VE-DATA\]
+
 Mentre quelli interni la seguente:
+
 \[VI-DATA\]
 
 I verbali dovranno essere approvati dal \textit{Responsabile di Progetto} al termine di ogni incontro.
 
 \subsection{Ciclo di vita del documento}
 
-Ogni documento non formale completato dovrà essere sottoposto al \textit{Responsabile di Progetto}, che a sua volta si occuperà di incaricare i \textit{Verificatori} di controllarne la correttezza del contenuto e della forma. Se vengono individuati degli errori, i \textit{Verificatori} li riporteranno al \textit{Responsabile di Progetto}, che a sua volta incaricherà il redattore del documento di correggerli. Questo ciclo va ripetuto fino a che il documento non è considerato corretto. Successivamente sarà sottoposto al Responsabile di Progetto, che potrà approvarlo o meno. Quando approvato, il documento verrà considerato un documento formale. In caso contrario il \textit{Responsabile di Progetto} dovrà comunicare le motivazioni per cui il documento non è stato approvato, specificando le modifiche da apportare.
+Ogni documento non formale completato deve essere sottoposto al \textit{Responsabile di Progetto}, che si occupa di incaricare i \textit{Verificatori} di controllarne la correttezza del contenuto e della forma. Se vengono individuati degli errori, i \textit{Verificatori} li riportano al \textit{Responsabile di Progetto}, che a sua volta incarica il redattore del documento di correggerli. Questo ciclo va ripetuto fino a che il documento non è considerato corretto. Successivamente esso viene sottoposto al Responsabile di Progetto, che può o meno approvarlo. Quando approvato, il documento è da considerarsi formale. In caso contrario il \textit{Responsabile di Progetto} deve comunicare le motivazioni per cui il documento non è stato approvato, specificando le modifiche da apportare.
 
 \subsection{Nomenclatura dei documenti}
 
 I documenti formali, fatta eccezione per i Verbali di riunione, adottano il seguente sistema di nomenclatura:
 
-\centerline{NomeDelDocumento vX.Y.Z}
+\\ NomeDelDocumento vX.Y.Z
 
 Dove:
 
@@ -347,27 +365,5 @@ Dove:
 
 \subsection{Formato dei file}
 I file legati alla documentazione vengono salvati in formato .tex durante il loro ciclo di vita. Quando un documento raggiunge lo stato di "Approvato" viene creato un file in formato PDF contenente la versione del documento approvata dal \textit{Responsabile}.
-
-\subsection{Strumenti}
-	
-	\subsubsection{\LaTeX{}}
-	
-	Per la stesura della documentazione il gruppo ha utilizzato il linguaggio \LaTeX{} per via delle possibilità che esso offre:
-	
-		\begin{itemize}
-			\item creazione di documenti formali e divisi in sezioni molto velocemente;
-			\item separazione del contenuto dalla formattazione tramite un file template separato e condiviso da tutti i documenti;
-			\item personalizzazione del documento grazie all’elevato numero di librerie.
-		\end{itemize}
-
- 	\subsubsection{TexStudio}
- 	
- 	Per la stesura del codice \LaTeX{} viene utilizzato l’editor \glossario{TexStudio}{TexStudio}, in virtù delle innumerevoli feature che offre gratuitamente e del fatto che si tratta di un'applicazione cross-platform supportata dai maggiori sistemi operativi. \\
- 	\centerline{\url{http://www.texstudio.org/}}
-	
-	\subsubsection{Lucidchart}
-	
-	Per la realizzazione di diagrammi illustrativi per i documenti viene utilizzata la piattaforma web \glossario{Lucidchart}{Lucidchart}. \\
-	\centerline{\url{https://www.lucidchart.com/}}	
 
 \end{document}
