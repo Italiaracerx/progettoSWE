@@ -6,7 +6,7 @@
 
 \section{Obiettivo del prodotto}
 
-Lo scopo del progetto consiste nel creare un applicativo software di supporto all’utilizzo di \glossario{Speect}{Speect}. L’applicazione che dobbiamo creare è una interfaccia grafica che aiuti i programmatori nello sviluppo dei plug-in per Speect. Nell’interfaccia utente si deve poter visualizzare e modificare i grafi delle \glossario{utterance}{utterance} di Speect. 
+Lo scopo del progetto consiste nel creare un applicativo software di supporto allo sviluppo di \glossario{Speect}{Speect}. L’applicazione da creare è una interfaccia grafica che aiuti i programmatori nello sviluppo dei plug-in per Speect. Nell’interfaccia utente si deve poter visualizzare e modificare i grafi delle \glossario{utterance}{utterance} di Speect. 
 
 
 \section{Funzioni del prodotto}
@@ -14,7 +14,7 @@ L’interfaccia grafica permetterà di:
 \begin{itemize}
 	\item{} Caricare i \glossario{file .json}{file .json} utili all’inizializzazione di Speect;
 	\item{} Mostrare i grafi delle varie utterance;
-	\item{} Aggiunta, modifica e eliminazione degli archi dei nodi; 
+	\item{} Aggiunta, modifica e eliminazione degli archi dei nodi;
 	\item{} La modifica dei campi dei nodi;
 	\item{} Disporre graficamente i nodi per permettere una lettura semplificata;
 	\item{} Ritornare il file audio generato da Speect;
@@ -38,34 +38,33 @@ Il software realizzato dovrà rispettare vari requisiti:
 		\begin{enumerate}
 			\item{} Caricare un \glossario{file Voice}{file Voice} con estensione JSON;
 			\item{} Inserire un input di testo, che verrà utilizzato in fase di compilazione;
-			\item{} Selezionare il tipo di \glossario{utterance type}{utterance type} iniziale di compilazione;
-			\item{} Compilazione mediante Speect delle informazioni fornite;
+			\item{} Selezionare il tipo di \glossario{utterance type}{utterance type} di compilazione;
+			\item{} Compilazione mediante Speect dato input di testo e l'utterance type;
 			\item{} Visualizzazione grafica del grafo prodotto dalla compilazione;
-			\item{} Permettere all'utente di selezionare le relazioni del grafo da visualizzare;
-			\item{} Caricare e salvare lo stato di un grafo precedentemente realizzato;
-			\item{} Evidenziare un nodo dato un percorso riferito al grafo;
-			\item{} Dare la possibilità di salvare un file audio con estensione \glossario{WAV}{WAV} generato a seguito di una compilazione di Speect.
+			\item{} Spostare un nodo graficamente;
+			\item{} Selezionato un nodo dall'interfaccia grafica, visualizzare le informazioni del nodo;
+			\item{} Possibilità di salvare un file audio con estensione \glossario{WAV}{WAV} generato a seguito di una compilazione di Speect.
 		\end{enumerate}
 		\item{}	Documentazione tecnica del software;
 	\end{itemize}
 	\item{} Requisiti desiderabili:
 	\begin{itemize}
-		\item{} Poter compilare partendo da un grafo caricato;
+		\item{} Selezione file JSon tramite \glossario{Drag and Drop}{drag and drop}
+		\item{} Permettere all'utente di selezionare le relazioni del grafo da visualizzare;
+		\item{} Permettere la riproduzione del file audio prodotto;
+		\item{} Permettere di nascondere i nodi senza dati;
+		\item{} Cambiare il colore degli strati del grafo.
+	\end{itemize}
+	\item{} Requisiti facoltativo:
+	\begin{itemize}
+		\item{} Evidenziare un nodo dato un percorso riferito al grafo;
 		\item{} Poter eseguire passo passo le varie utterance;
 		\item{}	Modificare gli archi che collegano i vari nodi dei grafi delle utterance;
-		\item{} Selezionato un nodo dall'interfaccia grafica, visualizzare il percorso del grafo.
-	\end{itemize}
-	\item{} Requisiti opzionali:
-	\begin{itemize}
+		\item{} Caricare e salvare lo stato di un grafo precedentemente realizzato;
+		\item{} Poter compilare partendo da un grafo caricato;
 		\item{}	Possibilità di confrontare visivamente due stati della struttura interna di Speect;
 		\item{} Possibilità di confrontare automaticamente due stati della struttura interna di Speect;
-		\item{}Modificare il file Voice di estensione JSON caricato nell'applicazione;
-		\item{}	Possibilità di manipolare la configurazione di Speect:
-		\begin{itemize}
-			\item{} Caricamento;
-			\item{}	Modifica;
-			\item{} Salvataggio.
-		\end{itemize}
+		\item{} Modificare il file Voice di estensione JSON caricato nell'applicazione.
 	\end{itemize}
 	
 \end{itemize}
