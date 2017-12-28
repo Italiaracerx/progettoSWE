@@ -1,0 +1,83 @@
+\documentclass[openany,12pt,a4paper]{article}
+\usepackage{subfiles}
+\usepackage[]{graphicx}
+\usepackage{float}
+\graphicspath{{./img/}{./../img/}}
+\usepackage{StileDoc}
+\title{Analisi Dei Requisiti}
+\author{}
+\date{\today}
+
+%\loadglsentries{../Glossario/Definizioni}
+
+\begin{document}
+	\makeatletter
+	\begin{titlepage}
+		\setlength{\headsep}{0pt}  
+		\begin{center}
+			{\huge \bfseries  \@title }\\[10ex]
+			\includegraphics[width=0.5\linewidth]{Logo.png}\\[1em]
+			\textbf{\Large Informazioni Documento} \\[2em]
+			\bgroup
+			\def\arraystretch{1.5}
+			\begin{tabular}{l|l}
+				\textbf{Versione} & 1.0.0 \\
+				\textbf{Data redazione} & \large \@date \\
+				\textbf{Redattori} &  \\
+				\textbf{Verificatori} &  \\
+				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
+				 & Prof. Riccardo Cardin \\
+				 & Gruppo Graphite \\
+				\textbf{Uso} & Interno \\
+			\end{tabular}
+		\egroup
+		\end{center}
+	\end{titlepage}
+	\makeatother
+
+	\thispagestyle{empty}
+	\newpage
+	
+	\section{Informazioni generali}
+	
+	\subsection{Informazioni sull'incontro}
+	
+	\begin{itemize} 
+	    \item \textbf{Luogo:} Aula P300, Complesso Paolotti (Videochiamata);
+	    \item \textbf{Data:} 15-12-2017;
+	    \item \textbf{Orari} 14:00 - 15:00;
+	    \item \textbf{Assenti:} nessuno;
+	    \item \textbf{Partecipanti esterni:} Giulio Paci.
+	\end{itemize}
+	
+	\subsection{Ragioni dell'incontro}
+	
+	Chiarimenti su dubbi emersi riguardo i requisiti del prodotto richiesto nel capitolato d'appalto proposto da MIVOQ SRL ([C3]). Tale capitolato è reperibile al seguente link:
+	\\ 
+	\\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Progetto/C3.pdf}
+	
+	\section{Resoconto}
+	
+	Nel corso dell'incontro sono stati chiariti i dubbi sollevati dal gruppo sul prodotto da realizzare per il capitolato proposto da MIVOQ SRL, nello specifico sono stati delucidati i seguenti punti:
+	
+	\begin{itemize}
+	    \item Illustrata interfaccia grafica dimostrativa inclusa nel capitolato d'appalto, con spiegazione del significato e delle funzionalità richieste dagli elementi che la compongono.
+	    \item Chiarimento sul funzionamento generale della tecnologia \glossario{Speect}{Speect} di cui farà largo uso il progetto.
+	    \item Chiarimento sul livello di manipolazione richiesto dei nodi del \glossario{grafo}{grafo} offerto in output all'utente.
+	    \item Illustrazione della struttura dei file \glossario{jason}{jason} di cui fa uso Speect.
+	\end{itemize}
+	
+	
+	
+	\end{document}    
+
+
+
+
+
+
+
+
+
+
+                   
