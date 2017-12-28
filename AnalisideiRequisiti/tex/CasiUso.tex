@@ -32,7 +32,7 @@
 	{}
 	{	\begin{itemize}
 		\item{} L'attore può Caricare un file JSon \refer{UC2}
-		\item{} L'attore può Salvare l'audio prodotto da Speect \refer{UC3}
+		\item{} L'attore può Salvare l'audio prodotto da Speect \refer{UC4}
 		\item{} L'attore può chiudere l'applicazione{UC4}
 		\end{itemize}
 	}
@@ -167,7 +167,7 @@
 {}
 {}
 
-\section{UC4:Salvataggio Audio Prodotto}
+\section{UC4:Salvataggio Audio Prodotto .WAV}
 \UserCase
 {UC4}
 {Utente}
@@ -175,20 +175,19 @@
 {L'attore vuole salvare l'audio}
 {L'attore ha premuto su Salva Audio}
 {L'audio è salvato in un file}
-{L'utente visualizza un messaggio di errore \refer{UC4.1}}
+{L'utente visualizza un messaggio di errore \refer{UC4.2}}
 {
 		\begin{itemize}
 		\item{} Viene aperto il file browser per il salvataggio
 		\item{} L'attore seleziona la cartella di destinazione tramite il file browser \refer{UC3}
 		\item{} L'attore scrive il nome del file nella barra di testo
 		\item{} L'attore preme su Salva 
-		\item{} Il file viene salvato nella destinazione
+		\item{} Il file viene salvato nella destinazione come .WAV
 \end{itemize}
 }	
-
-\section{UC4.1:Errore Salvataggio Audio}
+\section{UC4.2:Errore Salvataggio Audio}
 \UserCase
-{UC4.1}
+{UC4.2}
 {Utente}
 {Speect}
 {Avviene un errore durante il salvataggio dell'audio}
@@ -223,7 +222,7 @@
 		\item{} L'attore clicca sul menu a tendina
 		\item{} Viene aperto il menu a tendina
 		\item{} L'attore clicca sul Utterance type desiderata
-		\item{} Vengono mostrati a schermo i nomi degli Utterance Processor utilizzati nella posizione designata (Link alla figura)
+		\item{} Vengono mostrati a schermo i nomi degli Utterance Processor utilizzati nel apposito spazio (link figura), colorati con lo stesso colore delle relazioni da loro prodotte
 		
 	\end{itemize}
 }
