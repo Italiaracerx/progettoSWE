@@ -40,7 +40,12 @@
 		\hline
 				
 		\newline RFF2.2.1&
-		\newline L'utente può spostare due utterance processor modificando il file Json&
+		\newline L'utente può spostare un utterance processor modificando il file Json&
+		\newline VI-15-12-17
+		\\[1em]	
+		\hline
+		\newline RFF2.2.2&
+		\newline L'utente può cancellare un utterance processor modificando il file Json&
 		\newline VI-15-12-17
 		\\[1em]	
 		\hline
@@ -60,7 +65,7 @@
 		
 		\newline ROF4&
 		\newline L'utente può salvare l'audio risultante con estensione WAV&
-		\newline UC1 \newline VI-15-12-17 \newline Capitolato
+		\newline UC4 \newline VI-15-12-17 \newline Capitolato
 		\\[1em]
 			\hline
 			
@@ -68,15 +73,27 @@
 		\newline L'utente può salvare l'audio risultante con estensione diversa&
 		\newline VI-15-12-17
 		\\[1em]
+		\hline
+		
+		\newline ROF4.2&
+		\newline L'utente può selezionare dove salvare il file&
+		\newline UC3.1 
+		\\[1em]
+		
+		\hline	
+		\newline ROF4.2.1&
+		\newline L'utente può selezionare il nome del file da salvare&
+		\newline UC4
+		\\[1em]
 		
 		\hline
-		\newline ROF4.2&
+		\newline ROF4.3&
 		\newline Il sistema deve visualizzare un errore in caso il salvataggio dell'audio fallisca&
 		\newline UC4.1 \newline VI-15-12-17
 		\\[1em]
 		\hline
 		
-		\newline RFF4.3&
+		\newline RFF4.4&
 		\newline L'utente può ascoltare l'audio prima di salvarlo&
 		\newline interno
 		\\[1em]
@@ -306,6 +323,73 @@
 		\hline
 		
 		
-		
+	\end{longtable}
+	\section{Requisiti di Qualità}
+		\begin{longtable}{| p{3cm} | p{6cm} | p{3cm} |}
+			\hline
+			\textbf{Codice} & \textbf{Descrizione} & \textbf{Fonti}\\
+			\hline
+			\endhead
+				
+			
+			\newline ROQ0&
+		\newline Deve essere fornito un manuale utente&
+		\newline Capitolato
+		\\[1em]
+		\hline
+			\newline ROQ0.1&
+			\newline Il manuale deve essere in lingua italiana&
+			\newline interno
+			\\[1em]
+			\hline
+	\end{longtable}
+
+	\section{Requisiti di Vincolo}
+		\begin{longtable}{| p{3cm} | p{6cm} | p{3cm} |}
+	\hline
+	\textbf{Codice} & \textbf{Descrizione} & \textbf{Fonti}\\
+	\hline
+	\endhead
+				\newline ROV0&
+			\newline 
+			L'applicativo deve usare Speect modificato da Mivoq &
+			\newline Capitolato
+			\\[1em]
+			\hline	
+			\newline 
+			ROV1&
+			\newline 
+			L'applicativo deve essere sviluppato con QT &
+			\newline Capitolato
+			\newline Interno
+			\\[1em]
+			\hline
+			\newline 
+			ROV2&
+			\newline 
+			L'applicativo deve essere utilizzabile su sistema operativo Linux&
+			\newline Capitolato
+			\\[1em]
+			\hline
+			\newline
+			RDV2.1&
+			\newline 
+			L'applicativo deve essere utilizzabile su sistema operativo Windows&
+			\newline Capitolato
+			\\[1em]
+			\hline
+			\newline
+			RDV3&
+			\newline 
+			L'applicazione deve essere rilasciata con licenze opensource&
+			\newline Capitolato
+			\\[1em]
+			\hline	
+			RDV3.1&
+			\newline 
+			L'applicazione deve essere rilasciata con licenze BSD/MIT &
+			\newline Capitolato
+			\\[1em]
+			\hline
 	\end{longtable}
 \end{document}
