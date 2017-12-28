@@ -1,17 +1,17 @@
 \documentclass[openany,12pt,a4paper]{report}
 \usepackage{subfiles}
 \usepackage[]{graphicx}
-\graphicspath{{img/}{img/}}
-\usepackage{StileDoc}
+\graphicspath{{./img/}{./../img/}}
+\usepackage{../StileDoc}
 \title{Piano di qualifica}
-\author{Matteo Rizzo}
+\author{}
 \date{\today}
 
-%\loadglsentries{../Glossario/Definizioni}
+\loadglsentries{../Glossario/Definizioni}
 
 %da aggiungere per changelog
 \usepackage[owncaptions,tablegrid,tocentry]{vhistory}
-\renewcommand{\vhhistoryname}{ChangeLog}
+\renewcommand{\vhhistoryname}{Registro delle modifiche}
 \renewcommand{\vhversionname}{Versione}
 \renewcommand{\vhdatename}{Data}
 \renewcommand{\vhauthorname}{Autore}
@@ -23,29 +23,44 @@
 	\begin{titlepage}
 		\setlength{\headsep}{0pt}  
 		\begin{center}
-			{\huge \bfseries  \@title }\\[10ex]
 			\includegraphics[width=0.5\linewidth]{img/logo.png}\\[1em]
+			{\huge \bfseries  \@title }\\[10ex]
 			\textbf{\Large Informazioni Documento} \\[2em]
 			\bgroup
 			\def\arraystretch{1.5}
 			\begin{tabular}{l|l}
 				\textbf{Versione} & 1.0.0 \\
 				\textbf{Data redazione} & \large \@date \\
+				\textbf{Responsabile} & \\
 				\textbf{Redattori} &  Matteo Rizzo \\
 				\textbf{Verificatori} &  \\
 				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
 				 & Prof. Riccardo Cardin \\
 				 & Gruppo Graphite \\
-				\textbf{Uso} & Interno \\
+				\textbf{Uso} & Esterno \\
+				\textbf{Recapito} & graphite.swe@gmail.com \\
 			\end{tabular}
 		\egroup
 		\end{center}
 	\end{titlepage}
 	\makeatother
+ 
+\thispagestyle{empty}
+\newpage
 
 % INDICE
- 
-\tableofcontents{}
+\tableofcontents
+
+%REGISTRO DELLE MODIFICHE
+
+\begin{versionhistory}
+	%versioni piu recenti sopra
+	%come da norme di progetto [approvato tutto il verificato].[verificato tutto quello aggiunto].[aggiunto qualcosa] 
+	%dopo verificato aggiunto va azzerato dopo approvato verificato va azzerato 
+	
+	
+	\vhEntry{0.0.1}{20-12-2017}{Rizzo}{Redatto documento}
+\end{versionhistory}
 
 % INTRODUZIONE
 
@@ -53,13 +68,13 @@
 
     \section{Scopo del documento}
     
-    Lo scopo del documento è quello di esporre le strategie, le tecnologie e le metriche che il gruppo Graphite adotta al fine di garantire le qualità di prodotto e di processo. Il documento ha dunque l'intento di chiarificare il \glossario{Sistema Qualità}{Sistema Qualità} instaurato e accettato dal gruppo in relazione al progetto corrente. Con l'obiettivo di rivelare e correggere in maniera efficace ed economica ogni errore, viene costantemente applicato un sistema di \glossario{verifica}{verifica} e \glossario{validazione}{validazione} ai processi e alle attività svolte.
+    Lo scopo del documento è quello di esporre le strategie, le tecnologie e le metriche che il gruppo Graphite adotta al fine di garantire le qualità di prodotto e di processo. Il documento ha dunque l'intento di chiarificare il \glossario{Sistema Qualità}{Sistema Qualita} instaurato e accettato dal gruppo in relazione al progetto corrente. Con l'obiettivo di rivelare e correggere in maniera efficace ed economica ogni errore, viene costantemente applicato un sistema di \glossario{verifica}{verifica} e \glossario{validazione}{validazione} ai processi e alle attività svolte.
     
     \section{Scopo del prodotto}
     
     Lo scopo del progetto è la realizzazione di un’interfaccia grafica per \glossario{Speect}{Speect} [Meraka Institute(2008-2013)], una libreria per la creazione di sistemi di sintesi vocale, che agevoli l’ispezione del suo stato interno durante il funzionamento e la scrittura di test per le sue funzionalità.
     
-    \section{Ambiguità}
+    \section{Glossario}
     
     Al fine di evitare ogni ambiguità relativa al linguaggio utilizzato nei documenti, viene fornito il Glossario v1.0.0, contenente la definizione dei termini in corsivo marcati con il pedice "G".
     
@@ -67,39 +82,38 @@
     
     \begin{itemize}
     
-        \item{Norme di progetto:} documento \textit{Norme di progetto v1.0.0}.
+        \item \textbf{Norme di progetto:} documento \textit{Norme di progetto v1.0.0}.
         
-        \item{Capitolato d'appalto C3:} DeSpeect: interfaccia grafica per Speect \\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Progetto/C3.pdf}
+        \item\textbf{Capitolato d'appalto C3:} DeSpeect: interfaccia grafica per Speect \\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Progetto/C3.pdf}
     
     \end{itemize}
     
     \section{Riferimenti informativi}
     
     \begin{itemize}
-        \item Piano di Progetto v 1.0.0 ;
+        \item \textbf{Piano di Progetto:} documento \textit{Piano di Progetto v 1.0.0};
         
-        \item Qualità di prodotto - Slide del corso \Ingegneria del
-        Software": 
+        \item \textbf{Qualità di prodotto - Slide del corso:} 
         \\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Dispense/L13.pdf};
         
-        \item Qualità di processo - Slide del corso \Ingegneria del Software": \\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Dispense/L15.pdf};
+        \item \textbf{Qualità di processo - Slide del cors:} \\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Dispense/L15.pdf};
         
-        \item Software Engineering - Ian Sommerville - 9 th Edition (2010);
+        \item \textbf{Libro del corso:} Software Engineering - Ian Sommerville - 9 th Edition (2010);
         
-        \item Standard ISO/IEC 15504: 
+        \item \textbf{Standard ISO/IEC 15504:} 
         \\ \url{https://en.wikipedia.org/wiki/ISO/IEC_15504};
         
-        \item HM&S - SPICE Process Assessment Model: 
+        \item \textbf{HM\&S - SPICE Process Assessment Model:} 
         \\ \url{http://www.spice121.com/cms/en/about-spice-1-2-1.html};
         
-        \item Standard ISO/IEC 9126:
+        \item \textbf{Standard ISO/IEC 9126:}
         \\ \url{https://en.wikipedia.org/wiki/ISO/IEC_9126};
         
-        \item Ciclo di Deming (PDCA): 
+        \item \textbf{Ciclo di Deming (PDCA):} 
         \\ \url{https://en.wikipedia.org/wiki/PDCA};
         
-        \item Complessità ciclomatica: 
-        \\url{https://it.wikipedia.org/wiki/Complessità_ciclomatica}.
+        \item \textbf{Complessità ciclomatica:} 
+        \\ \url{https://it.wikipedia.org/wiki/Complessità\textunderscore ciclomatica}.
     \end{itemize}
 
 % VISIONE GENERALE DELLE STRATEGIE DI VERIFICA
@@ -119,7 +133,7 @@
     
     \glossario{ISO/IEC 15504}{ISO/IEC 15504}, anche noto come \glossario{SPICE}{SPICE}, è lo standard scelto per la definizione degli obiettivi di processo. Si rimanda all'appendice A.1 per un'approfondita descrizione di tale standard.
     La scelta di SPICE è motivata dal fatto che esso fornisce gli strumenti utili a valutare la qualità di processo, parametro da tenere in grande considerazione per il conseguimento di un prodotto qualitativamente valido entro tempi prestabiliti. 
-    Per poter applicare correttamente SPICE, viene utilizzato il \textit{ciclo di Deming} o \glossario{ciclo di PDCA}{ciclo di PDCA}. Si rimanda all'appendice A.3 per un'approfondita descrizione del ciclo di Deming. Tale ciclo definisce un metodo di controllo orientato al miglioramento continuo del livello qualitativo dei processi, evitando nel contempo regressioni. il ciclo di Deming si applica solo conoscendo lo stato di maturità attuale dei processi di interesse, definendo specifici obiettivi di miglioramento, e studiando i risultati delle azioni migliorative sperimentate. Esistono dunque  stringenti precondizioni alla sua applicabilità, ovvero l'attuazione di processi ripetibili e misurabili, qualità di processo che il gruppo ha intenzione di perseguire. L'affiancamento dello standard ISO al ciclo PDCA permette di:
+    Per poter applicare correttamente SPICE, viene utilizzato il \textit{ciclo di Deming} o \glossario{ciclo di PDCA}{Ciclo di PDCA}. Si rimanda all'appendice A.3 per un'approfondita descrizione del ciclo di Deming. Tale ciclo definisce un metodo di controllo orientato al miglioramento continuo del livello qualitativo dei processi, evitando nel contempo regressioni. il ciclo di Deming si applica solo conoscendo lo stato di maturità attuale dei processi di interesse, definendo specifici obiettivi di miglioramento, e studiando i risultati delle azioni migliorative sperimentate. Esistono dunque  stringenti precondizioni alla sua applicabilità, ovvero l'attuazione di processi ripetibili e misurabili, qualità di processo che il gruppo ha intenzione di perseguire. L'affiancamento dello standard ISO al ciclo PDCA permette di:
     
     \begin{itemize}
         \item Misurare costantemente le performance di processo;
@@ -128,15 +142,13 @@
     \end{itemize} 
     
     \subsubsection{Obiettivi}
-    
-    \begin{itemize}
+
         \begin{itemize}
             \item \textbf{ID:} OQP001;
             \item \textbf{Nome:} Miglioramento continuo;
             \item \textbf{Descrizione:} Capacità del processo di misurare e migliorare le proprie performance;
             \item \textbf{Metriche associate:} MP001: SPICE.
-        \end{itemize} 
-    \end{itemize}
+        \end{itemize}
     
     \subsection{Qualità di prodotto}
     
@@ -159,73 +171,85 @@
     \end{itemize}
     
     \subsubsection{Obiettivi}
-    
-    \begin{itemize}
+        
         \begin{itemize}
             \item \textbf{ID:} OQPPD001;
-            \item \textbf{Nome:} Correttezza ortografica dei documenti;
-            \item \textbf{Descrizione:} I documenti non devono riportare errori ortografici o grammaticali;
-            \item \textbf{Metriche associate:} MPPD002: Errori ortografici corretti.
+            \begin{itemize}            	
+            	\item \textbf{Nome:} Correttezza ortografica dei documenti;
+            	\item \textbf{Descrizione:} I documenti non devono riportare errori ortografici o grammaticali;
+            	\item \textbf{Metriche associate:} MPPD002: Errori ortografici corretti.
+        	\end{itemize}
         \end{itemize} 
         
         \begin{itemize}
             \item \textbf{ID:} OQPPD002;
-            \item \textbf{Nome:} Leggibilità dei documenti;
-            \item \textbf{Descrizione:} I documenti devono essere leggibili e comprensibili da persone con licenza media o superiore;
-            \item \textbf{Metriche associate:} MPPD001: Gulpease.
+            \begin{itemize} 
+            	\item \textbf{Nome:} Leggibilità dei documenti;
+            	\item \textbf{Descrizione:} I documenti devono essere leggibili e comprensibili da persone con licenza media o superiore;
+            	\item \textbf{Metriche associate:} MPPD001: Gulpease.
+            \end{itemize}
         \end{itemize} 
         
         
         \begin{itemize}
             \item \textbf{ID:} OQPPS001;
-            \item \textbf{Nome:} Implementazione requisiti obbligatori;
-            \item \textbf{Descrizione:} Il prodotto richiesto dalla Proponente deve implementare tutti i requisiti obbligatori descritti nella AR;
-            \item \textbf{Metriche associate:} MPPS001: Copertura Requisiti Obbligatori.
+            \begin{itemize} 
+            	\item \textbf{Nome:} Implementazione requisiti obbligatori;
+            	\item \textbf{Descrizione:} Il prodotto richiesto dalla Proponente deve implementare tutti i requisiti obbligatori descritti nella AR;
+            	\item \textbf{Metriche associate:} MPPS001: Copertura Requisiti Obbligatori.
+            \end{itemize}
         \end{itemize}
         
         \begin{itemize}
             \item \textbf{ID:} OQPPS002;
-            \item \textbf{Nome:} Copertura del codice;
-            \item \textbf{Descrizione:} Il prodotto richiesto dalla Proponente deve essere testato in ogni sua parte per garantire le funzionalità relative ai requisiti;
-            \item \textbf{Metriche associate:} MPPS011: Linee di codice coperte dai test.
+            \begin{itemize} 
+            	\item \textbf{Nome:} Copertura del codice;
+            	\item \textbf{Descrizione:} Il prodotto richiesto dalla Proponente deve essere testato in ogni sua parte per garantire le funzionalità relative ai requisiti;
+            	\item \textbf{Metriche associate:} MPPS011: Linee di codice coperte dai test.
+            \end{itemize}
         \end{itemize} 
         
         \begin{itemize}
             \item \textbf{ID:} OQPPS003;
-            \item \textbf{Nome:} Superamento Test;
-            \item \textbf{Descrizione:} La percentuale di superamento dei test del prodotto software dovrà essere almeno l'80\% del totale;
-            \item \textbf{Metriche associate:} MPPS013: Percentuale superamento test.
+            \begin{itemize} 
+            	\item \textbf{Nome:} Superamento Test;
+            	\item \textbf{Descrizione:} La percentuale di superamento dei test del prodotto software dovrà essere almeno l'80\% del totale;
+            	\item \textbf{Metriche associate:} MPPS013: Percentuale superamento test.
+            \end{itemize}
         \end{itemize} 
         
         \begin{itemize}
             \item \textbf{ID:} OQPPS004;
-            \item \textbf{Nome:} Robustezza;
-            \item \textbf{Descrizione:} Il prodotto richiesto dalla proponente deve affrontare situazioni anomale senza arrestare la sua esecuzione;
-            \item \textbf{Metriche associate:} MPPS010: Failure Avoidance.
+            \begin{itemize} 
+            	\item \textbf{Nome:} Robustezza;
+            	\item \textbf{Descrizione:} Il prodotto richiesto dalla proponente deve affrontare situazioni anomale senza arrestare la sua esecuzione;
+            	\item \textbf{Metriche associate:} MPPS010: Failure Avoidance.
+            \end{itemize}
         \end{itemize}
         
         \begin{itemize}
             \item \textbf{ID:} OQPPS006;
-            \item \textbf{Nome:} Manutenzione e comprensione del codice;
-            \item \textbf{Descrizione:} Il codice del prodotto richiesto dalla proponente deve essere quanto più possibile comprensibile e manutenibile;
-            \item \textbf{Metriche associate:} 
+            \begin{itemize} 
+            	\item \textbf{Nome:} Manutenzione e comprensione del codice;
+            	\item \textbf{Descrizione:} Il codice del prodotto richiesto dalla proponente deve essere quanto più possibile comprensibile e manutenibile;
+            	\item \textbf{Metriche associate:} 
                 \begin{itemize}
-                    \item MPPS003: Numero di parametri per metodo;
-                    \item MPPS004: Numero di attributi per classe;
-                    \item MPPS005: Numero di metodi per classe;
-                    \item MPPS006: Complessità ciclomatica;
-                    \item MPPS007: Grado di instabilità;
-                    \item MPPS008: Altezza albero della gerarchia;
-                    \item MPPS009: Rapporto linee di commento / linee di codice.
+                    \item \textbf{MPPS003:} Numero di parametri per metodo;
+                    \item \textbf{MPPS004:} Numero di attributi per classe;
+                    \item \textbf{MPPS005:} Numero di metodi per classe;
+                    \item \textbf{MPPS006:} Complessità ciclomatica;
+                    \item \textbf{MPPS007:} Grado di instabilità;
+                    \item \textbf{MPPS008:} Altezza albero della gerarchia;
+                    \item \textbf{MPPS009:} Rapporto linee di commento / linee di codice.
                 \end{itemize}
+            \end{itemize}
         \end{itemize}
-    \end{itemize}
 
     \section{Gestione dei processi di verifica e validazione}
         
     Il processo di verifica viene istanziato per ogni processo in esecuzione quando questo raggiunge un livello di maturità significativo, e/o in seguito a modiche notevoli del suo stato. Per ogni processo viene verificata la qualità dello stesso e del suo esito. 
     Ognuno dei periodi descritti nel \textit{Piano di Progetto v1.0.0} produce degli esiti diversi, pertanto le procedure di verifica saranno specializzate e i loro risultati riportati in un'apposita appendice al termine di questo documento. 
-    Al processo di verifica segue quello di approvazione, nel quale il Responsabile si accerta che i risultati prodotti siano conformi con quanto atteso e accettabili dal punto di vista qualitativo.
+    Al processo di verifica segue quello di approvazione, nel quale il \textit{Responsabile di Progetto} si accerta che i risultati prodotti siano conformi con quanto atteso e accettabili dal punto di vista qualitativo.
 
     \section{Scadenze temporali}
     
@@ -233,7 +257,7 @@
     
     \section{Risorse}
     
-    Il controllo eseguito per garantire il livello qualitativo di processi e prodotti necessita di risorse umane e tecnologiche. In relazione a questa attività, i ruoli di maggior rilievo sono il Responsabile di Progetto e il Verificatore, che rispettivamente si occupano del controllo di qualità del processo e del prodotto risultante. Una descrizione dettagliata di tali ruoli è reperibile nel documento \textit{Norme di Progetto v1.0.0}. 
+    Il controllo eseguito per garantire il livello qualitativo di processi e prodotti necessita di risorse umane e tecnologiche. In relazione a questa attività, i ruoli di maggior rilievo sono il \textit{Responsabile di Progetto} e il \textit{Verificatore}, che rispettivamente si occupano del controllo di qualità del processo e del prodotto risultante. Una descrizione dettagliata di tali ruoli è reperibile nel documento \textit{Norme di Progetto v1.0.0}. 
     Le risorse tecnologiche comprendono tutti gli strumenti software e hardware che vengono utilizzati per attuare le procedure di verifica, automatizzate e non. Una descrizione dettagliata di tali risorse è reperibile nel documento \textit{Norme di Progetto v1.0.0}. 
 
 
@@ -295,7 +319,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
     
     \item \textbf{Modalità di calcolo:} L'indice Gulpease si calcola con la seguente formula:
 
-    \[ I\ped{Gulpease} = 89 + (300*(\textrm{\textit{numero delle frasi}}) - \frac{10*(\textrm{\textit{numero delle lettere}})}{(\textrm{\textit{numero delle parole}})} \]
+    \[ I\ped{Gulpease} = 89 +  \frac{(300*(\textrm{\textit{numero delle frasi}})-10*(\textrm{\textit{numero delle lettere}})}{(\textrm{\textit{numero delle parole}})} \]
     
     Il risultato è un valore compreso nell’intervallo tra 0 e 100, dove il valore 100 indica la
     più alta leggibilità, mentre 0 la più bassa. In generale risulta che testi con indice:
@@ -323,11 +347,11 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \subsection{Copertura requisiti obbligatori}
 
 \begin{itemize}
-    \item \textbf{Codice:};
+    \item \textbf{Codice:} MPPS001;
     \item \textbf{Descrizione:} La copertura dei requisiti obbligatori permette di monitorare la percentuale di requisiti obbligatori soddisfatti;
     \item \textbf{Modalità di calcolo:} La copertura dei requisiti obbligatori si calcola con la seguente formula:
     
-    \[ CRO = \frac{\textrm{\textit{numero requisiti obbligatori soddisfatti}}}{\textrm{\textit{totale dei requisiti obbligatori}}} \];
+    \[ CRO = \frac{\textrm{\textit{numero requisiti obbligatori soddisfatti}}}{\textrm{\textit{totale dei requisiti obbligatori}}} \]
     
     \item \textbf{Range di accettazione:} [65\% - 100\%];
     \item \textbf{Range ottimale:} [80\% - 100\%].
@@ -352,11 +376,11 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \subsection{Percentuale superamento test}
 
 \begin{itemize}
-    \item \textbf{Codice:};
+    \item \textbf{Codice:} MPPS013;
     \item \textbf{Descrizione:} La metrica indica la percentuale di test implementati superati dal oggetto del tes;
     \item \textbf{Modalità di calcolo:} Percentuale superamento test si calcola con la seguente formula:
     
-    \[ PST = \frac{\textrm{\textit{numero test superato}}}{\textrm{\textit{totale dei test implementati}}} \]
+    \[ PST = \frac{\textrm{\textit{numero test superati}}}{\textrm{\textit{totale dei test implementati}}} \]
     
     \item \textbf{Range di accettazione:} [85\% - 100\%];
     \item \textbf{Range ottimale:} [100\% - 100\%].
@@ -365,8 +389,8 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \subsection{Failure avoidance}
 
 \begin{itemize}
-    \item \textbf{Codice:};
-    \item \textbf{Descrizione:} La Failure Avoidance è una metrica Applicata per monitorare la robustezza del prodotto quando deve affrontare a situazioni critiche;
+    \item \textbf{Codice:} MPPS010;
+    \item \textbf{Descrizione:} La Failure Avoidance è una metrica applicata per monitorare la robustezza del prodotto quando deve affrontare a situazioni critiche;
     \item \textbf{Modalità di calcolo:} La Failure Avoidance si calcola con la seguente formula:
     
     \[ FA = \frac{\textrm{\textit{numero situazioni anomale evitate}}}{\textrm{\textit{numero situazioni anomale occorse}}} \]
@@ -380,7 +404,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \begin{itemize}
     \item \textbf{Codice:} MPPS003;
 
-    \item \textbf{Descrizione:} Il numero di parametri di un metodo incide sulla sua complessità. Un valore elevato può indicare che esso si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposto in metodi più piccoli;
+    \item \textbf{Descrizione:} Il numero di parametri di un metodo incide sulla sua complessità. Un valore elevato può indicare che esso si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposto in metodi più semplici;
     
     \item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
     
@@ -393,7 +417,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \begin{itemize}
     \item \textbf{Codice:} MPPS004;
 
-    \item \textbf{Descrizione:} Il numero di attributi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più piccole;
+    \item \textbf{Descrizione:} Il numero di attributi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più semplici;
     
     \item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
     
@@ -406,7 +430,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \begin{itemize}
     \item \textbf{Codice:} MPPS005;
 
-    \item \textbf{Descrizione:} Il numero di metodi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più piccole;
+    \item \textbf{Descrizione:} Il numero di metodi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più semplici;
     
     \item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
     
@@ -419,7 +443,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \begin{itemize}
     \item \textbf{Codice:} MPPS006;
 
-    \item \textbf{Descrizione:} La tbf\glotexssario{Complessità Ciclomatica}{Complessità Ciclomatica} (o complessità condizionale) è una metrica software utilizzata per misurare la complessità di un programma. Nello specifico, essa stima la complessità di funzioni, moduli, metodi o classi di un programma. Il valore della Complessità Ciclomatica rappresenta quanto un metodo è complesso, tramite la misura del numero di cammini linearmente indipendenti che attraversano il \glossario{grafo}{grafo} di flusso di controllo. In tale grafo, i nodi rappresentano gruppi indivisibili di istruzioni. Un arco connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l'esecuzione delle istruzioni dell'altro nodo. Durante l’identificazione dei test, la Complessità Ciclomatica è inoltre utile per determinare il numero di casi di test necessari: l’indice di Complessità Ciclomatica è infatti un limite superiore al numero di test necessari per raggiungere la completa \glossario{copertura del codice}{copertura del codice} (o \textit{code coverage}) del modulo testato. Un valore troppo elevato indica un'eccessiva complessità del codice, cui consegue una complessa manutenzione, al contrario un valore ridotto potrebbe indicare una scarsa efficienza dei metodi;
+    \item \textbf{Descrizione:} La \glossario{Complessità ciclomatica}{Complessita ciclomatica} (o complessità condizionale) è una metrica software utilizzata per misurare la complessità di un programma. Nello specifico, essa stima la complessità di funzioni, moduli, metodi o classi di un programma. Il valore della Complessità Ciclomatica rappresenta quanto un metodo è complesso, tramite la misura del numero di cammini linearmente indipendenti che attraversano il \glossario{grafo}{Grafo} di flusso di controllo. In tale grafo, i nodi rappresentano gruppi indivisibili di istruzioni. Un arco connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l'esecuzione delle istruzioni dell'altro nodo. Durante l’identificazione dei test, la Complessità Ciclomatica è inoltre utile per determinare il numero di casi di test necessari: l’indice di Complessità Ciclomatica è infatti un limite superiore al numero di test necessari per raggiungere la completa \glossario{copertura del codice}{Copertura del codice} (o \textit{code coverage}) del modulo testato. Un valore troppo elevato indica un'eccessiva complessità del codice, cui consegue una complessa manutenzione, al contrario un valore ridotto potrebbe indicare una scarsa efficienza dei metodi;
 
     \item \textbf{Modalità di calcolo:} Rappresentando un programma con il grafo di controllo del flusso, un modo di calcolare il numero ciclomatico \textit{V(G)} è il seguente:
     
@@ -444,16 +468,16 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
     
     \item \textbf{Descrizione:} Il livello di stabilità di un software indica il rischio con una modifica apportata ad un \glossario{package}{package} influenzi il funzionamento dell'intero sistema;
     
-    \textbf{Modalità di calcolo:} Il valore di instabilità è calcolato usando il grado di \glossario{accoppiamento}{accoppiamento} tramite la seguente formula:
+    \item \textbf{Modalità di calcolo:} Il valore di instabilità è calcolato usando il grado di \glossario{accoppiamento}{Accoppiamento} tramite la seguente formula:
     
     \[ \textrm{\textit{Instabilità}} = \frac{\textrm{\textit{Accoppiamento efferente}}}{\textrm{\textit{Accoppiamento efferente}} + \textrm{\textit{Accoppiamento afferente}}} \]
     
     Dove:
     
     \begin{itemize}
-        \item \textit{Accoppiamento efferente:} indica il grado di dipendenza delle classi di un package verso classi di package esterni. Un valore basso garantisce la stabilità del package indipendentemente dalle possibili modifiche al resto del sistema;
+        \item \textbf{Accoppiamento efferente:} indica il grado di dipendenza delle classi di un package verso classi di package esterni. Un valore basso garantisce la stabilità del package indipendentemente dalle possibili modifiche al resto del sistema;
         
-        \item \textit{Accoppiamento afferente:} indica il grado di utilità delle classi di un package verso classi esterne ad esso. Un valore troppo basso potrebbe essere indice di scarsa utilità della classe, dato che poche delle sue funzionalità sono usate al suo esterno. Al contrario, un valore troppo elevato può indicare un livello di dipendenza pericoloso del package in esame, che può portare ad effetti indesiderati nelle classi esterne in caso di modifiche. Un valore elevato, d'altro canto, non è necessariamente indice di un errore di progettazione bensì potrebbe indicare semplicemente la criticità del package in esame.
+        \item \textbf{Accoppiamento afferente:} indica il grado di utilità delle classi di un package verso classi esterne ad esso. Un valore troppo basso potrebbe essere indice di scarsa utilità della classe, dato che poche delle sue funzionalità sono usate al suo esterno. Al contrario, un valore troppo elevato può indicare un livello di dipendenza pericoloso del package in esame, che può portare ad effetti indesiderati nelle classi esterne in caso di modifiche. Un valore elevato, d'altro canto, non è necessariamente indice di un errore di progettazione bensì potrebbe indicare semplicemente la criticità del package in esame.
     \end{itemize}
     
     \item \textbf{Range di accettazione:} [0.0 - 0.8];
@@ -467,7 +491,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 
     \item \textbf{Codice:} MPPS008;
     
-    \textbf{Descrizione:} L'altezza degli alberi di gerarchia delle classi va limitata così da limitare l'accoppiamento. Preferibilmente, le classi dovranno dipendere solo da classi astratte e potranno implementare una o più interfacce. Viene invece proibito l'uso di ereditarietà multipla.
+    \item \textbf{Descrizione:} L'altezza degli alberi di gerarchia delle classi va limitata così da limitare l'accoppiamento. Preferibilmente, le classi dovranno dipendere solo da classi astratte e potranno implementare una o più interfacce. Viene invece proibito l'uso di ereditarietà multipla.
 
     \item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
     
@@ -482,9 +506,10 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 
     \item \textbf{Codice:} MPPS009;
     
-    \textbf{Descrizione:} Il rapporto tra linee di codice (escluse le righe vuote) e linee di commento rappresenta un indice utile a stimare la manutenibilità del codice sorgente. Un rapporto troppo basso indica una scarsa documentazione del codice scritto, cui consegue una possibile elevata complessità nel manutenerlo.
+    \item \textbf{Descrizione:} Il rapporto tra linee di codice (escluse le righe vuote) e linee di commento rappresenta un indice utile a stimare la manutenibilità del codice sorgente. Un rapporto troppo basso indica una scarsa documentazione del codice scritto, cui consegue una possibile elevata complessità nel manutenerlo.
 
     \item \textbf{Modalità di calcolo:}
+    \[\frac{\textrm{\textit{numero linee di commento}}}{\textrm{\textit{numero linee di codice (non vuote)}}} \]
     
     \item \textbf{Range di accettazione:} $ \textrm{\textit{rapporto}} \geq 0.3\% $;
     
@@ -609,7 +634,7 @@ La sigla ISO/IEC 9126 individua una serie di normative e linee guida preposte a 
 
     \item \textbf{Efficienza:} il software è tenuto a eseguire le proprie funzionalità minimizzando tempo, spazio e tutte le altre risorse di cui necessita per il suo corretto funzionamento;
     
-    \item \textbf{Usabilità:}  il software è tenuto ad essere comprensibile, studiabile e pienamente utilizzabile dal suo \glossario{target}{target} di utenza. Nello specifico, esso deve avere le seguenti caratteristiche:
+    \item \textbf{Usabilità:}  il software è tenuto ad essere comprensibile, studiabile e pienamente utilizzabile dal suo \glossario{target}{Target} di utenza. Nello specifico, esso deve avere le seguenti caratteristiche:
     
     \begin{itemize}
         \item \textbf{Comprensibilità:} ovvero la capacità di essere inequivocabilmente chiaro rispetto alle proprie funzionalità e modalità di utilizzo;
@@ -668,7 +693,7 @@ Il ciclo di Deming (anche conosciuto come ciclo PDCA, l'acronimo di Plan-Do-Chec
 
 \section{Riassunto delle attività di verifica per le revisioni}
 
-Nel periodo precedente alla consegna per la Revisione dei Requisiti vengono verificati i documenti redatti ed i processi eseguiti. I documenti sono verificati dai Verificatori secondo i criteri per l'analisi statica definiti nel documento \textit{Norme di Progetto v1.0.0}, applicando il sistema \glossario{Walkthrough}{Walkthrough} ed \glossario{Inspection}{Inspection}. In primo luogo, viene verificato il documento nella sua interezza, cercando eventuali errori presenti e trattandoli nel modo seguente:
+Nel periodo precedente alla consegna per la Revisione dei Requisiti vengono verificati i documenti redatti ed i processi eseguiti. I documenti sono verificati dai \textit{Verificatori} secondo i criteri per l'analisi statica definiti nel documento \textit{Norme di Progetto v1.0.0}, applicando il sistema \glossario{Walkthrough}{Walkthrough} ed \glossario{Inspection}{Inspection}. In primo luogo, viene verificato il documento nella sua interezza, cercando eventuali errori presenti e trattandoli nel modo seguente:
 
 \begin{enumerate}
     \item Correzione di errori grammaticali o di eventuali violazioni delle norme tipografiche definite nelle \textit{Norme di Progetto v 1.0.0};
