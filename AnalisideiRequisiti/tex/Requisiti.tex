@@ -1,0 +1,311 @@
+\documentclass[../AnalisideiRequisiti.tex]{subfiles}
+
+\begin{document}
+	\chapter{Requisiti}
+	\section{Requisiti Funzionali}
+	\begin{longtable}{| p{3cm} | p{6cm} | p{3cm} |}
+		\hline
+		\textbf{Codice} & \textbf{Descrizione} & \textbf{Fonti}\\
+		\hline
+		\endhead
+		\newline ROF0&
+		\newline L'utente può visualizzare la pagina di DeSpeect&
+		\newline UC0 \newline Capitolato
+		\\[1em]
+		\hline
+		\newline ROF1&
+		\newline L'utente può accedere al menu file&
+		\newline UC1
+		\\[1em]	
+		
+		\hline
+			
+		
+		\newline ROF2&
+		\newline L'utente può caricare un file Json&
+		\newline UC2 \newline Capitolato
+		\\[1em]	
+			\hline	
+			
+		\newline ROF2.1&
+		\newline L'utente può visualizzare il percorso del file JSon caricato&
+		\newline Capitolato
+		\\[1em]	
+		\hline	
+		
+		\newline RFF2.2&
+		\newline L'utente può modificare il file Json&
+		\newline Capitolato
+		\\[1em]	
+		\hline
+				
+		\newline RFF2.2.1&
+		\newline L'utente può spostare due utterance processor modificando il file Json&
+		\newline VI-15-12-17
+		\\[1em]	
+		\hline
+		
+	
+		\newline ROF3&
+		\newline L'utente può inizializzare Speect con il file json&
+		\newline UC2 \newline VI-15-12-17
+		\\[1em]	
+			\hline	
+		
+		\newline ROF3.1&
+		\newline Il sistema deve visualizzare un errore in caso speect fallisca l'inizializzazione&
+		\newline UC3.1
+		\\[1em]		
+		\hline
+		
+		\newline ROF4&
+		\newline L'utente può salvare l'audio risultante con estensione WAV&
+		\newline UC1 \newline VI-15-12-17 \newline Capitolato
+		\\[1em]
+			\hline
+			
+		\newline RFF4.1&
+		\newline L'utente può salvare l'audio risultante con estensione diversa&
+		\newline VI-15-12-17
+		\\[1em]
+		
+		\hline
+		\newline ROF4.2&
+		\newline Il sistema deve visualizzare un errore in caso il salvataggio dell'audio fallisca&
+		\newline UC4.1 \newline VI-15-12-17
+		\\[1em]
+		\hline
+		
+		\newline RFF4.3&
+		\newline L'utente può ascoltare l'audio prima di salvarlo&
+		\newline interno
+		\\[1em]
+		\hline
+		
+		\newline ROF5&
+		\newline L'utente può cercare il file tramite file browser&
+		\newline UC3 \newline UC3.1 \newline VI-15-12-17
+		\\[1em]
+		\hline
+		
+			\newline ROF5.1&
+		\newline L'utente può aprire cartelle tramite file browser&
+		\newline UC3.1 \newline UC3.1.1
+		\\[1em]
+		\hline
+		
+		\newline ROF5.2&
+		\newline L'utente può tornare alla cartella padre&
+		\newline UC3.1 \newline UC3.1.3
+		\\[1em]
+		\hline
+		
+		\newline RDF5.3&
+		\newline L'utente può creare cartelle tramite file browser&
+		\newline UC3 \newline UC3.2
+		\\[1em]
+		\hline
+		
+		\newline ROF5.4&
+		\newline L'utente può selezionare un file tramite file browser&
+		\newline UC3 \newline UC3.2
+		\\[1em]	
+		\hline
+		
+		\newline RDF5.5&
+		\newline L'utente può selezionare un file tramite file browser&
+		\newline VI-15-12-17
+		\\[1em]	
+		\hline
+		
+		\newline ROF5.6&
+		\newline Il sistema visualizza un errore se si cerca di accedere ad una cartella senza i permessi necessari&
+		\newline UC3.3 \newline VI-15-12-17
+		\\[1em]	
+		\hline
+		\newline RDF5.7&
+		\newline il file browser mostra solo file di estensione corretta&
+		\newline interno
+		\\[1em]
+		\hline
+		\newline ROF6&
+		\newline L'utente può selezionare la utterance type&
+		\newline UC6 
+		\\[1em]
+		\hline
+				
+		\newline ROF6.1&
+		\newline L'utente può visualizzare gli utterance processor di un utterance type&
+		\newline UC6 
+		\\[1em]
+		\hline
+			
+		\newline ROF7&
+		\newline L'utente può inserire un testo da tradurre in voce&
+		\newline UC7 \newline Capitolato
+		\\[1em]
+		
+		\hline
+		\newline ROF8&
+		\newline L'utente può eseguire il testo inserito&
+		\newline UC7 \newline Capitolato
+		\\[1em]
+		\hline
+		\newline ROF8.1&
+		\newline Il sistema visualizza l'errore di esecuzione se Speect fallisce l'esecuzione&
+		\newline UC7.1 \newline Capitolato
+		\\[1em]
+		\hline
+		
+			\newline ROF9&
+		\newline L'utente può visualizzare il grafo delle utterance&
+		\newline UC7.2 \newline Capitolato
+		\\[1em]
+		\hline
+		
+			
+		
+			\newline RDF9.1&
+		\newline L'utente può visualizzare l'informazione generale di ogni nodo&
+		\newline UC7.2 \newline Capitolato
+		\\[1em]
+		\hline
+		
+		\newline ROF9.2&
+		\newline L'utente può vedere ogni strato del grafo dello stesso colore del utterance processor che l'ha prodotto &
+		\newline UC6 \newline Capitolato
+		\\[1em]
+		\hline
+		
+		\newline RDF9.2.1&
+		\newline L'utente può cambiare il colore degli utterance processor&
+		\newline UC7 \newline VI-15-12-17
+		\\[1em]
+		\hline
+		
+		\newline ROF9.3&
+		\newline L'utente può selezionare il nodo del grafo tramite click&
+		\newline UC7.2.1 \newline Capitolato
+		\\[1em]
+		\hline
+		
+			\newline ROF9.3.1&
+		\newline L'utente può visualizzare tutte le informazioni del nodo selezionato&
+		\newline UC7.2.1 \newline Capitolato
+		\\[1em]
+		\hline
+			
+		\newline RDF9.3.1.1&
+		\newline L'utente può modificare le informazioni del nodo selezionato&
+		\newline VI-15-12-17 \newline Capitolato
+		\\[1em]
+		\hline
+		
+		\newline RDF9.4&
+		\newline L'utente può testare se un percorso porta ad un nodo esistente&
+		 \newline VI-15-12-17 \newline Capitolato
+		\\[1em]
+		\hline
+		
+		\newline RDF9.4.1&
+		\newline L'utente può selezionare il nodo del grafo tramite percorso nel grafo&
+		\newline UC7.2.1 \newline VI-15-12-17 \newline Capitolato
+		\\[1em]
+		\hline
+		
+		\newline ROF9.5&
+		\newline Il nodo selezionato dall'utente viene evidenziato con un contorno giallo&
+		\newline UC7.2.1 \newline VI-15-12-17 \newline Capitolato
+		\\[1em]
+		\hline
+		
+		\newline RDF9.5.1&
+		\newline L'utente può modificare il colore con il quale si evidenzia il focus&
+		\newline interno
+		\\[1em]
+		\hline
+		
+		\newline ROF9.6&
+		\newline L'utente può spostare i nodi del grafo graficamente&
+		\newline UC7.2.2 \newline VI-15-12-17 \newline Capitolato
+		\\[1em]
+		\hline
+		
+		\newline RDF9.7&
+		\newline L'utente può filtrare il grafo per strati di relazione&
+		\newline Capitolato
+		\\[1em]
+		\hline
+	
+		\newline RFF9.8&
+		\newline L'utente può modificare gli archi dei nodi del grafo&
+		\newline VI-15-12-17 \newline Capitolato
+		\\[1em]
+		\hline
+		
+		\newline RFF9.8.1&
+		\newline L'utente può cancellare gli archi dei nodi del grafo&
+		\newline VI-15-12-17
+		\\[1em]
+		\hline
+		
+		\newline RFF9.8.2&
+		\newline L'utente può aggiungere archi a dei nodi del grafo&
+		\newline VI-15-12-17 
+		\\[1em]
+		\hline
+	
+		
+		\newline RFF10&
+		\newline L'utente eseguire ogni utterance processor autonomamente&
+		\newline VI-15-12-17 \newline Capitolato
+		\\[1em]
+		\hline
+	
+		
+	
+		
+		\newline RFF11&
+		\newline L'utente può salvare lo stato del grafo&
+		\newline VI-15-12-17 
+		\\[1em]
+		\hline
+		
+		
+		\newline RFF12&
+		\newline L'utente può caricare lo stato del grafo&
+		\newline VI-15-12-17
+		\\[1em]
+		\hline
+		
+			\newline RFF12.1&
+		\newline L'utente può caricare  graficamente due grafi diversi&
+		\newline VI-15-12-17
+		\\[1em]
+		\hline
+		
+			\newline RFF12.1.1&
+		\newline L'utente può confrontare due grafi automaticamente&
+		\newline VI-15-12-17
+		\\[1em]
+		\hline
+		
+		
+		\newline RFF13&
+		\newline L'utente può eseguire Speect dato un grafo&
+		\newline VI-15-12-17
+		\\[1em]
+		\hline
+		
+	
+		
+		\newline ROF14&
+		\newline L'utente può chiudere l'applicazione&
+		\newline UC5
+		\\[1em]
+		\hline
+		
+		
+		
+	\end{longtable}
+\end{document}
