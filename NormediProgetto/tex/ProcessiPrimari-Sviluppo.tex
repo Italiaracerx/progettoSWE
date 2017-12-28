@@ -15,7 +15,7 @@ Questo processo si prefigge come scopo la stesura delle attività che il gruppo 
 Per una corretta implementazione di tale processo le aspettative sono le seguenti:
 
 \begin{itemize}
-	\item realizzare un prodotto finale conforme alle richieste del proponente;
+	\item realizzare un prodotto finale \glossario{conforme}{conforme} alle richieste del proponente;
 	\item realizzare un prodotto finale soddisfacente i test di verifica;
 	\item realizzare un prodotto finale soddisfacente i test di validazione;
 	\item fissare gli obiettivi di \glossario{sviluppo}{sviluppo};
@@ -23,7 +23,7 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 	\item fissare i vincoli di design.
 \end{itemize}
 
-Il processo di sviluppo si svolge in accordo con lo standard ISO/IEC 12207, pertanto si compone delle seguenti attività:
+\noindent Il processo di sviluppo si svolge in accordo con lo standard ISO/IEC 12207, pertanto si compone delle seguenti attività:
 
 \begin{itemize}
 	\item Analisi dei requisiti
@@ -35,30 +35,29 @@ Il processo di sviluppo si svolge in accordo con lo standard ISO/IEC 12207, pert
 
 	\subsubsection{Scopo} 
 	
-	Gli \glossario{analisti}{analista} devono individuare ed elencare i \glossario{requisiti}{requisito} del progetto da realizzare.
+	Gli \glossario{Analisti}{analista} devono individuare ed elencare i \glossario{requisiti}{requisito} del progetto da realizzare.
 	
 	\subsubsection{Descrizione}
 	
-	I requisiti dovranno essere estratti dal capitolato d’appalto, dai verbali di riunione e dallo studio dei casi d’uso. 
-	Il documento Analisi dei requisiti deve:
+	I requisiti devono essere estratti dal capitolato d’appalto, dai verbali di riunione e dallo studio dei casi d’uso. Il documento \textit{Analisi dei Requisiti} deve:
 	
-	\begin{enumerate}
+	\begin{itemize}
 		\item Descrivere il fine del progetto;
 		\item Fissare le funzionalità e i requisiti richiesti dal committente;
 		\item Definire tecniche di raffinamento e di miglioramento del prodotto e processo di sviluppo;
 		\item Definire tecniche per la revisione del codice;
 		\item Fornire ai \glossario{Verificatori}{verificatore} indicazioni per le attività di test.
 		\item Definire una stima dei costi.
-	\end{enumerate}
+	\end{itemize}
 
-	Durante l’Analisi dei requisiti gli analisti analizzano individualmente le varie fonti, quindi, a seguito di una riunione, si confrontano e stilano le varie liste di requisiti suddivise per importanza. Le fonti per gli analisti sono:
+	\noindent Durante l’Analisi dei Requisiti gli \textit{Analisti} analizzano individualmente le varie fonti, quindi, a seguito di una riunione, si confrontano e stilano le varie liste di requisiti suddivise per importanza. Le fonti per gli \textit{Analisti} sono:
 	 
-	\begin{enumerate}
-		\item Capitolati d’appalto: requisiti emersi dall’analisi del documento fornito dal committente;
-		\item Verbali esterni: requisiti emersi a seguito di colloqui con i responsabili dell’azienda committente;
-		\item Casi d'uso: requisiti emersi a seguito di uno o più casi d’uso analizzati.
-		\item Definire una stima dei costi.
-	\end{enumerate}
+	\begin{itemize}
+		\item \textbf{Capitolato d’appalto:} requisiti emersi dall’analisi del documento fornito dal committente;
+		\item \textbf{Verbali esterni:} requisiti emersi a seguito di colloqui con i responsabili dell’azienda committente;
+		\item \textbf{Casi d'uso:} requisiti emersi a seguito di uno o più casi d’uso analizzati.
+		\item \textbf{Tracciabilità Interna (TI):} requisiti emersi tramite discussioni ed incontri tra gli \textit{Analisti} del gruppo Graphite;
+	\end{itemize}
 
 	\subsubsection{Classificazione requisiti} 
 	
@@ -69,60 +68,56 @@ Il processo di sviluppo si svolge in accordo con lo standard ISO/IEC 12207, pert
 		\begin{itemize}
 			\item \textbf{Importanza:} Ogni requisito può appartenere solo ad una delle classi di Importanza elencate di seguito:
 			\begin{itemize}
-				\item O (Requisito Obbligatorio): requisito fondamentale per la corretta realizzazione del progetto;
-				\item D (Requisito Desiderabile): requisito non fondamentale al progetto ma il cui soddisfacimento comporterebbe una maggiore completezza del prodotto;
-				\item F (Requisito Facoltativo): requisito non richiesto per il corretto funzionamento del prodotto ma che se incluso arricchirebbe il progetto. Prima di soddisfare il requisito è necessaria un’analisi di tempi e costi per evitare ritardi nella consegna e/o costi superiori a quelli preventivati.
+				\item \textbf{O (Requisito Obbligatorio):} requisito fondamentale per la corretta realizzazione del progetto;
+				\item \textbf{D (Requisito Desiderabile):} requisito non fondamentale al progetto ma il cui soddisfacimento comporterebbe una maggiore completezza del prodotto;
+				\item \textbf{F (Requisito Facoltativo):} requisito non richiesto per il corretto funzionamento del prodotto ma che se incluso arricchirebbe il progetto. Prima di soddisfare il requisito è necessaria un’analisi di tempi e costi per evitare ritardi nella consegna e/o costi superiori a quelli preventivati.
 			\end{itemize}
 			\item \textbf{Tipologia:} Di seguito sono riportate le tipologie di requisito:
 			\begin{itemize}
-				\item V: Identifica un \glossario{requisito di vincolo}{requisito di vincolo};
-				\item F: Identifica un \glossario{requisito funzionale}{requisito funzionale};
-				\item P: Identifica un \glossario{requisito prestazionale}{requisito prestazionale};
-				\item Q: 
-				Identifica un \glossario{requisito di qualità}{requisito di qualita}.
+				\item \textbf{V:} Identifica un \glossario{requisito di vincolo}{requisito di vincolo};
+				\item \textbf{F:} Identifica un \glossario{requisito funzionale}{requisito funzionale};
+				\item \textbf{P:} Identifica un \glossario{requisito prestazionale}{requisito prestazionale};
+				\item \textbf{Q:} Identifica un \glossario{requisito di qualità}{requisito di qualita}.
 			\end{itemize}
 		\item \textbf{Codice:} Ogni requisito è formato da un codice numerico che lo indentifica in modo univoco.
 		\end{itemize}
 	
-	%---DA RICONTROLLARE---
-	Il codice stabilito secondo la convenzione precedente, una volta associato ad un requisito, non potrà cambiare nel tempo.
+	\noindent Il codice stabilito secondo la convenzione precedente, una volta associato ad un requisito, non potrà cambiare nel tempo.
 	
-	Ciascun requisito dovrà inoltre essere accompagnato dalle sue fonti, dalle sue relazioni di dipendenza con altri requisiti e da una descrizione che ne specifichi lo scopo. Sarà inoltre indicata l'importanza.
+	\noindent Ciascun requisito dovrà inoltre essere accompagnato dalle sue fonti, dalle sue relazioni di dipendenza con altri requisiti e da una descrizione che ne specifichi lo scopo. Sarà inoltre indicata l'importanza.
 	
-	%esempio di requisito
 	
-	%----------------------
+	%immagine esempio di tabella dei requisiti
+	
 		
 	\subsubsection{Classificazione casi d’uso} 
 	
-	I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo: \centerline{UC[P]*.[I]}
+	I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo: \\ \centerline{UC[Codice padre]*.[Codice identificativo]}
 	
 	\begin{itemize}
-		\item \textbf{P (Codice Padre):} Identifica il codice del caso d'uso da cui è stato generato il caso d'uso identificato, se non esiste il campo va tralasciato
-		\item \textbf{I (Codice Identificativo):} Identifica il caso d'uso univocamente.
+		\item \textbf{Codice padre:} Identifica il codice del caso d'uso da cui è stato generato il caso d'uso identificato, se non esiste il campo va tralasciato;
+		\item \textbf{Codice identificativo:} Identifica il caso d'uso univocamente.
 	\end{itemize}
 
-	Ogni caso d'uso è inoltre definito secondo la seguente struttura:
+	\noindent Ogni caso d'uso è inoltre definito secondo la seguente struttura:
 	\begin{itemize}
-		\item \textbf{Attore Principale:} Indica gli attori principale (ad esempio l'utente generico) del caso d'uso;
-		\item \textbf{Attore Secondario:} Indica gli attori secondari (ad esempio entità di autenticazione esterne) del caso d'uso;
+		\item \textbf{ID:}Il codice del caso d'uso secondo la convenzione specificata precedentemente;
+		\item \textbf{Nome:}Specifica il titolo del caso d'uso;
+		\item \textbf{Attori:}Indica gli attori principali (ad esempio l'utente generico) e secondari (ad esempio entità di autenticazione esterne) del caso d'uso;
 		\item \textbf{Descrizione:} Riporta una breve descrizione del caso d'uso;
 		\item \textbf{Precondizione:} Specifica le condizioni che sono identificate come vere prima del verificarsi degli eventi del caso d'uso;
 		\item \textbf{Postcondizione:} Specifica le condizioni che sono identificate come vere dopo il verificarsi degli eventi del caso d'uso;
+		\item \textbf{Scenario principale:}Rappresenta il flusso degli eventi come lista numerata, specificando per ciascun evento: titolo, descrizione, attori coinvolti e casi d'uso generati;
 		\item \textbf{Scenari Alternativi:} Specifica casi di errore o eventi non previsti nel flusso di esecuzione;
-	%---DA RICONTROLLARE---
-		\item \textbf{Flusso di Esecuzione:} Rappresenta il flusso degli eventi come lista numerata;
+		\item \textbf{Inclusioni:}Usate per non descrivere più volte lo stesso flusso di eventi, inserendo il comportamento comune in un caso d'uso a parte;
+		\item \textbf{Estensioni:}Descrivono i casi d'uso che non fanno parte del flusso principale degli eventi, allo stesso modo di quanto descritto in "Scenario principale".
 	\end{itemize}
 
-	Alcuni casi d'uso possono essere associati ad un Diagramma UMLG 2.x dei casi d'uso
-	riportante lo stesso titolo e codice.
+	Alcuni casi d'uso possono essere associati ad un Diagramma \glossario{UML}{UML} 2.x dei casi d'uso riportante lo stesso titolo e codice.
+	\\
+	\centerline{Esempio di caso d'uso:}
 	
-	%esempio di caso d'uso
-
-	%Tracciamento (vedi Visions Team --> NdP v4.0.0) 
-
-	%----------------------
-	
+	%immagine esempio di caso d'uso
 	
 \subsection{Progettazione} 
 
@@ -135,39 +130,38 @@ Il processo di sviluppo si svolge in accordo con lo standard ISO/IEC 12207, pert
 	Essa serve a garantire che il prodotto sviluppato soddisfi le proprietà e i bisogni specificati nell'attività di analisi. La progettazione permette di:
 	
 	\begin{itemize}
-		\item Costruire un’architettura logica del progetto;
+		\item Costruire un’architettura logica del prodotto;
 		\item Ottimizzare l’uso delle risorse;
-		\item Garantire una determinata qualità del prodotto, perseguendo la \textit{correttezza per costruzione}: è questo il principio secondo il quale il software deve funzionare correttamente e soddisfare tutti i requisiti e i vincoli perché è stato progettato per farlo e per essere conforme ed efficacie. Si trova in netta contrapposizione alla \textit{correttezza per
+		\item Garantire una determinata qualità del prodotto, perseguendo la \textit{correttezza per costruzione}: è questo il principio secondo il quale il software deve funzionare correttamente e soddisfare tutti i requisiti e i vincoli perché è stato progettato per farlo e per essere conforme ed \glossario{efficace}{efficacia}. Si trova in netta contrapposizione alla \textit{correttezza per
 		correzione};
 		\item Organizzare e dividere le parti del progetto in modo da poter ottenere componenti singole e facili da implementare attraverso la codifica. 
 	\end{itemize}
 
-	E' compito dei Progettisti svolgere l'attività di Progettazione, definendo l'architettura logica del prodotto identificando componenti chiare, riusabili e coese, rimanendo nei costi fissati. L'architettura definita dovrà attenersi alle seguenti qualità:
+	E' compito dei \textit{Progettisti} svolgere l'attività di Progettazione, definendo l'architettura logica del prodotto identificando componenti chiare, riusabili e coese, rimanendo nei costi fissati. L'architettura definita deve attenersi alle seguenti qualità:
 	\begin{itemize}
-		\item \textbf{Sufficienza:} dovrà soddisfare i requisiti definiti nel documento Analisi dei Requisiti;
-		\item \textbf{Comprensibilità:} dovrà essere capita dagli \glossario{stakeholders}{stakeholders} e quindi descritta in modo comprensibile, inoltre dovrà essere tracciabile sui requisiti;
-		\item \textbf{Modularità:} dovrà essere divisa in parti chiare e distinte, ognuna con la sua specifica funzione;
-		\item \textbf{Robustezza:} dovrà essere in grado di gestire malfunzionamenti in modo da rimanere operativa di fronte a situazioni erronee improvvise;
-		\item \textbf{Flessibilità:} dovrà permettere modifiche a costo contenuto nel caso in cui i requisiti dovessero evolversi o se ne dovessero aggiungere di nuovi;
-		\item \textbf{Riusabilità:} dovrà essere costruita in modo da poter permettere il riutilizzo di alcune sue parti;
-		\item \textbf{Efficienza:} dovrà soddisfare tutti i requisiti in modo tale da ridurre gli sprechi di tempo e spazio;
-		\item \textbf{Affidabilità:} dovrà garantire che i servizi esposti siano sempre disponibili, ovvero dovrà svolgere i suoi compiti quando viene usata;
-		\item \textbf{Disponibilità:} dovrà necessitare di tempo ridotto per la manutenzione in modo da garantire un servizio il più continuo possibile;
-		\item \textbf{Sicurezza:} dovrà essere sicura rispetto ad intrusioni e malfunzionamenti;
-		\item \textbf{Semplicità:} dovrà prediligere la semplicità, contenendo solo il necessario, rispetto ad una inutile complessità;
-		\item \textbf{Incapsulazione:} dovrà fare in modo che l'interno delle componenti non sia visibile dall'esterno, seguendo il principio del data hiding;
-		\item \textbf{Coesione:} dovrà raggruppare le parti secondo l'obiettivo a cui concorrono, in modo da avere maggiore manutenibilità e riusabilità;
-		\item \textbf{Basso accoppiamento:} non dovrà avere dipendenze indesiderabili.
+		\item \textbf{Sufficienza:} soddisfare i requisiti definiti nel documento \textit{Analisi dei Requisiti};
+		\item \textbf{Comprensibilità:} essere capita dagli stakeholders e quindi descritta in modo comprensibile, oltre ad essere tracciabile sui requisiti;
+		\item \textbf{Modularità:} essere divisa in parti chiare e distinte, ognuna con la sua specifica funzione;
+		\item \textbf{Robustezza:} essere in grado di gestire malfunzionamenti in modo da rimanere operativa di fronte a situazioni erronee improvvise;
+		\item \textbf{Flessibilità:} permettere modifiche a costo contenuto nel caso in cui i requisiti dovessero evolversi o se ne dovessero aggiungere di nuovi;
+		\item \textbf{Riusabilità:} essere costruita in modo da poter permettere il riutilizzo di alcune sue parti;
+		\item \textbf{Efficienza:} soddisfare tutti i requisiti in modo tale da ridurre gli sprechi di tempo e spazio;
+		\item \textbf{Affidabilità:} garantire che i servizi esposti siano sempre disponibili, ovvero svolgere i suoi compiti quando viene usata;
+		\item \textbf{Disponibilità:} necessitare di tempo ridotto per la manutenzione in modo da garantire un servizio il più continuo possibile;
+		\item \textbf{Sicurezza:} essere sicura rispetto ad intrusioni e malfunzionamenti;
+		\item \textbf{Semplicità:} prediligere la semplicità, contenendo solo il necessario, rispetto ad una inutile complessità;
+		\item \textbf{Incapsulazione:} fare in modo che l'interno delle componenti non sia visibile dall'esterno, seguendo il principio del \glossario{data hiding}{data hiding};
+		\item \textbf{Coesione:} raggruppare le parti secondo l'obiettivo a cui concorrono, in modo da avere maggiore manutenibilità e riusabilità;
+		\item \textbf{Basso accoppiamento:} non avere dipendenze indesiderabili.
 	\end{itemize}
 
 	\subsubsection{Design Patterns}
 	
-	Finita l'attività di Analisi, sarà compito dei Progettisti adottare opportune soluzioni progettuali a problemi ricorrenti. Tali soluzioni dovranno essere 
-flessibili e consentire una certa libertà d'uso ai Programmatori. Per ogni \glossario{Design Pattern}{Design Pattern} utilizzato, esso andrà riportato all'interno del documento di \textit{Specifica Tecnica} riportando un diagramma che lo illustri e una descrizione testuale inerente la sua applicazione e utilità all'interno dell'architettura.
+	Finita l'attività di Analisi, è compito dei \textit{Progettisti} adottare opportune soluzioni progettuali a problemi ricorrenti. Tali soluzioni devono essere flessibili e consentire una certa libertà d'uso ai \textit{Programmatori}. Per ogni \glossario{Design Pattern}{Design Pattern} utilizzato, esso va riportato all'interno del documento di \textit{Specifica Tecnica} riportando un diagramma che lo illustri e una descrizione testuale inerente la sua applicazione e utilità all'interno dell'architettura.
 	
 	\subsubsection{UML 2.0}
 	
-	Al fine di rendere più chiare le scelte progettuali adottate e ridurre le possibili ambiguità, sarà necessario fare largo uso di vari tipi di diagrammi \glossario{UML}{UML} 2.0, tra cui:
+		Al fine di rendere più chiare le scelte progettuali adottate e ridurre le possibili ambiguità, è necessario fare largo uso di vari tipi di diagrammi UML 2.0, tra cui:
 	
 	\begin{itemize}
 		\item \textbf{Diagrammi delle classi:} definiscono relazioni, metodi e attributi di classi e tipi, astraendosi da un qualsiasi linguaggio di programmazione;
@@ -182,46 +176,11 @@ flessibili e consentire una certa libertà d'uso ai Programmatori. Per ogni \glo
 	
 	\subsubsection{Scopo}
 	
-	Nella seguente sezione sono riporte le norme da seguire durante la programmazione da parte dei programmatori. Lo scopo di queste norme consiste nel dare delle linee guida ai programmatori in modo tale che il codice risulti leggibile e aiuti durante la fase di mantenimento, verifica e validazione.
+	Nella seguente sezione sono riporte le norme da seguire durante la programmazione da parte dei \textit{Programmatori}. Lo scopo di queste norme consiste nel dare delle linee guida ai \textit{Programmatori} in modo tale che il codice risulti leggibile e aiuti durante la fase di mantenimento, verifica e validazione.
 
 	\subsubsection{Descrizione}
 	
 	Per le \emph{Coding Conventions} aderiremo alla GNU GCC \url{https://gcc.gnu.org/codingconventions.html}
 	
-\section{Strumenti}
-
-\subsection{IDE}
-
-Il gruppo di progetto lavora sul seguente IDE:
-
-\begin{itemize}
-	\item \textbf{Qt}: per la codifica relativa al software richiesto dal progetto il gruppo usa l'\glossario{IDE}{IDE} \glossario{Qt}{Qt}, in virtù della sua diffusione, potenza e semplicità d'uso. Qt è reperibile al seguente link: \\ \centerline{\url{https://www.qt.io/}}.
-\end{itemize}
-
-\subsection{Compilazione}
-
-Per la compilazione vengono utilizzati i seguenti strumenti:
-
-\begin{itemize}
-	\item \textbf{GCC}: il compilatore che verrà usato per la compilazione del software è il \glossario{GCC}{GCC} (GNU Compiler Collection). Il compilatore è reperibile al seguente link: \\ \centerline{\url{https://gcc.gnu.org/}};
-	
-	\item \textbf{Cmake}: per semplificare la compilazione verrà usato \glossario{Cmake}{Cmake}. Lo strumento è reperibile al seguente link: \\ \centerline{\url{https://cmake.org/}}.
-\end{itemize}
-
-\subsection{GUI}
-
-Per progettare l'interfaccia grafica vengono utilizzati i seguenti strumenti:
-
-\begin{itemize}
-	\item \textbf{Qt Creator}: per progettare l'interfaccia grafica viene utilizzato \glossario{Qt Creator}{Qt Creator}. Questo strumento permette di realizzare interfacce grafiche mediante le librerie grafiche \glossario{Qt}{Qt}, diventate in questo ambito quasi uno standard per piattaforme Linux Based. Qt Creator è disponibile al seguente link: \\  \centerline{\url{https://www.qt.io/qt-features-libraries-apis-tools-and-ide/}}. 
-\end{itemize}
-
-\subsection{Tracciento requisiti e casi d'uso}
-
-Per catalogare i requisiti e i casi d'uso il gruppo utilizzerà l'applicativo web \glossario{Tender}{Tender}, software in grado di velocizzare e automatizzare la gestione dei requisiti e dei casi d'uso.
-
-\subsection{Diagrammi UML}
-
-Per la produzione di diagrammi UML utilizzeremo \glossario{Astah}{Astah}, software in grado di velocizzare la produzione dei diagrammi. Lo strumento è accessibile al seguenti link: \\ \centerline{\url{http://astah.net/}}	
 
 \end{document}
