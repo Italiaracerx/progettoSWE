@@ -104,17 +104,14 @@ Il processo di sviluppo si svolge in accordo con lo standard ISO/IEC 12207, pert
 
 	Ogni caso d'uso è inoltre definito secondo la seguente struttura:
 	\begin{itemize}
-		\item \textbf{ID:} Il codice del caso d'uso secondo la convenzione specificata precedentemente;
-		\item \textbf{Nome:} Specifica il titolo del caso d'uso;
-		\item \textbf{Attori:} Indica gli attori principali (ad esempio l'utente generico) e secondari (ad esempio entità di autenticazione esterne) del caso d'uso;
+		\item \textbf{Attore Principale:} Indica gli attori principale (ad esempio l'utente generico) del caso d'uso;
+		\item \textbf{Attore Secondario:} Indica gli attori secondari (ad esempio entità di autenticazione esterne) del caso d'uso;
 		\item \textbf{Descrizione:} Riporta una breve descrizione del caso d'uso;
 		\item \textbf{Precondizione:} Specifica le condizioni che sono identificate come vere prima del verificarsi degli eventi del caso d'uso;
 		\item \textbf{Postcondizione:} Specifica le condizioni che sono identificate come vere dopo il verificarsi degli eventi del caso d'uso;
-		
+		\item \textbf{Scenari Alternativi:} Specifica casi di errore o eventi non previsti nel flusso di esecuzione;
 	%---DA RICONTROLLARE---
-		\item \textbf{Scenario principale:} Rappresenta il flusso degli eventi come lista numerata, specificando per ciascun evento: titolo, descrizione, attori coinvolti e casi d'uso generati;
-		\item \textbf{Inclusioni:} Usate per non descrivere più volte lo stesso flusso di eventi, inserendo il comportamento comune in un caso d'uso a parte;
-		\item \textbf{Estensioni:} Descrivono i casi d'uso che non fanno parte del flusso principale degli eventi, allo stesso modo di quanto descritto in "Scenario principale".
+		\item \textbf{Flusso di Esecuzione:} Rappresenta il flusso degli eventi come lista numerata;
 	\end{itemize}
 
 	Alcuni casi d'uso possono essere associati ad un Diagramma UMLG 2.x dei casi d'uso
