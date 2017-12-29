@@ -21,6 +21,7 @@
 	{L'attore apre il menu file}
 	{}
 	{}
+	
 	\section{UC1:Menu File}
 	\UserCase
 	{UC1}
@@ -32,8 +33,12 @@
 	{}
 	{	\begin{itemize}
 		\item{} L'attore può Caricare un file JSon \refer{UC2}
+		\item{} L'attore può Salvare le modifiche al file JSon \refer{UC11}
 		\item{} L'attore può Salvare l'audio prodotto da Speect \refer{UC4}
-		\item{} L'attore può chiudere l'applicazione{UC4}
+		\item{} L'attore può chiudere l'applicazione \refer{UC5}
+		\item{} L'attore può Caricare un grafo \refer{UC8}
+		\item{} L'attore può Salvare un grafo \refer{UC9}
+		\item{} L'attore può Ricercare un Path nel grafo \refer{UC10}
 		\end{itemize}
 	}
 
@@ -52,7 +57,8 @@
 			\item{} L'attore seleziona il file tramite il file browser \refer{UC3}
 			\item{} L'attore preme Carica
 			\item{} Il file viene dato a Speect che prova l'inizializzazione
-		\end{itemize}	
+			\item{} Viene visualizzato il percorso del file nella apposito spazio (link a figura)
+		\end{itemize}
 	}
 	\section{UC2.1:Errore Caricamento JSon}
 	\UserCase
@@ -64,6 +70,7 @@
 	{L'errore è visualizzato a schermo e viene ripristinato lo stato precedente e ridato controllo all'attore}
 	{}
 	{}
+
 	
 	\section{UC3:File Browser}
 	\UserCase
@@ -71,7 +78,7 @@
 	{Utente}
 	{}
 	{L'attore deve navigare nel file system alla ricerca di un file o di una cartella}
-	{L'attore ha premuto su Carica File JSon o su salva Audio nel menu File}
+	{L'attore deve selezionare un file o raggiungere una cartella}
 	{L'attore seleziona il file da caricare o la cartella in cui salvare}
 	{L'attore non ha i permessi per aprire il file viene visualizzato l'errore di navigazione \refer{UC3.3}}
 	{
@@ -79,7 +86,6 @@
 			\item{} Il file browser viene visualizzato dall'attore
 			\item{} L'attore naviga nel file \glossario{file system}{file system} cercando il suo file \refer{UC3.1}
 			\item{} L'attore seleziona un file \refer{UC3.2}
-			
 		\end{itemize}
 	}
 	\section{UC3.1:Navigazione}
@@ -167,7 +173,7 @@
 {}
 {}
 
-\section{UC4:Salvataggio Audio Prodotto .WAV}
+\section{UC4:Salvataggio Audio Prodotto}
 \UserCase
 {UC4}
 {Utente}
@@ -181,10 +187,28 @@
 		\item{} Viene aperto il file browser per il salvataggio
 		\item{} L'attore seleziona la cartella di destinazione tramite il file browser \refer{UC3}
 		\item{} L'attore scrive il nome del file nella barra di testo
+		\item{} L'attore seleziona l'estensione attraverso menu a tendina\refer{UC4.1}
 		\item{} L'attore preme su Salva 
-		\item{} Il file viene salvato nella destinazione come .WAV
+		\item{} Il file viene salvato nella destinazione con estensione scelta altrimenti con estensione di default .WAV
 \end{itemize}
-}	
+}
+\section{UC4:Menu Estensioni}
+\UserCase
+{UC4.1}
+{Utente}
+{}
+{L'attore vuole selezionare l'estensione}
+{L'attore ha premuto sul menu a tendina}
+{L'audio viene selezionata l'estensione}
+{}
+{
+\begin{itemize}
+	\item{} L'attore clicca su una voce del menu
+	\item{} La voce viene selezionata e rimpiazzata al posto della precedente
+	\item{} Viene chiuso il menu a tendina
+
+\end{itemize}
+}		
 \section{UC4.2:Errore Salvataggio Audio}
 \UserCase
 {UC4.2}
@@ -213,7 +237,7 @@
 {UC6}
 {Utente}
 {}
-{L'attore vuole selezionare la Utterance desiderata }
+{L'attore vuole selezionare la Utterance desiderata}
 {Un file JSon è stato caricato \refer{UC2} correttamente }
 {Vengono mostrati gli Utterance Processors utilizzati da Speect per tale Utterance type}
 {}
@@ -222,11 +246,45 @@
 		\item{} L'attore clicca sul menu a tendina
 		\item{} Viene aperto il menu a tendina
 		\item{} L'attore clicca sul Utterance type desiderata
-		\item{} Vengono mostrati a schermo i nomi degli Utterance Processor utilizzati nel apposito spazio (link figura), colorati con lo stesso colore delle relazioni da loro prodotte
+		\item{} Vengono mostrati a schermo i nomi degli Utterance Processor utilizzati negli appositi spazi (link figura), colorati con lo stesso colore delle relazioni da loro prodotte,una select box adiacente selezionata e un pulsante
 		
 	\end{itemize}
 }
-
+\section{UC6.1:Modifica Utterance Processor}
+\UserCase
+{UC6.1}
+{Utente}
+{}
+{L'attore vuole cambiare l'ordine degli Utterance Processor}
+{Un file JSon è stato caricato \refer{UC2} correttamente }
+{Il file JSon viene aggiornato}
+{}
+{
+	\begin{itemize}
+		\item{} L'attore clicca sul Utterance Processor \refer{UC6.1.1}
+		\item{} L'attore modifica tramite i pulsanti forniti	
+		\item{} Le operazioni vengono eseguite
+		\item{} Se esisteva un grafo esso non viene modificato
+		
+	\end{itemize}
+}
+\section{UC6.1.1:Selezione Utterance Processor}
+\UserCase
+{UC6.1.1}
+{Utente}
+{}
+{L'attore vuole selezionare un utterance processor per spostarlo}
+{Un file JSon è stato caricato \refer{UC2} correttamente }
+{Vengono visualizzati i bottoni per modificare tale Utterance Processor}
+{}
+{
+	\begin{itemize}
+		\item{} L'attore clicca sul nome dell'Utterance Processor
+		\item{} Vengono visualizzati due bottoni che permettono lo spostamento grafico del Utterance Processor e un bottone che ne permette la rimozione 
+		
+		
+	\end{itemize}
+}
 \section{UC7:Esecuzione}
 \UserCase
 {UC7}
@@ -237,9 +295,10 @@
 {Speect elabora il testo selezionato e viene visualizzato il grafo}
 {L'utente visualizza un messaggio di errore \refer{UC7.1}}
 {\begin{itemize}
-		\item{} L'attore compila il campo di testo
 		\item{} L'attore seleziona l'utterance type
+		\item{} L'attore può compilare il campo di testo
 		\item{} L'attore preme sul tasto di esecuzione
+		\item{} Se il campo di testo è vuoto viene utilizzato il grafo come dato per l'utterance
 		\item{} Vengono eseguiti gli utterance processor designati dall' utterance type
 		\item{} Viene mostrato il grafo risultante dall'esecuzione\refer{UC7.2}
 	\end{itemize}
@@ -270,6 +329,7 @@
 		\item{} L'attore può spostare un nodo \refer{UC7.2.2}
 	\end{itemize}
 }
+
 \section{UC7.2.1:Selezione Nodo}
 \UserCase
 {UC7.2.1}
@@ -304,23 +364,76 @@
 		\item{} Il nodo si sposta
 		\item{} L'utente rilascia il click
 		\item{} Il nodo rimane nella nuova posizione
-\end{itemize}}
-\begin{comment}
+\end{itemize}
+}
 
-\section{UC3:Esportazione stato del Grafo}
+\section{UC7.2.3:Modificare Name}
 \UserCase
-{UC3}
+{UC7.2.3}
+{Utente}
+{}
+{L'utente vuole modificare il nome del nodo selezionato}
+{L'utente ha cliccato su un nodo\refer{UC7.2.1}}
+{Il nodo cambia nome}
+{}
+{\begin{itemize}
+		\item{} L'utente seleziona la casella di testo del nome
+		\item{} L'utente cancella il nome precedente
+		\item{} L'utente rimuove il focus dalla casella di testo
+		\item{} Il nome viene aggiornato
+		\item{} Il grafo viene aggiornato \refer{UC7}
+		\item{} Il grafo viene ristampato a schermo \refer{UC7.2}
+\end{itemize}}
+
+\section{UC7.2.4:Modifica Visualizzazione Layer}
+\UserCase
+{UC7.2.4}
+{Utente}
+{}
+{L'Utente vuole filtrare i layer del grafico}
+{Un utterance type è stato scelto \refer{UC6}}
+{Vengono mostrati tutti i layer di relazione selezionati}
+{}
+{\begin{itemize}
+		\item{} L'utente deseleziona una select box adiacente ad un utterance processor
+		\item{} Lo strato prodotto da tale utterance processor viene nascosto
+\end{itemize}
+}
+\section{UC7.2.5:Esecuzione Singola Utterance}
+\UserCase
+{UC7.2.5}
+{Utente}
+{}
+{L'Utente vuole eseguire una singola utterance}
+{Un utterance type è stato scelto \refer{UC6} }
+{Viene eseguita l'utterance partendo dal grafo già presente o dal campo di testo scritto}
+{}
+{\begin{itemize}
+				\item{} L'attore seleziona l'utterance type
+		\item{} L'attore può compilare il campo di testo
+		\item{} L'attore preme sul tasto di esecuzione adiacente al utterance da eseguire \refer{UC6}
+	\end{itemize}
+}
+
+\section{UC8:Esportazione stato del Grafo}
+\UserCase
+{UC8}
 {Utente}
 {Speect}
 {L'utente vuole esportare lo stato del grafo}
 {Esiste un grafo esportabile}
 {Il grafo viene esportato in file}
-{ L'utente visualizza un messaggio di errore \refer{UC3.1}}
-{}
+{ L'utente visualizza un messaggio di errore \refer{UC8.1}}
+{
+	{\begin{itemize}
+			\item{} Viene aperto il file browser
+			\item{} L'utente seleziona il file da importare
+			\item{} L'utente preme su Importa Grafo
+\end{itemize}}}
 
-\section{UC3.1:Errore Esportazione Grafo}
+\section{UC8.1:Errore Esportazione Grafo}
 \UserCase
-{UC3.1}
+{UC8.1}
 {Speect}
 {Utente}
 {Avviene un errore durante l'esportazione}
@@ -328,19 +441,24 @@
 {Viene visualizzato l'errore e nessuna operazione viene eseguita}
 {}
 {}
-\section{UC4:Importa Grafo}
+\section{UC9:Importa Grafo}
 \UserCase
-{UC4}
+{UC9}
 {Utente}
 {Speect}
 {L'utente vuole importare lo stato del grafo}
-{Esiste un grafo esportabile}
+{Esiste un grafo e l'utente ha cliccato carica grafo}
 {Il grafo viene importato da file}
-{L'utente visualizza un messaggio di errore \refer{UC4.1}}
-{}
-\section{UC4.1:Errore Importazione Grafo}
+{L'utente visualizza un messaggio di errore \refer{UC9.1}}
+{
+	{\begin{itemize}
+			\item{} Viene aperto il file browser
+			\item{} L'utente seleziona il file da importare
+			\item{} L'utente preme su Importa Grafo
+\end{itemize}}}
+\section{UC9.1:Errore Importazione Grafo}
 \UserCase
-{UC4.1}
+{UC9.1}
 {Speect}
 {Utente}
 {Avviene un errore durante l'importazione}
@@ -348,30 +466,64 @@
 {Viene visualizzato l'errore e nessuna operazione viene eseguita}
 {}
 {}
-\section{UC7:Modifica Visualizzazione Layer}
-\UserCase
-{UC7}
-{Utente}
-{}
-{L'Utente sceglie quali relazioni mostrare}
-{Esiste un grafo visualizzato coerentemente alle opzioni selezionate}
-{Vengono mostrati tutti i layer di relazione selezionati}
-{}
-{}
 
-\section{UC8:Ricerca Path}
+
+\section{UC10:Ricerca Path}
 \UserCase
-{UC8}
+{UC10}
 {Utente}
 {Speect}
-{L'Utente scrive un path utilizzabile da speect per visualizzare tale nodo}
-{Esiste un grafo HRG(scusa Manfredi mi è venuto in mente adesso il nome e sono di fretta fixo dopo se non vuoi farlo tu)
-	corretto}
-{Se il path porta ad un nodo definito esso viene evidenziato}
+{L'utente vuole cercare un percorso nel grafo}
+{Esiste un grafo corretto e l'utente ha premuto Ricerca Path nel menu}
+{Se il path porta ad un nodo definito esso viene selezionato \refer{UC7.2.1}}
+{Viene visualizzato un errore \refer{UC10.1}}
+{
+	\begin{itemize}
+		\item{} Viene visualizzata una finestra con una casella di testo e un pulsante
+		\item{} L'attore inserisce il percorso da cercare
+		\item{} L'attore preme il pulsante di Ricerca
+		\item{} Se il percorso finisce in un nodo esso viene selezionato \refer{UC7.2.1}
+ 	\end{itemize}
+}
+
+\section{UC10.1:Errore Ricerca Path}
+\UserCase
+{UC10.1}
+{Utente}
+{Speect}
+{L'utente vuole cercare un percorso nel grafo}
+{Il percorso inserito dall'utente è sintatticamente errato e l'utente ha il pulsante di Ricerca}
+{Viene visualizzato un errore a schermo e si riapre la finestra di Ricerca \refer{UC10}}
 {}
 {}
 
-\end{comment}
+\section{UC11:Salvataggio modifiche file JSon}
+\UserCase
+{UC12}
+{Utente}
+{}
+{L'Utente ha modificato gli Utterance Processor e vuole salvare il nuovo file JSon}
+{Esiste un file Json correttamente aperto \refer{UC2} e l'utente ha modificato gli utterance processor \refer{UC6.1}}
+{Le modifiche vengono Salvate}
+{Viene visualizzato un errore \refer{12.1}}
+{\begin{itemize}
+		\item{} L'attore apre il menu file \refer{UC1}
+		\item{} L'attore preme su Salva File JSon
+\end{itemize}
+}
+\section{UC11.1:Errore Salvataggio modifiche file JSon}
+\UserCase
+{UC12}
+{Utente}
+{}
+{L'Utente ha provato a salvare il file JSon}
+{L'operazione di salvataggio fallisce }
+{Viene visualizzato la causa del fallimento e si ripristina lo stato precedente all'errore}
+{}
+{\begin{itemize}
+		\item{} L'attore apre il menu file \refer{UC1}
+		\item{} L'attore preme su Salva File JSon
+	\end{itemize}
+}
+
 \end{document}
-
-\textbf{}
