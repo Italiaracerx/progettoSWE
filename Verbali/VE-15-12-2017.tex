@@ -68,7 +68,38 @@
 	    \item Illustrazione della struttura dei file \glossario{json}{file .json} di cui fa uso Speect.
 	\end{itemize}
 	
+	Seguono le principali domande poste durante l'incontro e la sintesi delle relative risposte ricevute:
 	
+	\begin{enumerate}
+	
+	\item
+    	\begin{itemize}
+    	    \item \textbf{Domanda:} Lo scopo del progetto è di realizzare un’interfaccia grafica per Speect oppure un debugger per lo stesso?
+    	    \item \textbf{Risposta:} Il capitolato richiede la realizzazione di un'interfaccia grafica per Speect che stampi su schermo i grafi relativi ai vari stati interni dello stesso per una specifica esecuzione. Tali grafi verranno utilizzati per semplificare la ricerca di errori in applicazioni che utilizzano Speect ed in questo senso il prodotto da realizzare svolgerà una funzione di debugging. 
+    	\end{itemize}
+    \item
+    	\begin{itemize}
+    	    \item \textbf{Domanda:} In che modo l'interfaccia da realizzare dovrà interagire con Speect?
+    	    \item \textbf{Risposta:} L'interfaccia da realizzare invocherà i metodi forniti da Speect sfruttandoli per la stampa dei grafi.
+    	\end{itemize}
+    \item
+    	\begin{itemize}
+    	    \item \textbf{Domanda:} Dall'interfaccia dimostrativa presente nel capitolato, si evince che l'applicazione dovrà poter ricevere in input file .json ed elaborarli. Quale ruolo hanno questi file all'interno di Speect? La loro struttura ci verrà fornita o starà a noi progettarla?
+    	    \item \textbf{Risposta:} Speect sfrutta la tecnologia JSON per interagire con dati persistenti (per esempio, a scopo di inizializzazione). La struttura dei file con cui interagisce è già definita.
+    	\end{itemize}
+    \item
+    	\begin{itemize}
+    	    \item \textbf{Domanda:} A che livello deve essere possibile per l'utente interagire con il grafo stampato dal prodotto da realizzare?
+    	    \item \textbf{Risposta:} L'utente deve poter modificare i nodi, importare ed esportare i grafi.
+    	\end{itemize}
+	
+	\end{enumerate}
+	
+	\section{Tracciamento delle decisioni}
+	
+	\begin{itemize}
+	    \item \textbf{VE-15-12-2017.1:} Integrazione del contenuto della risposta alla domanda 4 all'interno dei casi d'uso del documento \textit{Analisi dei Requisiti v 1.0.0}.
+	\end{itemize}
 	
 	\end{document}    
 
