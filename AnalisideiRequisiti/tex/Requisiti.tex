@@ -11,13 +11,13 @@
 		\newline ROF0&
 		\newline Obbligatorio&
 		\newline L'utente può visualizzare la pagina di DeSpeect&
-		\newline UC0 \newline Capitolato
+		\newline \refer{UC0} \newline Capitolato
 		\\[1em]
 		\hline
 		\newline ROF1&
 		\newline Obbligatorio&
 		\newline L'utente può accedere al menu file&
-		\newline UC1 \newline Interno
+		\newline \refer{UC1} \newline Interno
 		\\[1em]	
 		
 		\hline
@@ -25,14 +25,14 @@
 		\newline ROF2&
 		\newline Obbligatorio&
 		\newline L'utente può caricare un file Json&
-		\newline UC1 \newline UC2 \newline Capitolato
+		\newline \refer{UC1} \newline \refer{UC2} \newline Capitolato
 		\\[1em]	
 			\hline	
 			
 		\newline ROF2.1&
 		\newline Obbligatorio&
 		\newline L'utente può visualizzare il percorso del file JSon caricato&
-		\newline UC2 \newline Capitolato 
+		\newline \refer{UC2} \newline Capitolato 
 		\\[1em]	
 		\hline	
 		
@@ -136,22 +136,22 @@
 		\hline
 		
 		
-		\newline ROF5.6&\newline Obbligatorio&
+		\newline ROF5.5&\newline Obbligatorio&
 		\newline Il sistema visualizza un errore se si cerca di accedere ad una cartella senza i permessi necessari&
 		\newline UC3.3 \newline VI-15-12-17
 		\\[1em]	
 		\hline
-		\newline RDF5.7&\newline Desiderabile&
+		\newline RDF5.6&\newline Desiderabile&
 		\newline il file browser mostra solo file di estensione corretta&
 		\newline Interno
 		\\[1em]
 		\hline
-		\newline RDF5.8&\newline Desiderabile&
+		\newline RDF5.7&\newline Desiderabile&
 		\newline L'utente può modificare il nome di una cartella tramite file browser&
 		\newline Interno
 		\\[1em]
 		\hline
-		\newline RDF5.9&\newline Desiderabile&
+		\newline RDF5.8&\newline Desiderabile&
 		\newline L'utente può modificare il nome di un file tramite file browser&
 		\newline Interno
 		\\[1em]
@@ -174,9 +174,9 @@
 		\\[1em]
 		\hline	
 				
-		\newline RDF6.1&\newline Desiderabile&
+		\newline RDF6.1.2&\newline Desiderabile&
 		\newline L'utente può cancellare gli utterance processor di un utterance type&
-		\newline UC6.1 \newline 6.1.1
+		\newline UC6.1 \newline UC6.1.1
 		\\[1em]
 		\hline	
 		
@@ -205,8 +205,8 @@
 		
 			
 		
-			\newline RDF9.1&\newline Desiderabile&
-		\newline L'utente può visualizzare l'informazione generale di ogni nodo&
+			\newline ROF9.1&\newline Obbligatorio&
+		\newline L'utente può visualizzare l'informazione generale di ogni nodo sul grafo&
 		\newline UC7.2 \newline Capitolato
 		\\[1em]
 		\hline
@@ -238,6 +238,12 @@
 		\newline RDF9.3.1.1&\newline Desiderabile&
 		\newline L'utente può modificare il name del nodo selezionato&
 		\newline UC7.2.3 \newline VI-15-12-17 \newline Capitolato
+		\\[1em]
+		\hline
+		
+			\newline RDF9.3.1.2&\newline Desiderabile&
+		\newline L'utente può modificare il PoS del nodo selezionato&
+		\newline UC7.2.6 \newline VI-15-12-17 \newline Capitolato
 		\\[1em]
 		\hline
 		
@@ -398,14 +404,14 @@
 			\newline 
 			ROV2&\newline Obbligario&
 			\newline 
-			L'applicativo deve essere utilizzabile su sistema operativo Linux&
+			L'applicativo deve essere utilizzabile su sistema operativo Linux Ubuntu 16.04 LTS&
 			\newline Capitolato
 			\\[1em]
 			\hline
 			\newline
 			RDV2.1&\newline Desiderabile&
 			\newline 
-			L'applicativo deve essere utilizzabile su sistema operativo Windows&
+			L'applicativo deve essere utilizzabile su sistema operativo Windows 7 e successivi&
 			\newline Capitolato
 			\\[1em]
 			\hline
@@ -416,6 +422,7 @@
 			\newline Capitolato
 			\\[1em]
 			\hline	
+			\newline
 			RDV3.1&\newline Desiderabile&
 			\newline 
 			L'applicazione deve essere rilasciata con licenze BSD/MIT &
