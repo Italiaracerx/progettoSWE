@@ -9,10 +9,10 @@ branches:
     - master
 
 # Preparazione compilatore latex
-before_install:
-- chmod +x latex_test.sh
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
+#before_install:
+#- chmod +x latex_test.sh
+#- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
 
 #- pdflatex -interaction=nonstopmode -halt-on-error *.tex
-script:
-- bash latex_test.sh
+#script:
+#- bash latex_test.sh
