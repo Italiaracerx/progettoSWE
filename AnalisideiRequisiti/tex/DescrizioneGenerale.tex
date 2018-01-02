@@ -30,44 +30,8 @@ Il software si rivolge a programmatori esperti che si occupano di sviluppare plu
 Sarà possibile eseguire il software su tutte le macchine desktop con sistema operativo Linux, dovranno essere presenti \glossario{CMAKE}{CMAKE}, \glossario{GCC}{GCC} e le librerie di \glossario{QT}{QT}. Verranno comunque utilizzate tecnologie presenti anche su sistemi Windows in questo modo sarà possibile la compilazione, però non verrà fornito un manuale di installazione per quest’ultima piattaforma.
 
 \section{Vincoli generali}
-Il software realizzato dovrà rispettare vari requisiti:
-\begin{itemize}
-	\item{} Requisiti obbligatori:
-	\begin{itemize}
-		\item{}Realizzazione di una interfaccia grafica per Speect in grado di:
-		\begin{enumerate}
-			\item{} Caricare un \glossario{file Voice}{file Voice} con estensione JSON;
-			\item{} Inserire un input di testo, che verrà utilizzato in fase di compilazione;
-			\item{} Selezionare il tipo di \glossario{utterance type}{utterance type} di compilazione;
-			\item{} Compilazione mediante Speect dato input di testo e l'utterance type;
-			\item{} Visualizzazione grafica del grafo prodotto dalla compilazione;
-			\item{} Spostare un nodo graficamente;
-			\item{} Selezionato un nodo dall'interfaccia grafica, visualizzare le informazioni del nodo;
-			\item{} Possibilità di salvare un file audio con estensione \glossario{WAV}{WAV} generato a seguito di una compilazione di Speect.
-		\end{enumerate}
-		\item{}	Documentazione tecnica del software;
-	\end{itemize}
-	\item{} Requisiti desiderabili:
-	\begin{itemize}
-		\item{} Selezione file JSon tramite \glossario{Drag and Drop}{drag and drop}
-		\item{} Permettere all'utente di selezionare le relazioni del grafo da visualizzare;
-		\item{} Permettere la riproduzione del file audio prodotto;
-		\item{} Permettere di nascondere i nodi senza dati;
-		\item{} Cambiare il colore degli strati del grafo.
-	\end{itemize}
-	\item{} Requisiti facoltativo:
-	\begin{itemize}
-		\item{} Evidenziare un nodo dato un percorso riferito al grafo;
-		\item{} Poter eseguire passo passo le varie utterance;
-		\item{}	Modificare gli archi che collegano i vari nodi dei grafi delle utterance;
-		\item{} Caricare e salvare lo stato di un grafo precedentemente realizzato;
-		\item{} Poter compilare partendo da un grafo caricato;
-		\item{}	Possibilità di confrontare visivamente due stati della struttura interna di Speect;
-		\item{} Possibilità di confrontare automaticamente due stati della struttura interna di Speect;
-		\item{} Modificare il file Voice di estensione JSON caricato nell'applicazione.
-	\end{itemize}
+Il software realizzato dovrà utilizzare speect offerto dalla azienda Mivoq e deve essere utilizzabile su sistema operativo Linux Ubuntu 16.04 LTS
 	
-\end{itemize}
 
 \chapter{Interfaccia Grafica}
 In questa parte verrà presentato, in linea generale, il funzionamento dell'interfaccia grafica. Le interfacce proposte nelle immagini che seguono non rappresentano le finestre che saranno implementare, ma semplicemente vogliono essere una linea guida per comprendere al meglio le varie funzionalità dell'applicazione; quindi l'estetica di \textit{\glossario{DeSpeect}{DeSpeect}} potrebbe differire dalle immagini che seguono. Le istruzioni che seguono non intendono essere in alcun modo una guida all'utilizzo dell'applicazione.
