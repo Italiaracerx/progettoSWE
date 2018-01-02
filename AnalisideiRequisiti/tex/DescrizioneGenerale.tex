@@ -71,6 +71,8 @@ Il software realizzato dovrà rispettare vari requisiti:
 
 \chapter{Interfaccia Grafica}
 In questa parte verrà presentato, in linea generale, il funzionamento dell'interfaccia grafica. Le interfacce proposte nelle immagini che seguono non rappresentano le finestre che andremo a implementare, ma semplicemente vogliono essere una linea guida per comprendere al meglio le varie funzionalità dell'applicazione; quindi l'estetica di \textit{\glossario{DeSpeect}{DeSpeect}} potrebbe differire dalle immagini che seguono. Le istruzioni che seguono non intendono essere in alcun modo una guida all'utilizzo dell'applicazione.
+
+
 	\section{Schermata principale}
 		\begin{figure}
 			\caption{Esempio pagina principale}
@@ -80,12 +82,7 @@ In questa parte verrà presentato, in linea generale, il funzionamento dell'inte
 		\end{figure}	
 		\noindent Nell'interfaccia grafica saranno presenti due pulsanti per caricare il \glossario{file Voice JSon}{file voice .json}, uno in alto a sinistra di nome "Load Voice" (vedi \ref{fig:GUI}) e uno di nome "Load Voice JSon" all'interno della voce "File" nella barra del menu (vedi \ref{fig:menufile}).
 
-		\begin{figure}
-			\caption{Esempio voce File nella barra del menu}
-			\centering
-			\includegraphics[]{../img/menu-file.png}
-			\label{fig:menufile}
-		\end{figure}
+		
 		\noindent A seguito del caricamento del file Voice Json il menù a tendina "Utterance Type" (vedi \ref{fig:GUI} in alto a destra) verrà popolato con l'elenco delle varie \glossario{utterance type}{utterance type} contenute nel file appena caricato. 
 		
 		\noindent Una volta selezionata la \glossario{utterance type}{utterance type} desiderata, il programma popolerà l'elenco "Utterance Processor" (vedi \ref{fig:GUI} appena sotto a sinistra della linea orizzontale che separa la parte alta dell'applicazione dal resto) con una lista di \glossario{utterance processor}{utterance processor} contenuti nella utterance type selezionata. 
@@ -105,7 +102,12 @@ In questa parte verrà presentato, in linea generale, il funzionamento dell'inte
 		\end{itemize}
 	
 		\noindent Cliccando un nodo del grafo HRG l'utente lo evidenzierà con un cerchio di colore giallo e potrà visualizzare, nella parte inferiore dell'interfaccia grafica, le sue proprietà, tra cui il percorso del nodo.
-		
+		\begin{figure}
+			\caption{Esempio voce File nella barra del menu}
+			\centering
+			\includegraphics[]{../img/menu-file.png}
+			\label{fig:menufile}
+		\end{figure}
 		\noindent Attraverso la voce "File" della barra del menu (vedi \ref{fig:menufile}) l'utente potrà:
 		\begin{itemize}
 			\item{Load Voice JSon:} caricare il file inizializzazione di Speect;
@@ -120,14 +122,16 @@ In questa parte verrà presentato, in linea generale, il funzionamento dell'inte
 		\begin{itemize}
 			\item{Manual:} visualizzare il manuale utente;
 			\item{Licence:} visualizzare la licenza di DeSpeect;
+			
 		\end{itemize}
-		
+	
 		\begin{figure}
 			\caption{Esempio voce Help nella barra di menu}
 			\centering
 			\includegraphics[]{../img/menu-help.png}
 			\label{fig:menuhelp}
 		\end{figure}
+		
 	\section{Schermata caricamento file}
 	
 		Mediante questa schermata (\ref{fig:filebrowser-load}) l'utente potrà navigare attraverso il \glossario{file system}{file system} e selezionare il file che desidera aprire. 
