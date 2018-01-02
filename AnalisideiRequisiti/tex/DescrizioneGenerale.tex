@@ -70,7 +70,7 @@ Il software realizzato dovrà rispettare vari requisiti:
 \end{itemize}
 
 \chapter{Interfaccia Grafica}
-In questa parte verrà presentato, in linea generale, il funzionamento dell'interfaccia grafica. Le interfacce proposte nelle immagini che seguono non rappresentano le finestre che andremo a implementare, ma semplicemente vogliono essere una linea guida per comprendere al meglio le varie funzionalità dell'applicazione; quindi l'estetica di \textit{\glossario{DeSpeect}{DeSpeect}} potrebbe differire dalle immagini che seguono. Le istruzioni che seguono non intendono essere in alcun modo una guida all'utilizzo dell'applicazione.
+In questa parte verrà presentato, in linea generale, il funzionamento dell'interfaccia grafica. Le interfacce proposte nelle immagini che seguono non rappresentano le finestre che saranno implementare, ma semplicemente vogliono essere una linea guida per comprendere al meglio le varie funzionalità dell'applicazione; quindi l'estetica di \textit{\glossario{DeSpeect}{DeSpeect}} potrebbe differire dalle immagini che seguono. Le istruzioni che seguono non intendono essere in alcun modo una guida all'utilizzo dell'applicazione.
 
 
 	\section{Schermata principale}
@@ -81,8 +81,8 @@ In questa parte verrà presentato, in linea generale, il funzionamento dell'inte
 			\label{fig:GUI}
 		\end{figure}	
 		Nell'interfaccia grafica saranno presenti due pulsanti per caricare il \glossario{file Voice JSon}{file voice .json}, uno in alto a sinistra di nome "Load Voice" (vedi \ref{fig:GUI}) e uno di nome "Load Voice JSon" all'interno della voce "File" nella barra del menu (vedi \ref{fig:menufile}).
-		 A seguito del caricamento del file Voice Json il menù a tendina "Utterance Type" (vedi \ref{fig:GUI} in alto a destra) verrà popolato con l'elenco delle varie \glossario{utterance type}{utterance type} contenute nel file appena caricato. 
-		 Una volta selezionata la \glossario{utterance type}{utterance type} desiderata, il programma popolerà l'elenco "Utterance Processor" (vedi \ref{fig:GUI} appena sotto a sinistra della linea orizzontale che separa la parte alta dell'applicazione dal resto) con una lista di \glossario{utterance processor}{utterance processor} contenuti nella utterance type selezionata. 
+		 A seguito del caricamento del file Voice Json il menù a tendina "Utterance Type" (vedi \ref{fig:GUI} in alto a destra) verrà popolato con l'elenco delle varie \glossario{utterance type}{utterance type} contenute nel file stesso. 
+		 Una volta selezionata la \glossario{utterance type}{utterance type} desiderata, il programma riempirà l'elenco "Utterance Processor" (vedi \ref{fig:GUI} appena sotto a sinistra della linea orizzontale che separa la parte alta dell'applicazione dal resto) con una lista di \glossario{utterance processor}{utterance processor} contenuti nella utterance type selezionata. 
 		 In seguito, l'utente potrà compilare l'area di testo sottostante il pulsante "Load Voice" (vedi \ref{fig:GUI}) con il testo che desidera mandare in elaborazione a \glossario{Speect}{Speect}.
 		 Proseguendo verso destra, nella figura \ref{fig:GUI}, l'utente avrà la possibilità di eseguire tutti gli \glossario{utterance processor}{utterance processor} contenuti nella utterance type premendo il pulsante "Run all processor" (vedi \ref{fig:GUI}), in alternativa, potrà eseguirli sequenzialmente uno alla volta con la possibilità di tornare al passo precedente (vedi pulsanti contenuti nell'area nominata "Run single processor" \ref{fig:GUI}). 
 		 Man mano che gli utterance processor vengono eseguiti, nell'area centrale bianca (vedi \ref{fig:GUI}) verrà disegnato il \glossario{grafo HRG}{grafo HRG}.
