@@ -74,41 +74,34 @@ In questa parte verrà presentato, in linea generale, il funzionamento dell'inte
 
 
 	\section{Schermata principale}
-		\begin{figure}
+		\begin{figure}[htp]
 			\caption{Esempio pagina principale}
 			\centering
 			\includegraphics[width=\textwidth]{../img/paginainiziale.png}
 			\label{fig:GUI}
 		\end{figure}	
-		\noindent Nell'interfaccia grafica saranno presenti due pulsanti per caricare il \glossario{file Voice JSon}{file voice .json}, uno in alto a sinistra di nome "Load Voice" (vedi \ref{fig:GUI}) e uno di nome "Load Voice JSon" all'interno della voce "File" nella barra del menu (vedi \ref{fig:menufile}).
-
-		
-		\noindent A seguito del caricamento del file Voice Json il menù a tendina "Utterance Type" (vedi \ref{fig:GUI} in alto a destra) verrà popolato con l'elenco delle varie \glossario{utterance type}{utterance type} contenute nel file appena caricato. 
-		
-		\noindent Una volta selezionata la \glossario{utterance type}{utterance type} desiderata, il programma popolerà l'elenco "Utterance Processor" (vedi \ref{fig:GUI} appena sotto a sinistra della linea orizzontale che separa la parte alta dell'applicazione dal resto) con una lista di \glossario{utterance processor}{utterance processor} contenuti nella utterance type selezionata. 
-		
-		\noindent In seguito, l'utente potrà compilare l'area di testo sottostante il pulsante "Load Voice" (vedi \ref{fig:GUI}) con il testo che desidera mandare in elaborazione a \glossario{Speect}{Speect}.
-		
-		\noindent Proseguendo verso destra, nella figura \ref{fig:GUI}, l'utente avrà la possibilità di eseguire tutti gli \glossario{utterance processor}{utterance processor} contenuti nella utterance type premendo il pulsante "Run all processor" (vedi \ref{fig:GUI}), in alternativa, potrà eseguirli sequenzialmente uno alla volta con la possibilità di tornare al passo precedente (vedi pulsanti contenuti nell'area nominata "Run single processor" \ref{fig:GUI}). 
-		
-		\noindent Man mano che gli utterance processor vengono eseguiti, nell'area centrale bianca (vedi \ref{fig:GUI}) verrà disegnato il \glossario{grafo HRG}{grafo HRG}.
-		
-		\noindent Nella sezione degli utterance processor (vedi \ref{fig:GUI}) l'utente avrà la possibilità di:
-		
+		Nell'interfaccia grafica saranno presenti due pulsanti per caricare il \glossario{file Voice JSon}{file voice .json}, uno in alto a sinistra di nome "Load Voice" (vedi \ref{fig:GUI}) e uno di nome "Load Voice JSon" all'interno della voce "File" nella barra del menu (vedi \ref{fig:menufile}).
+		 A seguito del caricamento del file Voice Json il menù a tendina "Utterance Type" (vedi \ref{fig:GUI} in alto a destra) verrà popolato con l'elenco delle varie \glossario{utterance type}{utterance type} contenute nel file appena caricato. 
+		 Una volta selezionata la \glossario{utterance type}{utterance type} desiderata, il programma popolerà l'elenco "Utterance Processor" (vedi \ref{fig:GUI} appena sotto a sinistra della linea orizzontale che separa la parte alta dell'applicazione dal resto) con una lista di \glossario{utterance processor}{utterance processor} contenuti nella utterance type selezionata. 
+		 In seguito, l'utente potrà compilare l'area di testo sottostante il pulsante "Load Voice" (vedi \ref{fig:GUI}) con il testo che desidera mandare in elaborazione a \glossario{Speect}{Speect}.
+		 Proseguendo verso destra, nella figura \ref{fig:GUI}, l'utente avrà la possibilità di eseguire tutti gli \glossario{utterance processor}{utterance processor} contenuti nella utterance type premendo il pulsante "Run all processor" (vedi \ref{fig:GUI}), in alternativa, potrà eseguirli sequenzialmente uno alla volta con la possibilità di tornare al passo precedente (vedi pulsanti contenuti nell'area nominata "Run single processor" \ref{fig:GUI}). 
+		 Man mano che gli utterance processor vengono eseguiti, nell'area centrale bianca (vedi \ref{fig:GUI}) verrà disegnato il \glossario{grafo HRG}{grafo HRG}.
+		 Nella sezione degli utterance processor (vedi \ref{fig:GUI}) l'utente avrà la possibilità di:
 		\begin{itemize}
 			\item{}decidere se visualizzare il grafo HRG di una determinata utterance mediante una spunta;
 			\item{}modificare l'ordine di esecuzione delle utterance agendo sulle freccie a lato della singola utterance processor;
 			\item{}rimuovere una determinata utterance processor dall'elenco e quindi dalla utterance type.
 		\end{itemize}
 	
-		\noindent Cliccando un nodo del grafo HRG l'utente lo evidenzierà con un cerchio di colore giallo e potrà visualizzare, nella parte inferiore dell'interfaccia grafica, le sue proprietà, tra cui il percorso del nodo.
-		\begin{figure}
-			\caption{Esempio voce File nella barra del menu}
-			\centering
-			\includegraphics[]{../img/menu-file.png}
-			\label{fig:menufile}
-		\end{figure}
-		\noindent Attraverso la voce "File" della barra del menu (vedi \ref{fig:menufile}) l'utente potrà:
+		 Cliccando un nodo del grafo HRG l'utente lo evidenzierà con un cerchio di colore giallo e potrà visualizzare, nella parte inferiore dell'interfaccia grafica, le sue proprietà, tra cui il percorso del nodo.
+	\begin{figure}[htp]
+	\caption{Esempio voce File nella barra del menu}
+	\centering
+	\includegraphics[]{../img/menu-file.png}
+	\label{fig:menufile}
+\end{figure}
+	 Attraverso la voce "File" della barra del menu (vedi \ref{fig:menufile}) l'utente potrà:
+	 	
 		\begin{itemize}
 			\item{Load Voice JSon:} caricare il file inizializzazione di Speect;
 			\item{Save Voice JSon:} salvare il file inizializzazione di Speect;
@@ -118,14 +111,14 @@ In questa parte verrà presentato, in linea generale, il funzionamento dell'inte
 			\item{Search from path:} evidenziare il nodo nel grafo HRG e di conseguenza potrà vedere le sue proprietà;
 			\item{Exit:} Uscire dall'applicazione.
 		\end{itemize}
-		\noindent Attraverso la voce "Help" della barra del menu (vedi \ref{fig:menuhelp}) l'utente potrà:
+		 Attraverso la voce "Help" della barra del menu (vedi \ref{fig:menuhelp}) l'utente potrà:
 		\begin{itemize}
 			\item{Manual:} visualizzare il manuale utente;
 			\item{Licence:} visualizzare la licenza di DeSpeect;
 			
 		\end{itemize}
 	
-		\begin{figure}
+		\begin{figure}[htp]
 			\caption{Esempio voce Help nella barra di menu}
 			\centering
 			\includegraphics[]{../img/menu-help.png}
@@ -144,7 +137,7 @@ In questa parte verrà presentato, in linea generale, il funzionamento dell'inte
 			\item{} Un clic sopra il file e premere il pulsante "Open";
 			\item{} Scrivere il nome, compreso di estensione, del file e premere il pulsante "Open".
 		\end{enumerate}
-		\begin{figure}
+		\begin{figure}[htp]
 			\caption{Esempio finestra caricamento file}
 			\centering
 			\includegraphics[width=\textwidth]{../img/filebrowser-load.png}
@@ -164,7 +157,7 @@ In questa parte verrà presentato, in linea generale, il funzionamento dell'inte
 			\item{} Selezionare l'estensione del file;
 			\item{} Premere il pulsante "Save".
 		\end{itemize}
-	\begin{figure}
+	\begin{figure}[htp]
 			\caption{Esempio finestra salvataggio file}
 			\centering
 			\includegraphics[width=\textwidth]{../img/filebrowser-save.png}
