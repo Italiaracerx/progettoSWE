@@ -3,17 +3,19 @@
 \begin{document}
 	\chapter{Requisiti}
 	\section{Requisiti Funzionali}
-	\begin{longtable}{| p{3cm} | p{6cm} | p{3cm} |}
+	\begin{longtable}{| p{2cm} | p{2.5cm} |p{5cm} | p{2.5cm} |}
 		\hline
-		\textbf{Codice} & \textbf{Descrizione} & \textbf{Fonti}\\
+		\textbf{Codice} & \textbf{Importanza} & \textbf{Descrizione} & \textbf{Fonti}\\
 		\hline
 		\endhead
 		\newline ROF0&
+		\newline Obbligatorio&
 		\newline L'utente può visualizzare la pagina di DeSpeect&
 		\newline UC0 \newline Capitolato
 		\\[1em]
 		\hline
 		\newline ROF1&
+		\newline Obbligatorio&
 		\newline L'utente può accedere al menu file&
 		\newline UC1 \newline Interno
 		\\[1em]	
@@ -21,172 +23,177 @@
 		\hline
 			
 		\newline ROF2&
+		\newline Obbligatorio&
 		\newline L'utente può caricare un file Json&
 		\newline UC1 \newline UC2 \newline Capitolato
 		\\[1em]	
 			\hline	
 			
 		\newline ROF2.1&
+		\newline Obbligatorio&
 		\newline L'utente può visualizzare il percorso del file JSon caricato&
 		\newline UC2 \newline Capitolato 
 		\\[1em]	
 		\hline	
 		
 		\newline RFF2.2&
+		\newline Facoltativo&
 		\newline L'utente può modificare il file Json cambiando l'ordine degli utterance processor nel utterance type&
 		\newline UC1 \newline UC6.1.1 \newline Capitolato
 		\\[1em]	
 		\hline
 				
 		\newline RFF2.2.1&
+		\newline Facoltativo&
 		\newline L'utente può salvane nel file JSon le modifiche agli utterance processor&
 		\newline UC11 \newline VI-15-12-17
 		\\[1em]	
 		\hline
 		
 		\newline RFF2.2.1.1&
+		\newline Facoltativo&
 		\newline Il sistema deve visualizzare un errore nel caso il salvataggio fallisca e ripristinare uno stato funzionante&
 		\newline UC11.1 
 		\\[1em]	
 		\hline
 
-		\newline ROF3&
+		\newline ROF3&		\newline Obbligatorio&
 		\newline L'utente può inizializzare Speect con il file json&
 		\newline UC2 \newline VI-15-12-17
 		\\[1em]	
 			\hline	
 		
-		\newline ROF3.1&
+		\newline ROF3.1&\newline Obbligatorio&
 		\newline Il sistema deve visualizzare un errore in caso speect fallisca l'inizializzazione&
 		\newline UC3.1
 		\\[1em]		
 		\hline
 		
-		\newline ROF4&
+		\newline ROF4&\newline Obbligatorio&
 		\newline L'utente può salvare l'audio risultante con estensione WAV&
 		\newline UC4 \newline Capitolato
 		\\[1em]
 			\hline
 			
-		\newline RFF4.1&
+		\newline RFF4.1&\newline Facoltativo&
 		\newline L'utente può salvare l'audio risultante con estensione diversa&
 		\newline UC4 \newline UC4.1 \newline VI-15-12-17 
 		\\[1em]
 		\hline
 		
-		\newline ROF4.2&
+		\newline ROF4.2&\newline Obbligatorio&
 		\newline L'utente può selezionare dove salvare il file&
 		\newline UC4 \newline UC3.1 \newline Interno
 		\\[1em]
 		
 		\hline	
-		\newline ROF4.2.1&
+		\newline ROF4.2.1&\newline Obbligatorio&
 		\newline L'utente può selezionare il nome del file da salvare&
 		\newline UC4 \newline Interno
 		\\[1em]
 		
 		\hline
-		\newline ROF4.3&
+		\newline ROF4.3&\newline Obbligatorio&
 		\newline Il sistema deve visualizzare un errore in caso il salvataggio dell'audio fallisca&
 		\newline UC4.1 \newline Interno
 		\\[1em]
 		\hline
 		
-		\newline RFF4.4&
+		\newline RFF4.4&\newline Facoltativo&
 		\newline L'utente può ascoltare l'audio prima di salvarlo&
 		\newline Interno
 		\\[1em]
 		\hline
 		
-		\newline ROF5&
+		\newline ROF5&\newline Obbligatorio&
 		\newline L'utente può cercare il file tramite file browser&
 		\newline UC3 \newline UC3.1 \newline VI-15-12-17
 		\\[1em]
 		\hline
 		
-			\newline ROF5.1&
+			\newline ROF5.1&\newline Obbligatorio&
 		\newline L'utente può aprire cartelle tramite file browser&
 		\newline UC3.1 \newline UC3.1.1
 		\\[1em]
 		\hline
 		
-		\newline ROF5.2&
+		\newline ROF5.2&\newline Obbligatorio&
 		\newline L'utente può tornare alla cartella padre&
 		\newline UC3.1 \newline UC3.1.3
 		\\[1em]
 		\hline
 		
-		\newline RDF5.3&
+		\newline RDF5.3&\newline Desiderabile&
 		\newline L'utente può creare cartelle tramite file browser&
 		\newline UC3 \newline UC3.2
 		\\[1em]
 		\hline
 		
-		\newline ROF5.4&
+		\newline ROF5.4&\newline Obbligatorio&
 		\newline L'utente può selezionare un file tramite file browser&
 		\newline UC3 \newline UC3.2
 		\\[1em]	
 		\hline
 		
 		
-		\newline ROF5.6&
+		\newline ROF5.6&\newline Obbligatorio&
 		\newline Il sistema visualizza un errore se si cerca di accedere ad una cartella senza i permessi necessari&
 		\newline UC3.3 \newline VI-15-12-17
 		\\[1em]	
 		\hline
-		\newline RDF5.7&
+		\newline RDF5.7&\newline Desiderabile&
 		\newline il file browser mostra solo file di estensione corretta&
 		\newline Interno
 		\\[1em]
 		\hline
-		\newline ROF6&
+		\newline ROF6&\newline Obbligatorio&
 		\newline L'utente può selezionare la utterance type&
 		\newline UC6 
 		\\[1em]
 		\hline
 				
-		\newline ROF6.1&
+		\newline ROF6.1&\newline Obbligatorio&
 		\newline L'utente può visualizzare gli utterance processor di un utterance type&
 		\newline UC6 
 		\\[1em]
 		\hline
 				
-		\newline RDF6.1&
+		\newline RDF6.1&\newline Desiderabile&
 		\newline L'utente può modificare gli utterance processor di un utterance type&
 		\newline UC6.1
 		\\[1em]
 		\hline	
 				
-		\newline RDF6.1.1&
+		\newline RDF6.1.1&\newline Desiderabile&
 		\newline L'utente può spostare gli utterance processor di un utterance type&
 		\newline UC6.1 \newline UC6.1.1
 		\\[1em]
 		\hline	
 				
-		\newline RDF6.1&
+		\newline RDF6.1&\newline Desiderabile&
 		\newline L'utente può cancellare gli utterance processor di un utterance type&
 		\newline UC6.1 \newline 6.1.1
 		\\[1em]
 		\hline	
 		
-		\newline ROF7&
+		\newline ROF7&\newline Obbligatorio&
 		\newline L'utente può inserire un testo da tradurre in voce&
 		\newline UC7 \newline Capitolato
 		\\[1em]
 		
 		\hline
-		\newline ROF8&
+		\newline ROF8&\newline Obbligatorio&
 		\newline L'utente può eseguire il testo inserito&
 		\newline UC7 \newline Capitolato
 		\\[1em]
 		\hline
-		\newline ROF8.1&
+		\newline ROF8.1&\newline Obbligatorio&
 		\newline Il sistema visualizza l'errore di esecuzione se Speect fallisce l'esecuzione&
 		\newline UC7.1 \newline Capitolato
 		\\[1em]
 		\hline
 		
-			\newline ROF9&
+			\newline ROF9&\newline Obbligatorio&
 		\newline L'utente può visualizzare il grafo delle utterance&
 		\newline UC7.2 \newline Capitolato
 		\\[1em]
@@ -194,98 +201,98 @@
 		
 			
 		
-			\newline RDF9.1&
+			\newline RDF9.1&\newline Desiderabile&
 		\newline L'utente può visualizzare l'informazione generale di ogni nodo&
 		\newline UC7.2 \newline Capitolato
 		\\[1em]
 		\hline
 		
-		\newline ROF9.2&
+		\newline ROF9.2&\newline Obbligatorio&
 		\newline L'utente vede ogni strato del grafo dello stesso colore del utterance processor che l'ha prodotto &
 		\newline UC6 \newline Capitolato
 		\\[1em]
 		\hline
 		
-		\newline RDF9.2.1&
+		\newline RDF9.2.1&\newline Desiderabile&
 		\newline L'utente può cambiare il colore degli utterance processor&
 		\newline UC7 \newline VI-15-12-17
 		\\[1em]
 		\hline
 		
-		\newline ROF9.3&
+		\newline ROF9.3&\newline Obbligatorio&
 		\newline L'utente può selezionare il nodo del grafo tramite click&
 		\newline UC7.2.1 \newline Capitolato
 		\\[1em]
 		\hline
 		
-			\newline ROF9.3.1&
+			\newline ROF9.3.1&\newline Obbligatorio&
 		\newline L'utente può visualizzare tutte le informazioni del nodo selezionato&
 		\newline UC7.2.1 \newline Capitolato
 		\\[1em]
 		\hline
 			
-		\newline RDF9.3.1.1&
+		\newline RDF9.3.1.1&\newline Desiderabile&
 		\newline L'utente può modificare il name del nodo selezionato&
 		\newline UC7.2.3 \newline VI-15-12-17 \newline Capitolato
 		\\[1em]
 		\hline
 		
-		\newline RDF9.4&
+		\newline RDF9.4&\newline Desiderabile&
 		\newline L'utente può testare se un percorso porta ad un nodo esistente&
 		\newline UC10 \newline VI-15-12-17 \newline Capitolato
 		\\[1em]
 		\hline
 		
-		\newline RDF9.4.1&
+		\newline RDF9.4.1&\newline Desiderabile&
 		\newline L'utente può selezionare il nodo del grafo tramite percorso nel grafo&
 		\newline UC10 \newline UC7.2.1 \newline VI-15-12-17 \newline Capitolato
 		\\[1em]
 		\hline
 		
-		\newline ROF9.5&
+		\newline ROF9.5&\newline Obbligatorio&
 		\newline Il nodo selezionato dall'utente viene evidenziato con un contorno giallo&
 		\newline UC7.2.1 \newline VI-15-12-17 \newline Capitolato
 		\\[1em]
 		\hline
 		
-		\newline RDF9.5.1&
+		\newline RDF9.5.1&\newline Desiderabile&
 		\newline L'utente può modificare il colore con il quale si evidenzia il focus&
 		\newline Interno
 		\\[1em]
 		\hline
 		
-		\newline ROF9.6&
+		\newline ROF9.6&\newline Obbligatorio&
 		\newline L'utente può spostare i nodi del grafo graficamente&
 		\newline UC7.2.2 \newline VI-15-12-17 \newline Capitolato
 		\\[1em]
 		\hline
 		
-		\newline RDF9.7&
+		\newline RDF9.7&\newline Desiderabile&
 		\newline L'utente può filtrare il grafo per strati di relazione&
 		\newline UC7.2.4 \newline UC6 \newline Capitolato
 		\\[1em]
 		\hline
 	
-		\newline RFF9.8&
+		\newline RFF9.8&\newline Facoltativo&
 		\newline L'utente può modificare gli archi dei nodi del grafo&
 		\newline VI-15-12-17 \newline Capitolato
 		\\[1em]
 		\hline
 		
-		\newline RFF9.8.1&
+		\newline RFF9.8.1&\newline Facoltativo&
 		\newline L'utente può cancellare gli archi dei nodi del grafo&
 		\newline Interno
 		\\[1em]
 		\hline
 		
-		\newline RFF9.8.2&
+		\newline RFF9.8.2&\newline Facoltativo&
 		\newline L'utente può aggiungere archi a dei nodi del grafo&
 		\newline Interno
 		\\[1em]
 		\hline
 	
 		
-		\newline RFF10&
+		\newline RFF10&\newline Facoltativo&
 		\newline L'utente può eseguire ogni utterance processor autonomamente&
 		\newline UC7.2.5 \newline Capitolato
 		\\[1em]
@@ -294,41 +301,41 @@
 		
 	
 		
-		\newline RFF11&
+		\newline RFF11&\newline Facoltativo&
 		\newline L'utente può salvare lo stato del grafo&
 		\newline UC8 \newline VI-15-12-17 
 		\\[1em]
 		\hline
-		\newline RFF11.1&
+		\newline RFF11.1&\newline Facoltativo&
 		\newline Il sistema deve visualizzare un errore se non riesce a salvare il grafo&
 		\newline UC8\newline UC8.1 \newline VI-15-12-17 
 		\\[1em]
 		\hline
 		
-		\newline RFF12&
+		\newline RFF12&\newline Facoltativo&
 		\newline L'utente può caricare lo stato di un grafo&
 		\newline UC9 \newline VI-15-12-17
 		\\[1em]
 		\hline
-				\newline RFF12.1&
+				\newline RFF12.1&\newline Facoltativo&
 		\newline Il sistema deve visualizzare un errore se non riesce a caricare il grafo&
 		\newline UC9 \newline UC9.1 \newline VI-15-12-17 
 		\\[1em]
 		\hline
-			\newline RFF12.1&
+			\newline RFF12.2&\newline Facoltativo&
 		\newline L'utente può caricare  graficamente due grafi diversi&
 		\newline Capitolato
 		\\[1em]
 		\hline
 		
-			\newline RFF12.1.1&
+			\newline RFF12.2.1&\newline Facoltativo&
 		\newline L'utente può confrontare due grafi automaticamente&
 		\newline Capitolato
 		\\[1em]
 		\hline
 		
 		
-		\newline RFF13&
+		\newline RFF13&\newline Facoltativo&
 		\newline L'utente può eseguire Speect dato un grafo&
 		\newline UC7 \newline UC7.2.5 \newline VI-15-12-17
 		\\[1em]
@@ -336,7 +343,7 @@
 		
 	
 		
-		\newline ROF14&
+		\newline ROF14&\newline Obbligatorio&
 		\newline L'utente può chiudere l'applicazione&
 		\newline UC5
 		\\[1em]
@@ -345,19 +352,19 @@
 		
 	\end{longtable}
 	\section{Requisiti di Qualità}
-		\begin{longtable}{| p{3cm} | p{6cm} | p{3cm} |}
+			\begin{longtable}{| p{2cm} | p{2.5cm} |p{5cm} | p{2.5cm} |}
 			\hline
-			\textbf{Codice} & \textbf{Descrizione} & \textbf{Fonti}\\
+			\textbf{Codice} & \textbf{Importanza} & \textbf{Descrizione} & \textbf{Fonti}\\
 			\hline
 			\endhead
 				
 			
-			\newline ROQ0&
+			\newline ROQ0&\newline Obbligario&
 		\newline Deve essere fornito un manuale utente&
 		\newline Capitolato
 		\\[1em]
 		\hline
-			\newline ROQ0.1&
+			\newline ROQ0.1&\newline Obbligario&
 			\newline Il manuale deve essere in lingua italiana&
 			\newline interno
 			\\[1em]
@@ -365,19 +372,19 @@
 	\end{longtable}
 
 	\section{Requisiti di Vincolo}
-		\begin{longtable}{| p{3cm} | p{6cm} | p{3cm} |}
-	\hline
-	\textbf{Codice} & \textbf{Descrizione} & \textbf{Fonti}\\
-	\hline
-	\endhead
-				\newline ROV0&
+			\begin{longtable}{| p{2cm} | p{2.5cm} |p{5cm} | p{2.5cm} |}
+			\hline
+			\textbf{Codice} & \textbf{Importanza} & \textbf{Descrizione} & \textbf{Fonti}\\
+			\hline
+			\endhead
+				\newline ROV0&\newline Obbligario&
 			\newline 
 			L'applicativo deve usare Speect modificato da Mivoq &
 			\newline Capitolato
 			\\[1em]
 			\hline	
 			\newline 
-			ROV1&
+			ROV1&\newline Obbligario&
 			\newline 
 			L'applicativo deve essere sviluppato con QT &
 			\newline Capitolato
@@ -385,27 +392,27 @@
 			\\[1em]
 			\hline
 			\newline 
-			ROV2&
+			ROV2&\newline Obbligario&
 			\newline 
 			L'applicativo deve essere utilizzabile su sistema operativo Linux&
 			\newline Capitolato
 			\\[1em]
 			\hline
 			\newline
-			RDV2.1&
+			RDV2.1&\newline Desiderabile&
 			\newline 
 			L'applicativo deve essere utilizzabile su sistema operativo Windows&
 			\newline Capitolato
 			\\[1em]
 			\hline
 			\newline
-			RDV3&
+			RDV3&\newline Desiderabile&
 			\newline 
 			L'applicazione deve essere rilasciata con licenze opensource&
 			\newline Capitolato
 			\\[1em]
 			\hline	
-			RDV3.1&
+			RDV3.1&\newline Desiderabile&
 			\newline 
 			L'applicazione deve essere rilasciata con licenze BSD/MIT &
 			\newline Capitolato
