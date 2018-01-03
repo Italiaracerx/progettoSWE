@@ -12,7 +12,7 @@
 
 	\chapter{Casi d'uso}
 	\section{UC0:Pagina Iniziale}
-	\begin{figure}[htp]
+	\begin{figure}[ht]
 		\caption{UC0}
 		\centering
 		\includegraphics[width=\textwidth]{../img/UC00.png}
@@ -26,12 +26,11 @@
 	{L'attore apre il menu file}
 	{Non previsti}
 	{}
-	
 	\section{UC1:Menu File}
 	\begin{figure}[htp]
-		\caption{UC1}
-		\centering
-		\includegraphics[width=\textwidth]{../img/UC01.png}
+	\caption{UC1}
+	\centering
+	\includegraphics[width=\textwidth]{../img/UC01.png}
 	\end{figure}
 	\UserCase
 	{UC1}
@@ -281,8 +280,7 @@
 		\item{} L'attore clicca sul menu a tendina
 		\item{} Viene aperto il menu a tendina
 		\item{} L'attore clicca sul Utterance type desiderata
-		\item{} Vengono mostrati a schermo i nomi degli Utterance Processor utilizzati negli appositi spazi (link figura), colorati con lo stesso colore delle relazioni da loro prodotte,una select box adiacente selezionata e un pulsante
-		
+		\item{} Vengono mostrati a schermo i nomi degli Utterance Processor utilizzati negli appositi spazi (link figura)		
 	\end{itemize}
 }
 \section{UC6.1:Modifica Utterance Processor}
@@ -425,18 +423,18 @@
 		\item{} Il grafo viene ristampato a schermo \refer{UC7.2}
 \end{itemize}}
 
-\section{UC7.2.4:Modifica Visualizzazione Layer}
+\section{UC7.2.4:Modifica Visualizzazione Relazione}
 \UserCase
 {UC7.2.4}
 {Utente}
 {}
-{L'Utente vuole filtrare i layer del grafico}
+{L'Utente vuole filtrare le relazioni del grafico}
 {Un utterance type è stato scelto \refer{UC6}}
 {Vengono mostrati tutti i layer di relazione selezionati}
 {Non previsti}
 {\begin{itemize}
-		\item{} L'utente deseleziona una select box adiacente ad un utterance processor
-		\item{} Lo strato prodotto da tale utterance processor viene nascosto
+		\item{} L'utente deseleziona una select box adiacente ad una relazione
+		\item{} La relazione rimossa viene nascosta
 \end{itemize}
 }
 \section{UC7.2.5:Esecuzione Singola Utterance}
@@ -547,15 +545,15 @@
 {Utente}
 {Speect}
 {L'utente vuole cercare un percorso nel grafo}
-{Esiste un grafo corretto e l'utente ha premuto Ricerca Path nel menu}
-{Se il path porta ad un nodo definito esso viene selezionato \refer{UC7.2.1}}
+{Esiste un grafo corretto, l'utente ha selezionato un nodo e premuto Ricerca Path nel menu}
+{Se il path porta ad un nodo definito esso viene evidenziato \refer{UC7.2.1}}
 {Viene visualizzato un errore \refer{UC10.1}}
 {
 	\begin{itemize}
 		\item{} Viene visualizzata una finestra con una casella di testo e un pulsante
 		\item{} L'attore inserisce il percorso da cercare
 		\item{} L'attore preme il pulsante di Ricerca
-		\item{} Se il percorso finisce in un nodo esso viene selezionato \refer{UC7.2.1}
+		\item{} Se il percorso inizia dal nodo selezionato e finisce in un nodo esistente il nodo di arrivo viene evidenziato \refer{UC7.2.1}
  	\end{itemize}
 }
 

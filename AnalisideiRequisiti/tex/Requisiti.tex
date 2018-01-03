@@ -32,7 +32,7 @@
 		\newline ROF2.1&
 		\newline Obbligatorio&
 		\newline L'utente può visualizzare il percorso del file JSon caricato&
-		\newline \refer{UC2} \newline Capitolato 
+		\newline \refer{UC2} \newline Interno
 		\\[1em]	
 		\hline	
 		
@@ -71,7 +71,7 @@
 		
 		\newline ROF4&\newline Obbligatorio&
 		\newline L'utente può salvare l'audio risultante con estensione WAV&
-		\newline \refer{UC4} \newline Capitolato
+		\newline \refer{UC4} 
 		\\[1em]
 			\hline
 			
@@ -193,7 +193,7 @@
 		\hline
 		\newline ROF8.1&\newline Obbligatorio&
 		\newline Il sistema visualizza l'errore di esecuzione se Speect fallisce l'esecuzione&
-		\newline \refer{UC7.1} \newline Capitolato
+		\newline \refer{UC7.1} \newline Interno
 		\\[1em]
 		\hline
 		
@@ -212,14 +212,14 @@
 		\hline
 		
 		\newline ROF9.2&\newline Obbligatorio&
-		\newline L'utente vede ogni relazione del grafo di un colore diverso, relativo alla legenda&
-		\newline \refer{UC6} \newline Capitolato
+		\newline L'utente vede ogni relazione del grafo di un colore diverso, relativo al colore in legenda&
+		\newline VI-15-12-17  \newline Capitolato
 		\\[1em]
 		\hline
 		
 		\newline RDF9.2.1&\newline Desiderabile&
-		\newline L'utente può cambiare il colore degli utterance processor&
-		\newline \refer{UC7} \newline VI-15-12-17
+		\newline L'utente può cambiare il colore delle relazioni in legenda&
+		\newline \refer{UC7.2.4} \newline VI-15-12-17
 		\\[1em]
 		\hline
 		
@@ -254,13 +254,13 @@
 		\hline
 		
 		\newline RDF9.4.1&\newline Desiderabile&
-		\newline L'utente può selezionare il nodo del grafo tramite percorso nel grafo&
+		\newline L'utente può evidenziare un nodo del grafo tramite percorso partendo da un nodo selezionato&
 		\newline \refer{UC10} \newline \refer{UC7.2.1} \newline VI-15-12-17 \newline Capitolato
 		\\[1em]
 		\hline
 		
 		\newline ROF9.5&\newline Obbligatorio&
-		\newline Il nodo selezionato dall'utente viene evidenziato con un contorno giallo&
+		\newline I nodi selezionati dall'utente vengono evidenziati&
 		\newline \refer{UC7.2.1} \newline VI-15-12-17 \newline Capitolato
 		\\[1em]
 		\hline
@@ -273,13 +273,13 @@
 		
 		\newline ROF9.6&\newline Obbligatorio&
 		\newline L'utente può spostare i nodi del grafo graficamente&
-		\newline \refer{UC7.2.2} \newline VI-15-12-17 \newline Capitolato
+		\newline \refer{UC7.2.2} \newline VI-15-12-17
 		\\[1em]
 		\hline
 		
 		\newline RDF9.7&\newline Desiderabile&
-		\newline L'utente può filtrare il grafo per strati di relazione&
-		\newline \refer{UC7.2.4} \newline \refer{UC6} \newline Capitolato
+		\newline L'utente può visualizzare gli strati di relazione del grafo selezionati&
+		\newline \refer{UC7.2.4} \newline Capitolato
 		\\[1em]
 		\hline
 	
@@ -291,13 +291,13 @@
 		
 		\newline RFF9.8.1&\newline Facoltativo&
 		\newline L'utente può cancellare gli archi dei nodi del grafo&
-		\newline Interno
+		\newline Interno \newline Capitolato
 		\\[1em]
 		\hline
 		
 		\newline RFF9.8.2&\newline Facoltativo&
 		\newline L'utente può aggiungere archi a dei nodi del grafo&
-		\newline Interno
+		\newline Interno \newline Capitolato
 		\\[1em]
 		\hline
 	
@@ -334,14 +334,9 @@
 		\newline \refer{UC9} \newline \refer{UC9.1} \newline VI-15-12-17 
 		\\[1em]
 		\hline
-			\newline RFF12.2&\newline Facoltativo&
-		\newline L'utente può caricare  graficamente due grafi diversi&
-		\newline Capitolato
-		\\[1em]
-		\hline
 		
-			\newline RFF12.2.1&\newline Facoltativo&
-		\newline L'utente può confrontare due grafi automaticamente&
+			\newline RFF12.2&\newline Facoltativo&
+		\newline L'utente può confrontare due strati di relazione automaticamente&
 		\newline Capitolato
 		\\[1em]
 		\hline
@@ -421,7 +416,7 @@
 			RDV3&\newline Desiderabile&
 			\newline 
 			L'applicazione deve essere rilasciata con licenze opensource&
-			\newline Capitolato
+			\newline Capitolato \newline Interno
 			\\[1em]
 			\hline	
 			\newline
@@ -431,5 +426,16 @@
 			\newline Capitolato
 			\\[1em]
 			\hline
+	\end{longtable}
+\newpage
+	\section{Tracciamento fonte-requisiti}
+	\begin{longtable}{| p{4cm} | p{4cm} |}
+		\hline
+		\textbf{Fonte} & \textbf{Requisti} \\
+			\hline
+		\endhead
+		\newline Capitolato & \newline ROF0 \newline ROF2 \newline RFF2.2 \newline ROF7 \newline ROF8 \newline ROF9 \newline ROF9.1 \newline ROF9.2 \newline ROF9.3 \newline ROF9.3 \newline ROF9.3.1 \newline ROF9.3.1.1 \newline ROF9.3.1.2 \newline RDF9.4 \newline RDF9.4.1 \newline RDF9.5 \newline RDF9.7 \newline RFF9.8 \newline RFF9.8.1 \newline RFF9.8.2 \newline RFF10 \newline RFF12.2 \newline ROQ0 \newline ROV0 \newline ROV1 \newline ROV2 \newline ROV2.1 \newline ROV3 \newline ROV3.1 \\[1em]
+	\hline	
+	
 	\end{longtable}
 \end{document}
