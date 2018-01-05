@@ -8,7 +8,7 @@
 
 \subsection{Scopo}
 
-Questo processo si prefigge come scopo la stesura delle attività che il gruppo di lavoro deve svolgere.
+Il processo di sviluppo ha il fine di pianificare dettagliatamente e poi realizzare le attività che il gruppo di lavoro deve svolgere per fornire il prodotto richiesto dal capitolato.
 
 \subsection{Descrizione}
 
@@ -63,7 +63,9 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 	
 	I requisiti devono essere suddivisi per importanza e classificati come segue:
 	
-	\centerline{R[Importanza][Tipologia][Codice]}
+	\begin{center}
+		R[Importanza][Tipologia][Codice]
+	\end{center}
 	
 		\begin{itemize}
 			\item \textbf{Importanza:} Ogni requisito può appartenere solo ad una delle classi di Importanza elencate di seguito:
@@ -92,30 +94,35 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 		
 	\subsubsection{Classificazione casi d’uso} 
 	
-	I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo: \\ \centerline{UC[Codice padre]*.[Codice identificativo]}
+	I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo: 
+	
+	\begin{center}
+		UC[Codice padre]*.[Codice identificativo]
+	\end{center}
 	
 	\begin{itemize}
-		\item \textbf{Codice padre:} Identifica il codice del caso d'uso da cui è stato generato il caso d'uso identificato, se non esiste il campo va tralasciato;
-		\item \textbf{Codice identificativo:} Identifica il caso d'uso univocamente.
+		\item \textbf{Codice padre:} identifica il codice del caso d'uso da cui è stato generato il caso d'uso identificato, se non esiste il campo va tralasciato;
+		\item \textbf{Codice identificativo:} identifica il caso d'uso univocamente.
 	\end{itemize}
 
 	\noindent Ogni caso d'uso è inoltre definito secondo la seguente struttura:
 	\begin{itemize}
-		\item \textbf{ID:}Il codice del caso d'uso secondo la convenzione specificata precedentemente;
-		\item \textbf{Nome:}Specifica il titolo del caso d'uso;
-		\item \textbf{Attori:}Indica gli attori principali (ad esempio l'utente generico) e secondari (ad esempio entità di autenticazione esterne) del caso d'uso;
-		\item \textbf{Descrizione:} Riporta una breve descrizione del caso d'uso;
-		\item \textbf{Precondizione:} Specifica le condizioni che sono identificate come vere prima del verificarsi degli eventi del caso d'uso;
-		\item \textbf{Postcondizione:} Specifica le condizioni che sono identificate come vere dopo il verificarsi degli eventi del caso d'uso;
-		\item \textbf{Scenario principale:}Rappresenta il flusso degli eventi come lista numerata, specificando per ciascun evento: titolo, descrizione, attori coinvolti e casi d'uso generati;
-		\item \textbf{Scenari Alternativi:} Specifica casi di errore o eventi non previsti nel flusso di esecuzione;
-		\item \textbf{Inclusioni:}Usate per non descrivere più volte lo stesso flusso di eventi, inserendo il comportamento comune in un caso d'uso a parte;
-		\item \textbf{Estensioni:}Descrivono i casi d'uso che non fanno parte del flusso principale degli eventi, allo stesso modo di quanto descritto in "Scenario principale".
+		\item \textbf{ID:} il codice del caso d'uso secondo la convenzione specificata precedentemente;
+		\item \textbf{Nome:} specifica il titolo del caso d'uso;
+		\item \textbf{Attori:} indica gli attori principali (ad esempio l'utente generico) e secondari (ad esempio entità di autenticazione esterne) del caso d'uso;
+		\item \textbf{Descrizione:} riporta una breve descrizione del caso d'uso;
+		\item \textbf{Precondizione:} specifica le condizioni che sono identificate come vere prima del verificarsi degli eventi del caso d'uso;
+		\item \textbf{Postcondizione:} specifica le condizioni che sono identificate come vere dopo il verificarsi degli eventi del caso d'uso;
+		\item \textbf{Scenario principale:} rappresenta il flusso degli eventi come lista numerata, specificando per ciascun evento: titolo, descrizione, attori coinvolti e casi d'uso generati;
+		\item \textbf{Scenari Alternativi:} specifica casi di errore o eventi non previsti nel flusso di esecuzione;
+		\item \textbf{Inclusioni:} usate per non descrivere più volte lo stesso flusso di eventi, inserendo il comportamento comune in un caso d'uso a parte;
+		\item \textbf{Estensioni:} descrivono i casi d'uso che non fanno parte del flusso principale degli eventi, allo stesso modo di quanto descritto in "Scenario principale".
 	\end{itemize}
 
 	Alcuni casi d'uso possono essere associati ad un Diagramma \glossario{UML}{UML} 2.x dei casi d'uso riportante lo stesso titolo e codice.
-	\\
-	\centerline{Esempio di caso d'uso:}
+
+	
+	\centerline{Esempio di caso d'uso:}	% questa deve diventare la caption dell'immagine
 	
 	%immagine esempio di caso d'uso
 	
