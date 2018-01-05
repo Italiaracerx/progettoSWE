@@ -177,17 +177,215 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 		\item \textbf{Diagrammi delle attività:} descrivono il flusso di operazioni di una attività (ad esempio un algoritmo), descrivendone la logica procedurale.
 	\end{itemize}
 
-	E' possibile inoltre fare uso di altre tipologie di diagrammi, come diagrammi delle componenti, di macchine a stati o di \glossario{deployment}{deployment}, se necessario.
+	\noindent E' possibile inoltre fare uso di altre tipologie di diagrammi, come diagrammi delle componenti, di macchine a stati o di \glossario{deployment}{deployment}, se necessario.
 	
 	\subsection{Codifica}
 	
 	\subsubsection{Scopo}
 	
-	Nella seguente sezione sono riporte le norme da seguire durante la programmazione da parte dei \textit{Programmatori}. Lo scopo di queste norme consiste nel dare delle linee guida ai \textit{Programmatori} in modo tale che il codice risulti leggibile e aiuti durante la fase di mantenimento, verifica e validazione.
+	Nella seguente sezione sono riporte le norme da seguire durante la programmazione da parte dei \textit{Programmatori}. Lo scopo di queste norme consiste nel dare delle linee guida in modo tale che il codice risulti leggibile e aiuti durante la fase di mantenimento, verifica e validazione, migliorando così la qualità del prodotto.
 
 	\subsubsection{Descrizione}
 	
-	Per le \emph{Coding Conventions} aderiremo alla GNU GCC \url{https://gcc.gnu.org/codingconventions.html}
+	Aderiremo alle GNU GCC Coding Conventions che si trovano all'indirizzo \url{https://gcc.gnu.org/codingconventions.html}. 
 	
-
+	\subsubsection{Formattazione}
+	
+	Le convenzioni di formattazione principalmente saranno le seguenti:
+	
+	\begin{itemize}
+		
+		\item \textbf{Linee:} Le linee devono essere al massimo di 80 colonne;
+		
+		\item \textbf{Nomi:} I nomi delle macro dovrebbero essere tutti in maiuscolo nei casi in cui è importante essere consapevoli che è una macro, ma quando creiamo un \glossario{wrapper}{wrapper} per l'efficienza, in cui fondamentalmente vogliamo far finta che sia una funzione, dovrebbe essere in minuscolo. Ad esempio, size\textunderscore int è una macro.\\
+		Quando le strutture e/o le classi hanno funzioni membro, è preferito nominare i dati membro con il prefisso m\textunderscore , mentre per i dati statici con il prefisso s\textunderscore .\\
+		I nomi dei parametri dei template dovrebbero usare \glossario{CamelCase}{CamelCase}, seguendo lo standard C++.\\
+		Altri nomi dovrebbero essere minuscoli e separati dal trattino basso;
+		
+		\item \textbf{Espressioni:}
+		\begin{center}
+		\begin{tabular}{|l|c|c|}
+			\hline
+			Per&Uso...&...invece di \\ \hline
+			not logico&!x&! x \\ \hline
+			complemento bit a bit&${\sim}x$&$\sim x$ \\ \hline
+			meno unario&-x&- x \\ \hline
+			conversione esplicita&(foo) x&(foo)x \\ \hline
+			deferenziazione puntatore&*x&* x \\ \hline
+		\end{tabular}
+		\end{center}
+		
+		\item \textbf{Variabili:} Le variabili dovrebbero essere definite nel momento del loro primo utilizzo, piuttosto che nella parte superiore della funzione. Le variabili possono essere definite e testate simultaneamente nelle espressioni di controllo;
+		
+		\item \textbf{Strutture:} Utilizzare la parola chiave struct per i semplici vecchi dati (\glossario{POD}{POD});
+		
+		\item \textbf{Classi:} Usare la parola chiave class per i tipi non POD.	
+		Un tipo non POD spesso ha una dichiarazione di una funzione membro speciale.		
+		È consentita l'ereditarietà singola. Utilizzare l'ereditarietà pubblica per l'interfaccia, cioè le relazioni 'is-a'. Utilizzare l'ereditarietà privata e protetta per l'implementazione. L'ereditarietà nell'implementazione può essere utile, ma da rifletterci prima di usarla in codice destinato a durare a lungo.		
+		Le gerarchie complesse devono essere evitate. Fare particolare attenzione con l'ereditarietà multipla. Nella rara occasione in cui l'utilizzo dell'ereditarietà multipla è davvero utile fare particolare attenzione a rendere chiara la documentazione dell'intera gerarchia.		
+		Pensare attentamente alle dimensioni e all'impatto sulle prestazioni delle funzioni prima di utilizzarle.		
+		E' preferito rendere privati i membri dei dati.
+		
+		Per la definizione di classe usare le seguenti regole:
+		
+		\begin{itemize}
+			\item Non indentare etichette di protezione;
+			\item Indentare i membri della classe di due spazi;
+			\item Se possibile scrivere l'intera classe su una singola riga.
+				
+				\begin{verbatim}
+					class gnuclass: base {
+				\end{verbatim}
+					
+				Altrimenti, iniziare con i due punti dell'elenco all'inizio della riga successiva.
+				
+				\begin{verbatim}
+				class a_rather_long_class_name
+				: with_a_very_long_base_name, and_another_just_to_make_life_hard
+				{
+				  int member;
+				};
+				\end{verbatim}
+					
+			\item Se l'elenco supera una riga, spostare gli inizializzatori traboccanti sulla riga successiva con il rientro di due spazi.
+				
+				\begin{verbatim}
+				class gnuclass
+				: base1 <template_argument1>, base2 <template_argument1>,
+				  base3 <template_argument1>, base4 <template_argument1>
+				{
+				  int member;
+				};
+				\end{verbatim}
+		\end{itemize}
+		
+		Quando si definisce una classe l'ordine in cui definire i suoi elementi dovrebbe essere questo:
+					
+		\begin{itemize}
+			\item definire tutti i tipi pubblici;
+			\item definire tutti i tipi non pubblici;
+			\item dichiarare tutti i costruttori pubblici;
+			\item dichiarare il distruttore pubblico;
+			\item dichiarare tutte le funzioni dei membri pubblici;
+			\item dichiarare tutte le variabili membro pubbliche;
+			\item dichiarare tutti i costruttori non pubblici;
+			\item dichiarare il distruttore non pubblico;
+			\item dichiarare tutte le funzioni di membro non pubblico;
+			\item dichiarare tutte le variabili membro non pubbliche.				
+		\end{itemize}
+			
+		Se vincoli semantici richiedono un diverso ordine di dichiarazione, cercare di minimizzare la potenziale confusione.
+			
+		Chiudere una definizione di classe con parentesi graffa destra, punto e virgola, commento di chiusura facoltativo e una nuova riga.
+			
+		\begin{verbatim}
+		}; // class gnuclass
+		\end{verbatim}
+		
+		\item \textbf{Membri di una classe:} Definire tutti i membri al di fuori della definizione della classe, cioè non ci sono corpi di funzioni o inizializzatori di membri all'interno della definizione di classe.
+		
+		E' preferito scrivere tutto su una singola riga.
+		
+		\begin{verbatim}
+		gnuclass::gnuclass () : base_class ()
+		{ 
+		  ...
+		};
+		\end{verbatim}
+		
+		Quando ciò non è possibile, posiziona i due punti della lista di inizializzatori all'inizio di una riga.
+		
+		\begin{verbatim}
+		gnuclass::gnuclass ()
+		: base1 (), base2 (), member1 (), member2 (), member3 (), member4 ()
+		{ 
+		  ...
+		};
+		\end{verbatim}
+		
+		Se la lista di inizializzazione supera una riga, sposta gli inizializzatori traboccanti sulla riga successiva e il rientro di due spazi.
+		
+		\begin{verbatim}
+		gnuclass::gnuclass ()
+		: base1 (some_expression), base2 (another_expression),
+		  member1 (my_expressions_everywhere)
+		{ 
+		  ...
+		};
+		\end{verbatim}
+		
+		Se il nome di una funzione C++ è abbastanza lungo da far sì che il primo parametro di funzione con il suo tipo superi 80 caratteri, dovrebbe apparire nella riga successiva di quattro spazi rientrati.
+		
+		\begin{verbatim}
+		void
+		very_long_class_name::very_long_function_name (
+		    very_long_type_name arg)
+		{
+		\end{verbatim}
+		
+		A volte il qualificatore della classe e il nome della funzione insieme superano gli 80 caratteri. In questo caso, interrompi la riga prima dell'operatore ::. Potremmo desiderare di farlo in modo preventivo per tutte le funzioni dei membri della classe.
+		
+		\begin{verbatim}
+		void
+		very_long_template_class_name <with, a, great, many, arguments>
+		::very_long_function_name (
+		    very_long_type_name arg)
+		{
+		\end{verbatim}		
+		
+		\item \textbf{Costruttori:} Tutti i costruttori devono inizializzare i membri dei dati nell'elenco di inizializzazione dei membri piuttosto che nel corpo del costruttore;
+		
+		\item \textbf{Distruttori:} Una classe con funzioni virtuali dovrebbe avere un distruttore virtuale;
+		
+		\item \textbf{Conversioni:} I costruttori a singolo argomento dovrebbero essere quasi sempre dichiarati espliciti.		
+		Gli operatori di conversione dovrebbero essere evitati;
+		
+		\item \textbf{Overloading delle funzioni:} È consentito fare \glossario{overloading}{overloading} delle funzioni, facendo però in modo che non siano inaspettati, cioè semanticamente identici o almeno molto simili. Non è consigliato farlo per le funzioni virtuali;
+		
+		\item \textbf{Overloading degli operatori:} È consentito fare overloading degli operatori, facendo però in modo che non siano inaspettati. Un uso non inaspettato è quello dei tipi numerici nell'implementazione. L'overloading degli operatori, ad eccezione dell'operatore di chiamata, non deve essere utilizzato per implementazioni costose;
+		
+		\item \textbf{Argomenti di default:} Gli argomenti di default sono un altro tipo di overloading di funzioni e si applicano le stesse regole. Gli argomenti di default devono sempre essere valori POD, cioè non possono eseguire costruttori. Le funzioni virtuali non dovrebbero avere argomenti di default;
+		
+		\item \textbf{Funzioni inline:} Costruttori e distruttori, anche quelli con corpi vuoti, sono spesso molto più grandi di quanto si aspettino i \textit{Programmatori}. Preferire versioni non in linea a meno che non si abbia la prova che la versione in linea sia più piccola o abbia un impatto significativo sulle prestazioni;
+		
+		\item \textbf{Template:} Per evitare dimensioni eccessive del compilatore, prendere in considerazione l'implementazione di template non banali su una classe base non template con parametri void*.
+		Una dichiarazione che segue un elenco di parametri del template non dovrebbe avere indentazione aggiuntiva.
+		E' preferito il typename sulla classe nella lista di parametri del template;
+		
+		
+		\item \textbf{Namespace:} I namespace sono incoraggiati. Tutte le librerie separabili dovrebbero avere un unico namespace globale. I nomi delle directory annidate devono essere associati a namespace annidati quando possibile.		
+		I file header non dovrebbero avere direttive using.
+		
+		Aprire un namespace con il nome seguito da una parentesi graffa sinistra e una nuova riga.
+		
+		\begin{verbatim}
+		namespace gnutool {
+		\end{verbatim}
+		
+		Chiudere con una parentesi graffa destra, un commento di chiusura facoltativo e una nuova riga.		
+		
+		\begin{verbatim}
+		} // namespace gnutool
+		\end{verbatim}
+		
+		Le definizioni all'interno del corpo di un namespace non sono indentate;
+		
+		\item \textbf{Extern:} E' preferito un blocco extern a un qualificatore di dichiarazione.
+		
+		Aprire un blocco extern con la parentesi graffa sinistra sulla stessa riga.
+		
+		\begin{verbatim}
+		extern "C" {
+		\end{verbatim}
+		
+		Chiudere con una parentesi destra, un commento di chiusura opzionale e una nuova riga.
+		
+		\begin{verbatim}
+		} // extern "C"
+		\end{verbatim}
+		
+		Le definizioni all'interno del corpo di un blocco extern non sono indentate.
+	
+	\end{itemize}
+	
 \end{document}
