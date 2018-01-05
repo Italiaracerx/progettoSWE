@@ -39,6 +39,9 @@
 	\thispagestyle{empty}
 	\newpage
 	
+	\tableofcontents
+	\newpage
+	
 	\section{Informazioni generali}
 	
 	\subsection{Informazioni sull'incontro}
@@ -47,8 +50,8 @@
 	    \item \textbf{Luogo:} Aula P300, Complesso Paolotti (Videochiamata);
 	    \item \textbf{Data:} 15-12-2017;
 	    \item \textbf{Orari} 14:00 - 14:40;
-	    \item \textbf{Assenti:} nessuno;
-	    \item \textbf{Partecipanti esterni:} Giulio Paci.
+	    \item \textbf{Partecipanti del gruppo:} Marco Focchiatti, Samuele Modena, Matteo Rizzo, Giulio Rossetti, Kevin Silvestri, Manfredi Smaniotto, Cristiano Tessarolo;
+	    \item \textbf{Partecipanti esterni:} Dr. Giulio Paci.
 	\end{itemize}
 	
 	\subsection{Ragioni dell'incontro}
@@ -62,36 +65,27 @@
 	Nel corso dell'incontro sono stati chiariti i dubbi sollevati dal gruppo sul prodotto da realizzare per il capitolato proposto da MIVOQ SRL, nello specifico sono stati delucidati i seguenti punti:
 	
 	\begin{itemize}
-	    \item Illustrata interfaccia grafica dimostrativa inclusa nel capitolato d'appalto, con spiegazione del significato e delle funzionalità richieste dagli elementi che la compongono.
-	    \item Chiarimento sul funzionamento generale della tecnologia \glossario{Speect}{Speect} di cui farà largo uso il progetto.
-	    \item Chiarimento sul livello di manipolazione richiesto dei nodi del \glossario{grafo}{Grafo} offerto in output all'utente.
+	    \item Illustrata interfaccia grafica dimostrativa inclusa nel capitolato d'appalto, con spiegazione del significato e delle funzionalità richieste dagli elementi che la compongono;
+	    \item Chiarimento sul funzionamento generale della tecnologia \glossario{Speect}{Speect} di cui farà largo uso il progetto;
+	    \item Chiarimento sul livello di manipolazione richiesto dei nodi del \glossario{grafo}{Grafo} offerto in output all'utente;
 	    \item Illustrazione della struttura dei file \glossario{json}{file .json} di cui fa uso Speect.
 	\end{itemize}
 	
-	Seguono le principali domande poste durante l'incontro e la sintesi delle relative risposte ricevute:
+	\noindent Seguono le principali domande poste durante l'incontro e la sintesi delle relative risposte ricevute:
 	
 	\begin{enumerate}
 	
-	\item
-    	\begin{itemize}
-    	    \item \textbf{Domanda:} Lo scopo del progetto è di realizzare un’interfaccia grafica per Speect oppure un debugger per lo stesso?
-    	    \item \textbf{Risposta:} Il capitolato richiede la realizzazione di un'interfaccia grafica per Speect che stampi su schermo i grafi relativi ai vari stati interni dello stesso per una specifica esecuzione. Tali grafi verranno utilizzati per semplificare la ricerca di errori in applicazioni che utilizzano Speect ed in questo senso il prodotto da realizzare svolgerà una funzione di debugging. 
-    	\end{itemize}
-    \item
-    	\begin{itemize}
-    	    \item \textbf{Domanda:} In che modo l'interfaccia da realizzare dovrà interagire con Speect?
-    	    \item \textbf{Risposta:} L'interfaccia da realizzare invocherà i metodi forniti da Speect sfruttandoli per la stampa dei grafi.
-    	\end{itemize}
-    \item
-    	\begin{itemize}
-    	    \item \textbf{Domanda:} Dall'interfaccia dimostrativa presente nel capitolato, si evince che l'applicazione dovrà poter ricevere in input file .json ed elaborarli. Quale ruolo hanno questi file all'interno di Speect? La loro struttura ci verrà fornita o starà a noi progettarla?
-    	    \item \textbf{Risposta:} Speect sfrutta la tecnologia JSON per interagire con dati persistenti (per esempio, a scopo di inizializzazione). La struttura dei file con cui interagisce è già definita.
-    	\end{itemize}
-    \item
-    	\begin{itemize}
-    	    \item \textbf{Domanda:} A che livello deve essere possibile per l'utente interagire con il grafo stampato dal prodotto da realizzare?
-    	    \item \textbf{Risposta:} L'utente deve poter modificare i nodi, importare ed esportare i grafi.
-    	\end{itemize}
+	\item \textbf{Lo scopo del progetto è di realizzare un’interfaccia grafica per Speect oppure un debugger per lo stesso?}\\
+	Il capitolato richiede la realizzazione di un'interfaccia grafica per Speect che stampi su schermo i grafi relativi ai vari stati interni dello stesso per una specifica esecuzione. Tali grafi verranno utilizzati per semplificare la ricerca di errori in applicazioni che utilizzano Speect ed in questo senso il prodotto da realizzare svolgerà una funzione di debugging.
+    
+    \item \textbf{In che modo l'interfaccia da realizzare dovrà interagire con Speect?}\\
+    L'interfaccia da realizzare invocherà i metodi forniti da Speect sfruttandoli per la stampa dei grafi.
+    
+    \item \textbf{Dall'interfaccia dimostrativa presente nel capitolato, si evince che l'applicazione dovrà poter ricevere in input file .json ed elaborarli. Quale ruolo hanno questi file all'interno di Speect? La loro struttura ci verrà fornita o starà a noi progettarla?}\\
+    Speect sfrutta la tecnologia JSON per interagire con dati persistenti (per esempio, a scopo di inizializzazione). La struttura dei file con cui interagisce è già definita.
+    
+    \item \textbf{A che livello deve essere possibile per l'utente interagire con il grafo stampato dal prodotto da realizzare?}\\
+    L'utente deve poter modificare i nodi, importare ed esportare i grafi.
 	
 	\end{enumerate}
 	
