@@ -187,26 +187,37 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 
 	\subsubsection{Descrizione}
 	
-	Aderiremo alle GNU GCC Coding Conventions che si trovano all'indirizzo \url{https://gcc.gnu.org/codingconventions.html}. 
+	Aderiamo alle GNU GCC Coding Conventions che si trovano all'indirizzo \url{https://gcc.gnu.org/codingconventions.html}. 
 	
 	\subsubsection{Formattazione}
 	
-	Le convenzioni di formattazione principalmente saranno le seguenti:
+	Le convenzioni di formattazione principalmente sono le seguenti:
 	
 	\begin{itemize}
 		
 		\item \textbf{Linee:} Le linee devono essere al massimo di 80 colonne;
 		
-		\item \textbf{Nomi:} I nomi delle macro dovrebbero essere tutti in maiuscolo nei casi in cui è importante essere consapevoli che è una macro, ma quando creiamo un \glossario{wrapper}{wrapper} per l'efficienza, in cui fondamentalmente vogliamo far finta che sia una funzione, dovrebbe essere in minuscolo. Ad esempio, size\textunderscore int è una macro.\\
-		Quando le strutture e/o le classi hanno funzioni membro, è preferito nominare i dati membro con il prefisso m\textunderscore , mentre per i dati statici con il prefisso s\textunderscore .\\
-		I nomi dei parametri dei template dovrebbero usare \glossario{CamelCase}{CamelCase}, seguendo lo standard C++.\\
-		Altri nomi dovrebbero essere minuscoli e separati dal trattino basso;
+		\item \textbf{Univocità dei nomi:} Classi, metodi, variabili devono avere un
+		nome univoco ed esplicativo al fine di evitare quanto più possibile ambiguità di comprensione;
+		
+		\item \textbf{Nomi - Macro:} I nomi delle macro devono essere tutti in maiuscolo;
+		
+		\item \textbf{Nomi - Classi:} Le classi iniziano sempre con una lettera maiuscola;
+		
+		\item \textbf{Nomi - Metodi:} I nomi dei metodi iniziano con una lettera minuscola,
+		se sono composti da più parole le successive devono iniziare con una lettera maiuscola. Le sigle e gli acronimi, all'interno dei nomi dei metodi, vengono trattate come parole;
+		
+		\item \textbf{Nomi - Strutture:} Quando le strutture e/o le classi hanno funzioni membro, i dati membro vanno nominati con il prefisso m\textunderscore , mentre i dati statici con il prefisso s\textunderscore;
+		
+		\item \textbf{Nomi - Template:} I nomi dei parametri dei template devono usare \glossario{CamelCase}{CamelCase}, seguendo lo standard C++;
+		
+		\item \textbf{Altri nomi:} Devono essere minuscoli e separati dal trattino basso;
 		
 		\item \textbf{Espressioni:}
 		\begin{center}
 		\begin{tabular}{|l|c|c|}
 			\hline
-			Per&Uso...&...invece di \\ \hline
+			Espressione&Convenzione adottata&Convenzione scorretta \\ \hline
 			not logico&!x&! x \\ \hline
 			complemento bit a bit&${\sim}x$&$\sim x$ \\ \hline
 			meno unario&-x&- x \\ \hline
@@ -215,21 +226,26 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 		\end{tabular}
 		\end{center}
 		
-		\item \textbf{Variabili:} Le variabili dovrebbero essere definite nel momento del loro primo utilizzo, piuttosto che nella parte superiore della funzione. Le variabili possono essere definite e testate simultaneamente nelle espressioni di controllo;
+		\item \textbf{Variabili:} Le variabili devono essere definite nel momento del loro primo utilizzo. Possono essere definite e testate simultaneamente nelle espressioni di controllo;
 		
-		\item \textbf{Strutture:} Utilizzare la parola chiave struct per i semplici vecchi dati (\glossario{POD}{POD});
+		\item \textbf{Strutture:} La parola chiave struct deve essere utilizzata solo per i (\glossario{POD}{POD});
 		
-		\item \textbf{Classi:} Usare la parola chiave class per i tipi non POD.	
-		Un tipo non POD spesso ha una dichiarazione di una funzione membro speciale.		
-		È consentita l'ereditarietà singola. Utilizzare l'ereditarietà pubblica per l'interfaccia, cioè le relazioni 'is-a'. Utilizzare l'ereditarietà privata e protetta per l'implementazione. L'ereditarietà nell'implementazione può essere utile, ma da rifletterci prima di usarla in codice destinato a durare a lungo.		
-		Le gerarchie complesse devono essere evitate. Fare particolare attenzione con l'ereditarietà multipla. Nella rara occasione in cui l'utilizzo dell'ereditarietà multipla è davvero utile fare particolare attenzione a rendere chiara la documentazione dell'intera gerarchia.		
-		Pensare attentamente alle dimensioni e all'impatto sulle prestazioni delle funzioni prima di utilizzarle.		
-		E' preferito rendere privati i membri dei dati.
+		\item \textbf{Classi:} La parola chiave class deve essere utilizzata solo per i tipi non POD. Un tipo non POD spesso ha una dichiarazione di una funzione membro speciale.
 		
-		Per la definizione di classe usare le seguenti regole:
+		\item \textbf{Ereditarietà:} Per quanto riguarda l'ereditarietà è necessario attenersi ai seguenti accorgimenti:
+		\begin{itemize}
+			\item È consentita l'ereditarietà singola;
+			\item Deve essere utilizzata l'ereditarietà pubblica per l'interfaccia, cioè le relazioni 'is-a';
+			\item Deve essere utilizzata l'ereditarietà privata e protetta per l'implementazione; 		
+			\item Le gerarchie complesse devono essere evitate;
+			\item L'ereditarietà multipla deve essere trattata con particolare attenzione e nel caso venga usata deve essere scritta una chiara documentazione dell'intera gerarchia;	
+			\item Prima di utilizzare ogni funzione bisogna pensare attentamente alle dimensioni e all'impatto sulle prestazioni;
+			\item E' preferito rendere privati i membri dei dati.
+		\end{itemize}
+		
+		\item \textbf{Definizione di classe:} Per la definizione di classe devono essere usate le seguenti regole:
 		
 		\begin{itemize}
-			\item Non indentare etichette di protezione;
 			\item Indentare i membri della classe di due spazi;
 			\item Se possibile scrivere l'intera classe su una singola riga.
 				
@@ -258,10 +274,10 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 				};
 				\end{verbatim}
 		\end{itemize}
-		
-		Quando si definisce una classe l'ordine in cui definire i suoi elementi dovrebbe essere questo:
+	
+		\item \textbf{Elementi di un classe:} Quando si definisce una classe l'ordine in cui definire i suoi elementi deve essere questo:
 					
-		\begin{itemize}
+		\begin{enumerate}
 			\item definire tutti i tipi pubblici;
 			\item definire tutti i tipi non pubblici;
 			\item dichiarare tutti i costruttori pubblici;
@@ -272,17 +288,17 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 			\item dichiarare il distruttore non pubblico;
 			\item dichiarare tutte le funzioni di membro non pubblico;
 			\item dichiarare tutte le variabili membro non pubbliche.				
-		\end{itemize}
+		\end{enumerate}
 			
 		Se vincoli semantici richiedono un diverso ordine di dichiarazione, cercare di minimizzare la potenziale confusione.
 			
-		Chiudere una definizione di classe con parentesi graffa destra, punto e virgola, commento di chiusura facoltativo e una nuova riga.
+		Una definizione di classe deve essere chiusa con parentesi graffa destra, punto e virgola, commento di chiusura facoltativo e una nuova riga.
 			
 		\begin{verbatim}
 		}; // class gnuclass
 		\end{verbatim}
 		
-		\item \textbf{Membri di una classe:} Definire tutti i membri al di fuori della definizione della classe, cioè non ci sono corpi di funzioni o inizializzatori di membri all'interno della definizione di classe.
+		\item \textbf{Membri di una classe:} Definire tutti i membri al di fuori della definizione della classe, cioè non ci sono corpi di funzioni o inizializzatori di membri all'interno della definizione della classe.
 		
 		E' preferito scrivere tutto su una singola riga.
 		
@@ -314,7 +330,7 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 		};
 		\end{verbatim}
 		
-		Se il nome di una funzione C++ è abbastanza lungo da far sì che il primo parametro di funzione con il suo tipo superi 80 caratteri, dovrebbe apparire nella riga successiva di quattro spazi rientrati.
+		Se il nome di una funzione C++ è abbastanza lungo da far sì che il primo parametro di funzione con il suo tipo superi 80 caratteri, deve apparire nella riga successiva di quattro spazi rientrati.
 		
 		\begin{verbatim}
 		void
@@ -323,7 +339,7 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 		{
 		\end{verbatim}
 		
-		A volte il qualificatore della classe e il nome della funzione insieme superano gli 80 caratteri. In questo caso, interrompi la riga prima dell'operatore ::. Potremmo desiderare di farlo in modo preventivo per tutte le funzioni dei membri della classe.
+		Se il qualificatore della classe e il nome della funzione insieme superano gli 80 caratteri interrompi la riga e vai a capo con l'operatore ::.
 		
 		\begin{verbatim}
 		void
@@ -335,26 +351,24 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 		
 		\item \textbf{Costruttori:} Tutti i costruttori devono inizializzare i membri dei dati nell'elenco di inizializzazione dei membri piuttosto che nel corpo del costruttore;
 		
-		\item \textbf{Distruttori:} Una classe con funzioni virtuali dovrebbe avere un distruttore virtuale;
+		\item \textbf{Distruttori:} Una classe con funzioni virtuali deve avere un distruttore virtuale;
 		
-		\item \textbf{Conversioni:} I costruttori a singolo argomento dovrebbero essere quasi sempre dichiarati espliciti.		
-		Gli operatori di conversione dovrebbero essere evitati;
+		\item \textbf{Conversioni:} I costruttori a singolo argomento devono essere sempre dichiarati espliciti.		
+		Gli operatori di conversione devono essere evitati;
 		
-		\item \textbf{Overloading delle funzioni:} È consentito fare \glossario{overloading}{overloading} delle funzioni, facendo però in modo che non siano inaspettati, cioè semanticamente identici o almeno molto simili. Non è consigliato farlo per le funzioni virtuali;
+		\item \textbf{Overloading delle funzioni:} È consentito fare \glossario{overloading}{overloading} delle funzioni. Non è consigliato farlo per le funzioni virtuali;
 		
-		\item \textbf{Overloading degli operatori:} È consentito fare overloading degli operatori, facendo però in modo che non siano inaspettati. Un uso non inaspettato è quello dei tipi numerici nell'implementazione. L'overloading degli operatori, ad eccezione dell'operatore di chiamata, non deve essere utilizzato per implementazioni costose;
+		\item \textbf{Overloading degli operatori:} È consentito fare overloading degli operatori. L'overloading degli operatori, ad eccezione dell'operatore di chiamata, non deve essere utilizzato per implementazioni costose;
 		
-		\item \textbf{Argomenti di default:} Gli argomenti di default sono un altro tipo di overloading di funzioni e si applicano le stesse regole. Gli argomenti di default devono sempre essere valori POD, cioè non possono eseguire costruttori. Le funzioni virtuali non dovrebbero avere argomenti di default;
+		\item \textbf{Argomenti di default:} Gli argomenti di default sono un altro tipo di overloading di funzioni e si applicano le stesse regole. Gli argomenti di default devono sempre essere valori POD, cioè non possono eseguire costruttori. Le funzioni virtuali non devono avere argomenti di default;
 		
-		\item \textbf{Funzioni inline:} Costruttori e distruttori, anche quelli con corpi vuoti, sono spesso molto più grandi di quanto si aspettino i \textit{Programmatori}. Preferire versioni non in linea a meno che non si abbia la prova che la versione in linea sia più piccola o abbia un impatto significativo sulle prestazioni;
+		\item \textbf{Funzioni inline:} Costruttori e distruttori, anche quelli con corpi vuoti, sono spesso molto più grandi di quanto si aspettino i \textit{Programmatori}. Sono preferite versioni non in linea, a meno che non si abbia la prova che la versione in linea sia più piccola o abbia un impatto significativo sulle prestazioni;
 		
-		\item \textbf{Template:} Per evitare dimensioni eccessive del compilatore, prendere in considerazione l'implementazione di template non banali su una classe base non template con parametri void*.
-		Una dichiarazione che segue un elenco di parametri del template non dovrebbe avere indentazione aggiuntiva.
+		\item \textbf{Template:} Una dichiarazione che segue un elenco di parametri del template non dovrebbe avere indentazione aggiuntiva.
 		E' preferito il typename sulla classe nella lista di parametri del template;
 		
-		
-		\item \textbf{Namespace:} I namespace sono incoraggiati. Tutte le librerie separabili dovrebbero avere un unico namespace globale. I nomi delle directory annidate devono essere associati a namespace annidati quando possibile.		
-		I file header non dovrebbero avere direttive using.
+		\item \textbf{Namespace:} I namespace sono incoraggiati. Tutte le librerie separabili devono avere un unico namespace globale. I nomi delle directory annidate devono essere associati a namespace annidati quando possibile.		
+		I file header non devono avere direttive using.
 		
 		Aprire un namespace con il nome seguito da una parentesi graffa sinistra e una nuova riga.
 		
