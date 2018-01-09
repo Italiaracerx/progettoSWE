@@ -87,6 +87,39 @@
     \item \textbf{A che livello deve essere possibile per l'utente interagire con il grafo stampato dal prodotto da realizzare?}\\
     L'utente deve poter modificare i nodi, importare ed esportare i grafi.
 	
+	\item \textbf{Salvare un grafo comporta il salvataggio di una immagine o lo stato del grafo visibile in quel momento in modo da ricaricarlo rapidamente sul programma?}\\
+	Con "salvare un grafo" si intende salvare uno stato del grafo capace anche di far riprendere la compilazione da un istante preciso in avanti. Speect dovrebbe avere già dei metodi appositi per poter effettuare l'esportazione dei grafi con l'unica condizione che ogni elemento del grafo deve essere serializzabile.
+
+	\item \textbf{ Il software che deve essere prodotto deve essere un interfaccia interna a Speect oppure un programma a parte?}\\
+	Deve essere prodotto un programma a sè stante che inizializzi Speect al suo interno.
+
+	\item \textbf{Come funziona l'interfaccia grafica e qual'è la funzione di ogni elemento mostrato sull'immagine esempio che è possibile trovare sul capitolato?}\\
+	La colonna sinistra mostra 3 liste di cui la prima in alto sono gli utterance processor elencati all'interno del file.json compilato; essi sono i primi elementi che all'atto della compilazione vengono elencati.
+    \\ Le ulteriori liste presenti nella parte sottostante servirebbero per modificare il file .json con dei feature processor e degli utterance processor che dovrebbe esser possibile comporre all'interno del file.json da salvare successivamente.
+    \\ Tale parte è comunque opzionale al fine del funzionamento dell'applicazione.
+    \\ La parte sinistra deve poter permettere di eseguire singolarmente ogni utterance processor presente nel file.json interagendo con i bottoni (quelli che nella figura sono dei quadratini erano intesi come dei cerchi).
+    \\I campi di testo presenti nella parte alta dell'interfaccia d'esempio contengono l'indirizzo di:
+    \begin{itemize}
+    \item il file json da cui si sono caricati i vari utterance processor nel path denominato voice;
+    \item il path in cui è puntato un nodo quando un utente, dopo aver selezionato un nodo, interagisce con l'interfaccia grafica.
+    \end{itemize}
+    \\ L'esigenza di sapere quale nodo è puntato in un dato path è data dal fatto che utilizzando più plugin Speect opera su una grande quantità di directory e non è sempre chiaro in quale di esse il programma sta lavorando. Per evitare di seguire il percorso a mano si vuole rendere il processo di ricerca automatico.
+
+	\item \textbf{Quando viene premuto uno dei bottoni relativi agli utterance processor presenti nella colonna sinistra dell'interfaccia grafica vengono eseguiti tutti gli utterance processor precedenti oppure si esegue solo quello selezionato?}
+	\\ Viene eseguito solo l'utterance processor selezionato. Il grafo mostrato sarà comunque quello cumulativo. Potrebbe succedere che se il feature processor non trova gli elementi di cui ha bisogno venga lanciato un errore.\\ Devono essere invece eseguite tutte le utterance processor di un certo tipo nel caso in cui venga premuto in alto a destra il relativo tasto di avvio di un certo tipo di utterance. \\ Possibilmente si deve poter creare in partenza una utterance senza un tipo, ma non è detto che al momento si possa fare. \\ Devono quindi essere percorribili sia la strada in cui un utente desidera creare il grafo in modo completo sia selezionando le singole utterance dal menù a sinistra.
+
+	\item \textbf{Deve essere mostrata la compilazione del file voice.json step-by-step oppure è sufficiente mostrare il risultato finale?} 
+	\\ L'importante è che venga mostrato il risultato finale, come già avviene con Speect test.\\
+
+	\item \textbf{Cosa deve permettere di fare il programma nel caso in cui mancassero delle sequenze specifiche per avviare correttamente la costruzione del grafo?}\\ Nulla di più di segnalare un errore, poichè sarà il programmatore che usa l'interfaccia a modificare il file.json per il corretto funzionamento del proprio plugin.
+	\\ Requisito opzionale potrebbe essere di rendere editabili le utterance type all'interno dell'interfaccia (per evitare il ricaricamento del file.json).
+
+	\item \textbf{Il caricamento del file.json deve avvenire in contemporanea alla costruzione del grafo oppure devono essere 2 azioni distinte?}\\ Sono 2 azioni diverse che avvengono in 2 momenti diversi.
+
+	\item \textbf{Il file.json aperto durante la costruzione del grafo viene aperto in automatico durante il caricamento di un salvataggio del grafo?}\\ Non è certo che il file.json venga salvato assieme al file di salvataggio del grafo, quindi dovrà essere verificata più avanti la possibilità di caricare entrambe le cose allo stesso tempo. \\ Non bisogna aspettarsi che Speect abbia già le funzionalità utili per il nostro scopo; dovrebbe però permettere di crearle in modo abbastanza semplice.
+
+	\item \textbf{Tra inizializzazione di Speect tramite funzione apposita e l'utilizzo di Speect nella utterance ci sono dei metodi di cui non sappiamo la funzione; è possibile sapere cosa fanno di preciso?}\\ Servono a caricare dei plugin esterni a Speect per caricare dei formati supportati da Speect a runtime. Essi vengono usati normalmente per salvare un qualsiasi elemento generico di Speect in formato EBML.
+
 	\end{enumerate}
 	
 	\section{Tracciamento delle decisioni}
