@@ -14,14 +14,6 @@
 
 \loadglsentries{../Glossario/Definizioni}
 
-%da aggiungere per changelog
-\usepackage[owncaptions,tablegrid,tocentry]{vhistory}
-\renewcommand{\vhhistoryname}{Registro delle Modifiche}
-\renewcommand{\vhversionname}{Versione}
-\renewcommand{\vhdatename}{Data}
-\renewcommand{\vhauthorname}{Autore}
-\renewcommand{\vhchangename}{Modifiche}
-
 
 \begin{document}
 	\makeatletter
@@ -35,11 +27,11 @@
 			\def\arraystretch{1.5}
 			\begin{tabular}{l|l}
 				\textbf{Versione} & 1.0.0 \\
-				\textbf{Data redazione} & \large \@date \\
-				\textbf{Responsabile} & Matteo Rizzo \\
-				\textbf{Redattori} & Kevin Silvestri \\ 
-								   & Samuele Modena \\
-				\textbf{Verificatori} & Marco Focchiatti \\
+				\textbf{Data approvazione} & \large \@date \\
+				\textbf{Responsabile} & Samuele Modena \\
+				\textbf{Redattori} & Samuele Modena, Marco Focchiatti, \\ 
+								   & Cristiano Tessarolo, Matteo Rizzo \\
+				\textbf{Verificatori} & Kevin Silvestri, Manfredi Smaniotto \\
 				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
 				 & Prof. Riccardo Cardin \\
 				 & Gruppo Graphite \\
@@ -54,11 +46,12 @@
 	\thispagestyle{empty}
 	\newpage
 	
+	\subfile{./tex/changelog}
+	
 	\tableofcontents
 	\listoffigures
 	\listoftables
 	
-	\subfile{./tex/changelog}
 	%Aggiungere File da qua in poi
 	\subfile{./tex/AnalisiPianificazione}
 	\subfile{./tex/PreventivoConsuntivo}

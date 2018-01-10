@@ -9,14 +9,6 @@
 
 \loadglsentries{../Glossario/Definizioni}
 
-%da aggiungere per changelog
-\usepackage[owncaptions,tablegrid,tocentry]{vhistory}
-\renewcommand{\vhhistoryname}{Registro delle modifiche}
-\renewcommand{\vhversionname}{Versione}
-\renewcommand{\vhdatename}{Data}
-\renewcommand{\vhauthorname}{Autore}
-\renewcommand{\vhchangename}{Modifiche}
-
 
 \begin{document}
 	\makeatletter
@@ -30,10 +22,10 @@
 			\def\arraystretch{1.5}
 			\begin{tabular}{l|l}
 				\textbf{Versione} & 1.0.0 \\
-				\textbf{Data redazione} & \large \@date \\
-				\textbf{Responsabile} &  \\
-				\textbf{Redattori} &  \\
-				\textbf{Verificatori} &  \\
+				\textbf{Data approvazione} & \large \@date \\
+				\textbf{Responsabile} & Marco Focchiatti \\
+				\textbf{Redattori} & Giulio Rossetti \\
+				\textbf{Verificatori} & Matteo Rizzo \\
 				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
 				& Prof. Riccardo Cardin \\
 				& Gruppo Graphite \\
@@ -47,21 +39,21 @@
 
 	\thispagestyle{empty}
 	\newpage
-
-	% INDICE
-
-	\tableofcontents{}
 	
 	%REGISTRO DELLE MODIFICHE
 	
-	\begin{versionhistory}
-		%versioni piu recenti sopra
-		%come da norme di progetto [approvato tutto il verificato].[verificato tutto quello aggiunto].[aggiunto qualcosa] 
-		%dopo verificato aggiunto va azzerato dopo approvato verificato va azzerato 
-		
-		
-		\vhEntry{0.0.1}{20-11-2017}{Rizzo}{Creata Introduzione}
-	\end{versionhistory}
+	\chapter*{Registro delle modifiche}
+	\begin{center}	
+		\begin{tabular}{|c|c|c|c|p{4cm}|}
+			\hline
+			\textbf{Versione} & \textbf{Data} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Modifiche} \\ \hline
+			
+		\end{tabular}
+	\end{center}
+
+	% INDICE
+
+	\tableofcontents
 
 	% INTRODUZIONE
 
