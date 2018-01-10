@@ -3,14 +3,22 @@
 \usepackage[]{graphicx}
 \usepackage{float}
 \graphicspath{{./img/}{./../img/}}
-\usepackage{StileDoc}
+\usepackage{../StileDoc}
 \title{Analisi dei Requisiti}
 \author{}
 \date{\today}
+
+
+%Ultima versione documento
+
+\newcommand{\versione}{1.0.0}
+
+
 \usepackage[section]{placeins}
 \loadglsentries{../Glossario/Definizioni}
 
 \begin{document}
+	
 	\makeatletter
 	\begin{titlepage}
 		\setlength{\headsep}{0pt}  
@@ -21,7 +29,7 @@
 			\bgroup
 			\def\arraystretch{1.5}
 			\begin{tabular}{l|l}
-				\textbf{Versione} & 1.0.0 \\
+				\textbf{Versione} & \versione{} \\
 				\textbf{Data approvazione} & \large \@date \\
 				\textbf{Responsabile} & Samuele Modena \\
 				\textbf{Redattori} & Marco Focchiatti, Giulio Rossetti,\\
