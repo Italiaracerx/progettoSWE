@@ -1,0 +1,76 @@
+\documentclass[openany,12pt,a4paper]{article} 
+\usepackage{subfiles} 
+\usepackage[]{graphicx} 
+\usepackage{float} 
+\graphicspath{{./img/}{./../img/}} 
+\usepackage{../StileDoc} 
+\title{Verbale Esterno} 
+\author{} 
+\newcommand{\versione}{} 
+\loadglsentries{../Glossario/Definizioni} 
+ 
+\begin{document} 
+  \makeatletter 
+  \begin{titlepage} 
+    \setlength{\headsep}{0pt}   
+    \begin{center} 
+      \includegraphics[width=0.5\linewidth]{Logo.png}\\[1em] 
+      {\huge \bfseries  \@title }\\[10ex] 
+      \textbf{\Large Informazioni Documento} \\[2em] 
+      \bgroup 
+      \def\arraystretch{1.5} 
+      \begin{tabular}{l|l} 
+        \textbf{Data approvazione} & 11 gennaio 2018 \\ 
+        \textbf{Responsabile} & Samuele Modena \\ 
+        \textbf{Redattore} & Manfredi Smaniotto \\ 
+        \textbf{Verificatore} & Matteo Rizzo \\ 
+        \textbf{Distribuzione} & Prof. Tullio Vardanega \\ 
+         & Prof. Riccardo Cardin \\ 
+         & Gruppo Graphite \\ 
+        \textbf{Uso} & Esterno \\ 
+        \textbf{Recapito} & graphite.swe@gmail.com \\ 
+      \end{tabular} 
+    \egroup 
+    \end{center} 
+  \end{titlepage} 
+  \makeatother 
+ 
+  \thispagestyle{empty} 
+  \newpage 
+   
+  \tableofcontents 
+  \newpage 
+   
+  \section{Informazioni generali} 
+   
+  \subsection{Informazioni sulla mail} 
+   
+  \begin{itemize}  
+      \item \textbf{Data:} 03-01-2018; 
+      \item \textbf{Partecipanti del gruppo:} Marco Focchiatti, Samuele Modena, Matteo Rizzo, Giulio Rossetti, Kevin Silvestri, Manfredi Smaniotto, Cristiano Tessarolo; 
+      \item \textbf{Partecipanti esterni:} Dr. Giulio Paci. 
+  \end{itemize} 
+ 
+  \subsection{Ragioni della mail} 
+  Chiarimenti riguardanti la possibilità di modificare i nodi all'interno del grafico, quali differenze intercorrono tra le relazioni e gli utterance processors e cosa deve essere evidenziato sul grafo che viene costruito. 
+ 
+  \section{Resoconto} 
+ 
+  Via mail è stato richiesto di chiarire qualche dubbio riguardante l'interfaccia da produrre in seguito ad un iniziale stesura dell'analisi dei requisiti. 
+  In particolare sono stati precisati i seguenti punti: 
+
+   \begin{itemize} 
+    \item deve essere possibile spostare graficamente i nodi presenti sul grafico, requisito che quindi deve essere obbligatorio e non semplicemente opzionale; 
+    \item non è presente una relazione biunivoca tra le relazioni e gli utterance processor, quindi deve essere corretto un requisito (in particolare ROF9.2) in modo che non venga posto alcun legame tra questi 2 elementi; 
+    \item non è necessario evidenziare tutti i nodi di un dato percorso selezionato, bensì è sufficiente che siamo messi in risalto il nodo di partenza e quello di arrivo. 
+  \end{itemize} 
+ 
+  \section{Tracciamento delle decisioni} 
+   
+  \begin{itemize} 
+      \item \textbf{VE-03-01-2018.1:}  
+      correzione del documento \textit{Analisi dei Requisiti} con le indicazioni ricevute. 
+  \end{itemize} 
+   
+  \end{document}
+ \ No newline at end of file 
