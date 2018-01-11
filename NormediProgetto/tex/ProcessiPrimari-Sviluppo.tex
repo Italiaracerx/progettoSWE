@@ -44,10 +44,6 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 	\begin{itemize}
 		\item Descrivere il fine del progetto;
 		\item Fissare le funzionalità e i requisiti richiesti dal committente;
-		\item Definire tecniche di raffinamento e di miglioramento del prodotto e processo di sviluppo;
-		\item Definire tecniche per la revisione del codice;
-		\item Fornire ai \glossario{Verificatori}{verificatore} indicazioni per le attività di test.
-		\item Definire una stima dei costi.
 	\end{itemize}
 
 	\noindent Durante l’Analisi dei Requisiti gli \textit{Analisti} analizzano individualmente le varie fonti, quindi, a seguito di una riunione, si confrontano e stilano le varie liste di requisiti suddivise per importanza. Le fonti per gli \textit{Analisti} sono:
@@ -94,30 +90,28 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 		
 	\subsubsection{Classificazione casi d’uso} 
 	
-	I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo: 
-	
-	\begin{center}
-		UC[Codice padre]*.[Codice identificativo]
-	\end{center}
-	
-	\begin{itemize}
-		\item \textbf{Codice padre:} identifica il codice del caso d'uso da cui è stato generato il caso d'uso identificato, se non esiste il campo va tralasciato;
-		\item \textbf{Codice identificativo:} identifica il caso d'uso univocamente.
-	\end{itemize}
+I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo: 
 
-	\noindent Ogni caso d'uso è inoltre definito secondo la seguente struttura:
-	\begin{itemize}
-		\item \textbf{ID:} il codice del caso d'uso secondo la convenzione specificata precedentemente;
-		\item \textbf{Nome:} specifica il titolo del caso d'uso;
-		\item \textbf{Attori:} indica gli attori principali (ad esempio l'utente generico) e secondari (ad esempio entità di autenticazione esterne) del caso d'uso;
-		\item \textbf{Descrizione:} riporta una breve descrizione del caso d'uso;
-		\item \textbf{Precondizione:} specifica le condizioni che sono identificate come vere prima del verificarsi degli eventi del caso d'uso;
-		\item \textbf{Postcondizione:} specifica le condizioni che sono identificate come vere dopo il verificarsi degli eventi del caso d'uso;
-		\item \textbf{Scenario principale:} rappresenta il flusso degli eventi come lista numerata, specificando per ciascun evento: titolo, descrizione, attori coinvolti e casi d'uso generati;
-		\item \textbf{Scenari Alternativi:} specifica casi di errore o eventi non previsti nel flusso di esecuzione;
-		\item \textbf{Inclusioni:} usate per non descrivere più volte lo stesso flusso di eventi, inserendo il comportamento comune in un caso d'uso a parte;
-		\item \textbf{Estensioni:} descrivono i casi d'uso che non fanno parte del flusso principale degli eventi, allo stesso modo di quanto descritto in "Scenario principale".
-	\end{itemize}
+\begin{center}
+	UC[Codice padre]*.[Codice identificativo]
+\end{center}
+
+\begin{itemize}
+	\item \textbf{Codice padre:} identifica il codice del caso d'uso da cui è stato generato il caso d'uso identificato, se non esiste il campo va tralasciato;
+	\item \textbf{Codice identificativo:} identifica il caso d'uso univocamente.
+\end{itemize}
+
+\noindent Ogni caso d'uso è inoltre definito secondo la seguente struttura:
+\begin{itemize}
+	\item \textbf{Attori:} indica gli attori principali (ad esempio l'utente generico) e secondari (ad esempio entità di autenticazione esterne) del caso d'uso;
+	\item \textbf{Descrizione:} riporta una breve descrizione del caso d'uso;
+	\item \textbf{Precondizione:} specifica le condizioni che sono identificate come vere prima del verificarsi degli eventi del caso d'uso;
+	\item \textbf{Postcondizione:} specifica le condizioni che sono identificate come vere dopo il verificarsi degli eventi del caso d'uso;
+	
+	\item \textbf{Scenari Alternativi:} specifica casi di errore o eventi non previsti nel flusso di esecuzione;
+	\item \textbf{Flusso di Esecuzione:} rappresenta il flusso degli eventi come lista numerata, specificando per ciascun evento: titolo, descrizione, attori coinvolti e casi d'uso generati;
+\end{itemize}
+
 
 	Alcuni casi d'uso possono essere associati ad un Diagramma \glossario{UML}{UML} 2.x dei casi d'uso riportante lo stesso titolo e codice.
 	

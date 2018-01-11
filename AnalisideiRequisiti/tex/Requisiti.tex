@@ -2,6 +2,30 @@
 
 \begin{document}
 	\chapter{Requisiti}
+	\section{Descrizione} 
+	I requisiti devono essere suddivisi per importanza e classificati come segue:
+	
+	\begin{center}
+		R[Importanza][Tipologia][Codice]
+	\end{center}
+	
+	\begin{itemize}
+		\item \textbf{Importanza:} Ogni requisito può appartenere solo ad una delle classi di Importanza elencate di seguito:
+		\begin{itemize}
+			\item \textbf{O (Requisito Obbligatorio):} requisito fondamentale per la corretta realizzazione del progetto;
+			\item \textbf{D (Requisito Desiderabile):} requisito non fondamentale al progetto ma il cui soddisfacimento comporterebbe una maggiore completezza del prodotto;
+			\item \textbf{F (Requisito Facoltativo):} requisito non richiesto per il corretto funzionamento del prodotto ma che se incluso arricchirebbe il progetto. Prima di soddisfare il requisito è necessaria un’analisi di tempi e costi per evitare ritardi nella consegna e/o costi superiori a quelli preventivati.
+		\end{itemize}
+		\item \textbf{Tipologia:} Di seguito sono riportate le tipologie di requisito:
+		\begin{itemize}
+			\item \textbf{V:} Identifica un \glossario{requisito di vincolo}{requisito di vincolo};
+			\item \textbf{F:} Identifica un \glossario{requisito funzionale}{requisito funzionale};
+			\item \textbf{P:} Identifica un \glossario{requisito prestazionale}{requisito prestazionale};
+			\item \textbf{Q:} Identifica un \glossario{requisito di qualità}{requisito di qualita}.
+		\end{itemize}
+		\item \textbf{Codice:} Ogni requisito è formato da un codice numerico che lo indentifica in modo univoco.
+	\end{itemize}
+	\newpage
 	\section{Requisiti Funzionali}
 	\begin{longtable}{| p{2cm} | p{2.5cm} |p{5cm} | p{2.5cm} |}
 		\hline
@@ -383,7 +407,7 @@
 			\\[1em]
 			\hline
 	\end{longtable}
-
+\newpage
 	\section{Requisiti di Vincolo}
 			\begin{longtable}{| p{2cm} | p{2.5cm} |p{5cm} | p{2.5cm} |}
 			\hline
@@ -516,5 +540,363 @@
 		\hline
 		\newline UC11.1 &  \newline RFF9.2.1.1 \\[1em]
 		\hline
+		
+		\caption{Tracciamento Fonte Requisiti}
 	\end{longtable}
+\newpage
+	\section{Tracciamento requisito-fonti}
+	\begin{longtable}{| p{4cm} | p{4cm} |}
+	
+	\hline
+\textbf{Requisiti} & \textbf{Fonte} \\
+\hline
+\endhead
+	\newline ROF0&
+	\newline \refer{UC0} \newline Capitolato
+	\\[1em]
+	\hline
+	\newline ROF1&
+	\newline \refer{UC1} \newline Interno
+	\\[1em]	
+	
+	\hline
+	
+	\newline ROF2&
+	\newline \refer{UC1} \newline \refer{UC2} \newline Capitolato
+	\\[1em]	
+	\hline	
+	
+	\newline ROF2.1&
+	\newline \refer{UC2} \newline VI-15-12-17
+	\\[1em]	
+	\hline	
+	
+	\newline RFF2.2&
+	\newline \refer{UC6.1.1} \newline Capitolato
+	\\[1em]	
+	\hline
+	
+	\newline RFF2.2.1&
+	\newline \refer{UC1} \newline \refer{UC11} \newline VI-15-12-17
+	\\[1em]	
+	\hline
+	
+	\newline RFF2.2.1.1&
+	\newline \refer{UC11.1} \newline Interno
+	\\[1em]	
+	\hline
+	
+	\newline ROF3&	
+	\newline \refer{UC2} \newline VI-15-12-17
+	\\[1em]	
+	\hline	
+	
+	\newline ROF3.1&
+	\newline \refer{UC3.3} \newline Interno
+	\\[1em]		
+	\hline
+	
+	\newline ROF4&
+	\newline \refer{UC4} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline RFF4.1&
+	\newline \refer{UC4} \newline \refer{UC4.1} \newline VI-15-12-17 
+	\\[1em]
+	\hline
+	
+	\newline ROF4.2&
+	\newline \refer{UC4} \newline \refer{UC3.1} \newline Interno
+	\\[1em]
+	
+	\hline	
+	\newline ROF4.2.1&
+	\newline \refer{UC4} \newline Interno
+	\\[1em]
+	
+	\hline
+	\newline ROF4.3&
+	\newline \refer{UC4.2} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline RFF4.4&
+	
+	\newline Interno
+	\\[1em]
+	\hline
+	
+	\newline ROF5&
+	
+	\newline \refer{UC3} \newline \refer{UC3.1} \newline VI-15-12-17
+	\\[1em]
+	\hline
+	
+	\newline ROF5.1&
+	
+	\newline \refer{UC3.1} \newline \refer{UC3.1.1} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline ROF5.2&
+	
+	\newline \refer{UC3.1} \newline \refer{UC3.1.3} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline RDF5.3&
+	
+	\newline \refer{UC3} \newline \refer{UC3.1.2} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline ROF5.4&
+	
+	\newline \refer{UC3} \newline \refer{UC3.2} \newline Interno
+	\\[1em]	
+	\hline
+	
+	
+	\newline ROF5.5&
+	
+	\newline \refer{UC3.3} \newline VI-15-12-17
+	\\[1em]	
+	\hline
+	\newline RDF5.6&
+	
+	\newline Interno
+	\\[1em]
+	\hline
+	\newline RDF5.7&
+	
+	\newline Interno
+	\\[1em]
+	\hline
+	\newline RDF5.8&
+	
+	\newline Interno
+	\\[1em]
+	\hline
+	\newline ROF6&
+	
+	\newline \refer{UC6} \newline VI-15-12-17
+	\\[1em]
+	\hline
+	
+	\newline RDF6.1&
+	
+	\newline \refer{UC6.1} \newline VI-15-12-17
+	\\[1em]
+	\hline	
+	
+	\newline RDF6.1.1&
+	
+	\newline \refer{UC6.1} \newline \refer{UC6.1.1} \newline Interno
+	\\[1em]
+	\hline	
+	
+	\newline RDF6.1.2&
+	
+	\newline \refer{UC6.1} \newline \refer{UC6.1.1} \newline Interno
+	\\[1em]
+	\hline	
+	
+	\newline ROF7&
+	
+	\newline \refer{UC7} \newline Capitolato
+	\\[1em]
+	
+	\hline
+	\newline ROF8&
+	
+	\newline \refer{UC7} \newline Capitolato
+	\\[1em]
+	\hline
+	\newline ROF8.1&
+	
+	\newline \refer{UC7.1} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline ROF9&
+	
+	\newline \refer{UC7.2} \newline Capitolato
+	\\[1em]
+	\hline
+	
+	
+	
+	\newline ROF9.1&
+	
+	\newline \refer{UC7.2} \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline ROF9.2&
+	
+	\newline VI-15-12-17  \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RDF9.2.1&
+	
+	\newline \refer{UC7.2.4} \newline VI-15-12-17
+	\\[1em]
+	\hline
+	
+	\newline ROF9.3&
+	
+	\newline \refer{UC7.2.1} \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline ROF9.3.1&
+	
+	\newline \refer{UC7.2} \newline \refer{UC7.2.1} \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RDF9.3.1.1&
+	
+	\newline \refer{UC7.2.3} \newline VI-15-12-17 \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RDF9.3.1.2&
+	
+	\newline \refer{UC7.2.6} \newline VI-15-12-17 \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RDF9.4&
+	
+	\newline \refer{UC10} \newline VI-15-12-17 \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RDF9.4.1&
+	
+	\newline \refer{UC10} \newline \refer{UC7.2.1} \newline VI-15-12-17 \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RDF9.4.2&
+		\newline \refer{UC10.1} \newline \refer{UC10.1} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline ROF9.5&
+	\newline \refer{UC7.2.1} \newline VI-15-12-17 \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RDF9.5.1
+	&\newline Interno
+	\\[1em]
+	\hline
+	
+	\newline ROF9.6&
+	\newline \refer{UC7.2.2} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline RDF9.7&
+	\newline \refer{UC7.2.4} \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RFF9.8&
+	\newline VI-15-12-17 \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RFF9.8.1&
+	\newline Interno \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RFF9.8.2&
+	\newline Interno \newline Capitolato
+	\\[1em]
+	\hline
+	
+	
+	\newline RFF10&
+	\newline \refer{UC7.2.5} \newline Capitolato
+	\\[1em]
+	\hline
+	
+	
+	
+	
+	\newline RFF11&
+	\newline \refer{UC8} \newline VI-15-12-17 
+	\\[1em]
+	\hline
+	
+	
+	\newline RFF11.1&
+	\newline \refer{UC8} \newline \refer{UC8.1} \newline VI-15-12-17 
+	\\[1em]
+	\hline
+	
+	\newline RFF12&
+	\newline \refer{UC9} \newline VI-15-12-17
+	\\[1em]
+	\hline
+	\newline RFF12.1&
+	\newline \refer{UC9} \newline \refer{UC9.1} \newline VI-15-12-17 
+	\\[1em]
+	\hline
+	
+	\newline RFF12.2&
+	\newline Capitolato
+	\\[1em]
+	\hline
+	
+	
+	\newline RFF13&
+	\newline \refer{UC7} \newline \refer{UC7.2.5} \newline VI-15-12-17
+	\\[1em]
+	\hline
+	
+	
+	
+	\newline ROF14&	\newline \refer{UC5} \newline Interno
+	\\[1em]
+	\hline
+	
+	
+
+\newline ROQ0&\newline Capitolato
+\\[1em]
+\hline
+\newline ROQ0.1&\newline Interno
+\\[1em]
+\hline
+\newline ROV0&\newline Capitolato
+\\[1em]
+\hline	
+\newline 
+ROV1&\newline Capitolato \newline Interno
+\\[1em]
+\hline
+\newline 
+ROV2&\newline Capitolato
+\\[1em]
+\hline
+\newline
+RDV2.1&\newline Capitolato
+\\[1em]
+\hline
+\newline
+RDV3&\newline Capitolato \newline Interno
+\\[1em]
+\hline	
+\newline
+RDV3.1&\newline Capitolato
+\\[1em]
+\hline
+\end{longtable}
 \end{document}

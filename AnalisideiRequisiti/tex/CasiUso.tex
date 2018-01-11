@@ -11,8 +11,31 @@
 	% Flusso Eventi 
 
 	\chapter{Casi d'uso}
+	\section{Descrizione}
+	I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo: 
+	
+	\begin{center}
+		UC[Codice padre]*.[Codice identificativo]
+	\end{center}
+	
+	\begin{itemize}
+		\item \textbf{Codice padre:} identifica il codice del caso d'uso da cui è stato generato il caso d'uso identificato, se non esiste il campo va tralasciato;
+		\item \textbf{Codice identificativo:} identifica il caso d'uso univocamente.
+	\end{itemize}
+	
+	\noindent Ogni caso d'uso è inoltre definito secondo la seguente struttura:
+	\begin{itemize}
+		\item \textbf{Attori:} indica gli attori principali (ad esempio l'utente generico) e secondari (ad esempio entità di autenticazione esterne) del caso d'uso;
+		\item \textbf{Descrizione:} riporta una breve descrizione del caso d'uso;
+		\item \textbf{Precondizione:} specifica le condizioni che sono identificate come vere prima del verificarsi degli eventi del caso d'uso;
+		\item \textbf{Postcondizione:} specifica le condizioni che sono identificate come vere dopo il verificarsi degli eventi del caso d'uso;
+
+		\item \textbf{Scenari Alternativi:} specifica casi di errore o eventi non previsti nel flusso di esecuzione;
+		\item \textbf{Flusso di Esecuzione:} rappresenta il flusso degli eventi come lista numerata, specificando per ciascun evento: titolo, descrizione, attori coinvolti e casi d'uso generati;
+	\end{itemize}
+
 	\section{UC0:Pagina Iniziale}
-	\begin{figure}[ht]
+	\begin{figure}[H]
 		\caption{UC0}
 		\centering
 		\includegraphics[width=\textwidth]{../img/UC00.png}
@@ -27,7 +50,7 @@
 	{Non previsti}
 	{}
 	\section{UC1:Menu File}
-	\begin{figure}[htp]
+	\begin{figure}[H]
 	\caption{UC1}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC01.png}
@@ -52,7 +75,7 @@
 	}
 
 	\section{UC2:Caricamento JSon}
-	\begin{figure}[htp]
+	\begin{figure}[H]
 		\caption{UC2}
 		\centering
 		\includegraphics[width=\textwidth]{../img/UC02.png}
@@ -87,7 +110,7 @@
 
 	
 	\section{UC3:File Browser}
-	\begin{figure}[htp]
+	\begin{figure}[H]
 		\caption{UC3}
 		\centering
 		\includegraphics[width=\textwidth]{../img/UC03.png}
@@ -193,7 +216,7 @@
 {}
 
 \section{UC4:Salvataggio Audio Prodotto}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC4}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC04.png}
@@ -245,7 +268,7 @@
 {}
 
 \section{UC5:Exit}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC5}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC05.png}
@@ -262,7 +285,7 @@
 }
 
 \section{UC6:Selezione Utterance}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC6}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC06.png}
@@ -319,7 +342,7 @@
 	\end{itemize}
 }
 \section{UC7:Esecuzione}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC7}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC07.png}
@@ -472,7 +495,7 @@
 \end{itemize}}
 
 \section{UC8:Esportazione stato del Grafo}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC8}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC08.png}
@@ -503,7 +526,7 @@
 {Non previsti}
 {}
 \section{UC9:Importa Grafo}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC9}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC09.png}
@@ -535,7 +558,7 @@
 
 
 \section{UC10:Ricerca Path}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC10}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC10.png}
@@ -569,7 +592,7 @@
 {}
 
 \section{UC11:Salvataggio modifiche file JSon}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC11}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC11.png}
