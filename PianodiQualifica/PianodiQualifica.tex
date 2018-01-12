@@ -184,7 +184,7 @@
             \begin{itemize}            	
             	\item \textbf{Nome:} Correttezza ortografica dei documenti;
             	\item \textbf{Descrizione:} I documenti non devono riportare errori ortografici o grammaticali;
-            	\item \textbf{Metriche associate:} MPPD002: Errori ortografici corretti.
+            	\item \textbf{Metriche associate:} MPPD001: Errori ortografici corretti.
         	\end{itemize}
         \end{itemize} 
         
@@ -193,7 +193,7 @@
             \begin{itemize} 
             	\item \textbf{Nome:} Leggibilità dei documenti;
             	\item \textbf{Descrizione:} I documenti devono essere leggibili e comprensibili da persone con licenza media o superiore;
-            	\item \textbf{Metriche associate:} MPPD001: Gulpease.
+            	\item \textbf{Metriche associate:} MPPD002: Gulpease.
             \end{itemize}
         \end{itemize} 
         
@@ -212,7 +212,7 @@
             \begin{itemize} 
             	\item \textbf{Nome:} Copertura del codice;
             	\item \textbf{Descrizione:} Il prodotto richiesto dalla Proponente deve essere testato in ogni sua parte per garantire le funzionalità relative ai requisiti;
-            	\item \textbf{Metriche associate:} MPPS011: Linee di codice coperte dai test.
+            	\item \textbf{Metriche associate:} MPPS002: Linee di codice coperte dai test.
             \end{itemize}
         \end{itemize} 
         
@@ -221,7 +221,7 @@
             \begin{itemize} 
             	\item \textbf{Nome:} Superamento Test;
             	\item \textbf{Descrizione:} La percentuale di superamento dei test del prodotto software dovrà essere almeno l'80\% del totale;
-            	\item \textbf{Metriche associate:} MPPS013: Percentuale superamento test.
+            	\item \textbf{Metriche associate:} MPPS003: Percentuale superamento test.
             \end{itemize}
         \end{itemize} 
         
@@ -230,24 +230,24 @@
             \begin{itemize} 
             	\item \textbf{Nome:} Robustezza;
             	\item \textbf{Descrizione:} Il prodotto richiesto dalla proponente deve affrontare situazioni anomale senza arrestare la sua esecuzione;
-            	\item \textbf{Metriche associate:} MPPS010: Failure Avoidance.
+            	\item \textbf{Metriche associate:} MPPS004: Failure Avoidance.
             \end{itemize}
         \end{itemize}
         
         \begin{itemize}
-            \item \textbf{ID:} OQPPS006;
+            \item \textbf{ID:} OQPPS005;
             \begin{itemize} 
             	\item \textbf{Nome:} Manutenzione e comprensione del codice;
             	\item \textbf{Descrizione:} Il codice del prodotto richiesto dalla proponente deve essere quanto più possibile comprensibile e manutenibile;
             	\item \textbf{Metriche associate:} 
                 \begin{itemize}
-                    \item \textbf{MPPS003:} Numero di parametri per metodo;
-                    \item \textbf{MPPS004:} Numero di attributi per classe;
-                    \item \textbf{MPPS005:} Numero di metodi per classe;
-                    \item \textbf{MPPS006:} Complessità ciclomatica;
-                    \item \textbf{MPPS007:} Grado di instabilità;
-                    \item \textbf{MPPS008:} Altezza albero della gerarchia;
-                    \item \textbf{MPPS009:} Rapporto linee di commento / linee di codice.
+                    \item \textbf{MPPS005:} Numero di parametri per metodo;
+                    \item \textbf{MPPS006:} Numero di attributi per classe;
+                    \item \textbf{MPPS007:} Numero di metodi per classe;
+                    \item \textbf{MPPS008:} Complessità ciclomatica;
+                    \item \textbf{MPPS009:} Grado di instabilità;
+                    \item \textbf{MPPS010:} Altezza albero della gerarchia;
+                    \item \textbf{MPPS011:} Rapporto linee di commento / linee di codice.
                 \end{itemize}
             \end{itemize}
         \end{itemize}
@@ -299,8 +299,8 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \begin{itemize}
     \item \textbf{Codice:} MP001;
     \item \textbf{Descrizione:} La metrica definita dallo standard ISO/IEC 15504 viene utilizzata alla fine di ogni periodo per monitorare e valutare la qualità dei processi impiegati. Tale standard è illustrato dettagliatamente in Appendice A.1;
-    \item \textbf{Range di accettazione:} [Managed - Optimizing] per ogni processo;
-    \item \textbf{Range ottimale:} [Enstablished - Optimizing] per ogni processo.
+    \item \textbf{Range di accettazione:} [P] per ogni processo;
+    \item \textbf{Range ottimale:} [L - F] per ogni processo.
 \end{itemize}
 
 % METRICHE PER DOCUMENTI
@@ -310,7 +310,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \subsection{Errori ortografici corretti}
 
 \begin{itemize}
-    \item \textbf{Codice:} OQPPD010;
+    \item \textbf{Codice:} MPPD001;
     \item \textbf{Descrizione:} La documentazione prodotta deve essere corretta dal punto di vista ortografico e grammaticale;
     \item \textbf{Modalità di calcolo:} Controllo ortografico di TexStudio e del \textit{Verificatore};
     \item \textbf{Valore di accettazione:} 100\% degli errori corretti;
@@ -320,7 +320,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \subsection{Gulpease}
 
 \begin{itemize}
-    \item \textbf{Codice:} OQPPD002;
+    \item \textbf{Codice:} MPPD002;
 
     \item \textbf{Descrizione:} L’\glossario{indice Gulpease}{indice Gulpease} è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. Tale indice considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere;
     
@@ -368,7 +368,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 
 \begin{itemize}
 
-    \item \textbf{Codice:} OQPPS002;
+    \item \textbf{Codice:} MPPS002;
 
     \item \textbf{Descrizione:} La copertura del codice (o code coverage) indica la percentuale di istruzioni,  rispetto al totale, che vengono eseguite durante i test. Maggiore è il numero delle istruzioni testate e maggiore è la possibilità di individuare e risolvere errori di codifica. Un valore troppo basso indica che molte istruzioni non vengono testate, divenendo possibile causa di anomalie.
     
@@ -383,7 +383,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \subsection{Percentuale superamento test}
 
 \begin{itemize}
-    \item \textbf{Codice:} MPPS013;
+    \item \textbf{Codice:} MPPS003;
     \item \textbf{Descrizione:} La metrica indica la percentuale di test implementati superati dal oggetto del test;
     \item \textbf{Modalità di calcolo:} Percentuale superamento test si calcola con la seguente formula:
     
@@ -396,7 +396,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \subsection{Failure avoidance}
 
 \begin{itemize}
-    \item \textbf{Codice:} MPPS010;
+    \item \textbf{Codice:} MPPS004;
     \item \textbf{Descrizione:} La Failure Avoidance è una metrica applicata per monitorare la robustezza del prodotto quando deve affrontare a situazioni critiche;
     \item \textbf{Modalità di calcolo:} La Failure Avoidance si calcola con la seguente formula:
     
@@ -409,7 +409,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \subsection{Numero di parametri per metodo}
 
 \begin{itemize}
-    \item \textbf{Codice:} MPPS003;
+    \item \textbf{Codice:} MPPS005;
 
     \item \textbf{Descrizione:} Il numero di parametri di un metodo incide sulla sua complessità. Un valore elevato può indicare che esso si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposto in metodi più semplici;
     
@@ -422,7 +422,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \subsection{Numero di attributi per classe}
 
 \begin{itemize}
-    \item \textbf{Codice:} MPPS004;
+    \item \textbf{Codice:} MPPS006;
 
     \item \textbf{Descrizione:} Il numero di attributi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più semplici;
     
@@ -435,7 +435,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \subsection{Numero di metodi per classe}
 
 \begin{itemize}
-    \item \textbf{Codice:} MPPS005;
+    \item \textbf{Codice:} MPPS007;
 
     \item \textbf{Descrizione:} Il numero di metodi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più semplici;
     
@@ -448,7 +448,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \subsection{Complessità ciclomatica}
 
 \begin{itemize}
-    \item \textbf{Codice:} MPPS006;
+    \item \textbf{Codice:} MPPS008;
 
     \item \textbf{Descrizione:} La \glossario{Complessità ciclomatica}{Complessita ciclomatica} (o complessità condizionale) è una metrica software utilizzata per misurare la complessità di un programma. Nello specifico, essa stima la complessità di funzioni, moduli, metodi o classi di un programma. Il valore della Complessità Ciclomatica rappresenta quanto un metodo è complesso, tramite la misura del numero di cammini linearmente indipendenti che attraversano il \glossario{grafo}{Grafo} di flusso di controllo. In tale grafo, i nodi rappresentano gruppi indivisibili di istruzioni. Un arco connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l'esecuzione delle istruzioni dell'altro nodo. Durante l’identificazione dei test, la Complessità Ciclomatica è inoltre utile per determinare il numero di casi di test necessari: l’indice di Complessità Ciclomatica è infatti un limite superiore al numero di test necessari per raggiungere la completa \glossario{copertura del codice}{Copertura del codice} (o \textit{code coverage}) del modulo testato. Un valore troppo elevato indica un'eccessiva complessità del codice, cui consegue una complessa manutenzione, al contrario un valore ridotto potrebbe indicare una scarsa efficienza dei metodi;
 
@@ -471,7 +471,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 \subsection{Grado di instabilità}
 
 \begin{itemize}
-    \item \textbf{Codice:} MPPS007;
+    \item \textbf{Codice:} MPPS009;
     
     \item \textbf{Descrizione:} Il livello di stabilità di un software indica il rischio con una modifica apportata ad un \glossario{package}{package} influenzi il funzionamento dell'intero sistema;
     
@@ -496,7 +496,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 
 \begin{itemize}
 
-    \item \textbf{Codice:} MPPS008;
+    \item \textbf{Codice:} MPPS010;
     
     \item \textbf{Descrizione:} L'altezza degli alberi di gerarchia delle classi va limitata così da limitare l'accoppiamento. Preferibilmente, le classi dovranno dipendere solo da classi astratte e potranno implementare una o più interfacce. Viene invece proibito l'uso di ereditarietà multipla.
 
@@ -511,7 +511,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 
 \begin{itemize}
 
-    \item \textbf{Codice:} MPPS009;
+    \item \textbf{Codice:} MPPS011;
     
     \item \textbf{Descrizione:} Il rapporto tra linee di codice (escluse le righe vuote) e linee di commento rappresenta un indice utile a stimare la manutenibilità del codice sorgente. Un rapporto troppo basso indica una scarsa documentazione del codice scritto, cui consegue una possibile elevata complessità nel manutenerlo.
 
@@ -727,7 +727,7 @@ Essendo l'Analisi il primo periodo di progetto, prima di essa non esistevano pro
 
 \subsubsection{Documenti}
 
-Segue riassunto del calcolo dell'indice Gulpease (al netto di tabelle e frontespizio) e il quello del numero di errori ortografici rilevati e corretti.
+Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle e frontespizio) e il quello del numero di Errori ortografici corretti [MPPD001].
 
 \begin{center}
 	TABELLA INDICE GULPEASE
