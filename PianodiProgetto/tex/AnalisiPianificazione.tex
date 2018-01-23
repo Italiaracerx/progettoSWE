@@ -60,73 +60,144 @@
 	\end{itemize}
 	
 	\chapter{Analisi dei rischi}
-	Per una buona riuscita del \glossario{prodotto}{prodotto} è necessario effettuare un'approfondita analisi dei rischi che si possono incontrare durante lo svolgimento dell'intero progetto. I rischi verranno dunque brevemente descritti, analizzati per probabilità di frequenza e fattore di rischio ed infine proposto un metodo di controllo e delle contromisure.
 	
-	\section{Rischi tecnologici}
-	\subsection{Guasti hardware e problematiche software}
+	\section{Visione generale dell'analisi dei rischi}
+	
+	Per una buona riuscita del \glossario{prodotto}{prodotto} è necessario effettuare un'approfondita analisi dei rischi che si possono incontrare durante lo svolgimento dell'intero progetto. I rischi vengono dunque brevemente descritti, analizzati per probabilità di frequenza e fattore di rischio e viene infine proposto un metodo di controllo e delle contromisure per ognuno di essi, i rischi effettivamente riscontrati vengono riportati in appendice §A "Rilevazione dei rischi" di questo documento.
+	
+	\section{Procedura di analisi dei rischi}
+	
+	La procedura utilizzata per l'analisi dei rischi è la seguente:
+	
+	\begin{enumerate}
+		\item \textbf{Identificazione}: vengono individuati i potenziali rischi che si ritiene possano presentarsi durante
+		l’avanzamento di un processo e se ne identifica la tipologia. I rischi possono essere inerenti a: 
+		\begin{itemize}
+			\item \textbf{Progetto}: relativi a pianificazione, strumenti, costi e risorse;
+			\item \textbf{Prodotto}: relativi a conformità ai requisiti e alle aspettative del committente in termini qualitativi.
+		\end{itemize}
+		\item \textbf{Analisi}: valutazione della probabilità dell’occorrenza del rischio e delle possibili ricadute
+		sul progetto di quest'ultima;
+		\item \textbf{Pianificazione del controllo}: definizione di metodi di controllo dei rischi;
+		\item \textbf{Mitigazione}: definizione di accorgimenti atti a mitigare gli effetti deleteri di un rischio nel caso in cui dovesse verificarsi. Ciò è richiesto solo per rischi
+		difficilmente controllabili e gestibili.
+	\end{enumerate}
+
+	\section{Catalogazione dei rischi}
+	
+	Ogni rischio verrà catalogato secondo il seguente codice identificativo:
+	
+	\begin{center}
+		R[Tipologia].[Identificativo]
+	\end{center}
+
+	Dove:
 	\begin{itemize}
-		\item \textbf{Descrizione:} la strumentazione usata dal gruppo potrebbe avere dei malfunzionamenti o guastarsi durante lo sviluppo del progetto, rendendo difficoltoso l'avanzamento del progetto o fermarlo;
-		\item \textbf{Frequenza:} bassa;
-		\item \textbf{Fattore di rischio:} basso;
-		\item \textbf{Controllo:} ogni membro deve aver cura della propria strumentazione;
-		\item \textbf{Contromisure:} ogni componente del gruppo deve salvare il proprio lavoro sul \glossario{repository}{Repository} \glossario{GitHub}{GitHub} dedicato al progetto, se tale operazione non è possibile allora deve salvarlo su una periferica di archiviazione di massa esterna.
+		\item \textbf{Tipologia}: indica il tipo di rischio in esame, e può assumere uno dei seguenti valori:
+		\begin{itemize}
+			\item \textbf{T}: rischi inerenti le tecnologie;
+			\item \textbf{S}: rischi inerenti gli strumenti;
+			\item \textbf{G}: rischi inerenti il gruppo di progetto;
+			\item \textbf{R}: rischi inerenti i requisiti;
+			\item \textbf{O}: rischi inerenti l'organizzazione.
+		\end{itemize}
+		\item \textbf{Identificativo}: indica un codice incrementale per il rischio.
+	\end{itemize}
+
+	Ogni rischio è inoltre corredato da:
+	
+	\begin{itemize}
+		\item \textbf{Nome}: nome descrittivo del rischio;
+		\item \textbf{Descrizione}: breve descrizione;
+		\item \textbf{Probabilità di occorrenza}: indica la probabilità che il rischio si verifichi effettivamente;
+		\item \textbf{Livello di gravità}: indica l'impatto che il verificarsi del rischi avrebbe sul progetto;
+		\item \textbf{Strategia di rilevazione}: indica una possibile strategia con cui tracciare il rischio;
+		\item \textbf{Contromisure}: indica eventuali contromisure per mitigare gli effetti deleteri del verificarsi del rischio.
 	\end{itemize}
 	
-	\subsection{Tecnologie da utilizzare}
+	\section{Descrizione dei rischi} 
+	
+	\subsection{Rischi legati alle tecnologie}
+	
+	\subsubsection{Inesperienza delle tecnologie da utilizzare}
 	\begin{itemize}
+		\item \textbf{Codice:} RT0;
+		\item \textbf{Nome:} Inesperienza delle tecnologie da utilizzare;
 		\item \textbf{Descrizione:} le tecnologie adottate per sviluppare il prodotto sono solamente in parte note ai componenti del gruppo, ciò non toglie che vi possano essere delle mancanze;
-		\item \textbf{Frequenza:} bassa;
-		\item \textbf{Fattore di rischio:} medio-alto ;
-		\item \textbf{Controllo:} il \textit{Responsabile} ha il compito di verificare il grado di conoscenza di ciascun componente, relativo alle tecnologie adottate;
+		\item \textbf{Probabilità di occorrenza:} bassa;
+		\item \textbf{Livello di gravità:} medio-alto ;
+		\item \textbf{Strategie di rilevazione:} il \textit{Responsabile} ha il compito di verificare il grado di conoscenza di ciascun componente, relativo alle tecnologie adottate;
 		\item \textbf{Contromisure:} ciascun componente si impegnerà a documentarsi in maniera autonoma sulle tecnologie adottate. 
 	\end{itemize}
 	
-	\section{Rischi strumentali}
-	\subsection{Inesperienza del gruppo}
+	\subsection{Rischi legati agli strumenti}
+	
+	\subsubsection{Guasti hardware e problematiche software}
 	\begin{itemize}
+		\item \textbf{Codice:} RS0;
+		\item \textbf{Nome:} Guasti hardware e problematiche software;
+		\item \textbf{Descrizione:} la strumentazione usata dal gruppo potrebbe avere dei malfunzionamenti o guastarsi durante lo sviluppo del progetto, rendendo difficoltoso l'avanzamento del progetto o fermarlo;
+		\item \textbf{Probabilità di occorrenza:} bassa;
+		\item \textbf{Livello di gravità:} basso;
+		\item \textbf{Strategie di rilevazione:} ogni membro deve aver cura della propria strumentazione;
+		\item \textbf{Contromisure:} ogni componente del gruppo deve salvare il proprio lavoro sul \glossario{repository}{Repository} \glossario{GitHub}{GitHub} dedicato al progetto, se tale operazione non è possibile allora deve salvarlo su una periferica di archiviazione di massa esterna.
+	\end{itemize}
+	
+	\subsubsection{Inesperienza degli strumenti da utilizzare}
+	\begin{itemize}
+		\item \textbf{Codice:} RS1;
+		\item \textbf{Nome:} Inesperienza degli strumenti da utilizzare;
 		\item \textbf{Descrizione:} l'approccio al metodo di lavoro risulta nuovo. Sono richieste capacità di pianificazione e di analisi che il gruppo non possiede a causa dell'inesperienza. Alcune conoscenze richieste richiedono tempo per essere apprese;
-		\item \textbf{Frequenza:} alta;
-		\item \textbf{Fattore di rischio:} alto;
-		\item \textbf{Controllo:} quando un componente del gruppo stabilisce che è necessario utilizzare un nuovo strumento lavorativo deve segnalarlo al  \textit{Responsabile}. Una volta approvato l'utilizzo di tale strumento, il gruppo si dovrà documentare su come impiegarlo;
+		\item \textbf{Probabilità di occorrenza:} alta;
+		\item \textbf{Livello di gravità:} alto;
+		\item \textbf{Strategie di rilevazione:} quando un componente del gruppo stabilisce che è necessario utilizzare un nuovo strumento lavorativo deve segnalarlo al  \textit{Responsabile}. Una volta approvato l'utilizzo di tale strumento, il gruppo si dovrà documentare su come impiegarlo;
 		\item \textbf{Contromisure:} ogni membro del gruppo dovrà studiare tutto il materiale necessario per essere in grado di far fronte  a ciò che il progetto richiede.
 	\end{itemize}
 	
-	\section{Rischi riguardanti il gruppo}
-	\subsection{Problemi personali dei membri del gruppo}
+	\subsection{Rischi legati al gruppo di progetto}
+	\subsubsection{Problemi personali dei membri del gruppo}
 	\begin{itemize}
+		\item \textbf{Codice:} RG0;
+		\item \textbf{Nome:} Problemi personali dei membri del gruppo;
 		\item \textbf{Descrizione:} ogni membro del gruppo ha degli impegni personali o potrebbe avere dei problemi di salute. Questo implica la possibilità che qualche componente non sia disponibile in certi momenti creando eventualmente dei rallentamenti al progetto;
-		\item \textbf{Frequenza:} media;
-		\item \textbf{Fattore di rischio:} medio;
-		\item \textbf{Controllo:} grazie alla compilazione di calendari di gruppo e ad una tempestiva comunicazione fra componenti, il \textit{Responsabile} sarà in grado di avere un quadro generale delle problematiche.
+		\item \textbf{Probabilità di occorrenza:} media;
+		\item \textbf{Livello di gravità:} medio;
+		\item \textbf{Strategie di rilevazione:} grazie alla compilazione di calendari di gruppo e ad una tempestiva comunicazione fra componenti, il \textit{Responsabile} sarà in grado di avere un quadro generale delle problematiche.
 		\item \textbf{Contromisure:} Nel caso un componente del gruppo non sia disponibile per un breve periodo di tempo, egli dovrà comunicarlo tempestivamente al \textit{Responsabile}, il quale organizzerà e ripartirà il carico di lavoro ai rimanenti componenti del gruppo. 
 	\end{itemize}
 	
-	\subsection{Problemi tra membri del gruppo}
+	\subsubsection{Problemi tra membri del gruppo}
 	\begin{itemize}
+		\item \textbf{Codice:} RG1;
+		\item \textbf{Nome:} Problemi tra membri del gruppo;
 		\item \textbf{Descrizione:} la maggior parte dei membri del gruppo non si conosceva prima di questo progetto. Questo può portare a delle incomprensioni causate anche da diversi punti di vista;
-		\item \textbf{Frequenza:} bassa;
-		\item \textbf{Fattore di rischio:} alto;
-		\item \textbf{Controllo:} il \textit{Responsabile} deve monitorare lo stato di collaborazione fra i vari componenti del gruppo durante le varie fasi e capire dove stia nascendo un dissidio fra uno o più membri;
+		\item \textbf{Probabilità di occorrenza:} bassa;
+		\item \textbf{Livello di gravità:} alto;
+		\item \textbf{Strategie di rilevazione:} il \textit{Responsabile} deve monitorare lo stato di collaborazione fra i vari componenti del gruppo durante le varie fasi e capire dove stia nascendo un dissidio fra uno o più membri;
 		\item \textbf{Contromisure:} Nel caso si verifichino forti dissidi, il \textit{Responsabile} dovrà prendere in mano la situazione e cercare di trovare una soluzione di comune accordo con i membri in contrasto. 
 	\end{itemize}
 	
-	\section{Rischi legati ai requisiti}
-	\subsection{Comprensione dei requisiti}
+	\subsection{Rischi legati ai requisiti}
+	\subsubsection{Comprensione dei requisiti}
 	\begin{itemize}
+		\item \textbf{Codice:} RR0;
+		\item \textbf{Nome:} Comprensione dei requisiti;
 		\item \textbf{Descrizione:} data l'inesperienza dei componenti del gruppo nell'analisi dei requisiti, è possibile un'errata comprensione dei requisiti comportando un'offerta non conforme alle richieste;
-		\item \textbf{Frequenza:} medio-bassa;
-		\item \textbf{Fattore di rischio:} alto;
-		\item \textbf{Controllo:} per ridurre al minimo gli errori dell'analisi, è utile organizzare incontri con il proponente al fine di sciogliere ogni dubbio e capire a fondo le sue esigenze;
+		\item \textbf{Probabilità di occorrenza:} medio-bassa;
+		\item \textbf{Livello di gravità:} alto;
+		\item \textbf{Strategia di rilevazione:} per ridurre al minimo gli errori dell'analisi, è utile organizzare incontri con il proponente al fine di sciogliere ogni dubbio e capire a fondo le sue esigenze;
 		\item \textbf{Contromisure:} organizzare incontri col proponente permetterà al gruppo di capire con maggior chiarezza i requisiti necessari. Inoltre è importante correggere tempestivamente ogni errore e imprecisione individuati alle revisioni. 
 	\end{itemize}
 	
-	\section{Rischi organizzativi}
-	\subsection{Sottostima dei tempi necessari}
+	\subsection{Rischi legati all'organizzazione}
+	\subsubsection{Sottostima dei tempi necessari}
 	\begin{itemize}
+		\item \textbf{Codice:} RO0;
+		\item \textbf{Nome:} Sottostima dei tempi necessari;
 		\item \textbf{Descrizione:} data l'inesperienza dei componenti del gruppo nella pianificazione di progetto e l'attuazione della stessa su una arco di tempo medio-lungo, può verificarsi la sottostima dei tempi necessari alla realizzazione del progetto;
-		\item \textbf{Frequenza:} media;
-		\item \textbf{Fattore di rischio:} alto;
-		\item \textbf{Controllo:} ogni componente del gruppo controllerà periodicamente lo stato della propria attività rispetto alla tabella di marcia imposta nella pianificazione;
+		\item \textbf{Probabilità di occorrenza:} media;
+		\item \textbf{Livello di gravità:} alto;
+		\item \textbf{Strategia di rilevazione:} ogni componente del gruppo controllerà periodicamente lo stato della propria attività rispetto alla tabella di marcia imposta nella pianificazione;
 		\item \textbf{Contromisure:} per ogni attività, è previsto un tempo di \glossario{slack}{Slack}, in modo che un ritardo non incida negativamente nell'avanzamento del progetto.
 	\end{itemize}
 
@@ -172,7 +243,7 @@
 		\caption{Diagramma di Gantt di Analisi}\label{fig:1}	
 	\end{figure}
 	\newpage
-	\section{Consolidamento dei requisiti} Inizia dopo la consegna dei documenti per la Revisione dei Requisiti e termina con la presentazione della Revisione dei Requisiti il 26-01-2017. Questa attività consiste nel migliorare e consolidare quanto fatto nell'Analisi dei Requisiti.
+	\section{Consolidamento dei requisiti} Inizia dopo la consegna dei documenti per la Revisione dei Requisiti e termina con la presentazione della Revisione dei Requisiti il 26-01-2018. Questa attività consiste nel migliorare e consolidare quanto fatto nell'Analisi dei Requisiti.
 	\subsection{Consolidamento dei requisiti - Diagramma di Gantt}
 	\begin{figure}[H]
 		\includegraphics[width=\linewidth]{ConsolidamentoGantt.png}	
@@ -195,7 +266,7 @@
 	\end{figure}
 	\newpage
 	\section{Progettazione di dettaglio e Codifica}
-	Inizia dopo la Revisione di Progettazione e termina con la Revisione di Qualifica del 23-04-2017. Durante questa attività vengono svolte le seguenti sotto-attività:
+	Inizia dopo la Revisione di Progettazione e termina con la Revisione di Qualifica del 23-04-2018. Durante questa attività vengono svolte le seguenti sotto-attività:
 	\begin{itemize}
 		\item \textbf{Incrementazione e Verifica}: vengono incrementati e verificati, se necessario, i documenti già redatti, correggendo i difetti emersi nell'esito della Revisione di Progettazione;	
 		\item \textbf{Definizione di Prodotto:} viene definita nel dettaglio la struttura e il funzionamento del prodotto per la sua codifica, descrivendola nel documento \textit{Definizione di Prodotto};
@@ -210,7 +281,7 @@
 	\end{figure}
 	
 	\section{Validazione e collaudo}
-	Inizia dopo la Revisione di Qualifica e termina con la Revisione di Accettazione del 14-05-2017. Durante questa attività vengono svolte le seguenti sotto-attività:
+	Inizia dopo la Revisione di Qualifica e termina con la Revisione di Accettazione del 14-05-2018. Durante questa attività vengono svolte le seguenti sotto-attività:
 	\begin{itemize}
 		\item \textbf{Incrementazione e Verifica}: vengono incrementati e verificati, se necessario, i documenti già redatti, correggendo i difetti emersi nell'esito della Revisione di Qualifica;		
 		\item \textbf{Validazione e Collaudo:} viene verificata la conformità del prodotto rispetto ai requisiti, testandolo per assicurarsi il corretto funzionamento ed il raggiungimento di determinati vincoli qualificativi.
@@ -221,4 +292,5 @@
 		\includegraphics[width=\linewidth]{ValidazioneCollaudo.png}	
 		\caption{Diagramma di Gantt di Validazione e collaudo}\label{fig:5}	
 	\end{figure}
+
 \end{document}

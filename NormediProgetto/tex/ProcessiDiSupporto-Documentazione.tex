@@ -120,11 +120,13 @@ Il frontespizio di ogni documento è strutturato nel seguente modo:
     \item \textbf{Informazioni sul documento:} tabella riassuntiva indicante le seguenti informazioni di spicco sul documento:
         \begin{itemize}
             \item \textbf{Versione:} indica un numero che identifica la versione corrente del documento. La struttura del numero di versionamento è approfondita di seguito in questa sezione;
-            \item \textbf{Data di redazione:} indica l'ultima data in cui il documento è stato modificato;
+            \item \textbf{Data di approvazione:} indica l'ultima data in cui il documento è stato approvato;
+            \item \textbf{Responsabile:} indica il Responsabile che ha approvato il documento;
             \item \textbf{Redattori:} indica il sottoinsieme dei membri del gruppo che ha partecipato alla redazione del documento;
             \item \textbf{Verificatori:} indica il sottoinsieme dei membri del gruppo che ha partecipato alla verifica del documento;
             \item \textbf{Distribuzione:} indica a chi è destinato il documento;
-            \item \textbf{Uso:} indica se l'uso del documento è interno o esterno al gruppo.
+            \item \textbf{Uso:} indica se l'uso del documento è interno o esterno al gruppo;          
+            \item \textbf{Recapito:} la mail di recapito del gruppo
         \end{itemize}
         
 \end{itemize}
@@ -173,7 +175,7 @@ Fatta eccezione per il frontespizio, tutte le pagine del documento contengono un
 Fatta eccezione per il frontespizio, tutte le pagine del documento contengono un piè di pagina. Questo è costituito da: 
 
 \begin{itemize}
-    \item \textbf{Data e ora:} indica data e ora dell'ultima modifica del documento, collocate a sinistra;
+    \item \textbf{Nome documento e versione:} indica il nome del documento e la sua versione attuale, collocate a sinistra;
     \item \textbf{Numero di pagina:} numerazione progressiva delle pagine, collocato a destra.
 \end{itemize}
 
@@ -200,7 +202,7 @@ Il contenuto principale del documento è organizzato secondo la seguente struttu
 
 \begin{itemize}
     
-    \item \textbf{Glossario:} ogni parola contenuta nel glossario deve essere marcata, solo alla sua prima occorrenza in ogni documento, in corsivo e con una G maiuscola a pedice. Tale formattazione viene assicurata dalla macro \textit{\textbackslash glossario\{termine\}\{riferimento al glossario\}} che stampa il termine con la giusta formattazione (\textit{termine}\ped{G}) e controlla che il suo riferimento sia presente nel glossario, restituendo un errore di compilazione in caso contrario;  
+    \item \textbf{Glossario:} ogni parola contenuta nel glossario deve essere marcata, solo alla sua prima occorrenza in ogni documento, in corsivo e con una G maiuscola a pedice. Tale formattazione viene assicurata dalla macro \textit{\textbackslash glossario\{termine\}\{riferimento al glossario\}} che stampa il termine con la giusta formattazione (\textit{termine}\ped{G}) e controlla che il suo riferimento sia presente nel glossario, restituendo un errore di compilazione in caso contrario, il termine di riferimento è la parola in minuscola senza accenti;  
     
     \item \textbf{Grassetto:} il grassetto viene applicato ai titoli e agli elementi di un elenco puntato seguiti da una descrizione. Esso può inoltre essere usato per mettere in particolare risalto termini significativi; 
     

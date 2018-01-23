@@ -21,6 +21,8 @@
 
 \usepackage[colorlinks = true, urlcolor  = blue]{hyperref}
 
+\usepackage{eurosym}
+
 \usepackage{graphicx} % Required for including pictures
 
 \usepackage[T1]{fontenc} % Output font encoding for international characters
@@ -104,11 +106,11 @@
 
 \renewcommand{\opening}[1]{
 	{\centering\fromaddress\vspace{0.05\textheight} \\ % Print the header and from address here, add whitespace to move date down
-	\hspace*{\longindentation}\today\hspace*{\fill}\par} % Print today's date, remove \today to not display it
+	\hspace*{\longindentation}\hspace*{\fill}\par} % Print today's date, remove \today to not display it
 	{\raggedright \toname \\ \toaddress \par} % Print the to name and address
 	\vspace{1cm} % White space after the to address
 	\noindent #1 % Print the opening line        <--- ADDED
 }
 
 \patchcmd\opening{{\raggedleft\@date\par}}{}{}{}
-\patchcmd\opening{{\raggedright \toname \\ \toaddress \par}}{{\raggedright \toname \\ \toaddress \par}{\raggedleft\@date\par}}{}{}
+\patchcmd\opening{{\raggedright \toname \\ \toaddress \par}}{{\raggedright \toname \\ \toaddress \par}{\raggedleft\par}}{}{}

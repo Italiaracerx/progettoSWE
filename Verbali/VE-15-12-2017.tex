@@ -6,8 +6,7 @@
 \usepackage{../StileDoc}
 \title{Verbale Esterno}
 \author{}
-\date{15 dicembre 2017}
-
+\newcommand{\versione}{}
 \loadglsentries{../Glossario/Definizioni}
 
 \begin{document}
@@ -21,10 +20,10 @@
 			\bgroup
 			\def\arraystretch{1.5}
 			\begin{tabular}{l|l}
-				\textbf{Data redazione} & \large \@date \\
-				\textbf{Responsabile} &  \\
-				\textbf{Redattori} &  \\
-				\textbf{Verificatori} &  \\
+				\textbf{Data approvazione} & 15 dicembre 2017 \\
+				\textbf{Responsabile} & Matteo Rizzo \\
+				\textbf{Redattore} & Manfredi Smaniotto \\
+				\textbf{Verificatore} & Giulio Rossetti \\
 				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
 				 & Prof. Riccardo Cardin \\
 				 & Gruppo Graphite \\
@@ -68,7 +67,7 @@
 	    \item Illustrata interfaccia grafica dimostrativa inclusa nel capitolato d'appalto, con spiegazione del significato e delle funzionalità richieste dagli elementi che la compongono;
 	    \item Chiarimento sul funzionamento generale della tecnologia \glossario{Speect}{Speect} di cui farà largo uso il progetto;
 	    \item Chiarimento sul livello di manipolazione richiesto dei nodi del \glossario{grafo}{Grafo} offerto in output all'utente;
-	    \item Illustrazione della struttura dei file \glossario{json}{file .json} di cui fa uso Speect.
+	    \item Illustrazione della struttura dei file \glossario{json}{json} di cui fa uso Speect.
 	\end{itemize}
 	
 	\noindent Seguono le principali domande poste durante l'incontro e la sintesi delle relative risposte ricevute:
@@ -103,7 +102,7 @@
     \item il file json da cui si sono caricati i vari utterance processor nel path denominato voice;
     \item il path in cui è puntato un nodo quando un utente, dopo aver selezionato un nodo, interagisce con l'interfaccia grafica.
     \end{itemize}
-    \\ L'esigenza di sapere quale nodo è puntato in un dato path è data dal fatto che utilizzando più plugin Speect opera su una grande quantità di directory e non è sempre chiaro in quale di esse il programma sta lavorando. Per evitare di seguire il percorso a mano si vuole rendere il processo di ricerca automatico.
+     L'esigenza di sapere quale nodo è puntato in un dato path è data dal fatto che utilizzando più plugin Speect opera su una grande quantità di directory e non è sempre chiaro in quale di esse il programma sta lavorando. Per evitare di seguire il percorso a mano si vuole rendere il processo di ricerca automatico.
 
 	\item \textbf{Quando viene premuto uno dei bottoni relativi agli utterance processor presenti nella colonna sinistra dell'interfaccia grafica vengono eseguiti tutti gli utterance processor precedenti oppure si esegue solo quello selezionato?}
 	\\ Viene eseguito solo l'utterance processor selezionato. Il grafo mostrato sarà comunque quello cumulativo. Potrebbe succedere che se il feature processor non trova gli elementi di cui ha bisogno venga lanciato un errore.\\ Devono essere invece eseguite tutte le utterance processor di un certo tipo nel caso in cui venga premuto in alto a destra il relativo tasto di avvio di un certo tipo di utterance. \\ Possibilmente si deve poter creare in partenza una utterance senza un tipo, ma non è detto che al momento si possa fare. \\ Devono quindi essere percorribili sia la strada in cui un utente desidera creare il grafo in modo completo sia selezionando le singole utterance dal menù a sinistra.
@@ -125,7 +124,7 @@
 	\section{Tracciamento delle decisioni}
 	
 	\begin{itemize}
-	    \item \textbf{VE-15-12-2017.1:} Integrazione del contenuto della risposta alla domanda 4 all'interno dei casi d'uso del documento \textit{Analisi dei Requisiti v 1.0.0}.
+	    \item \textbf{VE-15-12-2017.1:} Integrazione del contenuto della risposta alla domanda 4 all'interno dei casi d'uso del documento \textit{Analisi dei Requisiti}.
 	\end{itemize}
 	
 	\end{document}    

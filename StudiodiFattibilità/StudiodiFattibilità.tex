@@ -3,20 +3,14 @@
 \usepackage[]{graphicx}
 \graphicspath{{./img/}{./../img/}}
 \usepackage{../StileDoc}
-\title{Studio di fattibilità}
+\title{Studio di Fattibilità}
 \author{}
-\date{\today}
 
 \loadglsentries{../Glossario/Definizioni}
 
-%da aggiungere per changelog
-\usepackage[owncaptions,tablegrid,tocentry]{vhistory}
-\renewcommand{\vhhistoryname}{Registro delle modifiche}
-\renewcommand{\vhversionname}{Versione}
-\renewcommand{\vhdatename}{Data}
-\renewcommand{\vhauthorname}{Autore}
-\renewcommand{\vhchangename}{Modifiche}
+%Ultima versione documento
 
+\newcommand{\versione}{1.0.0}
 
 \begin{document}
 	\makeatletter
@@ -29,11 +23,11 @@
 			\bgroup
 			\def\arraystretch{1.5}
 			\begin{tabular}{l|l}
-				\textbf{Versione} & 1.0.0 \\
-				\textbf{Data redazione} & \large \@date \\
-				\textbf{Responsabile} &  \\
-				\textbf{Redattori} &  \\
-				\textbf{Verificatori} &  \\
+				\textbf{Versione} & \versione{} \\
+				\textbf{Data approvazione} & 11 Dicembre 2017 \\
+				\textbf{Responsabile} & Matteo Rizzo \\
+				\textbf{Redattori} & Marco Focchiatti, Giulio Rossetti \\
+				\textbf{Verificatori} & Kevin Silvestri \\
 				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
 				& Prof. Riccardo Cardin \\
 				& Gruppo Graphite \\
@@ -47,21 +41,29 @@
 
 	\thispagestyle{empty}
 	\newpage
-
-	% INDICE
-
-	\tableofcontents{}
 	
 	%REGISTRO DELLE MODIFICHE
 	
-	\begin{versionhistory}
-		%versioni piu recenti sopra
-		%come da norme di progetto [approvato tutto il verificato].[verificato tutto quello aggiunto].[aggiunto qualcosa] 
-		%dopo verificato aggiunto va azzerato dopo approvato verificato va azzerato 
-		
-		
-		\vhEntry{0.0.1}{20-11-2017}{Rizzo}{Creata Introduzione}
-	\end{versionhistory}
+	\chapter*{Registro delle modifiche}
+	\setlength\LTleft{-22mm}
+	\begin{longtable}{|p{20mm}|p{20mm}|p{40mm}|p{30mm}|p{50mm}|}
+		\hline
+		\textbf{Versione} & \textbf{Data} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Descrizione} \\ \hline 
+			1.0.0 & 11-12-2017 & Matteo Rizzo & Responsabile & Approvazione\\ \hline
+			0.1.0 & 11-12-2017 & Kevin Silvestri & Verificatore & Verifica\\ \hline
+			0.0.5 & 10-12-2017 & Giulio Rossetti & Analista & Stesura sezione
+			capitolato C6, C7, C8\\ \hline
+			0.0.4 & 10-12-2017 & Marco Focchiatti & Analista & Stesura sezione
+			capitolato C1, C2, C4, C5\\ \hline
+			0.0.3 & 10-12-2017 & Giulio Rossetti & Analista & Stesura sezione capitolato scelto\\ \hline
+			0.0.2 & 09-12-2017 & Marco Focchiatti & Analista & Stesura sezione introduzione\\ \hline
+			0.0.1 & 09-12-2017 & Marco Focchiatti & Analista & Creazione del template\\ \hline	
+		\end{longtable}
+
+
+	% INDICE
+
+	\tableofcontents
 
 	% INTRODUZIONE
 
@@ -89,7 +91,7 @@
 	\subsection{Riferimenti informativi}
 
 	\begin{itemize}
-		\item \textbf{Capitolato d'appalto C1:} AJarvis - Assistente Virtuale Cerimonie Agile \\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Progetto/C1.pdf}
+		\item \textbf{Capitolato d'appalto C1:} AJarvis - Assistente Virtuale Cerimonie \glossario{Agile}{Agile} \\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Progetto/C1.pdf}
 
 		\item \textbf{Capitolato d'appalto C2:} BlockCV: blockchain per gestione di CV certificati \\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Progetto/C2.pdf}
 
@@ -115,7 +117,7 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \textit{DeSpeect}: interfaccia grafica per Speect;
 		\item \textbf{Proponente:} MIVOQ S.R.L.;
-		\item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+		\item \textbf{Committente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 	\end{itemize}
 
 	\subsection{Descrizione}
@@ -130,7 +132,7 @@
 	\subsection{Dominio tecnologico}
 
 	\begin{itemize}
-		\item \textbf{interfaccia grafica:} \textit{suite Qt, Speect, C++, json, gnu GCC.}
+		\item \textbf{interfaccia grafica:} \textit{\glossario{suite}{suite} \glossario{Qt}{Qt}, Speect, C++, \glossario{json}{json}, gnu \glossario{GCC}{GCC}.}
 	\end{itemize}
 
 	\subsection{Aspetti positivi}
@@ -138,7 +140,7 @@
 	\begin{itemize}
 		\item la libreria ha uno scopo molto rilevante;
 
-		\item il prodotto da realizzare può semplificare molto l'utilizzo di \textit{Speect};
+		\item il \glossario{prodotto}{prodotto} da realizzare può semplificare molto l'utilizzo di \textit{Speect};
 
 		\item alcune tecnologie richieste dal progetto sono già familiari ai membri del gruppo e apparentemente piuttosto diffuse nell'ambito di pertinenza;
 
@@ -166,7 +168,7 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \textit{AJarvis} - Assistente Virtuale Cerimonie Agile;
 		\item \textbf{Proponente:} Zero12;
-		\item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+		\item \textbf{Committente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 	\end{itemize}
 
 	\subsection{Descrizione}
@@ -175,7 +177,7 @@
 
 	\subsection{Dominio applicativo}
 
-	Il progetto si inserisce nell'ambito dell'automatizzazione della creazione di report sulle riunioni stand up aziendali nel contesto della progettazione \glossario{Agile}{Agile}.
+	Il progetto si inserisce nell'ambito dell'automatizzazione della creazione di report sulle riunioni stand up aziendali nel contesto della progettazione Agile.
 
 	\subsection{Dominio tecnologico}
 
@@ -196,9 +198,9 @@
 	\subsection{Fattori di rischio}
 
 	\begin{itemize}
-		\item Complessità elevata nel produrre un prodotto di qualità utilizzando le tecnologie richieste, in particolare nel caso vengano riconosciute più voci simultaneamente, nonostante venga considerata come pre-condizione che ogni partecipante parli uno alla volta, può capitare durante una conversazione che inavvertitamente più persone parlino contemporaneamente;
+		\item Complessità elevata nel produrre un prodotto di \glossario{qualità}{qualita} utilizzando le tecnologie richieste, in particolare nel caso vengano riconosciute più voci simultaneamente, nonostante venga considerata come pre-condizione che ogni partecipante parli uno alla volta, può capitare durante una conversazione che inavvertitamente più persone parlino contemporaneamente;
 
-		\item Il gruppo ritiene significativo che un prodotto così interessante sia condiviso sotto licenze \glossario{open source}{open source}, contrariamente a quanto sottolineato dalla proponente.
+		\item Il gruppo ritiene significativo che un prodotto così interessante sia condiviso sotto licenze \glossario{open source}{open source}, contrariamente a quanto sottolineato dalla \glossario{proponente}{proponente}.
 	\end{itemize}
 
 	\subsection{Valutazione finale}
@@ -212,7 +214,7 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \textit{BlockCV}: blockchain per gestione di CV certificati;
 		\item \textbf{Proponente:} Ifin Sistemi Srl;
-		\item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+		\item \textbf{Committente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 	\end{itemize}
 
 	\subsection{Descrizione}
@@ -251,7 +253,7 @@
 
 	\subsection{Valutazione finale}
 
-	Nonostante l'interesse suscitato dalle tecnologie proposte, l'elevata complessità del progetto e la dubbia efficacia del sistema di certificazione delle competenze curricolari da parte dell'ente erogatore ci spingono alla scelta di un altro capitolato.
+	Nonostante l'interesse suscitato dalle tecnologie proposte, l'elevata complessità del progetto e la dubbia \glossario{efficacia}{efficacia} del sistema di certificazione delle competenze curricolari da parte dell'ente erogatore ci spingono alla scelta di un altro capitolato.
 
 	% CAPITOLATO 4
 
@@ -260,7 +262,7 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \textit{ECoRe}: Enterprise Content Recommendation;
 		\item \textbf{Proponente:} SIAV SPA;
-		\item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+		\item \textbf{Committente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 	\end{itemize}
 
 	\subsection{Descrizione}
@@ -312,7 +314,7 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \textit{Ironworks};
 		\item \textbf{Proponente:} Zucchetti Software srl;
-		\item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+		\item \textbf{Committente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 	\end{itemize}
 
 	\subsection{Descrizione}
@@ -326,7 +328,7 @@
 	\subsection{Dominio tecnologico}
 
 	\begin{itemize}
-		\item \textbf{Disegnatore diagrammi UML:} \textit{ArgoUML, StarUML, Software Idea Designer} ecc.;
+		\item \textbf{Disegnatore diagrammi \glossario{UML}{UML}:} \textit{ArgoUML, StarUML, Software Idea Designer} ecc.;
 
 		\item \textbf{Codifica parte lato server:} \textit{Java} con server \textit{Tomcat} o \textit{Javascript} con server \textit{Node.Js};
 
@@ -358,7 +360,7 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \textit{Marvin}: dimostratore di Uniweb su Ethereum;
 		\item \textbf{Proponente:} RedBabel;
-		\item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+		\item \textbf{Committente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 	\end{itemize}
 
 	\subsection{Descrizione}
@@ -404,7 +406,7 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \textit{OpenAPM}: cruscotto di Application Performance Management;
 		\item \textbf{Proponente:} Iks - Kirey Group;
-		\item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+		\item \textbf{Committente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 	\end{itemize}
 
 	\subsection{Descrizione}
@@ -428,7 +430,7 @@
 	\begin{itemize}
 		\item Il progetto propone l'utilizzo di alcune tecnologie interessanti ed innovative;
 
-		\item Realizzazione di un prodotto open source in un dominio applicativo caratterizzato da software proprietari.
+		\item Realizzazione di un prodotto open source in un \glossario{dominio applicativo}{dominio applicativo} caratterizzato da software proprietari.
 	\end{itemize}
 
 	\subsection{Fattori di rischio}
@@ -448,7 +450,7 @@
 	\begin{itemize}
 		\item \textbf{Nome:} \textit{TuTourSelf}: piattaforma di prenotazioni per artisti in tournee;
 		\item \textbf{Proponente:} TuTourSelf S.r.l.;
-		\item \textbf{Commitente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
+		\item \textbf{Committente:} Prof.Tullio Vardanega e Prof. Riccardo Cardin.
 	\end{itemize}
 
 	\subsection{Descrizione}

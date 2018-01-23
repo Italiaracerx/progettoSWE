@@ -11,8 +11,32 @@
 	% Flusso Eventi 
 
 	\chapter{Casi d'uso}
+	\section{Descrizione}
+	I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo: 
+	
+	\begin{center}
+		UC[Codice padre]*.[Codice identificativo]
+	\end{center}
+	
+	\begin{itemize}
+		\item \textbf{Codice padre:} identifica il codice del caso d'uso da cui è stato generato il caso d'uso identificato, se non esiste il campo va tralasciato;
+		\item \textbf{Codice identificativo:} identifica il caso d'uso univocamente.
+	\end{itemize}
+	
+	\noindent Ogni caso d'uso è inoltre definito secondo la seguente struttura:
+	\begin{itemize}
+		\item \textbf{Attore Principale:} indica gli attori principali (ad esempio l'utente generico) del caso d'uso;
+		\item \textbf{Attore Secondario:} indica gli attori secondari (ad esempio entità di autenticazione esterne) del caso d'uso;
+		\item \textbf{Descrizione:} riporta una breve descrizione del caso d'uso;
+		\item \textbf{Precondizione:} specifica le condizioni che sono identificate come vere prima del verificarsi degli eventi del caso d'uso;
+		\item \textbf{Postcondizione:} specifica le condizioni che sono identificate come vere dopo il verificarsi degli eventi del caso d'uso;
+
+		\item \textbf{Scenari Alternativi:} specifica casi di errore o eventi non previsti nel flusso di esecuzione;
+		\item \textbf{Flusso di Esecuzione:} rappresenta il flusso degli eventi come lista numerata, specificando per ciascun evento: titolo, descrizione, attori coinvolti e casi d'uso generati;
+	\end{itemize}
+
 	\section{UC0:Pagina Iniziale}
-	\begin{figure}[ht]
+	\begin{figure}[H]
 		\caption{UC0}
 		\centering
 		\includegraphics[width=\textwidth]{../img/UC00.png}
@@ -27,7 +51,7 @@
 	{Non previsti}
 	{}
 	\section{UC1:Menu File}
-	\begin{figure}[htp]
+	\begin{figure}[H]
 	\caption{UC1}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC01.png}
@@ -36,7 +60,7 @@
 	{UC1}
 	{Utente}
 	{}
-	{L'Utente vuole visualizare il menu File}
+	{L'attore vuole visualizzare il menu File}
 	{Il programma mostra Pagina Iniziale \refer{UC0}}
 	{Viene selezionata una voce del menu}
 	{Non previsti}
@@ -52,19 +76,19 @@
 	}
 
 	\section{UC2:Caricamento JSon}
-	\begin{figure}[htp]
+	\begin{figure}[H]
 		\caption{UC2}
 		\centering
 		\includegraphics[width=\textwidth]{../img/UC02.png}
 	\end{figure}
 	\UserCase
 	{UC2}
-	{Utente pre Inizializzazione,Utente}
-	{Speect}
+	{Utente}
+	{}
 	{L'attore vuole caricare un file JSon}
 	{L'attore ha selezionato la voce nel menu}
 	{Viene inizializzato Speect con il file JSon selezionato e aggiornata la GUI}
-	{Speect fallisce l'inizializzazione l'attore visualizza il messaggio del errore relativo al file \refer{UC2.1}}
+	{Speect fallisce l'inizializzazione e l'attore visualizza il messaggio del errore relativo al file \refer{UC2.1}}
 	{
 		\begin{itemize}
 			\item{} Viene aperto il file browser per Caricare
@@ -78,7 +102,7 @@
 	\UserCase
 	{UC2.1}
 	{Utente}
-	{Speect}
+	{}
 	{Durante l'inizializzazione Speect fallisce ritornando un errore }
 	{L'attore carica un file JSon non corretto}
 	{L'errore è visualizzato a schermo e viene ripristinato lo stato precedente e ridato controllo all'attore}
@@ -87,7 +111,7 @@
 
 	
 	\section{UC3:File Browser}
-	\begin{figure}[htp]
+	\begin{figure}[H]
 		\caption{UC3}
 		\centering
 		\includegraphics[width=\textwidth]{../img/UC03.png}
@@ -99,7 +123,7 @@
 	{L'attore deve navigare nel file system alla ricerca di un file o di una cartella}
 	{L'attore deve selezionare un file o raggiungere una cartella}
 	{L'attore seleziona il file da caricare o la cartella in cui salvare}
-	{L'attore non ha i permessi per aprire il file viene visualizzato l'errore di navigazione \refer{UC3.3}}
+	{L'attore non ha i permessi per aprire il file e viene visualizzato l'errore di navigazione \refer{UC3.3}}
 	{
 		\begin{itemize}
 			\item{} Il file browser viene visualizzato dall'attore
@@ -150,9 +174,9 @@
 	{L'attore non ha i permessi necessari, viene visualizzato l'errore di navigazione \refer{UC3.3}}
 	{
 		\begin{itemize}
-		\item{} L'attore preme su il tasto per creare la cartella
+		\item{} L'attore preme il tasto per creare la cartella
 		\item{} La cartella viene creata
-		\item{} L'utente visualizza la nuova cartella
+		\item{} L'attore visualizza la nuova cartella
 		\end{itemize}
 	}
 
@@ -193,7 +217,7 @@
 {}
 
 \section{UC4:Salvataggio Audio Prodotto}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC4}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC04.png}
@@ -205,13 +229,13 @@
 {L'attore vuole salvare l'audio}
 {L'attore ha premuto su Salva Audio}
 {L'audio è salvato in un file}
-{L'utente visualizza un messaggio di errore \refer{UC4.2}}
+{L'attore visualizza un messaggio di errore \refer{UC4.2}}
 {
 		\begin{itemize}
 		\item{} Viene aperto il file browser per il salvataggio
 		\item{} L'attore seleziona la cartella di destinazione tramite il file browser \refer{UC3}
 		\item{} L'attore scrive il nome del file nella barra di testo
-		\item{} L'attore seleziona l'estensione attraverso menu a tendina\refer{UC4.1}
+		\item{} L'attore seleziona l'estensione attraverso menu a tendina \refer{UC4.1}
 		\item{} L'attore preme su Salva 
 		\item{} Il file viene salvato nella destinazione con estensione scelta altrimenti con estensione di default .WAV
 \end{itemize}
@@ -237,15 +261,15 @@
 \UserCase
 {UC4.2}
 {Utente}
-{Speect}
+{}
 {Avviene un errore durante il salvataggio dell'audio}
-{L'Utente ha cercato di salvare un file audio}
+{L'attore ha cercato di salvare un file audio}
 {Viene visualizzato l'errore e nessuna operazione viene eseguita}
 {Non previsti}
 {}
 
 \section{UC5:Exit}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC5}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC05.png}
@@ -254,15 +278,15 @@
 {UC5}
 {Utente}
 {}
-{L'Utente vuole chiudere l'applicazione }
-{L'applicazione sta funzionando}
+{L'attore vuole chiudere l'applicazione }
+{L'applicazione è in esecuzione}
 {L'applicazione viene terminata}
 {Non previsti}
 {
 }
 
 \section{UC6:Selezione Utterance}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC6}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC06.png}
@@ -272,7 +296,7 @@
 {Utente}
 {}
 {L'attore vuole selezionare la Utterance desiderata}
-{Un file JSon è stato caricato \refer{UC2} correttamente }
+{Un file JSon è stato caricato (\refer{UC2}) correttamente }
 {Vengono mostrati gli Utterance Processors utilizzati da Speect per tale Utterance type}
 {Non previsti}
 {
@@ -319,7 +343,7 @@
 	\end{itemize}
 }
 \section{UC7:Esecuzione}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC7}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC07.png}
@@ -327,37 +351,37 @@
 \UserCase
 {UC7}
 {Utente}
-{Speect}
-{L'Utente vuole eseguire Speect}
+{}
+{L'attore vuole eseguire Speect}
 {Il file JSon è stato caricato correttamente}
 {Speect elabora il testo selezionato e viene visualizzato il grafo}
-{L'utente visualizza un messaggio di errore \refer{UC7.1}}
+{L'attore visualizza un messaggio di errore \refer{UC7.1}}
 {\begin{itemize}
 		\item{} L'attore seleziona l'utterance type
 		\item{} L'attore può compilare il campo di testo
 		\item{} L'attore preme sul tasto di esecuzione
 		\item{} Se il campo di testo è vuoto viene utilizzato il grafo come dato per l'utterance
 		\item{} Vengono eseguiti gli utterance processor designati dall' utterance type
-		\item{} Viene mostrato il grafo risultante dall'esecuzione\refer{UC7.2}
+		\item{} Viene mostrato il grafo risultante dall'esecuzione \refer{UC7.2}
 	\end{itemize}
 }
 
 \section{UC7.1:Errore Esecuzione}
 \UserCase
 {UC7.1}
-{Speect}
 {Utente}
-{L'Utente visualizza a schermo l'errore di esecuzione di Speect }
+{}
+{L'attore visualizza a schermo l'errore di esecuzione di Speect }
 {Speect ha fallito a eseguire la utterance e ha ritornato un errore}
-{Viene visualizzato un messaggio di errore all' utente}
+{Viene visualizzato un messaggio di errore all'attore}
 {Non previsti}
 {}
 \section{UC7.2:Visualizzazione del grafo}
 \UserCase
 {UC7.2}
 {Utente}
-{Speect}
-{L'utente visualizza il grafo}
+{}
+{L'attore visualizza il grafo}
 {Speect ha terminato l'esecuzione con successo}
 {Viene visualizzato a schermo un grafo corretto con almeno un nodo cliccabile}
 {Non previsti}
@@ -373,7 +397,7 @@
 {UC7.2.1}
 {Utente}
 {}
-{L'utente vuole selezionare un nodo per visualizzarne i dettagli}
+{L'attore vuole selezionare un nodo per visualizzarne i dettagli}
 {Un grafo con almeno un nodo è mostrato a schermo}
 {Viene evidenziato il nodo del grafo e vengono mostrate le sue informazioni nella finestra apposita}
 {Non previsti}
@@ -393,14 +417,14 @@
 {UC7.2.2}
 {Utente}
 {}
-{L'utente vuole spostare graficamente un nodo}
-{L'utente ha cliccato su un nodo\refer{UC7.2.1}}
+{L'attore vuole spostare graficamente un nodo}
+{L'attore ha cliccato su un nodo \refer{UC7.2.1}}
 {Il nodo viene spostato}
 {Non previsti}
 {\begin{itemize}
-		\item{} L'utente trascina il nodo cliccando senza rilasciare
+		\item{} L'attore trascina il nodo cliccando senza rilasciare
 		\item{} Il nodo si sposta
-		\item{} L'utente rilascia il click
+		\item{} L'attore rilascia il click
 		\item{} Il nodo rimane nella nuova posizione
 \end{itemize}
 }
@@ -410,14 +434,14 @@
 {UC7.2.3}
 {Utente}
 {}
-{L'utente vuole modificare il nome del nodo selezionato}
-{L'utente ha cliccato su un nodo\refer{UC7.2.1}}
+{L'attore vuole modificare il nome del nodo selezionato}
+{L'attore ha cliccato su un nodo \refer{UC7.2.1}}
 {Il nodo cambia nome}
 {Non previsti}
 {\begin{itemize}
-		\item{} L'utente seleziona la casella di testo del nome
-		\item{} L'utente cancella il nome precedente
-		\item{} L'utente rimuove il focus dalla casella di testo
+		\item{} L'attore seleziona la casella di testo del nome
+		\item{} L'attore cancella il nome precedente
+		\item{} L'attore rimuove il focus dalla casella di testo
 		\item{} Il nome viene aggiornato
 		\item{} Il grafo viene aggiornato \refer{UC7}
 		\item{} Il grafo viene ristampato a schermo \refer{UC7.2}
@@ -428,12 +452,12 @@
 {UC7.2.4}
 {Utente}
 {}
-{L'Utente vuole filtrare le relazioni del grafico}
+{L'attore vuole filtrare le relazioni del grafico}
 {Un utterance type è stato scelto \refer{UC6}}
 {Vengono mostrati tutti i layer di relazione selezionati}
-{Non previsti}
+{}
 {\begin{itemize}
-		\item{} L'utente deseleziona una select box adiacente ad una relazione
+		\item{} L'attore deseleziona una select box adiacente ad una relazione
 		\item{} La relazione rimossa viene nascosta
 \end{itemize}
 }
@@ -442,10 +466,10 @@
 {UC7.2.5}
 {Utente}
 {}
-{L'Utente vuole eseguire una singola utterance}
+{L'attore vuole eseguire una singola utterance}
 {Un utterance type è stato scelto \refer{UC6} }
 {Viene eseguita l'utterance partendo dal grafo già presente o dal campo di testo scritto}
-{Non previsti}
+{}
 {\begin{itemize}
 				\item{} L'attore seleziona l'utterance processor
 		\item{} L'attore può compilare il campo di testo
@@ -458,21 +482,21 @@
 {UC7.2.6}
 {Utente}
 {}
-{L'utente vuole modificare il PoS del nodo selezionato}
-{L'utente ha cliccato su un nodo\refer{UC7.2.1}}
+{L'attore vuole modificare il PoS del nodo selezionato}
+{L'attore ha cliccato su un nodo\refer{UC7.2.1}}
 {Il nodo cambia PoS}
-{Non previsti}
+{}
 {\begin{itemize}
-		\item{} L'utente seleziona la casella di testo del PoS
-		\item{} L'utente cancella il nome precedente
-		\item{} L'utente rimuove il focus dalla casella di testo
+		\item{} L'attore seleziona la casella di testo del PoS
+		\item{} L'attore cancella il nome precedente
+		\item{} L'attore rimuove il focus dalla casella di testo
 		\item{} Il nome viene aggiornato
 		\item{} Il grafo viene aggiornato \refer{UC7}
 		\item{} Il grafo viene ristampato a schermo \refer{UC7.2}
 \end{itemize}}
 
 \section{UC8:Esportazione stato del Grafo}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC8}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC08.png}
@@ -480,30 +504,30 @@
 \UserCase
 {UC8}
 {Utente}
-{Speect}
-{L'utente vuole esportare lo stato del grafo}
+{}
+{L'attore vuole esportare lo stato del grafo}
 {Esiste un grafo esportabile}
 {Il grafo viene esportato in file}
-{ L'utente visualizza un messaggio di errore \refer{UC8.1}}
+{ L'attore visualizza un messaggio di errore \refer{UC8.1}}
 {
 	{\begin{itemize}
 			\item{} Viene aperto il file browser
-			\item{} L'utente seleziona il file da importare
-			\item{} L'utente preme su Apri Grafo
+			\item{} L'attore seleziona il file da importare
+			\item{} L'attore preme su Apri Grafo
 \end{itemize}}}
 
 \section{UC8.1:Errore Esportazione Grafo}
 \UserCase
 {UC8.1}
-{Speect}
 {Utente}
+{}
 {Avviene un errore durante l'esportazione}
-{L'Utente ha cercato di esportare un grafo}
-{Viene visualizzato l'errore e nessuna operazione viene eseguita}
+{L'attore ha cercato di esportare un grafo}
+{L'attore visualizza l'errore e nessuna operazione viene eseguita}
 {Non previsti}
 {}
 \section{UC9:Importa Grafo}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC9}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC09.png}
@@ -511,31 +535,31 @@
 \UserCase
 {UC9}
 {Utente}
-{Speect}
-{L'utente vuole importare lo stato del grafo}
-{Esiste un grafo e l'utente ha cliccato carica grafo}
+{}
+{L'attore vuole importare lo stato del grafo}
+{Esiste un grafo e l'attore ha cliccato carica grafo}
 {Il grafo viene importato da file}
-{L'utente visualizza un messaggio di errore \refer{UC9.1}}
+{L'attore visualizza un messaggio di errore \refer{UC9.1}}
 {
 	{\begin{itemize}
 			\item{} Viene aperto il file browser
-			\item{} L'utente seleziona il file da importare
-			\item{} L'utente preme su Salva Grafo
+			\item{} L'attore seleziona il file da importare
+			\item{} L'attore preme su Salva Grafo
 \end{itemize}}}
 \section{UC9.1:Errore Importazione Grafo}
 \UserCase
 {UC9.1}
-{Speect}
 {Utente}
+{}
 {Avviene un errore durante l'importazione}
-{L'Utente ha cercato di importare un file scorretto}
-{Viene visualizzato l'errore e nessuna operazione viene eseguita}
+{L'attore ha cercato di importare un file scorretto}
+{L'attore visualizza l'errore e nessuna operazione viene eseguita}
 {Non previsti}
 {}
 
 
 \section{UC10:Ricerca Path}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC10}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC10.png}
@@ -543,9 +567,9 @@
 \UserCase
 {UC10}
 {Utente}
-{Speect}
-{L'utente vuole cercare un percorso nel grafo}
-{Esiste un grafo corretto, l'utente ha selezionato un nodo e premuto Ricerca Path nel menu}
+{}
+{L'attore vuole cercare un percorso nel grafo}
+{Esiste un grafo corretto, l'attore ha selezionato un nodo e premuto Ricerca Path nel menu}
 {Se il path porta ad un nodo definito esso viene evidenziato \refer{UC7.2.1}}
 {Viene visualizzato un errore \refer{UC10.1}}
 {
@@ -561,15 +585,15 @@
 \UserCase
 {UC10.1}
 {Utente}
-{Speect}
-{L'utente vuole cercare un percorso nel grafo}
-{Il percorso inserito dall'utente è sintatticamente errato e l'utente ha il pulsante di Ricerca}
-{Viene visualizzato un errore a schermo e si riapre la finestra di Ricerca \refer{UC10}}
+{}
+{L'attore vuole cercare un percorso nel grafo}
+{Il percorso inserito dall'attore è sintatticamente errato e l'attore ha il pulsante di Ricerca}
+{L'attore visualizza l'errore a schermo e si riapre la finestra di Ricerca \refer{UC10}}
 {Non previsti}
 {}
 
 \section{UC11:Salvataggio modifiche file JSon}
-\begin{figure}[htp]
+\begin{figure}[H]
 	\caption{UC11}
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC11.png}
@@ -578,8 +602,8 @@
 {UC11}
 {Utente}
 {}
-{L'Utente ha modificato gli Utterance Processor e vuole salvare il nuovo file JSon}
-{Esiste un file Json correttamente aperto \refer{UC2} e l'utente ha modificato gli utterance processor \refer{UC6.1}}
+{L'attore ha modificato gli Utterance Processor e vuole salvare il nuovo file JSon}
+{Esiste un file Json correttamente aperto \refer{UC2} e l'attore ha modificato gli utterance processor \refer{UC6.1}}
 {Le modifiche vengono Salvate}
 {Viene visualizzato un errore \refer{11.1}}
 {\begin{itemize}
@@ -592,9 +616,9 @@
 {UC11.1}
 {Utente}
 {}
-{L'Utente ha provato a salvare il file JSon}
+{L'attore ha provato a salvare il file JSon}
 {L'operazione di salvataggio fallisce }
-{Viene visualizzato la causa del fallimento e si ripristina lo stato precedente all'errore}
+{L'attore visualizza la causa del fallimento e viene ripristinato lo stato precedente all'errore}
 {Non previsti}
 {}
 

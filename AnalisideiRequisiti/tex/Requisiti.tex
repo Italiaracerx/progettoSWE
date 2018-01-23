@@ -2,6 +2,30 @@
 
 \begin{document}
 	\chapter{Requisiti}
+	\section{Descrizione} 
+	I requisiti devono essere suddivisi per importanza e classificati come segue:
+	
+	\begin{center}
+		R[Importanza][Tipologia][Codice]
+	\end{center}
+	
+	\begin{itemize}
+		\item \textbf{Importanza:} Ogni requisito può appartenere solo ad una delle classi di Importanza elencate di seguito:
+		\begin{itemize}
+			\item \textbf{O (Requisito Obbligatorio):} requisito fondamentale per la corretta realizzazione del progetto;
+			\item \textbf{D (Requisito Desiderabile):} requisito non fondamentale al progetto ma il cui soddisfacimento comporterebbe una maggiore completezza del prodotto;
+			\item \textbf{F (Requisito Facoltativo):} requisito non richiesto per il corretto funzionamento del prodotto ma che se incluso arricchirebbe il progetto. Prima di soddisfare il requisito è necessaria un’analisi di tempi e costi per evitare ritardi nella consegna e/o costi superiori a quelli preventivati.
+		\end{itemize}
+		\item \textbf{Tipologia:} Di seguito sono riportate le tipologie di requisito:
+		\begin{itemize}
+			\item \textbf{V:} Identifica un \glossario{requisito di vincolo}{requisito di vincolo};
+			\item \textbf{F:} Identifica un \glossario{requisito funzionale}{requisito funzionale};
+			\item \textbf{P:} Identifica un \glossario{requisito prestazionale}{requisito prestazionale};
+			\item \textbf{Q:} Identifica un \glossario{requisito di qualità}{requisito di qualita}.
+		\end{itemize}
+		\item \textbf{Codice:} Ogni requisito è formato da un codice numerico che lo indentifica in modo univoco.
+	\end{itemize}
+	\newpage
 	\section{Requisiti Funzionali}
 	\begin{longtable}{| p{2cm} | p{2.5cm} |p{5cm} | p{2.5cm} |}
 		\hline
@@ -32,7 +56,7 @@
 		\newline ROF2.1&
 		\newline Obbligatorio&
 		\newline L'utente può visualizzare il percorso del file JSon caricato&
-		\newline \refer{UC2} \newline Interno
+		\newline \refer{UC2} \newline  VE-15-12-2017
 		\\[1em]	
 		\hline	
 		
@@ -45,39 +69,39 @@
 				
 		\newline RFF2.2.1&
 		\newline Facoltativo&
-		\newline L'utente può salvane nel file JSon le modifiche agli utterance processor&
-			\newline \refer{UC1} \newline \refer{UC11} \newline VI-15-12-17
+		\newline L'utente può salvare nel file JSon le modifiche agli utterance processor&
+			\newline \refer{UC1} \newline \refer{UC11} \newline  VE-15-12-2017
 		\\[1em]	
 		\hline
 		
 		\newline RFF2.2.1.1&
 		\newline Facoltativo&
 		\newline Il sistema deve visualizzare un errore nel caso il salvataggio fallisca e ripristinare uno stato funzionante&
-		\newline \refer{UC11.1} 
+		\newline \refer{UC11.1} \newline Interno
 		\\[1em]	
 		\hline
 
 		\newline ROF3&		\newline Obbligatorio&
 		\newline L'utente può inizializzare Speect con il file json&
-		\newline \refer{UC2} \newline VI-15-12-17
+		\newline \refer{UC2} \newline  VE-15-12-2017
 		\\[1em]	
 			\hline	
 		
 		\newline ROF3.1&\newline Obbligatorio&
-		\newline Il sistema deve visualizzare un errore in caso speect fallisca l'inizializzazione&
-		\newline \refer{UC3.3}
+		\newline Il sistema deve visualizzare un errore in caso Speect fallisca l'inizializzazione&
+		\newline \refer{UC3.3} \newline Interno
 		\\[1em]		
 		\hline
 		
 		\newline ROF4&\newline Obbligatorio&
 		\newline L'utente può salvare l'audio risultante con estensione WAV&
-		\newline \refer{UC4} 
+		\newline \refer{UC4} \newline Interno
 		\\[1em]
 			\hline
 			
 		\newline RFF4.1&\newline Facoltativo&
 		\newline L'utente può salvare l'audio risultante con estensione diversa&
-		\newline \refer{UC4} \newline \refer{UC4.1} \newline VI-15-12-17 
+		\newline \refer{UC4} \newline \refer{UC4.1} \newline  VE-15-12-2017 
 		\\[1em]
 		\hline
 		
@@ -107,42 +131,42 @@
 		
 		\newline ROF5&\newline Obbligatorio&
 		\newline L'utente può cercare il file tramite file browser&
-		\newline \refer{UC3} \newline \refer{UC3.1} \newline VI-15-12-17
+		\newline \refer{UC3} \newline \refer{UC3.1} \newline  VE-15-12-2017
 		\\[1em]
 		\hline
 		
 			\newline ROF5.1&\newline Obbligatorio&
 		\newline L'utente può aprire cartelle tramite file browser&
-		\newline \refer{UC3.1} \newline \refer{UC3.1.1}
+		\newline \refer{UC3.1} \newline \refer{UC3.1.1} \newline Interno
 		\\[1em]
 		\hline
 		
 		\newline ROF5.2&\newline Obbligatorio&
 		\newline L'utente può tornare alla cartella padre&
-		\newline \refer{UC3.1} \newline \refer{UC3.1.3}
+		\newline \refer{UC3.1} \newline \refer{UC3.1.3} \newline Interno
 		\\[1em]
 		\hline
 		
 		\newline RDF5.3&\newline Desiderabile&
 		\newline L'utente può creare cartelle tramite file browser&
-		\newline \refer{UC3} \newline \refer{UC3.1.2}
+		\newline \refer{UC3} \newline \refer{UC3.1.2} \newline Interno
 		\\[1em]
 		\hline
 		
 		\newline ROF5.4&\newline Obbligatorio&
 		\newline L'utente può selezionare un file tramite file browser&
-		\newline \refer{UC3} \newline \refer{UC3.2}
+		\newline \refer{UC3} \newline \refer{UC3.2} \newline Interno
 		\\[1em]	
 		\hline
 		
 		
 		\newline ROF5.5&\newline Obbligatorio&
 		\newline Il sistema visualizza un errore se si cerca di accedere ad una cartella senza i permessi necessari&
-		\newline \refer{UC3.3} \newline VI-15-12-17
+		\newline \refer{UC3.3} \newline  VE-15-12-2017
 		\\[1em]	
 		\hline
 		\newline RDF5.6&\newline Desiderabile&
-		\newline il file browser mostra solo file di estensione corretta&
+		\newline Il file browser mostra solo file di estensione corretta&
 		\newline Interno
 		\\[1em]
 		\hline
@@ -158,25 +182,25 @@
 		\hline
 		\newline ROF6&\newline Obbligatorio&
 		\newline L'utente può selezionare la utterance type&
-		\newline \refer{UC6} 
+		\newline \refer{UC6} \newline  VE-15-12-2017
 		\\[1em]
 		\hline
 				
 		\newline RDF6.1&\newline Desiderabile&
 		\newline L'utente può modificare gli utterance processor di un utterance type&
-		\newline \refer{UC6.1}
+		\newline \refer{UC6.1} \newline  VE-15-12-2017
 		\\[1em]
 		\hline	
 				
 		\newline RDF6.1.1&\newline Desiderabile&
 		\newline L'utente può spostare gli utterance processor di un utterance type&
-		\newline \refer{UC6.1} \newline \refer{UC6.1.1}
+		\newline \refer{UC6.1} \newline \refer{UC6.1.1} \newline Interno
 		\\[1em]
 		\hline	
 				
 		\newline RDF6.1.2&\newline Desiderabile&
 		\newline L'utente può cancellare gli utterance processor di un utterance type&
-		\newline \refer{UC6.1} \newline \refer{UC6.1.1}
+		\newline \refer{UC6.1} \newline \refer{UC6.1.1} \newline Interno
 		\\[1em]
 		\hline	
 		
@@ -213,13 +237,13 @@
 		
 		\newline ROF9.2&\newline Obbligatorio&
 		\newline L'utente vede ogni relazione del grafo di un colore diverso, relativo al colore in legenda&
-		\newline VI-15-12-17  \newline Capitolato
+		\newline  VE-03-01-2018  \newline Capitolato
 		\\[1em]
 		\hline
 		
 		\newline RDF9.2.1&\newline Desiderabile&
 		\newline L'utente può cambiare il colore delle relazioni in legenda&
-		\newline \refer{UC7.2.4} \newline VI-15-12-17
+		\newline \refer{UC7.2.4} \newline  VE-03-01-2018
 		\\[1em]
 		\hline
 		
@@ -237,37 +261,37 @@
 			
 		\newline RDF9.3.1.1&\newline Desiderabile&
 		\newline L'utente può modificare il name del nodo selezionato&
-		\newline \refer{UC7.2.3} \newline VI-15-12-17 \newline Capitolato
+		\newline \refer{UC7.2.3} \newline  VE-15-12-2017 \newline Capitolato
 		\\[1em]
 		\hline
 		
 			\newline RDF9.3.1.2&\newline Desiderabile&
 		\newline L'utente può modificare il PoS del nodo selezionato&
-		\newline \refer{UC7.2.6} \newline VI-15-12-17 \newline Capitolato
+		\newline \refer{UC7.2.6} \newline  VE-15-12-2017 \newline Capitolato
 		\\[1em]
 		\hline
 		
 		\newline RDF9.4&\newline Desiderabile&
 		\newline L'utente può testare se un percorso porta ad un nodo esistente&
-		\newline \refer{UC10} \newline VI-15-12-17 \newline Capitolato
+		\newline \refer{UC10} \newline  VE-15-12-2017 \newline Capitolato
 		\\[1em]
 		\hline
 		
 		\newline RDF9.4.1&\newline Desiderabile&
 		\newline L'utente può evidenziare un nodo del grafo tramite percorso partendo da un nodo selezionato&
-		\newline \refer{UC10} \newline \refer{UC7.2.1} \newline VI-15-12-17 \newline Capitolato
+		\newline \refer{UC10} \newline \refer{UC7.2.1} \newline  VE-03-01-2018 \newline Capitolato
 		\\[1em]
 		\hline
 		
 		\newline RDF9.4.2&\newline Desiderabile&
 		\newline Il sistema visualizza un errore se il path porta fuori dal grafo e riapre la ricerca&
-		\newline \refer{UC10.1} \newline \refer{UC10.1}
+		\newline \refer{UC10.1} \newline \refer{UC10.1} \newline Interno
 		\\[1em]
 		\hline
 		
 		\newline ROF9.5&\newline Obbligatorio&
 		\newline I nodi selezionati dall'utente vengono evidenziati&
-		\newline \refer{UC7.2.1} \newline VI-15-12-17 \newline Capitolato
+		\newline \refer{UC7.2.1} \newline  VE-15-12-2017 \newline Capitolato
 		\\[1em]
 		\hline
 		
@@ -279,11 +303,11 @@
 		
 		\newline ROF9.6&\newline Obbligatorio&
 		\newline L'utente può spostare i nodi del grafo graficamente&
-		\newline \refer{UC7.2.2} \newline VI-15-12-17
+		\newline \refer{UC7.2.2} \newline VE-03-01-2018
 		\\[1em]
 		\hline
 		
-		\newline RDF9.7&\newline Desiderabile&
+		\newline ROF9.7&\newline Obbligatorio&
 		\newline L'utente può visualizzare gli strati di relazione del grafo selezionati&
 		\newline \refer{UC7.2.4} \newline Capitolato
 		\\[1em]
@@ -291,7 +315,7 @@
 	
 		\newline RFF9.8&\newline Facoltativo&
 		\newline L'utente può modificare gli archi dei nodi del grafo&
-		\newline VI-15-12-17 \newline Capitolato
+		\newline  VE-15-12-2017 \newline Capitolato
 		\\[1em]
 		\hline
 		
@@ -319,25 +343,25 @@
 		
 		\newline RFF11&\newline Facoltativo&
 		\newline L'utente può salvare lo stato del grafo&
-		\newline \refer{UC8} \newline VI-15-12-17 
+		\newline \refer{UC8} \newline  VE-15-12-2017 
 		\\[1em]
 		\hline
 
 
 		\newline RFF11.1&\newline Facoltativo&
 		\newline Il sistema deve visualizzare un errore se non riesce a salvare il grafo&
-		\newline \refer{UC8} \newline \refer{UC8.1} \newline VI-15-12-17 
+		\newline \refer{UC8} \newline \refer{UC8.1} \newline  VE-15-12-2017 
 		\\[1em]
 		\hline
 		
 		\newline RFF12&\newline Facoltativo&
 		\newline L'utente può caricare lo stato di un grafo&
-		\newline \refer{UC9} \newline VI-15-12-17
+		\newline \refer{UC9} \newline  VE-15-12-2017
 		\\[1em]
 		\hline
 				\newline RFF12.1&\newline Facoltativo&
 		\newline Il sistema deve visualizzare un errore se non riesce a caricare il grafo&
-		\newline \refer{UC9} \newline \refer{UC9.1} \newline VI-15-12-17 
+		\newline \refer{UC9} \newline \refer{UC9.1} \newline  VE-15-12-2017 
 		\\[1em]
 		\hline
 		
@@ -350,7 +374,7 @@
 		
 		\newline RFF13&\newline Facoltativo&
 		\newline L'utente può eseguire Speect dato un grafo&
-		\newline \refer{UC7} \newline \refer{UC7.2.5} \newline VI-15-12-17
+		\newline \refer{UC7} \newline \refer{UC7.2.5} \newline  VE-15-12-2017
 		\\[1em]
 		\hline
 		
@@ -358,7 +382,7 @@
 		
 		\newline ROF14&\newline Obbligatorio&
 		\newline L'utente può chiudere l'applicazione&
-		\newline \refer{UC5}
+		\newline \refer{UC5} \newline Interno
 		\\[1em]
 		\hline
 		
@@ -383,7 +407,7 @@
 			\\[1em]
 			\hline
 	\end{longtable}
-
+\newpage
 	\section{Requisiti di Vincolo}
 			\begin{longtable}{| p{2cm} | p{2.5cm} |p{5cm} | p{2.5cm} |}
 			\hline
@@ -440,9 +464,14 @@
 		\textbf{Fonte} & \textbf{Requisti} \\
 			\hline
 		\endhead
-		\newline Capitolato & \newline ROF0 \newline ROF2 \newline RFF2.2 \newline ROF7 \newline ROF8 \newline ROF9 \newline ROF9.1 \newline ROF9.2 \newline ROF9.3 \newline ROF9.3 \newline ROF9.3.1 \newline ROF9.3.1.1 \newline ROF9.3.1.2 \newline RDF9.4 \newline RDF9.4.1 \newline RDF9.5 \newline RDF9.7 \newline RFF9.8 \newline RFF9.8.1 \newline RFF9.8.2 \newline RFF10 \newline RFF12.2 \newline ROQ0 \newline ROV0 \newline ROV1 \newline ROV2 \newline ROV2.1 \newline ROV3 \newline ROV3.1 \\[1em]
+		\newline Capitolato & \newline ROF0 \newline ROF2 \newline RFF2.2 \newline ROF7 \newline ROF8 \newline ROF9 \newline ROF9.1 \newline ROF9.2 \newline ROF9.3 \newline ROF9.3 \newline ROF9.3.1 \newline ROF9.3.1.1 \newline ROF9.3.1.2 \newline RDF9.4 \newline RDF9.4.1 \newline RDF9.5 \newline ROF9.7 \newline RFF9.8 \newline RFF9.8.1 \newline RFF9.8.2 \newline RFF10 \newline RFF12.2 \newline ROQ0 \newline ROV0 \newline ROV1 \newline ROV2 \newline ROV2.1 \newline ROV3 \newline ROV3.1 \\[1em]
 	\hline	
-		\newline Interni &  \newline ROF1  \newline ROF2.1  \newline ROF4.2  \newline ROF4.2.1  \newline ROF4.3  \newline RFF4.4  \newline RDF5.6  \newline RDF5.7  \newline RDF5.8  \newline ROF 8.1  \newline RDF9.5.1  \newline RFF9.8.1  \newline RFF9.8.2  \newline ROQ0.1  \newline ROV1  \newline RDV3 \\[1em]
+		\newline Interni &  \newline ROF1 \newline RFF2.2.1.1 \newline ROF3.1 \newline ROF4 \newline ROF4.2  \newline ROF4.2.1  \newline ROF4.3  \newline RFF4.4 \newline ROF5.1 \newline ROF5.2 \newline RDF5.3 \newline RDF5.4 \newline RDF5.6  \newline RDF5.7  \newline RDF5.8 \newline ROF6.1 \newline RDF6.1.1 \newline RDF6.1.2 \newline RDF9.4.2 \newline ROF 9.6  \newline ROF 8.1  \newline RDF9.5.1  \newline RFF9.8.1  \newline RFF9.8.2 \newline ROF14 \newline ROQ0.1  \newline ROV1  \newline RDV3 \\[1em]
+	\hline
+		\newline  VE-15-12-2017 & \newline ROF2.1 \newline RFF2.2.1 \newline RFF4.1 \newline ROF5 \newline ROF5.5 \newline ROF6 \newline RDF6.1 \newline RDF9.3.1.1 \newline RDF9.3.1.2 \newline RDF9.4 \newline ROF9.5 \newline RFF9.8 \newline RFF11 \newline RFF11.1 \newline RFF12 \newline RFF12.1 \newline RFF13 \\[1em]
+	\hline
+		\newline VE-03-01-2018 &  \newline ROF9.2 \newline ROF9.2.1 \newline RDF9.4.1 \newline ROF9.6 \\[1em]
+
 	\hline
 		\newline UC0 &  \newline ROF0 \\[1em]
 	\hline
@@ -490,7 +519,7 @@
 		\hline
 		\newline UC7.2.3 &  \newline RDF9.3.1.1 \\[1em]
 		\hline
-		\newline UC7.2.4 &  \newline RDF9.2.1 \newline RDF9.7 \\[1em]
+		\newline UC7.2.4 &  \newline RDF9.2.1 \newline ROF9.7 \\[1em]
 		\hline
 		\newline UC7.2.5 &  \newline RFF10 \newline RFF13 \\[1em]
 		\hline
@@ -514,5 +543,383 @@
 		\hline
 		\newline UC11.1 &  \newline RFF9.2.1.1 \\[1em]
 		\hline
+		
+		\caption{Tracciamento Fonte Requisiti}
 	\end{longtable}
+\newpage
+	\section{Tracciamento requisito-fonti}
+	\begin{longtable}{| p{4cm} | p{4cm} |}
+	
+	\hline
+\textbf{Requisiti} & \textbf{Fonte} \\
+\hline
+\endhead
+	\newline ROF0&
+	\newline \refer{UC0} \newline Capitolato
+	\\[1em]
+	\hline
+	\newline ROF1&
+	\newline \refer{UC1} \newline Interno
+	\\[1em]	
+	
+	\hline
+	
+	\newline ROF2&
+	\newline \refer{UC1} \newline \refer{UC2} \newline Capitolato
+	\\[1em]	
+	\hline	
+	
+	\newline ROF2.1&
+	\newline \refer{UC2} \newline  VE-15-12-2017
+	\\[1em]	
+	\hline	
+	
+	\newline RFF2.2&
+	\newline \refer{UC6.1.1} \newline Capitolato
+	\\[1em]	
+	\hline
+	
+	\newline RFF2.2.1&
+	\newline \refer{UC1} \newline \refer{UC11} \newline  VE-15-12-2017
+	\\[1em]	
+	\hline
+	
+	\newline RFF2.2.1.1&
+	\newline \refer{UC11.1} \newline Interno
+	\\[1em]	
+	\hline
+	
+	\newline ROF3&	
+	\newline \refer{UC2} \newline  VE-15-12-2017
+	\\[1em]	
+	\hline	
+	
+	\newline ROF3.1&
+	\newline \refer{UC3.3} \newline Interno
+	\\[1em]		
+	\hline
+	
+	\newline ROF4&
+	\newline \refer{UC4} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline RFF4.1&
+	\newline \refer{UC4} \newline \refer{UC4.1} \newline  VE-15-12-2017 
+	\\[1em]
+	\hline
+	
+	\newline ROF4.2&
+	\newline \refer{UC4} \newline \refer{UC3.1} \newline Interno
+	\\[1em]
+	
+	\hline	
+	\newline ROF4.2.1&
+	\newline \refer{UC4} \newline Interno
+	\\[1em]
+	
+	\hline
+	\newline ROF4.3&
+	\newline \refer{UC4.2} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline RFF4.4&
+	
+	\newline Interno
+	\\[1em]
+	\hline
+	
+	\newline ROF5&
+	
+	\newline \refer{UC3} \newline \refer{UC3.1} \newline  VE-15-12-2017
+	\\[1em]
+	\hline
+	
+	\newline ROF5.1&
+	
+	\newline \refer{UC3.1} \newline \refer{UC3.1.1} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline ROF5.2&
+	
+	\newline \refer{UC3.1} \newline \refer{UC3.1.3} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline RDF5.3&
+	
+	\newline \refer{UC3} \newline \refer{UC3.1.2} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline ROF5.4&
+	
+	\newline \refer{UC3} \newline \refer{UC3.2} \newline Interno
+	\\[1em]	
+	\hline
+	
+	
+	\newline ROF5.5&
+	
+	\newline \refer{UC3.3} \newline  VE-15-12-2017
+	\\[1em]	
+	\hline
+	\newline RDF5.6&
+	
+	\newline Interno
+	\\[1em]
+	\hline
+	\newline RDF5.7&
+	
+	\newline Interno
+	\\[1em]
+	\hline
+	\newline RDF5.8&
+	
+	\newline Interno
+	\\[1em]
+	\hline
+	\newline ROF6&
+	
+	\newline \refer{UC6} \newline  VE-15-12-2017
+	\\[1em]
+	\hline
+	
+	\newline RDF6.1&
+	
+	\newline \refer{UC6.1} \newline  VE-15-12-2017
+	\\[1em]
+	\hline	
+	
+	\newline RDF6.1.1&
+	
+	\newline \refer{UC6.1} \newline \refer{UC6.1.1} \newline Interno
+	\\[1em]
+	\hline	
+	
+	\newline RDF6.1.2&
+	
+	\newline \refer{UC6.1} \newline \refer{UC6.1.1} \newline Interno
+	\\[1em]
+	\hline	
+	
+	\newline ROF7&
+	
+	\newline \refer{UC7} \newline Capitolato
+	\\[1em]
+	
+	\hline
+	\newline ROF8&
+	
+	\newline \refer{UC7} \newline Capitolato
+	\\[1em]
+	\hline
+	\newline ROF8.1&
+	
+	\newline \refer{UC7.1} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline ROF9&
+	
+	\newline \refer{UC7.2} \newline Capitolato
+	\\[1em]
+	\hline
+	
+	
+	
+	\newline ROF9.1&
+	
+	\newline \refer{UC7.2} \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline ROF9.2&
+	
+	\newline  VE-03-01-2018  \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RDF9.2.1&
+	
+	\newline \refer{UC7.2.4} \newline  VE-03-01-2018
+	\\[1em]
+	\hline
+	
+	\newline ROF9.3&
+	
+	\newline \refer{UC7.2.1} \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline ROF9.3.1&
+	
+	\newline \refer{UC7.2} \newline \refer{UC7.2.1} \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RDF9.3.1.1&
+	
+	\newline \refer{UC7.2.3} \newline  VE-15-12-2017 \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RDF9.3.1.2&
+	
+	\newline \refer{UC7.2.6} \newline  VE-15-12-2017 \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RDF9.4&
+	
+	\newline \refer{UC10} \newline  VE-15-12-2017 \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RDF9.4.1&
+	
+	\newline \refer{UC10} \newline \refer{UC7.2.1} \newline  VE-03-01-2018 \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RDF9.4.2&
+		\newline \refer{UC10.1} \newline \refer{UC10.1} \newline Interno
+	\\[1em]
+	\hline
+	
+	\newline ROF9.5&
+	\newline \refer{UC7.2.1} \newline  VE-15-12-2017 \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RDF9.5.1
+	&\newline Interno
+	\\[1em]
+	\hline
+	
+	\newline ROF9.6&
+	\newline \refer{UC7.2.2} \newline VE-03-01-2018
+	\\[1em]
+	\hline
+	
+	\newline ROF9.7&
+	\newline \refer{UC7.2.4} \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RFF9.8&
+	\newline  VE-15-12-2017 \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RFF9.8.1&
+	\newline Interno \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline RFF9.8.2&
+	\newline Interno \newline Capitolato
+	\\[1em]
+	\hline
+	
+	
+	\newline RFF10&
+	\newline \refer{UC7.2.5} \newline Capitolato
+	\\[1em]
+	\hline
+	
+	
+	
+	
+	\newline RFF11&
+	\newline \refer{UC8} \newline  VE-15-12-2017 
+	\\[1em]
+	\hline
+	
+	
+	\newline RFF11.1&
+	\newline \refer{UC8} \newline \refer{UC8.1} \newline  VE-15-12-2017 
+	\\[1em]
+	\hline
+	
+	\newline RFF12&
+	\newline \refer{UC9} \newline  VE-15-12-2017
+	\\[1em]
+	\hline
+	\newline RFF12.1&
+	\newline \refer{UC9} \newline \refer{UC9.1} \newline  VE-15-12-2017 
+	\\[1em]
+	\hline
+	
+	\newline RFF12.2&
+	\newline Capitolato
+	\\[1em]
+	\hline
+	
+	
+	\newline RFF13&
+	\newline \refer{UC7} \newline \refer{UC7.2.5} \newline  VE-15-12-2017
+	\\[1em]
+	\hline
+	
+	
+	
+	\newline ROF14&	\newline \refer{UC5} \newline Interno
+	\\[1em]
+	\hline
+	
+	
+
+\newline ROQ0&\newline Capitolato
+\\[1em]
+\hline
+\newline ROQ0.1&\newline Interno
+\\[1em]
+\hline
+\newline ROV0&\newline Capitolato
+\\[1em]
+\hline	
+\newline 
+ROV1&\newline Capitolato \newline Interno
+\\[1em]
+\hline
+\newline 
+ROV2&\newline Capitolato
+\\[1em]
+\hline
+\newline
+RDV2.1&\newline Capitolato
+\\[1em]
+\hline
+\newline
+RDV3&\newline Capitolato \newline Interno
+\\[1em]
+\hline	
+\newline
+RDV3.1&\newline Capitolato
+\\[1em]
+\hline
+\caption{Tracciamento Requisito Fonti}
+\end{longtable}
+\section{Riepilogo dei Requisiti}
+	\begin{longtable}{| c | c | c | c | c |}
+	\hline
+	\textbf{Tipo} & \textbf{Obbligatorio}& \textbf{Facoltativo} &\textbf{Desiderabile} &\textbf{Totale} \\
+	\hline
+	\endhead
+\textbf{Funzionale} &28& 15 & 14 & 57\\
+
+\hline\textbf{Prestazionale} &0& 0& 0 &0  \\
+
+\hline\textbf{Qualità} &2& 0&0&2 \\
+
+\hline\textbf{Vincolo}&3&0& 3 & 6 \\
+
+\hline\textbf{Totale}&33& 15& 17 & 3 \\
+
+\hline
+\caption{Riepilogo Requisiti}
+\end{longtable}
 \end{document}
