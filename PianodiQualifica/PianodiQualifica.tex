@@ -76,7 +76,7 @@
 
     \section{Scopo del documento}
     
-    Lo scopo del documento è quello di esporre le strategie, le tecnologie e le metriche che il gruppo Graphite adotta al fine di garantire le qualità di prodotto e di processo. Il documento ha dunque l'intento di chiarificare il \glossario{Sistema Qualità}{Sistema Qualita} instaurato e accettato dal gruppo in relazione al progetto corrente. Con l'obiettivo di rivelare e correggere in maniera efficace ed economica ogni errore, viene costantemente applicato un sistema di \glossario{verifica}{verifica} e \glossario{validazione}{validazione} ai processi e alle attività svolte.
+    Lo scopo del documento è quello di esporre le strategie, le tecnologie e le metriche che il gruppo Graphite adotta al fine di garantire le qualità di prodotto e di processo. Il documento ha dunque l'intento di chiarificare il \glossario{Sistema Qualità}{Sistema Qualita} instaurato e accettato dal gruppo in relazione al progetto corrente. Con l'obiettivo di rivelare e correggere in maniera efficace ed economica ogni errore, viene costantemente applicato un sistema di \glossario{verifica}{verifica} e \glossario{validazione}{validazione} ai processi e alle attività svolte. Si vuole inoltre sottolineare la natura incrementale del documento, che intende essere ampliato e migliorato in itinere.
     
     \section{Scopo del prodotto}
     
@@ -124,32 +124,55 @@
         \\ \url{https://it.wikipedia.org/wiki/Complessit\%e0 \textunderscore ciclomatica}.
     \end{itemize}
 
-% VISIONE GENERALE DELLE STRATEGIE DI VERIFICA
+% PIANIFICAZIONE DELLA QUALITA'
 
-\chapter{Visione generale delle strategie \\ di gestione della qualità}
+\chapter{Pianificazione della qualità}
     
-    \section{Introduzione}
+    \section{Strategia generale per il \\ conseguimento della qualità}
+
+    % STANDARD QUALITATIVI DI RIFERIMENTO
     
-    Vengono di seguito illustrati gli obiettivi fissati dal gruppo al fine di garantire la qualità di processo e di prodotto. Con lo scopo di monitorare costantemente lo stato dei processi e il raggiungimento degli obiettivi definiti, il gruppo adotta standard e metriche specializzate. Segue dunque l'esposizione delle metodologie adottate, delle metriche applicate e delle rispettive scale di riferimento.
-    Obiettivi e metriche sono univocamente identificati da un codice che ne agevola il tracciamento. La classificazione di obiettivi e metriche è descritta in dettaglio nelle \textit{Norme di progetto v 1.0.0}.
+    \section{Definizione degli standard \\ qualitativi di riferimento}
     
-    \section{Definizione degli obiettivi di qualità}    
+    Vengono di seguito sinteticamente esposti gli standard di qualità a cui il gruppo intende aderire e le motivazioni di tale scelta.   
     
-    \subsection{Qualità di processo}
-    
-    \subsubsection{Standard di riferimento}
+    \subsection{Qualità di processo - ISO/IEC 15504}
     
     \glossario{ISO/IEC 15504}{ISO/IEC 15504}, anche noto come \glossario{SPICE}{SPICE}, è lo standard scelto per la definizione degli obiettivi di processo. Si rimanda all'appendice A.1 per un'approfondita descrizione di tale standard.
     La scelta di SPICE è motivata dal fatto che esso fornisce gli strumenti utili a valutare la qualità di processo, parametro da tenere in grande considerazione per il conseguimento di un prodotto qualitativamente valido entro tempi prestabiliti. 
     Per poter applicare correttamente SPICE, viene utilizzato il \textit{ciclo di Deming} o \glossario{ciclo di PDCA}{Ciclo di PDCA}. Si rimanda all'appendice A.3 per un'approfondita descrizione del ciclo di Deming. Tale ciclo definisce un metodo di controllo orientato al miglioramento continuo del livello qualitativo dei processi, evitando nel contempo regressioni. Il ciclo di Deming si applica solo conoscendo lo stato di maturità attuale dei processi di interesse, definendo specifici obiettivi di miglioramento, e studiando i risultati delle azioni migliorative sperimentate. Esistono dunque  stringenti precondizioni alla sua applicabilità, ovvero l'attuazione di processi ripetibili e misurabili, qualità di processo che il gruppo ha intenzione di perseguire. L'affiancamento dello standard ISO al ciclo PDCA permette di:
     
     \begin{itemize}
-        \item Misurare costantemente le performance di processo;
-        \item Perseguire un miglioramento continuo di tali performance;
-        \item Rispettare tempi e costi indicati nel PP.
+    	\item Misurare costantemente le performance di processo;
+    	\item Perseguire un miglioramento continuo di tali performance;
+    	\item Rispettare tempi e costi indicati nel PP.
     \end{itemize} 
     
-    \subsubsection{Obiettivi}
+    \subsection{Qualità di prodotto - ISO/IEC 9126}
+    
+    \glossario{ISO/IEC 9126}{ISO/IEC 9126} è lo standard scelto per la definizione degli obiettivi di prodotto. Si rimanda all'appendice A.2 per un'approfondita descrizione di tale standard.
+    La scelta di ISO/IEC 9126 è motivata dal fatto che esso definisce criteri di applicazioni nell'ambito di metriche per la qualità interna esterna e in uso del software, qui approfondite nella sezione \textit{Misure e metriche}, utili a valutare il grado di raggiungimento degli obiettivi prefissati.
+    I prodotti realizzati durante lo svolgimento del progetto sono di due tipologie:
+    
+    \begin{itemize}
+    	\item \textbf{Documentazione:} deve essere leggibile, comprensibile e corretta dal punto di vista ortografico, sintattico e semantico.
+    	
+    	\item \textbf{Software:} deve avere le seguenti caratteristiche:
+    	\begin{itemize}
+    		\item Possedere funzionalità che soddisfino i requisiti fissati;
+    		\item \glossario{Manutenibilità}{manutenibilita};
+    		\item Essere ampiamente testato;
+    		\item \glossario{Robustezza}{robustezza};
+    	\end{itemize}
+    \end{itemize}
+    
+    % DEFINIZIONE DEGLI OBIETTIVI DI QUALITA'
+    
+    \section{Definizione degli obiettivi di qualità}    
+    
+    Vengono di seguito illustrati gli obiettivi fissati dal gruppo al fine di garantire la qualità di processo e di prodotto. Gli obiettivi di qualità sono univocamente identificati da un codice che ne agevola il tracciamento. La classificazione degli obiettivi è descritta in dettaglio nelle NP.
+    
+    \subsection{Obiettivi di qualità di processo}
 
         \begin{itemize}
             \item \textbf{ID:} OQP001;
@@ -158,27 +181,7 @@
             \item \textbf{Metriche associate:} MP001: SPICE.
         \end{itemize}
     
-    \subsection{Qualità di prodotto}
-    
-    \subsubsection{Standard di riferimento}
-    
-    \glossario{ISO/IEC 9126}{ISO/IEC 9126} è lo standard scelto per la definizione degli obiettivi di prodotto. Si rimanda all'appendice A.2 per un'approfondita descrizione di tale standard.
-    La scelta di ISO/IEC 9126 è motivata dal fatto che esso definisce criteri di applicazioni nell'ambito di metriche per la qualità interna esterna e in uso del software, qui approfondite nella sezione \textit{Misure e metriche}, utili a valutare il grado di raggiungimento degli obiettivi prefissati.
-    I prodotti realizzati durante lo svolgimento del progetto sono di due tipologie:
-    
-    \begin{itemize}
-        \item \textbf{Documentazione:} deve essere leggibile, comprensibile e corretta dal punto di vista ortografico, sintattico e semantico.
-        
-        \item \textbf{Software:} deve avere le seguenti caratteristiche:
-        \begin{itemize}
-            \item Possedere funzionalità che soddisfino i requisiti fissati;
-            \item \glossario{Manutenibilità}{manutenibilita};
-            \item Essere ampiamente testato;
-            \item \glossario{Robustezza}{robustezza};
-        \end{itemize}
-    \end{itemize}
-    
-    \subsubsection{Obiettivi}
+    \subsection{Obiettivi di qualità di prodotto}
         
         \begin{itemize}
             \item \textbf{ID:} OQPPD001;
@@ -252,50 +255,71 @@
                 \end{itemize}
             \end{itemize}
         \end{itemize}
+	
+		\subsection{Riepilogo degli obiettivi di qualità}
 
-    \section{Gestione dei processi di verifica e validazione}
+	\section{Definizione delle anomalie}
+	
+	L’identificazione delle anomalie è finalizzata alla loro risoluzione e rappresenta un importante dato per il monitoraggio dello stato del prodotto. Distinguere e catalogare le anomalie permette di organizzare (in particolar modo di priorizzare) e affinare le correzioni da attuare per eliminarle. Di seguito
+	vengono quindi elencate le definizioni di anomalie (secondo glossario IEEE 610.12-90) adottate dal gruppo:
+	
+	\begin{itemize}
+		\item \textbf{Error:} differenza riscontrata tra risultato di una computazione e valore teorico atteso;
+		\item \textbf{Fault:} un passo, un processo o un dato definito in modo erroneo che corrisponde a quanto viene definito come bug;
+		\item \textbf{Failure:} il risultato di un fault;
+		\item \textbf{Mistake:} azione umana che produce un risultato errato.
+	\end{itemize}
+    
+    \section{Gestione dei processi di \\ verifica e validazione}
         
     Il processo di verifica viene istanziato per ogni processo in esecuzione quando questo raggiunge un livello di maturità significativo, e/o in seguito a modiche notevoli del suo stato. Per ogni processo viene verificata la qualità dello stesso e del suo esito. 
-    Ognuno dei periodi descritti nel \textit{Piano di Progetto v1.0.0} produce degli esiti diversi, pertanto le procedure di verifica saranno specializzate e i loro risultati riportati in un'apposita appendice al termine di questo documento. 
+    Ognuno dei periodi descritti nel PP produce degli esiti diversi, pertanto le procedure di verifica saranno specializzate e i loro risultati riportati in un'apposita appendice al termine di questo documento. 
     Al processo di verifica segue quello di approvazione, nel quale il \textit{Responsabile} si accerta che i risultati prodotti siano conformi con quanto atteso e accettabili dal punto di vista qualitativo.
+	
+	\section{Scadenze temporali}
+	
+	Vista la presenza delle scadenze temporali definite nel PP, si necessita di un sistema di controllo efficiente dei tempi. Le procedure di controllo che verranno attuate per individuare e correggere eventuali errori sono descritte
+	nelle NP. Nel tentativo di prevenire l'insorgenza di errori stessi, ogni attività svolta detiene un periodo iniziale di
+	studio sull'argomento, che riduce la quantità di interventi correttivi a posteriori.
+	
+	\section{Risorse}
+	
+	Il controllo eseguito per garantire il livello qualitativo di processi e prodotti necessita di risorse umane e tecnologiche. In relazione a questa attività, i ruoli di maggior rilievo sono il \textit{Responsabile} e il \textit{Verificatore}, che rispettivamente si occupano del controllo di qualità del processo e del prodotto risultante. Una descrizione dettagliata di tali ruoli è reperibile nel documento NP. 
+	Le risorse tecnologiche comprendono tutti gli strumenti software e hardware che vengono utilizzati per attuare le procedure di verifica, automatizzate e non. Una descrizione dettagliata di tali risorse è reperibile nel documento NP. 
+	
+% ACCERTAMENTO DI QUALITA'
 
-    \section{Scadenze temporali}
-    
-    Le procedure di controllo che vengono attuate allo scopo di garantire il rispetto delle scadenze temporali imposte dal progetto sono descritte nelle \textit{Norme di Progetto v1.0.0}. Ad ogni processo vengono assegnate precise date di inizio e di fine, precedute da un ben definito lasso temporale dedicato allo studio dell'oggetto del processo stesso.
-    
-    \section{Risorse}
-    
-    Il controllo eseguito per garantire il livello qualitativo di processi e prodotti necessita di risorse umane e tecnologiche. In relazione a questa attività, i ruoli di maggior rilievo sono il \textit{Responsabile} e il \textit{Verificatore}, che rispettivamente si occupano del controllo di qualità del processo e del prodotto risultante. Una descrizione dettagliata di tali ruoli è reperibile nel documento \textit{Norme di Progetto v1.0.0}. 
-    Le risorse tecnologiche comprendono tutti gli strumenti software e hardware che vengono utilizzati per attuare le procedure di verifica, automatizzate e non. Una descrizione dettagliata di tali risorse è reperibile nel documento \textit{Norme di Progetto v1.0.0}. 
-
-
-% MISURE E METRICHE
-
-\chapter{Misure e metriche}
+\chapter{Accertamento di qualità}
 
 \section{Introduzione}
 
 Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è necessario che il processo di verifica produca risultati quantificabili che sia possibile confrontare con delle costanti di riferimento. Vengono di seguito stabilite le metriche ed i valori di riferimento indicanti se i livelli qualitativi di processo e di prodotto sono in linea con gli obiettivi prefissati o meno. La presentazione di ogni metrica si articolerà nelle seguenti sottosezioni:
 
 \begin{itemize}
-    \item \textbf{Nome:} nome descrittivo della metrica;
-    
-    \item \textbf{Codice:} codice univocamente identificativo della metrica;
-    
-    \item \textbf{Descrizione:} illustrazione della metrica e del suo significato; 
-    
-    \item \textbf{Modalità di calcolo:} dove definito, viene riportato il modo in cui la metrica viene calcolata;
-    
-    \item \textbf{Range o valore minimo accettabile:} indica il range minimo (o la soglia minima), rispetto alla metrica di riferimento, in cui l'esito della verifica del processo o del prodotto deve ricadere perché si consideri garantito il livello qualitativo minimo richiesto;
-
-    \item \textbf{Range o valore ottimale:} indica il range di valori (o il valore) desiderabile, rispetto alla metrica di riferimento, in cui l'esito della verifica del processo o del prodotto deve ricadere perché si consideri ampiamente garantito il livello qualitativo richiesto.
+	\item \textbf{Nome:} nome descrittivo della metrica;
+	
+	\item \textbf{Codice:} codice univocamente identificativo della metrica;
+	
+	\item \textbf{Descrizione:} illustrazione della metrica e del suo significato; 
+	
+	\item \textbf{Modalità di calcolo:} dove definito, viene riportato il modo in cui la metrica viene calcolata;
+	
+	\item \textbf{Range o valore minimo accettabile:} indica il range minimo (o la soglia minima), rispetto alla metrica di riferimento, in cui l'esito della verifica del processo o del prodotto deve ricadere perché si consideri garantito il livello qualitativo minimo richiesto;
+	
+	\item \textbf{Range o valore ottimale:} indica il range di valori (o il valore) desiderabile, rispetto alla metrica di riferimento, in cui l'esito della verifica del processo o del prodotto deve ricadere perché si consideri ampiamente garantito il livello qualitativo richiesto.
 \end{itemize}
+		
+% MISURE E METRICHE
+
+\section{Dettaglio di misure e metriche}
+
+Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispettive scale di riferimento e metodologie di calcolo. Le metriche sono univocamente identificate da un codice che ne agevola il tracciamento. La classificazione delle metriche è descritta in dettaglio nelle NP.
 
 % METRICHE PER I PROCESSI
 
-\section{Metriche per i processi}
+\subsection{Metriche per i processi}
 
-\subsection{ISO/IEC 15504 (SPICE)}
+\subsubsection{ISO/IEC 15504 (SPICE)}
 
 \begin{itemize}
     \item \textbf{Codice:} MP001;
@@ -306,9 +330,9 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 
 % METRICHE PER DOCUMENTI
 
-\section{Metriche per i documenti}
+\subsection{Metriche per i documenti}
 
-\subsection{Errori ortografici corretti}
+\subsubsection{Errori ortografici corretti}
 
 \begin{itemize}
     \item \textbf{Codice:} MPPD001;
@@ -318,7 +342,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
     \item \textbf{Valore ottimale:} 100\% degli errori corretti.
 \end{itemize}
 
-\subsection{Gulpease}
+\subsubsection{Gulpease}
 
 \begin{itemize}
     \item \textbf{Codice:} MPPD002;
@@ -350,9 +374,9 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 
 % METRICHE PER IL SOFTWARE
 
-\section{Metriche per il software}
+\subsection{Metriche per il software}
 
-\subsection{Copertura requisiti obbligatori}
+\subsubsection{Copertura requisiti obbligatori}
 
 \begin{itemize}
     \item \textbf{Codice:} MPPS001;
@@ -365,7 +389,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
     \item \textbf{Range ottimale:} [80\% - 100\%].
 \end{itemize}
 
-\subsection{Copertura del codice}
+\subsubsection{Copertura del codice}
 
 \begin{itemize}
 
@@ -381,7 +405,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
     \item \textbf{Range ottimale:} [85\% - 100\%].
 \end{itemize}
 
-\subsection{Percentuale superamento test}
+\subsubsection{Percentuale superamento test}
 
 \begin{itemize}
     \item \textbf{Codice:} MPPS003;
@@ -394,7 +418,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
     \item \textbf{Range ottimale:} [100\% - 100\%].
 \end{itemize}
 
-\subsection{Failure avoidance}
+\subsubsection{Failure avoidance}
 
 \begin{itemize}
     \item \textbf{Codice:} MPPS004;
@@ -407,7 +431,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
     \item \textbf{Range ottimale:} [90\% - 100\%].
 \end{itemize}
 
-\subsection{Numero di parametri per metodo}
+\subsubsection{Numero di parametri per metodo}
 
 \begin{itemize}
     \item \textbf{Codice:} MPPS005;
@@ -420,7 +444,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
     \item \textbf{Range ottimale:} [0, 3].
 \end{itemize}
 
-\subsection{Numero di attributi per classe}
+\subsubsection{Numero di attributi per classe}
 
 \begin{itemize}
     \item \textbf{Codice:} MPPS006;
@@ -433,7 +457,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
     \item \textbf{Range ottimale:} [0, 8].
 \end{itemize}
 
-\subsection{Numero di metodi per classe}
+\subsubsection{Numero di metodi per classe}
 
 \begin{itemize}
     \item \textbf{Codice:} MPPS007;
@@ -446,7 +470,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
     \item \textbf{Range ottimale:} [0, 5].
 \end{itemize}
 
-\subsection{Complessità ciclomatica}
+\subsubsection{Complessità ciclomatica}
 
 \begin{itemize}
     \item \textbf{Codice:} MPPS008;
@@ -469,7 +493,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
     \item \textbf{Range ottimale:} [0, 10].
 \end{itemize}
 
-\subsection{Grado di instabilità}
+\subsubsection{Grado di instabilità}
 
 \begin{itemize}
     \item \textbf{Codice:} MPPS009;
@@ -493,7 +517,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
 
 \end{itemize}
 
-\subsection{Altezza albero della gerarchia}
+\subsubsection{Altezza albero della gerarchia}
 
 \begin{itemize}
 
@@ -508,7 +532,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
     \item \textbf{Range ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $.
 \end{itemize}
 
-\subsection{Rapporto tra linee di codice e linee di commento}
+\subsubsection{Rapporto tra linee di codice e linee di commento}
 
 \begin{itemize}
 
@@ -524,32 +548,7 @@ Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è nec
     \item \textbf{Range ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $.
 \end{itemize}
 
-% GESTIONE AMMINISTRATIVA DELLA REVISIONE
-
-\chapter{Gestione amministrativa \\ della revisione}
-
-\section{Definizione delle anomalie}
-
-L’identificazione delle anomalie è finalizzata alla loro risoluzione e rappresenta un importante dato per il monitoraggio dello stato del prodotto. Distinguere e catalogare le anomalie permette di organizzare (in particolar modo di priorizzare) e affinare le correzioni da attuare per eliminarle. Di seguito
-vengono quindi elencate le definizioni di anomalie (secondo glossario IEEE 610.12-90) adottate dal gruppo:
-
-\begin{itemize}
-    \item \textbf{Error:} differenza riscontrata tra risultato di una computazione e valore teorico atteso;
-    \item \textbf{Fault:} un passo, un processo o un dato definito in modo erroneo che corrisponde a quanto viene definito come bug;
-    \item \textbf{Failure:} il risultato di un fault;
-    \item \textbf{Mistake:} azione umana che produce un risultato errato.
-\end{itemize}
-
-\section{Scadenze temporali}
-
-Vista la presenza delle scadenze temporali definite nel PP, si necessita di un sistema di controllo efficiente dei tempi. Le procedure di controllo che verranno attuate per individuare e correggere eventuali errori sono descritte
-nelle NP. Nel tentativo di prevenire l'insorgenza di errori stessi, ogni attività svolta detiene un periodo iniziale di
-studio sull'argomento, che riduce la quantità di interventi correttivi a posteriori.
-
-\section{Risorse}
-
-Il controllo effettuato per garantire il livello di qualità di processi e prodotti necessita dell'uso di risorse umane e tecnologiche. I ruoli di maggiore impatto per questa attività sono il ruolo di \textit{Responsabile} e di \textit{Verificatore}, rispettivamente adibiti al controllo di qualità di processo e al controllo di qualità di prodotto. Una descrizione dettagliata di questi e altri ruoli si trova nelle NP.
-Le risorse tecnologiche comprendono tutti gli strumenti software e hardware che vengono utilizzati per attuare le procedure di verifica. Una descrizione dettagliata di queste e altre tecnologie si trova nelle NP.
+\section{Riepilogo delle metriche}
 
 \appendix
 
@@ -559,7 +558,7 @@ Le risorse tecnologiche comprendono tutti gli strumenti software e hardware che 
 
 % SPICE
 
-\section{Qualità di processo: ISO/IEC 15504}
+\section{Qualità di processo - ISO/IEC 15504}
 
 \subsection{Introduzione allo standard}
 
@@ -601,7 +600,7 @@ Gli attributi vengono misurati e classificati secondo uno dei seguenti livelli:
 
 % ISO/IEC 9126
     
-\section{Qualità di prodotto: ISO/IEC 9126}    
+\section{Qualità di prodotto - ISO/IEC 9126}    
 
 \subsection{Introduzione allo standard}
 
@@ -695,6 +694,10 @@ Il ciclo di Deming (anche conosciuto come ciclo PDCA, l'acronimo di Plan-Do-Chec
     \item \textbf{Act:} la fase di attuazione, in cui i processi che hanno beneficiato delle correzioni e delle modifiche eseguite vengono resi standard.
 \end{enumerate}
 
+% SPECIFICA DEI TEST
+
+\chapter{Specifica dei test}
+
 % RESOCONTO DELLE ATTIVITà DI VERIFICA
 
 \chapter{Resoconto delle attività \\ di verifica di periodo}
@@ -782,5 +785,25 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 Dalla tabella si evince che tutti i documenti presentano un indice nei limiti preferibili.
 
 \end{itemize}
+
+\chapter{Valutazioni per il miglioramento}
+
+\section{Introduzione}
+
+Questa appendice si propone di riepilogare le valutazioni orientate al miglioramento dell'intero processo produttivo in relazione al progetto corrente. Verranno dunque tracciati problemi riguardanti i seguenti ambiti:
+
+\begin{itemize}
+	\item \textbf{Organizzazione:} ovvero quei problemi inerenti l'organizzazione e la comunicazione all'interno del gruppo;
+	\item \textbf{Ruoli:} ovvero quei problemi riguardanti il corretto svolgimento di un ruolo di progetto;
+	\item \textbf{Strumenti:} ovvero quei problemi riguardanti il corretto utilizzo di strumentazione specifica.
+\end{itemize}
+
+\noindent Ogni problema viene sollevato sulla base dell'autovalutazione dei membri del gruppo e dall'esito di revisioni e confronti con Committente e Proponente, e ad esso viene associata una possibile soluzione.
+
+\section{Valutazioni sull'organizzazione}
+
+\section{Valutazioni sui ruoli}
+
+\section{Valutazioni sugli strumenti}
 
 \end{document}
