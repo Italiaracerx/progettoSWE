@@ -127,10 +127,8 @@
 
 % PIANIFICAZIONE DELLA QUALITA'
 
-\chapter{Pianificazione della qualità}
+\chapter{Visione generale delle strategie \\ di gestione della qualità}
     
-    \section{Strategia generale per il \\ conseguimento della qualità}
-
     % STANDARD QUALITATIVI DI RIFERIMENTO
     
     \section{Definizione degli standard \\ qualitativi di riferimento}
@@ -257,11 +255,248 @@
             \end{itemize}
         \end{itemize}
 	
-		\subsection{Riepilogo degli obiettivi di qualità}
-
+	% MISURE E METRICHE
+	
+	\section{Misure e metriche}
+	
+	Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è necessario che il processo di verifica produca risultati quantificabili che sia possibile confrontare con delle costanti di riferimento. Vengono di seguito stabiliti i valori di riferimento per le metriche descritte in dettaglio nelle NP, indicanti se i livelli qualitativi di processo e di prodotto sono in linea con gli obiettivi prefissati o meno. 	
+	
+	% METRICHE PER I PROCESSI
+	
+	\subsection{Metriche per i processi}
+	
+	\subsubsection{ISO/IEC 15504 (SPICE)}
+	
+	\begin{itemize}
+		\item \textbf{Codice:} MP001;
+		\item \textbf{Descrizione:} La metrica definita dallo standard ISO/IEC 15504 viene utilizzata alla fine di ogni periodo per monitorare e valutare la qualità dei processi impiegati. Tale standard è illustrato dettagliatamente in Appendice A.1;
+		\item \textbf{Range di accettazione:} [P] per ogni processo;
+		\item \textbf{Range ottimale:} [L - F] per ogni processo.
+	\end{itemize}
+	
+	% METRICHE PER DOCUMENTI
+	
+	\subsection{Metriche per i documenti}
+	
+	\subsubsection{Errori ortografici corretti}
+	
+	\begin{itemize}
+		\item \textbf{Codice:} MPPD001;
+		\item \textbf{Descrizione:} La documentazione prodotta deve essere corretta dal punto di vista ortografico e grammaticale;
+		\item \textbf{Modalità di calcolo:} Controllo ortografico di TexStudio e del \textit{Verificatore};
+		\item \textbf{Valore di accettazione:} 100\% degli errori corretti;
+		\item \textbf{Valore ottimale:} 100\% degli errori corretti.
+	\end{itemize}
+	
+	\subsubsection{Gulpease}
+	
+	\begin{itemize}
+		\item \textbf{Codice:} MPPD002;
+		
+		\item \textbf{Descrizione:} L’\glossario{indice Gulpease}{indice Gulpease} è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. Tale indice considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere;
+		
+		\item \textbf{Modalità di calcolo:} L'indice Gulpease si calcola con la seguente formula:
+		
+		\[ I\ped{Gulpease} = 89 +  \frac{(300*(\textrm{\textit{numero delle frasi}})-10*(\textrm{\textit{numero delle lettere}})}{(\textrm{\textit{numero delle parole}})} \]
+		
+		Il risultato è un valore compreso nell’intervallo tra 0 e 100, dove il valore 100 indica la
+		più alta leggibilità, mentre 0 la più bassa. In generale risulta che testi con indice:
+		\begin{itemize}
+			\item inferiore a 80 sono difficili da leggere per chi ha la licenza elementare; 
+			\item inferiore a 60 sono difficili da leggere per chi ha la licenza media;
+			\item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
+		\end{itemize}
+		
+		Nonostante l'importanza riconosciuta all'indice Gulpease, il gruppo tiene conto delle seguenti considerazioni:
+		\begin{itemize}
+			\item l'indice non rileva la comprensibilità del testo, il cui contenuto potrebbe essere totalmente incomprensibile ma ottenere ugualmente un buon valore; 
+			\item ai fini dei documenti vengono necessariamente usati termini tecnici possibilmente ostici ma insostituibili;
+			\item il gruppo decide di prediligere la chiarezza e la precisione del contenuto dei documenti anche qualora questa dovesse minarne (in modo superficiale) la leggibilità.
+		\end{itemize}
+		
+		\item \textbf{Range di accettazione:} [50, 100];
+		\item \textbf{Range ottimale:} [65, 100]
+	\end{itemize}
+	
+	% METRICHE PER IL SOFTWARE
+	
+	\subsection{Metriche per il software}
+	
+	\subsubsection{Copertura requisiti obbligatori}
+	
+	\begin{itemize}
+		\item \textbf{Codice:} MPPS001;
+		\item \textbf{Descrizione:} La copertura dei requisiti obbligatori permette di monitorare la percentuale di requisiti obbligatori soddisfatti;
+		\item \textbf{Modalità di calcolo:} La copertura dei requisiti obbligatori si calcola con la seguente formula:
+		
+		\[ CRO = \frac{\textrm{\textit{numero requisiti obbligatori soddisfatti}}}{\textrm{\textit{totale dei requisiti obbligatori}}} \]
+		
+		\item \textbf{Range di accettazione:} [65\% - 100\%];
+		\item \textbf{Range ottimale:} [80\% - 100\%].
+	\end{itemize}
+	
+	\subsubsection{Copertura del codice}
+	
+	\begin{itemize}
+		
+		\item \textbf{Codice:} MPPS002;
+		
+		\item \textbf{Descrizione:} La copertura del codice (o code coverage) indica la percentuale di istruzioni,  rispetto al totale, che vengono eseguite durante i test. Maggiore è il numero delle istruzioni testate e maggiore è la possibilità di individuare e risolvere errori di codifica. Un valore troppo basso indica che molte istruzioni non vengono testate, divenendo possibile causa di anomalie.
+		
+		\item \textbf{Modalità di calcolo:} La copertura del codice si calcola con la seguente formula:
+		
+		\[ CC = \frac{\textrm{\textit{numero di righe di codice testate}}}{\textrm{\textit{totale delle righe di codice}}} \]
+		
+		\item \textbf{Range di accettazione:} [65\% - 100\%];
+		\item \textbf{Range ottimale:} [85\% - 100\%].
+	\end{itemize}
+	
+	\subsubsection{Percentuale superamento test}
+	
+	\begin{itemize}
+		\item \textbf{Codice:} MPPS003;
+		\item \textbf{Descrizione:} La metrica indica la percentuale di test implementati superati dal oggetto del test;
+		\item \textbf{Modalità di calcolo:} Percentuale superamento test si calcola con la seguente formula:
+		
+		\[ PST = \frac{\textrm{\textit{numero test superati}}}{\textrm{\textit{totale dei test implementati}}} \]
+		
+		\item \textbf{Range di accettazione:} [85\% - 100\%];
+		\item \textbf{Range ottimale:} [100\% - 100\%].
+	\end{itemize}
+	
+	\subsubsection{Failure avoidance}
+	
+	\begin{itemize}
+		\item \textbf{Codice:} MPPS004;
+		\item \textbf{Descrizione:} La Failure Avoidance è una metrica applicata per monitorare la robustezza del prodotto quando deve affrontare a situazioni critiche;
+		\item \textbf{Modalità di calcolo:} La Failure Avoidance si calcola con la seguente formula:
+		
+		\[ FA = \frac{\textrm{\textit{numero situazioni anomale evitate}}}{\textrm{\textit{numero situazioni anomale occorse}}} \]
+		
+		\item \textbf{Range di accettazione:} [80\% - 100\%];
+		\item \textbf{Range ottimale:} [90\% - 100\%].
+	\end{itemize}
+	
+	\subsubsection{Numero di parametri per metodo}
+	
+	\begin{itemize}
+		\item \textbf{Codice:} MPPS005;
+		
+		\item \textbf{Descrizione:} Il numero di parametri di un metodo incide sulla sua complessità. Un valore elevato può indicare che esso si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposto in metodi più semplici;
+		
+		\item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
+		
+		\item \textbf{Range di accettazione:} [0, 5];
+		\item \textbf{Range ottimale:} [0, 3].
+	\end{itemize}
+	
+	\subsubsection{Numero di attributi per classe}
+	
+	\begin{itemize}
+		\item \textbf{Codice:} MPPS006;
+		
+		\item \textbf{Descrizione:} Il numero di attributi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più semplici;
+		
+		\item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
+		
+		\item \textbf{Range di accettazione:} [0, 15];
+		\item \textbf{Range ottimale:} [0, 8].
+	\end{itemize}
+	
+	\subsubsection{Numero di metodi per classe}
+	
+	\begin{itemize}
+		\item \textbf{Codice:} MPPS007;
+		
+		\item \textbf{Descrizione:} Il numero di metodi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più semplici;
+		
+		\item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
+		
+		\item \textbf{Range di accettazione:} [0, 15];
+		\item \textbf{Range ottimale:} [0, 5].
+	\end{itemize}
+	
+	\subsubsection{Complessità ciclomatica}
+	
+	\begin{itemize}
+		\item \textbf{Codice:} MPPS008;
+		
+		\item \textbf{Descrizione:} La \glossario{Complessità ciclomatica}{Complessita ciclomatica} (o complessità condizionale) è una metrica software utilizzata per misurare la complessità di un programma. Nello specifico, essa stima la complessità di funzioni, moduli, metodi o classi di un programma. Il valore della Complessità Ciclomatica rappresenta quanto un metodo è complesso, tramite la misura del numero di cammini linearmente indipendenti che attraversano il \glossario{grafo}{Grafo} di flusso di controllo. In tale grafo, i nodi rappresentano gruppi indivisibili di istruzioni. Un arco connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l'esecuzione delle istruzioni dell'altro nodo. Durante l’identificazione dei test, la Complessità Ciclomatica è inoltre utile per determinare il numero di casi di test necessari: l’indice di Complessità Ciclomatica è infatti un limite superiore al numero di test necessari per raggiungere la completa \glossario{copertura del codice}{Copertura del codice} (o \textit{code coverage}) del modulo testato. Un valore troppo elevato indica un'eccessiva complessità del codice, cui consegue una complessa manutenzione, al contrario un valore ridotto potrebbe indicare una scarsa efficienza dei metodi;
+		
+		\item \textbf{Modalità di calcolo:} Rappresentando un programma con il grafo di controllo del flusso, un modo di calcolare il numero ciclomatico \textit{V(G)} è il seguente:
+		
+		\[ V(G) = E - N + 2P \]
+		
+		Dove:
+		
+		\begin{itemize}
+			\item \textbf{N:} indica il numero di nodi del grafo;
+			\item \textbf{E:} indica il numero di archi del grafo;
+			\item \textbf{P:} indica il numero di componenti connesse del grafo;
+		\end{itemize}
+		
+		\item \textbf{Range di accettazione:} [0, 15];
+		\item \textbf{Range ottimale:} [0, 10].
+	\end{itemize}
+	
+	\subsubsection{Grado di instabilità}
+	
+	\begin{itemize}
+		\item \textbf{Codice:} MPPS009;
+		
+		\item \textbf{Descrizione:} Il livello di stabilità di un software indica il rischio con una modifica apportata ad un \glossario{package}{package} influenzi il funzionamento dell'intero sistema;
+		
+		\item \textbf{Modalità di calcolo:} Il valore di instabilità è calcolato usando il grado di \glossario{accoppiamento}{Accoppiamento} tramite la seguente formula:
+		
+		\[ \textrm{\textit{Instabilità}} = \frac{\textrm{\textit{Accoppiamento efferente}}}{\textrm{\textit{Accoppiamento efferente}} + \textrm{\textit{Accoppiamento afferente}}} \]
+		
+		Dove:
+		
+		\begin{itemize}
+			\item \textbf{Accoppiamento efferente:} indica il grado di dipendenza delle classi di un package verso classi di package esterni. Un valore basso garantisce la stabilità del package indipendentemente dalle possibili modifiche al resto del sistema;
+			
+			\item \textbf{Accoppiamento afferente:} indica il grado di utilità delle classi di un package verso classi esterne ad esso. Un valore troppo basso potrebbe essere indice di scarsa utilità della classe, dato che poche delle sue funzionalità sono usate al suo esterno. Al contrario, un valore troppo elevato può indicare un livello di dipendenza pericoloso del package in esame, che può portare ad effetti indesiderati nelle classi esterne in caso di modifiche. Un valore elevato, d'altro canto, non è necessariamente indice di un errore di progettazione bensì potrebbe indicare semplicemente la criticità del package in esame.
+		\end{itemize}
+		
+		\item \textbf{Range di accettazione:} [0.0 - 0.8];
+		\item \textbf{Range ottimale:} [0.0 - 0.4].
+		
+	\end{itemize}
+	
+	\subsubsection{Altezza albero della gerarchia}
+	
+	\begin{itemize}
+		
+		\item \textbf{Codice:} MPPS010;
+		
+		\item \textbf{Descrizione:} L'altezza degli alberi di gerarchia delle classi va limitata così da limitare l'accoppiamento. Preferibilmente, le classi dovranno dipendere solo da classi astratte e potranno implementare una o più interfacce. Viene invece proibito l'uso di ereditarietà multipla.
+		
+		\item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
+		
+		\item \textbf{Range di accettazione:} $ \textrm{\textit{rapporto}} \geq 0.3\% $;
+		
+		\item \textbf{Range ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $.
+	\end{itemize}
+	
+	\subsubsection{Rapporto tra linee di codice e linee di commento}
+	
+	\begin{itemize}
+		
+		\item \textbf{Codice:} MPPS011;
+		
+		\item \textbf{Descrizione:} Il rapporto tra linee di codice (escluse le righe vuote) e linee di commento rappresenta un indice utile a stimare la manutenibilità del codice sorgente. Un rapporto troppo basso indica una scarsa documentazione del codice scritto, cui consegue una possibile elevata complessità nel manutenerlo.
+		
+		\item \textbf{Modalità di calcolo:}
+		\[\frac{\textrm{\textit{numero linee di commento}}}{\textrm{\textit{numero linee di codice (non vuote)}}} \]
+		
+		\item \textbf{Range di accettazione:} $ \textrm{\textit{rapporto}} \geq 0.3\% $;
+		
+		\item \textbf{Range ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $.
+	\end{itemize}
+	
 	\section{Definizione delle anomalie}
 	
-	L’identificazione delle anomalie è finalizzata alla loro risoluzione e rappresenta un importante dato per il monitoraggio dello stato del prodotto. Distinguere e catalogare le anomalie permette di organizzare (in particolar modo di priorizzare) e affinare le correzioni da attuare per eliminarle. Di seguito
+	L’identificazione delle anomalie ha come scopo la loro risoluzione e rappresenta un dato rilevante per il monitoraggio dello stato del prodotto. Distinguere e catalogare le anomalie permette di organizzare (in particolar modo di priorizzare) e affinare le correzioni da attuare per eliminarle. Di seguito
 	vengono quindi elencate le definizioni di anomalie (secondo glossario IEEE 610.12-90) adottate dal gruppo:
 	
 	\begin{itemize}
@@ -270,13 +505,17 @@
 		\item \textbf{Failure:} il risultato di un fault;
 		\item \textbf{Mistake:} azione umana che produce un risultato errato.
 	\end{itemize}
-    
-    \section{Gestione dei processi di \\ verifica e validazione}
-        
-    Il processo di verifica viene istanziato per ogni processo in esecuzione quando questo raggiunge un livello di maturità significativo, e/o in seguito a modiche notevoli del suo stato. Per ogni processo viene verificata la qualità dello stesso e del suo esito. 
-    Ognuno dei periodi descritti nel PP produce degli esiti diversi, pertanto le procedure di verifica saranno specializzate e i loro risultati riportati in un'apposita appendice al termine di questo documento. 
-    Al processo di verifica segue quello di approvazione, nel quale il \textit{Responsabile} si accerta che i risultati prodotti siano conformi con quanto atteso e accettabili dal punto di vista qualitativo.
+
+	Nello specifico, rappresentano un'anomalia:
 	
+	\begin{itemize}
+		\item La violazione delle norme tipografiche definite nelle NP;
+		\item La presenza di contenuti non pertinenti l'argomento trattato o il documento in cui risiedono;
+		\item Errori di codifica;
+		\item Il mancato rispetto dei valori di accettazione fissati in questo documento;
+		\item Incongruenze tra il prodotto e le sue funzionalità determinate nell'\textit{Analisi dei Requisiti}.
+	\end{itemize}
+    
 	\section{Scadenze temporali}
 	
 	Vista la presenza delle scadenze temporali definite nel PP, si necessita di un sistema di controllo efficiente dei tempi. Le procedure di controllo che verranno attuate per individuare e correggere eventuali errori sono descritte
@@ -288,269 +527,16 @@
 	Il controllo eseguito per garantire il livello qualitativo di processi e prodotti necessita di risorse umane e tecnologiche. In relazione a questa attività, i ruoli di maggior rilievo sono il \textit{Responsabile} e il \textit{Verificatore}, che rispettivamente si occupano del controllo di qualità del processo e del prodotto risultante. Una descrizione dettagliata di tali ruoli è reperibile nel documento NP. 
 	Le risorse tecnologiche comprendono tutti gli strumenti software e hardware che vengono utilizzati per attuare le procedure di verifica, automatizzate e non. Una descrizione dettagliata di tali risorse è reperibile nel documento NP. 
 	
-% ACCERTAMENTO DI QUALITA'
-
-\chapter{Accertamento di qualità}
-
-\section{Introduzione}
-
-Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è necessario che il processo di verifica produca risultati quantificabili che sia possibile confrontare con delle costanti di riferimento. Vengono di seguito stabilite le metriche ed i valori di riferimento indicanti se i livelli qualitativi di processo e di prodotto sono in linea con gli obiettivi prefissati o meno. La presentazione di ogni metrica si articolerà nelle seguenti sottosezioni:
-
-\begin{itemize}
-	\item \textbf{Nome:} nome descrittivo della metrica;
+\chapter{Gestione amministrativa \\ della revisione}
 	
-	\item \textbf{Codice:} codice univocamente identificativo della metrica;
+	\section{Gestione dei processi di \\ verifica e validazione}
 	
-	\item \textbf{Descrizione:} illustrazione della metrica e del suo significato; 
+	Il processo di verifica viene istanziato per ogni processo in esecuzione quando questo raggiunge un livello di maturità significativo, e/o in seguito a modiche notevoli del suo stato. Per ogni processo viene verificata la qualità dello stesso e del suo esito. 
+	Ognuno dei periodi descritti nel PP produce degli esiti diversi, pertanto le procedure di verifica saranno specializzate e i loro risultati riportati in un'apposita appendice al termine di questo documento. 
+	Al processo di verifica segue quello di approvazione, nel quale il \textit{Responsabile} si accerta che i risultati prodotti siano conformi con quanto atteso e accettabili dal punto di vista qualitativo.
 	
-	\item \textbf{Modalità di calcolo:} dove definito, viene riportato il modo in cui la metrica viene calcolata;
-	
-	\item \textbf{Range o valore minimo accettabile:} indica il range minimo (o la soglia minima), rispetto alla metrica di riferimento, in cui l'esito della verifica del processo o del prodotto deve ricadere perché si consideri garantito il livello qualitativo minimo richiesto;
-	
-	\item \textbf{Range o valore ottimale:} indica il range di valori (o il valore) desiderabile, rispetto alla metrica di riferimento, in cui l'esito della verifica del processo o del prodotto deve ricadere perché si consideri ampiamente garantito il livello qualitativo richiesto.
-\end{itemize}
-		
-% MISURE E METRICHE
-
-\section{Dettaglio di misure e metriche}
-
-Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispettive scale di riferimento e metodologie di calcolo. Le metriche sono univocamente identificate da un codice che ne agevola il tracciamento. La classificazione delle metriche è descritta in dettaglio nelle NP.
-
-% METRICHE PER I PROCESSI
-
-\subsection{Metriche per i processi}
-
-\subsubsection{ISO/IEC 15504 (SPICE)}
-
-\begin{itemize}
-    \item \textbf{Codice:} MP001;
-    \item \textbf{Descrizione:} La metrica definita dallo standard ISO/IEC 15504 viene utilizzata alla fine di ogni periodo per monitorare e valutare la qualità dei processi impiegati. Tale standard è illustrato dettagliatamente in Appendice A.1;
-    \item \textbf{Range di accettazione:} [P] per ogni processo;
-    \item \textbf{Range ottimale:} [L - F] per ogni processo.
-\end{itemize}
-
-% METRICHE PER DOCUMENTI
-
-\subsection{Metriche per i documenti}
-
-\subsubsection{Errori ortografici corretti}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPD001;
-    \item \textbf{Descrizione:} La documentazione prodotta deve essere corretta dal punto di vista ortografico e grammaticale;
-    \item \textbf{Modalità di calcolo:} Controllo ortografico di TexStudio e del \textit{Verificatore};
-    \item \textbf{Valore di accettazione:} 100\% degli errori corretti;
-    \item \textbf{Valore ottimale:} 100\% degli errori corretti.
-\end{itemize}
-
-\subsubsection{Gulpease}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPD002;
-
-    \item \textbf{Descrizione:} L’\glossario{indice Gulpease}{indice Gulpease} è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. Tale indice considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere;
-    
-    \item \textbf{Modalità di calcolo:} L'indice Gulpease si calcola con la seguente formula:
-
-    \[ I\ped{Gulpease} = 89 +  \frac{(300*(\textrm{\textit{numero delle frasi}})-10*(\textrm{\textit{numero delle lettere}})}{(\textrm{\textit{numero delle parole}})} \]
-    
-    Il risultato è un valore compreso nell’intervallo tra 0 e 100, dove il valore 100 indica la
-    più alta leggibilità, mentre 0 la più bassa. In generale risulta che testi con indice:
-        \begin{itemize}
-            \item inferiore a 80 sono difficili da leggere per chi ha la licenza elementare; 
-            \item inferiore a 60 sono difficili da leggere per chi ha la licenza media;
-            \item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
-        \end{itemize}
-            
-    Nonostante l'importanza riconosciuta all'indice Gulpease, il gruppo tiene conto delle seguenti considerazioni:
-    \begin{itemize}
-        \item l'indice non rileva la comprensibilità del testo, il cui contenuto potrebbe essere totalmente incomprensibile ma ottenere ugualmente un buon valore; 
-        \item ai fini dei documenti vengono necessariamente usati termini tecnici possibilmente ostici ma insostituibili;
-        \item il gruppo decide di prediligere la chiarezza e la precisione del contenuto dei documenti anche qualora questa dovesse minarne (in modo superficiale) la leggibilità.
-    \end{itemize}
-    
-    \item \textbf{Range di accettazione:} [50, 100];
-    \item \textbf{Range ottimale:} [65, 100]
-\end{itemize}
-
-% METRICHE PER IL SOFTWARE
-
-\subsection{Metriche per il software}
-
-\subsubsection{Copertura requisiti obbligatori}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS001;
-    \item \textbf{Descrizione:} La copertura dei requisiti obbligatori permette di monitorare la percentuale di requisiti obbligatori soddisfatti;
-    \item \textbf{Modalità di calcolo:} La copertura dei requisiti obbligatori si calcola con la seguente formula:
-    
-    \[ CRO = \frac{\textrm{\textit{numero requisiti obbligatori soddisfatti}}}{\textrm{\textit{totale dei requisiti obbligatori}}} \]
-    
-    \item \textbf{Range di accettazione:} [65\% - 100\%];
-    \item \textbf{Range ottimale:} [80\% - 100\%].
-\end{itemize}
-
-\subsubsection{Copertura del codice}
-
-\begin{itemize}
-
-    \item \textbf{Codice:} MPPS002;
-
-    \item \textbf{Descrizione:} La copertura del codice (o code coverage) indica la percentuale di istruzioni,  rispetto al totale, che vengono eseguite durante i test. Maggiore è il numero delle istruzioni testate e maggiore è la possibilità di individuare e risolvere errori di codifica. Un valore troppo basso indica che molte istruzioni non vengono testate, divenendo possibile causa di anomalie.
-    
-    \item \textbf{Modalità di calcolo:} La copertura del codice si calcola con la seguente formula:
-    
-    \[ CC = \frac{\textrm{\textit{numero di righe di codice testate}}}{\textrm{\textit{totale delle righe di codice}}} \]
-    
-    \item \textbf{Range di accettazione:} [65\% - 100\%];
-    \item \textbf{Range ottimale:} [85\% - 100\%].
-\end{itemize}
-
-\subsubsection{Percentuale superamento test}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS003;
-    \item \textbf{Descrizione:} La metrica indica la percentuale di test implementati superati dal oggetto del test;
-    \item \textbf{Modalità di calcolo:} Percentuale superamento test si calcola con la seguente formula:
-    
-    \[ PST = \frac{\textrm{\textit{numero test superati}}}{\textrm{\textit{totale dei test implementati}}} \]
-    
-    \item \textbf{Range di accettazione:} [85\% - 100\%];
-    \item \textbf{Range ottimale:} [100\% - 100\%].
-\end{itemize}
-
-\subsubsection{Failure avoidance}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS004;
-    \item \textbf{Descrizione:} La Failure Avoidance è una metrica applicata per monitorare la robustezza del prodotto quando deve affrontare a situazioni critiche;
-    \item \textbf{Modalità di calcolo:} La Failure Avoidance si calcola con la seguente formula:
-    
-    \[ FA = \frac{\textrm{\textit{numero situazioni anomale evitate}}}{\textrm{\textit{numero situazioni anomale occorse}}} \]
-    
-    \item \textbf{Range di accettazione:} [80\% - 100\%];
-    \item \textbf{Range ottimale:} [90\% - 100\%].
-\end{itemize}
-
-\subsubsection{Numero di parametri per metodo}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS005;
-
-    \item \textbf{Descrizione:} Il numero di parametri di un metodo incide sulla sua complessità. Un valore elevato può indicare che esso si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposto in metodi più semplici;
-    
-    \item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
-    
-    \item \textbf{Range di accettazione:} [0, 5];
-    \item \textbf{Range ottimale:} [0, 3].
-\end{itemize}
-
-\subsubsection{Numero di attributi per classe}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS006;
-
-    \item \textbf{Descrizione:} Il numero di attributi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più semplici;
-    
-    \item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
-    
-    \item \textbf{Range di accettazione:} [0, 15];
-    \item \textbf{Range ottimale:} [0, 8].
-\end{itemize}
-
-\subsubsection{Numero di metodi per classe}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS007;
-
-    \item \textbf{Descrizione:} Il numero di metodi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più semplici;
-    
-    \item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
-    
-    \item \textbf{Range di accettazione:} [0, 15];
-    \item \textbf{Range ottimale:} [0, 5].
-\end{itemize}
-
-\subsubsection{Complessità ciclomatica}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS008;
-
-    \item \textbf{Descrizione:} La \glossario{Complessità ciclomatica}{Complessita ciclomatica} (o complessità condizionale) è una metrica software utilizzata per misurare la complessità di un programma. Nello specifico, essa stima la complessità di funzioni, moduli, metodi o classi di un programma. Il valore della Complessità Ciclomatica rappresenta quanto un metodo è complesso, tramite la misura del numero di cammini linearmente indipendenti che attraversano il \glossario{grafo}{Grafo} di flusso di controllo. In tale grafo, i nodi rappresentano gruppi indivisibili di istruzioni. Un arco connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l'esecuzione delle istruzioni dell'altro nodo. Durante l’identificazione dei test, la Complessità Ciclomatica è inoltre utile per determinare il numero di casi di test necessari: l’indice di Complessità Ciclomatica è infatti un limite superiore al numero di test necessari per raggiungere la completa \glossario{copertura del codice}{Copertura del codice} (o \textit{code coverage}) del modulo testato. Un valore troppo elevato indica un'eccessiva complessità del codice, cui consegue una complessa manutenzione, al contrario un valore ridotto potrebbe indicare una scarsa efficienza dei metodi;
-
-    \item \textbf{Modalità di calcolo:} Rappresentando un programma con il grafo di controllo del flusso, un modo di calcolare il numero ciclomatico \textit{V(G)} è il seguente:
-    
-    \[ V(G) = E - N + 2P \]
-    
-    Dove:
-    
-    \begin{itemize}
-        \item \textbf{N:} indica il numero di nodi del grafo;
-        \item \textbf{E:} indica il numero di archi del grafo;
-        \item \textbf{P:} indica il numero di componenti connesse del grafo;
-    \end{itemize}
-    
-    \item \textbf{Range di accettazione:} [0, 15];
-    \item \textbf{Range ottimale:} [0, 10].
-\end{itemize}
-
-\subsubsection{Grado di instabilità}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS009;
-    
-    \item \textbf{Descrizione:} Il livello di stabilità di un software indica il rischio con una modifica apportata ad un \glossario{package}{package} influenzi il funzionamento dell'intero sistema;
-    
-    \item \textbf{Modalità di calcolo:} Il valore di instabilità è calcolato usando il grado di \glossario{accoppiamento}{Accoppiamento} tramite la seguente formula:
-    
-    \[ \textrm{\textit{Instabilità}} = \frac{\textrm{\textit{Accoppiamento efferente}}}{\textrm{\textit{Accoppiamento efferente}} + \textrm{\textit{Accoppiamento afferente}}} \]
-    
-    Dove:
-    
-    \begin{itemize}
-        \item \textbf{Accoppiamento efferente:} indica il grado di dipendenza delle classi di un package verso classi di package esterni. Un valore basso garantisce la stabilità del package indipendentemente dalle possibili modifiche al resto del sistema;
-        
-        \item \textbf{Accoppiamento afferente:} indica il grado di utilità delle classi di un package verso classi esterne ad esso. Un valore troppo basso potrebbe essere indice di scarsa utilità della classe, dato che poche delle sue funzionalità sono usate al suo esterno. Al contrario, un valore troppo elevato può indicare un livello di dipendenza pericoloso del package in esame, che può portare ad effetti indesiderati nelle classi esterne in caso di modifiche. Un valore elevato, d'altro canto, non è necessariamente indice di un errore di progettazione bensì potrebbe indicare semplicemente la criticità del package in esame.
-    \end{itemize}
-    
-    \item \textbf{Range di accettazione:} [0.0 - 0.8];
-    \item \textbf{Range ottimale:} [0.0 - 0.4].
-
-\end{itemize}
-
-\subsubsection{Altezza albero della gerarchia}
-
-\begin{itemize}
-
-    \item \textbf{Codice:} MPPS010;
-    
-    \item \textbf{Descrizione:} L'altezza degli alberi di gerarchia delle classi va limitata così da limitare l'accoppiamento. Preferibilmente, le classi dovranno dipendere solo da classi astratte e potranno implementare una o più interfacce. Viene invece proibito l'uso di ereditarietà multipla.
-
-    \item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
-    
-    \item \textbf{Range di accettazione:} $ \textrm{\textit{rapporto}} \geq 0.3\% $;
-    
-    \item \textbf{Range ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $.
-\end{itemize}
-
-\subsubsection{Rapporto tra linee di codice e linee di commento}
-
-\begin{itemize}
-
-    \item \textbf{Codice:} MPPS011;
-    
-    \item \textbf{Descrizione:} Il rapporto tra linee di codice (escluse le righe vuote) e linee di commento rappresenta un indice utile a stimare la manutenibilità del codice sorgente. Un rapporto troppo basso indica una scarsa documentazione del codice scritto, cui consegue una possibile elevata complessità nel manutenerlo.
-
-    \item \textbf{Modalità di calcolo:}
-    \[\frac{\textrm{\textit{numero linee di commento}}}{\textrm{\textit{numero linee di codice (non vuote)}}} \]
-    
-    \item \textbf{Range di accettazione:} $ \textrm{\textit{rapporto}} \geq 0.3\% $;
-    
-    \item \textbf{Range ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $.
-\end{itemize}
-
-\section{Riepilogo delle metriche}
-
+	\section{Comunicazione e risoluzione \\ delle anomalie}
+	Tale attività ha lo scopo di individuare e risolvere tempestivamente le anomalie riscontrabili nel corso del progetto. Qualora venisse rilevata un'anomalia durante l'attività di verifica, questa dovrà essere tempestivamente segnalata tramite il sistema di ticketing come descritto nelle NP. Ciò permette una pronta segnalazione dell'anomalia, informando il Responsabile della stessa cosicché possa prendere i necessari provvedimenti.
 \appendix
 
 % STANDARD DI QUALITà
