@@ -307,6 +307,9 @@ Presentazione, anch'essa inclusa nell'archivio.
 
 \section{Gestione della qualità}
 
+\subsection{Scopo}
+Il processo di gestione della qualità è finalizzato al conseguimento degli obiettivi di qualità definiti dal gruppo per garantire uno sviluppo efficace ed efficiente del prodotto richiesto.
+
 \subsection{Classificazione degli obiettivi}
 
 Gli obiettivi di qualità stabiliti nel PQ rispettano la seguente notazione:
@@ -339,7 +342,9 @@ Dove:
     \item \textbf{Descrizione:} breve descrizione dell'obiettivo.
 \end{itemize}
 
-\subsection{Classificazione e dettaglio delle metriche}
+\subsection{Misure e metriche}
+
+\subsubsection*{Classificazione delle metriche}
 
 Le metriche stabilite nel PQ rispettano la seguente notazione:
 
@@ -369,6 +374,8 @@ Dove:
     \item \textbf{Nome:} titolo della metrica.
 \end{itemize}
 
+\subsubsection*{Dettaglio delle metriche}
+
 Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispettive scale di riferimento e metodologie di calcolo. Le metriche sono univocamente identificate da un codice che ne agevola il tracciamento. La presentazione di ogni metrica si articolerà nelle seguenti sottosezioni:
 
 \begin{itemize}
@@ -395,8 +402,6 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 \begin{itemize}
 	\item \textbf{Codice:} MP001;
 	\item \textbf{Descrizione:} La metrica definita dallo standard ISO/IEC 15504 viene utilizzata alla fine di ogni periodo per monitorare e valutare la qualità dei processi impiegati. Tale standard è illustrato dettagliatamente in Appendice A.1;
-	\item \textbf{Range di accettazione:} [P] per ogni processo;
-	\item \textbf{Range ottimale:} [L - F] per ogni processo.
 \end{itemize}
 
 % METRICHE PER DOCUMENTI
@@ -409,8 +414,6 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 	\item \textbf{Codice:} MPPD001;
 	\item \textbf{Descrizione:} La documentazione prodotta deve essere corretta dal punto di vista ortografico e grammaticale;
 	\item \textbf{Modalità di calcolo:} Controllo ortografico di TexStudio e del \textit{Verificatore};
-	\item \textbf{Valore di accettazione:} 100\% degli errori corretti;
-	\item \textbf{Valore ottimale:} 100\% degli errori corretti.
 \end{itemize}
 
 \subsubsection{Gulpease}
@@ -438,9 +441,6 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 		\item ai fini dei documenti vengono necessariamente usati termini tecnici possibilmente ostici ma insostituibili;
 		\item il gruppo decide di prediligere la chiarezza e la precisione del contenuto dei documenti anche qualora questa dovesse minarne (in modo superficiale) la leggibilità.
 	\end{itemize}
-	
-	\item \textbf{Range di accettazione:} [50, 100];
-	\item \textbf{Range ottimale:} [65, 100]
 \end{itemize}
 
 % METRICHE PER IL SOFTWARE
@@ -455,9 +455,6 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 	\item \textbf{Modalità di calcolo:} La copertura dei requisiti obbligatori si calcola con la seguente formula:
 	
 	\[ CRO = \frac{\textrm{\textit{numero requisiti obbligatori soddisfatti}}}{\textrm{\textit{totale dei requisiti obbligatori}}} \]
-	
-	\item \textbf{Range di accettazione:} [65\% - 100\%];
-	\item \textbf{Range ottimale:} [80\% - 100\%].
 \end{itemize}
 
 \subsubsection{Copertura del codice}
@@ -471,9 +468,6 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 	\item \textbf{Modalità di calcolo:} La copertura del codice si calcola con la seguente formula:
 	
 	\[ CC = \frac{\textrm{\textit{numero di righe di codice testate}}}{\textrm{\textit{totale delle righe di codice}}} \]
-	
-	\item \textbf{Range di accettazione:} [65\% - 100\%];
-	\item \textbf{Range ottimale:} [85\% - 100\%].
 \end{itemize}
 
 \subsubsection{Percentuale superamento test}
@@ -484,9 +478,6 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 	\item \textbf{Modalità di calcolo:} Percentuale superamento test si calcola con la seguente formula:
 	
 	\[ PST = \frac{\textrm{\textit{numero test superati}}}{\textrm{\textit{totale dei test implementati}}} \]
-	
-	\item \textbf{Range di accettazione:} [85\% - 100\%];
-	\item \textbf{Range ottimale:} [100\% - 100\%].
 \end{itemize}
 
 \subsubsection{Failure avoidance}
@@ -497,9 +488,6 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 	\item \textbf{Modalità di calcolo:} La Failure Avoidance si calcola con la seguente formula:
 	
 	\[ FA = \frac{\textrm{\textit{numero situazioni anomale evitate}}}{\textrm{\textit{numero situazioni anomale occorse}}} \]
-	
-	\item \textbf{Range di accettazione:} [80\% - 100\%];
-	\item \textbf{Range ottimale:} [90\% - 100\%].
 \end{itemize}
 
 \subsubsection{Numero di parametri per metodo}
@@ -509,10 +497,7 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 	
 	\item \textbf{Descrizione:} Il numero di parametri di un metodo incide sulla sua complessità. Un valore elevato può indicare che esso si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposto in metodi più semplici;
 	
-	\item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
-	
-	\item \textbf{Range di accettazione:} [0, 5];
-	\item \textbf{Range ottimale:} [0, 3].
+	\item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore}.
 \end{itemize}
 
 \subsubsection{Numero di attributi per classe}
@@ -522,10 +507,7 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 	
 	\item \textbf{Descrizione:} Il numero di attributi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più semplici;
 	
-	\item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
-	
-	\item \textbf{Range di accettazione:} [0, 15];
-	\item \textbf{Range ottimale:} [0, 8].
+	\item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore}.
 \end{itemize}
 
 \subsubsection{Numero di metodi per classe}
@@ -535,10 +517,7 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 	
 	\item \textbf{Descrizione:} Il numero di metodi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più semplici;
 	
-	\item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
-	
-	\item \textbf{Range di accettazione:} [0, 15];
-	\item \textbf{Range ottimale:} [0, 5].
+	\item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore}.
 \end{itemize}
 
 \subsubsection{Complessità ciclomatica}
@@ -559,9 +538,6 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 		\item \textbf{E:} indica il numero di archi del grafo;
 		\item \textbf{P:} indica il numero di componenti connesse del grafo;
 	\end{itemize}
-	
-	\item \textbf{Range di accettazione:} [0, 15];
-	\item \textbf{Range ottimale:} [0, 10].
 \end{itemize}
 
 \subsubsection{Grado di instabilità}
@@ -583,9 +559,6 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 		\item \textbf{Accoppiamento afferente:} indica il grado di utilità delle classi di un package verso classi esterne ad esso. Un valore troppo basso potrebbe essere indice di scarsa utilità della classe, dato che poche delle sue funzionalità sono usate al suo esterno. Al contrario, un valore troppo elevato può indicare un livello di dipendenza pericoloso del package in esame, che può portare ad effetti indesiderati nelle classi esterne in caso di modifiche. Un valore elevato, d'altro canto, non è necessariamente indice di un errore di progettazione bensì potrebbe indicare semplicemente la criticità del package in esame.
 	\end{itemize}
 	
-	\item \textbf{Range di accettazione:} [0.0 - 0.8];
-	\item \textbf{Range ottimale:} [0.0 - 0.4].
-	
 \end{itemize}
 
 \subsubsection{Altezza albero della gerarchia}
@@ -596,11 +569,7 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 	
 	\item \textbf{Descrizione:} L'altezza degli alberi di gerarchia delle classi va limitata così da limitare l'accoppiamento. Preferibilmente, le classi dovranno dipendere solo da classi astratte e potranno implementare una o più interfacce. Viene invece proibito l'uso di ereditarietà multipla.
 	
-	\item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
-	
-	\item \textbf{Range di accettazione:} $ \textrm{\textit{rapporto}} \geq 0.3\% $;
-	
-	\item \textbf{Range ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $.
+	\item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore}.
 \end{itemize}
 
 \subsubsection{Rapporto tra linee di codice e linee di commento}
@@ -613,10 +582,6 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 	
 	\item \textbf{Modalità di calcolo:}
 	\[\frac{\textrm{\textit{numero linee di commento}}}{\textrm{\textit{numero linee di codice (non vuote)}}} \]
-	
-	\item \textbf{Range di accettazione:} $ \textrm{\textit{rapporto}} \geq 0.3\% $;
-	
-	\item \textbf{Range ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $.
 \end{itemize}
 
 % NORME DI PROGETTO - PROCESSI DI SUPPORTO - DOCUMENTAZIONE
