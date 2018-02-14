@@ -1,5 +1,6 @@
 \documentclass[openany,12pt,a4paper]{report}
 \usepackage[]{graphicx}
+\usepackage{subfiles}
 \graphicspath{{./img/}{./../img/}}
 \usepackage{../StileDoc}
 \title{Glossario}
@@ -7,15 +8,61 @@
 \date{\today}
 \newcommand{\versione}{1.0.0}
 \usepackage{glossaries}
-
+\title {Glossario}
 \loadglsentries{./Definizioni}
+% Tolgo la numerazione per l'indice
+\setcounter{secnumdepth}{0}
+% Tolgo il titolo alla parte di glossario
+\renewcommand{\glossarysection}[2][]{}
+% Stile per il glossario
+\newglossarystyle{glossaryStyle}{
+	\setcounter{page}{1}
+	\setglossarystyle{altlistgroup}
+	\renewcommand*{\glsgroupheading}[1]{
+		\newpage
+		\section{##1}
+		\vspace*{-\baselineskip}
+		% Solo per fare un po' di spazio tra la lettera e le voci
+		\item\makebox[\linewidth]{\hspace*{2cm}}
+	}
+}
 
-\glossarystyle{listhypergroup}
 \glsaddall
 
 
 \begin{document}
+		
+	\makeatletter
+	\begin{titlepage}
+		\setlength{\headsep}{0pt}  
+		\begin{center}			
+			\includegraphics[width=0.5\linewidth]{Logo.png}\\[1em]
+			{\huge \bfseries  \@title }\\[10ex]
+			\textbf{\Large Informazioni Documento} \\[2em]
+			\bgroup
+			\def\arraystretch{1.5}
+			\begin{tabular}{l|l}
+				\textbf{Versione} & \versione{} \\
+				\textbf{Data approvazione} & 12 Gennaio 2018 \\
+				\textbf{Responsabile} & Samuele Modena \\
+				\textbf{Redattori} & Kevin Silvestri, Manfredi Smaniotto,\\
+				& Cristiano Tessarolo, Matteo Rizzo \\
+				\textbf{Verificatori} & Giulio Rossetti, Samuele Modena \\
+				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
+				& Prof. Riccardo Cardin \\
+				& Gruppo Graphite \\
+				\textbf{Uso} & Esterno \\
+				\textbf{Recapito} & graphite.swe@gmail.com \\
+			\end{tabular}
+			\egroup
+		\end{center}
+	\end{titlepage}
+	\makeatother
 	
-	\printglossaries
+	\thispagestyle{empty}
+	\newpage
 	
+	\subfile{./ChangeLog}
+	\tableofcontents
+	\printglossary[style=glossaryStyle, nonumberlist]
 \end{document}
