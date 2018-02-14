@@ -218,24 +218,18 @@
         	\newline Copertura del codice &
         	\newline Il prodotto richiesto dalla Proponente deve essere testato in ogni sua parte per garantire le funzionalità relative ai requisiti \newline &
         	\newline MPPS002: Linee di codice coperte dai test
-        	\\[1em]
-        	
-        	\hline
-        	\newline OQPPS003 &
-        	\newline Superamento Test &
-        	\newline La percentuale di superamento dei test del prodotto software dovrà essere almeno l'80\% del totale \newline &
         	\newline MPPS003: Percentuale superamento test
         	\\[1em]
         	
         	\hline
-        	\newline OQPPS004 &
+        	\newline OQPPS003 &
         	\newline Robustezza &
         	\newline Il prodotto richiesto dalla proponente deve affrontare situazioni anomale senza arrestare la sua esecuzione \newline &
         	\newline MPPS004: Failure Avoidance
         	\\[1em]
         	
         	\hline
-        	\newline OQPPS005 &
+        	\newline OQPPS004 &
         	\newline Manutenzione e comprensione del codice &
         	\newline Il codice del prodotto richiesto dalla proponente deve essere quanto più possibile comprensibile e manutenibile \newline &
         	\newline MPPS005: Numero di parametri per metodo;
@@ -301,7 +295,7 @@
 		\newline Indice Gulpease &
 		\newline \textbf{Accettazione:} [50, 100] 
 		\newline \textbf{Ottimale:} [65, 100]&
-		\newline OQPPD002: Leggibilità dei documenti  
+		\newline OQPPD001: Correttezza ortografica dei documenti
 		\\[1em]
 		
 		\hline
@@ -340,7 +334,7 @@
 		\newline Percentuale superamento test &
 		\newline \textbf{Accettazione:} [85\% - 100\%] 
 		\newline \textbf{Ottimale:} [100\% - 100\%] &
-		\newline OQPPS003: Superamento test
+		\newline OQPPS002: Copertura del codice
 		\\[1em]
 		
 		\hline
@@ -349,7 +343,7 @@
 		\newline Failure avoidance &
 		\newline \textbf{Accettazione:} [80\% - 100\%] 
 		\newline \textbf{Ottimale:} [90\% - 100\%] &
-		\newline OQPPS004: Robustezza
+		\newline OQPPS003: Robustezza
 		\\[1em]
 		
 		\hline
@@ -358,7 +352,7 @@
 		\newline Numero di parametri per metodo &
 		\newline \textbf{Accettazione:} [0, 5]
 		\newline \textbf{Ottimale:} [0, 3] &
-		\newline OQPPS005: Manutenzione e comprensione del codice
+		\newline OQPPS004: Manutenzione e comprensione del codice
 		\\[1em]
 		
 		\hline
@@ -367,7 +361,7 @@
 		\newline Numero di attributi per classe &
 		\newline \textbf{Accettazione:} [0, 15] 
 		\newline \textbf{Ottimale:} [0, 8] &
-		\newline OQPPS005: Manutenzione e comprensione del codice
+		\newline OQPPS004: Manutenzione e comprensione del codice
 		\\[1em]
 		
 		\hline
@@ -376,7 +370,7 @@
 		\newline Numero di metodi per classe &
 		\newline \textbf{Accettazione:} [0, 15] 
 		\newline \textbf{Ottimale:} [0, 5] &
-		\newline OQPPS005: Manutenzione e comprensione del codice 
+		\newline OQPPS004: Manutenzione e comprensione del codice 
 		\\[1em]
 		
 		\hline
@@ -385,7 +379,7 @@
 		\newline Complessità ciclomatica &
 		\newline \textbf{Accettazione:} [0, 15] 
 		\newline \textbf{Ottimale:} [0, 10] &
-		\newline OQPPS005: Manutenzione e comprensione del codice 
+		\newline OQPPS004: Manutenzione e comprensione del codice 
 		\\[1em]
 		
 		\hline
@@ -394,7 +388,7 @@
 		\newline Grado di instabilità &
 		\newline \textbf{Accettazione:} [0.0 - 0.8] 
 		\newline \textbf{Ottimale:} [0.0 - 0.4]&
-		\newline OQPPS005: Manutenzione e comprensione del codice 
+		\newline OQPPS004: Manutenzione e comprensione del codice 
 		\\[1em]
 		
 		\hline
@@ -403,7 +397,7 @@
 		\newline Altezza albero della gerarchia &
 		\newline \textbf{Accettazione:} \newline $ \textrm{\textit{rapporto}} \geq 0.3\% $
 		\newline \textbf{Ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $&
-		\newline OQPPS005: Manutenzione e comprensione del codice 
+		\newline OQPPS004: Manutenzione e comprensione del codice 
 		\\[1em]
 		
 		\hline
@@ -412,7 +406,7 @@
 		\newline Rapporto tra linee di codice e linee di commento &
 		\newline \textbf{Accettazione:} \newline $ \textrm{\textit{rapporto}} \geq 0.3\% $
 		\newline \textbf{Ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $ &
-		\newline OQPPS005: Manutenzione e comprensione del codice 
+		\newline OQPPS004: Manutenzione e comprensione del codice 
 		\\[1em]
 		
 		\hline
@@ -428,8 +422,31 @@
 		\item Utilizzo di strumenti automatici adeguati all'esigenza di sviluppare un prodotto di qualità per costruzione e non per correzione;
 		\item Costante verifica, validazione e conseguente miglioramento del sistema qualità attraverso l'istanziazione di processi specializzati supportati da strumenti appropriati;
 		\item Lauto investimento temporale in termini di formazione dei membri del gruppo attraverso studio personale e condivisione delle conoscenze specifiche dei membri.
-		
 	\end{itemize}
+
+	Segue il dettaglio delle strategie di conseguimento della qualità per ogni obiettivo definito dal gruppo.
+
+	\subsection{Strategie di conseguimento degli obiettivi di \\ qualità}
+	
+	Vengono di seguito listate le strategie di perseguimento della qualità per gli obiettivi definiti in §2.2 .
+	
+	\subsubsection{OQP001: Miglioramento continuo}
+	Tale obiettivo viene perseguito mediante la costante applicazione del ciclo di Deming, descritto in dettaglio nell'appendice §A.3 di questo documento.
+	
+	\subsubsection{OQPPD001: Leggibilità dei documenti}
+	Tale obiettivo viene perseguito mediante il rilevamento degli errori ortografici in real time di \glossario{TexStudio}{TexStudio} e istruendo il personale ad uno stile di scrittura sintetica e corretta.
+	
+	\subsubsection{OQPPS001: Implementazione requisiti obbligatori}
+	Per ogni incremento, l'insieme dei task da assegnare ai membri del gruppo durante lo sviluppo viene pianificato in modo tale che il suo completamento porti al soddisfacimento di almeno un requisito obbligatorio.   
+	
+	\subsubsection{OQPPS002: Copertura del codice}
+	Tale obiettivo viene perseguito mediante l'applicazione dei test definiti in fase di progettazione attuata tramite lo strumento automatico \textit{Travis}\ped{G}, che assicura che il codice caricato sulla repository superi tali test.
+	
+	\subsubsection{OQPPS003: Robustezza}
+	Tale obiettivo viene perseguito mediante la messa in pratica delle norme relative alla codifica definite nelle NP e la pianificazione di stress test per componenti di complessità rilevante.
+	
+	\subsubsection{OQPPS004: Manutenzione e comprensione del codice}
+	Tale obiettivo viene perseguito mediante la messa in pratica delle norme relative alla codifica definite nelle NP.
 	
 	\section{Definizione delle anomalie}
 	

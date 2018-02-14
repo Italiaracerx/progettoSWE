@@ -15,19 +15,69 @@
 
 Lo scopo del processo di documentazione è descrivere l'insieme di regole adottate dal gruppo per la redazione della documentazione di progetto. Il gruppo si prefigge di definire in questo capitolo norme atte alla stesura di una documentazione il più possibile formale, corretta, coerente e coesa.
 
-% STRUTTURA DEI DOCUMENTI
 \subsection{Produzione Documentale}
 Durante il corso del progetto è richiesta la stesura dei seguenti documenti:
-\begin{itemize}
-	\item Analisi dei Requisiti;
-	\item Studio di Fattibilità;
-	\item Piano di Qualità;
-	\item Piano di Progetto;
-	\item Verbali;
-	\item Glossario;
-	\item Architettura del Software;
-	\item Manuale Utente.
-\end{itemize}
+\begin{longtable}{| p{4cm} |p{5cm} | p{4cm} |}
+	\caption {Tabella produzione documentale} \label{tab:title} \\
+	\hline
+	\textbf{Processo} & \textbf{Attività} & \textbf{Documento} \\
+	\hline
+	\endhead
+	
+	\newline Sviluppo &
+	\newline Analisi dei requisiti &
+	\newline Analisi dei requisiti \newline 
+	\\[1em]
+	
+	\hline
+	
+	\newline Sviluppo &
+	\newline Progettazione architetturale - Progettazione in dettaglio  &
+	\newline Architettura del software \newline 
+	\\[1em]
+	
+	\hline
+	
+	\newline Sviluppo &
+	\newline Codifica &
+	\newline Manuale utente \newline 
+	\\[1em]
+	
+	\hline
+	
+	\newline Fornitura &
+	\newline Analisi dei capitolati &
+	\newline Studio di fattibilità \newline 
+	\\[1em]
+	
+	\hline
+	
+	\newline Fornitura &
+	\newline Definizione modello di sviluppo &
+	\newline Piano di progetto \newline 
+	\\[1em]
+	
+	\hline
+	
+	\newline Fornitura &
+	\newline Pianificazione della qualità &
+	\newline Piano di qualità \newline 
+	\\[1em]
+	
+	\hline
+	
+	\newline Gestione di progetto &
+	\newline Gestione degli incontri &
+	\newline Verbali \newline 
+	\\[1em]
+	
+	\hline
+\end{longtable}
+
+\noindent Durante l'intero svolgimento del progetto verrà redatto e incrementato un Glossario.
+
+% STRUTTURA DEI DOCUMENTI
+
 \subsection{Struttura dei documenti}
 
 \subsubsection{Template}
@@ -255,7 +305,7 @@ Per ogni incontro interno o esterno è prevista la redazione di un verbale, cont
 	
 	\begin{itemize}
 		\item \textbf{Tipologia:} indica se il verbale è interno oppure esterno;
-		\item \textbf{Data incontro:} indica la data in cui si è svolto l'incontro in formato \textit{GG-MM-AAAA};
+		\item \textbf{Data incontro:} indica la data in cui si è svolto l'incontro in formato \textit{AAAA-MM-GG};
 		\item \textbf{ID:} è un codice identificativo numerico incrementale.
 	\end{itemize}
 	
@@ -484,7 +534,7 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 
 \begin{itemize}
 	\item \textbf{Codice:} MPPS004;
-	\item \textbf{Descrizione:} La Failure Avoidance è una metrica applicata per monitorare la robustezza del prodotto quando deve affrontare a situazioni critiche;
+	\item \textbf{Descrizione:} La Failure Avoidance è una metrica applicata per monitorare la robustezza del prodotto quando esso deve affrontare situazioni critiche;
 	\item \textbf{Modalità di calcolo:} La Failure Avoidance si calcola con la seguente formula:
 	
 	\[ FA = \frac{\textrm{\textit{numero situazioni anomale evitate}}}{\textrm{\textit{numero situazioni anomale occorse}}} \]
