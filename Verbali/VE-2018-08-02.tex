@@ -1,0 +1,88 @@
+\documentclass[openany,12pt,a4paper]{article} 
+\usepackage{subfiles} 
+\usepackage[]{graphicx} 
+\usepackage{float} 
+\graphicspath{{./img/}{./../img/}} 
+\usepackage{../StileDoc} 
+\title{Verbale Esterno} 
+\author{} 
+\newcommand{\versione}{} 
+\loadglsentries{../Glossario/Definizioni} 
+ 
+\begin{document} 
+  \makeatletter 
+  \begin{titlepage} 
+    \setlength{\headsep}{0pt}   
+    \begin{center} 
+      \includegraphics[width=0.5\linewidth]{Logo.png}\\[1em] 
+      {\huge \bfseries  \@title }\\[10ex] 
+      \textbf{\Large Informazioni Documento} \\[2em] 
+      \bgroup 
+      \def\arraystretch{1.5} 
+      \begin{tabular}{l|l} 
+        \textbf{Data approvazione} & 3 gennaio 2018 \\ 
+        \textbf{Responsabile} & Samuele Modena \\ 
+        \textbf{Redattore} & Matteo Rizzo \\ 
+        \textbf{Verificatore} & Manfredi Smaniotto \\ 
+        \textbf{Distribuzione} & Prof. Tullio Vardanega \\ 
+         & Prof. Riccardo Cardin \\ 
+         & Gruppo Graphite \\ 
+        \textbf{Uso} & Esterno \\ 
+        \textbf{Recapito} & graphite.swe@gmail.com \\ 
+      \end{tabular} 
+    \egroup 
+    \end{center} 
+  \end{titlepage} 
+  \makeatother 
+ 
+  \thispagestyle{empty} 
+  \newpage 
+   
+  \tableofcontents 
+  \newpage 
+   
+  \section{Informazioni generali} 
+   
+  \subsection{Informazioni sull'incontro} 
+   
+  \begin{itemize}  
+      \item \textbf{Luogo:} Torre Archimede, Via Trieste, 63, 35121 Padova PD;
+      \item \textbf{Data:} 08-02-2017; 
+      \item \textbf{Orari} 16.30;
+      \item \textbf{Partecipanti del gruppo:} Matteo Rizzo, Cristiano Tessarolo; 
+      \item \textbf{Partecipanti esterni:} Prof. Tullio Vardanega. 
+  \end{itemize} 
+ 
+  \subsection{Ragioni dell'incontro} 
+  Chiarimenti riguardanti l'esito della RR e la \textit{Technology Baseline}. 
+ 
+  \section{Resoconto} 
+  Nel corso dell'incontro sono stati chiariti i dubbi sollevati dal gruppo sui commenti riportati nell'esito della RR e sulla realizzazione della \textit{Technology Baseline}, nello specifico sono stati delucidati i seguenti punti:
+	
+  \begin{itemize}
+	\item Aspetti da rivedere riguardo al PQ;
+	\item Aspetti da rivedere riguardo le NP;
+	\item Materiale da produrre in relazione alla \textit{Technology Baseline}.
+  \end{itemize}
+	
+  \noindent Seguono le principali domande poste durante l'incontro e la sintesi delle relative risposte ricevute:
+
+  \begin{enumerate}
+  	\item \textbf{L'esito della RR ha evidenziato come il nostro PQ manchi di definire gli obiettivi di qualità e come si sovrapponga con le NP nella definizione delle metriche. Sarebbe possibile chiarire ulteriormente questi punti? A che documento deve appartenere la definizione delle metriche?} \\
+  	Il PQ definisce le strategie da mettere in atto perché il gruppo agisca in maniera efficace ed efficiente. Esso deve includere gli obiettivi di qualità e gli obiettivi metrici, mentre la definizione e descrizione delle metriche è di competenza delle NP;
+  	\item \textbf{Con la Technlogy Baseline dobbiamo presentare le tecnologie che intendiamo utilizzare all'interno del progetto. In che modo fa fatto ciò? Quali punti delle tecnologie vanno evidenziati?} \\
+  	La tecnologia non è difatto un documento, benché possa essere accompagnata da materiale documentale come per esempio una presentazione. Altro materiale da produrre consiste nel \textit{Proof of Concept}, un eseguibile che deve rispondere alle criticità del progetto. La TB deve dare prova della fattibilità del progetto e mitigare i rischi progettuali relativi alle tecnologie adoperate nel progetto. Tali prove di fattibilità possono essere portate tramite diagrammi, motivazioni formali o demo eseguibili;
+  	\item \textbf{La TB dev'essere accompagnata dall'inizio della progettazione architetturale del software da produrre?}
+  	Questo dipende dal modello di sviluppo scelto dal gruppo e dal modo in cui viene sfruttato lo sviluppo del PoC.
+  \end{enumerate} 
+ 
+  \section{Tracciamento delle decisioni} 
+   
+  \begin{itemize} 
+      \item \textbf{VE-2018-08-02.1:} Spostamento della definizione delle metriche nelle NP, mentre gli obiettivi metrici rimangono nel PQ; 
+      \item \textbf{VE-2018-08-02.1:} Revisione di NP e PQ in relazione alla risposta alla domanda 1;
+      \item \textbf{VE-2018-08-02.1:} Impostazione della produzione documentale e non sulla base della risposta alla domanda 2.
+  \end{itemize} 
+   
+  \end{document}
+ \ No newline at end of file 
