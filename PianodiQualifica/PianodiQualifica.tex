@@ -1,3 +1,4 @@
+
 \documentclass[openany,12pt,a4paper]{report}
 \usepackage{subfiles}
 \usepackage[]{graphicx}
@@ -76,7 +77,7 @@
 
     \section{Scopo del documento}
     
-    Lo scopo del documento è quello di esporre le strategie, le tecnologie e le metriche che il gruppo Graphite adotta al fine di garantire le qualità di prodotto e di processo. Il documento ha dunque l'intento di chiarificare il \glossario{Sistema Qualità}{Sistema Qualita} instaurato e accettato dal gruppo in relazione al progetto corrente. Con l'obiettivo di rivelare e correggere in maniera efficace ed economica ogni errore, viene costantemente applicato un sistema di \glossario{verifica}{verifica} e \glossario{validazione}{validazione} ai processi e alle attività svolte.
+    Lo scopo del documento è quello di esporre le strategie, le tecnologie e le metriche che il gruppo Graphite adotta al fine di garantire le qualità di prodotto e di processo. Il documento ha dunque l'intento di chiarificare il \glossario{Sistema Qualità}{Sistema Qualita} instaurato e accettato dal gruppo in relazione al progetto corrente. Con l'obiettivo di rivelare e correggere in maniera efficace ed economica ogni errore, viene costantemente applicato un sistema di \glossario{verifica}{verifica} e \glossario{validazione}{validazione} ai processi e alle attività svolte. Si vuole inoltre sottolineare la natura incrementale del documento, che intende essere ampliato e migliorato in itinere.
     
     \section{Scopo del prodotto}
     
@@ -124,433 +125,372 @@
         \\ \url{https://it.wikipedia.org/wiki/Complessit\%e0 \textunderscore ciclomatica}.
     \end{itemize}
 
-% VISIONE GENERALE DELLE STRATEGIE DI VERIFICA
+% PIANIFICAZIONE DELLA QUALITA'
 
 \chapter{Visione generale delle strategie \\ di gestione della qualità}
     
-    \section{Introduzione}
+    % STANDARD QUALITATIVI DI RIFERIMENTO
     
-    Vengono di seguito illustrati gli obiettivi fissati dal gruppo al fine di garantire la qualità di processo e di prodotto. Con lo scopo di monitorare costantemente lo stato dei processi e il raggiungimento degli obiettivi definiti, il gruppo adotta standard e metriche specializzate. Segue dunque l'esposizione delle metodologie adottate, delle metriche applicate e delle rispettive scale di riferimento.
-    Obiettivi e metriche sono univocamente identificati da un codice che ne agevola il tracciamento. La classificazione di obiettivi e metriche è descritta in dettaglio nelle \textit{Norme di progetto v 1.0.0}.
+    \section{Definizione degli standard \\ qualitativi di riferimento}
     
-    \section{Definizione degli obiettivi di qualità}    
+    Vengono di seguito sinteticamente esposti gli standard di qualità a cui il gruppo intende aderire e le motivazioni di tale scelta.   
     
-    \subsection{Qualità di processo}
-    
-    \subsubsection{Standard di riferimento}
+    \subsection{Qualità di processo - ISO/IEC 15504}
     
     \glossario{ISO/IEC 15504}{ISO/IEC 15504}, anche noto come \glossario{SPICE}{SPICE}, è lo standard scelto per la definizione degli obiettivi di processo. Si rimanda all'appendice A.1 per un'approfondita descrizione di tale standard.
     La scelta di SPICE è motivata dal fatto che esso fornisce gli strumenti utili a valutare la qualità di processo, parametro da tenere in grande considerazione per il conseguimento di un prodotto qualitativamente valido entro tempi prestabiliti. 
     Per poter applicare correttamente SPICE, viene utilizzato il \textit{ciclo di Deming} o \glossario{ciclo di PDCA}{Ciclo di PDCA}. Si rimanda all'appendice A.3 per un'approfondita descrizione del ciclo di Deming. Tale ciclo definisce un metodo di controllo orientato al miglioramento continuo del livello qualitativo dei processi, evitando nel contempo regressioni. Il ciclo di Deming si applica solo conoscendo lo stato di maturità attuale dei processi di interesse, definendo specifici obiettivi di miglioramento, e studiando i risultati delle azioni migliorative sperimentate. Esistono dunque  stringenti precondizioni alla sua applicabilità, ovvero l'attuazione di processi ripetibili e misurabili, qualità di processo che il gruppo ha intenzione di perseguire. L'affiancamento dello standard ISO al ciclo PDCA permette di:
     
     \begin{itemize}
-        \item Misurare costantemente le performance di processo;
-        \item Perseguire un miglioramento continuo di tali performance;
-        \item Rispettare tempi e costi indicati nel PP.
+    	\item Misurare costantemente le performance di processo;
+    	\item Perseguire un miglioramento continuo di tali performance;
+    	\item Rispettare tempi e costi indicati nel PP.
     \end{itemize} 
     
-    \subsubsection{Obiettivi}
-
-        \begin{itemize}
-            \item \textbf{ID:} OQP001;
-            \item \textbf{Nome:} Miglioramento continuo;
-            \item \textbf{Descrizione:} Capacità del processo di misurare e migliorare le proprie performance;
-            \item \textbf{Metriche associate:} MP001: SPICE.
-        \end{itemize}
-    
-    \subsection{Qualità di prodotto}
-    
-    \subsubsection{Standard di riferimento}
+    \subsection{Qualità di prodotto - ISO/IEC 9126}
     
     \glossario{ISO/IEC 9126}{ISO/IEC 9126} è lo standard scelto per la definizione degli obiettivi di prodotto. Si rimanda all'appendice A.2 per un'approfondita descrizione di tale standard.
     La scelta di ISO/IEC 9126 è motivata dal fatto che esso definisce criteri di applicazioni nell'ambito di metriche per la qualità interna esterna e in uso del software, qui approfondite nella sezione \textit{Misure e metriche}, utili a valutare il grado di raggiungimento degli obiettivi prefissati.
     I prodotti realizzati durante lo svolgimento del progetto sono di due tipologie:
     
     \begin{itemize}
-        \item \textbf{Documentazione:} deve essere leggibile, comprensibile e corretta dal punto di vista ortografico, sintattico e semantico.
-        
-        \item \textbf{Software:} deve avere le seguenti caratteristiche:
-        \begin{itemize}
-            \item Possedere funzionalità che soddisfino i requisiti fissati;
-            \item \glossario{Manutenibilità}{manutenibilita};
-            \item Essere ampiamente testato;
-            \item \glossario{Robustezza}{robustezza};
-        \end{itemize}
+    	\item \textbf{Documentazione:} deve essere leggibile, comprensibile e corretta dal punto di vista ortografico, sintattico e semantico.
+    	
+    	\item \textbf{Software:} deve avere le seguenti caratteristiche:
+    	\begin{itemize}
+    		\item Possedere funzionalità che soddisfino i requisiti fissati;
+    		\item \glossario{Manutenibilità}{manutenibilita};
+    		\item Essere ampiamente testato;
+    		\item \glossario{Robustezza}{robustezza};
+    	\end{itemize}
     \end{itemize}
     
-    \subsubsection{Obiettivi}
+    % DEFINIZIONE DEGLI OBIETTIVI DI QUALITA'
+    
+    \section{Definizione degli obiettivi di qualità}    
+    
+    Vengono di seguito illustrati gli obiettivi fissati dal gruppo al fine di garantire la qualità di processo e di prodotto. Gli obiettivi di qualità sono univocamente identificati da un codice che ne agevola il tracciamento. La classificazione degli obiettivi è descritta in dettaglio nelle NP.
+    
+    \subsection{Obiettivi di qualità di processo}
+    
+    	\begin{longtable}{| p{2cm} | p{3.5cm} |p{5.5cm} | p{5.5cm} |}
+    		\caption {Tabella obiettivi di qualità di processo} \label{tab:title} \\
+    		\hline
+    		\textbf{Codice} & \textbf{Nome} & \textbf{Descrizione} & \textbf{Metriche associate}\\
+    		\hline
+    		\endhead
+    		
+    		\newline OQP001&
+    		\newline Miglioramento continuo&
+    		\newline Capacità del processo di misurare e migliorare le proprie performance \newline &
+    		\newline MP001: SPICE
+    		\\[1em]
+    		
+    		\hline
+    	\end{longtable}
+    
+    \subsection{Obiettivi di qualità di prodotto}
         
-        \begin{itemize}
-            \item \textbf{ID:} OQPPD001;
-            \begin{itemize}            	
-            	\item \textbf{Nome:} Correttezza ortografica dei documenti;
-            	\item \textbf{Descrizione:} I documenti non devono riportare errori ortografici o grammaticali;
-            	\item \textbf{Metriche associate:} MPPD001: Errori ortografici corretti.
-        	\end{itemize}
-        \end{itemize} 
-        
-        \begin{itemize}
-            \item \textbf{ID:} OQPPD002;
-            \begin{itemize} 
-            	\item \textbf{Nome:} Leggibilità dei documenti;
-            	\item \textbf{Descrizione:} I documenti devono essere leggibili e comprensibili da persone con licenza media o superiore;
-            	\item \textbf{Metriche associate:} MPPD002: Gulpease.
-            \end{itemize}
-        \end{itemize} 
-        
-        
-        \begin{itemize}
-            \item \textbf{ID:} OQPPS001;
-            \begin{itemize} 
-            	\item \textbf{Nome:} Implementazione requisiti obbligatori;
-            	\item \textbf{Descrizione:} Il prodotto richiesto dalla Proponente deve implementare tutti i requisiti obbligatori descritti nella AR;
-            	\item \textbf{Metriche associate:} MPPS001: Copertura Requisiti Obbligatori.
-            \end{itemize}
-        \end{itemize}
-        
-        \begin{itemize}
-            \item \textbf{ID:} OQPPS002;
-            \begin{itemize} 
-            	\item \textbf{Nome:} Copertura del codice;
-            	\item \textbf{Descrizione:} Il prodotto richiesto dalla Proponente deve essere testato in ogni sua parte per garantire le funzionalità relative ai requisiti;
-            	\item \textbf{Metriche associate:} MPPS002: Linee di codice coperte dai test.
-            \end{itemize}
-        \end{itemize} 
-        
-        \begin{itemize}
-            \item \textbf{ID:} OQPPS003;
-            \begin{itemize} 
-            	\item \textbf{Nome:} Superamento Test;
-            	\item \textbf{Descrizione:} La percentuale di superamento dei test del prodotto software dovrà essere almeno l'80\% del totale;
-            	\item \textbf{Metriche associate:} MPPS003: Percentuale superamento test.
-            \end{itemize}
-        \end{itemize} 
-        
-        \begin{itemize}
-            \item \textbf{ID:} OQPPS004;
-            \begin{itemize} 
-            	\item \textbf{Nome:} Robustezza;
-            	\item \textbf{Descrizione:} Il prodotto richiesto dalla proponente deve affrontare situazioni anomale senza arrestare la sua esecuzione;
-            	\item \textbf{Metriche associate:} MPPS004: Failure Avoidance.
-            \end{itemize}
-        \end{itemize}
-        
-        \begin{itemize}
-            \item \textbf{ID:} OQPPS005;
-            \begin{itemize} 
-            	\item \textbf{Nome:} Manutenzione e comprensione del codice;
-            	\item \textbf{Descrizione:} Il codice del prodotto richiesto dalla proponente deve essere quanto più possibile comprensibile e manutenibile;
-            	\item \textbf{Metriche associate:} 
-                \begin{itemize}
-                    \item \textbf{MPPS005:} Numero di parametri per metodo;
-                    \item \textbf{MPPS006:} Numero di attributi per classe;
-                    \item \textbf{MPPS007:} Numero di metodi per classe;
-                    \item \textbf{MPPS008:} Complessità ciclomatica;
-                    \item \textbf{MPPS009:} Grado di instabilità;
-                    \item \textbf{MPPS010:} Altezza albero della gerarchia;
-                    \item \textbf{MPPS011:} Rapporto linee di commento / linee di codice.
-                \end{itemize}
-            \end{itemize}
-        \end{itemize}
-
-    \section{Gestione dei processi di verifica e validazione}
-        
-    Il processo di verifica viene istanziato per ogni processo in esecuzione quando questo raggiunge un livello di maturità significativo, e/o in seguito a modiche notevoli del suo stato. Per ogni processo viene verificata la qualità dello stesso e del suo esito. 
-    Ognuno dei periodi descritti nel \textit{Piano di Progetto v1.0.0} produce degli esiti diversi, pertanto le procedure di verifica saranno specializzate e i loro risultati riportati in un'apposita appendice al termine di questo documento. 
-    Al processo di verifica segue quello di approvazione, nel quale il \textit{Responsabile} si accerta che i risultati prodotti siano conformi con quanto atteso e accettabili dal punto di vista qualitativo.
-
-    \section{Scadenze temporali}
+        \begin{longtable}{| p{2cm} | p{3.5cm} |p{5.5cm} | p{5.5cm} |}
+        	\caption {Tabella obiettivi di qualità di prodotto} \label{tab:title} \\
+        	\hline
+        	\textbf{Codice} & \textbf{Nome} & \textbf{Descrizione} & \textbf{Metriche associate}\\
+        	\hline
+        	\endhead
+        	
+        	\newline OQPPD001 &
+        	\newline Leggibilità dei documenti &
+        	\newline I documenti non devono riportare errori ortografici o grammaticali e devono essere leggibili e comprensibili da persone con licenza media o superiore \newline &
+        	\newline MPPD001: Errori ortografici corretti
+        	\newline MPPD002: Indice Gulpease
+        	\\[1em]
+        	
+        	\hline
+        	
+        	\newline OQPPS001 &
+        	\newline Implementazione requisiti obbligatori &
+        	\newline Il prodotto richiesto dalla Proponente deve implementare tutti i requisiti obbligatori descritti nella AR \newline &
+        	\newline MPPS001: Copertura Requisiti Obbligatori
+        	\\[1em]
+        	
+        	\hline
+        	\newline OQPPS002 &
+        	\newline Copertura del codice &
+        	\newline Il prodotto richiesto dalla Proponente deve essere testato in ogni sua parte per garantire le funzionalità relative ai requisiti \newline &
+        	\newline MPPS002: Linee di codice coperte dai test
+        	\newline MPPS003: Percentuale superamento test
+        	\\[1em]
+        	
+        	\hline
+        	\newline OQPPS003 &
+        	\newline Robustezza &
+        	\newline Il prodotto richiesto dalla proponente deve affrontare situazioni anomale senza arrestare la sua esecuzione \newline &
+        	\newline MPPS004: Failure Avoidance
+        	\\[1em]
+        	
+        	\hline
+        	\newline OQPPS004 &
+        	\newline Manutenzione e comprensione del codice &
+        	\newline Il codice del prodotto richiesto dalla proponente deve essere quanto più possibile comprensibile e manutenibile \newline &
+        	\newline MPPS005: Numero di parametri per metodo;
+        	\newline MPPS006: Numero di attributi per classe;
+        	\newline MPPS007: Numero di metodi per classe;
+        	\newline MPPS008: Complessità ciclomatica;
+        	\newline MPPS009: Grado di instabilità;
+        	\newline MPPS010: Altezza albero della gerarchia;
+        	\newline MPPS011: Rapporto linee di commento / linee di codice.
+        	\\[1em]
+        	
+        	\hline
+        \end{longtable}
     
-    Le procedure di controllo che vengono attuate allo scopo di garantire il rispetto delle scadenze temporali imposte dal progetto sono descritte nelle \textit{Norme di Progetto v1.0.0}. Ad ogni processo vengono assegnate precise date di inizio e di fine, precedute da un ben definito lasso temporale dedicato allo studio dell'oggetto del processo stesso.
+	% MISURE E METRICHE
+	
+	\section{Misure e metriche}
+	
+	Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è necessario che il processo di verifica produca risultati quantificabili che sia possibile confrontare con delle costanti di riferimento. Vengono di seguito stabiliti i valori di riferimento per le metriche descritte in dettaglio nelle NP, indicanti se i livelli qualitativi di processo e di prodotto sono in linea con gli obiettivi prefissati o meno. 	
+	
+	% METRICHE PER I PROCESSI
+	
+	\subsection{Metriche per i processi}
+	
+	\begin{longtable}{| p{2cm} | p{3.5cm} |p{5.5cm} | p{5.5cm} |}
+		\caption {Tabella metriche per i processi} \label{tab:title} \\
+		\hline
+		\textbf{Codice} & \textbf{Nome} & \textbf{Range di accettabilità} & \textbf{Obiettivi associati}\\
+		\hline
+		\endhead
+		
+		\newline MP001&
+		\newline ISO/IEC 15504 (SPICE)&
+		\newline \textbf{Accettazione:} [P] per ogni processo 
+		\newline \textbf{Ottimale:} [L - F] per ogni processo&
+		\newline OQP001: Miglioramento continuo
+		\\[1em]
+		
+		\hline
+	\end{longtable}
+	
+	% METRICHE PER DOCUMENTI
+	
+	\subsection{Metriche per i documenti}
+	
+	\begin{longtable}{| p{2cm} | p{3.5cm} |p{5.5cm} | p{5.5cm} |}
+		\caption {Tabella metriche per i processi} \label{tab:title} \\
+		\hline
+		\textbf{Codice} & \textbf{Nome} & \textbf{Range di accettabilità} & \textbf{Obiettivi associati}\\
+		\hline
+		\endhead
+		
+		\newline MPPD001 &
+		\newline Errori ortografici corretti &
+		\newline \textbf{Accettazione:} 100\% degli errori corretti
+		\newline \textbf{Ottimale:} 100\% degli errori corretti&
+		\newline OQPPD001: Correttezza ortografica dei documenti
+		\\[1em]
+		
+		\hline
+		
+		\newline MPPD002 &
+		\newline Indice Gulpease &
+		\newline \textbf{Accettazione:} [50, 100] 
+		\newline \textbf{Ottimale:} [65, 100]&
+		\newline OQPPD001: Correttezza ortografica dei documenti
+		\\[1em]
+		
+		\hline
+	\end{longtable}
+
+	% METRICHE PER IL SOFTWARE
+	
+	\subsection{Metriche per il software}
+	
+	\begin{longtable}{| p{2cm} | p{3.5cm} |p{5.5cm} | p{5.5cm} |}
+		\caption {Tabella metriche per i processi} \label{tab:title} \\
+		\hline
+		\textbf{Codice} & \textbf{Nome} & \textbf{Range di accettabilità} & \textbf{Obiettivi associati}\\
+		\hline
+		\endhead
+		
+		\newline MPPS001 &
+		\newline Copertura requisiti obbligatori &
+		\newline \textbf{Accettazione:} [65\% - 100\%]
+		\newline \textbf{Ottimale:} [80\% - 100\%] &
+		\newline OQPPS001: Implementazione requisiti obbligatori
+		\\[1em]
+		
+		\hline
+		
+		\newline MPPS002 &
+		\newline Copertura del codice &
+		\newline \textbf{Accettazione:} [65\% - 100\%]
+		\newline \textbf{Ottimale:} [85\% - 100\%] &
+		\newline OQPPS002: Copertura del codice
+		\\[1em]
+		
+		\hline
+		
+		\newline MPPS003 &
+		\newline Percentuale superamento test &
+		\newline \textbf{Accettazione:} [85\% - 100\%] 
+		\newline \textbf{Ottimale:} [100\% - 100\%] &
+		\newline OQPPS002: Copertura del codice
+		\\[1em]
+		
+		\hline
+		
+		\newline MPPS004 &
+		\newline Failure avoidance &
+		\newline \textbf{Accettazione:} [80\% - 100\%] 
+		\newline \textbf{Ottimale:} [90\% - 100\%] &
+		\newline OQPPS003: Robustezza
+		\\[1em]
+		
+		\hline
+		
+		\newline MPPS005 &
+		\newline Numero di parametri per metodo &
+		\newline \textbf{Accettazione:} [0, 5]
+		\newline \textbf{Ottimale:} [0, 3] &
+		\newline OQPPS004: Manutenzione e comprensione del codice
+		\\[1em]
+		
+		\hline
+		
+		\newline MPPS006 &
+		\newline Numero di attributi per classe &
+		\newline \textbf{Accettazione:} [0, 15] 
+		\newline \textbf{Ottimale:} [0, 8] &
+		\newline OQPPS004: Manutenzione e comprensione del codice
+		\\[1em]
+		
+		\hline
+		
+		\newline MPPS007 &
+		\newline Numero di metodi per classe &
+		\newline \textbf{Accettazione:} [0, 15] 
+		\newline \textbf{Ottimale:} [0, 5] &
+		\newline OQPPS004: Manutenzione e comprensione del codice 
+		\\[1em]
+		
+		\hline
+		
+		\newline MPPS008 &
+		\newline Complessità ciclomatica &
+		\newline \textbf{Accettazione:} [0, 15] 
+		\newline \textbf{Ottimale:} [0, 10] &
+		\newline OQPPS004: Manutenzione e comprensione del codice 
+		\\[1em]
+		
+		\hline
+		
+		\newline MPPS009 &
+		\newline Grado di instabilità &
+		\newline \textbf{Accettazione:} [0.0 - 0.8] 
+		\newline \textbf{Ottimale:} [0.0 - 0.4]&
+		\newline OQPPS004: Manutenzione e comprensione del codice 
+		\\[1em]
+		
+		\hline
+		
+		\newline MPPS010 &
+		\newline Altezza albero della gerarchia &
+		\newline \textbf{Accettazione:} \newline $ \textrm{\textit{rapporto}} \geq 0.3\% $
+		\newline \textbf{Ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $&
+		\newline OQPPS004: Manutenzione e comprensione del codice 
+		\\[1em]
+		
+		\hline
+		
+		\newline MPPS011 &
+		\newline Rapporto tra linee di codice e linee di commento &
+		\newline \textbf{Accettazione:} \newline $ \textrm{\textit{rapporto}} \geq 0.3\% $
+		\newline \textbf{Ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $ &
+		\newline OQPPS004: Manutenzione e comprensione del codice 
+		\\[1em]
+		
+		\hline
+	\end{longtable}
+	
+	\section{Politica della Qualità}
+	Il gruppo intende perseguire i succitati obiettivi di qualità attraverso:
+	
+	\begin{itemize}
+		\item Applicazione del principio del miglioramento continuo, da effettuarsi per tutta la durata del progetto a livello personale e di team;
+		\item Stretta collaborazione con la proponente che si sviluppi in rapporti
+		caratterizzati da una cooperazione attenta e propositiva orientata alla fornitura di un servizio di qualità, basato sul prodotto conforme;
+		\item Utilizzo di strumenti automatici adeguati all'esigenza di sviluppare un prodotto di qualità per costruzione e non per correzione;
+		\item Costante verifica, validazione e conseguente miglioramento del sistema qualità attraverso l'istanziazione di processi specializzati supportati da strumenti appropriati;
+		\item Lauto investimento temporale in termini di formazione dei membri del gruppo attraverso studio personale e condivisione delle conoscenze specifiche dei membri.
+	\end{itemize}
+
+	Segue il dettaglio delle strategie di conseguimento della qualità per ogni obiettivo definito dal gruppo.
+
+	\subsection{Strategie di conseguimento degli obiettivi di \\ qualità}
+	
+	Vengono di seguito listate le strategie di perseguimento della qualità per gli obiettivi definiti in §2.2 .
+	
+	\subsubsection{OQP001: Miglioramento continuo}
+	Tale obiettivo viene perseguito mediante la costante applicazione del ciclo di Deming, descritto in dettaglio nell'appendice §A.3 di questo documento.
+	
+	\subsubsection{OQPPD001: Leggibilità dei documenti}
+	Tale obiettivo viene perseguito mediante il rilevamento degli errori ortografici in real time di \glossario{TexStudio}{TexStudio} e istruendo il personale ad uno stile di scrittura sintetica e corretta.
+	
+	\subsubsection{OQPPS001: Implementazione requisiti obbligatori}
+	Per ogni incremento, l'insieme dei task da assegnare ai membri del gruppo durante lo sviluppo viene pianificato in modo tale che il suo completamento porti al soddisfacimento di almeno un requisito obbligatorio.   
+	
+	\subsubsection{OQPPS002: Copertura del codice}
+	Tale obiettivo viene perseguito mediante l'applicazione dei test definiti in fase di progettazione attuata tramite lo strumento automatico \textit{Travis}\ped{G}, che assicura che il codice caricato sulla repository superi tali test.
+	
+	\subsubsection{OQPPS003: Robustezza}
+	Tale obiettivo viene perseguito mediante la messa in pratica delle norme relative alla codifica definite nelle NP e la pianificazione di stress test per componenti di complessità rilevante.
+	
+	\subsubsection{OQPPS004: Manutenzione e comprensione del codice}
+	Tale obiettivo viene perseguito mediante la messa in pratica delle norme relative alla codifica definite nelle NP.
+	
+	\section{Definizione delle anomalie}
+	
+	L’identificazione delle anomalie ha come scopo la loro risoluzione e rappresenta un dato rilevante per il monitoraggio dello stato del prodotto. Distinguere e catalogare le anomalie permette di organizzare (in particolar modo di priorizzare) e affinare le correzioni da attuare per eliminarle. Di seguito
+	vengono quindi elencate le definizioni di anomalie (secondo glossario IEEE 610.12-90) adottate dal gruppo:
+	
+	\begin{itemize}
+		\item \textbf{Error:} differenza riscontrata tra risultato di una computazione e valore teorico atteso;
+		\item \textbf{Fault:} un passo, un processo o un dato definito in modo erroneo che corrisponde a quanto viene definito come bug;
+		\item \textbf{Failure:} il risultato di un fault;
+		\item \textbf{Mistake:} azione umana che produce un risultato errato.
+	\end{itemize}
+
+	Nello specifico, rappresentano un'anomalia:
+	
+	\begin{itemize}
+		\item La violazione delle norme tipografiche definite nelle NP;
+		\item La presenza di contenuti non pertinenti l'argomento trattato o il documento in cui risiedono;
+		\item Errori di codifica;
+		\item Il mancato rispetto dei valori di accettazione fissati in questo documento;
+		\item Incongruenze tra il prodotto e le sue funzionalità determinate nell'\textit{Analisi dei Requisiti}.
+	\end{itemize}
     
-    \section{Risorse}
-    
-    Il controllo eseguito per garantire il livello qualitativo di processi e prodotti necessita di risorse umane e tecnologiche. In relazione a questa attività, i ruoli di maggior rilievo sono il \textit{Responsabile} e il \textit{Verificatore}, che rispettivamente si occupano del controllo di qualità del processo e del prodotto risultante. Una descrizione dettagliata di tali ruoli è reperibile nel documento \textit{Norme di Progetto v1.0.0}. 
-    Le risorse tecnologiche comprendono tutti gli strumenti software e hardware che vengono utilizzati per attuare le procedure di verifica, automatizzate e non. Una descrizione dettagliata di tali risorse è reperibile nel documento \textit{Norme di Progetto v1.0.0}. 
-
-
-% MISURE E METRICHE
-
-\chapter{Misure e metriche}
-
-\section{Introduzione}
-
-Allo scopo di conseguire e monitorare gli obiettivi di qualità definiti, è necessario che il processo di verifica produca risultati quantificabili che sia possibile confrontare con delle costanti di riferimento. Vengono di seguito stabilite le metriche ed i valori di riferimento indicanti se i livelli qualitativi di processo e di prodotto sono in linea con gli obiettivi prefissati o meno. La presentazione di ogni metrica si articolerà nelle seguenti sottosezioni:
-
-\begin{itemize}
-    \item \textbf{Nome:} nome descrittivo della metrica;
-    
-    \item \textbf{Codice:} codice univocamente identificativo della metrica;
-    
-    \item \textbf{Descrizione:} illustrazione della metrica e del suo significato; 
-    
-    \item \textbf{Modalità di calcolo:} dove definito, viene riportato il modo in cui la metrica viene calcolata;
-    
-    \item \textbf{Range o valore minimo accettabile:} indica il range minimo (o la soglia minima), rispetto alla metrica di riferimento, in cui l'esito della verifica del processo o del prodotto deve ricadere perché si consideri garantito il livello qualitativo minimo richiesto;
-
-    \item \textbf{Range o valore ottimale:} indica il range di valori (o il valore) desiderabile, rispetto alla metrica di riferimento, in cui l'esito della verifica del processo o del prodotto deve ricadere perché si consideri ampiamente garantito il livello qualitativo richiesto.
-\end{itemize}
-
-% METRICHE PER I PROCESSI
-
-\section{Metriche per i processi}
-
-\subsection{ISO/IEC 15504 (SPICE)}
-
-\begin{itemize}
-    \item \textbf{Codice:} MP001;
-    \item \textbf{Descrizione:} La metrica definita dallo standard ISO/IEC 15504 viene utilizzata alla fine di ogni periodo per monitorare e valutare la qualità dei processi impiegati. Tale standard è illustrato dettagliatamente in Appendice A.1;
-    \item \textbf{Range di accettazione:} [P] per ogni processo;
-    \item \textbf{Range ottimale:} [L - F] per ogni processo.
-\end{itemize}
-
-% METRICHE PER DOCUMENTI
-
-\section{Metriche per i documenti}
-
-\subsection{Errori ortografici corretti}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPD001;
-    \item \textbf{Descrizione:} La documentazione prodotta deve essere corretta dal punto di vista ortografico e grammaticale;
-    \item \textbf{Modalità di calcolo:} Controllo ortografico di TexStudio e del \textit{Verificatore};
-    \item \textbf{Valore di accettazione:} 100\% degli errori corretti;
-    \item \textbf{Valore ottimale:} 100\% degli errori corretti.
-\end{itemize}
-
-\subsection{Gulpease}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPD002;
-
-    \item \textbf{Descrizione:} L’\glossario{indice Gulpease}{indice Gulpease} è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. Tale indice considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere;
-    
-    \item \textbf{Modalità di calcolo:} L'indice Gulpease si calcola con la seguente formula:
-
-    \[ I\ped{Gulpease} = 89 +  \frac{(300*(\textrm{\textit{numero delle frasi}})-10*(\textrm{\textit{numero delle lettere}})}{(\textrm{\textit{numero delle parole}})} \]
-    
-    Il risultato è un valore compreso nell’intervallo tra 0 e 100, dove il valore 100 indica la
-    più alta leggibilità, mentre 0 la più bassa. In generale risulta che testi con indice:
-        \begin{itemize}
-            \item inferiore a 80 sono difficili da leggere per chi ha la licenza elementare; 
-            \item inferiore a 60 sono difficili da leggere per chi ha la licenza media;
-            \item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
-        \end{itemize}
-            
-    Nonostante l'importanza riconosciuta all'indice Gulpease, il gruppo tiene conto delle seguenti considerazioni:
-    \begin{itemize}
-        \item l'indice non rileva la comprensibilità del testo, il cui contenuto potrebbe essere totalmente incomprensibile ma ottenere ugualmente un buon valore; 
-        \item ai fini dei documenti vengono necessariamente usati termini tecnici possibilmente ostici ma insostituibili;
-        \item il gruppo decide di prediligere la chiarezza e la precisione del contenuto dei documenti anche qualora questa dovesse minarne (in modo superficiale) la leggibilità.
-    \end{itemize}
-    
-    \item \textbf{Range di accettazione:} [50, 100];
-    \item \textbf{Range ottimale:} [65, 100]
-\end{itemize}
-
-% METRICHE PER IL SOFTWARE
-
-\section{Metriche per il software}
-
-\subsection{Copertura requisiti obbligatori}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS001;
-    \item \textbf{Descrizione:} La copertura dei requisiti obbligatori permette di monitorare la percentuale di requisiti obbligatori soddisfatti;
-    \item \textbf{Modalità di calcolo:} La copertura dei requisiti obbligatori si calcola con la seguente formula:
-    
-    \[ CRO = \frac{\textrm{\textit{numero requisiti obbligatori soddisfatti}}}{\textrm{\textit{totale dei requisiti obbligatori}}} \]
-    
-    \item \textbf{Range di accettazione:} [65\% - 100\%];
-    \item \textbf{Range ottimale:} [80\% - 100\%].
-\end{itemize}
-
-\subsection{Copertura del codice}
-
-\begin{itemize}
-
-    \item \textbf{Codice:} MPPS002;
-
-    \item \textbf{Descrizione:} La copertura del codice (o code coverage) indica la percentuale di istruzioni,  rispetto al totale, che vengono eseguite durante i test. Maggiore è il numero delle istruzioni testate e maggiore è la possibilità di individuare e risolvere errori di codifica. Un valore troppo basso indica che molte istruzioni non vengono testate, divenendo possibile causa di anomalie.
-    
-    \item \textbf{Modalità di calcolo:} La copertura del codice si calcola con la seguente formula:
-    
-    \[ CC = \frac{\textrm{\textit{numero di righe di codice testate}}}{\textrm{\textit{totale delle righe di codice}}} \]
-    
-    \item \textbf{Range di accettazione:} [65\% - 100\%];
-    \item \textbf{Range ottimale:} [85\% - 100\%].
-\end{itemize}
-
-\subsection{Percentuale superamento test}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS003;
-    \item \textbf{Descrizione:} La metrica indica la percentuale di test implementati superati dal oggetto del test;
-    \item \textbf{Modalità di calcolo:} Percentuale superamento test si calcola con la seguente formula:
-    
-    \[ PST = \frac{\textrm{\textit{numero test superati}}}{\textrm{\textit{totale dei test implementati}}} \]
-    
-    \item \textbf{Range di accettazione:} [85\% - 100\%];
-    \item \textbf{Range ottimale:} [100\% - 100\%].
-\end{itemize}
-
-\subsection{Failure avoidance}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS004;
-    \item \textbf{Descrizione:} La Failure Avoidance è una metrica applicata per monitorare la robustezza del prodotto quando deve affrontare a situazioni critiche;
-    \item \textbf{Modalità di calcolo:} La Failure Avoidance si calcola con la seguente formula:
-    
-    \[ FA = \frac{\textrm{\textit{numero situazioni anomale evitate}}}{\textrm{\textit{numero situazioni anomale occorse}}} \]
-    
-    \item \textbf{Range di accettazione:} [80\% - 100\%];
-    \item \textbf{Range ottimale:} [90\% - 100\%].
-\end{itemize}
-
-\subsection{Numero di parametri per metodo}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS005;
-
-    \item \textbf{Descrizione:} Il numero di parametri di un metodo incide sulla sua complessità. Un valore elevato può indicare che esso si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposto in metodi più semplici;
-    
-    \item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
-    
-    \item \textbf{Range di accettazione:} [0, 5];
-    \item \textbf{Range ottimale:} [0, 3].
-\end{itemize}
-
-\subsection{Numero di attributi per classe}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS006;
-
-    \item \textbf{Descrizione:} Il numero di attributi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più semplici;
-    
-    \item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
-    
-    \item \textbf{Range di accettazione:} [0, 15];
-    \item \textbf{Range ottimale:} [0, 8].
-\end{itemize}
-
-\subsection{Numero di metodi per classe}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS007;
-
-    \item \textbf{Descrizione:} Il numero di metodi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più semplici;
-    
-    \item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
-    
-    \item \textbf{Range di accettazione:} [0, 15];
-    \item \textbf{Range ottimale:} [0, 5].
-\end{itemize}
-
-\subsection{Complessità ciclomatica}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS008;
-
-    \item \textbf{Descrizione:} La \glossario{Complessità ciclomatica}{Complessita ciclomatica} (o complessità condizionale) è una metrica software utilizzata per misurare la complessità di un programma. Nello specifico, essa stima la complessità di funzioni, moduli, metodi o classi di un programma. Il valore della Complessità Ciclomatica rappresenta quanto un metodo è complesso, tramite la misura del numero di cammini linearmente indipendenti che attraversano il \glossario{grafo}{Grafo} di flusso di controllo. In tale grafo, i nodi rappresentano gruppi indivisibili di istruzioni. Un arco connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l'esecuzione delle istruzioni dell'altro nodo. Durante l’identificazione dei test, la Complessità Ciclomatica è inoltre utile per determinare il numero di casi di test necessari: l’indice di Complessità Ciclomatica è infatti un limite superiore al numero di test necessari per raggiungere la completa \glossario{copertura del codice}{Copertura del codice} (o \textit{code coverage}) del modulo testato. Un valore troppo elevato indica un'eccessiva complessità del codice, cui consegue una complessa manutenzione, al contrario un valore ridotto potrebbe indicare una scarsa efficienza dei metodi;
-
-    \item \textbf{Modalità di calcolo:} Rappresentando un programma con il grafo di controllo del flusso, un modo di calcolare il numero ciclomatico \textit{V(G)} è il seguente:
-    
-    \[ V(G) = E - N + 2P \]
-    
-    Dove:
-    
-    \begin{itemize}
-        \item \textbf{N:} indica il numero di nodi del grafo;
-        \item \textbf{E:} indica il numero di archi del grafo;
-        \item \textbf{P:} indica il numero di componenti connesse del grafo;
-    \end{itemize}
-    
-    \item \textbf{Range di accettazione:} [0, 15];
-    \item \textbf{Range ottimale:} [0, 10].
-\end{itemize}
-
-\subsection{Grado di instabilità}
-
-\begin{itemize}
-    \item \textbf{Codice:} MPPS009;
-    
-    \item \textbf{Descrizione:} Il livello di stabilità di un software indica il rischio con una modifica apportata ad un \glossario{package}{package} influenzi il funzionamento dell'intero sistema;
-    
-    \item \textbf{Modalità di calcolo:} Il valore di instabilità è calcolato usando il grado di \glossario{accoppiamento}{Accoppiamento} tramite la seguente formula:
-    
-    \[ \textrm{\textit{Instabilità}} = \frac{\textrm{\textit{Accoppiamento efferente}}}{\textrm{\textit{Accoppiamento efferente}} + \textrm{\textit{Accoppiamento afferente}}} \]
-    
-    Dove:
-    
-    \begin{itemize}
-        \item \textbf{Accoppiamento efferente:} indica il grado di dipendenza delle classi di un package verso classi di package esterni. Un valore basso garantisce la stabilità del package indipendentemente dalle possibili modifiche al resto del sistema;
-        
-        \item \textbf{Accoppiamento afferente:} indica il grado di utilità delle classi di un package verso classi esterne ad esso. Un valore troppo basso potrebbe essere indice di scarsa utilità della classe, dato che poche delle sue funzionalità sono usate al suo esterno. Al contrario, un valore troppo elevato può indicare un livello di dipendenza pericoloso del package in esame, che può portare ad effetti indesiderati nelle classi esterne in caso di modifiche. Un valore elevato, d'altro canto, non è necessariamente indice di un errore di progettazione bensì potrebbe indicare semplicemente la criticità del package in esame.
-    \end{itemize}
-    
-    \item \textbf{Range di accettazione:} [0.0 - 0.8];
-    \item \textbf{Range ottimale:} [0.0 - 0.4].
-
-\end{itemize}
-
-\subsection{Altezza albero della gerarchia}
-
-\begin{itemize}
-
-    \item \textbf{Codice:} MPPS010;
-    
-    \item \textbf{Descrizione:} L'altezza degli alberi di gerarchia delle classi va limitata così da limitare l'accoppiamento. Preferibilmente, le classi dovranno dipendere solo da classi astratte e potranno implementare una o più interfacce. Viene invece proibito l'uso di ereditarietà multipla.
-
-    \item \textbf{Modalità di calcolo:} controllo del \textit{Verificatore};
-    
-    \item \textbf{Range di accettazione:} $ \textrm{\textit{rapporto}} \geq 0.3\% $;
-    
-    \item \textbf{Range ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $.
-\end{itemize}
-
-\subsection{Rapporto tra linee di codice e linee di commento}
-
-\begin{itemize}
-
-    \item \textbf{Codice:} MPPS011;
-    
-    \item \textbf{Descrizione:} Il rapporto tra linee di codice (escluse le righe vuote) e linee di commento rappresenta un indice utile a stimare la manutenibilità del codice sorgente. Un rapporto troppo basso indica una scarsa documentazione del codice scritto, cui consegue una possibile elevata complessità nel manutenerlo.
-
-    \item \textbf{Modalità di calcolo:}
-    \[\frac{\textrm{\textit{numero linee di commento}}}{\textrm{\textit{numero linee di codice (non vuote)}}} \]
-    
-    \item \textbf{Range di accettazione:} $ \textrm{\textit{rapporto}} \geq 0.3\% $;
-    
-    \item \textbf{Range ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $.
-\end{itemize}
-
-% GESTIONE AMMINISTRATIVA DELLA REVISIONE
-
+	\section{Scadenze temporali}
+	
+	Vista la presenza delle scadenze temporali definite nel PP, si necessita di un sistema di controllo efficiente dei tempi. Le procedure di controllo che verranno attuate per individuare e correggere eventuali errori sono descritte
+	nelle NP. Nel tentativo di prevenire l'insorgenza di errori stessi, ogni attività svolta detiene un periodo iniziale di
+	studio sull'argomento, che riduce la quantità di interventi correttivi a posteriori.
+	
+	\section{Risorse}
+	
+	Il controllo eseguito per garantire il livello qualitativo di processi e prodotti necessita di risorse umane e tecnologiche. In relazione a questa attività, i ruoli di maggior rilievo sono il \textit{Responsabile} e il \textit{Verificatore}, che rispettivamente si occupano del controllo di qualità del processo e del prodotto risultante. Una descrizione dettagliata di tali ruoli è reperibile nel documento NP. 
+	Le risorse tecnologiche comprendono tutti gli strumenti software e hardware che vengono utilizzati per attuare le procedure di verifica, automatizzate e non. Una descrizione dettagliata di tali risorse è reperibile nel documento NP. 
+	
 \chapter{Gestione amministrativa \\ della revisione}
-
-\section{Definizione delle anomalie}
-
-L’identificazione delle anomalie è finalizzata alla loro risoluzione e rappresenta un importante dato per il monitoraggio dello stato del prodotto. Distinguere e catalogare le anomalie permette di organizzare (in particolar modo di priorizzare) e affinare le correzioni da attuare per eliminarle. Di seguito
-vengono quindi elencate le definizioni di anomalie (secondo glossario IEEE 610.12-90) adottate dal gruppo:
-
-\begin{itemize}
-    \item \textbf{Error:} differenza riscontrata tra risultato di una computazione e valore teorico atteso;
-    \item \textbf{Fault:} un passo, un processo o un dato definito in modo erroneo che corrisponde a quanto viene definito come bug;
-    \item \textbf{Failure:} il risultato di un fault;
-    \item \textbf{Mistake:} azione umana che produce un risultato errato.
-\end{itemize}
-
-\section{Scadenze temporali}
-
-Vista la presenza delle scadenze temporali definite nel PP, si necessita di un sistema di controllo efficiente dei tempi. Le procedure di controllo che verranno attuate per individuare e correggere eventuali errori sono descritte
-nelle NP. Nel tentativo di prevenire l'insorgenza di errori stessi, ogni attività svolta detiene un periodo iniziale di
-studio sull'argomento, che riduce la quantità di interventi correttivi a posteriori.
-
-\section{Risorse}
-
-Il controllo effettuato per garantire il livello di qualità di processi e prodotti necessita dell'uso di risorse umane e tecnologiche. I ruoli di maggiore impatto per questa attività sono il ruolo di \textit{Responsabile} e di \textit{Verificatore}, rispettivamente adibiti al controllo di qualità di processo e al controllo di qualità di prodotto. Una descrizione dettagliata di questi e altri ruoli si trova nelle NP.
-Le risorse tecnologiche comprendono tutti gli strumenti software e hardware che vengono utilizzati per attuare le procedure di verifica. Una descrizione dettagliata di queste e altre tecnologie si trova nelle NP.
-
+	
+	\section{Gestione dei processi di \\ verifica e validazione}
+	
+	Il processo di verifica viene istanziato per ogni processo in esecuzione quando questo raggiunge un livello di maturità significativo, e/o in seguito a modiche notevoli del suo stato. Per ogni processo viene verificata la qualità dello stesso e del suo esito. 
+	Ognuno dei periodi descritti nel PP produce degli esiti diversi, pertanto le procedure di verifica saranno specializzate e i loro risultati riportati in un'apposita appendice al termine di questo documento. 
+	Al processo di verifica segue quello di approvazione, nel quale il \textit{Responsabile} si accerta che i risultati prodotti siano conformi con quanto atteso e accettabili dal punto di vista qualitativo.
+	
+	\section{Comunicazione e risoluzione \\ delle anomalie}
+	Tale attività ha lo scopo di individuare e risolvere tempestivamente le anomalie riscontrabili nel corso del progetto. Qualora venisse rilevata un'anomalia durante l'attività di verifica, questa dovrà essere tempestivamente segnalata tramite il sistema di ticketing come descritto nelle NP. Ciò permette una pronta segnalazione dell'anomalia, informando il Responsabile della stessa cosicché possa prendere i necessari provvedimenti.
 \appendix
 
 % STANDARD DI QUALITà
@@ -559,7 +499,7 @@ Le risorse tecnologiche comprendono tutti gli strumenti software e hardware che 
 
 % SPICE
 
-\section{Qualità di processo: ISO/IEC 15504}
+\section{Qualità di processo - ISO/IEC 15504}
 
 \subsection{Introduzione allo standard}
 
@@ -601,7 +541,7 @@ Gli attributi vengono misurati e classificati secondo uno dei seguenti livelli:
 
 % ISO/IEC 9126
     
-\section{Qualità di prodotto: ISO/IEC 9126}    
+\section{Qualità di prodotto - ISO/IEC 9126}    
 
 \subsection{Introduzione allo standard}
 
@@ -695,6 +635,10 @@ Il ciclo di Deming (anche conosciuto come ciclo PDCA, l'acronimo di Plan-Do-Chec
     \item \textbf{Act:} la fase di attuazione, in cui i processi che hanno beneficiato delle correzioni e delle modifiche eseguite vengono resi standard.
 \end{enumerate}
 
+% SPECIFICA DEI TEST
+
+\chapter{Specifica dei test}
+
 % RESOCONTO DELLE ATTIVITà DI VERIFICA
 
 \chapter{Resoconto delle attività \\ di verifica di periodo}
@@ -782,5 +726,25 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 Dalla tabella si evince che tutti i documenti presentano un indice nei limiti preferibili.
 
 \end{itemize}
+
+\chapter{Valutazioni per il miglioramento}
+
+\section{Introduzione}
+
+Questa appendice si propone di riepilogare le valutazioni orientate al miglioramento dell'intero processo produttivo in relazione al progetto corrente. Verranno dunque tracciati problemi riguardanti i seguenti ambiti:
+
+\begin{itemize}
+	\item \textbf{Organizzazione:} ovvero quei problemi inerenti l'organizzazione e la comunicazione all'interno del gruppo;
+	\item \textbf{Ruoli:} ovvero quei problemi riguardanti il corretto svolgimento di un ruolo di progetto;
+	\item \textbf{Strumenti:} ovvero quei problemi riguardanti il corretto utilizzo di strumentazione specifica.
+\end{itemize}
+
+\noindent Ogni problema viene sollevato sulla base dell'autovalutazione dei membri del gruppo e dall'esito di revisioni e confronti con Committente e Proponente, e ad esso viene associata una possibile soluzione.
+
+\section{Valutazioni sull'organizzazione}
+
+\section{Valutazioni sui ruoli}
+
+\section{Valutazioni sugli strumenti}
 
 \end{document}

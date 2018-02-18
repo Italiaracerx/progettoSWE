@@ -35,7 +35,7 @@
 		\item \textbf{Flusso di Esecuzione:} rappresenta il flusso degli eventi come lista numerata, specificando per ciascun evento: titolo, descrizione, attori coinvolti e casi d'uso generati;
 	\end{itemize}
 
-	\section{UC0:Pagina Iniziale}
+	\section{UC0:Avvio Applicazione}
 	\begin{figure}[H]
 		\caption{UC0}
 		\centering
@@ -45,12 +45,12 @@
 	{UC0}
 	{Utente}
 	{}
-	{L'attore visualizza la pagina iniziale di DeSpeect nella quale può accedere al menu File e caricare il file JSon}
+	{L'attore avvia l'applicazione DeSpeect e visualizza la pagina iniziale}
+	{Il software Despeect è correttamente installato}
 	{Il programma è correttamente avviato e visualizza la pagina iniziale}
-	{L'attore apre il menu file}
 	{Non previsti}
-	{}
-	\section{UC1:Menu File}
+	{L'attore può caricare un file Json o aprire il menu \refer{UC1}}
+	\section{UC1:Aprire Menu}
 	\begin{figure}[H]
 	\caption{UC1}
 	\centering
@@ -61,18 +61,21 @@
 	{Utente}
 	{}
 	{L'attore vuole visualizzare il menu File}
-	{Il programma mostra Pagina Iniziale \refer{UC0}}
-	{Viene selezionata una voce del menu}
+	{Il programma mostra è avviato correttamente \refer{UC0}}
+	{Viene selezionata una voce del menu o cambiato il focus}
 	{Non previsti}
-	{	\begin{itemize}
+	{	\begin{enumerate}
+			\item{} L'utente preme sul menu File
+			\item{} Il menu File si apre e offre le seguenti scelte:
+		\begin{itemize}
 		\item{} L'attore può Caricare un file JSon \refer{UC2}
 		\item{} L'attore può Salvare le modifiche al file JSon \refer{UC11}
 		\item{} L'attore può Salvare l'audio prodotto da Speect \refer{UC4}
 		\item{} L'attore può chiudere l'applicazione \refer{UC5}
 		\item{} L'attore può Caricare un grafo \refer{UC8}
 		\item{} L'attore può Salvare un grafo \refer{UC9}
-		\item{} L'attore può Ricercare un Path nel grafo \refer{UC10}
 		\end{itemize}
+	\end{enumerate}
 	}
 
 	\section{UC2:Caricamento JSon}
@@ -95,7 +98,7 @@
 			\item{} L'attore seleziona il file tramite il file browser \refer{UC3}
 			\item{} L'attore preme Carica
 			\item{} Il file viene dato a Speect che prova l'inizializzazione
-			\item{} Viene visualizzato il percorso del file nella apposito spazio (link a figura)
+			\item{} Viene visualizzato il percorso del file nella apposito spazio \ref{fig:GUI}
 		\end{itemize}
 	}
 	\section{UC2.1:Errore Caricamento JSon}
@@ -110,7 +113,7 @@
 	{}
 
 	
-	\section{UC3:File Browser}
+	\section{UC3:File Browser analizzare QFileDialog (parlare con Marco perchè manco io capisco bene) va sistemato tutto il 3}
 	\begin{figure}[H]
 		\caption{UC3}
 		\centering
@@ -119,11 +122,11 @@
 	\UserCase
 	{UC3}
 	{Utente}
-	{}
+	{Sistema Operativo}
 	{L'attore deve navigare nel file system alla ricerca di un file o di una cartella}
 	{L'attore deve selezionare un file o raggiungere una cartella}
 	{L'attore seleziona il file da caricare o la cartella in cui salvare}
-	{L'attore non ha i permessi per aprire il file e viene visualizzato l'errore di navigazione \refer{UC3.3}}
+	{Fallisce la richiesta di apertura del file browsing del SO correntie}
 	{
 		\begin{itemize}
 			\item{} Il file browser viene visualizzato dall'attore
@@ -227,7 +230,7 @@
 {Utente}
 {}
 {L'attore vuole salvare l'audio}
-{L'attore ha premuto su Salva Audio}
+{Speect è inizializzato \refer{UC2}}
 {L'audio è salvato in un file}
 {L'attore visualizza un messaggio di errore \refer{UC4.2}}
 {
@@ -237,7 +240,8 @@
 		\item{} L'attore scrive il nome del file nella barra di testo
 		\item{} L'attore seleziona l'estensione attraverso menu a tendina \refer{UC4.1}
 		\item{} L'attore preme su Salva 
-		\item{} Il file viene salvato nella destinazione con estensione scelta altrimenti con estensione di default .WAV
+		\item{} Speect compila producendo il file desiderato o un errore  \refer{7}
+		\item{} Se non è avvenuto un errore il file viene salvato nella destinazione con estensione scelta altrimenti con estensione di default .WAV
 \end{itemize}
 }
 \section{UC4.1:Menu Estensioni}
@@ -304,10 +308,10 @@
 		\item{} L'attore clicca sul menu a tendina
 		\item{} Viene aperto il menu a tendina
 		\item{} L'attore clicca sul Utterance type desiderata
-		\item{} Vengono mostrati a schermo i nomi degli Utterance Processor utilizzati negli appositi spazi (link figura)		
+		\item{} Vengono mostrati a schermo i nomi degli Utterance Processor utilizzati negli appositi spazi \ref{fig:GUI}		
 	\end{itemize}
 }
-\section{UC6.1:Modifica Utterance Processor}
+\section{UC6.1:Riordino Utterance Processor}
 \UserCase
 {UC6.1}
 {Utente}
@@ -405,7 +409,7 @@
 	\begin{itemize}
 		\item{} L'attore clicca una volta sul nodo
 		\item{} Il nodo viene evidenziato con un contorno giallo
-		\item{} Nel riquadro apposito(ref a figura) vengono visualizzati i dati del grafo:
+		\item{} Nel riquadro apposito \ref{fig:GUI} vengono visualizzati i dati del grafo:
 		\begin{enumerate}
 			\item{} Name
 			\item{} Part of Speech

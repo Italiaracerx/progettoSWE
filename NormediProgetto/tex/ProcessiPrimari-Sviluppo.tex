@@ -26,9 +26,10 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 \noindent Il processo di sviluppo si svolge in accordo con lo standard ISO/IEC 12207, pertanto si compone delle seguenti attività:
 
 \begin{itemize}
-	\item Analisi dei requisiti
-	\item Progettazione
-	\item Codifica
+	\item Analisi dei requisiti;
+	\item Progettazione architetturale;
+	\item Progettazione di dettaglio;
+	\item Codifica.
 \end{itemize}
 
 \subsection{Analisi dei Requisiti}
@@ -38,21 +39,20 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 	Gli \glossario{Analisti}{analista} devono individuare ed elencare i \glossario{requisiti}{requisito} del progetto da realizzare.
 	
 	\subsubsection{Descrizione}
-	
-	I requisiti devono essere estratti dal capitolato d’appalto, dai verbali di riunione e dallo studio dei casi d’uso. Il documento \textit{Analisi dei Requisiti} deve:
+	L'attività di Analisi deve:
 	
 	\begin{itemize}
 		\item Descrivere il fine del progetto;
 		\item Fissare le funzionalità e i requisiti richiesti dal committente;
 	\end{itemize}
 
-	\noindent Durante l’Analisi dei Requisiti gli \textit{Analisti} analizzano individualmente le varie fonti, quindi, a seguito di una riunione, si confrontano e stilano le varie liste di requisiti suddivise per importanza. Le fonti per gli \textit{Analisti} sono:
+	\noindent Durante l’Analisi dei Requisiti gli \textit{Analisti} analizzano individualmente le varie fonti, quindi, a seguito di una riunione, si confrontano e stilano le varie liste di requisiti suddivise per importanza. Le fonti sono:
 	 
 	\begin{itemize}
-		\item \textbf{Capitolato d’appalto:} requisiti emersi dall’analisi del documento fornito dal committente;
-		\item \textbf{Verbali esterni:} requisiti emersi a seguito di colloqui con i responsabili dell’azienda committente;
+		\item \textbf{Capitolato d’appalto:} requisiti emersi dall'analisi del documento fornito dalla Proponente;
+		\item \textbf{Verbali esterni:} requisiti emersi a seguito di colloqui con i responsabili dell'azienda Proponente;
 		\item \textbf{Casi d'uso:} requisiti emersi a seguito di uno o più casi d’uso analizzati.
-		\item \textbf{Tracciabilità Interna (TI):} requisiti emersi tramite discussioni ed incontri tra gli \textit{Analisti} del gruppo Graphite;
+		\item \textbf{Tracciabilità Interna (TI):} requisiti emersi tramite discussioni ed incontri tra gli \textit{Analisti} del gruppo Graphite.
 	\end{itemize}
 
 	\subsubsection{Classificazione requisiti} 
@@ -62,7 +62,6 @@ Per una corretta implementazione di tale processo le aspettative sono le seguent
 	\begin{center}
 		R[Importanza][Tipologia][Codice]
 	\end{center}
-	
 		\begin{itemize}
 			\item \textbf{Importanza:} Ogni requisito può appartenere solo ad una delle classi di Importanza elencate di seguito:
 			\begin{itemize}
@@ -114,22 +113,19 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 	\item \textbf{Precondizione:} specifica le condizioni che sono identificate come vere prima del verificarsi degli eventi del caso d'uso;
 	\item \textbf{Postcondizione:} specifica le condizioni che sono identificate come vere dopo il verificarsi degli eventi del caso d'uso;
 	
-	\item \textbf{Scenari Alternativi:} specifica casi di errore o eventi non previsti nel flusso di esecuzione;
-	\item \textbf{Flusso di Esecuzione:} rappresenta il flusso degli eventi come lista numerata, specificando per ciascun evento: titolo, descrizione, attori coinvolti e casi d'uso generati;
+	\item \textbf{Scenari Alternativi:} specifica casi di errore o eventi non previsti nello scenario principale;
+	\item \textbf{Scenario Principale:} rappresenta il flusso degli eventi come lista numerata, specificando per ciascun evento: titolo, descrizione, attori coinvolti e casi d'uso generati;
 \end{itemize}
 
-
-	Alcuni casi d'uso possono essere associati ad un Diagramma \glossario{UML}{UML} 2.x dei casi d'uso riportante lo stesso titolo e codice.
 	
 \subsection{Progettazione} 
 
 	\subsubsection{Scopo} 
 
-	L'attività di Progettazione deve obbligatoriamente precedere la produzione del software e consiste nel descrivere una soluzione del problema che sia soddisfacente per tutti gli \glossario{stakeholders}{stakeholders}.
-	
+	L'attività di Progettazione deve obbligatoriamente precedere la produzione del software e consiste nel descrivere una soluzione del problema che sia soddisfacente per tutti gli \glossario{stakeholders}{stakeholders}. Essa serve a garantire che il prodotto sviluppato soddisfi le proprietà e i bisogni specificati nell'attività di analisi. 
 	\subsubsection{Descrizione}
 	
-	Essa serve a garantire che il prodotto sviluppato soddisfi le proprietà e i bisogni specificati nell'attività di analisi. La progettazione permette di:
+	La progettazione permette di:
 	
 	\begin{itemize}
 		\item Costruire un’architettura logica del prodotto;
@@ -156,32 +152,37 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 		\item \textbf{Coesione:} raggruppare le parti secondo l'obiettivo a cui concorrono, in modo da avere maggiore manutenibilità e riusabilità;
 		\item \textbf{Basso accoppiamento:} non avere dipendenze indesiderabili.
 	\end{itemize}
-
-	\subsubsection{Design Patterns}
 	
-	Finita l'attività di Analisi, è compito dei \textit{Progettisti} adottare opportune soluzioni progettuali a problemi ricorrenti. Tali soluzioni devono essere flessibili e consentire una certa libertà d'uso ai \textit{Programmatori}. Per ogni \glossario{Design Pattern}{Design Pattern} utilizzato, esso va riportato all'interno del documento di \textit{Specifica Tecnica} riportando un diagramma che lo illustri e una descrizione testuale inerente la sua applicazione e utilità all'interno dell'architettura.
+	\subsubsection{Analisi delle tecnologie}
+	Prima di iniziare l'attività di progettazione, i \textit{Progettisti} devono condurre un analisi delle tecnologie mirata alla scelta delle più appropiate ai fini del progetto, motivando e dimostrando la scelta mediante \textit{Proof of Concept}.
 	
-	\subsubsection{UML 2.0}
+	\subsubsection{Progettazione Architetturale}
+	Finita l'attività di Analisi, è compito dei \textit{Progettisti} adottare opportune soluzioni progettuali a problemi ricorrenti. Tali soluzioni devono essere flessibili e consentire una certa libertà d'uso ai \textit{Programmatori}.
 	
-		Al fine di rendere più chiare le scelte progettuali adottate e ridurre le possibili ambiguità, è necessario fare largo uso di vari tipi di diagrammi UML 2.0, tra cui:
+	\subsubsection{Progettazione in Dettaglio}
+	Deve definire per ogni componente software il progetto della stessa e i relativi test.
+%%	\subsubsection{UML 2.0}
+%	
+%		Al fine di rendere più chiare le scelte progettuali adottate e ridurre le possibili ambiguità, è necessario fare largo uso di vari tipi di diagrammi UML 2.0, tra cui:
 	
-	\begin{itemize}
-		\item \textbf{Diagrammi delle classi:} definiscono relazioni, metodi e attributi di classi e tipi, astraendosi da un qualsiasi linguaggio di programmazione;
-		\item \textbf{Diagrammi dei \glossario{package}{package}:} illustrano raggruppamenti di classi che condividono la stessa causa di cambiamento e necessitano di essere riusate assieme;
-		\item \textbf{Diagrammi di sequenza:} servono a descrivere le interazioni che avvengono fra gli oggetti che devono implementare collettivamente un comportamento, rappresentando sequenze di azioni tramite scelte definite (ad esempio, una sequenza di invocazioni tra metodi);
-		\item \textbf{Diagrammi delle attività:} descrivono il flusso di operazioni di una attività (ad esempio un algoritmo), descrivendone la logica procedurale.
-	\end{itemize}
-
-	\noindent E' possibile inoltre fare uso di altre tipologie di diagrammi, come diagrammi delle componenti, di macchine a stati o di \glossario{deployment}{deployment}, se necessario.
+%	\begin{itemize}
+%		\item \textbf{Diagrammi delle classi:} definiscono relazioni, metodi e attributi di classi e tipi, astraendosi da un qualsiasi linguaggio di programmazione;
+%		\item \textbf{Diagrammi dei \glossario{package}{package}:} illustrano raggruppamenti di classi che condividono la stessa causa di cambiamento e necessitano di essere riusate assieme;
+%		\item \textbf{Diagrammi di sequenza:} servono a descrivere le interazioni che avvengono fra gli oggetti che devono implementare collettivamente un comportamento, rappresentando sequenze di azioni tramite scelte definite (ad esempio, una sequenza di invocazioni tra metodi);
+%		\item \textbf{Diagrammi delle attività:} descrivono il flusso di operazioni di una attività (ad esempio un algoritmo), descrivendone la logica procedurale.
+%	\end{itemize}
+%
+%	\noindent E' possibile inoltre fare uso di altre tipologie di diagrammi, come diagrammi delle componenti, di macchine a stati o di \glossario{deployment}{deployment}, se necessario.
 	
 	\subsection{Codifica}
 	
 	\subsubsection{Scopo}
-	
-	Nella seguente sezione sono riportate le norme da seguire durante la programmazione da parte dei \textit{Programmatori}. Lo scopo di queste norme consiste nel dare delle linee guida in modo tale che il codice risulti leggibile e aiuti durante la fase di mantenimento, verifica e validazione, migliorando così la qualità del prodotto.
+	Nella seguente sezione sono riportate le norme da seguire durante la programmazione da parte dei \textit{Programmatori}. Lo scopo di queste norme consiste nel dare delle linee guida in modo tale che il codice risulti leggibile e facilmente analizzabile durante la fase di mantenimento, verifica e validazione, migliorando così la qualità del prodotto.
 
 	\subsubsection{Descrizione}
+	L'attività di codifica deve sviluppare il software e i test per le componenti descritti dalla progettazione in dettaglio assicurandosi che sia conforme a quanto definito. 
 	
+	\subsubsection{Norme di Codifica}
 	Il gruppo aderisce alle \textit{GNU GCC Coding Conventions}, reperibili al seguente link:
 	
 	\begin{center}
