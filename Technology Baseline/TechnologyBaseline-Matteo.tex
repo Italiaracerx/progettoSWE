@@ -1,0 +1,36 @@
+
+\documentclass[openany,12pt,a4paper]{report}
+
+\usepackage{subfiles}
+
+\usepackage{StileDoc}
+
+
+
+
+\title{Technology Baseline}
+\author{}
+\date{\today}
+
+
+\begin{document}
+	\makeatletter
+	\begin{titlepage}
+		\begin{center}
+			{\huge \bfseries  \@title }\\[10em]
+			\includegraphics[width=0.5\linewidth]{./img/logo.png} \\[5em]
+			
+			{\large \@date}
+		\end{center}
+	\end{titlepage}
+	\makeatother
+	\thispagestyle{empty}
+	\newpage
+	\tableofcontents
+	
+	%Aggiungere File da qua in poi
+	\subfile{./tex/Funzionalita}
+	\subfile{./tex/LavoroInterno}
+	\subfile{./tex/Conclusioni}
+
+	\end{document}                       
