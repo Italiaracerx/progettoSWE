@@ -67,12 +67,12 @@
 			\item{} L'attore preme sul menu File
 			\item{} Il menu File si apre e offre le seguenti scelte:
 		\begin{itemize}
-		\item{} L'attore può Caricare un file JSon \refer{UC2}
-		\item{} L'attore può Salvare le modifiche al file JSon \refer{UC11}
-		\item{} L'attore può Salvare l'audio prodotto da Speect \refer{UC4}
-		\item{} L'attore può Chiudere l'applicazione \refer{UC5}
-		\item{} L'attore può Caricare un grafo \refer{UC8}
-		\item{} L'attore può Salvare un grafo \refer{UC9}
+		\item{} L'attore può caricare un file JSon \refer{UC2}
+		\item{} L'attore può salvare le modifiche al file JSon \refer{UC11}
+		\item{} L'attore può salvare l'audio prodotto da Speect \refer{UC4}
+		\item{} L'attore può chiudere l'applicazione \refer{UC5}
+		\item{} L'attore può caricare un grafo \refer{UC8}
+		\item{} L'attore può salvare un grafo \refer{UC9}
 		\end{itemize}
 	\end{enumerate}
 	}
@@ -124,7 +124,7 @@
 	{Sistema Operativo}
 	{L'attore deve navigare nel file system alla ricerca di un file o di una cartella}
 	{L'attore deve selezionare un file o raggiungere una cartella}
-	{L'attore seleziona il file da caricare o la cartella in cui salvare}
+	{Viene selezionato il file da caricare o la cartella in cui salvare}
 	{
 		\begin{itemize}
 			\item{} Il file browser viene visualizzato dall'attore
@@ -140,7 +140,7 @@
 	{Non previsto}
 	{L'attore vuole navigare nel suo file system}
 	{Il file \glossario{browser}{browser} è aperto}
-	{L'attore naviga nel file system}
+	{E' possibile navigare nel file system}
 	{
 		\begin{itemize}
 			\item{} L'attore può aprire cartelle \refer{UC3.1.1}
@@ -314,8 +314,8 @@
 {UC6.1.1}
 {Utente}
 {Non previsto}
-{L'attore vuole selezionare un utterance processor per spostarlo}
-{Un file JSon è stato caricato \refer{UC2} correttamente }
+{L'attore vuole selezionare un Utterance Processor per spostarlo}
+{Un file JSon è stato caricato correttamente \refer{UC2}}
 {Vengono visualizzati i bottoni per modificare tale Utterance Processor}
 {
 	\begin{itemize}
@@ -360,7 +360,7 @@
 {Viene visualizzato un messaggio di errore all'attore}
 {Avvenimento dell'errore in fase di esecuzione}
 {Non previsti}
-\section{UC7.2:Visualizzazione del grafo}
+\section{UC7.2:Visualizzazione Grafo}
 \UserCase
 {UC7.2}
 {Utente}
@@ -393,16 +393,59 @@
 			\item{} Name
 			\item{} Part of Speech
 		\end{enumerate}
+		\item{} L'attore può modificare il name del nodo selezionato \refer{UC7.2.1.1}
+		\item{} L'attore può modificare il PoS del nodo selezionato \refer{UC7.2.1.2} 
 	\end{itemize}
 }
 {Non previsti}
+
+\section{UC7.2.1.1:Modificare Name}
+\UserCase
+{UC7.2.1.1}
+{Utente}
+{Non previsto}
+{L'attore vuole modificare il name del nodo selezionato}
+{L'attore ha cliccato su un nodo \refer{UC7.2.1}}
+{Il nodo cambia name}
+{
+	\begin{itemize}
+		\item{} L'attore seleziona la casella di testo del name
+		\item{} L'attore cancella il name precedente
+		\item{} L'attore rimuove il focus dalla casella di testo
+		\item{} Il name viene aggiornato
+		\item{} Il grafo viene aggiornato \refer{UC7}
+		\item{} Il grafo viene ristampato a schermo \refer{UC7.2}
+	\end{itemize}
+}
+{Non previsti}
+
+\section{UC7.2.1.2:Modificare PoS}
+\UserCase
+{UC7.2.1.2}
+{Utente}
+{Non previsto}
+{L'attore vuole modificare il PoS del nodo selezionato}
+{L'attore ha cliccato su un nodo \refer{UC7.2.1}}
+{Il nodo cambia PoS}
+{
+	\begin{itemize}
+		\item{} L'attore seleziona la casella di testo del PoS
+		\item{} L'attore cancella il PoS precedente
+		\item{} L'attore rimuove il focus dalla casella di testo
+		\item{} Il PoS viene aggiornato
+		\item{} Il grafo viene aggiornato \refer{UC7}
+		\item{} Il grafo viene ristampato a schermo \refer{UC7.2}
+	\end{itemize}
+}
+{Non previsti}
+
 \section{UC7.2.2:Spostare Nodo}
 \UserCase
 {UC7.2.2}
 {Utente}
 {Non previsto}
 {L'attore vuole spostare graficamente un nodo}
-{L'attore ha cliccato su un nodo \refer{UC7.2.1}}
+{Un grafo con almeno un nodo è mostrato a schermo}
 {Il nodo viene spostato}
 {
 	\begin{itemize}
@@ -414,29 +457,9 @@
 }
 {Non previsti}
 
-\section{UC7.2.3:Modificare Name}
+\section{UC7.2.3:Modifica Visualizzazione Relazione}
 \UserCase
 {UC7.2.3}
-{Utente}
-{Non previsto}
-{L'attore vuole modificare il nome del nodo selezionato}
-{L'attore ha cliccato su un nodo \refer{UC7.2.1}}
-{Il nodo cambia nome}
-{
-	\begin{itemize}
-		\item{} L'attore seleziona la casella di testo del nome
-		\item{} L'attore cancella il nome precedente
-		\item{} L'attore rimuove il focus dalla casella di testo
-		\item{} Il nome viene aggiornato
-		\item{} Il grafo viene aggiornato \refer{UC7}
-		\item{} Il grafo viene ristampato a schermo \refer{UC7.2}
-	\end{itemize}
-}
-{Non previsti}
-
-\section{UC7.2.4:Modifica Visualizzazione Relazione}
-\UserCase
-{UC7.2.4}
 {Utente}
 {Non previsto}
 {L'attore vuole filtrare le relazioni del grafico}
@@ -449,9 +472,9 @@
 	\end{itemize}
 }
 {Non previsti}
-\section{UC7.2.5:Esecuzione Singola Utterance}
+\section{UC7.2.4:Esecuzione Singola Utterance}
 \UserCase
-{UC7.2.5}
+{UC7.2.4}
 {Utente}
 {Non previsto}
 {L'attore vuole eseguire una singola utterance}
@@ -466,27 +489,7 @@
 }
 {Non previsti}
 
-\section{UC7.2.6:Modificare PoS del nodo}
-\UserCase
-{UC7.2.6}
-{Utente}
-{Non previsto}
-{L'attore vuole modificare il PoS del nodo selezionato}
-{L'attore ha cliccato su un nodo\refer{UC7.2.1}}
-{Il nodo cambia PoS}
-{
-	\begin{itemize}
-		\item{} L'attore seleziona la casella di testo del PoS
-		\item{} L'attore cancella il nome precedente
-		\item{} L'attore rimuove il focus dalla casella di testo
-		\item{} Il nome viene aggiornato
-		\item{} Il grafo viene aggiornato \refer{UC7}
-		\item{} Il grafo viene ristampato a schermo \refer{UC7.2}
-	\end{itemize}
-}
-{Non previsti}
-
-\section{UC8:Esportazione stato del Grafo}
+\section{UC8:Esportazione Stato del Grafo}
 \begin{figure}[H]
 	\caption{UC8}
 	\centering
@@ -502,8 +505,8 @@
 {
 	\begin{itemize}
 			\item{} Viene aperto il file browser
-			\item{} L'attore seleziona il file da importare
-			\item{} L'attore preme su Apri Grafo
+			\item{} L'attore seleziona il file da esportare
+			\item{} L'attore preme su Salva Grafo
 	\end{itemize}
 }
 {L'attore visualizza un messaggio di errore \refer{UC8.1}}
@@ -519,7 +522,7 @@
 {Avvenimento dell'errore in fase di esportazione del grafo}
 {Non previsti}
 
-\section{UC9:Importa Grafo}
+\section{UC9:Importazione Grafo}
 \begin{figure}[H]
 	\caption{UC9}
 	\centering
@@ -530,13 +533,13 @@
 {Utente}
 {Non previsto}
 {L'attore vuole importare lo stato del grafo}
-{Esiste un grafo e l'attore ha cliccato carica grafo}
+{Esiste un grafo e l'attore ha cliccato Carica Grafo}
 {Il grafo viene importato da file}
 {
 	\begin{itemize}
 			\item{} Viene aperto il file browser
 			\item{} L'attore seleziona il file da importare
-			\item{} L'attore preme su Salva Grafo
+			\item{} L'attore preme su Apri Grafo
 	\end{itemize}
 }
 {L'attore visualizza un messaggio di errore \refer{UC9.1}}
