@@ -14,7 +14,7 @@ Node::Node(const qreal &x, const qreal &y, const qreal &diameter,QGraphicsScene 
 QVariant Node::itemChange(QGraphicsItem::GraphicsItemChange change, const QVariant &value)
 {
     //se l'oggetto si è spostato o la linea è incoeremente posizionata
-    if (change == ItemPositionChange||value.toPointF()!=LastLinePositionRegister) {
+    if (change == ItemPositionChange) {
         //ottengo il nuovo punto dell'oggetto
         setNewCenterPoint(value.toPointF());
     }
@@ -23,6 +23,7 @@ QVariant Node::itemChange(QGraphicsItem::GraphicsItemChange change, const QVaria
 
 void Node::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 {
+    QGraphicsEllipseItem::mouseReleaseEvent(event);
     setNewCenterPoint(QPoint(this->x(),this->y()));
 }
 
@@ -39,16 +40,16 @@ bool Node::removeLine(QGraphicsLineItem *line)
 
 void Node::setNewCenterPoint(const QPointF& Position){
             // Muove la posizione dall'angolo del quadrato al centro
-            LastLinePositionRegister=Position;
             int offset = rect().x() + rect().width()/2;
             const QPoint point =QPoint(this->x()+ offset,this->y() + offset);
-
             // Muove tutti i punti di linee riferite a lui
-            for(auto i=MyLines.begin();i<MyLines.end();++i)
+            for(QList<QGraphicsLineItem*>::iterator i=MyLines.begin();i<MyLines.end();++i)
             {
                 if(IsPoint1)
-                    (*i)->setLine(QLineF(point,(*i)->line().p2()));
-                else
+
                     (*i)->setLine(QLineF((*i)->line().p1(),point));
+                else
+
+                    (*i)->setLine(QLineF(point,(*i)->line().p2()));
             }
 }

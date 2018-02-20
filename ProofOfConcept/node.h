@@ -24,7 +24,6 @@ private:
     //
     QList<QGraphicsLineItem*> MyLines;
     bool IsPoint1;
-    QPointF LastLinePositionRegister;
     void setNewCenterPoint(const QPointF& Position);
 };
 #endif // NODE_H
