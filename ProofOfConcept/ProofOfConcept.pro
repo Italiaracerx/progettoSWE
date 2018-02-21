@@ -26,8 +26,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    node.cpp
+    node.cpp \
+    graphmanager.cpp \
+    arc.cpp
 
 HEADERS += \
         mainwindow.h \
-    node.h
+    node.h \
+    graphmanager.h \
+    arc.h
