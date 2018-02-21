@@ -1,0 +1,62 @@
+\documentclass[openany,12pt,a4paper]{report}
+\usepackage{subfiles}
+\usepackage[]{graphicx}
+\usepackage{float}
+\graphicspath{{./img/}{./../img/}}
+\usepackage{../StileDoc}
+\title{Technology Baseline}
+\author{}
+
+
+%Ultima versione documento
+
+\newcommand{\versione}{1.0.0}
+
+
+\usepackage[section]{placeins}
+\loadglsentries{../Glossario/Definizioni}
+
+\begin{document}
+	
+	\makeatletter
+	\begin{titlepage}
+		\setlength{\headsep}{0pt}  
+		\begin{center}			
+			\includegraphics[width=0.5\linewidth]{Logo.png}\\[1em]
+			{\huge \bfseries  \@title }\\[10ex]
+			\textbf{\Large Informazioni Documento} \\[2em]
+			\bgroup
+			\def\arraystretch{1.5}
+			\begin{tabular}{l|l}
+				\textbf{Versione} & \versione{} \\
+				\textbf{Data approvazione} & 12 Gennaio 2018 \\
+				\textbf{Responsabile} & Samuele Modena \\
+				\textbf{Redattori} & Marco Focchiatti, Giulio Rossetti,\\
+				& Kevin Silvestri, Manfredi Smaniotto,\\
+				& Cristiano Tessarolo \\
+				\textbf{Verificatori} & Matteo Rizzo, Samuele Modena \\
+				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
+				& Prof. Riccardo Cardin \\
+				& Gruppo Graphite \\
+				\textbf{Uso} & Esterno \\
+				\textbf{Recapito} & graphite.swe@gmail.com \\
+			\end{tabular}
+			\egroup
+		\end{center}
+	\end{titlepage}
+	\makeatother
+	
+	\thispagestyle{empty}
+	\newpage
+	
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	%Aggiungere File da qua in poi
+	\subfile{./tex/Introduzione}
+	\subfile{./tex/Tecnologie}
+	\subfile{./tex/Problemi}
+	\subfile{./tex/Conclusioni}
+
+	\end{document}                       

@@ -35,7 +35,7 @@
 		\newline ROF0&
 		\newline Obbligatorio&
 		\newline L'utente può avviare DeSpeect visualizzandone la pagina iniziale&
-		\newline \refer{UC0} \newline Capitolato
+		\newline \refer{UC0} \newline \refer{UC0.1} \newline Capitolato
 		\\[1em]
 		\hline
 		\newline ROF1&
@@ -62,8 +62,8 @@
 		
 		\newline RFF2.2&
 		\newline Facoltativo&
-		\newline L'utente può modificare il file Json cambiando l'ordine degli utterance processor nel utterance type&
-	 \newline \refer{UC6.1.1} \newline Capitolato
+		\newline L'utente può modificare il file Json cambiando l'ordine o rimuovendo gli utterance processor nel utterance type&
+	 	\newline \refer{UC6.1.1} \newline \refer{UC6.1.2} \newline Capitolato
 		\\[1em]	
 		\hline
 				
@@ -98,32 +98,26 @@
 		\newline \refer{UC4} \newline Interno
 		\\[1em]
 			\hline
-			
-		\newline RFF4.1&\newline Facoltativo&
-		\newline L'utente può salvare l'audio risultante con estensione diversa&
-		\newline \refer{UC4} \newline \refer{UC4.1} \newline  VE-15-12-2017 
-		\\[1em]
-		\hline
 		
-		\newline ROF4.2&\newline Obbligatorio&
+		\newline ROF4.1&\newline Obbligatorio&
 		\newline L'utente può selezionare dove salvare il file&
 		\newline \refer{UC4} \newline \refer{UC3.1} \newline Interno
 		\\[1em]
 		
 		\hline	
-		\newline ROF4.2.1&\newline Obbligatorio&
+		\newline ROF4.1.1&\newline Obbligatorio&
 		\newline L'utente può selezionare il nome del file da salvare&
 		\newline \refer{UC4} \newline Interno
 		\\[1em]
 		
 		\hline
-		\newline ROF4.3&\newline Obbligatorio&
+		\newline ROF4.2&\newline Obbligatorio&
 		\newline Il sistema deve visualizzare un errore in caso il salvataggio dell'audio fallisca&
-		\newline \refer{UC4.2} \newline Interno
+		\newline \refer{UC4.1} \newline Interno
 		\\[1em]
 		\hline
 		
-		\newline RFF4.4&\newline Facoltativo&
+		\newline RFF4.3&\newline Facoltativo&
 		\newline L'utente può ascoltare l'audio prima di salvarlo&
 		\newline Interno
 		\\[1em]
@@ -188,7 +182,7 @@
 				
 		\newline RDF6.1&\newline Desiderabile&
 		\newline L'utente può modificare gli utterance processor di un utterance type&
-		\newline \refer{UC6.1} \newline  VE-15-12-2017
+		\newline \newline \refer{UC6.1.1} \newline \refer{UC6.1.2} \newline  VE-15-12-2017
 		\\[1em]
 		\hline	
 				
@@ -199,8 +193,8 @@
 		\hline	
 				
 		\newline RDF6.1.2&\newline Desiderabile&
-		\newline L'utente può cancellare gli utterance processor di un utterance type&
-		\newline \refer{UC6.1} \newline \refer{UC6.1.1} \newline Interno
+		\newline L'utente può rimuovere gli utterance processor di un utterance type&
+		\newline \refer{UC6.1} \newline \refer{UC6.1.2} \newline Interno
 		\\[1em]
 		\hline	
 		
@@ -243,7 +237,7 @@
 		
 		\newline RDF9.2.1&\newline Desiderabile&
 		\newline L'utente può cambiare il colore delle relazioni in legenda&
-		\newline \refer{UC7.2.4} \newline  VE-03-01-2018
+		\newline \refer{UC7.2.3} \newline  VE-03-01-2018
 		\\[1em]
 		\hline
 		
@@ -260,14 +254,14 @@
 		\hline
 			
 		\newline RDF9.3.1.1&\newline Desiderabile&
-		\newline L'utente può modificare il name del nodo selezionato&
-		\newline \refer{UC7.2.3} \newline  VE-15-12-2017 \newline Capitolato
+		\newline L'utente può modificare il nome del nodo selezionato&
+		\newline \refer{UC7.26.3} \newline  VE-15-12-2017 \newline Capitolato
 		\\[1em]
 		\hline
 		
 			\newline RDF9.3.1.2&\newline Desiderabile&
 		\newline L'utente può modificare il PoS del nodo selezionato&
-		\newline \refer{UC7.2.6} \newline  VE-15-12-2017 \newline Capitolato
+		\newline \refer{UC7.2.1.2} \newline  VE-15-12-2017 \newline Capitolato
 		\\[1em]
 		\hline
 		
@@ -309,7 +303,7 @@
 		
 		\newline ROF9.7&\newline Obbligatorio&
 		\newline L'utente può visualizzare gli strati di relazione del grafo selezionati&
-		\newline \refer{UC7.2.4} \newline Capitolato
+		\newline \refer{UC7.2.3} \newline Capitolato
 		\\[1em]
 		\hline
 	
@@ -334,7 +328,7 @@
 		
 		\newline RFF10&\newline Facoltativo&
 		\newline L'utente può eseguire ogni utterance processor autonomamente&
-		\newline \refer{UC7.2.5} \newline Capitolato
+		\newline \refer{UC7.2.4} \newline Capitolato
 		\\[1em]
 		\hline
 	
@@ -374,7 +368,7 @@
 		
 		\newline RFF13&\newline Facoltativo&
 		\newline L'utente può eseguire Speect dato un grafo&
-		\newline \refer{UC7} \newline \refer{UC7.2.5} \newline  VE-15-12-2017
+		\newline \refer{UC7} \newline \refer{UC7.2.4} \newline  VE-15-12-2017
 		\\[1em]
 		\hline
 		
@@ -382,7 +376,7 @@
 		
 		\newline ROF14&\newline Obbligatorio&
 		\newline L'utente può chiudere l'applicazione&
-		\newline \refer{UC5} \newline Interno
+		\newline \refer{UC5} \newline \refer{UC5.1} \newline Interno
 		\\[1em]
 		\hline
 		
@@ -397,13 +391,27 @@
 				
 			
 			\newline ROQ0&\newline Obbligario&
-		\newline Deve essere fornito un manuale utente&
-		\newline Capitolato
-		\\[1em]
-		\hline
+			\newline Deve essere fornito un manuale utente&
+			\newline Capitolato
+			\\[1em]
+			\hline
 			\newline ROQ0.1&\newline Obbligario&
 			\newline Il manuale deve essere in lingua italiana&
-			\newline interno
+			\newline Interno
+			\\[1em]
+			\hline
+			\newline
+			RDQ1&\newline Desiderabile&
+			\newline 
+			L'applicazione deve essere rilasciata con licenze opensource&
+			\newline Capitolato \newline Interno
+			\\[1em]
+			\hline	
+			\newline
+			RDQ1.1&\newline Desiderabile&
+			\newline 
+			L'applicazione deve essere rilasciata con licenze BSD/MIT &
+			\newline Capitolato
 			\\[1em]
 			\hline
 	\end{longtable}
@@ -423,7 +431,7 @@
 			\newline 
 			ROV1&\newline Obbligario&
 			\newline 
-			L'applicativo deve essere sviluppato con QT &
+			L'applicativo deve essere sviluppato con QT 5.5 &
 			\newline Capitolato
 			\newline Interno
 			\\[1em]
@@ -442,20 +450,6 @@
 			\newline Capitolato
 			\\[1em]
 			\hline
-			\newline
-			RDV3&\newline Desiderabile&
-			\newline 
-			L'applicazione deve essere rilasciata con licenze opensource&
-			\newline Capitolato \newline Interno
-			\\[1em]
-			\hline	
-			\newline
-			RDV3.1&\newline Desiderabile&
-			\newline 
-			L'applicazione deve essere rilasciata con licenze BSD/MIT &
-			\newline Capitolato
-			\\[1em]
-			\hline
 	\end{longtable}
 \newpage
 	\section{Tracciamento fonte-requisiti}
@@ -464,16 +458,18 @@
 		\textbf{Fonte} & \textbf{Requisti} \\
 			\hline
 		\endhead
-		\newline Capitolato & \newline ROF0 \newline ROF2 \newline RFF2.2 \newline ROF7 \newline ROF8 \newline ROF9 \newline ROF9.1 \newline ROF9.2 \newline ROF9.3 \newline ROF9.3 \newline ROF9.3.1 \newline ROF9.3.1.1 \newline ROF9.3.1.2 \newline RDF9.4 \newline RDF9.4.1 \newline RDF9.5 \newline ROF9.7 \newline RFF9.8 \newline RFF9.8.1 \newline RFF9.8.2 \newline RFF10 \newline RFF12.2 \newline ROQ0 \newline ROV0 \newline ROV1 \newline ROV2 \newline ROV2.1 \newline ROV3 \newline ROV3.1 \\[1em]
+		\newline Capitolato & \newline ROF0 \newline ROF2 \newline RFF2.2 \newline ROF7 \newline ROF8 \newline ROF9 \newline ROF9.1 \newline ROF9.2 \newline ROF9.3 \newline ROF9.3 \newline ROF9.3.1 \newline ROF9.3.1.1 \newline ROF9.3.1.2 \newline RDF9.4 \newline RDF9.4.1 \newline RDF9.5 \newline ROF9.7 \newline RFF9.8 \newline RFF9.8.1 \newline RFF9.8.2 \newline RFF10 \newline RFF12.2 \newline ROQ0 \newline RDQ1 \newline RDQ1.1 \newline ROV0 \newline ROV1 \newline ROV2 \newline ROV2.1 \\[1em]
 	\hline	
-		\newline Interni &  \newline ROF1 \newline RFF2.2.1.1 \newline ROF3.1 \newline ROF4 \newline ROF4.2  \newline ROF4.2.1  \newline ROF4.3  \newline RFF4.4 \newline ROF5.1 \newline ROF5.2 \newline RDF5.3 \newline RDF5.4 \newline RDF5.6  \newline RDF5.7  \newline RDF5.8 \newline ROF6.1 \newline RDF6.1.1 \newline RDF6.1.2 \newline RDF9.4.2 \newline ROF 9.6  \newline ROF 8.1  \newline RDF9.5.1  \newline RFF9.8.1  \newline RFF9.8.2 \newline ROF14 \newline ROQ0.1  \newline ROV1  \newline RDV3 \\[1em]
+		\newline Interni &  \newline ROF1 \newline RFF2.2.1.1 \newline ROF3.1 \newline ROF4 \newline ROF4.1  \newline ROF4.1.1  \newline ROF4.2  \newline RFF4.3 \newline ROF5.1 \newline ROF5.2 \newline RDF5.3 \newline RDF5.4 \newline RDF5.6  \newline RDF5.7  \newline RDF5.8 \newline ROF6.1 \newline RDF6.1.1 \newline RDF6.1.2 \newline RDF9.4.2 \newline ROF 9.6  \newline ROF 8.1  \newline RDF9.5.1  \newline RFF9.8.1  \newline RFF9.8.2 \newline ROF14 \newline ROQ0.1  \newline RDQ1  \newline ROV1 \\[1em]
 	\hline
-		\newline  VE-15-12-2017 & \newline ROF2.1 \newline RFF2.2.1 \newline RFF4.1 \newline ROF5 \newline ROF5.5 \newline ROF6 \newline RDF6.1 \newline RDF9.3.1.1 \newline RDF9.3.1.2 \newline RDF9.4 \newline ROF9.5 \newline RFF9.8 \newline RFF11 \newline RFF11.1 \newline RFF12 \newline RFF12.1 \newline RFF13 \\[1em]
+		\newline  VE-15-12-2017 & \newline ROF2.1 \newline RFF2.2.1 \newline ROF5 \newline ROF5.5 \newline ROF6 \newline RDF6.1 \newline RDF9.3.1.1 \newline RDF9.3.1.2 \newline RDF9.4 \newline ROF9.5 \newline RFF9.8 \newline RFF11 \newline RFF11.1 \newline RFF12 \newline RFF12.1 \newline RFF13 \\[1em]
 	\hline
 		\newline VE-03-01-2018 &  \newline ROF9.2 \newline ROF9.2.1 \newline RDF9.4.1 \newline ROF9.6 \\[1em]
 
 	\hline
 		\newline UC0 &  \newline ROF0 \\[1em]
+	\hline
+		\newline UC0.1 &  \newline ROF0 \\[1em]
 	\hline
 		\newline UC1 &  \newline ROF1 \newline ROF2 \newline RFF2.2.1   \\[1em]	
 		\hline
@@ -481,7 +477,7 @@
 		\hline
 		\newline UC3 &  \newline ROF5 \newline ROF5.3 \newline ROF5.4 \\[1em]	
 		\hline
-		\newline UC3.1 &  \newline ROF4.2 \newline ROF5 \newline ROF5.1 \newline ROF5.2  \\[1em]
+		\newline UC3.1 &  \newline ROF4.1 \newline ROF5 \newline ROF5.1 \newline ROF5.2  \\[1em]
 		\hline
 		\newline UC3.1.1 &  \newline ROF5.1 \\[1em]	
 		\hline
@@ -493,19 +489,21 @@
 		\hline
 		\newline UC3.3 &  \newline ROF5.5 \\[1em]
 		\hline
-		\newline UC4 &  \newline ROF4 \newline RFF4.1 \newline ROF4.2 \newline ROF4.2.1 \\[1em]
+		\newline UC4 &  \newline ROF4 \newline ROF4.1 \newline ROF4.1.1 \\[1em]
 		\hline
 		\newline UC4.1 &  \newline ROF4.1 \\[1em]
 		\hline
-		\newline UC4.2 &  \newline ROF4.3 \\[1em]
-		\hline
 		\newline UC5 &  \newline ROF14 \\[1em]
+		\hline
+		\newline UC5.1 &  \newline ROF14 \\[1em]
 		\hline
 		\newline UC6 &  \newline ROF6 \\[1em]
 		\hline
-		\newline UC6.1 &  \newline RDF6.1 \newline RDF6.1.1 \newline RDF6.1.2 \\[1em]
+		\newline UC6.1 &  \newline RDF6.1.1 \newline RDF6.1.2 \\[1em]
 		\hline
-		\newline UC6.1.1 &  \newline RFF2.2 \newline RDF6.1.1 \newline RDF6.1.2 \\[1em]
+		\newline UC6.1.1 &  \newline RFF2.2 \newline RDF6.1 \newline RDF6.1.1 \\[1em]
+		\hline
+		\newline UC6.1.2 &  \newline RFF2.2 \newline RDF6.1 \newline RDF6.1.2 \\[1em]
 		\hline
 		\newline UC7 &  \newline ROF7 \newline ROF8 \newline RFF13 \\[1em]
 		\hline
@@ -515,15 +513,15 @@
 		\hline
 		\newline UC7.2.1 &  \newline ROF9.3 \newline ROF9.3.1 \newline RDF9.1 \newline ROF9.5 \\[1em]
 		\hline
+		\newline UC7.2.1.1 &  \newline RDF9.3.1.1 \\[1em]
+		\hline
+		\newline UC7.2.1.2 &  \newline RDF9.3.1.2 \\[1em]
+		\hline
 		\newline UC7.2.2 &  \newline ROF9.6 \\[1em]
 		\hline
-		\newline UC7.2.3 &  \newline RDF9.3.1.1 \\[1em]
+		\newline UC7.2.3 &  \newline RDF9.2.1 \newline ROF9.7 \\[1em]
 		\hline
-		\newline UC7.2.4 &  \newline RDF9.2.1 \newline ROF9.7 \\[1em]
-		\hline
-		\newline UC7.2.5 &  \newline RFF10 \newline RFF13 \\[1em]
-		\hline
-		\newline UC7.2.6 &  \newline RDF9.3.1.2 \\[1em]
+		\newline UC7.2.4 &  \newline RFF10 \newline RFF13 \\[1em]
 		\hline
 		\newline UC8 &  \newline RFF11 \newline RFF11.1 \\[1em]
 		\hline
@@ -555,7 +553,7 @@
 \hline
 \endhead
 	\newline ROF0&
-	\newline \refer{UC0} \newline Capitolato
+	\newline \refer{UC0} \newline \refer{UC0.1} \newline Capitolato
 	\\[1em]
 	\hline
 	\newline ROF1&
@@ -575,7 +573,7 @@
 	\hline	
 	
 	\newline RFF2.2&
-	\newline \refer{UC6.1.1} \newline Capitolato
+	\newline \refer{UC6.1.1} \newline \refer{UC6.1.2} \newline Capitolato
 	\\[1em]	
 	\hline
 	
@@ -604,27 +602,22 @@
 	\\[1em]
 	\hline
 	
-	\newline RFF4.1&
-	\newline \refer{UC4} \newline \refer{UC4.1} \newline  VE-15-12-2017 
-	\\[1em]
-	\hline
-	
-	\newline ROF4.2&
+	\newline ROF4.1&
 	\newline \refer{UC4} \newline \refer{UC3.1} \newline Interno
 	\\[1em]
 	
 	\hline	
-	\newline ROF4.2.1&
+	\newline ROF4.1.1&
 	\newline \refer{UC4} \newline Interno
 	\\[1em]
 	
 	\hline
-	\newline ROF4.3&
-	\newline \refer{UC4.2} \newline Interno
+	\newline ROF4.2&
+	\newline \refer{UC4.1} \newline Interno
 	\\[1em]
 	\hline
 	
-	\newline RFF4.4&
+	\newline RFF4.3&
 	
 	\newline Interno
 	\\[1em]
@@ -689,7 +682,7 @@
 	
 	\newline RDF6.1&
 	
-	\newline \refer{UC6.1} \newline  VE-15-12-2017
+	\newline \refer{UC6.1.1} \newline \refer{UC6.1.2} \newline  VE-15-12-2017
 	\\[1em]
 	\hline	
 	
@@ -701,7 +694,7 @@
 	
 	\newline RDF6.1.2&
 	
-	\newline \refer{UC6.1} \newline \refer{UC6.1.1} \newline Interno
+	\newline \refer{UC6.1} \newline \refer{UC6.1.2} \newline Interno
 	\\[1em]
 	\hline	
 	
@@ -744,7 +737,7 @@
 	
 	\newline RDF9.2.1&
 	
-	\newline \refer{UC7.2.4} \newline  VE-03-01-2018
+	\newline \refer{UC7.2.3} \newline  VE-03-01-2018
 	\\[1em]
 	\hline
 	
@@ -762,13 +755,13 @@
 	
 	\newline RDF9.3.1.1&
 	
-	\newline \refer{UC7.2.3} \newline  VE-15-12-2017 \newline Capitolato
+	\newline \refer{UC7.2.1.1} \newline  VE-15-12-2017 \newline Capitolato
 	\\[1em]
 	\hline
 	
 	\newline RDF9.3.1.2&
 	
-	\newline \refer{UC7.2.6} \newline  VE-15-12-2017 \newline Capitolato
+	\newline \refer{UC7.2.1.2} \newline  VE-15-12-2017 \newline Capitolato
 	\\[1em]
 	\hline
 	
@@ -805,7 +798,7 @@
 	\hline
 	
 	\newline ROF9.7&
-	\newline \refer{UC7.2.4} \newline Capitolato
+	\newline \refer{UC7.2.3} \newline Capitolato
 	\\[1em]
 	\hline
 	
@@ -826,7 +819,7 @@
 	
 	
 	\newline RFF10&
-	\newline \refer{UC7.2.5} \newline Capitolato
+	\newline \refer{UC7.2.4} \newline Capitolato
 	\\[1em]
 	\hline
 	
@@ -860,25 +853,36 @@
 	
 	
 	\newline RFF13&
-	\newline \refer{UC7} \newline \refer{UC7.2.5} \newline  VE-15-12-2017
+	\newline \refer{UC7} \newline \refer{UC7.2.4} \newline  VE-15-12-2017
 	\\[1em]
 	\hline
 	
 	
 	
-	\newline ROF14&	\newline \refer{UC5} \newline Interno
+	\newline ROF14&	\newline \refer{UC5} \newline \refer{UC5.1} \newline Interno
 	\\[1em]
 	\hline
 	
 	
 
-\newline ROQ0&\newline Capitolato
+\newline 
+ROQ0&\newline Capitolato
 \\[1em]
 \hline
-\newline ROQ0.1&\newline Interno
+\newline 
+ROQ0.1&\newline Interno
 \\[1em]
 \hline
-\newline ROV0&\newline Capitolato
+\newline
+RDQ1&\newline Capitolato \newline Interno
+\\[1em]
+\hline	
+\newline
+RDQ1.1&\newline Capitolato
+\\[1em]
+\hline
+\newline 
+ROV0&\newline Capitolato
 \\[1em]
 \hline	
 \newline 
@@ -891,14 +895,6 @@ ROV2&\newline Capitolato
 \hline
 \newline
 RDV2.1&\newline Capitolato
-\\[1em]
-\hline
-\newline
-RDV3&\newline Capitolato \newline Interno
-\\[1em]
-\hline	
-\newline
-RDV3.1&\newline Capitolato
 \\[1em]
 \hline
 \caption{Tracciamento Requisito Fonti}
