@@ -31,7 +31,7 @@ Dove:
 \noindent Le tecnologie sono presentate secondo il seguente schema: 
 
 \begin{itemize}
-	\item Nome e versione;
+	\item Nome, versione e codice;
 	\item Codice identificativo;
 	\item Descrizione;
 	\item Tecnologie concorrenziali;
@@ -50,90 +50,217 @@ Dove:
 
 \section{Tecnologie inerenti lo sviluppo e \\ la progettazione del prodotto}
 
-\subsection{Speect}
+\subsection{Speect v1.1.0-69-g65f4 - TS01}
 
-\subsubsection{Codice identificativo}
 \subsubsection{Descrizione}
+
+Speect è un sistema di \textit{Text To Speech} (TTS) multilingua. Esso offre un sistema TTS completo (analisi e decodifica del testo e sintesi vocale) con annesse varie API, nonché un ambiente per la ricerca e lo sviluppo di sistemi e voci TTS. Speect è scritto in linguaggio C, con una stretta conformità allo standard ISO / IEC 9899: 1990, consentendo così la massima portabilità su diverse piattaforme di calcolo. Le chiamate di sistema specifiche della piattaforma sono astratte per consentire le porte a nuove piattaforme. Speect rappresenta il cuore del prodotto che il gruppo intende sviluppare ed in particolare è l'applicazione per la quale si vuole realizzare un'interfaccia grafica atta a semplificarne l'utilizzo e il debug.
+
 \subsubsection{Tecnologie concorrenziali}
+
+La tecnologia in esame è vincolata dall'obbligo di utilizzo esplicitato dalla Proponente. Si riportano per completezza alcune tecnologie concorrenziali:
+
+\begin{itemize}
+	\item \textbf{OpenMary}: sistema di \textit{Text To Speech} (TTS) multilingua opensource scritto in Java e reperibile al seguente link:
+	\begin{center}
+		\url{https://github.com/marytts}
+	\end{center}
+	\item \textbf{Idlak}: recente sistema di \textit{Text To Speech} (TTS) multilingua opensource basato su tecnologie moderne e reperibile al seguente link:
+	\begin{center}
+	\url{https://sourceforge.net/p/kaldi/code/HEAD/tree/sandbox/idlak/}
+	\end{center}
+\end{itemize}
+
 \subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
 \begin{itemize}
-	\item \textbf{Considerazioni generali}: ;
-	\item \textbf{Competenza del gruppo}: ;
-	\item \textbf{Usabilità}: ;
-	\item \textbf{Costo economico}: ;
-	\item \textbf{Consumo di risorse}: ;
-	\item \textbf{Sviluppi possibili della tecnologia}: .
+	\item \textbf{Considerazioni generali}: Nonostante la tecnologia in esame sia vincolata dall'obbligo di utilizzo esplicitato dalla Proponente, da un confronto con sistemi concorrenti emerge il pregio di Speect di essere scritto in un linguaggio familiare alla totalità dei membri del gruppo. Speect è inoltre dichiaratamente conforme allo standard ISO / IEC 9899: 1990, che seppur datato ne assicura una soglia minima di qualità, estendibilità e portabilità. La tecnologia è dotata di una buona documentazione, che coadiuvata dal materiale e dal supporto fornito dalla Proponente permette di superare le difficoltà rappresentate dalla configurazione e dal linguaggio datato;
+	
+	\item \textbf{Competenza del gruppo e facilità di utilizzo}: Benché la tecnologia risulti ostica in termini di configurazione, la familiarità del linguaggio su cui si basa e la bontà della documentazione fornita ha permesso al gruppo di manipolarla con un certo agio;
+	
+	\item \textbf{Costo economico}: La tecnologia è opensource e reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{http://speect.sourceforge.net/}
+	\end{center}
+
+	\item \textbf{Consumo di risorse}: Speect è compatibile solo con sistemi Linux e richiede l'utilizzo di CMAKE e di un compilatore conforme ad ANSI C/ISO C90. Ciò non rappresenta un problema in termini di risorse per quanto riguarda la dotazione tecnologica dei membri del gruppo, né un ostacolo per la corretta configurazione del software;
+	
+	\item \textbf{Supporto e sviluppi possibili della tecnologia}: Speect non gode di ampio supporto da parte dei suoi sviluppatori, tuttavia la Proponete si è offre al gruppo sostegno in caso di problemi o necessità di modifiche per la portabilità della libreria stessa. Non appare plausibile che la tecnologia subisca aggiornamenti o modifiche di rilievo nel futuro prossimo.
 \end{itemize}
+
 \subsubsection{Proof of Concept}
+Lo studio della tecnologia si concretizza in un \textit{Proof of Concept} che ne dimostra la compatibilità con gli obiettivi di prodotto evidenziando nel contempo lo stato delle competenze del gruppo in relazione alla stessa.
+
 \subsubsection{Aspetti negativi}
+Speect è scritto in C, linguaggio familiare al gruppo ma che pecca in leggibilità del codice e nell'implementazione completa del paradigma a oggetti. Ciò implica la necessità da parte del gruppo di lavorare in prima persona sulla portabilità della libreria verso il C++. Inoltre, Speect necessita di non banali procedure di configurazione per un corretto utilizzo. Per entrambi i problemi evidenziati la Proponente ha offerto al gruppo supporto attivo per giungere ad una soluzione soddisfacente in caso di necessità. 
 
-\subsection{QT 5.9 LTS}
+\subsection{QT v5.9 LTS - TS02}
 
-\subsubsection{Codice identificativo}
 \subsubsection{Descrizione}
+
+QT è una libreria multipiattaforma per lo sviluppo di programmi con interfaccia grafica tramite l'uso di widget (congegni o elementi grafici). La libreria è scritta in C++ e gode di ampia diffusione e supporto. Il gruppo intende utilizzare questa tecnologia per lo sviluppo dell'interfaccia grafica del prodotto.  
+
 \subsubsection{Tecnologie concorrenziali}
+La tecnologia in esame è parzialmente vincolata dalla richiesta della Proponente, che nel capitolato suggerisce una rosa di librerie in cui compare QT. Si è scelto di utilizzate QT in virtù della familiarità del gruppo con la stessa, della sua semplicità d'uso e del suo ampio utilizzo in ambito aziendale, ed in particolare la versione 5.9 LTS per la sua stabilità e garanzia di supporto. Seguono le tecnologie analoghe valutate ma ritenute meno performanti e conformi agli obiettivi di prodotto:
+
+\begin{itemize}
+	\item \textbf{GTK+}: un toolkit multipiattaforma per la creazione di interfacce grafiche consigliato dalla Proponente, reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{https://www.gtk.org/}
+	\end{center}
+	
+	\item \textbf{wxWidgets}: una libreria multipiattaforma ed estendibile per la creazione di semplici interfacce grafiche, reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{http://www.wxwidgets.org/}
+	\end{center}
+\end{itemize} 
+
 \subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
 \begin{itemize}
-	\item \textbf{Considerazioni generali}: ;
-	\item \textbf{Competenza del gruppo}: ;
-	\item \textbf{Usabilità}: ;
-	\item \textbf{Costo economico}: ;
-	\item \textbf{Consumo di risorse}: ;
-	\item \textbf{Sviluppi possibili della tecnologia}: .
+	\item \textbf{Considerazioni generali}: La tecnologia in esame è supportata da una peculiare semplicità d'uso, favorita tra l'altro da una vasta ed esplicativa documentazione. QT include inoltre QT Creator, software specificatamente pensato per il rapido sviluppo di interfacce grafiche in C++ e che gode già di una certa familiarità da parte del gruppo. Quest'ultimo inoltre è particolarmente robusto e ampiamente testato, come sinteticamente illustrato al link seguente:
+	\begin{center}
+		\url{https://wiki.qt.io/Category:Tools::QtCreator::QualityAssurance}
+	\end{center}
+	Infine, QT offre librerie dedicate per lo sviluppo di test su più livelli;
+		
+	\item \textbf{Competenza del gruppo e facilità di utilizzo}: I componenti del gruppo possiedono conoscenze relativamente profonde del framework ed hanno già avuto modo di utilizzarlo per lo sviluppo di una basilare interfaccia grafica. Ciò, unito alla semplicità e ampia documentazione dello stesso, permettono una profonda manipolazione della tecnologia;
+	
+	\item \textbf{Costo economico}: La tecnologia è concessa secondo una licenza commerciale oppure open source (il gruppo predilige quest'ultima), ed è reperibile al seguente link;
+	\begin{center}
+		\url{https://www.qt.io/}
+	\end{center}
+	
+	\item \textbf{Consumo di risorse e compatibilità}: QT è compatibile con tutti i maggiori sistemi, ma il gruppo lo installerà su Ubuntu v16.04.3 LTS piattaforma su cui è richiesta la presenza di compilatore, debugger e \textit{make} per C++. QT non richiede particolari requisiti hardware ma necessità di una rilevante quantità di memoria per la sua istallazione, tuttavia ciò non rappresenta un problema per quanto riguarda la dotazione tecnologica del gruppo;
+	
+	\item \textbf{Supporto e sviluppi possibili della tecnologia}: QT gode di ampio supporto e viene costantemente aggiornato. La sceta di una versione LTS, tuttavia, garantisce il massimo supporto, stabilità e compatibilità attualmente disponibili.
 \end{itemize}
+
 \subsubsection{Proof of Concept}
+Lo studio della tecnologia si concretizza in un \textit{Proof of Concept} che ne dimostra la compatibilità con gli obiettivi di prodotto evidenziando nel contempo lo stato delle competenze del gruppo in relazione alla stessa.
+
 \subsubsection{Aspetti negativi}
+QT risulta meno performante di alcune tecnologie concorrenti e prevede la necessità di una notevole quantità di spazio per la sua installazione.
 
-\subsection{CMAKE}
+\subsection{CMAKE v3.10.2 - TS03}
 
-\subsubsection{Codice identificativo}
 \subsubsection{Descrizione}
+CMake è una famiglia di strumenti open source e multipiattaforma progettati per creare, testare e pacchettizzare software. CMake viene utilizzato per controllare il processo di compilazione del software utilizzando semplici file di configurazione indipendenti dalla piattaforma e dal compilatore e generare makefile e aree di lavoro nativi che possono essere utilizzati nell'ambiente del compilatore di propria scelta. Il gruppo intende utilizzare questa tecnologia per l’automazione della compilazione del prodotto.
+
 \subsubsection{Tecnologie concorrenziali}
+La tecnologia in esame è parzialmente vincolata dalla richiesta della Proponente, che nel capitolato ne suggerisce l'utilizzo in quanto già
+usata da Speect e alcune sue dipendenze. Si riportano per completezza alcune tecnologie concorrenziali:
+
+\begin{itemize}
+	\item \textbf{GNU Makefile}: strumento che controlla la generazione di file eseguibili e altri file non di origine di un programma dai file sorgente dello stesso, reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{https://www.gnu.org/software/make/manual/make.html}
+	\end{center}
+
+	\item \textbf{Qmake}: strumento che aiuta a semplificare il processo di creazione di progetti di sviluppo su piattaforme diverse. Esso automatizza la generazione di Makefile ed è utilizzabile per qualsiasi progetto software, indipendentemente dal fatto che sia scritto con Qt o meno. Si noti che \textit{qmake} sarà parzialmente utilizzato dal gruppo contestualmente a CMAKE per l'integrazione di Speect e QT. Il software è reperibile al seguente link:
+	\begin{center}
+		\url{http://doc.qt.io/qt-5/qmake-manual.html}
+	\end{center} 
+\end{itemize}
+
 \subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
 \begin{itemize}
-	\item \textbf{Considerazioni generali}: ;
-	\item \textbf{Competenza del gruppo}: ;
-	\item \textbf{Usabilità}: ;
-	\item \textbf{Costo economico}: ;
-	\item \textbf{Consumo di risorse}: ;
-	\item \textbf{Sviluppi possibili della tecnologia}: .
+	\item \textbf{Considerazioni generali}: CMAKE è una tecnologia necessaria alla corretta configurazione di Speect e si adatta bene all'integrazione tra quest'ultimo e QT, nonché allo sviluppo di automazioni tramite Travis. Pur inizialmente quasi completamente sconosciuta al gruppo, è ben documentata e supportata e ciò ne agevola sensibilmente l'apprendimento;
+	\item \textbf{Competenza del gruppo e facilità di utilizzo}: La bontà della documentazione e il supporto della Proponente nel suo apprendimento (anche tramite seminario con relativo materiale pubblicato al link: \url{https://github.com/giuliopaci/cmake-tutorial}) ne ha notevolmente agevolato l'apprendimento, permettendo al gruppo di padroneggiarla entro i confini dello scopo del progetto;
+	
+	\item \textbf{Costo economico}: La tecnologia è open source e reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{https://cmake.org/}
+	\end{center}
+
+	\item \textbf{Consumo di risorse}: CMAKE è una tecnologia multipiattaforma compatibile con i maggiori sistemi operativi e non presenta particolari requisiti harware;
+	
+	\item \textbf{Supporto e sviluppi possibili della tecnologia}: La tecnologia in esame è in costante aggiornamento e supportata da una community particolarmente attiva, tuttavia la scelta di adottarne una versione stabile offre le massime garanzie di supporto e stabilità attualmente disponibili.
 \end{itemize}
+
 \subsubsection{Proof of Concept}
+Lo studio della tecnologia si concretizza in un \textit{Proof of Concept} che ne dimostra la compatibilità con gli obiettivi di prodotto evidenziando nel contempo lo stato delle competenze del gruppo in relazione alla stessa.
+
 \subsubsection{Aspetti negativi}
+CMAKE è una tecnologia non standardizzata e caratterizzata da lacune in termini di:
+\begin{itemize}
+	\item Build incremntale;
+	\item Personalizzazione a build-time;
+	\item Building parallelo;
+	\item Organizzazione dei file prodotti.
+\end{itemize}
 
-\subsection{Ubuntu 16.04.3 LTS}
+\subsection{Ubuntu v16.04.3 LTS - TS04}
 
-\subsubsection{Codice identificativo}
 \subsubsection{Descrizione}
+Ubuntu è un sistema operativo focalizzato sulla facilità di utilizzo. È prevalentemente composto da software libero proveniente dal ramo instabile di Debian GNU/Linux, ma contiene anche software proprietario, ed è distribuito liberamente con licenza GNU GPL. È orientato all'utilizzo sui computer desktop, ma presenta delle varianti per altri dispositivi, ponendo grande attenzione al supporto hardware. Il gruppo intende utilizzare Ubuntu come sistema operativo di riferimento per lo sviluppo del prodotto, offrendone garanzia di corretto funzionamento sullo stesso.
+
 \subsubsection{Tecnologie concorrenziali}
+La tecnologia in esame è parzialmente vincolata dalla richiesta della Proponente, che richiede garanzia di funzionamento del prodotto su questo specifico sistema operativo. Oltre a tale richiesta, il gruppo ha deciso di fare uso di questa tecnologia per la maggiore compatibilità e facilità di integrazione della stessa nei confronti degli altri strumenti selezionati. In particolare, si è optato per una versione LTS a garanzia di supporto e stabilità. Si riportano di seguito i sistemi operativi concorrenti reputati inadeguati al conseguimento degli obiettivi di prodotto:
+
+\begin{itemize}
+	\item \textbf{Microsoft Windows}: sistema operativo commerciale reperibile al seguente link:
+	\begin{center}
+		\url{https://www.microsoft.com/it-it/windows/get-windows-10}
+	\end{center}
+	Si noti che alcuni membri del gruppo faranno uso di tale sistema operativo per operazioni organizzative o comunque non strettamente correlate allo sviluppo del prodotto;  
+	
+	\item \textbf{Apple MacOs}: sistema operativo commerciale reperibile al seguente link:
+	\begin{center}
+		\url{https://support.apple.com/en-us/HT201475}
+	\end{center}
+\end{itemize}
+
+
 \subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
 \begin{itemize}
-	\item \textbf{Considerazioni generali}: ;
-	\item \textbf{Competenza del gruppo}: ;
-	\item \textbf{Usabilità}: ;
-	\item \textbf{Costo economico}: ;
-	\item \textbf{Consumo di risorse}: ;
-	\item \textbf{Sviluppi possibili della tecnologia}: .
+	\item \textbf{Considerazioni generali}: Ubunto è un sistema operativo contraddistinto da una significativa semplicità di utilizzo affiancata da un buon supporto e un buon grado di libertà garantito all'utente. L'utilizzo dello stesso per quanto concerne lo sviluppo, sistema già familiare alla totalità dei componenti del gruppo, sarà parte della garanzia di piena compatibilità del prodotto con la piattaforma;
+	\item \textbf{Competenza del gruppo e facilità di utilizzo}: Il sistema è molto familiare ai membri del gruppo e gode di per sè di una notevole semplicità d'uso;
+	\item \textbf{Costo economico}: La tecnologia è open source e reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{https://www.ubuntu-it.org/}
+	\end{center}
+	\item \textbf{Consumo di risorse e compatibilità}: Il sistema presenta modesti requisiti hardware (reperibili al seguente link: \url{https://wiki.ubuntu-it.org/Installazione/RequisitiDiSistema}) che non rappresentano un problema per la dotazione tecnologica del gruppo;
+	\item \textbf{Supporto e sviluppi possibili della tecnologia}: La tecnologia in esame è in costante aggiornamento e supportata da una community particolarmente attiva, tuttavia la scelta di adottarne una versione LTS offre le massime garanzie di supporto e stabilità attualmente disponibili.
 \end{itemize}
-\subsubsection{Proof of Concept}
+
 \subsubsection{Aspetti negativi}
+Ubuntu non supporta (o non supporta completamente) alcuni software di utilizzo comune o selezionati dal gruppo per fini organizzativi. Ciò non rappresenta tuttavia un ostacolo significativo al suo utilizzo dato che ogni membro del gruppo disporrà parallelamente di un altro sistema operativo pronto a supplire ad eventuali mancanze di Ubuntu.  
 
-\subsection{Travis}
+\subsection{Travis CI - TS05}
 
-\subsubsection{Codice identificativo}
 \subsubsection{Descrizione}
+Travis CI è un servizio di integrazione continua distribuito utilizzato per costruire e testare progetti software ospitati su GitHub. I progetti open source possono essere testati gratuitamente attraverso \url{travis-ci.org}. Il gruppo intende utilizzare questa tecnologia per l'esecuzione di test automatici a seguito del caricamento di codice sulla repository relativa al progetto, così da garantirne la correttezza.
+
 \subsubsection{Tecnologie concorrenziali}
+La tecnologia in esame è stata scelta in virtù della sua diffusione, semplicità d'uso e perfetta integrazione con lo strumento di versionamento Github e la tecnologia CMAKE. Vengono di seguito proposte alcune tecnologie analoghe non reputate altrettanto valide:
+
+\begin{itemize}
+	\item \textbf{Circleci}: Servizio commerciale di integrazione continua reperibile al seguente link:
+	\begin{center}
+		\url{http://circleci.com/}
+	\end{center}
+
+	\item \textbf{Wercker}: Recente servizio di integrazione continua che propone un piano gratuito, reperibile al seguente link:
+	\begin{center}
+		\url{http://www.wercker.com/}
+	\end{center}
+\end{itemize}
+
 \subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
 \begin{itemize}
-	\item \textbf{Considerazioni generali}: ;
-	\item \textbf{Competenza del gruppo}: ;
-	\item \textbf{Usabilità}: ;
-	\item \textbf{Costo economico}: ;
-	\item \textbf{Consumo di risorse}: ;
-	\item \textbf{Sviluppi possibili della tecnologia}: .
+	\item \textbf{Considerazioni generali}: Travis CI permette di installare gratuitamente e semplicemente un sistema di integrazione continua per progetti open source. Il suo utilizzo, padroneggiato discretamente (nei confini degli obiettivi del progetto) dal gruppo, fornisce garanzia di codice corretto (o quantomeno testato) nella repository dedicata al progetto;
+	\item \textbf{Competenza del gruppo e facilità di utilizzo}: L'ampia documentazione e facilità d'uso della tecnologia ha permesso di colmare in tempi brevi la mancata conoscenza del funzionamento dello strumento, nei confini degli obiettivi del progetto;
+	\item \textbf{Costo economico}: Travis CI è disponibile gratuitamente per progetti open source e reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{https://travis-ci.org/}
+	\end{center}
+	\item \textbf{Consumo di risorse e compatibilità}: Il servizio è pienamente compatibile con le tecnologie correlate selezionate e non presenta particolari requisiti per il suo funzionamento;
+	\item \textbf{Supportoo e sviluppi possibili della tecnologia}: La tecnologia è in costante sviluppo e supportata da una buona documentazione e da una community attiva.
 \end{itemize}
 \subsubsection{Proof of Concept}
+Lo studio della tecnologia si concretizza in un \textit{Proof of Concept} che ne dimostra la compatibilità con gli obiettivi di prodotto evidenziando nel contempo lo stato delle competenze del gruppo in relazione alla stessa.
+
 \subsubsection{Aspetti negativi}
+Travis CI necessità di software di terze parti per personalizzazioni avanzate, tuttavia ciò non rappresenta un'impedimento in relazione agli scopi del gruppo. 
 
 \section{Tecnologie inerenti l'organizzazione e la documentazione}
 
