@@ -45,11 +45,23 @@
 	{UC0}
 	{Utente}
 	{Non previsto}
-	{L'attore avvia l'applicazione DeSpeect e visualizza la pagina iniziale}
+	{L'attore avvia l'applicazione DeSpeect}
 	{Il software Despeect è correttamente installato}
-	{Il programma è correttamente avviato e visualizza la pagina iniziale}
-	{L'attore può caricare un file Json o aprire il menu \refer{UC1}}
+	{Il programma è correttamente avviato}
+	{Viene visualizzata la pagina iniziale \refer{UC0.1}}
 	{Non previsti}
+	
+	\section{UC0.1:Visualizza Pagina Iniziale}
+	\UserCase
+	{UC0.1}
+	{Utente}
+	{Non previsto}
+	{L'attore visualizza la pagina iniziale}
+	{Il software Despeect è correttamente avviato \refer{UC0}}
+	{Il programma visualizza la pagina iniziale}
+	{L'attore può caricare un file Json aprendo il menu \refer{UC1}}
+	{Non previsti}
+	
 	\section{UC1:Aprire Menu}
 	\begin{figure}[H]
 	\caption{UC1}
@@ -60,12 +72,12 @@
 	{UC1}
 	{Utente}
 	{Non previsto}
-	{L'attore vuole visualizzare il menu File}
-	{Il programma è avviato correttamente \refer{UC0}}
+	{L'attore vuole visualizzare il menu}
+	{Il programma visualizza la pagina iniziale \refer{UC0.1}}
 	{Viene selezionata una voce del menu o cambiato il focus}
 	{	\begin{enumerate}
-			\item{} L'attore preme sul menu File
-			\item{} Il menu File si apre e offre le seguenti scelte:
+			\item{} L'attore preme sul menu
+			\item{} Il menu si apre e offre le seguenti scelte:
 		\begin{itemize}
 		\item{} L'attore può caricare un file JSon \refer{UC2}
 		\item{} L'attore può salvare le modifiche al file JSon \refer{UC11}
@@ -89,12 +101,12 @@
 	{Utente}
 	{Non previsto}
 	{L'attore vuole caricare un file JSon}
-	{L'attore ha selezionato la voce nel menu}
+	{L'attore ha selezionato la voce nel menu \refer{UC1}}
 	{Viene inizializzato Speect con il file JSon selezionato e aggiornata la GUI}
 	{
 		\begin{itemize}
-			\item{} Viene aperto il file browser per Caricare
-			\item{} L'attore seleziona il file tramite il file browser \refer{UC3}
+			\item{} Viene aperto il file browser per caricare \refer{UC3}
+			\item{} L'attore seleziona il file tramite il file browser
 			\item{} L'attore preme Carica
 			\item{} Il file viene dato a Speect che prova l'inizializzazione
 			\item{} Viene visualizzato il percorso del file nella apposito spazio \ref{fig:GUI}
@@ -233,8 +245,8 @@
 {L'audio è salvato in un file}
 {
 		\begin{itemize}
-		\item{} Viene aperto il file browser per il salvataggio
-		\item{} L'attore seleziona la cartella di destinazione tramite il file browser \refer{UC3}
+		\item{} Viene aperto il file browser per il salvataggio \refer{UC3}
+		\item{} L'attore seleziona la cartella di destinazione tramite il file browser 
 		\item{} L'attore scrive il nome del file nella barra di testo
 		\item{} L'attore preme su Salva 
 		\item{} Speect compila producendo il file desiderato o un errore  \refer{UC4.1}
@@ -253,7 +265,7 @@
 {Avvenimento dell'errore in fase di salvataggio}
 {Non previsti}
 
-\section{UC5:Exit}
+\section{UC5:Uscita Applicazione}
 \begin{figure}[H]
 	\caption{UC5}
 	\centering
@@ -263,10 +275,21 @@
 {UC5}
 {Utente}
 {Non previsto}
-{L'attore vuole chiudere l'applicazione }
-{L'applicazione è in esecuzione}
+{L'attore vuole chiudere l'applicazione}
+{Viene confermata la chiusura dell'applicazione}
 {L'applicazione viene terminata}
 {Chiusura dell'applicazione}
+{L'attore annulla la chiusura dell'applicazione}
+
+\section{UC5.1:Chiusura Interfaccia Grafica}
+\UserCase
+{UC5.1}
+{Utente}
+{Non previsto}
+{L'attore visualizza un finestra di conferma}
+{L'applicazione è in esecuzione}
+{L'attore conferma o annulla la chiusura dell'applicazione}
+{L'attore richiede la chiusura dell'applicazione}
 {Non previsti}
 
 \section{UC6:Selezione Utterance}
@@ -291,27 +314,10 @@
 	\end{itemize}
 }
 {Non previsti}
-\section{UC6.1:Riordino Utterance Processor}
+
+\section{UC6.1:Selezione Utterance Processor}
 \UserCase
 {UC6.1}
-{Utente}
-{Non previsto}
-{L'attore vuole cambiare l'ordine degli Utterance Processor}
-{Un file JSon è stato caricato \refer{UC2} correttamente }
-{Il file JSon viene aggiornato}
-{
-	\begin{itemize}
-		\item{} L'attore clicca sull'Utterance Processor \refer{UC6.1.1}
-		\item{} L'attore riordina tramite i pulsanti forniti	
-		\item{} Le operazioni vengono eseguite
-		\item{} Se esisteva un grafo, esso non viene modificato
-		
-	\end{itemize}
-}
-{Non previsti}
-\section{UC6.1.1:Selezione Utterance Processor}
-\UserCase
-{UC6.1.1}
 {Utente}
 {Non previsto}
 {L'attore vuole selezionare un Utterance Processor per spostarlo}
@@ -320,12 +326,49 @@
 {
 	\begin{itemize}
 		\item{} L'attore clicca sul nome dell'Utterance Processor
-		\item{} Vengono visualizzati due bottoni che permettono lo spostamento grafico del Utterance Processor e un bottone che ne permette la rimozione 
-		
+		\item{} Vengono visualizzati due bottoni che permettono lo spostamento grafico del Utterance Processor \refer{UC6.1.1} e un bottone che ne permette la rimozione \refer{UC6.1.2} 		
+	\end{itemize}
+}
+{Non previsti}
+
+\section{UC6.1.1:Riordino Utterance Processor}
+\UserCase
+{UC6.1.1}
+{Utente}
+{Non previsto}
+{L'attore vuole cambiare l'ordine degli Utterance Processor}
+{Un file JSon è stato caricato \refer{UC2} correttamente }
+{Il file JSon viene aggiornato}
+{
+	\begin{itemize}
+		\item{} L'attore clicca sull'Utterance Processor \refer{UC6.1}
+		\item{} L'attore riordina tramite i pulsanti forniti	
+		\item{} Le operazioni vengono eseguite
+		\item{} Se esisteva un grafo, esso non viene modificato
 		
 	\end{itemize}
 }
 {Non previsti}
+
+\section{UC6.1.2:Rimozione Utterance Processor}
+\UserCase
+{UC6.1.2}
+{Utente}
+{Non previsto}
+{L'attore vuole rimuovere un Utterance Processor}
+{Un file JSon è stato caricato \refer{UC2} correttamente }
+{Il file JSon viene aggiornato}
+{
+	\begin{itemize}
+		\item{} L'attore clicca sull'Utterance Processor \refer{UC6.1}
+		\item{} L'attore rimuove tramite il pulsante fornito	
+		\item{} L'operazione viene eseguita
+		\item{} Se esisteva un grafo, esso non viene modificato
+		
+	\end{itemize}
+}
+{Non previsti}
+
 \section{UC7:Esecuzione}
 \begin{figure}[H]
 	\caption{UC7}
@@ -484,7 +527,7 @@
 	\begin{itemize}
 				\item{} L'attore seleziona l'utterance processor
 		\item{} L'attore può compilare il campo di testo
-		\item{} L'attore preme sul tasto di esecuzione adiacente al utterance da eseguire \refer{UC6}
+		\item{} L'attore preme sul tasto di esecuzione adiacente all'utterance da eseguire \refer{UC6}
 	\end{itemize}
 }
 {Non previsti}
@@ -599,7 +642,7 @@
 {Utente}
 {Non previsto}
 {L'attore ha modificato gli Utterance Processor e vuole salvare il nuovo file JSon}
-{Esiste un file Json correttamente aperto \refer{UC2} e l'attore ha modificato gli utterance processor \refer{UC6.1}}
+{Esiste un file Json correttamente aperto \refer{UC2} e l'attore ha modificato gli utterance processor \refer{UC6.1.1}}
 {Le modifiche vengono Salvate}
 {
 	\begin{itemize}

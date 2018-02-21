@@ -35,7 +35,7 @@
 		\newline ROF0&
 		\newline Obbligatorio&
 		\newline L'utente può avviare DeSpeect visualizzandone la pagina iniziale&
-		\newline \refer{UC0} \newline Capitolato
+		\newline \refer{UC0} \newline \refer{UC0.1} \newline Capitolato
 		\\[1em]
 		\hline
 		\newline ROF1&
@@ -62,8 +62,8 @@
 		
 		\newline RFF2.2&
 		\newline Facoltativo&
-		\newline L'utente può modificare il file Json cambiando l'ordine degli utterance processor nel utterance type&
-	 \newline \refer{UC6.1.1} \newline Capitolato
+		\newline L'utente può modificare il file Json cambiando l'ordine o rimuovendo gli utterance processor nel utterance type&
+	 	\newline \refer{UC6.1.1} \newline \refer{UC6.1.2} \newline Capitolato
 		\\[1em]	
 		\hline
 				
@@ -182,7 +182,7 @@
 				
 		\newline RDF6.1&\newline Desiderabile&
 		\newline L'utente può modificare gli utterance processor di un utterance type&
-		\newline \refer{UC6.1} \newline  VE-15-12-2017
+		\newline \newline \refer{UC6.1.1} \newline \refer{UC6.1.2} \newline  VE-15-12-2017
 		\\[1em]
 		\hline	
 				
@@ -193,8 +193,8 @@
 		\hline	
 				
 		\newline RDF6.1.2&\newline Desiderabile&
-		\newline L'utente può cancellare gli utterance processor di un utterance type&
-		\newline \refer{UC6.1} \newline \refer{UC6.1.1} \newline Interno
+		\newline L'utente può rimuovere gli utterance processor di un utterance type&
+		\newline \refer{UC6.1} \newline \refer{UC6.1.2} \newline Interno
 		\\[1em]
 		\hline	
 		
@@ -376,7 +376,7 @@
 		
 		\newline ROF14&\newline Obbligatorio&
 		\newline L'utente può chiudere l'applicazione&
-		\newline \refer{UC5} \newline Interno
+		\newline \refer{UC5} \newline \refer{UC5.1} \newline Interno
 		\\[1em]
 		\hline
 		
@@ -469,6 +469,8 @@
 	\hline
 		\newline UC0 &  \newline ROF0 \\[1em]
 	\hline
+		\newline UC0.1 &  \newline ROF0 \\[1em]
+	\hline
 		\newline UC1 &  \newline ROF1 \newline ROF2 \newline RFF2.2.1   \\[1em]	
 		\hline
 		\newline UC2 &  \newline ROF2 	\newline ROF2.1 \newline ROF3 \\[1em]	
@@ -493,11 +495,15 @@
 		\hline
 		\newline UC5 &  \newline ROF14 \\[1em]
 		\hline
+		\newline UC5.1 &  \newline ROF14 \\[1em]
+		\hline
 		\newline UC6 &  \newline ROF6 \\[1em]
 		\hline
-		\newline UC6.1 &  \newline RDF6.1 \newline RDF6.1.1 \newline RDF6.1.2 \\[1em]
+		\newline UC6.1 &  \newline RDF6.1.1 \newline RDF6.1.2 \\[1em]
 		\hline
-		\newline UC6.1.1 &  \newline RFF2.2 \newline RDF6.1.1 \newline RDF6.1.2 \\[1em]
+		\newline UC6.1.1 &  \newline RFF2.2 \newline RDF6.1 \newline RDF6.1.1 \\[1em]
+		\hline
+		\newline UC6.1.2 &  \newline RFF2.2 \newline RDF6.1 \newline RDF6.1.2 \\[1em]
 		\hline
 		\newline UC7 &  \newline ROF7 \newline ROF8 \newline RFF13 \\[1em]
 		\hline
@@ -547,7 +553,7 @@
 \hline
 \endhead
 	\newline ROF0&
-	\newline \refer{UC0} \newline Capitolato
+	\newline \refer{UC0} \newline \refer{UC0.1} \newline Capitolato
 	\\[1em]
 	\hline
 	\newline ROF1&
@@ -567,7 +573,7 @@
 	\hline	
 	
 	\newline RFF2.2&
-	\newline \refer{UC6.1.1} \newline Capitolato
+	\newline \refer{UC6.1.1} \newline \refer{UC6.1.2} \newline Capitolato
 	\\[1em]	
 	\hline
 	
@@ -676,7 +682,7 @@
 	
 	\newline RDF6.1&
 	
-	\newline \refer{UC6.1} \newline  VE-15-12-2017
+	\newline \refer{UC6.1.1} \newline \refer{UC6.1.2} \newline  VE-15-12-2017
 	\\[1em]
 	\hline	
 	
@@ -688,7 +694,7 @@
 	
 	\newline RDF6.1.2&
 	
-	\newline \refer{UC6.1} \newline \refer{UC6.1.1} \newline Interno
+	\newline \refer{UC6.1} \newline \refer{UC6.1.2} \newline Interno
 	\\[1em]
 	\hline	
 	
@@ -853,7 +859,7 @@
 	
 	
 	
-	\newline ROF14&	\newline \refer{UC5} \newline Interno
+	\newline ROF14&	\newline \refer{UC5} \newline \refer{UC5.1} \newline Interno
 	\\[1em]
 	\hline
 	
