@@ -9,7 +9,7 @@ In questo capitolo vengono esposte e motivate le tecnologie, i framework e le li
 
 \section{Classificazione delle tecnologie}
 
-Le tecnologie di seguito esposte vengono catalogate secondo il seguente codice:
+A fini di tracciabilità, le tecnologie di seguito esposte vengono catalogate secondo il seguente codice:
 
 \begin{center}
 	T[Categoria][ID]
@@ -22,7 +22,6 @@ Dove:
 	\item \textbf{Categoria}: indica la categoria a cui appartiene la tecnologia in esame. Può assumere i seguenti valori:
 		\begin{itemize}
 			\item \textbf{S}: indica che la tecnologia è inerente lo \textit{sviluppo} del prodotto;
-			\item \textbf{P}: indica che la tecnologia è inerente la \textit{progettazione} del prodotto;
 			\item \textbf{O}: indica che la tecnologia è inerente l'\textit{organizzazione} del gruppo.
 		\end{itemize}
 	\item \textbf{ID}: rappresenta un codice numerico incrementale atto all'identificazione univoca della tecnologia.
@@ -31,10 +30,10 @@ Dove:
 \noindent Le tecnologie sono presentate secondo il seguente schema: 
 
 \begin{itemize}
-	\item Nome, versione e codice;
+	\item Nome, versione (ove possibile) e codice;
 	\item Codice identificativo;
-	\item Descrizione;
-	\item Tecnologie concorrenziali;
+	\item Descrizione e contesto di utilizzo;
+	\item Motivazioni generali della scelta e tecnologie concorrenziali;
 	\item Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto:
 	\begin{itemize}
 		\item Considerazioni generali;
@@ -48,17 +47,17 @@ Dove:
 	\item Aspetti negativi.
 \end{itemize}
 
-\section{Tecnologie inerenti lo sviluppo e \\ la progettazione del prodotto}
+\section{Tecnologie inerenti lo sviluppo del prodotto}
 
-\subsection{Speect v1.1.0-69-g65f4 - TS01}
+\subsection{TS01 - Speect v1.1.0-69-g65f4}
 
-\subsubsection{Descrizione}
+\subsubsection{Descrizione e contesto di utilizzo}
 
 Speect è un sistema di \textit{Text To Speech} (TTS) multilingua. Esso offre un sistema TTS completo (analisi e decodifica del testo e sintesi vocale) con annesse varie API, nonché un ambiente per la ricerca e lo sviluppo di sistemi e voci TTS. Speect è scritto in linguaggio C, con una stretta conformità allo standard ISO / IEC 9899: 1990, consentendo così la massima portabilità su diverse piattaforme di calcolo. Le chiamate di sistema specifiche della piattaforma sono astratte per consentire le porte a nuove piattaforme. Speect rappresenta il cuore del prodotto che il gruppo intende sviluppare ed in particolare è l'applicazione per la quale si vuole realizzare un'interfaccia grafica atta a semplificarne l'utilizzo e il debug.
 
-\subsubsection{Tecnologie concorrenziali}
+\subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
 
-La tecnologia in esame è vincolata dall'obbligo di utilizzo esplicitato dalla Proponente. Si riportano per completezza alcune tecnologie concorrenziali:
+La tecnologia in esame è vincolata dall'obbligo di utilizzo esplicitato dalla Proponente. Si riportano per completezza alcune Motivazioni generali della scelta e tecnologie concorrenziali:
 
 \begin{itemize}
 	\item \textbf{OpenMary}: sistema di \textit{Text To Speech} (TTS) multilingua opensource scritto in Java e reperibile al seguente link:
@@ -93,13 +92,13 @@ Lo studio della tecnologia si concretizza in un \textit{Proof of Concept} che ne
 \subsubsection{Aspetti negativi}
 Speect è scritto in C, linguaggio familiare al gruppo ma che pecca in leggibilità del codice e nell'implementazione completa del paradigma a oggetti. Ciò implica la necessità da parte del gruppo di lavorare in prima persona sulla portabilità della libreria verso il C++. Inoltre, Speect necessita di non banali procedure di configurazione per un corretto utilizzo. Per entrambi i problemi evidenziati la Proponente ha offerto al gruppo supporto attivo per giungere ad una soluzione soddisfacente in caso di necessità. 
 
-\subsection{QT v5.9 LTS - TS02}
+\subsection{TS02 - QT v5.9 LTS}
 
-\subsubsection{Descrizione}
+\subsubsection{Descrizione e contesto di utilizzo}
 
 QT è una libreria multipiattaforma per lo sviluppo di programmi con interfaccia grafica tramite l'uso di widget (congegni o elementi grafici). La libreria è scritta in C++ e gode di ampia diffusione e supporto. Il gruppo intende utilizzare questa tecnologia per lo sviluppo dell'interfaccia grafica del prodotto.  
 
-\subsubsection{Tecnologie concorrenziali}
+\subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
 La tecnologia in esame è parzialmente vincolata dalla richiesta della Proponente, che nel capitolato suggerisce una rosa di librerie in cui compare QT. Si è scelto di utilizzate QT in virtù della familiarità del gruppo con la stessa, della sua semplicità d'uso e del suo ampio utilizzo in ambito aziendale, ed in particolare la versione 5.9 LTS per la sua stabilità e garanzia di supporto. Seguono le tecnologie analoghe valutate ma ritenute meno performanti e conformi agli obiettivi di prodotto:
 
 \begin{itemize}
@@ -140,14 +139,14 @@ Lo studio della tecnologia si concretizza in un \textit{Proof of Concept} che ne
 \subsubsection{Aspetti negativi}
 QT risulta meno performante di alcune tecnologie concorrenti e prevede la necessità di una notevole quantità di spazio per la sua installazione.
 
-\subsection{CMAKE v3.10.2 - TS03}
+\subsection{TS03 - CMAKE v3.10.2}
 
-\subsubsection{Descrizione}
+\subsubsection{Descrizione e contesto di utilizzo}
 CMake è una famiglia di strumenti open source e multipiattaforma progettati per creare, testare e pacchettizzare software. CMake viene utilizzato per controllare il processo di compilazione del software utilizzando semplici file di configurazione indipendenti dalla piattaforma e dal compilatore e generare makefile e aree di lavoro nativi che possono essere utilizzati nell'ambiente del compilatore di propria scelta. Il gruppo intende utilizzare questa tecnologia per l’automazione della compilazione del prodotto.
 
-\subsubsection{Tecnologie concorrenziali}
+\subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
 La tecnologia in esame è parzialmente vincolata dalla richiesta della Proponente, che nel capitolato ne suggerisce l'utilizzo in quanto già
-usata da Speect e alcune sue dipendenze. Si riportano per completezza alcune tecnologie concorrenziali:
+usata da Speect e alcune sue dipendenze. Si riportano per completezza alcune Motivazioni generali della scelta e tecnologie concorrenziali:
 
 \begin{itemize}
 	\item \textbf{GNU Makefile}: strumento che controlla la generazione di file eseguibili e altri file non di origine di un programma dai file sorgente dello stesso, reperibile gratuitamente al seguente link:
@@ -188,12 +187,12 @@ CMAKE è una tecnologia non standardizzata e caratterizzata da lacune in termini
 	\item Organizzazione dei file prodotti.
 \end{itemize}
 
-\subsection{Ubuntu v16.04.3 LTS - TS04}
+\subsection{TS04 - Ubuntu v16.04.3 LTS}
 
-\subsubsection{Descrizione}
+\subsubsection{Descrizione e contesto di utilizzo}
 Ubuntu è un sistema operativo focalizzato sulla facilità di utilizzo. È prevalentemente composto da software libero proveniente dal ramo instabile di Debian GNU/Linux, ma contiene anche software proprietario, ed è distribuito liberamente con licenza GNU GPL. È orientato all'utilizzo sui computer desktop, ma presenta delle varianti per altri dispositivi, ponendo grande attenzione al supporto hardware. Il gruppo intende utilizzare Ubuntu come sistema operativo di riferimento per lo sviluppo del prodotto, offrendone garanzia di corretto funzionamento sullo stesso.
 
-\subsubsection{Tecnologie concorrenziali}
+\subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
 La tecnologia in esame è parzialmente vincolata dalla richiesta della Proponente, che richiede garanzia di funzionamento del prodotto su questo specifico sistema operativo. Oltre a tale richiesta, il gruppo ha deciso di fare uso di questa tecnologia per la maggiore compatibilità e facilità di integrazione della stessa nei confronti degli altri strumenti selezionati. In particolare, si è optato per una versione LTS a garanzia di supporto e stabilità. Si riportano di seguito i sistemi operativi concorrenti reputati inadeguati al conseguimento degli obiettivi di prodotto:
 
 \begin{itemize}
@@ -225,12 +224,12 @@ La tecnologia in esame è parzialmente vincolata dalla richiesta della Proponent
 \subsubsection{Aspetti negativi}
 Ubuntu non supporta (o non supporta completamente) alcuni software di utilizzo comune o selezionati dal gruppo per fini organizzativi. Ciò non rappresenta tuttavia un ostacolo significativo al suo utilizzo dato che ogni membro del gruppo disporrà parallelamente di un altro sistema operativo pronto a supplire ad eventuali mancanze di Ubuntu.  
 
-\subsection{Travis CI - TS05}
+\subsection{TS05 - Travis CI}
 
-\subsubsection{Descrizione}
+\subsubsection{Descrizione e contesto di utilizzo}
 Travis CI è un servizio di integrazione continua distribuito utilizzato per costruire e testare progetti software ospitati su GitHub. I progetti open source possono essere testati gratuitamente attraverso \url{travis-ci.org}. Il gruppo intende utilizzare questa tecnologia per l'esecuzione di test automatici a seguito del caricamento di codice sulla repository relativa al progetto, così da garantirne la correttezza.
 
-\subsubsection{Tecnologie concorrenziali}
+\subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
 La tecnologia in esame è stata scelta in virtù della sua diffusione, semplicità d'uso e perfetta integrazione con lo strumento di versionamento Github e la tecnologia CMAKE. Vengono di seguito proposte alcune tecnologie analoghe non reputate altrettanto valide:
 
 \begin{itemize}
@@ -264,11 +263,77 @@ Travis CI necessità di software di terze parti per personalizzazioni avanzate, 
 
 \section{Tecnologie inerenti l'organizzazione e la documentazione}
 
-\subsection{Google Drive}
+\subsection{TO01 - Google Drive}
 
-\subsubsection{Codice identificativo}
-\subsubsection{Descrizione}
-\subsubsection{Tecnologie concorrenziali}
+\subsubsection{Descrizione e contesto di utilizzo}
+Google Drive è un servizio di memorizzazione e sincronizzazione online introdotto da Google. Il servizio comprende il file hosting, il file sharing e la modifica collaborativa di documenti fino a 15 GB gratuiti ed è perfettamente integrato con altri servizi Google quali Gmail, Docs, Sheets, Slides e Forms. Il gruppo intende utilizzare Drive per il rilascio della documentazione prevista per le revisioni di progetto e per il salvataggio di materiale informale che possa necessitare di elaborazione collaborativa.
+
+\subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
+Si è deciso di utilizzare questa tecnologia perché perfettamente integrata con l'ecosistema Google, che con i suoi numerosi software per la produttività ben si adatta alle necessità di elaborazione collaborativa di documenti informali e file sharing, e già associata alla mail del gruppo (\textit{graphite.swe@gmail.com}). Vengono di seguito proposte alcune tecnologie analoghe non reputate altrettanto valide:
+
+\begin{itemize}
+	\item \textit{Dropbox}: servizio di file hosting che offre nel suo piano gratuito 2GB di spazio di archiviazione, reperibile al link:
+	\begin{center}
+		\url{https://www.dropbox.com}
+	\end{center}
+
+	\item \textit{Mega}: servizio di file hosting con forte enfasi sulla sicurezza che offre nel suo piano gratuito 15GB di spazio di archiviazione, reperibile al link:
+	\begin{center}
+		\url{https://mega.nz}
+	\end{center}
+\end{itemize}
+
+
+\subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
+\begin{itemize}
+	\item \textbf{Considerazioni generali}: Drive risponde alle esigenze del gruppo di un servizio cloud per il file sharing che garantisca facilità di rilascio della documentazione prodotta, e che sia ben integrato con servizi per la produttività affiliati. La sua semplicità d'uso e gratuità (nei confini degli obiettivi di progetto) lo fanno spiccare rispetto a prodotti concorrenti, e la presenza di applicazioni mobile e desktop multipiattaforma associate ne permettono l'utilizzo su pressoché qualsiasi dispositivo;
+	\item \textbf{Competenza del gruppo e facilità d'uso}: I membri del gruppo possiedono una competenza relativamente profonda nell'utilizzo di servizi cloud e di file sharing. Ciò, unito alla semplicità d'uso della tecnologia in esame, ha permesso al gruppo di sfruttarne a pieno le possibilità offerte tramite l'integrazione dei software collaborativi associati al servizio di file sharing;
+	\item \textbf{Costo economico}: Il servizio prevede un piano gratuito automaticamente associato alla creazione di un account Google, ed è reperibile al seguente link:
+	\begin{center}
+		\url{https://www.google.com/drive/}
+	\end{center}
+	\item \textbf{Consumo di risorse}: La tecnologia, oltre alle piene funzionalità offerte nella forma di \textit{Web App}, offre un'applicazione desktop che richiede uno spazio di archiviazione proporzionato alla quantità di contenuti salvati su cloud. Ciò non rappresenta comunque un problema rispetto alla dotazione tecnologica del gruppo;
+	\item \textbf{Supporto e sviluppi possibili della tecnologia}: La tecnologia risulta ben supportata e in costante aggiornamento. La costanza e rapidità degli aggiornamenti è tale da far deprecare software relativamente datato come il precedente client desktop (oggi sostituito da \textit{Backup and Sync}) e che smetterà di funzionare dal 12-03-2018. Sarà dunque premura di ogni membro del gruppo mantenere aggiornati i propri client desktop e mobile per non incorrere in perdità di materiale rilvante ai fini del progetto. La quota di spazio di archiviazione disponibile, inoltre è stata nel tempo soggetta a variazioni (nel caso di Drive in rialzo, ma nel caso di alcuni concorrenti come Dropbox nettamente in ribasso) e sarà dunque necessario per il gruppo effettuare backup periodici dei dati nonché rimanere aggiornato sugli sviluppi della tecnologia in questo senso.
+\end{itemize}
+
+\subsubsection{Aspetti negativi}
+Il servizio offre uno spazio di archiviazione gratuito pari a 15GB, quota non elevatissima ma adeguata ai fini del progetto. Il limite più grande di un servizio cloud è la costante necessità di una connessione internet per il reperimento dei dati versionati, cosa che può essere mitigata dai backup tramite client ma che in situazioni critiche rimane un problema aperto. 
+
+\subsection{TO02 - Hangouts}
+
+\subsubsection{Descrizione e contesto di utilizzo}
+Hangouts è un software di messaggistica istantanea e di VoIP sviluppato da Google. È disponibile per le maggiori piattaforme mobili e come estensione per il browser web Google Chrome, e si integra perfettamente con l'ecosistema di prodottoti Google. Il gruppo intende utilizzare tale tecnologia per effettuare videochiamate tra i membri e/o con la Proponente (caso in cui il contatto in remoto si è rivelato indispensabile a causa degli obblighi logistici della stessa) nel contesto di riunioni e confronti.
+
+\subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
+Hangouts è stato selezionato in virtù della sua gratuità, integrazione con l'ecosistema Google e compatibilità totale con i maggiori sistemi operativi tramite l'utilizzo del browser web Google Chrome. Il sistema offre inoltre una comoda funzionalità di \textit{screen sharing} pienamente sfruttata nello svolgimento di task collaborativi o per l'illustrazione di materiale alla Proponente. Vengono di seguito proposte alcune tecnologie analoghe non reputate altrettanto valide:
+\begin{itemize}
+	\item \textbf{Skype}: software proprietario freeware di messaggistica istantanea e VoIP che unisce caratteristiche presenti nei client più comuni ad un sistema di telefonate basato su un network Peer-to-peer. Inizialmente utilizzato dal gruppo, è stato scartato per problemi di compatibilità su piattaforme Linux e per problemi di sicurezza recentemente emersi. Skype è reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{https://www.skype.com/it/get-skype/}
+	\end{center}
+\end{itemize}
+
+\subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
+\begin{itemize}
+	\item \textbf{Considerazioni generali}: La distanza geografica dei membri del gruppo e l'incompatibilità degli impegni individuali rendono indispensabile l'utilizzo delle videochiamate per confronti diretti e/o riepilogativi. Hangouts fornisce una soluzione integrata con altre tecnologie selezionate unita ad una buona compatibilità e immediatezza d'uso;
+	\item \textbf{Competenza del gruppo e facilità di utilizzo}: La maggior parte dei membri del gruppo possedevano competenze pregresse nel contesto delle videochiamate, declinato in molteplici strumenti. L'immediatezza e semplicità d'uso della tecnologia ha permesso agli altri membri di colmare rapidamente le loro lacune e al gruppo nel suo complesso di sfruttare a pieno le funzionalità offerte dalla tecnologia;
+	\item \textbf{Costo economico}: La tecnologia è gratuita sia in versione mobile che desktop, e accessibile al seguente link:
+	\begin{center}
+		\url{https://hangouts.google.com/?hl=it}
+	\end{center}
+	\item \textbf{Consumo di risorse}: La tecnologia ha requisiti di sistema trascurabili rispetto alla dotazione tecnologica del gruppo, in particolare ha come prerequisito per effettuare videochiamate il possesso di webcam e microfono, di cui ogni membro è dotato;
+	\item \textbf{Supporto e sviluppi possibili della tecnologia}: La tecnologia gode all'oggi di un discreto supporto da parte di Google, che ha tuttavia annunciato in data 09-03-2017 l'intenzione di apportare modifiche sostanziali e plausibilmente non retrocompatibili alla stessa, dopo aver chiuso la distribuzione delle API pochi mesi prima. Nonostante il rischio concreto che il prodotto venga rivoluzionato in un futuro prossimo, non sono all'oggi presenti dichiarazioni che facciano pensare che la tecnologia subirà drastici rinnovamenti in tempi rilevanti per il progetto corrente.
+\end{itemize}
+
+\subsubsection{Aspetti negativi}
+Hangouts paga la sua immediatezza d'uso e grande compatibilità con il vincolo d'uso del browser web Google Chrome dettato dall'assenza di un client desktop. Ciononostante questo aspetto non appare significativamente rilevante per il gruppo.
+
+\subsection{TO03 - Wrike}
+
+\subsubsection{Descrizione e contesto di utilizzo}
+Wrike è un'applicazione commerciale per il \textit{project management} che offre potenti funzionalità per l'organizzazione del lavoro come la creazione e distribuzione di task e la generazione di diagrammi di Gantt dinamici.
+
+\subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
 \subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
 \begin{itemize}
 	\item \textbf{Considerazioni generali}: ;
@@ -281,11 +346,11 @@ Travis CI necessità di software di terze parti per personalizzazioni avanzate, 
 \subsubsection{Proof of Concept}
 \subsubsection{Aspetti negativi}
 
-\subsection{Hangout}
+\subsection{TO04 - LaTex}
 
 \subsubsection{Codice identificativo}
-\subsubsection{Descrizione}
-\subsubsection{Tecnologie concorrenziali}
+\subsubsection{Descrizione e contesto di utilizzo}
+\subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
 \subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
 \begin{itemize}
 	\item \textbf{Considerazioni generali}: ;
@@ -298,45 +363,11 @@ Travis CI necessità di software di terze parti per personalizzazioni avanzate, 
 \subsubsection{Proof of Concept}
 \subsubsection{Aspetti negativi}
 
-\subsection{Wrike}
+\subsection{TO05 - Git}
 
 \subsubsection{Codice identificativo}
-\subsubsection{Descrizione}
-\subsubsection{Tecnologie concorrenziali}
-\subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
-\begin{itemize}
-	\item \textbf{Considerazioni generali}: ;
-	\item \textbf{Competenza del gruppo}: ;
-	\item \textbf{Usabilità}: ;
-	\item \textbf{Costo economico}: ;
-	\item \textbf{Consumo di risorse}: ;
-	\item \textbf{Sviluppi possibili della tecnologia}: .
-\end{itemize}
-\subsubsection{Proof of Concept}
-\subsubsection{Aspetti negativi}
-
-\subsection{LaTex}
-
-\subsubsection{Codice identificativo}
-\subsubsection{Descrizione}
-\subsubsection{Tecnologie concorrenziali}
-\subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
-\begin{itemize}
-	\item \textbf{Considerazioni generali}: ;
-	\item \textbf{Competenza del gruppo}: ;
-	\item \textbf{Usabilità}: ;
-	\item \textbf{Costo economico}: ;
-	\item \textbf{Consumo di risorse}: ;
-	\item \textbf{Sviluppi possibili della tecnologia}: .
-\end{itemize}
-\subsubsection{Proof of Concept}
-\subsubsection{Aspetti negativi}
-
-\subsection{Git}
-
-\subsubsection{Codice identificativo}
-\subsubsection{Descrizione}
-\subsubsection{Tecnologie concorrenziali}
+\subsubsection{Descrizione e contesto di utilizzo}
+\subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
 \subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
 \begin{itemize}
 	\item \textbf{Considerazioni generali}: ;
