@@ -5,7 +5,7 @@
 \chapter{Tecnologie selezionate}
 	
 \section{Introduzione}
-In questo capitolo vengono esposte e motivate le tecnologie, i framework e le librerie selezionate per lo sviluppo e la progettazione del prodotto \textit{DeSpeect}.
+In questo capitolo vengono esposte e motivate le principali tecnologie, framework e librerie selezionati per lo sviluppo \textit{DeSpeect}.
 
 \section{Classificazione delle tecnologie}
 
@@ -30,8 +30,7 @@ Dove:
 \noindent Le tecnologie sono presentate secondo il seguente schema: 
 
 \begin{itemize}
-	\item Nome, versione (ove possibile) e codice;
-	\item Codice identificativo;
+	\item Codice - Nome e versione (ove possibile);
 	\item Descrizione e contesto di utilizzo;
 	\item Motivazioni generali della scelta e tecnologie concorrenziali;
 	\item Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto:
@@ -81,7 +80,7 @@ La tecnologia in esame è vincolata dall'obbligo di utilizzo esplicitato dalla P
 		\url{http://speect.sourceforge.net/}
 	\end{center}
 
-	\item \textbf{Consumo di risorse}: Speect è compatibile solo con sistemi Linux e richiede l'utilizzo di CMAKE e di un compilatore conforme ad ANSI C/ISO C90. Ciò non rappresenta un problema in termini di risorse per quanto riguarda la dotazione tecnologica dei membri del gruppo, né un ostacolo per la corretta configurazione del software;
+	\item \textbf{Consumo di risorse e compatibilità}: Speect è compatibile solo con sistemi Linux e richiede l'utilizzo di CMAKE e di un compilatore conforme ad ANSI C/ISO C90. Ciò non rappresenta un problema in termini di risorse per quanto riguarda la dotazione tecnologica dei membri del gruppo, né un ostacolo per la corretta configurazione del software;
 	
 	\item \textbf{Supporto e sviluppi possibili della tecnologia}: Speect non gode di ampio supporto da parte dei suoi sviluppatori, tuttavia la Proponete si è offre al gruppo sostegno in caso di problemi o necessità di modifiche per la portabilità della libreria stessa. Non appare plausibile che la tecnologia subisca aggiornamenti o modifiche di rilievo nel futuro prossimo.
 \end{itemize}
@@ -170,7 +169,7 @@ usata da Speect e alcune sue dipendenze. Si riportano per completezza alcune Mot
 		\url{https://cmake.org/}
 	\end{center}
 
-	\item \textbf{Consumo di risorse}: CMAKE è una tecnologia multipiattaforma compatibile con i maggiori sistemi operativi e non presenta particolari requisiti harware;
+	\item \textbf{Consumo di risorse e compatibilità}: CMAKE è una tecnologia multipiattaforma compatibile con i maggiori sistemi operativi e non presenta particolari requisiti harware;
 	
 	\item \textbf{Supporto e sviluppi possibili della tecnologia}: La tecnologia in esame è in costante aggiornamento e supportata da una community particolarmente attiva, tuttavia la scelta di adottarne una versione stabile offre le massime garanzie di supporto e stabilità attualmente disponibili.
 \end{itemize}
@@ -292,7 +291,7 @@ Si è deciso di utilizzare questa tecnologia perché perfettamente integrata con
 	\begin{center}
 		\url{https://www.google.com/drive/}
 	\end{center}
-	\item \textbf{Consumo di risorse}: La tecnologia, oltre alle piene funzionalità offerte nella forma di \textit{Web App}, offre un'applicazione desktop che richiede uno spazio di archiviazione proporzionato alla quantità di contenuti salvati su cloud. Ciò non rappresenta comunque un problema rispetto alla dotazione tecnologica del gruppo;
+	\item \textbf{Consumo di risorse e compatibilità}: La tecnologia, oltre alle piene funzionalità offerte nella forma di \textit{Web App}, offre un'applicazione desktop che richiede uno spazio di archiviazione proporzionato alla quantità di contenuti salvati su cloud. Ciò non rappresenta comunque un problema rispetto alla dotazione tecnologica del gruppo;
 	\item \textbf{Supporto e sviluppi possibili della tecnologia}: La tecnologia risulta ben supportata e in costante aggiornamento. La costanza e rapidità degli aggiornamenti è tale da far deprecare software relativamente datato come il precedente client desktop (oggi sostituito da \textit{Backup and Sync}) e che smetterà di funzionare dal 12-03-2018. Sarà dunque premura di ogni membro del gruppo mantenere aggiornati i propri client desktop e mobile per non incorrere in perdità di materiale rilvante ai fini del progetto. La quota di spazio di archiviazione disponibile, inoltre è stata nel tempo soggetta a variazioni (nel caso di Drive in rialzo, ma nel caso di alcuni concorrenti come Dropbox nettamente in ribasso) e sarà dunque necessario per il gruppo effettuare backup periodici dei dati nonché rimanere aggiornato sugli sviluppi della tecnologia in questo senso.
 \end{itemize}
 
@@ -321,7 +320,7 @@ Hangouts è stato selezionato in virtù della sua gratuità, integrazione con l'
 	\begin{center}
 		\url{https://hangouts.google.com/?hl=it}
 	\end{center}
-	\item \textbf{Consumo di risorse}: La tecnologia ha requisiti di sistema trascurabili rispetto alla dotazione tecnologica del gruppo, in particolare ha come prerequisito per effettuare videochiamate il possesso di webcam e microfono, di cui ogni membro è dotato;
+	\item \textbf{Consumo di risorse e compatibilità}: La tecnologia ha requisiti di sistema trascurabili rispetto alla dotazione tecnologica del gruppo, in particolare ha come prerequisito per effettuare videochiamate il possesso di webcam e microfono, di cui ogni membro è dotato;
 	\item \textbf{Supporto e sviluppi possibili della tecnologia}: La tecnologia gode all'oggi di un discreto supporto da parte di Google, che ha tuttavia annunciato in data 09-03-2017 l'intenzione di apportare modifiche sostanziali e plausibilmente non retrocompatibili alla stessa, dopo aver chiuso la distribuzione delle API pochi mesi prima. Nonostante il rischio concreto che il prodotto venga rivoluzionato in un futuro prossimo, non sono all'oggi presenti dichiarazioni che facciano pensare che la tecnologia subirà drastici rinnovamenti in tempi rilevanti per il progetto corrente.
 \end{itemize}
 
@@ -331,54 +330,113 @@ Hangouts paga la sua immediatezza d'uso e grande compatibilità con il vincolo d
 \subsection{TO03 - Wrike}
 
 \subsubsection{Descrizione e contesto di utilizzo}
-Wrike è un'applicazione commerciale per il \textit{project management} che offre potenti funzionalità per l'organizzazione del lavoro come la creazione e distribuzione di task e la generazione di diagrammi di Gantt dinamici.
+Wrike è un'applicazione commerciale per il \textit{project management} che offre potenti funzionalità per l'organizzazione del lavoro come la creazione e distribuzione di task e la generazione di diagrammi di Gantt dinamici. Il gruppo intende fare di Wrike il principale strumento a supporto del \textit{project management} e quindi utilizzarlo per la suddivisione e assegnazione del lavoro in task da parte del \textit{Responsabile}, sfruttando nel contempo le altre sue funzionalità per documentare e monitorare la gestione di progetto. 
 
 \subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
+Wrike è un potente strumento per il \textit{project management} che gode di ampia diffusione e supporto, nonché di compatibilità con le maggiori piattaforme mobile e non. Esso si integra inoltre con altri strumenti organizzativi utilizzati dal gruppo, come per esempio Slack e GitHub, e offre gratuitamente agli studenti funzionalità avanzate appannaggio delle versioni premium di strumenti analoghi. Vengono di seguito proposte alcune tecnologie analoghe non reputate altrettanto valide:
+\begin{itemize}
+	\item \textbf{Asana}: applicazione per il \textit{project management} reperibile al link:
+	\begin{center}
+		\url{https://asana.com/}
+	\end{center}
+	\item \textbf{Bitrix24}: applicazione per il \textit{project management} reperibile al link:
+	\begin{center}
+		\url{https://www.bitrix24.com/}
+	\end{center} 
+\end{itemize}
+
 \subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
 \begin{itemize}
-	\item \textbf{Considerazioni generali}: ;
-	\item \textbf{Competenza del gruppo}: ;
-	\item \textbf{Usabilità}: ;
-	\item \textbf{Costo economico}: ;
-	\item \textbf{Consumo di risorse}: ;
-	\item \textbf{Sviluppi possibili della tecnologia}: .
+	\item \textbf{Considerazioni generali}: Wrike risponde all'esigenza del gruppo di un potente software per il \textit{project management} ben integrato con le altre tecnologie selezionate, compatibile con le maggiori piattaforme e in particolare in grado di generare automaticamente i diagrammi di Gantt a partire dallo schema dei task assegnati. Tramite Wrike è possibile ottimizzare e gestire collaborativamente il lavoro in termini di scadenze temporali, tendolo costantemente monitorato;
+	\item \textbf{Competenza del gruppo e facilità di utilizzo}: La tecnologia presente una curva d'apprendimento abbastanza ripida a confronto con la concorrenza, e ciò unito all'iniziale assenza di nozioni sul \textit{project management} da parte dei membri del gruppo ha reso il suo primo utilizzo piuttosto ostico. Ciononostante, attraverso lo studio personale dei membri, il gruppo ha raggiunto una discreta padronanza del mezzo che permette ora una facile ed efficiente distribuzione del lavoro;
+	\item \textbf{Costo economico}: Pur essendo uno strumento prettamente commerciale, Wrike è disponibile gratuitamente per gli studenti al seguente link:
+	\begin{center}
+		\url{https://www.wrike.com/collaboration-tool-for-students/}
+	\end{center}
+	\item \textbf{Consumo di risorse e compatibilità}: Wrike è accessibile da qualsiasi browser sotto forma di Web App e dispone di un'applicazione compatibile con le maggiori piattaforme mobili. La sua esecuzione richiede un consumo di risorse trascurabile rispetto alla dotazione tecnologica del gruppo;
+	\item \textbf{Supporto e sviluppi possibili della tecnologia}: La tecnologia è prettamente commerciale e ampiamente diffusa in ambito aziendale, ragione per cui gode di ottimo supporto e documentazione essendo nel contempo costantemente aggiornata. Si fa notare che tali aggiornamenti operano per lo più in termini di aggiunta di funzionalità e integrazione con altre applicazioni per la produttività e non vi sono all'oggi annunci di aggiornamenti che possano rappresentare un problema nei confini degli obiettivi del gruppo.
 \end{itemize}
-\subsubsection{Proof of Concept}
+
 \subsubsection{Aspetti negativi}
+Anche in virtù della sua potenza, Wrike presenta una curva di apprendimento più ripida rispetto ed è in generale meno intuitivo di altre tecnologie concorrenti, ed il suo reperimento in quanto studenti richiede un iter macchinoso.
 
 \subsection{TO04 - LaTex}
 
-\subsubsection{Codice identificativo}
 \subsubsection{Descrizione e contesto di utilizzo}
+\LaTeX è un linguaggio di markup, usato per la preparazione di testi, basato sul programma di composizione tipografica TEX. Il gruppo intende utilizzare tale tecnologia per la produzione collaborativa della documentazione formale, in particolare attraverso lo stumento \textit{TeXstudio}.
+
 \subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
+\LaTeX è stato selezionato in quanto permette di perseguire un'elevata qualità tipografica dei documenti e di distinguerne chiaramente contenuto e formattazione, producendo nel contempo materiale immediatamente versionabile tramite tecnologia Git. Queste e altre qualità, tra cui per esempio la potenza di manipolazione dei documenti offerta e la gratuità, hanno spinto il gruppo a prediligerlo rispetto ad altre tecnologie di seguito elencate e non ritenute altrettanto valide:
+\begin{itemize}
+	\item \textbf{Markdown}: linguaggio di markup con una semplice sintassi del testo progettata in modo che possa essere convertita in HTML e in molti altri formati usando un tool omonimo. La tecnologia è fruibile per esempio attraverso l'editor \textit{MarkdownPad} reperibile al seguente link:
+	\begin{center}
+		\url{http://markdownpad.com/}
+	\end{center}
+
+	\item \textbf{Microsoft Word}: software per la videoscrittura reperibile all'interno del pacchetto Microsoft Office (gratuito tramite account universitario) al seguente link:
+	\begin{center}
+		\url{https://www.microsoft.com/it-it/download/office.aspx}
+	\end{center} 
+\end{itemize}  
+
 \subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
 \begin{itemize}
-	\item \textbf{Considerazioni generali}: ;
-	\item \textbf{Competenza del gruppo}: ;
-	\item \textbf{Usabilità}: ;
-	\item \textbf{Costo economico}: ;
-	\item \textbf{Consumo di risorse}: ;
-	\item \textbf{Sviluppi possibili della tecnologia}: .
+	\item \textbf{Considerazioni generali}: \LaTeX è un potente strumento per la redazione di documenti che ben si sposa con la produzione collaborativa ed il versionamento. La possibilità di suddividere un documento in più file singolarmente editabili permette di massimizzare il numero di membri del gruppo che vi lavorano minimizzando nel contempo il rischio di sovrascritture o perdita di dati. \LaTeX offre inoltre numerose automazioni utili ad accorciare i tempi di redazione di un documento ed è estremamente estendibile tramite il meccanismo dei \textit{package};
+	\item \textbf{Competenza del gruppo e facilità di utilizzo}: Benché alcuni membri del gruppo disponessero fin da principio di basilari competenze nell'utilizzo della tecnologia, in termini collaborativi e non, la presenza di una solida e ampia documentazione ha favorito lo studio personale di coloro che dovessero colmare questa lacuna. Il gruppo possiede all'oggi piena padronanza della tecnologia nei confini degli obiettivi di progetto;
+	\item \textbf{Costo economico}: La tecnologia è reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{https://www.latex-project.org/}
+	\end{center}
+	Si riportano per completezza anche i link per il reperimento degli strumenti utilizzati in relazione alla tecnologia:
+	\begin{itemize}
+		\item \textbf{TeXstudio}: \url{https://www.texstudio.org/}
+	\end{itemize}
+	\item \textbf{Consumo di risorse e compatibilità}: La tecnologia e lo strumento selezionato dal gruppo per farne uso (TeXstudio) sono multipiattaforma e caratterizzati da requisiti trascurabili in relazione alla dotazione tecnologica del gruppo;
+	\item \textbf{Supporto e sviluppi possibili della tecnologia}: La tecnologia gode di ampia documentazione e supporto da parte di una community particolarmente attiva. Vengono in oltre costantemente rilasciati nuovi \textit{package} che ne espandono le funzionalità senza compromettere quelle di base o la retro compatibilità.
 \end{itemize}
+
 \subsubsection{Proof of Concept}
+Lo studio della tecnologia si concretizza nella realizzazione della documentazione finora proposta, che ne dimostra la compatibilità con gli obiettivi di prodotto evidenziando nel contempo lo stato delle competenze del gruppo in relazione alla stessa.
+
 \subsubsection{Aspetti negativi}
+Anche in virtù della sua potenza, \LaTeX è una tecnologia meno intuitiva di altre concorrenti e necessita di uno studio discretamente approfondito per essere padroneggiata.
 
 \subsection{TO05 - Git}
 
-\subsubsection{Codice identificativo}
 \subsubsection{Descrizione e contesto di utilizzo}
+Git è un sistema di controllo delle versioni distribuito, gratuito e open source, progettato per gestire da progetti piccoli a molto grandi garantendo velocità ed efficienza. Il gruppo intende utilizzare tale tecnologia per il versionamento della documentazione e del codice prodotto, in particolare fruendola tramite le interfacce grafiche gratuite \textit{GitKraken} e \textit{GitHub}.
+
 \subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
+Il sistema Git è stato scelto poiché permette, con la massima semplicità e il minimo ingombro di risorse, la fruizione di un sistema di versionamento sicuro e ben integrato con le altre tecnologie selezionate dal gruppo quali Travis CI o Wrike (entrambi via GitHub). Vengono di seguito proposte alcune tecnologie analoghe non reputate altrettanto valide:
+\begin{itemize}
+	\item \textbf{Subversion}: sistema di controllo versione centralizzato, reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{https://subversion.apache.org/}
+	\end{center}
+\end{itemize}
+
 \subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
 \begin{itemize}
-	\item \textbf{Considerazioni generali}: ;
-	\item \textbf{Competenza del gruppo}: ;
-	\item \textbf{Usabilità}: ;
-	\item \textbf{Costo economico}: ;
-	\item \textbf{Consumo di risorse}: ;
-	\item \textbf{Sviluppi possibili della tecnologia}: .
+	\item \textbf{Considerazioni generali}: La tecnologia permette di versionare con semplicità software e documentazione prodotta via \LaTeX, ed è facilmente integrabile con altri software per l'integrazione continua e relativa esecuzione automatica di test (come Travis CI) o per il \textit{project management} e relativa associazione dei task (come Wrike), permettendo dunque di perseguire attivamente obiettivi di qualità di prodotto;
+	\item \textbf{Competenza del gruppo e facilità di utilizzo}: Benché alcuni membri del gruppo avessero già familiarità con l'uso della tecnologia, per altri la comprensione del meccanismo e della filosofia su cui si basa Git è stato inizialmente un problema non banale. Tuttavia, la condivisione delle conoscenze dei membri più esperti e lo studio individuale della vasta e ben esplicativa documentazione ha permesso al gruppo di padroneggiare la tecnologia (compresa la sua integrazione) nei confini degli obiettivi di progetto;
+	\item \textbf{Costo economico}: La tecnologia è open source e reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{https://git-scm.com/}
+	\end{center}
+	Si riportano per completezza anche i link per il reperimento degli strumenti utilizzati in relazione alla tecnologia:
+	\begin{itemize}
+		\item \textbf{GitKraken}: \url{https://www.gitkraken.com/} 
+		\item \textbf{GitHub}: \url{https://github.com}
+	\end{itemize}
+
+	\item \textbf{Consumo di risorse e compatibilità}: Git è compatibile con i maggiori sistemi operativi e richiede risorse in termini trascurabili per la dotazione tecnologica del gruppo;
+	\item \textbf{Supporto e sviluppi possibili della tecnologia}: La tecnologia gode di ampio supporto e diffusione, e in particolare di una documentazione di facile consultazione che approfondisce il suo utilizzo dal livello estremamente basilare a quello più raffinato. Non sono inoltre previsti all'oggi sviluppi della tecnologia che possano inficiare sensibilmente il progetto.
 \end{itemize}
 \subsubsection{Proof of Concept}
+Lo studio della tecnologia si concretizza nella realizzazione ed integrazione della repository dedicata ai \textit{PoC}, che ne dimostra la compatibilità con gli obiettivi di prodotto evidenziando nel contempo lo stato delle competenze del gruppo in relazione alla stessa.
 \subsubsection{Aspetti negativi}
+Si ritiene che Git sia caratterizzata da un approccio iniziale meno intuitivo rispetto a tecnologie concorrenti come Subversion, problema comunque mitigato dall'ottima documentazione.
+
 \section{Tabella riepilogativa delle tecnologie}
 
 \end{document}
