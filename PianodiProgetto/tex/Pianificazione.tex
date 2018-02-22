@@ -19,20 +19,20 @@
 	La pianificazione del lavoro stata costruita sulla base delle scadenze elencate alla sezione 1.5 del seguente documento. In base ad esse, si è suddiviso lo sviluppo nei periodi seguenti:
 	\begin{itemize}
 		\item Analisi;
-		\item Consolidamento dei requisiti;
+		\item Consolidamento dei requisiti e delle tecnologie;
 		\item Progettazione e Codifica;
 		\item Validazione e collaudo.
 	\end{itemize}
-
+	\newpage
 	\section{Analisi}
 	Inizia con la formazione del gruppo e termina con la scadenza per la consegna della Revisione dei Requisiti.
 	Durante questo periodo viene fatta un'analisi del capitolato scelto, in particolare vengono svolte le seguenti attività:
 	\begin{itemize}
-		\item \textbf{Norme di Progetto:} vengono individuati gli strumenti e le norme relative ai vari processi per il corretto svolgimento del progetto;
-		\item \textbf{Studio di Fattibilità:} in questa attività vengono studiati i vari capitolati, analizzando i vari pro e contro, scegliendo quale sviluppare;
+		\item \textbf{Individuazione delle norme:} vengono individuati gli strumenti e le norme relative ai vari processi per il corretto svolgimento del progetto;
+		\item \textbf{Analisi dei capitolati:} in questa attività vengono studiati i vari capitolati, analizzando i vari pro e contro, scegliendo quale sviluppare;
 		\item \textbf{Analisi dei Requisiti:} viene effettuata un'analisi approfondita dei requisiti del capitolato che il gruppo ha deciso di sviluppare;
-		\item \textbf{Piano di Progetto:} viene fatta la pianificazione per la realizzazione del progetto suddividendo le risorse disponibili, analizzando i vari rischi in cui si può incombere, realizzando infine il preventivo; 
-		\item \textbf{Piano di Qualifica:} attività in cui si individuano gli obiettivi di qualità che si vuole raggiungere.	
+		\item \textbf{Piano di Progetto:} viene scelto il modello di sviluppo e fatta la pianificazione per la realizzazione del progetto suddividendo le risorse disponibili, analizzando i vari rischi in cui si può incombere, realizzando infine il preventivo; 
+		\item \textbf{Pianificazione della qualità:} attività in cui si individuano gli obiettivi di qualità che si vuole raggiungere.	
 	\end{itemize}
 	
 	\subsection{Analisi - Diagramma di Gantt}
@@ -41,29 +41,30 @@
 		\caption{Diagramma di Gantt di Analisi}\label{fig:1}	
 	\end{figure}
 	\newpage
-	\section{Consolidamento dei requisiti} Inizia dopo l'esito della Revisione dei Requisiti e termina con la consegna per la Revisione di Progettazione. Questa attività consiste nel migliorare e consolidare i requisiti individuati durante il periodo di Analisi e consolidare le tecnologie che verranno usate per lo sviluppo del prodotto. In particolare viene svolto:
+	\section{Consolidamento dei requisiti e delle tecnologie} Inizia dopo l'esito della Revisione dei Requisiti e termina con la consegna per la Revisione di Progettazione. Questa attività consiste nel migliorare e consolidare i requisiti individuati durante il periodo di Analisi e consolidare le tecnologie che verranno usate per lo sviluppo del prodotto. In particolare viene svolto:
 
 	\begin{itemize}	
-		\item \textbf{Incremento e Verifica}: vengono incrementati e verificati, se necessario, i documenti già redatti, correggendo i difetti emersi nell'esito della Revisione dei Requisiti e vengono affinati, ed eventualmente ampliati, i requisiti analizzati durante il periodo di Analisi secondo le indicazioni ricevute durante l'esito;
-		\item \textbf{Technology Baseline:} vengono analizzate nel dettaglio le tecnologie scelte per il progetto individuando eventuali rischi delle stesse e mitigati mediante la realizzazione di un \textit{Proof of Concept} utile per il prodotto finale;
+		\item \textbf{Incremento e Verifica}: vengono incrementati e verificati, se necessario, i documenti già redatti, correggendo i difetti emersi nell'esito della Revisione dei Requisiti e ampliandoli e adeguandoli in base allo sviluppo del progetto;
+		\item \textbf{Consolidamento dei requisiti}: vengono affinati, ed eventualmente ampliati, i requisiti analizzati durante il periodo di Analisi secondo le indicazioni ricevute durante l'esito;
+		\item \textbf{Technology Baseline:} vengono analizzate nel dettaglio le tecnologie scelte per il progetto individuando eventuali rischi delle stesse e mitigati mediante la realizzazione di un \glossario{Proof of Concept}{Proof of Concept} utile per il prodotto finale;
 	\end{itemize}
 
-	\subsection{Consolidamento dei requisiti - Diagramma di Gantt}
+	\subsection{Consolidamento dei requisiti e delle tecnologie - Diagramma di Gantt}
 	\begin{figure}[H]
-		\includegraphics[width=\linewidth]{pianificazione/Consolidamento.jpg}	
-		\caption{Diagramma di Gantt di Consolidamento dei Requisiti}\label{fig:2}
+		\includegraphics[width=\linewidth]{pianificazione/ConsolidamentoGantt.jpg}	
+		\caption{Diagramma di Gantt di Consolidamento dei Requisiti e delle tecnologie}\label{fig:2}
 	\end{figure}
 	\newpage
 	\section{Progettazione e Codifica}
 	Inizia dopo la fine del periodo di Consolidamento e termina con la consegna per la Revisione di Qualifica. Durante questa periodo vengono svolte le seguenti attività:
 	\begin{itemize}
 		\item \textbf{Incremento e Verifica}: vengono incrementati e verificati, se necessario, i documenti già redatti, correggendo i difetti emersi nell'esito della Revisione di Progettazione;	
-		\item \textbf{Progettazione:} vengono individuati i design pattern e costruita l'architettura del prodotto realizzando diagrammi di classi e di sequenza, il lavoro svolto rappresenterà la Product Baseline;
+		\item \textbf{Progettazione:} vengono individuati i design pattern e costruita l'architettura del prodotto realizzando diagrammi di classi e di sequenza, il lavoro svolto rappresenterà la \glossario{Product Baseline}{Product Baseline};
 		\item \textbf{Codifica:} consiste nella stesura del primo ciclo di codice per la creazione del prodotto che soddisfi i requisiti obbligatori individuati, aggiunti uno ad uno in modo incrementale;
 	\end{itemize}
 	\subsection{Progettazione e Codifica - Diagramma di Gantt}
 	\begin{figure}[H]
-		\includegraphics[width=\linewidth]{pianificazione/ProgettazioneCodifica.png}	
+		\includegraphics[width=\linewidth]{pianificazione/ProgettazioneCodificaGantt.jpg}	
 		\caption{Diagramma di Gantt di Progettazione e Codifica}\label{fig:3}	
 	\end{figure}
 	\newpage
@@ -77,7 +78,7 @@
 	\end{itemize}
 	\subsection{Validazione e collaudo - Diagramma di Gantt}
 	\begin{figure}[H]
-		\includegraphics[width=\linewidth]{pianificazione/ValidazioneCollaudo.jpg}	
+		\includegraphics[width=\linewidth]{pianificazione/ValidazioneCollaudoGantt.jpg}	
 		\caption{Diagramma di Gantt di Validazione e collaudo}\label{fig:4}	
 	\end{figure}
 \end{document}
