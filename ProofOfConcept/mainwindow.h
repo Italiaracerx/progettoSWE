@@ -1,20 +1,30 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "node.h"
+
 #include <QMainWindow>
-class QGraphicsView;
+class GraphManager;
 class QVBoxLayout;
-class QGraphicsScene;
+class GraphPrinter;
+class QPushButton;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent,QGraphicsScene &Scene);
+    MainWindow(QWidget *parent, GraphManager &Scene);
     ~MainWindow();
-
 private:
-    QGraphicsView *GraphTable;
+    GraphManager *Model;
+    GraphPrinter *GraphTable;
+    QPushButton* ButtonNode;
+    QPushButton* ButtonArc;
+    Node *First;
+private slots:
+    void newNode();
+    void newArc();
+    void addItem();
 };
 
 #endif // MAINWINDOW_H

@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     GraphManager Model;
     MainWindow w(0,Model);
-    w.show();
+    w.showMaximized();
 
     return a.exec();
 }

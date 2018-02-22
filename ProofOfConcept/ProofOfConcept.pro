@@ -28,10 +28,12 @@ SOURCES += \
         mainwindow.cpp \
     node.cpp \
     graphmanager.cpp \
-    arc.cpp
+    arc.cpp \
+    graphprinter.cpp
 
 HEADERS += \
         mainwindow.h \
     node.h \
     graphmanager.h \
-    arc.h
+    arc.h \
+    graphprinter.h

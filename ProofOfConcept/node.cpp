@@ -1,14 +1,17 @@
 #include "arc.h"
 #include "node.h"
 
-Node::Node(const qreal &x, const qreal &y, const qreal &diameter):
+Node::Node(const qreal &x, const qreal &y, const qreal &diameter,const QColor& color,const int importance):
     QGraphicsEllipseItem(x,y,diameter,diameter),
     MyArcs(QVector<Arc*>())
 {
     setPos(x,y);
     //setto i flag in modo tale che l'oggetto si possa muovere e invii segnali alla scena quando cambia posizione
     setFlag(QGraphicsItem::ItemIsMovable);
+    setFlag(QGraphicsItem::ItemIsSelectable);
     setFlag(QGraphicsItem::ItemSendsScenePositionChanges);
+    this->setBrush(color);
+    this->setZValue(importance);
 }
 
 QVariant Node::itemChange(QGraphicsItem::GraphicsItemChange change, const QVariant &value)
@@ -32,7 +35,8 @@ void Node::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 }
 
 
-void Node::addLine(Arc *line, bool Point1)
+
+void Node::addLine(Arc *line)
 {
     //qt ha un hiding degli oggetti buono quindi non posso passare solo il punto della linea interessato perchè non riesco
     //ad accederci (sono privati quindi manco con l'ereditarietà) per questo motivo passo la linea intera e se questo nodo
