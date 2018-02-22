@@ -11,7 +11,7 @@ Arc::Arc(const QGraphicsItem *start, const QGraphicsItem *end, QGraphicsItem *pa
 {
     setPen(QPen(myColor));
     //ha la priorità piu bassa viene mostrato sotto di tutto
-    this->setZValue(-1);
+    this->setZValue(10);
 }
 
 
@@ -21,6 +21,7 @@ void Arc::updatePosition()
     //questa soluzione per trovare i punti è buona ma pesante come un mattone il problema è che ritornare la pos degli
     //oggetti stessi pare non funzionare quindi devo mapparli
     //questo porta a mappare 2 volte se sto muovendo l'oggetto, qui e per disegnarlo
+    //devo creare e settare una linea da centro a centro cosi quando paint opera riuscirà a renderizzare la linea correttamente
     QLineF line(mapFromItem(starting,starting->boundingRect().center()),mapFromItem(ending,ending->boundingRect().center()));
     setLine(line);
 }
@@ -43,6 +44,10 @@ void Arc::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
                 line().p2().x()-cos((line().angle()/360)*M_PI*2)*(GraphManager::NODES_DIAMETER/2),
                 line().p2().y()+sin((line().angle()/360)*2*M_PI)*(GraphManager::NODES_DIAMETER/2)
                 );
+    //mette la coda della freccia sulla circonferenza nel punto di intersezione con la retta
+    QPointF arrowTail=QPointF(line().p1().x()+cos((line().angle()/360)*M_PI*2)*(GraphManager::NODES_DIAMETER/2),
+                line().p1().y()-sin((line().angle()/360)*2*M_PI)*(GraphManager::NODES_DIAMETER/2)
+                );
     //disegna gli altri due punti sottraendo al punt della freccia con 60° angolo
     QPointF arrowP1 = arrowPoint - QPointF(sin(line().angle()/360*M_PI*2+M_PI/3) * ARROW_HEIGHT,
                                         +cos(line().angle()/360*M_PI*2+M_PI/3) * ARROW_HEIGHT);
@@ -52,8 +57,8 @@ void Arc::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
     arrowHead.clear();
     //qvector permette di inserire cosi punti in un array
     arrowHead << arrowPoint << arrowP1 << arrowP2;
-    //disegna la linea
-    painter->drawLine(line());
+    //disegna la linea dalle due circonferenze non dai centri
+    painter->drawLine(arrowTail,arrowPoint);
     //disegna la freccia
     painter->drawPolygon(arrowHead);
 }

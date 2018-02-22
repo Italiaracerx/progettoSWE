@@ -16,11 +16,12 @@ public:
     MainWindow(QWidget *parent, GraphManager &Scene);
     ~MainWindow();
 private:
-    GraphManager *Model;
     GraphPrinter *GraphTable;
     QPushButton* ButtonNode;
     QPushButton* ButtonArc;
+    GraphManager *Model;
     Node *First;
+
 private slots:
     void newNode();
     void newArc();

@@ -4,7 +4,7 @@
 #include <QGraphicsView>
 
 class QMenu;
-
+//non fa nulla avevo un idea ma si è dimostrata fallimentare comunque terrei il wrapper se mai servisse aggiungere roba
 class GraphPrinter:public QGraphicsView
 {
 public:

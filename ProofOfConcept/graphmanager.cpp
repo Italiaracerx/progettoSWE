@@ -20,9 +20,21 @@ GraphManager::GraphManager():
     addLineBetween(Nodes[2],Nodes[0]);
 }
 
+GraphManager::~GraphManager()
+{
+    //cancello gli elementi
+    for(QVector<Node*>::iterator i=Nodes.begin();i!=Nodes.end();++i)
+        delete (*i);
+    for(QList<QGraphicsLineItem*>::iterator i=Arcs.begin();i!=Arcs.end();++i)
+        delete (*i);
+}
+
 void GraphManager::addNodes(const qreal &x, const qreal &y)
 {
-    Node* t=new Node(x,y,NODES_DIAMETER,Qt::darkCyan);
+
+    QColor tmp;
+    tmp.setRgb(qrand() % ((255 + 1) - 0) + 0,qrand() % ((255 + 1) - 0) + 0,qrand() % ((255 + 1) - 0) + 0);
+    Node* t=new Node(x,y,NODES_DIAMETER,tmp);
     Nodes.push_back(t);
     this->addItem(t);
 }

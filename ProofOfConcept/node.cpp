@@ -1,10 +1,15 @@
 #include "arc.h"
 #include "node.h"
 
+int Node::NODE_NUMBER=0;
+
 Node::Node(const qreal &x, const qreal &y, const qreal &diameter,const QColor& color,const int importance):
     QGraphicsEllipseItem(x,y,diameter,diameter),
-    MyArcs(QVector<Arc*>())
+    MyArcs(QVector<Arc*>()),
+    info(++NODE_NUMBER)
 {
+    //metto un informazione a caso
+
     setPos(x,y);
     //setto i flag in modo tale che l'oggetto si possa muovere e invii segnali alla scena quando cambia posizione
     setFlag(QGraphicsItem::ItemIsMovable);

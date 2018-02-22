@@ -23,9 +23,12 @@ public:
     void addLine(Arc *line);
     //todo in maniera decente
     bool removeLine(Arc *line);
-    QPointF pos() const;
+
 private:
-    void updateArcs();
+    static int NODE_NUMBER;
+
     QVector<Arc*> MyArcs;
+    const int info;
+    void updateArcs();
 };
 #endif // NODE_H

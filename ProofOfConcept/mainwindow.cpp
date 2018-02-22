@@ -5,9 +5,9 @@
 #include <QGraphicsView>
 #include <QPushButton>
 #include <QLayout>
-//QGraphicsScene è del model serve solo a gestire i nodi non ha resa grafica
-//QGraphicsView renderizza gli oggetti descritti in una scene
-
+//GraphManager è del model serve solo a gestire i nodi non ha resa grafica
+//GraphPrinter renderizza gli oggetti descritti nel modello
+//questa classe potrebbe avere merda che non ha senso di esistere qua
 
 MainWindow::MainWindow(QWidget *parent, GraphManager &Scene)
     : QMainWindow(parent),
@@ -18,10 +18,6 @@ MainWindow::MainWindow(QWidget *parent, GraphManager &Scene)
 {
     //dico alla View che disegna chi è il suo model
     GraphTable->setScene(&Scene);
-    //prendo il layout della pagina principale e la metto a schermo pieno
-    QLayout* l=layout();
-    l->setSpacing(0);
-    l->setContentsMargins(0, 0, 0, 0);
     //dico che il il grafo è centrato nella pagina principale e lo aggiungo al layout
     this->setCentralWidget(GraphTable);
     ButtonArc->move(100,0);
@@ -32,7 +28,15 @@ MainWindow::MainWindow(QWidget *parent, GraphManager &Scene)
 
 MainWindow::~MainWindow()
 {
-
+    //sconnetto i segnali
+    disconnect(ButtonNode,SIGNAL(clicked(bool)),this,SLOT(newNode()));
+    disconnect(ButtonArc,SIGNAL(clicked(bool)),this,SLOT(newArc()));
+    disconnect(Model,SIGNAL(selectionChanged()),this,SLOT(addItem()));
+    //cancello tutti i figli dovrebbe essere fatto automaticamente via segnale
+    //but posso vedere questo ma non i segnali
+    delete GraphTable;
+    delete ButtonArc;
+    delete ButtonNode;
 }
 
 void MainWindow::newNode()
@@ -57,10 +61,11 @@ void MainWindow::addItem()
     else
     {
 
-        if(Model->selectedItems().size()>0){
-        Model->addLineBetween(First,(Node*)Model->selectedItems()[0]);
-        disconnect(Model,SIGNAL(selectionChanged()),this,SLOT(addItem()));
-        First=0;
+        if(Model->selectedItems().size()>0)
+        {
+            Model->addLineBetween(First,(Node*)Model->selectedItems()[0]);
+            disconnect(Model,SIGNAL(selectionChanged()),this,SLOT(addItem()));
+            First=0;
         }
     }
 }
