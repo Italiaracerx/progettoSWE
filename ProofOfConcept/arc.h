@@ -14,7 +14,7 @@ public:
         start=0,
         end=1
     };
-    Arc(const Node &start, const Node &end, QGraphicsItem* parent=0);
+    Arc(Node &start,Node &end, QGraphicsItem* parent=0);
     //metodo che definisce la forma della freccia la punta bisogna definirla a mano
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *,QWidget *);
     // ridefinizione migliore della hitbox per selezionare le frecce ora è un triangolo con la base sulla freccia
@@ -30,8 +30,8 @@ private:
     QPolygonF arrowHead;
     //colore della freccia, da chi parte e dove arriva
     const QColor myColor;
-    const QGraphicsItem *starting;
-    const QGraphicsItem *ending;
+    Node *starting;
+    Node *ending;
 
 };
 

@@ -23,7 +23,7 @@ private:
     QPushButton* ButtonNode2;
     QTextEdit* errorLog;
     GraphManager *Model;
-    Node *First;
+    QGraphicsItem *First;
 
 private slots:
     void newNode();

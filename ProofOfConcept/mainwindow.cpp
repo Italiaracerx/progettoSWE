@@ -48,12 +48,15 @@ MainWindow::~MainWindow()
     delete ButtonNode;
     delete ButtonNode2;
 }
-
+//dice al model di aggiugere un nodo in posizione 0 0
 void MainWindow::newNode()
 {
-    Model->addNodes(10,10);
+    Model->addNodes(0,0);
 }
 
+//connette l'evento del modello che segnala se un oggetto è stato messo in focus
+//a uno slot successivamente definito
+//così asincronamente attende che 2 oggetti vengano focussati
 void MainWindow::newArc()
 {
 
@@ -63,9 +66,11 @@ void MainWindow::newArc()
     connect(Model,SIGNAL(selectionChanged()),this,SLOT(addItem()));
 }
 
+//dice al model di elimare l'oggetto in focus
 void MainWindow::removeFocused()
 {
-
+    //dato che potrebbe essere chiamato senza oggetti in focus non chiedo nemmeno al model l'operazione idem piu avanti
+    //se passasse potrebbe generare index out of bound
     if(Model->selectedItems().size()>0)
     {
         Model->removeFocusItem();
@@ -73,31 +78,41 @@ void MainWindow::removeFocused()
 }
 
 
-
+//slot per ottenere i due oggetti
+//ogni volta il model segnala che è cambiato il focus
+//controllo se c'e un oggetto in focus
 void MainWindow::addItem()
 {
+    //se devo ancora avere un oggetto
     if(!First)
     {
+        //se c'e un oggetto in focus
         if(Model->selectedItems().size()>0){
              errorLog->setText("Primo oggetto Selezionato");
-            First=(Node*)Model->selectedItems()[0];
+            First=Model->selectedItems()[0];//lo prendo
         }
     }
     else
     {
-
+    //se ho gia selezionato un oggetto
         if(Model->selectedItems().size()>0)
         {
+            //se ho un altro oggetto in focus provo a creare la linea
+            //il modello controlla che gli oggetti siano nodi etc
             if(Model->addLineBetween(First,(Node*)Model->selectedItems()[0]))
             {
+                //se ha successo disconnetto il segnale di questo evento
                 disconnect(Model,SIGNAL(selectionChanged()),this,SLOT(addItem()));
 
                 errorLog->setText("");
             }
             else
             {
+                //Altrimenti lancio un errore
                 errorLog->setText("Hai selezionato qualcosa di sbagliato riprova a selezionare gli oggetti");
             }
+            //in ogni caso se ho successo o fallisco per dichiaro di non avere alcun oggetto in coda per essere il primo punto
+            //di un arco
             First=NULL;
         }
     }
