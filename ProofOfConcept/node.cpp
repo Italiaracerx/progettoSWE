@@ -1,22 +1,40 @@
 #include "arc.h"
 #include "node.h"
 
+#include <QPainter>
+
 int Node::NODE_NUMBER=0;
 
 Node::Node(const qreal &x, const qreal &y, const qreal &diameter,const QColor& color,const int importance):
     QGraphicsEllipseItem(x,y,diameter,diameter),
     MyArcs(QVector<Arc*>()),
-    info(++NODE_NUMBER)
+    info(++NODE_NUMBER),
+    myColor(color),
+    diameter(diameter)
 {
-    //metto un informazione a caso
 
     setPos(x,y);
     //setto i flag in modo tale che l'oggetto si possa muovere e invii segnali alla scena quando cambia posizione
     setFlag(QGraphicsItem::ItemIsMovable);
     setFlag(QGraphicsItem::ItemIsSelectable);
     setFlag(QGraphicsItem::ItemSendsScenePositionChanges);
-    this->setBrush(color);
+    setBrush(myColor);
     this->setZValue(importance);
+}
+
+void Node::paint(QPainter *painter, const QStyleOptionGraphicsItem * option, QWidget * p)
+{
+    QPen myPen = pen();
+    myPen.setColor(myColor);
+    painter->setPen(myPen);
+    painter->setBrush(myColor);
+    QGraphicsEllipseItem::paint(painter,option,p);
+    QPointF center=rect().center();
+    //fix della posizione della scritta
+    center.setX(center.x()-diameter/16);
+    center.setY(center.y()+diameter/16);
+    painter->drawText(center,QVariant(info).toString());
+
 }
 
 QVariant Node::itemChange(QGraphicsItem::GraphicsItemChange change, const QVariant &value)

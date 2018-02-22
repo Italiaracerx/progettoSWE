@@ -13,6 +13,8 @@ public:
     //probabilmente sarebbe meglio chiedere delle coordinate del centro e poi costruire tutto conoscendo
     //forse lo faro in seguito
 
+    //ridefinisco paint per stampare l'info al centro del nodo
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *,QWidget *);
     //metodo chiamato quando l'item cambia posizione
     //ridefinisco affichè aggiorni la posizione della linea collegata
     //ritorna la sua nuova posizione
@@ -26,9 +28,10 @@ public:
 
 private:
     static int NODE_NUMBER;
-
     QVector<Arc*> MyArcs;
     const int info;
+    QColor myColor;
+    const qreal diameter;
     void updateArcs();
 };
 #endif // NODE_H
