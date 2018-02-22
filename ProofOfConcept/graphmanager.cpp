@@ -44,8 +44,8 @@ bool GraphManager::addLineBetween(Node *Node1, Node *Node2)
     //se i nodi esistono nella mia lista di nodi(non si sa mai)
     int pos1=Nodes.indexOf(Node1),pos2=Nodes.indexOf(Node2);
     //ritorna -1 se non esiste
-    bool nodesExists=(pos1>=0&&pos2>=0);
-    if(nodesExists&&Node1!=Node2)
+    bool nodesExists=(pos1>=0&&pos2>=0)&&Node1!=Node2;
+    if(nodesExists)
     {
         //creo la linea e aggiungo ai due nodi i punti
         Arc *temp=new Arc(*Nodes.at(pos1),*Nodes.at(pos2));

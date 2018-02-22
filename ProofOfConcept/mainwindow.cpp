@@ -56,9 +56,10 @@ void MainWindow::newNode()
 
 void MainWindow::newArc()
 {
+
+    errorLog->setText("Seleziona due Nodi");
     First=0;
     Model->clearSelection();
-    errorLog->setText("");
     connect(Model,SIGNAL(selectionChanged()),this,SLOT(addItem()));
 }
 
@@ -77,22 +78,27 @@ void MainWindow::addItem()
 {
     if(!First)
     {
-        if(Model->selectedItems().size()>0)
-        First=(Node*)Model->selectedItems()[0];
+        if(Model->selectedItems().size()>0){
+             errorLog->setText("Primo oggetto Selezionato");
+            First=(Node*)Model->selectedItems()[0];
+        }
     }
     else
     {
 
         if(Model->selectedItems().size()>0)
         {
-            if(Model->addLineBetween(First,(Node*)Model->selectedItems()[0])){
-            disconnect(Model,SIGNAL(selectionChanged()),this,SLOT(addItem()));
+            if(Model->addLineBetween(First,(Node*)Model->selectedItems()[0]))
+            {
+                disconnect(Model,SIGNAL(selectionChanged()),this,SLOT(addItem()));
+
+                errorLog->setText("");
             }
             else
             {
-            errorLog->setText("Hai selezionato qualcosa di sbagliato riprova a selezionare gli oggetti");
-            First=0;
+                errorLog->setText("Hai selezionato qualcosa di sbagliato riprova a selezionare gli oggetti");
             }
+            First=NULL;
         }
     }
 }
