@@ -25,6 +25,15 @@ Node::Node(const qreal &x, const qreal &y, const qreal &diameter,const QColor& c
 void Node::paint(QPainter *painter, const QStyleOptionGraphicsItem * option, QWidget * p)
 {
     QPen myPen = pen();
+    if(isSelected()){
+
+        setBrush(Qt::yellow);
+    }
+    else
+    {
+        setBrush(myColor);
+    }
+
     myPen.setColor(myColor);
     painter->setPen(myPen);
     painter->setBrush(myColor);
@@ -58,7 +67,6 @@ void Node::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 }
 
 
-
 void Node::addLine(Arc *line)
 {
     //qt ha un hiding degli oggetti buono quindi non posso passare solo il punto della linea interessato perchè non riesco
@@ -67,14 +75,20 @@ void Node::addLine(Arc *line)
     MyArcs.push_back(line);
     //aggiorno il punto con le mie coordinate di centro
 }
-bool Node::removeLine(Arc *line)
+
+void Node::removeLine(Arc *line)
 {
-    //dopo aver chiamato questo starà a qualcun altro distruggere la linea
-    //non lo ritengo competenza di un nodo distruggere gli archi ma del modellatore del grafo
-    MyArcs.indexOf(line);
+    MyArcs.removeAll(line);
 }
+
+const QVector<Arc *> & Node::getArcList() const
+{
+    return MyArcs;
+}
+
 void Node::updateArcs()
 {
     for(QVector<Arc*>::iterator i=MyArcs.begin();i!=MyArcs.end();++i)
         (*i)->updatePosition();
 }
+
