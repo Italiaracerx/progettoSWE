@@ -34,8 +34,7 @@ Dove:
 \noindent Le criticità sono presentate secondo il seguente schema: 
 
 \begin{itemize}
-	\item Nome;
-	\item Codice;
+	\item Codice - Nome;
 	\item Descrizione;
 	\item Tecnologia risolutiva proposta;
 	\item Tecnologie alternative scartate;
@@ -44,9 +43,39 @@ Dove:
 
 \section{Dettaglio delle criticità}
 
-\subsection{Compilazione in C++ di QT e Speect via CMAKE}
+\subsection{CSA01 - Compilazione in C++ di QT e Speect}
 
-\subsubsection{Codice}
+\subsubsection{Descrizione}
+Potrebbe rappresentare una criticità di sviluppo la corretta compilazione in linguaggio C++ delle librerie QT e Speect. In particolare, QT fa uso della tecnologia proprietaria \textit{qmake} che deve integrarsi correttamente con la compilazione di Speect.
+
+\subsubsection{Tecnologia risolutiva proposta}
+La corretta compilazione delle librerie avverrà tramite la tecnologia CMAKE (TS03).
+
+\subsubsection{Proof of Concept}
+
+\subsection{CSA02 - Configurazione di Speect}
+
+\subsubsection{Descrizione}
+Potrebbe rappresentare una criticità di sviluppo la corretta configurazione di Speect, in relazione alla documentazione reperibile al seguente link:
+
+\begin{center}
+	\url{http://speect.sourceforge.net/installation.html#configuration-and-compilation}
+\end{center}
+
+\subsubsection{Tecnologia risolutiva proposta}
+La corretta configurazione di Speect avverà mediante la tecnologia CMAKE (TS03).
+
+\subsubsection{Proof of Concept}
+
+\subsection{CSA03 - Manipolazione della voice configurata}
+
+\subsubsection{Descrizione}
+
+\subsubsection{Tecnologia risolutiva proposta}
+
+\subsubsection{Proof of Concept}
+
+\subsection{CSM04 - Disegno e manipolazione di elementi grafici attraverso il cursore}
 
 \subsubsection{Descrizione}
 
@@ -56,75 +85,31 @@ Dove:
 
 \subsubsection{Proof of Concept}
 
-\subsection{Configurazione di Speect}
-
-\subsubsection{Codice}
+\subsection{CSB05 - Efficienza delle operazioni di salvataggio e ripristino di uno stato di Speect}
 
 \subsubsection{Descrizione}
 
 \subsubsection{Tecnologia risolutiva proposta}
-
-\subsubsection{Tecnologie alternative scartate}
 
 \subsubsection{Proof of Concept}
 
-\subsection{Manipolazione della voice configurata}
+\subsection{CPA01 - Incapsulamento di Speect tramite oggetti}
 
 \subsubsection{Codice}
 
 \subsubsection{Descrizione}
 
 \subsubsection{Tecnologia risolutiva proposta}
-
-\subsubsection{Tecnologie alternative scartate}
 
 \subsubsection{Proof of Concept}
 
-\subsection{Disegno e manipolazione di elementi grafici attraverso il cursore}
+\subsection{COM01 - Corretta implementazione dei software per il testing automatico in relazione alle librerie QT e Speect}
 
 \subsubsection{Codice}
 
 \subsubsection{Descrizione}
 
 \subsubsection{Tecnologia risolutiva proposta}
-
-\subsubsection{Tecnologie alternative scartate}
-
-\subsubsection{Proof of Concept}
-
-\subsection{Efficienza delle operazioni di salvataggio e ripristino di uno stato di Speect}
-
-\subsubsection{Codice}
-
-\subsubsection{Descrizione}
-
-\subsubsection{Tecnologia risolutiva proposta}
-
-\subsubsection{Tecnologie alternative scartate}
-
-\subsubsection{Proof of Concept}
-
-\subsection{Incapsulamento di Speect tramite oggetti}
-
-\subsubsection{Codice}
-
-\subsubsection{Descrizione}
-
-\subsubsection{Tecnologia risolutiva proposta}
-
-\subsubsection{Tecnologie alternative scartate}
-
-\subsubsection{Proof of Concept}
-
-\subsection{Corretta implementazione dei software per il testing automatico in relazione alle librerie QT e Speect}
-
-\subsubsection{Codice}
-
-\subsubsection{Descrizione}
-
-\subsubsection{Tecnologia risolutiva proposta}
-
-\subsubsection{Tecnologie alternative scartate}
 
 \subsubsection{Proof of Concept}
 
