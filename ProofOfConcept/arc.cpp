@@ -3,12 +3,14 @@
 #include <QPen>
 #include <QPainter>
 #include <graphmanager.h>
-Arc::Arc(const QGraphicsItem *start, const QGraphicsItem *end, QGraphicsItem *parent):
+Arc::Arc(Node &start, Node &end, QGraphicsItem *parent):
     QGraphicsLineItem(parent),
-    starting(start),
-    ending(end),
+    starting(&start),
+    ending(&end),
     myColor(Qt::black)
 {
+
+    setFlag(QGraphicsItem::ItemIsSelectable);
     setPen(QPen(myColor));
     //ha la priorità piu bassa viene mostrato sotto di tutto
     this->setZValue(10);
@@ -22,21 +24,49 @@ void Arc::updatePosition()
     //oggetti stessi pare non funzionare quindi devo mapparli
     //questo porta a mappare 2 volte se sto muovendo l'oggetto, qui e per disegnarlo
     //devo creare e settare una linea da centro a centro cosi quando paint opera riuscirà a renderizzare la linea correttamente
-    QLineF line(mapFromItem(starting,starting->boundingRect().center()),mapFromItem(ending,ending->boundingRect().center()));
+    //sempre upcasting da nodo alla sua classe base
+    QLineF line(mapFromItem((QGraphicsEllipseItem*)starting,((QGraphicsEllipseItem*)starting)->boundingRect().center()),mapFromItem(((QGraphicsEllipseItem*)ending),((QGraphicsEllipseItem*)ending)->boundingRect().center()));
     setLine(line);
 }
+
+Node *Arc::getItem(NodePoint x)
+{
+    return x?ending:starting;
+}
+
+bool Arc::operator==(const Arc &item) const
+{
+    return starting==item.starting&&ending==item.ending;
+}
+
+
 
 
 void Arc::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
 {
     //se i due cerchi si sovrappongono non disegno nulla
-    if (starting->collidesWithItem(ending))
+    //devo castare perchè non posso avere la definizione di nodo nella classe
+    //è la classe base anyway
+    if (((QGraphicsEllipseItem*)starting)->collidesWithItem((QGraphicsEllipseItem*)ending))
             return;
     //altrimenti prendo le cose che mi servono
+
     QPen myPen = pen();
-    myPen.setColor(myColor);
-    painter->setPen(myPen);
-    painter->setBrush(myColor);
+    if(isSelected()){
+
+        myPen.setColor(Qt::green);
+        painter->setPen(myPen);
+        painter->setBrush(Qt::green);
+
+
+    }
+    else
+    {
+        myPen.setColor(myColor);
+        painter->setPen(myPen);
+        painter->setBrush(myColor);
+    }
+
     //eeeee
     //Pura Matematica per calcolare i 3 punti della freccia have fun
     //mette la punta della freccia sulla circonferenza nello stesso punto del'intersezione della retta
@@ -63,11 +93,29 @@ void Arc::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
     painter->drawPolygon(arrowHead);
 }
 
-QRectF Arc::boundingRect() const
+QPainterPath Arc::shape() const
 {
-    qreal width=(ARROW_HEIGHT+pen().width())/2.0;
-    //la ingrosso la hit box e render box della freccia
-    return QRectF(line().p1(),line().p2())
-            .normalized()
-            .adjusted(-width,-width,width,width);
+    QPainterPath path;
+    QPolygonF t;
+    //sempre matematica
+    QPointF arrowPoint(
+                line().p2().x()-cos((line().angle()/360)*M_PI*2)*(GraphManager::NODES_DIAMETER/2),
+                line().p2().y()+sin((line().angle()/360)*2*M_PI)*(GraphManager::NODES_DIAMETER/2)
+                );
+    //mette la coda della freccia sulla circonferenza nel punto di intersezione con la retta
+    QPointF arrowTail=QPointF(line().p1().x()+cos((line().angle()/360)*M_PI*2)*(GraphManager::NODES_DIAMETER/2),
+                line().p1().y()-sin((line().angle()/360)*2*M_PI)*(GraphManager::NODES_DIAMETER/2)
+                );
+    //disegna gli altri due punti sottraendo al punta della freccia con 0° angolo
+    QPointF arrowP1 = arrowPoint - QPointF(sin(line().angle()/360*M_PI*2) * ARROW_HEIGHT/2,
+                                        +cos(line().angle()/360*M_PI*2) * ARROW_HEIGHT/2);
+    QPointF arrowP2 = arrowPoint + QPointF(sin(line().angle()/360*M_PI*2) * ARROW_HEIGHT/2,
+                                        +cos(line().angle()/360*M_PI*2) * ARROW_HEIGHT/2);
+    t.clear();
+    //crea il poligono
+    t<<arrowP1<<arrowP2<<arrowTail<<arrowP1;
+    path.addPolygon(t);
+    return path;
+
 }
+

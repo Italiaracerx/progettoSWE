@@ -12,7 +12,6 @@ public:
     Node (const qreal& x, const qreal& y, const qreal& diameter, const QColor &color, const int importance=1);
     //probabilmente sarebbe meglio chiedere delle coordinate del centro e poi costruire tutto conoscendo
     //forse lo faro in seguito
-
     //ridefinisco paint per stampare l'info al centro del nodo
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *,QWidget *);
     //metodo chiamato quando l'item cambia posizione
@@ -23,9 +22,8 @@ public:
     void mouseReleaseEvent(QGraphicsSceneMouseEvent *event);
     //aggiunto una nuova linea con un punto che parte da questo oggetto
     void addLine(Arc *line);
-    //todo in maniera decente
-    bool removeLine(Arc *line);
-
+    void removeLine(Arc *line);
+    const QVector<Arc *> &getArcList()const;
 private:
     static int NODE_NUMBER;
     QVector<Arc*> MyArcs;

@@ -8,6 +8,7 @@ class GraphManager;
 class QVBoxLayout;
 class GraphPrinter;
 class QPushButton;
+class QTextEdit;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -19,12 +20,15 @@ private:
     GraphPrinter *GraphTable;
     QPushButton* ButtonNode;
     QPushButton* ButtonArc;
+    QPushButton* ButtonNode2;
+    QTextEdit* errorLog;
     GraphManager *Model;
-    Node *First;
+    QGraphicsItem *First;
 
 private slots:
     void newNode();
     void newArc();
+    void removeFocused();
     void addItem();
 };
 
