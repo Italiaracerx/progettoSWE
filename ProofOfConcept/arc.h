@@ -12,26 +12,28 @@ public:
     enum NodePoint
     {
         start=0,
-        end=1
+        end=1,
     };
-    Arc(Node &start,Node &end, QGraphicsItem* parent=0);
+    QRectF boundingRect() const;
+    Arc(int startNode, int endNode, QGraphicsItem* parent=0);
     //metodo che definisce la forma della freccia la punta bisogna definirla a mano
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *,QWidget *);
-    // ridefinizione migliore della hitbox per selezionare le frecce ora è un triangolo con la base sulla freccia
-    //si potrebbe fare di meglio ma appesantirebbe vedremo comunque
-    QPainterPath shape() const;
-    //da chiamare per fare l'update della freccia in modo che punti in maniera coerente
-    void updatePosition();
+   //da chiamare per fare l'update della freccia in modo che punti in maniera coerente
+    void updatePosition(const Arc::NodePoint,const QPointF& end);
+    int getNodeId(NodePoint x)const ;
     //segnala ritorna l'item indicato start o end
-    Node *getItem(NodePoint);
     bool operator==(const Arc& item)const;
+    //   QPainterPath shape() const;
+    QPainterPath shape() const;
 private:
-    const static int ARROW_HEIGHT=10;
+
+    const static int ARROW_HEIGHT=8;
     QPolygonF arrowHead;
     //colore della freccia, da chi parte e dove arriva
     const QColor myColor;
-    Node *starting;
-    Node *ending;
+    int starting;
+    int ending;
+    bool nodeCollides;
 
 };
 

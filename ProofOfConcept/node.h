@@ -5,11 +5,12 @@
 #include <qgraphicsitem.h>
 class Arc;
 
-class Node : public QGraphicsEllipseItem
+class Node : public QObject,public QGraphicsEllipseItem
 {
+    Q_OBJECT
 public:
     //costruisco un nodo  dato un l'angolo superiore sinistro del quadrato in cui è inscritto e il diametro del cerchio, e la dove verrà disegnato
-    Node (const qreal& x, const qreal& y, const qreal& diameter, const QColor &color, const int importance=1);
+    Node (const qreal& x, const qreal& y, const qreal& radius, const QColor &color, const int importance=1);
     //probabilmente sarebbe meglio chiedere delle coordinate del centro e poi costruire tutto conoscendo
     //forse lo faro in seguito
     //ridefinisco paint per stampare l'info al centro del nodo
@@ -21,15 +22,14 @@ public:
     //ridefinito per problemi se "lancio" l'oggetto
     void mouseReleaseEvent(QGraphicsSceneMouseEvent *event);
     //aggiunto una nuova linea con un punto che parte da questo oggetto
-    void addLine(Arc *line);
-    void removeLine(Arc *line);
-    const QVector<Arc *> &getArcList()const;
+    int getId()const;
 private:
     static int NODE_NUMBER;
-    QVector<Arc*> MyArcs;
-    const int info;
+    const int id;
     QColor myColor;
-    const qreal diameter;
+    const qreal myRadius;
     void updateArcs();
+signals:
+    void notifyPositionChange(const Node* Id);
 };
 #endif // NODE_H

@@ -3,33 +3,50 @@
 #include <QPen>
 #include <QPainter>
 #include <graphmanager.h>
-Arc::Arc(Node &start, Node &end, QGraphicsItem *parent):
+#include <qmath.h>
+QRectF Arc::boundingRect() const
+{
+    return QGraphicsLineItem::boundingRect().normalized().adjusted(-ARROW_HEIGHT,-ARROW_HEIGHT,ARROW_HEIGHT,ARROW_HEIGHT);
+}
+
+Arc::Arc(int start,int end, QGraphicsItem *parent):
     QGraphicsLineItem(parent),
-    starting(&start),
-    ending(&end),
+    starting(start),
+    ending(end),
     myColor(Qt::black)
 {
-
+    setLine(0,0,0,0);
     setFlag(QGraphicsItem::ItemIsSelectable);
     setPen(QPen(myColor));
     //ha la priorità piu bassa viene mostrato sotto di tutto
     this->setZValue(10);
 }
 
-
-void Arc::updatePosition()
+void Arc::updatePosition(Arc::NodePoint node,const QPointF& newPoint)
 {
-    //creo la linea e la imposto
-    //questa soluzione per trovare i punti è buona ma pesante come un mattone il problema è che ritornare la pos degli
-    //oggetti stessi pare non funzionare quindi devo mapparli
-    //questo porta a mappare 2 volte se sto muovendo l'oggetto, qui e per disegnarlo
-    //devo creare e settare una linea da centro a centro cosi quando paint opera riuscirà a renderizzare la linea correttamente
-    //sempre upcasting da nodo alla sua classe base
-    QLineF line(mapFromItem((QGraphicsEllipseItem*)starting,((QGraphicsEllipseItem*)starting)->boundingRect().center()),mapFromItem(((QGraphicsEllipseItem*)ending),((QGraphicsEllipseItem*)ending)->boundingRect().center()));
-    setLine(line);
+    QLineF line;
+    if(node==NodePoint::start)
+    {
+       line.setP2(this->line().p2());
+       line.setP1(newPoint);
+    }
+       else
+    {
+
+        line.setP1(this->line().p1());
+        line.setP2(newPoint);
+    }
+    QPointF v=line.p1()-line.p2();
+    qreal x=v.x(),y=v.y();
+    nodeCollides=false;
+    if(((x*x)+(y*y))<=pow((2*GraphManager::NODES_RADIUS),2))
+    {
+        nodeCollides=true;
+    }
+        setLine(line);
 }
 
-Node *Arc::getItem(NodePoint x)
+int Arc::getNodeId(Arc::NodePoint x) const
 {
     return x?ending:starting;
 }
@@ -39,6 +56,28 @@ bool Arc::operator==(const Arc &item) const
     return starting==item.starting&&ending==item.ending;
 }
 
+QPainterPath Arc::shape() const
+{
+    QPainterPath p;
+    QPolygonF head;
+    QPointF point=line().p1()-line().p2();
+    point=(point/qSqrt(point.x()*point.x()+point.y()*point.y()));
+
+    //Pura Matematica per calcolare i 3 punti della freccia have fun
+    QPointF orthogonal(-point.y(),point.x());
+    QPointF arrowPoint=line().p2()+point*GraphManager::NODES_RADIUS;
+    QPointF arrowTail=line().p1()-point*GraphManager::NODES_RADIUS;
+    //disegna gli altri due punti sottraendo al punt della freccia con 60° angolo
+    QPointF arrowP1 = line().p2()+point*(GraphManager::NODES_RADIUS+ARROW_HEIGHT) - orthogonal*(ARROW_HEIGHT+2);
+    QPointF arrowP2 = line().p2()+point*(GraphManager::NODES_RADIUS+ARROW_HEIGHT) + orthogonal*(ARROW_HEIGHT+2);
+    //crea il poligono e lo setta con i nuovi 3 punti
+    head.clear();
+    //creo la hitbox
+    head << arrowPoint << arrowP1 << arrowPoint+point*ARROW_HEIGHT-orthogonal*2 << arrowTail-orthogonal*2<<arrowTail-+orthogonal*2<<arrowP2<<arrowHead;
+    //aggiungo la hitbox
+    p.addPolygon(head);
+    return p;
+}
 
 
 
@@ -47,9 +86,9 @@ void Arc::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
     //se i due cerchi si sovrappongono non disegno nulla
     //devo castare perchè non posso avere la definizione di nodo nella classe
     //è la classe base anyway
-    if (((QGraphicsEllipseItem*)starting)->collidesWithItem((QGraphicsEllipseItem*)ending))
-            return;
     //altrimenti prendo le cose che mi servono
+
+    if(nodeCollides)return;
 
     QPen myPen = pen();
     if(isSelected()){
@@ -67,22 +106,18 @@ void Arc::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
         painter->setBrush(myColor);
     }
 
-    //eeeee
+    QPointF point=line().p1()-line().p2();
+    point=(point/qSqrt(point.x()*point.x()+point.y()*point.y()));
+    QPointF orthogonal(-point.y(),point.x());
     //Pura Matematica per calcolare i 3 punti della freccia have fun
     //mette la punta della freccia sulla circonferenza nello stesso punto del'intersezione della retta
-    QPointF arrowPoint(
-                line().p2().x()-cos((line().angle()/360)*M_PI*2)*(GraphManager::NODES_DIAMETER/2),
-                line().p2().y()+sin((line().angle()/360)*2*M_PI)*(GraphManager::NODES_DIAMETER/2)
-                );
+
     //mette la coda della freccia sulla circonferenza nel punto di intersezione con la retta
-    QPointF arrowTail=QPointF(line().p1().x()+cos((line().angle()/360)*M_PI*2)*(GraphManager::NODES_DIAMETER/2),
-                line().p1().y()-sin((line().angle()/360)*2*M_PI)*(GraphManager::NODES_DIAMETER/2)
-                );
+    QPointF arrowPoint=line().p2()+point*GraphManager::NODES_RADIUS;
+    QPointF arrowTail=line().p1()-point*GraphManager::NODES_RADIUS;
     //disegna gli altri due punti sottraendo al punt della freccia con 60° angolo
-    QPointF arrowP1 = arrowPoint - QPointF(sin(line().angle()/360*M_PI*2+M_PI/3) * ARROW_HEIGHT,
-                                        +cos(line().angle()/360*M_PI*2+M_PI/3) * ARROW_HEIGHT);
-    QPointF arrowP2 = arrowPoint + QPointF(sin(line().angle()/360*M_PI*2-M_PI/3) * ARROW_HEIGHT,
-                                        +cos(line().angle()/360*M_PI*2-M_PI/3) * ARROW_HEIGHT);
+    QPointF arrowP1 = line().p2()+point*(GraphManager::NODES_RADIUS+ARROW_HEIGHT) - orthogonal*ARROW_HEIGHT;
+    QPointF arrowP2 = line().p2()+point*(GraphManager::NODES_RADIUS+ARROW_HEIGHT) + orthogonal*ARROW_HEIGHT;
     //crea il poligono e lo setta con i nuovi 3 punti
     arrowHead.clear();
     //qvector permette di inserire cosi punti in un array
@@ -93,29 +128,4 @@ void Arc::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
     painter->drawPolygon(arrowHead);
 }
 
-QPainterPath Arc::shape() const
-{
-    QPainterPath path;
-    QPolygonF t;
-    //sempre matematica
-    QPointF arrowPoint(
-                line().p2().x()-cos((line().angle()/360)*M_PI*2)*(GraphManager::NODES_DIAMETER/2),
-                line().p2().y()+sin((line().angle()/360)*2*M_PI)*(GraphManager::NODES_DIAMETER/2)
-                );
-    //mette la coda della freccia sulla circonferenza nel punto di intersezione con la retta
-    QPointF arrowTail=QPointF(line().p1().x()+cos((line().angle()/360)*M_PI*2)*(GraphManager::NODES_DIAMETER/2),
-                line().p1().y()-sin((line().angle()/360)*2*M_PI)*(GraphManager::NODES_DIAMETER/2)
-                );
-    //disegna gli altri due punti sottraendo al punta della freccia con 0° angolo
-    QPointF arrowP1 = arrowPoint - QPointF(sin(line().angle()/360*M_PI*2) * ARROW_HEIGHT/2,
-                                        +cos(line().angle()/360*M_PI*2) * ARROW_HEIGHT/2);
-    QPointF arrowP2 = arrowPoint + QPointF(sin(line().angle()/360*M_PI*2) * ARROW_HEIGHT/2,
-                                        +cos(line().angle()/360*M_PI*2) * ARROW_HEIGHT/2);
-    t.clear();
-    //crea il poligono
-    t<<arrowP1<<arrowP2<<arrowTail<<arrowP1;
-    path.addPolygon(t);
-    return path;
-
-}
 
