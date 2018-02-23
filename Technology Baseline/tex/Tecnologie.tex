@@ -56,7 +56,7 @@ Speect è un sistema di \textit{Text To Speech} (TTS) multilingua. Esso offre un
 
 \subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
 
-La tecnologia in esame è vincolata dall'obbligo di utilizzo esplicitato dalla Proponente. Si riportano per completezza alcune Motivazioni generali della scelta e tecnologie concorrenziali:
+La tecnologia in esame è vincolata dall'obbligo di utilizzo esplicitato dalla Proponente. Si riportano per completezza alcune tecnologie concorrenziali:
 
 \begin{itemize}
 	\item \textbf{OpenMary}: sistema di \textit{Text To Speech} (TTS) multilingua opensource scritto in Java e reperibile al seguente link:
@@ -71,11 +71,11 @@ La tecnologia in esame è vincolata dall'obbligo di utilizzo esplicitato dalla P
 
 \subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
 \begin{itemize}
-	\item \textbf{Considerazioni generali}: Nonostante la tecnologia in esame sia vincolata dall'obbligo di utilizzo esplicitato dalla Proponente, da un confronto con sistemi concorrenti emerge il pregio di Speect di essere scritto in un linguaggio familiare alla totalità dei membri del gruppo. Speect è inoltre dichiaratamente conforme allo standard ISO / IEC 9899: 1990, che seppur datato ne assicura una soglia minima di qualità, estendibilità e portabilità. La tecnologia è dotata di una buona documentazione, che coadiuvata dal materiale e dal supporto fornito dalla Proponente permette di superare le difficoltà rappresentate dalla configurazione e dal linguaggio datato;
+	\item \textbf{Considerazioni generali}: Nonostante la tecnologia in esame sia vincolata dall'obbligo di utilizzo esplicitato dalla Proponente, da un confronto con sistemi concorrenti emerge il pregio di Speect di essere scritto in un linguaggio familiare alla totalità dei membri del gruppo. Speect è inoltre dichiaratamente conforme allo standard ISO / IEC 9899: 1990, che seppur datato ne assicura una soglia minima di qualità, estendibilità e portabilità. La tecnologia è infine dotata di una buona documentazione, che coadiuvata dal materiale e dal supporto fornito dalla Proponente permette di superare le difficoltà rappresentate dalla configurazione e dal linguaggio datato;
 	
-	\item \textbf{Competenza del gruppo e facilità di utilizzo}: Benché la tecnologia risulti ostica in termini di configurazione, la familiarità del linguaggio su cui si basa e la bontà della documentazione fornita ha permesso al gruppo di manipolarla con un certo agio;
+	\item \textbf{Competenza del gruppo e facilità di utilizzo}: Benché la tecnologia risulti ostica in termini di configurazione, la familiarità del linguaggio su cui si basa e la bontà della documentazione fornita ha permesso al gruppo di manipolarla con un certo agio nei confini degli obiettivi di progetto;
 	
-	\item \textbf{Costo economico}: La tecnologia è opensource e reperibile gratuitamente al seguente link:
+	\item \textbf{Costo economico}: La tecnologia è open source e reperibile gratuitamente al seguente link:
 	\begin{center}
 		\url{http://speect.sourceforge.net/}
 	\end{center}
@@ -145,7 +145,7 @@ CMake è una famiglia di strumenti open source e multipiattaforma progettati per
 
 \subsubsection{Motivazioni generali della scelta e tecnologie concorrenziali}
 La tecnologia in esame è parzialmente vincolata dalla richiesta della Proponente, che nel capitolato ne suggerisce l'utilizzo in quanto già
-usata da Speect e alcune sue dipendenze. Si riportano per completezza alcune Motivazioni generali della scelta e tecnologie concorrenziali:
+usata da Speect e alcune sue dipendenze. Si riportano per completezza alcune tecnologie concorrenziali:
 
 \begin{itemize}
 	\item \textbf{GNU Makefile}: strumento che controlla la generazione di file eseguibili e altri file non di origine di un programma dai file sorgente dello stesso, reperibile gratuitamente al seguente link:
@@ -161,29 +161,35 @@ usata da Speect e alcune sue dipendenze. Si riportano per completezza alcune Mot
 
 \subsubsection{Dimostrazione di adeguatezza rispetto agli obiettivi di prodotto}
 \begin{itemize}
-	\item \textbf{Considerazioni generali}: CMAKE è una tecnologia necessaria alla corretta configurazione di Speect e si adatta bene all'integrazione tra quest'ultimo e QT, nonché allo sviluppo di automazioni tramite Travis. Pur inizialmente quasi completamente sconosciuta al gruppo, è ben documentata e supportata e ciò ne agevola sensibilmente l'apprendimento;
-	\item \textbf{Competenza del gruppo e facilità di utilizzo}: La bontà della documentazione e il supporto della Proponente nel suo apprendimento (anche tramite seminario con relativo materiale pubblicato al link: \url{https://github.com/giuliopaci/cmake-tutorial}) ne ha notevolmente agevolato l'apprendimento, permettendo al gruppo di padroneggiarla entro i confini dello scopo del progetto;
+	\item \textbf{Considerazioni generali}: CMAKE è una tecnologia necessaria alla corretta configurazione di Speect e si adatta bene all'integrazione tra quest'ultimo e QT, nonché allo sviluppo di automazioni tramite Travis CI. Altri punti a favore di CMAKE rispetto a tecnologie concorrenti sono:
+	\begin{itemize}
+		\item Standardizzazione;
+		\item Buona integrazione con la maggior parte degli IDE;
+		\item Build incrementale e riproducibile;
+		\item Building parallelo;
+		\item Elevata modularità.
+	\end{itemize}
+	\item \textbf{Competenza del gruppo e facilità di utilizzo}: La bontà della documentazione (sebbene lacunosa quella introduttiva ufficiale) e il supporto della Proponente nel suo apprendimento (anche tramite seminario con relativo materiale pubblicato al link: \url{https://github.com/giuliopaci/cmake-tutorial}) ha notevolmente agevolato l'apprendimento della tecnologia, permettendo al gruppo di padroneggiarla entro i confini dello scopo del progetto;
 	
 	\item \textbf{Costo economico}: La tecnologia è open source e reperibile gratuitamente al seguente link:
 	\begin{center}
 		\url{https://cmake.org/}
 	\end{center}
 
-	\item \textbf{Consumo di risorse e compatibilità}: CMAKE è una tecnologia multipiattaforma compatibile con i maggiori sistemi operativi e non presenta particolari requisiti harware;
+	\item \textbf{Consumo di risorse e compatibilità}: CMAKE è una tecnologia multipiattaforma compatibile con i maggiori sistemi operativi e non presenta requisiti hardware rilevanti in relazione alla dotazione tecnologica del gruppo;
 	
-	\item \textbf{Supporto e sviluppi possibili della tecnologia}: La tecnologia in esame è in costante aggiornamento e supportata da una community particolarmente attiva, tuttavia la scelta di adottarne una versione stabile offre le massime garanzie di supporto e stabilità attualmente disponibili.
+	\item \textbf{Supporto e sviluppi possibili della tecnologia}: La tecnologia in esame è supportata da una community particolarmente attiva e in costante aggiornamento, tuttavia la scelta di adottarne una versione stabile offre le massime garanzie di supporto e stabilità attualmente disponibili.
 \end{itemize}
 
 \subsubsection{Proof of Concept}
 Lo studio della tecnologia si concretizza in un \textit{Proof of Concept} che ne dimostra la compatibilità con gli obiettivi di prodotto evidenziando nel contempo lo stato delle competenze del gruppo in relazione alla stessa.
 
 \subsubsection{Aspetti negativi}
-CMAKE è una tecnologia non standardizzata e caratterizzata da lacune in termini di:
+CMAKE è una tecnologia caratterizzata dalle seguenti lacune:
 \begin{itemize}
-	\item Build incremntale;
-	\item Personalizzazione a build-time;
-	\item Building parallelo;
-	\item Organizzazione dei file prodotti.
+	\item Molte funzionalità dipendono dalla versione specifica di CMAKE;
+	\item La sintassi è non uniforme e confusionaria;
+	\item La documentazione introduttiva è scarsa, in particolar modo di esempi.
 \end{itemize}
 
 \subsection{TS04 - Ubuntu v16.04.3 LTS}
