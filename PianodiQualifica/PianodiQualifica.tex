@@ -640,6 +640,30 @@ Il ciclo di Deming (anche conosciuto come ciclo PDCA, l'acronimo di Plan-Do-Chec
 
 \chapter{Specifica dei test}
 
+\section{Introduzione}
+
+In questa appendice vengono illustrati nel dettaglio i test da eseguirsi sul prodotto software, secondo classificazione introdotta nelle NP (§3.4.6.2 "Test"). Si vuole sottolineare l'incrementalità della presente appendice, che andrà ad espandersi in maniera proporzionale al software.
+
+\section{Test di Unità}
+
+Verranno qui presentati i test previsti per le più piccole unità software, ovvero i metodi indipendentemente dal sistema di cui fanno parte.
+
+\section{Test di Integrazione}
+
+Verranno qui presentati i test d'integrazione previsti per le varie componenti, al fine di accertarne il corretto funzionamento quando messe in relazione l'una con le altre.
+
+\section{Test di Regressione}
+
+Verranno qui presentati i test eseguiti ad ogni modifica di un'implementazione all'interno del sistema.
+
+\section{Test di Sistema}
+
+Verranno qui presentati i test previsti per assicurare che il sistema rispetti le specifiche esplicitate dai requisiti (elencati nell'AR) e per garantire il buon funzionamento del prodotto.
+
+\section{Test di Validazione}
+
+Verranno qui presentati i test per l'accettazione del software, con i quali si accerta che il prodotto sia conforme alle attese del Committente.
+
 % RESOCONTO DELLE ATTIVITà DI VERIFICA
 
 \chapter{Resoconto delle attività \\ di verifica di periodo}
@@ -731,14 +755,14 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 		\end{center}
 		\caption{Valori Indice Gulpease, periodo di Analisi} 
 	\end{table} 
-
-Dalla tabella si evince che tutti i documenti presentano un indice nei limiti preferibili.
-
-\begin{figure}[H]
-	\includegraphics[scale=0.5]{verifica-analisi-gulpease}
-	\centering
-	\caption{Andamento dei valori Indice Gulpease, periodo di Analisi}
-\end{figure}
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.5]{verifica-analisi-gulpease}
+		\centering
+		\caption{Andamento dei valori Indice Gulpease, periodo di Analisi}
+	\end{figure}
+		
+	Dalla tabella e dal grafico si evince che tutti i documenti presentano un indice nei limiti preferibili.
 
 \end{itemize}
 
@@ -790,7 +814,7 @@ L'applicazione del miglioramento continuo e la profonda revisione delle NP, conc
 Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle e frontespizio) e di quello del numero di Errori ortografici corretti [MPPD001].
 
 \begin{itemize}
-	\item \textbf{Errori ortografici corretti [MPPD001]}: tramite le funzionalità di rilevazione d'errori di TexStudio sono stati rilevati e corretti complessivamente 14 errori all'interno dei documenti;
+	\item \textbf{Errori ortografici corretti [MPPD001]}: tramite le funzionalità di rilevazione d'errori di TexStudio sono stati rilevati e corretti complessivamente 23 errori all'interno dei documenti;
 	
 	\item \textbf{Indice Gulpease [MPPD002]}: Viene qui riportata una tabella contenente il valore Gulpease calcolato per ciascun documento.
 	Per il calcolo di tale indice sono state escluse eventuali tabelle presenti nei documenti, le pagine di frontespizio e i diari delle modifiche, in quanto una loro inclusione avrebbe portato a valori errati. L'esito della misurazione è Positivo, se l'indice è maggiore o uguale a 50, o Negativo nel caso fosse inferiore a tale valore.
@@ -814,13 +838,13 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 		\caption{Valori Indice Gulpease, periodo di Consolidamento requisiti e tecnologie} 
 	\end{table} 
 	
-	Dalla tabella si evince che tutti i documenti presentano un indice nei limiti preferibili.
-	
 	\begin{figure}[H]
 		\includegraphics[scale=0.5]{verifica-consolidamento-gulpease}
 		\centering
 		\caption{Andamento dei valori Indice Gulpease, periodo di Consolidamento}
-	\end{figure}	
+	\end{figure}
+	
+	Dalla tabella e dal grafico si evince che tutti i documenti presentano un indice nei limiti preferibili.	
 \end{itemize}
 
 \subsubsection{Software}
@@ -840,9 +864,40 @@ Questa appendice si propone di riepilogare le valutazioni orientate al miglioram
 \noindent Ogni problema viene sollevato sulla base dell'autovalutazione dei membri del gruppo e dall'esito di revisioni e confronti con Committente e Proponente, e ad esso viene associata una possibile soluzione.
 
 \section{Valutazioni sull'organizzazione}
+\begin{itemize}
+	\item \textbf{Problema}: Difficoltà nel conciliare gli impegni dei membri del gruppo nel contesto dell'organizzazione di riunioni e confronti fisici. \\ \\
+	\textbf{Soluzione} Per garantire lo svolgimento di riunioni ed incontri si è optato per l'utilizzo di strumenti per la messaggistica instantanea e videochiamate, che ha garantito una maggiore partecipazione dei membri.
+\end{itemize}
 
 \section{Valutazioni sui ruoli}
 
+\subsection{Responsabile}
+
+\begin{itemize}
+	\item \textbf{Problema}: Difficoltà nella suddivisione equa del lavoro e dell'individuazione di task dal carico adeguato. \\ \\
+	\textbf{Soluzione} Per bilanciare la suddivisione del lavoro si è deciso di individuare periodicamente un nuovo insieme relativamente ristretto di task di entità ridotta.
+\end{itemize}
+
+\subsection{Analista}
+
+\begin{itemize}
+	\item \textbf{Problema}: Difficoltà nell'individuazione e corretta classificazione dei requisiti. \\ \\
+	\textbf{Soluzione} Per garantire un buon esito dell'attività di analisi si è condiviso maggiormente il lavoro tra gli Analisti, sfruttando i vari mezzi scelti per la comunicazione
+	all'interno del gruppo per generare maggiore confronto.
+\end{itemize}
+
+\subsection{Verificatore}
+
+\begin{itemize}
+	\item \textbf{Problema}: Difficoltà nell'analisi approfondita dei documenti per verificarne correttezza e completezza da parte di membri relativamente estranei allo specifico documento. \\ \\
+	\textbf{Soluzione} Per garantire la buona riuscita della verifica e validazione si è scelto di dedicarvi maggiori risorse temporali.
+\end{itemize}
+
 \section{Valutazioni sugli strumenti}
+
+\begin{itemize}
+	\item \textbf{Problema}: A causa dell'inesperienza del gruppo si è mostrata iniziale difficoltà nell'ottenere padronanza degli strumenti selezionati. \\ \\
+	\textbf{Soluzione} I membri del gruppo più esperti hanno condiviso la maggiore conoscenza degli strumenti. Una parte adeguata di tempo è stata dedicata al confronto su questo tema, a domande, consigli e produzione di piccole guide riassuntive sugli strumenti in uso.
+\end{itemize}
 
 \end{document}
