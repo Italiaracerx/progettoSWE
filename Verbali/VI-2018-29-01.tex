@@ -1,0 +1,74 @@
+\documentclass[openany,12pt,a4paper]{article}
+\usepackage{subfiles}
+\usepackage[]{graphicx}
+\usepackage{float}
+\graphicspath{{./img/}{./../img/}}
+\usepackage{../StileDoc}
+\title{Verbale Interno}
+\author{}
+\newcommand{\versione}{}
+\loadglsentries{../Glossario/Definizioni}
+
+\begin{document}
+	\makeatletter
+	\begin{titlepage}
+		\setlength{\headsep}{0pt}  
+		\begin{center}
+			\includegraphics[width=0.5\linewidth]{Logo.png}\\[1em]
+			{\huge \bfseries  \@title }\\[10ex]
+			\textbf{\Large Informazioni Documento} \\[2em]
+			\bgroup
+			\def\arraystretch{1.5}
+			\begin{tabular}{l|l}
+				\textbf{Data approvazione} & 29 gennaio 2018 \\
+				\textbf{Responsabile} & Matteo Rizzo \\
+				\textbf{Redattore} & Manfredi Smaniotto \\
+				\textbf{Verificatore} & Samuele Modena \\
+				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
+				 & Prof. Riccardo Cardin \\
+				 & Gruppo Graphite \\
+				\textbf{Uso} & Interno \\
+				\textbf{Recapito} & graphite.swe@gmail.com \\
+			\end{tabular}
+		\egroup
+		\end{center}
+	\end{titlepage}
+	\makeatother
+
+	\thispagestyle{empty}
+	\newpage
+	
+	\tableofcontents
+	\newpage
+	
+	\section{Informazioni generali}
+	
+	\subsection{Informazioni sull'incontro}
+	
+	\begin{itemize} 
+	    \item \textbf{Luogo:} Aula 1C150, Torre Archimede;
+	    \item \textbf{Data:} 29-01-2018;
+	    \item \textbf{Orari} 9:00 - 11:30;
+	    \item \textbf{Partecipanti del gruppo:} Marco Focchiatti, Samuele Modena, Matteo Rizzo, Giulio Rossetti, Kevin Silvestri, Manfredi Smaniotto, Cristiano Tessarolo;
+	    \item \textbf{Partecipanti esterni:} nessuno.
+	\end{itemize}
+	
+	\subsection{Ragioni dell'incontro}
+	
+	Discussione e confronto sull'esito della RR.
+
+	\section{Resoconto}
+	
+	Durante la riunione è stato analizzato nel dettaglio l'esito della RR, discutendo della ragione di determinate osservazioni e della strategia con cui ovviare ai problemi riscontrati.  
+	
+	\section{Tracciamento delle decisioni}
+	
+	\begin{itemize}
+	    \item \textbf{VI-29-01-2018.1:} Ampliamento e ristrutturazione del PQ sulla base dell'esito della RR;
+	    \item \textbf{VI-29-01-2018.2:} Revisione del ciclo di sviluppo e della pianificazione sulla base dell'esito della RR;
+	    \item \textbf{VI-29-01-2018.3:} Revisione e ristrutturazione delle NP sulla base dell'esito della RR;
+	    \item \textbf{VI-29-01-2018.4:} Revisione della AR sulla base dell'esito della RR;
+	    \item \textbf{VI-29-01-2018.5:} Correzioni generali sulla base dell'esito della RR.
+	\end{itemize}	
+
+	\end{document}    
