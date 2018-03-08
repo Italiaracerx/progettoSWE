@@ -12,7 +12,7 @@
 \loadglsentries{../Glossario/Definizioni}
 %Ultima versione documento
 
-\newcommand{\versione}{1.0.0}
+\newcommand{\versione}{2.0.0}
 
 
 \begin{document}
@@ -27,7 +27,7 @@
 			\def\arraystretch{1.5}
 			\begin{tabular}{l|l}
 				\textbf{Versione} & \versione{} \\
-				\textbf{Data approvazione} & 12 Gennaio 2018 \\
+				\textbf{Data approvazione} & 11 Marzo 2018 \\
 				\textbf{Responsabile} & Samuele Modena\\
 				\textbf{Redattori} &  Kevin Silvestri, Samuele Modena,\\
 				& Matteo Rizzo \\
@@ -88,7 +88,9 @@
     
     Al fine di evitare ogni ambiguità relativa al linguaggio utilizzato nei documenti, viene fornito il \textit{Glossario v1.0.0}, contenente la definizione dei termini in corsivo marcati con il pedice "G".
     
-    \section{Riferimenti normativi}
+    \section{Riferimenti}
+    
+    \subsection*{Riferimenti normativi}
     
     \begin{itemize}
     
@@ -98,7 +100,7 @@
     
     \end{itemize}
     
-    \section{Riferimenti informativi}
+    \subsection*{Riferimenti informativi}
     
     \begin{itemize}
         \item \textbf{Piano di Progetto:} documento \textit{Piano di Progetto v 1.0.0};
@@ -642,7 +644,1133 @@ Il ciclo di Deming (anche conosciuto come ciclo PDCA, l'acronimo di Plan-Do-Chec
 
 \section{Introduzione}
 
-In questa appendice vengono illustrati nel dettaglio i test da eseguirsi sul prodotto software, secondo classificazione introdotta nelle NP (§3.4.6.2 "Test"). Si vuole sottolineare l'incrementalità della presente appendice, che andrà ad espandersi in maniera proporzionale al software.
+In questa appendice vengono illustrati nel dettaglio i test da eseguirsi sul prodotto software, secondo classificazione introdotta nelle NP (§3.4.6.2 "Test"). Si vuole sottolineare l'incrementalità della presente appendice, che andrà ad espandersi in maniera proporzionale allo sviluppo del software.
+
+\section{Test di Sistema}
+
+Vengono di seguito elencati i test previsti per assicurare che il sistema rispetti le specifiche esplicitate dai requisiti (elencati nell'AR) e per garantire il buon funzionamento del prodotto.
+
+\setlength\LTleft{6mm}
+	\begin{longtable}{| p{2cm} |p{5cm} | p{2.5cm} |}
+	\hline
+	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}\\
+	\hline
+	\endhead
+	\newline TSOF0&
+	\newline L'utente può avviare DeSpeect visualizzandone la pagina iniziale&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	\newline TSOF1&
+	\newline L'utente può accedere al menu file&
+	\newline Non implementato
+	\\[1em]	
+	
+	\hline
+	
+	\newline TSOF2&
+	\newline L'utente può caricare un file Json&
+	\newline Non implementato
+	\\[1em]	
+	\hline	
+	
+	\newline TSOF2.1&
+	\newline L'utente può visualizzare il percorso del file JSon caricato&
+	\newline Non implementato
+	\\[1em]	
+	\hline	
+	
+	\newline TSFF2.2&
+	\newline L'utente può modificare il file Json cambiando l'ordine o rimuovendo gli Utterance Processor nell'Utterance Type&
+	\newline Non implementato
+	\\[1em]	
+	\hline
+	
+	\newline TSFF2.2.1&
+	\newline L'utente può salvare nel file JSon le modifiche agli Utterance Processor&
+	\newline Non implementato
+	\\[1em]	
+	\hline
+	
+	\newline TSFF2.2.1.1&
+	\newline Il sistema deve visualizzare un errore nel caso il salvataggio fallisca e ripristinare uno stato funzionante&
+	\newline Non implementato
+	\\[1em]	
+	\hline
+	
+	\newline TSOF3&		
+	\newline L'utente può inizializzare Speect con il file json&
+	\newline Non implementato
+	\\[1em]	
+	\hline	
+	
+	\newline TSOF3.1&
+	\newline Il sistema deve visualizzare un errore in caso Speect fallisca l'inizializzazione&
+	\newline Non implementato
+	\\[1em]		
+	\hline
+	
+	\newline TSOF4&
+	\newline L'utente può salvare l'audio risultante con estensione WAV&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSOF4.1&
+	\newline L'utente può selezionare dove salvare il file&
+	\newline Non implementato
+	\\[1em]
+	
+	\hline	
+	\newline TSOF4.1.1&
+	\newline L'utente può scrivere il nome del file da salvare&
+	\newline Non implementato
+	\\[1em]
+	
+	\hline
+	\newline TSOF4.2&
+	\newline Il sistema deve visualizzare un errore in caso il salvataggio dell'audio fallisca&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSFF4.3&
+	\newline L'utente può ascoltare l'audio prima di salvarlo&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSOF5&
+	\newline L'utente può cercare il file tramite file browser&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSOF5.1&
+	\newline L'utente può selezionare un file tramite file browser&
+	\newline Non implementato
+	\\[1em]	
+	\hline
+	
+	\newline TSOF5.2&
+	\newline Il sistema visualizza un errore se si cerca di accedere ad una cartella senza i permessi necessari&
+	\newline Non implementato
+	\\[1em]	
+	\hline
+	
+	\newline TSOF5.3&
+	\newline Il sistema visualizza un errore se si cerca di accedere ad un file non supportato&
+	\newline Non implementato
+	\\[1em]	
+	\hline
+	
+	\newline TSOF5.4&
+	\newline Il sistema visualizza un errore se si cerca di accedere ad un file senza i permessi necessari&
+	\newline Non implementato
+	\\[1em]	
+	\hline
+	
+	\newline TSDF5.5&
+	\newline Il file browser mostra solo file di estensione corretta&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	\newline TSDF5.6&
+	\newline L'utente può modificare il nome di una cartella tramite file browser&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	\newline TSDF5.7&
+	\newline L'utente può modificare il nome di un file tramite file browser&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	\newline TSOF6&
+	\newline L'utente può selezionare la Utterance Type&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSDF6.1.1&
+	\newline L'utente può spostare gli Utterance Processor di un Utterance Type&
+	\newline Non implementato
+	\\[1em]
+	\hline	
+	
+	\newline TSDF6.1.2&
+	\newline L'utente può rimuovere gli Utterance Processor di un Utterance Type&
+	\newline Non implementato
+	\\[1em]
+	\hline	
+	
+	\newline TSOF7&
+	\newline L'utente può inserire un testo da tradurre in voce&
+	\newline Non implementato
+	\\[1em]
+	
+	\hline
+	\newline TSOF8&
+	\newline L'utente può eseguire il testo inserito&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	\newline TSOF8.1&
+	\newline Il sistema visualizza l'errore di esecuzione se Speect fallisce l'esecuzione&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSOF9&
+	\newline L'utente può visualizzare il grafo ottenuto eseguendo Speect&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	
+	\newline TSOF9.1&
+	\newline L'utente può visualizzare l'informazione generale di ogni nodo sul grafo&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSOF9.2&
+	\newline L'utente vede ogni relazione del grafo di un colore diverso, relativo al colore in legenda&
+	\newline  Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSDF9.2.1&
+	\newline L'utente può cambiare il colore delle relazioni in legenda&
+	\newline  Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSOF9.3&
+	\newline L'utente può selezionare il nodo del grafo tramite click&
+	\newline \refer{UC13.1} \newline Capitolato
+	\\[1em]
+	\hline
+	
+	\newline TSOF9.3.1&
+	\newline L'utente può visualizzare tutte le informazioni del nodo selezionato&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSDF9.3.1.1&
+	\newline L'utente può modificare il name del nodo selezionato&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSDF9.3.1.2&
+	\newline L'utente può modificare il PoS del nodo selezionato&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSDF9.4.1&
+	\newline L'utente può evidenziare un nodo del grafo tramite percorso partendo da un nodo selezionato&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSDF9.4.2&
+	\newline Il sistema visualizza un errore se il path porta fuori dal grafo e riapre la ricerca&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSOF9.5&
+	\newline I nodi selezionati dall'utente vengono evidenziati&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSDF9.5.1&
+	\newline L'utente può modificare il colore con il quale si evidenzia il focus&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSOF9.6&
+	\newline L'utente può spostare i nodi del grafo graficamente&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSOF9.7&
+	\newline L'utente può visualizzare gli strati di relazione del grafo selezionati&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSFF9.8.1&
+	\newline L'utente può cancellare gli archi dei nodi del grafo&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSFF9.8.2&
+	\newline L'utente può aggiungere archi a dei nodi del grafo&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSOF9.9&
+	\newline L'utente può modificare il grafo ottenuto eseguendo Speect&
+	\newline Non implementato
+	\\[1em]
+	\hline	
+	
+	\newline TSFF10&
+	\newline L'utente può eseguire ogni Utterance Processor singolarmente&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	
+	\newline TSFF11&
+	\newline L'utente può salvare il grafo&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	
+	\newline TSFF11.1&
+	\newline Il sistema deve visualizzare un errore se non riesce a salvare il grafo&
+	\newline Non implementato 
+	\\[1em]
+	\hline
+	
+	\newline TSFF12&
+	\newline L'utente può caricare un grafo&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSFF12.1&
+	\newline Il sistema deve visualizzare un errore se non riesce a caricare il grafo&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSFF12.2&
+	\newline L'utente può confrontare due strati di relazione automaticamente&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	
+	\newline TSFF13&
+	\newline L'utente può eseguire Speect dato un grafo&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TSOV2&
+	\newline 
+	L'applicativo deve essere utilizzabile su sistema operativo Linux Ubuntu 16.04 LTS&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	\newline TSDV2.1&
+	\newline 
+	L'applicativo deve essere utilizzabile su sistema operativo Windows 7 e successivi&
+	\newline Non implementato
+	\\[1em]
+	\hline
+\caption{Test di sistema}
+\end{longtable}
+
+\subsection{Tracciamento test di sistema-requisiti}
+
+\begin{longtable}{| p{4cm} |p{4cm}  |}
+	\hline
+	\textbf{Test} & \textbf{Requisito}\\
+	\hline
+	\endhead
+	TSOF0&ROF0
+	\\[1em]
+	\hline TSOF1&ROF1
+	\\[1em]	
+	\hline
+	 TSOF2&ROF2
+	\\[1em]	
+	\hline	
+	 TSOF2.1&ROF2.1
+	\\[1em]	
+	\hline	
+	 TSFF2.2&RFF2.2
+	\\[1em]	
+	\hline
+	 TSFF2.2.1&RFF2.2.1
+	\\[1em]	
+	\hline
+	 TSFF2.2.1.1&ROF2.2.1.1
+	\\[1em]	
+	\hline
+	 TSOF3&ROF3
+	\\[1em]	
+	\hline	
+	 TSOF3.1&ROF3.1
+	\\[1em]		
+	\hline
+	 TSOF4&ROF4
+	\\[1em]
+	\hline
+	 TSOF4.1&ROF4.1
+	\\[1em]
+	
+	\hline	
+	TSOF4.1.1&ROF4.1.1
+	\\[1em]
+	
+	\hline
+	 TSOF4.2&ROF4.2
+	\\[1em]
+	\hline
+	 TSFF4.3&RFF4.3
+	\\[1em]
+	\hline
+	 TSOF5&ROF5
+	\\[1em]
+	\hline
+	 TSOF5.1&ROF5.1
+	\\[1em]	
+	\hline
+	 TSOF5.2&ROF5.2
+	\\[1em]	
+	\hline
+	 TSOF5.3&ROF5.3
+	\\[1em]	
+	\hline
+	 TSOF5.4&ROF5.4
+	\\[1em]	
+	\hline
+	TSDF5.5&RD5.5
+	\\[1em]
+	\hline
+	 TSDF5.6&RDF5.6
+	\\[1em]
+	\hline
+	 TSDF5.7&RDF5.7
+	\\[1em]
+	\hline
+	 TSOF6&ROF6
+	\\[1em]
+	\hline
+	 TSDF6.1.1&RDF6.1.1
+	\\[1em]
+	\hline	
+	 TSDF6.1.2&RDF6.1.2
+	\\[1em]
+	\hline	
+	 TSOF7&ROF7
+	\\[1em]
+	
+	\hline
+	 TSOF8&ROF8
+	\\[1em]
+	\hline
+	 TSOF8.1&ROF8.1
+	\\[1em]
+	\hline
+	 TSOF9&ROF9
+	\\[1em]
+	\hline
+	 TSOF9.1&ROF9.1
+	\\[1em]
+	\hline
+	 TSOF9.2&ROF9.2
+	\\[1em]
+	\hline
+	 TSDF9.2.1&RDF9.2.1
+	\\[1em]
+	\hline
+	 TSOF9.3&ROF9.3
+	\\[1em]
+	\hline
+	 TSOF9.3.1&ROF9.3.1
+	\\[1em]
+	\hline
+	 TSDF9.3.1.1&RDF9.3.1.1
+	\\[1em]
+	\hline
+	 TSDF9.3.1.2&RDF9.3.1.2
+	\\[1em]
+	\hline
+	 TSDF9.4.1&RDF9.4.1
+	\\[1em]
+	\hline
+	 TSDF9.4.2&RDF9.4.2
+	\\[1em]
+	\hline
+	 TSOF9.5&ROF9.5
+	\\[1em]
+	\hline
+	 TSDF9.5.1&RDF9.5.1
+	\\[1em]
+	\hline
+	 TSOF9.6&ROF9.6
+	\\[1em]
+	\hline
+	 TSOF9.7&ROF9.7
+	\\[1em]
+	\hline
+	 TSFF9.8.1&RFF9.8.1
+	\\[1em]
+	\hline
+	 TSFF9.8.2&RFF9.8.2
+	\\[1em]
+	\hline
+	 TSOF9.9&ROF9.9
+	\\[1em]
+	\hline	
+	 TSFF10&RFF10
+	\\[1em]
+	\hline
+	 TSFF11&RFF11
+	\\[1em]
+	\hline
+	 TSFF11.1&RFF11.1
+	\\[1em]
+	\hline
+	 TSFF12&RFF12
+	\\[1em]
+	\hline
+	 TSFF12.1&RFF12.1
+	\\[1em]
+	\hline
+	 TSFF12.2&RFF12.2
+	\\[1em]
+	\hline
+	TSFF13&RFF13
+	\\[1em]
+	\hline
+	TSOV2&ROV2
+	\\[1em]
+	\hline
+	TSDV2.1&RDV2.1
+	\\[1em]
+	\hline
+\caption{Tracciamento test di sistema-requisiti}
+\end{longtable}
+
+\section{Test di Validazione}
+
+Vengono di seguito descritti i test per il collaudo del software, con i quali si accerta che il prodotto sia conforme alle attese del Committente. Ogni test ha un codice, descrizione, passi dell'utente per svolgerlo e stato di implementazione.
+
+\begin{longtable}{| p{2cm} |p{5cm} | p{2.5cm} |}
+	\hline
+	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}\\
+	\hline
+	\endhead
+	
+	\newline TVOF2&
+	\newline L'utente può caricare un file Json. L'utente deve:
+	\begin{itemize}
+		\item aprire il file browser;
+		\item selezionare il file Json:
+		\item premere su Carica.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]	
+	\hline	
+	
+	\newline TVFF2.2&
+	\newline L'utente può modificare il file Json cambiando l'ordine o rimuovendo gli Utterance Processor nell'Utterance Type. L'utente deve:
+	\begin{itemize}
+		\item cliccare sull'Utterance Processor;
+		\item se vuole cambiare l'ordine, riordinare tramite i pulsanti forniti;
+		\item se vuole rimuovere, preme sull'apposito pulsante. 
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]	
+	\hline
+	
+	\newline TVFF2.2.1&
+	\newline L'utente può salvare nel file JSon le modifiche agli Utterance Processor. L'utente deve:
+	\begin{itemize}
+		\item aprire il menu File;
+		\item premere su Salva File Json.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]	
+	\hline
+	
+	\newline TVFF2.2.1.1&
+	\newline Il sistema deve visualizzare un errore nel caso il salvataggio fallisca e ripristinare uno stato funzionante. L'utente deve mettere un path di salvataggio non valido.&
+	\newline Non implementato
+	\\[1em]	
+	\hline
+	
+	\newline TVOF3&		
+	\newline L'utente può inizializzare Speect con il file json. L'utente deve:
+	\begin{itemize}
+		\item aprire il file browser;
+		\item selezionare il file Json:
+		\item premere su Carica.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]	
+	\hline	
+	
+	\newline TVOF3.1&
+	\newline Il sistema deve visualizzare un errore in caso Speect fallisca l'inizializzazione. L'utente deve caricare un file non corretto.&
+	\newline Non implementato
+	\\[1em]		
+	\hline
+	
+	\newline TVOF4&
+	\newline L'utente può salvare l'audio risultante con estensione WAV. L'utente deve:
+	\begin{itemize}
+		\item aprire il file browser;
+		\item spostarsi sulla cartella di destinazione;
+		\item scrivere il nome del file nella barra di testo;
+		\item premere su Salva.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVOF4.1&
+	\newline L'utente può selezionare dove salvare il file. L'utente deve:
+	\begin{itemize}
+		\item aprire il file browser;
+		\item spostarsi sulla cartella di destinazione;
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	
+	\hline	
+	\newline TVOF4.1.1&
+	\newline L'utente può scrivere il nome del file da salvare. L'utente deve:
+	\begin{itemize}
+		\item aprire il file browser;
+		\item spostarsi sulla cartella di destinazione;
+		\item scrivere il nome del file nella barra di testo;
+		\item premere su Salva.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	
+	\hline
+	\newline TVOF4.2&
+	\newline Il sistema deve visualizzare un errore in caso il salvataggio dell'audio fallisca. L'utente deve salvare il file con un estensione sbagliata&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVOF5&
+	\newline L'utente può cercare il file tramite file browser. L'utente deve:
+	\begin{itemize}
+		\item aprire il file browser;
+		\item spostarsi tra le cartelle.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVOF5.1&
+	\newline L'utente può selezionare un file tramite file browser. L'utente deve:
+	\begin{itemize}
+		\item aprire il file browser;
+		\item spostarsi sulla cartella di destinazione;
+		\item selezionare il file desiderato.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]	
+	\hline
+	
+	\newline TVOF5.2&
+	\newline Il sistema visualizza un errore se si cerca di accedere ad una cartella senza i permessi necessari. L'utente deve:
+	\begin{itemize}
+		\item aprire il file browser;
+		\item selezionare una cartella non accessibile.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]	
+	\hline
+	
+	\newline TVOF5.3&
+	\newline Il sistema visualizza un errore se si cerca di accedere ad un file non supportato. L'utente deve:
+	\begin{itemize}
+		\item aprire il file browser;
+		\item selezionare un file non supportato;
+		\item premere su Carica.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]	
+	\hline
+	
+	\newline TVOF5.4&
+	\newline Il sistema visualizza un errore se si cerca di accedere ad un file senza i permessi necessari. L'utente deve:
+	\begin{itemize}
+		\item aprire il file browser;
+		\item selezionare un file non accessibile.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]	
+	\hline
+	
+	\newline TVDF5.6&
+	\newline L'utente può modificare il nome di una cartella tramite file browser. L'utente deve:
+	\begin{itemize}
+		\item aprire il file browser;
+		\item selezionare una cartella;
+		\item modificare il nome.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	\newline TVDF5.7&
+	\newline L'utente può modificare il nome di un file tramite file browser. L'utente deve:
+	\begin{itemize}
+		\item aprire il file browser;
+		\item selezionare un file;
+		\item modificare il nome.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	\newline TVOF6&
+	\newline L'utente può selezionare la Utterance Type. L'utente deve:
+	\begin{itemize}
+		\item aprire il menu a tendina relativo;
+		\item cliccare sull'Utterance Type desiderato.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVDF6.1.1&
+	\newline L'utente può spostare gli Utterance Processor di un Utterance Type. L'utente deve:
+	\begin{itemize}
+		\item selezionare un Utterance Processor;
+		\item riordinare l'Utterance Processor selezionato.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline	
+	
+	\newline TVDF6.1.2&
+	\newline L'utente può rimuovere gli Utterance Processor di un Utterance Type. L'utente deve:
+	\begin{itemize}
+		\item selezionare un Utterance Processor;
+		\item rimuovere l'Utterance Processor selezionato.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline	
+	
+	\newline TVOF7&
+	\newline L'utente può inserire un testo da tradurre in voce. L'utente inserisce del testo nello spazio apposito.&
+	\newline Non implementato
+	\\[1em]
+	
+	\hline
+	\newline TVOF8&
+	\newline L'utente può eseguire il testo inserito. L'utente deve:
+	\begin{itemize}
+		\item inserire del testo nello spazio apposito;
+		\item premere sul tasto di esecuzione.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	\newline TVOF8.1&
+	\newline Il sistema visualizza l'errore di esecuzione se Speect fallisce l'esecuzione. L'utente deve:
+	\begin{itemize}
+		\item inserire del testo nello spazio apposito che crei un errore in Speect;
+		\item premere sul tasto di esecuzione.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVOF9&
+	\newline L'utente può visualizzare il grafo ottenuto eseguendo Speect. L'utente deve:
+	\begin{itemize}
+		\item inserire del testo nello spazio apposito;
+		\item premere sul tasto di esecuzione.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	
+	\newline TVOF9.1&
+	\newline L'utente può visualizzare l'informazione generale di ogni nodo sul grafo. L'utente deve:
+	\begin{itemize}
+		\item selezionare il nodo desiderato;
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVDF9.2.1&
+	\newline L'utente può cambiare il colore delle relazioni in legenda&
+	\newline  Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVOF9.3&
+	\newline L'utente può selezionare il nodo del grafo tramite click. L'utente deve:
+	\begin{itemize}
+		\item posizionarsi sul nodo desiderato;
+		\item cliccare.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVOF9.3.1&
+	\newline L'utente può visualizzare tutte le informazioni del nodo selezionato. L'utente deve:
+	\begin{itemize}
+		\item selezionare il nodo desiderato;
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVDF9.3.1.1&
+	\newline L'utente può modificare il name del nodo selezionato. L'utente deve:
+	\begin{itemize}
+		\item selezionare il nodo desiderato;
+		\item selezionare la casella di testo del name;
+		\item modificare il name;
+		\item rimuovere il focus dalla casella di testo.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVDF9.3.1.2&
+	\newline L'utente può modificare il PoS del nodo selezionato. L'utente deve:
+	\begin{itemize}
+		\item selezionare il nodo desiderato;
+		\item selezionare la casella di testo del PoS;
+		\item modificare il PoS;
+		\item rimuovere il focus dalla casella di testo.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVDF9.4.1&
+	\newline L'utente può evidenziare un nodo del grafo tramite percorso partendo da un nodo selezionato. L'utente deve:
+	\begin{itemize}
+		\item selezionare il nodo desiderato;
+		\item premere su menu File;
+		\item premere su Ricerca Path;
+		\item inserire il percorso da cercare;
+		\item premere su Ricerca.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVDF9.4.2&
+	\newline Il sistema visualizza un errore se il path porta fuori dal grafo e riapre la ricerca. L'utente deve:
+	\begin{itemize}
+		\item selezionare il nodo desiderato;
+		\item premere su menu File;
+		\item premere su Ricerca Path;
+		\item inserire un percorso da cercare non valido;
+		\item premere su Ricerca.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVOF9.5&
+	\newline I nodi selezionati dall'utente vengono evidenziati. L'utente deve:
+	\begin{itemize}
+		\item selezionare il nodo desiderato;
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVDF9.5.1&
+	\newline L'utente può modificare il colore con il quale si evidenzia il focus. L'utente deve:
+	\begin{itemize}
+		\item selezionare il nodo desiderato;
+		\item selezionare la casella del colore;
+		\item modificare il colore;
+		\item rimuovere il focus dalla casella.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVOF9.6&
+	\newline L'utente può spostare i nodi del grafo graficamente. L'utente deve:
+	\begin{itemize}
+		\item posizionarsi sul nodo desiderato;
+		\item trascinare il nodo cliccando senza rilasciare;
+		\item rilasciare il click.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVOF9.7&
+	\newline L'utente può visualizzare gli strati di relazione del grafo selezionati. L'utente deve:
+	\begin{itemize}
+		\item selezionare/deselezionare una select box adiacente ad una relazione.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVFF9.8&
+	\newline L'utente può modificare gli archi dei nodi del grafo&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVFF9.8.1&
+	\newline L'utente può cancellare gli archi dei nodi del grafo. L'utente deve:
+	\begin{itemize}
+		\item selezionare l'arco desiderato;
+		\item premere su Rimuovi.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVFF9.8.2&
+	\newline L'utente può aggiungere archi a dei nodi del grafo. L'utente deve:
+	\begin{itemize}
+		\item premere su Aggiungi Arco;
+		\item selezionare il nodo di partenza;
+		\item selezionare il nodo di arrivo.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVFF10&
+	\newline L'utente può eseguire ogni Utterance Processor singolarmente. L'utente deve:
+	\begin{itemize}
+		\item selezionare L'Utterance Processor desiderato;
+		\item compilare il campo di testo;
+		\item premere sul tasto di esecuzione.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	
+	\newline TVFF11&
+	\newline L'utente può salvare il grafo. L'utente deve:
+	\begin{itemize}
+		\item aprire il menu File;
+		\item premere su Salva File JSon.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline	
+	
+	\newline TVFF11.1&
+	\newline Il sistema deve visualizzare un errore se non riesce a salvare il grafo. L'utente deve:
+	\begin{itemize}
+		\item selezionare il nodo desiderato;
+		\item selezionare la casella di testo del PoS;
+		\item modificare il PoS;
+		\item rimuovere il focus dalla casella di testo.
+	\end{itemize}&
+	\newline Non implementato 
+	\\[1em]
+	\hline
+	
+	\newline TVFF12&
+	\newline L'utente può caricare un grafo. L'utente deve:
+	\begin{itemize}
+		\item aprire il file browser;
+		\item selezionare il file da importare;
+		\item premere su Apri Grafo.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	
+	\newline TVFF12.1&
+	\newline Il sistema deve visualizzare un errore se non riesce a caricare il grafo. L'utente deve:
+	\begin{itemize}
+		\item aprire il file browser;
+		\item selezionare il file non compatibile da importare;
+		\item premere su Apri Grafo.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+		
+	\newline TVFF13&
+	\newline L'utente può eseguire Speect dato un grafo. L'utente deve:
+	\begin{itemize}
+		\item caricare un grafo;
+		\item premere sul tasto di esecuzione.
+	\end{itemize}&
+	\newline Non implementato
+	\\[1em]
+	\hline
+\caption{Test di validazione}
+\end{longtable}
+
+\subsection{Tracciamento test di validazione-requisiti}
+
+\begin{longtable}{| p{4cm} |p{4cm}|}
+	\hline
+	\textbf{Test} & \textbf{Requisito}\\
+	\hline
+	\endhead
+	 TVOF2&ROF2
+	\\[1em]	
+	\hline	
+	 TVFF2.2&RFF2.2
+	\\[1em]	
+	\hline
+	 TVFF2.2.1&RFF2.2.1
+	\\[1em]	
+	\hline
+	 TVFF2.2.1.1&RFF2.2.1.1
+	\\[1em]	
+	\hline
+	 TVOF3&	ROF3
+	\\[1em]	
+	\hline	
+	
+	 TVOF3.1&ROF3.1
+	\\[1em]		
+	\hline
+	 TVOF4&ROF4
+	\\[1em]
+	\hline
+	
+	 TVOF4.1&ROF4.1
+	\\[1em]
+	
+	\hline	
+	TVOF4.1.1&ROF4.1.1
+	\\[1em]
+	
+	\hline
+	TVOF4.2&ROF4.2
+	\\[1em]
+	\hline
+	 TVOF5&ROF5
+	\\[1em]
+	\hline
+	 TVOF5.1&ROF5.1
+	\\[1em]	
+	\hline
+	 TVOF5.2&ROF5.2
+	\\[1em]	
+	\hline
+	 TVOF5.3&ROF5.3
+	\\[1em]	
+	\hline
+	 TVOF5.4&ROF5.4
+	\\[1em]	
+	\hline
+	 TVDF5.6&RDF5.6
+	\\[1em]
+	\hline
+	 TVDF5.7&RDF5.7
+	\\[1em]
+	\hline
+	\newline TVOF6&ROF6
+	\\[1em]
+	\hline
+	 TVDF6.1.1&RDF6.1.1
+	\\[1em]
+	\hline	
+	 TVDF6.1.2&RDF6.1.2
+	\\[1em]
+	\hline	
+    TVOF7&ROF8
+	\\[1em]	
+	\hline
+	 TVOF8&ROF8
+	\\[1em]
+	\hline
+	 TVOF8.1&ROF8.1
+	\\[1em]
+	\hline
+ 	TVOF9&ROF9
+	\\[1em]
+	\hline
+	 TVOF9.1& ROF9.1
+	\\[1em]
+	\hline
+	 TVDF9.2.1& RDF9.2.1
+	\\[1em]
+	\hline
+	 TVOF9.3&ROF9.3
+	\\[1em]
+	\hline
+	 TVOF9.3.1& ROF9.3.1
+	\\[1em]
+	\hline
+	 TVDF9.3.1.1& RDF9.3.1.1
+	\\[1em]
+	\hline
+	 TVDF9.3.1.2& RDF 9.3.1.2
+	\\[1em]
+	\hline
+	 TVDF9.4.1&RDF9.4.1
+	\\[1em]
+	\hline
+	 TVDF9.4.2& RDF9.4.2
+	\\[1em]
+	\hline
+	 TVOF9.5& ROF9.5
+	\\[1em]
+	\hline
+	 TVDF9.5.1&RDF9.5.1
+	\\[1em]
+	\hline
+	 TVOF9.6&ROF9.6
+	\\[1em]
+	\hline
+	 TVOF9.7&ROF9.7
+	\\[1em]
+	\hline
+	 TVFF9.8&RFF9.8
+	\\[1em]
+	\hline
+	 TVFF9.8.1&RFF9.8.1
+	\\[1em]
+	\hline
+	TVFF9.8.2&RFF9.8.2
+	\\[1em]
+	\hline
+	 TVFF10&RFF10
+	\\[1em]
+	\hline
+	 TVFF11&RFF11
+	\\[1em]
+	\hline	
+	
+	TVFF11.1&RFF11.1
+	\\[1em]
+	\hline
+	
+    TVFF12&RFF12
+	\\[1em]
+	\hline
+	
+    TVFF12.1&RFF12.1
+	\\[1em]
+	\hline
+	 TVFF13&RFF13
+	\\[1em]
+	\hline
+\caption{Tracciamento test di validazione-requisiti}
+\end{longtable}
 
 \section{Test di Unità}
 
@@ -651,18 +1779,6 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 \section{Test di Integrazione}
 
 Verranno qui presentati i test d'integrazione previsti per le varie componenti, al fine di accertarne il corretto funzionamento quando messe in relazione l'una con le altre.
-
-\section{Test di Regressione}
-
-Verranno qui presentati i test eseguiti ad ogni modifica di un'implementazione all'interno del sistema.
-
-\section{Test di Sistema}
-
-Verranno qui presentati i test previsti per assicurare che il sistema rispetti le specifiche esplicitate dai requisiti (elencati nell'AR) e per garantire il buon funzionamento del prodotto.
-
-\section{Test di Validazione}
-
-Verranno qui presentati i test per l'accettazione del software, con i quali si accerta che il prodotto sia conforme alle attese del Committente.
 
 % RESOCONTO DELLE ATTIVITà DI VERIFICA
 
@@ -825,13 +1941,15 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 			\begin{longtable}{|p{60mm}|p{30mm}|p{25mm}|}
 				\hline  
 				\textbf{Nome Documento} & \textbf{Valore Indice} & \textbf{Esito} \\ \hline    
-				\textit{Glossario v 1.0.0} & 55 & Positivo\\ \hline    
-				\textit{Norme di Progetto v 1.0.0} & 58 & Positivo\\ \hline    
-				\textit{Studio di Fattibilità v 1.0.0} & 59 & Positivo\\ \hline    
-				\textit{Piano di Progetto v 1.0.0} & 55 & Positivo\\ \hline    
-				\textit{Analisi dei Requisiti v 1.0.0} & 56 & Positivo\\ \hline    
-				\textit{Piano di Qualifica v 1.0.0} & 58 & Positivo\\ \hline    
-				\textit{Verbale Esterno 02-08-2018} & 55 & Positivo\\ \hline    
+				\textit{Glossario v 2.0.0} & 55 & Positivo\\ \hline    
+				\textit{Norme di Progetto v 2.0.0} & 59 & Positivo\\ \hline    
+				\textit{Studio di Fattibilità v 1.0.0} & 58 & Positivo\\ \hline    
+				\textit{Piano di Progetto v 2.0.0} & 55 & Positivo\\ \hline    
+				\textit{Analisi dei Requisiti v 2.0.0} & 58 & Positivo\\ \hline    
+				\textit{Piano di Qualifica v 2.0.0} & 56 & Positivo\\ \hline    
+				\textit{Verbale Interno 2018-29-01} & 57 & Positivo\\ \hline
+				\textit{Verbale Esterno 2018-08-02} & 55 & Positivo\\ \hline
+				\textit{Verbale Interno 2018-01-03} & 53 & Positivo\\ \hline    
 				\textit{Lettera di Presentazione} & 80 & Positivo\\ \hline
 			\end{longtable}
 		\end{center}
@@ -847,7 +1965,7 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 	Dalla tabella e dal grafico si evince che tutti i documenti presentano un indice nei limiti preferibili.	
 \end{itemize}
 
-\subsubsection{Software}
+%\subsubsection{Software}
 
 \chapter{Valutazioni per il miglioramento}
 
