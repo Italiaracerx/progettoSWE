@@ -11,47 +11,8 @@
 	% Scenari alternativi 
 
 	\chapter{Casi d'uso}
-	\section{Descrizione}
-	I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo: 
-	
-	\begin{center}
-		UC[Codice padre]*.[Codice identificativo]
-	\end{center}
-	
-	\begin{itemize}
-		\item \textbf{Codice padre:} identifica il codice del caso d'uso da cui è stato generato il caso d'uso identificato, se non esiste il campo va tralasciato;
-		\item \textbf{Codice identificativo:} identifica il caso d'uso univocamente.
-	\end{itemize}
-	
-	\noindent Ogni caso d'uso è inoltre definito secondo la seguente struttura:
-	\begin{itemize}
-		\item \textbf{Attore Principale:} indica gli attori principali (ad esempio l'utente generico) del caso d'uso;
-		\item \textbf{Attore Secondario:} indica gli attori secondari (ad esempio entità di autenticazione esterne) del caso d'uso;
-		\item \textbf{Descrizione:} riporta una breve descrizione del caso d'uso;
-		\item \textbf{Precondizione:} specifica le condizioni che sono identificate come vere prima del verificarsi degli eventi del caso d'uso;
-		\item \textbf{Postcondizione:} specifica 	le condizioni che sono identificate come vere dopo il verificarsi degli eventi del caso d'uso;
-		\item \textbf{Scenario Principale:} descrive il flusso degli eventi, a volte attraverso l'uso di una lista numerata o non, specificando i casi d'uso generati;
-		\item \textbf{Scenari Alternativi:} specifica casi di errore o eventi non previsti nello scenario principale.
-		
-	\end{itemize}
-
-	\noindent Alcuni casi d'uso possono essere associati ad un Diagramma \glossario{UML}{UML} 2.0 dei casi d'uso riportante lo stesso titolo e codice.
-
-	\section{UC0: Avvio Applicazione}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=\textwidth]{../img/UC0.png}
-		\caption{UC0: Avvio Applicazione}
-	\end{figure}
-	\UserCase
-	{UC0}
-	{Utente}
-	{Non previsto}
-	{L'attore avvia l'applicazione DeSpeect}
-	{Il software Despeect è correttamente installato}
-	{L'applicazione è correttamente avviata}
-	{Viene visualizzata la pagina iniziale \refer{UC0.1}}
-	{Non previsti}
+	\section{Classificazione dei casi d'uso}
+	I casi d'uso sono identificati da un codice descritto nelle NP alla sezione §2.2.3.4. 
 	
 	\section{UC0.1: Visualizzazione Pagina Iniziale}
 	\UserCase
@@ -59,7 +20,7 @@
 	{Utente}
 	{Non previsto}
 	{L'attore visualizza la pagina iniziale}
-	{Il software Despeect è correttamente avviato \refer{UC0}}
+	{Il software DeSpeect è correttamente avviato \refer{UC0}}
 	{L'applicazione visualizza la pagina iniziale}
 	{L'applicazione si avvia e l'attore visualizza la pagina iniziale}
 	{Non previsti}
