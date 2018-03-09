@@ -125,16 +125,16 @@
 	
 	\subsubsection{Comunicazioni interne}
 	
-	Le comunicazioni interne avvengono tramite un tool di messaggistica multi-piattaforma di nome \glossario{Slack}{Slack} con funzionalità specifiche per gruppi di lavoro. Tale strumento offre la possibilità di ricevere notifiche riguardanti le modifiche della \glossario{repository}{Repository} \glossario{GitHub}{GitHub}, creare canali tematici per rendere più efficiente lo scambio e il reperimento delle informazioni, condividere file ed immagini utili allo sviluppo del progetto.
-	\\ \noindent Per comunicazioni informali e per ricevere notifiche riguardanti le modifiche della \glossario{repository}{Repository} \glossario{GitHub}{GitHub} verrà usato un ulteriore tool di messaggistica di nome \glossario{Telegram}{Telegram}.
+	Le comunicazioni interne (ed alcune comunicazioni esterne con la Proponente compatibilmente con le sue necessità) avvengono tramite il tool di messaggistica multi-piattaforma con funzionalità specifiche per gruppi di lavoro \glossario{Slack}{Slack}. Tale strumento si integra con altre tecnologie selezionate dal gruppo offrendo la possibilità di ricevere notifiche riguardanti le modifiche della \glossario{repository}{Repository} \glossario{GitHub}{GitHub} o il progresso dei task assegnati con Wrike. Permette inoltre di creare canali tematici per rendere più efficiente lo scambio e il reperimento delle informazioni, nonché condividere file ed immagini utili allo sviluppo del progetto.
 	\\ \noindent Per mantenere sotto continuo controllo l'avanzamento dei lavori è prevista, almeno una volta a settimana, una conversazione su \textit{Slack} in cui ogni membro del gruppo indica lo stato di avanzamento del \glossario{Task}{task} assegnatogli.
+	\\ \noindent Per comunicazioni informali e per ricevere notifiche sommarie riguardanti le modifiche della \glossario{repository}{Repository} \glossario{GitHub}{GitHub} verrà usato un ulteriore tool di messaggistica, di nome \glossario{Telegram}{Telegram}.
 	
 	\subsubsection{Comunicazioni esterne}
 	
 	Il \textit{Responsabile del Progetto} è tenuto a mantenere le comunicazioni esterne utilizzando una cartella di posta elettronica appositamente creata:
 	\[graphite.swe@gmail.com.\]
-	Il \textit{Responsabile del Progetto} deve mantenere informati i restanti componenti del gruppo riguardo alle discussioni con terzi utilizzando i canali di comunicazione interna. 
-	\\ \noindent In ogni caso per evitare disguidi interni è previsto che alla ricezione di una mail sull'indirizzo di posta elettronica il messaggio venga inoltrato a tutti i componenti del gruppo.
+	Il \textit{Responsabile del Progetto} deve mantenere informati i restanti componenti del gruppo riguardo alle discussioni con terzi utilizzando i canali di comunicazione interna, ma per maggiore sicurezza ed evitare disguidi interni è previsto che alla ricezione di una mail sull'indirizzo di posta elettronica il messaggio venga inoltrato a tutti i componenti del gruppo.
+	Compatibilmente con impegni e richieste della Proponente, alcune rapide comunicazioni esterne avverranno tramite canale dedicato Slack.
 	
 	\subsection{Gestione degli incontri}
 	
@@ -149,18 +149,17 @@
 	Il \textit{Responsabile di Progetto} deve organizzare gli incontri esterni con il committente e comunicare al proprio gruppo data e ora in cui essi avvengono. Come per gli incontri interni, ogni componente del gruppo ha diritto ad una richiesta di organizzazione di un incontro esterno.
 	\\ \noindent Per ogni incontro esterno deve essere preventivamente stilata una serie di domande tale da giustificare la richiesta di un appuntamento con il committente.
 	
-	
 	\subsection{Gestione degli strumenti di versionamento}
 	
 	\subsubsection{Repository}
 	
-	Per il versionamento e il salvataggio dei file è previsto l'utilizzo di repository su GitHub. L'\textit{Amministratore di Progetto} si deve occupare della creazione dei repository. In seguito l'\textit{Amministratore} inserirà tutti i componenti del gruppo, i quali dovranno essere in possesso di un account personale, come collaboratori.
-	\\ \noindent È previsto l'utilizzo di un repository di nome \textit{progettoSWE} suddiviso nel seguente modo:
-	
-	\begin{itemize}	
-		\item \textbf{Documenti:} contiene la documentazione dell'attività di progetto.
-		\item \textbf{Prodotto:} contiene i file del prodotto da realizzare.
-	\end{itemize}
+	Per il versionamento e il salvataggio dei file è previsto l'utilizzo di repository su GitHub. L'\textit{Amministratore di Progetto} si deve occupare della creazione delle repository e dell'aggiunta di tutti i componenti del gruppo, in possesso di un account personale, come collaboratori.
+	\\ \noindent È previsto l'utilizzo di tre repository facenti capo all'account GitHub del gruppo Graphite:
+	\begin{enumerate}
+		\item Repository dedicata alla Documentazione;
+		\item Repository dedicata al \textit{Proof of Concept} (e relativa pubblicazione);
+		\item Repository dedicata al codice del prodotto.
+	\end{enumerate}
 	
 	\subsubsection{Tipi di file e .gitignore}
 	
@@ -176,18 +175,54 @@
 
 	\subsection{Gestione dei rischi}
 	
-	Il \textit{Responsabile di Progetto} ha il compito di rilevare i rischi indicati nel PP. Nel caso ne vengano individuati di nuovi dovrà aggiungerli nell'analisi dei rischi dello stesso documento. 
+	Il \textit{Responsabile di Progetto} ha il compito di rilevare i rischi indicati nel PP. Nel caso ne vengano individuati di nuovi dovrà aggiungerli nell'appendice dedicata dello stesso documento (§A "Esito della rilevazione dei rischi"). 
 	\\ \noindent La procedura da seguire per la gestione dei rischi è la seguente:
 	\begin{itemize}
-		\item registrare ogni riscontro dei rischi nel PP;
-		\item aggiungere i nuovi rischi individuati nel PP;
-		\item individuare problemi non calcolati e monitorare i rischi già previsti;
-		\item ridefinire, se necessario, le strategie di progetto.
+		\item Registrazione di ogni riscontro dei rischi nel PP;
+		\item Aggiunta dei nuovi rischi rilevati nell'appendice dedicata del PP;
+		\item Individuazione di problemi non calcolati e monitoraggio di rischi già previsti;
+		\item Ridefinizione, se necessaria, delle strategie di progetto.
 	\end{itemize}
+	
+	\section{Miglioramento continuo}
+	Il gruppo intende misurare, controllare, valutare e migliorare i processi a beneficio del ciclo di sviluppo del software, operando conformemente al principio del miglioramento continuo.
+	
+	\subsection{Costituzione dei processi}
+	Per ogni processo stabilito, esso deve essere controllato, sviluppato e monitorato costantemente allo scopo di
+	garantirne il raggiungimento degli obiettivi fissati nella pianificazione.
+	
+	\subsection{Valutazione dei processi}
+	Allo scadere di ogni periodo pianificato, viene attivata una procedura di valutazione dei processi conformemente al ciclo \glossario{Ciclo di PDCA}{Ciclo di PDCA}. Per ogni processo viene valutato:
+	\begin{itemize}
+		\item Esito;
+		\item Tempistiche;
+		\item Inconvenienti;
+		\item Metriche SPICE.
+	\end{itemize}
+	
+	\subsection{Miglioramento dei processi}
+	Giunti al periodo successivo, è necessario definire e applicare i miglioramenti necessari ed aggiornare la relativa documentazione.
+	Dati storici, tecnici e di valutazione devono essere raccolti ed analizzati all'interno del PQ al fine di evidenziate eventuali punti deboli e le potenzialità dei processi impiegati. L'analisi
+	è utilizzata come feedback per migliorare i processi e indicare modifiche da applicare in questo senso alle procedure, agli strumenti e alle tecnologie.
+	
+	\section{Formazione del personale}
+	I membri del gruppo devono procedere autonomamente allo studio individuale del \textit{project management} e delle tecnologie che verranno utilizzate nel corso del progetto, riferendosi a:
+	\begin{itemize}
+		\item Materiale elencato nella sezione "Riferimenti informativi" di ogni documento;
+		\item Siti web e relativa documentazione delle tecnologie riportati in forma di link nella sezione §4.6 di questo documento;
+		\item Membri del gruppo più esperti;
+		\item Seminario su CMAKE offerto dalla Proponente e reperibile al seguente link:
+		\begin{center}
+			\url{https://github.com/giuliopaci/cmake-tutorial}
+		\end{center} 
+	\end{itemize}
+	Occorre stabilire e fornire in tempo l'adeguata preparazione in termini di sviluppo di competenze e conoscenze richieste. Il personale dove essere formato preventivamente alla pianificazione fissata, in modo da poter svolgere adeguatamente i compiti
+	assegnati. Qualora alcuni membri non riescano a colmare determinate lacune, essi devono informare al più presto il \textit{Responsabile di Progetto} che provvede a redistribuire i compiti assegnati o a indicare materiale utile allo sviluppo delle competenze/conoscenze necessarie allo svolgimento del task.
+	Il versionamento dei prodotti viene usato anche come strumento per apprendere dall'operato altrui, così da integrare le conoscenze personali migliorando la qualità e l'efficienza delle attività di formazione.
 	
 	\section{Strumenti}
 	
-	\subsection{Organizzazione interna}
+	\subsection{Organizzazione}
 	
 	\subsubsection{Sistema operativo}
 	
@@ -199,24 +234,36 @@
 		\item Windows 10 Pro x64;
 		\item Windows 7 Home Premium.
 	\end{itemize}
+
+	\subsubsection{Google Drive}
+	Google Drive è un servizio di memorizzazione e sincronizzazione online introdotto da Google. Il servizio comprende il file hosting, il file sharing e la modifica collaborativa di documenti fino a 15 GB gratuiti ed è perfettamente integrato con altri servizi Google quali Gmail, Docs, Sheets, Slides e Forms. Il gruppo intende utilizzare Drive per il rilascio della documentazione prevista per le revisioni di progetto e per il salvataggio di materiale informale che possa necessitare di elaborazione collaborativa. Il servizio prevede un piano gratuito automaticamente associato alla creazione di un account Google, ed è reperibile al seguente link:
+	\begin{center}
+		\url{https://www.google.com/drive/}
+	\end{center}
+	
+	\subsubsection{Hangouts}
+	Hangouts è un software di messaggistica istantanea e di VoIP sviluppato da Google. È disponibile per le maggiori piattaforme mobili e come estensione per il browser web Google Chrome, e si integra perfettamente con l'ecosistema di prodottoti Google. Il gruppo intende utilizzare tale tecnologia per effettuare videochiamate tra i membri e/o con la Proponente (caso in cui il contatto in remoto si è rivelato indispensabile a causa degli obblighi logistici della stessa) nel contesto di riunioni e confronti. La tecnologia è gratuita sia in versione mobile che desktop, e accessibile al seguente link:
+	\begin{center}
+		\url{https://hangouts.google.com/?hl=it}
+	\end{center}
 	
 	\subsubsection{Slack}
 	
 	\textit{Slack} è uno strumento di collaborazione aziendale utilizzato particolarmente per lo scambio di messaggi tra componenti di un team. L'idea di partenza di questo software è di essere un totale rimpiazzo degli scambi di E-mail e sms ma a questo si aggiunge la possibilità di aggiungere plugin per la notifica di attività annesse al proprio ambiente di lavoro.
-	\\ \noindent Verranno in particolare sfruttati i plugin per la notifica di attività sulla repository e per discussioni riguardo ai task presenti sulla piattaforma Wrike.
+	\\ \noindent Verranno in particolare sfruttati i plugin per la notifica di attività sulla repository e per discussioni riguardo ai task presenti sulla piattaforma Wrike. La tecnologia offre un piano gratuito che non limita il gruppo entro i confini degli obiettivi di progetto, ed è accessibile al seguente link:
+	\begin{center}
+		\url{https://slack.com/}
+	\end{center}
 	
 	\subsubsection{Telegram}
 	
-	\textit{Telegram} è una applicazione di messaggistica nata come applicazione mobile e successivamente portata anche su Windows, Mac e varie distribuzioni Linux. Rispetto agli altri sistemi di messaggistica \textit{Telegram} consente un facile passaggio di immagini e documenti in più formati mantenendo inoltre nel proprio cloud storage tali file per un agevole recupero su qualsiasi dispositivo. È possibile creare gruppi di utenti la cui chat ha soprattutto il valore aggiunto di poter contenere sistemi automatici per l'organizzazione di sondaggi e la comunicazione di messaggi importanti da tenere in sovraimpressione.
+	\textit{Telegram} è una applicazione di messaggistica nata come applicazione mobile e successivamente portata anche su Windows, Mac e varie distribuzioni Linux. Rispetto agli altri sistemi di messaggistica \textit{Telegram} consente un facile passaggio di immagini e documenti in più formati mantenendo inoltre nel proprio cloud storage tali file per un agevole recupero su qualsiasi dispositivo. È possibile creare gruppi di utenti la cui chat ha soprattutto il valore aggiunto di poter contenere sistemi automatici per l'organizzazione di sondaggi e la comunicazione di messaggi importanti da tenere in sovrimpressione. Telegram è accessibile gratuitamente al seguente link:
+	\begin{center}
+		\url{https://web.telegram.org/}
+	\end{center}
 	
-	\subsubsection{GitHub}
-	
-	GitHub è un servizio di \glossario{hosting}{hosting} per progetti software. 
-	Il sito è principalmente utilizzato dagli sviluppatori, che caricano il codice sorgente dei loro programmi e lo rendono scaricabile dagli utenti. Può essere utilizzato anche per la condivisione e la modifica di file di testo e documenti revisionabili.
-	\\ \noindent Un utente può interagire con lo sviluppatore tramite un sistema di issue tracking, pull request e commenti che permette di migliorare il codice della repository, risolvendo bug o aggiungendo funzionalità.
-
 	\subsubsection{Wrike}
-
+	
 	\textit{Wrike} è un' applicazione web disponibile anche per dispositivi mobile creata per aiutare i team a tracciare il proprio lavoro. Le sue principali funzionalità si dividono in:
 	\begin{itemize}
 		\item possibilità di creare dei task, assegnarvi delle persone, darne una priorità e controllarne lo stato di completamento;
@@ -225,49 +272,79 @@
 		\item possibilità di creazione di resoconti e discussioni riguardo a specifici argomenti;
 		\item servizio di notifica e modifica rapida tramite l'applicazione per dispositivi mobile.
 	\end{itemize}
-	Questi servizi sono normalmente disponibili soltanto per la versione a pagamento del software, dando però la possibilità agli studenti di usufruirne con una limitazione di 15 persone per gruppo di lavoro.
-
+	
+	Il gruppo intende fare di Wrike il principale strumento a supporto del \textit{project management} e quindi utilizzarlo per la suddivisione e assegnazione del lavoro in task da parte del \textit{Responsabile}, sfruttando nel contempo le altre sue funzionalità per documentare e monitorare la gestione di progetto. Pur essendo uno strumento prettamente commerciale, Wrike è disponibile gratuitamente per gli studenti al seguente link:
+	\begin{center}
+		\url{https://www.wrike.com/collaboration-tool-for-students/}
+	\end{center}
+	
 	\subsubsection{Git}
-
+	
 	\textit{Git} è un software di controllo versione distribuito utilizzabile da interfaccia a riga di comando. Pensato per mantenere un grande progetto di sviluppo distribuito, Git supporta fortemente lo sviluppo non lineare del software.
 	\\ \noindent Tramite strumenti appositi è possibile creare più diramazioni di sviluppo del software con la garanzia di poter mantenere in locale la cronologia di sviluppo completa.
-	\\ \noindent In sostituzione ai comandi testuali molti membri del gruppo utilizzeranno \glossario{Gitkraken}{Gitkraken} come interfaccia grafica per la gestione della repository.
+	\\ \noindent In sostituzione ai comandi testuali molti membri del gruppo utilizzeranno \glossario{Gitkraken}{Gitkraken} o \textit{GitHub Desktop} come interfaccia grafica per la gestione della repository. La tecnologia è open source e reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{https://git-scm.com/}
+	\end{center}
+	
+	\subsubsection{GitHub}
+	
+	GitHub è un servizio di \glossario{hosting}{hosting} per progetti software. Il sito è principalmente utilizzato dagli sviluppatori, che caricano il codice sorgente dei loro programmi e lo rendono scaricabile dagli utenti. Può essere utilizzato anche per la condivisione e la modifica di file di testo e documenti revisionabili.
+	\\ \noindent Un utente può interagire con lo sviluppatore tramite un sistema di issue tracking, pull request e commenti che permette di migliorare il codice della repository, risolvendo bug o aggiungendo funzionalità. Lo strumento è reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{https://github.com/}
+	\end{center}
 	
 	% DOCUMENTAZIONE
 	
 	\subsection{Documentazione}
 	
-	
 	Per redarre la documentazione, il gruppo utilizza i seguenti strumenti:
 	
-	\begin{itemize}
-		\item \textbf{LaTex}: per la stesura della documentazione viene utilizzato il linguaggio \LaTeX{}, data la sua flessibilità, potenza e facilità d'uso;
+	\subsubsection{LaTex}
+	\LaTeX è un linguaggio di markup, usato per la preparazione di testi, basato sul programma di composizione tipografica TEX. Il gruppo intende utilizzare tale tecnologia per la produzione collaborativa della documentazione formale, in particolare attraverso lo stumento \textit{TeXstudio}. La tecnologia è reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{https://www.latex-project.org/}
+	\end{center}
 		
-		\item \textbf{TexStudio}: per la stesura del codice \LaTeX{} viene utilizzato l’editor \glossario{TexStudio}{TexStudio}, in virtù delle innumerevoli feature che offre gratuitamente e del fatto che si tratta di un'applicazione cross-platform supportata dai maggiori sistemi operativi;
+	\subsubsection{TexStudio}
+	TexStudio è un IDE per \LaTeX che il gruppo utilizza per la stesura della documentazione in virtù delle innumerevoli funzionalità che offre gratuitamente e del fatto che si tratta di un'applicazione cross-platform supportata dai maggiori sistemi operativi. Lo strumento è reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{https://www.texstudio.org/}
+	\end{center}
 		
-		\item \textbf{SWEgo} Il tracciamento dei requisiti e dei casi d'uso viene effettuato tramite il software \glossario{SWEgo}{SWEgo} e successivamente controllato manualmente per assicurarne la correttezza. Il software è reperibile gratuitamente al link:
-		\begin{center}
-			\url{http://www.swego.it/}
-		\end{center}
+	\subsubsection{SWEgo} Il tracciamento dei requisiti e dei casi d'uso viene effettuato tramite il software \glossario{SWEgo}{SWEgo} e successivamente controllato manualmente per assicurarne la correttezza. Lo strumento è accessibile gratuitamente al seguente link:
+	\begin{center}
+		\url{http://www.swego.it/}
+	\end{center}
 		
-		\item \textbf{Diagrammi UML}: per la produzione di diagrammi UML viene utilizzato \glossario{Lucidchart}{Lucidchart}. Lo strumento è accessibile al seguenti link: 
-		
-		\begin{center}
-			\centerline{\url{https://www.lucidchart.com/}}
-		\end{center}
-			
-	\end{itemize}
+	\subsubsection{LucidChart}
+	Per la produzione di diagrammi UML viene utilizzato il software gratuito \glossario{Lucidchart}{Lucidchart}. Lo strumento è accessibile gratuitamente al seguente link:
+	\begin{center}
+		\url{http://www.lucidchart.com/}
+	\end{center}
 
 	% SVILUPPO
 
 	\subsection{Sviluppo}
 
 	Per lo sviluppo software relativo al progetto, il gruppo utilizza i seguenti strumenti:
+	
+	\subsubsection{Sistema operativo di riferimento}
+	Ubuntu è un sistema operativo focalizzato sulla facilità di utilizzo. È prevalentemente composto da software libero proveniente dal ramo instabile di Debian GNU/Linux, ma contiene anche software proprietario, ed è distribuito liberamente con licenza GNU GPL. È orientato all'utilizzo sui computer desktop, ma presenta delle varianti per altri dispositivi, ponendo grande attenzione al supporto hardware. Il gruppo intende utilizzare Ubuntu v16.04 LTS come sistema operativo di riferimento per lo sviluppo del prodotto, offrendone garanzia di corretto funzionamento sullo stesso. Ubuntu è reperibile al seguente link:
+	\begin{center}
+		\url{https://www.ubuntu-it.org/}
+	\end{center}
+	
+	\subsubsection{Libreria di riferimento}
+	Speect è un sistema di \textit{Text To Speech} (TTS) multilingua. Esso offre un sistema TTS completo (analisi e decodifica del testo e sintesi vocale) con annesse varie API, nonché un ambiente per la ricerca e lo sviluppo di sistemi e voci TTS. Speect è scritto in linguaggio C, con una stretta conformità allo standard ISO / IEC 9899: 1990, consentendo così la massima portabilità su diverse piattaforme di calcolo. Le chiamate di sistema specifiche della piattaforma sono astratte per consentire le porte a nuove piattaforme. Speect v1.1.0-69-g65f4 rappresenta il cuore del prodotto che il gruppo intende sviluppare ed in particolare è l'applicazione per la quale si vuole realizzare un'interfaccia grafica atta a semplificarne l'utilizzo e il debug. La tecnologia è open source e reperibile gratuitamente al seguente link:
+	\begin{center}
+		\url{http://speect.sourceforge.net/}
+	\end{center}
 
 	\subsubsection{IDE}
 
-	Per la codifica relativa al software richiesto dal progetto il gruppo usa l'\glossario{IDE}{IDE} \glossario{Qt}{Qt}, in virtù della sua diffusione, potenza e semplicità d'uso. Qt è reperibile al seguente link:
-	
+	QT è una libreria multipiattaforma per lo sviluppo di programmi con interfaccia grafica tramite l'uso di widget (congegni o elementi grafici). La libreria è scritta in C++ e gode di ampia diffusione e supporto. Il gruppo intende utilizzare questa tecnologia nella versione v5.9 LTS per lo sviluppo dell'interfaccia grafica del prodotto. Qt è reperibile al seguente link:
 	\begin{center}
 		\centerline{\url{https://www.qt.io/}}
 	\end{center}
@@ -278,13 +355,11 @@
 
 	\begin{itemize}
 		\item \textbf{GCC}: il compilatore che verrà usato per la compilazione del software è il \glossario{GCC}{GCC} (GNU Compiler Collection). Il compilatore è reperibile al seguente link:
-		
 		\begin{center}
 			\centerline{\url{https://gcc.gnu.org/}}
 		\end{center}
 	
-		\item \textbf{Cmake}: per semplificare la compilazione verrà usato \glossario{Cmake}{Cmake}. Lo strumento è reperibile al seguente link:
-		
+		\item \textbf{Cmake}: CMake è una famiglia di strumenti open source e multipiattaforma progettati per creare, testare e pacchettizzare software. CMake viene utilizzato per controllare il processo di compilazione del software utilizzando semplici file di configurazione indipendenti dalla piattaforma e dal compilatore e generare makefile e aree di lavoro nativi che possono essere utilizzati nell'ambiente del compilatore di propria scelta. Il gruppo intende utilizzare questa tecnologia nella versione v3.10.2 per l’automazione della compilazione del prodotto. Lo strumento è reperibile al seguente link:
 		\begin{center}
 			\centerline{\url{https://cmake.org/}}
 		\end{center}
@@ -294,7 +369,6 @@
 	\subsubsection{GUI}
 
 	Per progettare l'interfaccia grafica viene utilizzato \glossario{Qt Creator}{Qt Creator}. Questo strumento permette di realizzare interfacce grafiche mediante le librerie grafiche Qt, diventate in questo ambito quasi uno standard per piattaforme Linux Based. Qt Creator è disponibile al seguente link: 
-	
 	\begin{center}
 		\centerline{\url{https://www.qt.io/qt-features-libraries-apis-tools-and-ide/}}
 	\end{center}
@@ -318,11 +392,35 @@
 	\subsubsection{Verifica del software}
 	
 	\begin{itemize}
-		\item \textbf{Analisi statica:} Per l’analisi statica del codice viene usato il software \glossario{Valgrind}{Valgrind}. La \glossario{suite}{suite} di strumenti Valgrind fornisce numerosi strumenti di \glossario{debugging}{debugging} e di \glossario{profiling}{profiling} che aiutano a rendere i programmi più performanti e più corretti. Il più popolare di questi strumenti è chiamato Memcheck, ed è in grado di rilevare molti errori relativi alla memoria comuni nei programmi C e C++ e che possono causare arresti anomali e comportamenti imprevedibili. Valgrind è accessibile al seguente link: \\ \centerline{\url{http://valgrind.org/}};
+		\item \textbf{Testing Automatico:} Travis CI è un servizio di integrazione continua distribuito utilizzato per costruire e testare progetti software ospitati su GitHub. I progetti open source possono essere testati gratuitamente attraverso il sito web \url{travis-ci.org}. Il gruppo intende utilizzare questa tecnologia per l'esecuzione di test automatici a seguito del caricamento di codice sulla repository relativa al progetto, così da garantirne la correttezza. Travis CI è accessibile al seguente link:
+		\begin{center}
+			\url{travis-ci.org}
+		\end{center}
 		
-		\item \textbf{Analisi dinamica:} Per l’esecuzione dei test di analisi dinamica viene usato il software \glossario{SonarQube}{SonarQube}, una piattaforma open source per la gestione della qualità del codice. SonarQube è un’applicazione web che produce report sul codice duplicato, sugli standard di programmazione, i test di unità, il \glossario{code coverage}{code coverage}, la complessità, i bug potenziali, i commenti, la progettazione e l’architettura. SonarQube è accessibile al seguente link: \\ \centerline{\url{https://www.sonarqube.org/}}.
+		\item \textbf{Analisi statica:} Per l’analisi statica del codice viene usato il software \glossario{Valgrind}{Valgrind}. La \glossario{suite}{suite} di strumenti Valgrind fornisce numerosi strumenti di \glossario{debugging}{debugging} e di \glossario{profiling}{profiling} che aiutano a rendere i programmi più performanti e più corretti. Il più popolare di questi strumenti è chiamato Memcheck, ed è in grado di rilevare molti errori relativi alla memoria comuni nei programmi C e C++ e che possono causare arresti anomali e comportamenti imprevedibili. Valgrind è accessibile al seguente link: 
+		\begin{center}
+			\url{http://valgrind.org/}
+		\end{center}
 		
-		\item \textbf{Metriche legate al software:} Per il controllo delle varie metriche viene utilizzato il software \glossario{Better Code Hub}{Better Code Hub}. Better Code Hub è un servizio di analisi del codice sorgente web-based che controlla il codice per la conformità rispetto a 10 linee guida per l'ingegneria del software e fornisce un \glossario{feedback}{feedback} immediato per capire dove concentrarsi per miglioramenti di qualità. Better Code Hub è accessibile al seguente link:\\ \centerline{\url{https://bettercodehub.com/}}
+		\item \textbf{Analisi dinamica:} Per l’esecuzione dei test di analisi dinamica viene usato il software \glossario{SonarQube}{SonarQube}, una piattaforma open source per la gestione della qualità del codice. SonarQube è un’applicazione web che produce report sul codice duplicato, sugli standard di programmazione, i test di unità, il \glossario{code coverage}{code coverage}, la complessità, i bug potenziali, i commenti, la progettazione e l’architettura. SonarQube è accessibile al seguente link:
+		\begin{center}
+			\url{https://www.sonarqube.org/}
+		\end{center}
+		
+		\item \textbf{Metriche legate al software:} Per il controllo delle varie metriche viene utilizzato il software \glossario{Better Code Hub}{Better Code Hub}. Better Code Hub è un servizio di analisi del codice sorgente web-based che controlla il codice per la conformità rispetto a 10 linee guida per l'ingegneria del software e fornisce un \glossario{feedback}{feedback} immediato per capire dove concentrarsi per miglioramenti di qualità. Better Code Hub è accessibile al seguente link:
+		\begin{center}
+			\url{https://bettercodehub.com/}
+		\end{center}
 	\end{itemize}
 
+	
+	\subsection{Schema riepilogativo dell'interazione \\ delle tecnologie e degli strumenti}
+	
+	Segue uno schema che riassume l'interazione e l'uso delle tecnologie e degli strumenti selezionati.
+	
+	\begin{figure}
+		\includegraphics[scale=0.5]{tech-integration}
+		\centering
+		\caption{Schema riepilogativo dell'interazione delle tecnologie}
+	\end{figure}
 \end{document}
