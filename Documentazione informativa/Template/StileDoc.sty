@@ -1,0 +1,55 @@
+
+\usepackage{helvet} 
+\usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{titlesec}
+\usepackage{datetime}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue, linkcolor=black}
+\urlstyle{same}
+\usepackage{subfiles}
+\usepackage{longtable}
+\setlength{\headsep}{50pt} 
+
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4} 
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyhead[L]{\includegraphics[height=1.5cm]{./img/Logo.png}}
+	\fancyhead[R]{\leftmark}
+	\fancyfoot[L]{\makeatletter \@title \space \versione{} \makeatother }
+	\fancyfoot[R]{\thepage}
+}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge}
+
+\pagestyle{plain}
+\setlength{\headheight}{48pt}
+
+\usepackage{glossaries}
+\usepackage{subfiles}
+
+\newcommand{\glossario}[2] {\glsadd{#2}\textit{#1}\ped{G}}
+ \usepackage{tabulary}
+
+\newcommand{\refer}[1]{#1 \ped{\ref{#1}}}
+
+
+ \newcommand{\UserCase}[8]
+ {
+ 	\label{#1}
+ 		\begin{tabulary}{\linewidth}{p{5cm}|p{8cm} c}
+ 			Attore Principale & #2 &\\[0.2cm]
+ 			Attore Secondario & #3 &\\[0.2cm]
+ 			Descrizione & #4 &\\[0.2cm]
+ 			Precondizione & #5 &\\[0.2cm]
+ 			PostCondizione & #6 &\\[0.2cm]
+ 			Scenari Alternativi & #7 &\\[0.2cm]
+ 			Scenario Principale & #8 &\\[0.2cm]
+ 		\end{tabulary}
+ 
+ }

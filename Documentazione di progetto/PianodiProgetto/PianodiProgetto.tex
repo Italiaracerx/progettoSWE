@@ -1,0 +1,74 @@
+\documentclass[openany,12pt,a4paper]{report}
+\usepackage{float}
+\usepackage[gen]{eurosym}
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\usepackage{subfiles}
+\usepackage[]{graphicx}
+\graphicspath{{./img/}{./../img/}}
+\usepackage{../StileDoc}
+\title{Piano di Progetto}
+\author{}
+
+\loadglsentries{../Glossario/Definizioni}
+
+%Ultima versione documento
+
+\newcommand{\versione}{2.0.0}
+
+\begin{document}
+	\makeatletter
+	\begin{titlepage}
+		\setlength{\headsep}{0pt}  
+		\begin{center}
+			\includegraphics[width=0.5\linewidth]{Logo.png}\\[1em]
+			{\huge \bfseries  \@title }\\[10ex]
+			\textbf{\Large Informazioni Documento} \\[2em]
+			\bgroup
+			\def\arraystretch{1.5}
+			\begin{tabular}{l|l}
+				\textbf{Versione} & \versione{}  \\
+				\textbf{Data approvazione} & 10 Marzo 2018 \\
+				\textbf{Responsabile} & Marco Focchiatti \\
+				\textbf{Redattori} & Kevin Silvestri, Marco Focchiatti, \\ 
+								   & Manfredi Smaniotto, Giulio Rossetti \\
+				\textbf{Verificatori} & Kevin Silvestri, Giulio Rossetti \\
+				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
+				 & Prof. Riccardo Cardin \\
+				 & Gruppo Graphite \\
+				\textbf{Uso} & Esterno \\
+				\textbf{Recapito} & graphite.swe@gmail.com \\
+			\end{tabular}
+		\egroup
+		\end{center}
+	\end{titlepage}
+	\makeatother
+
+	\thispagestyle{empty}
+	\newpage
+	
+	\subfile{./tex/changelog}
+	
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	%Aggiungere File da qua in poi
+	\subfile{./tex/AnalisiRischi}
+	\subfile{./tex/Pianificazione}
+	\subfile{./tex/Preventivo}
+	\subfile{./tex/ConsuntivoAppendice}
+	
+	\end{document}    
+
+
+
+
+
+
+
+
+
+
+                   
