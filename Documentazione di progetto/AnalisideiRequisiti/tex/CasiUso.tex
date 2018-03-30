@@ -13,12 +13,17 @@
 	\chapter{Casi d'uso}
 	\section{Classificazione dei casi d'uso}
 	I casi d'uso sono identificati da un codice descritto nelle NP alla sezione §2.2.3.4. 
-	 	
+	
+ 	
 	\section{UC0: Avvio Applicazione}
-	\begin{figure}[H] 
-		\centering 
-		\includegraphics[width=\textwidth]{../img/UC0.png} 
-		\caption{UC0: Avvio Applicazione} 
+	\begin{figure}[H]
+ 
+		\centering
+ 
+		\includegraphics[width=\textwidth]{../img/UC0.png}
+ 
+		\caption{UC0: Avvio Applicazione}
+ 
 	\end{figure}
 	\UserCase
 	{UC0}
@@ -30,7 +35,7 @@
 	{Viene visualizzata la pagina iniziale \refer{UC0.1}}
 	{Non previsti}
 	
-	\section{UC0.1: Visualizzazione Pagina Iniziale}
+	\section{UC0.1: Visualizzazione pagina iniziale}
 	\UserCase
 	{UC0.1}
 	{Utente}
@@ -41,7 +46,7 @@
 	{L'applicazione si avvia e l'attore visualizza la pagina iniziale}
 	{Non previsti}
 	
-	\section{UC1: Apertura Menu File}
+	\section{UC1: Apertura menu file}
 	\UserCase
 	{UC1}
 	{Utente}
@@ -65,7 +70,7 @@
 	}
 	{Non previsti}
 
-	\section{UC2: Caricamento File JSon}
+	\section{UC2: Caricamento file JSon}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\textwidth]{../img/UC2.png}
@@ -89,7 +94,7 @@
 	}
 	{Speect fallisce l'inizializzazione e l'attore visualizza il messaggio dell'errore relativo al file \refer{UC2.1}}
 	
-	\section{UC2.1: Errore Caricamento File JSon}
+	\section{UC2.1: Errore caricamento file JSon}
 	\UserCase
 	{UC2.1}
 	{Utente}
@@ -100,7 +105,7 @@
 	{L'attore ha caricato un file JSon non corretto e viene visualizzato un messaggio di errore}
 	{Non previsti}
 
-	\section{UC3: File Browser}
+	\section{UC3: File browser}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\textwidth]{../img/UC3.png}
@@ -207,7 +212,7 @@
 
 
 
-\section{UC4: Salvataggio Audio Prodotto}
+\section{UC4: Salvataggio audio prodotto}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC4.png}
@@ -232,7 +237,7 @@
 }
 {Avviene un errore durante il salvataggio dell'audio e l'attore visualizza il messaggio di errore relativo \refer{UC4.1}}
 		
-\section{UC4.1: Errore Salvataggio Audio}
+\section{UC4.1: Errore salvataggio audio}
 \UserCase
 {UC4.1}
 {Utente}
@@ -243,7 +248,7 @@
 {L'attore ha cercato di salvare il file audio prodotto e viene visualizzato un messaggio di errore}
 {Non previsti}
 
-\section{UC5: Uscita Applicazione}
+\section{UC5: Uscita applicazione}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC5.png}
@@ -259,7 +264,7 @@
 {Chiusura dell'applicazione}
 {L'attore annulla la chiusura dell'applicazione \refer{UC5.1}}
 
-\section{UC5.1: Chiusura Interfaccia Grafica}
+\section{UC5.1: Chiusura interfaccia grafica}
 \UserCase
 {UC5.1}
 {Utente}
@@ -270,7 +275,7 @@
 {L'attore visualizza una finestra di conferma e richiede la chiusura dell'applicazione}
 {L'attore visualizza una finestra di conferma e annulla la chiusura dell'applicazione}
 
-\section{UC6: Modifica Utterance Type}
+\section{UC6: Modifica utterance type}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC6.png}
@@ -293,7 +298,7 @@
 }
 {Non previsti}
 
-\section{UC6.1: Selezione Utterance Processor}
+\section{UC6.1: Selezione utterance processor}
 \UserCase
 {UC6.1}
 {Utente}
@@ -309,7 +314,7 @@
 }
 {Non previsti}
 
-\section{UC6.2: Riordino Utterance Processor}
+\section{UC6.2: Riordino utterance processor}
 \UserCase
 {UC6.2}
 {Utente}
@@ -328,7 +333,7 @@
 }
 {Non previsti}
 
-\section{UC6.3: Rimozione Utterance Processor}
+\section{UC6.3: Rimozione utterance processor}
 \UserCase
 {UC6.3}
 {Utente}
@@ -370,7 +375,7 @@
 }
 {Speect ha fallito l'esecuzione e l'attore visualizza un messaggio di errore \refer{UC7.1}}
 
-\section{UC7.1: Errore Esecuzione Speect}
+\section{UC7.1: Errore esecuzione Speect}
 \UserCase
 {UC7.1}
 {Utente}
@@ -381,7 +386,7 @@
 {L'attore ha provato ad eseguire Speect e viene visualizzato un messaggio di errore}
 {Non previsti}
 
-\section{UC7.2: Visualizzazione Grafo}
+\section{UC7.2: Visualizzazione grafo}
 \UserCase
 {UC7.2}
 {Utente}
@@ -394,7 +399,7 @@
 }
 {Non previsti}
 
-\section{UC7.3: Esecuzione Singolo Utterance Processor}
+\section{UC7.3: Esecuzione singolo utterance processor}
 \UserCase
 {UC7.3}
 {Utente}
@@ -411,7 +416,7 @@
 }
 {Speect ha fallito l'esecuzione}
 
-\section{UC8: Esportazione Grafo}
+\section{UC8: Esportazione grafo}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC8.png}
@@ -434,7 +439,7 @@
 }
 {L'esportazione fallisce e l'attore visualizza un messaggio di errore \refer{UC8.1}}
 
-\section{UC8.1: Errore Esportazione Grafo}
+\section{UC8.1: Errore esportazione grafo}
 \UserCase
 {UC8.1}
 {Utente}
@@ -445,7 +450,7 @@
 {L'esportazione del grafo è fallita e viene visualizzato un messaggio di errore}
 {Non previsti}
 
-\section{UC9: Importazione Grafo}
+\section{UC9: Importazione grafo}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC9.png}
@@ -467,7 +472,7 @@
 }
 {L'importazione fallisce e l'attore visualizza un messaggio di errore \refer{UC9.1}}
 
-\section{UC9.1: Errore Importazione Grafo}
+\section{UC9.1: Errore importazione grafo}
 \UserCase
 {UC9.1}
 {Utente}
@@ -478,7 +483,7 @@
 {L'importazione del grafo è fallita e viene visualizzato un messaggio di errore}
 {Non previsti}
 
-\section{UC10: Ricerca Path}
+\section{UC10: Ricerca path}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC10.png}
@@ -501,7 +506,7 @@
 }
 {Il percorso inserito dall'attore non è corretto e viene visualizzato un errore \refer{UC10.1}}
 
-\section{UC10.1: Errore Ricerca Path}
+\section{UC10.1: Errore ricerca path}
 \UserCase
 {UC10.1}
 {Utente}
@@ -533,7 +538,7 @@
 }
 {L'operazione di salvataggio fallisce e viene visualizzato un errore \refer{UC11.1}}
 
-\section{UC11.1: Errore Salvataggio modifiche file JSon}
+\section{UC11.1: Errore salvataggio modifiche file JSon}
 \UserCase
 {UC11.1}
 {Utente}
@@ -544,7 +549,7 @@
 {L'operazione di salvataggio fallisce e viene visualizzato un errore}
 {Non previsti}
 
-\section{UC12: Selezione Utterance Type}
+\section{UC12: Selezione utterance type}
 \UserCase
 {UC12}
 {Utente}
@@ -561,7 +566,7 @@
 }
 {Non previsti}
 
-\section{UC13: Modifica Grafo}
+\section{UC13: Modifica grafo}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC13.png}
@@ -584,7 +589,7 @@
 }
 {Non previsti}
 
-\section{UC13.1: Selezione Nodo}
+\section{UC13.1: Selezione nodo}
 \UserCase
 {UC13.1}
 {Utente}
@@ -607,7 +612,7 @@
 }
 {Non previsti}
 
-\section{UC13.2: Spostamento Nodo}
+\section{UC13.2: Spostamento nodo}
 \UserCase
 {UC13.2}
 {Utente}
@@ -625,7 +630,7 @@
 }
 {Non previsti}
 
-\section{UC13.3: Modifica Name Nodo}
+\section{UC13.3: Modifica name nodo}
 \UserCase
 {UC13.3}
 {Utente}
@@ -644,7 +649,7 @@
 }
 {Non previsti}
 
-\section{UC13.4: Modifica PoS Nodo}
+\section{UC13.4: Modifica pos nodo}
 \UserCase
 {UC13.4}
 {Utente}
@@ -663,7 +668,7 @@
 }
 {Non previsti}
 
-\section{UC13.5: Modifica Visualizzazione Relazione}
+\section{UC13.5: Modifica visualizzazione relazione}
 \UserCase
 {UC13.5}
 {Utente}
