@@ -203,11 +203,11 @@ Gli elenchi puntati servono ad esprimere in modo sintetico un concetto, evitando
 
 \begin{itemize}
 	
-	\item{\textbf{Date:}}  \[\textbf{GG-MM-AAAA}\]
+	\item{\textbf{Date:}}  \[\textbf{AAAA-GG-MM}\]
 	\begin{itemize}
+		\item{\textbf{AAAA:}} rappresenta l'anno in cifre per intero;
 		\item{\textbf{GG:}} rappresenta il giorno del mese in cifre;
-		\item{\textbf{MM:}} rappresenta il mese in cifre;
-		\item{\textbf{AAAA:}} rappresenta l'anno in cifre per intero.
+		\item{\textbf{MM:}} rappresenta il mese in cifre.
 		
 	\end{itemize}
 	
@@ -532,20 +532,10 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 	\[ PST = \frac{\textrm{\textit{numero test superati}}}{\textrm{\textit{totale dei test implementati}}} \]
 \end{itemize}
 
-\subsubsection{Failure avoidance}
-
-\begin{itemize}
-	\item \textbf{Codice:} MPPS004;
-	\item \textbf{Descrizione:} La Failure Avoidance è una metrica applicata per monitorare la robustezza del prodotto quando esso deve affrontare situazioni critiche;
-	\item \textbf{Modalità di calcolo:} La Failure Avoidance si calcola con la seguente formula:
-	
-	\[ FA = \frac{\textrm{\textit{numero situazioni anomale evitate}}}{\textrm{\textit{numero situazioni anomale occorse}}} \]
-\end{itemize}
-
 \subsubsection{Numero di parametri per metodo}
 
 \begin{itemize}
-	\item \textbf{Codice:} MPPS005;
+	\item \textbf{Codice:} MPPS004;
 	
 	\item \textbf{Descrizione:} Il numero di parametri di un metodo incide sulla sua complessità. Un valore elevato può indicare che esso si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposto in metodi più semplici;
 	
@@ -555,7 +545,7 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 \subsubsection{Numero di attributi per classe}
 
 \begin{itemize}
-	\item \textbf{Codice:} MPPS006;
+	\item \textbf{Codice:} MPPS005;
 	
 	\item \textbf{Descrizione:} Il numero di attributi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più semplici;
 	
@@ -565,7 +555,7 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 \subsubsection{Numero di metodi per classe}
 
 \begin{itemize}
-	\item \textbf{Codice:} MPPS007;
+	\item \textbf{Codice:} MPPS006;
 	
 	\item \textbf{Descrizione:} Il numero di metodi di una classe incide sulla sua complessità. Un valore elevato può indicare che essa si fa carico di una quantità eccessiva di responsabilità e che potrebbe essere decomposta in classi più semplici;
 	
@@ -575,7 +565,7 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 \subsubsection{Complessità ciclomatica}
 
 \begin{itemize}
-	\item \textbf{Codice:} MPPS008;
+	\item \textbf{Codice:} MPPS007;
 	
 	\item \textbf{Descrizione:} La \glossario{Complessità ciclomatica}{Complessita ciclomatica} (o complessità condizionale) è una metrica software utilizzata per misurare la complessità di un programma. Nello specifico, essa stima la complessità di funzioni, moduli, metodi o classi di un programma. Il valore della Complessità Ciclomatica rappresenta quanto un metodo è complesso, tramite la misura del numero di cammini linearmente indipendenti che attraversano il \glossario{grafo}{Grafo} di flusso di controllo. In tale grafo, i nodi rappresentano gruppi indivisibili di istruzioni. Un arco connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l'esecuzione delle istruzioni dell'altro nodo. Durante l’identificazione dei test, la Complessità Ciclomatica è inoltre utile per determinare il numero di casi di test necessari: l’indice di Complessità Ciclomatica è infatti un limite superiore al numero di test necessari per raggiungere la completa \glossario{copertura del codice}{Copertura del codice} (o \textit{code coverage}) del modulo testato. Un valore troppo elevato indica un'eccessiva complessità del codice, cui consegue una complessa manutenzione, al contrario un valore ridotto potrebbe indicare una scarsa efficienza dei metodi;
 	
@@ -595,7 +585,7 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 \subsubsection{Grado di instabilità}
 
 \begin{itemize}
-	\item \textbf{Codice:} MPPS009;
+	\item \textbf{Codice:} MPPS008;
 	
 	\item \textbf{Descrizione:} Il livello di stabilità di un software indica il rischio con una modifica apportata ad un \glossario{package}{package} influenzi il funzionamento dell'intero sistema;
 	
@@ -617,7 +607,7 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 
 \begin{itemize}
 	
-	\item \textbf{Codice:} MPPS010;
+	\item \textbf{Codice:} MPPS09;
 	
 	\item \textbf{Descrizione:} L'altezza degli alberi di gerarchia delle classi va limitata così da limitare l'accoppiamento. Preferibilmente, le classi dovranno dipendere solo da classi astratte e potranno implementare una o più interfacce. Viene invece proibito l'uso di ereditarietà multipla.
 	
@@ -628,7 +618,7 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 
 \begin{itemize}
 	
-	\item \textbf{Codice:} MPPS011;
+	\item \textbf{Codice:} MPPS010;
 	
 	\item \textbf{Descrizione:} Il rapporto tra linee di codice (escluse le righe vuote) e linee di commento rappresenta un indice utile a stimare la manutenibilità del codice sorgente. Un rapporto troppo basso indica una scarsa documentazione del codice scritto, cui consegue una possibile elevata complessità nel manutenerlo.
 	
@@ -636,6 +626,6 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 	\[\frac{\textrm{\textit{numero linee di commento}}}{\textrm{\textit{numero linee di codice (non vuote)}}} \]
 \end{itemize}
 
-% NORME DI PROGETTO - PROCESSI DI SUPPORTO - DOCUMENTAZIONE
-
+\section{Integrazione Continua}
+\subsection{Flusso di integrazione continua}
 \end{document}

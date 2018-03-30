@@ -140,6 +140,7 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 		\item Organizzare e dividere le parti del progetto in modo da poter ottenere componenti singole e facili da implementare attraverso la codifica. 
 	\end{itemize}
 
+	La Progettazione si colloca nel periodo "Progettazione e codifica" dettagliato nel PP (§4.4), vengono individuati i design pattern e costruita l'architettura del prodotto realizzando diagrammi di classi e di sequenza: il lavoro svolto rappresenta la \textit{Product Baseline}. \\
 	E' compito dei \textit{Progettisti} svolgere l'attività di Progettazione, definendo l'architettura logica del prodotto identificando componenti chiare, riusabili e coese, rimanendo nei costi fissati. L'architettura definita deve attenersi alle seguenti qualità:
 	\begin{itemize}
 		\item \textbf{Sufficienza:} soddisfare i requisiti definiti nel documento \textit{Analisi dei Requisiti};
@@ -158,26 +159,20 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 		\item \textbf{Basso accoppiamento:} non avere dipendenze indesiderabili.
 	\end{itemize}
 	
-	%\subsubsection{Analisi delle tecnologie}
-	%Prima di iniziare l'attività di progettazione, i \textit{Progettisti} devono condurre un analisi delle tecnologie mirata alla scelta delle più appropiate ai fini del progetto, motivando e dimostrando la scelta mediante \textit{Proof of Concept}.
+	\noindent Tali qualità vengono perseguite attraverso:
+	\begin{itemize}
+		\item Uso di adeguati design pattern;
+		\item Una progettazione guidata da diagrammi UML delle classi, di sequenza e attività dettagliati e precisi;
+		\item Confronto diretto con la Proponente;
+		\item Appropriata conoscenza e padronanza delle tecnologie.
+		
+	\end{itemize}  
 	
 	\subsubsection{Progettazione Architetturale}
-	Finita l'attività di Analisi, è compito dei \textit{Progettisti} adottare opportune soluzioni progettuali a problemi ricorrenti. Tali soluzioni devono essere flessibili e consentire una certa libertà d'uso ai \textit{Programmatori}.
+	Finita l'attività di Analisi, è compito dei \textit{Progettisti} adottare opportune soluzioni progettuali a problemi ricorrenti. Tali soluzioni devono essere flessibili e consentire una certa libertà d'uso ai \textit{Programmatori}. Al fine di conseguire queste qualità è necessario utilizzare design pattern coerenti con gli obiettivi di progetto, compatibili con le tecnologie in uso e ben documentati.
 	
 	\subsubsection{Progettazione in Dettaglio}
 	Deve definire per ogni componente software il progetto della stessa e i relativi test.
-%%	\subsubsection{UML 2.0}
-%	
-%		Al fine di rendere più chiare le scelte progettuali adottate e ridurre le possibili ambiguità, è necessario fare largo uso di vari tipi di diagrammi UML 2.0, tra cui:
-	
-%	\begin{itemize}
-%		\item \textbf{Diagrammi delle classi:} definiscono relazioni, metodi e attributi di classi e tipi, astraendosi da un qualsiasi linguaggio di programmazione;
-%		\item \textbf{Diagrammi dei \glossario{package}{package}:} illustrano raggruppamenti di classi che condividono la stessa causa di cambiamento e necessitano di essere riusate assieme;
-%		\item \textbf{Diagrammi di sequenza:} servono a descrivere le interazioni che avvengono fra gli oggetti che devono implementare collettivamente un comportamento, rappresentando sequenze di azioni tramite scelte definite (ad esempio, una sequenza di invocazioni tra metodi);
-%		\item \textbf{Diagrammi delle attività:} descrivono il flusso di operazioni di una attività (ad esempio un algoritmo), descrivendone la logica procedurale.
-%	\end{itemize}
-%
-%	\noindent E' possibile inoltre fare uso di altre tipologie di diagrammi, come diagrammi delle componenti, di macchine a stati o di \glossario{deployment}{deployment}, se necessario.
 	
 	\subsection{Codifica}
 	

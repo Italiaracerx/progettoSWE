@@ -74,6 +74,9 @@ L’analisi dinamica è una tecnica di analisi del prodotto software che richied
     \item \textbf{Istruzioni aggiuntive:} ulteriori istruzioni su come eseguire il test e su come interpretare i risultati ottenuti.
 \end{itemize}
 
+I test verranno eseguite automaticamente ad ogni commit effettuato tramite l'integrazione continua attuata grazie a \textit{Travis CI}, mentre la copertura del codice verrà assicurata dal servizio web \textit{coveralls.io}, anch'esso integrabile con Travis CI e Github, che permette di ottenere viste immediate circa la copertura del codice dopo ogni build. Tali test si differenziano tra loro secondo quanto illustrato nei paragrafi che seguono; una
+trattazione più approfondita, assieme al tracciamento, è reperibile nel PQ (Appendice B).
+
 \subsubsection{Test}
 
 Di seguito vengono riportate le tipologie di test eseguite sul software prodotto, le cui specifiche sono dettagliate nell'appendice §B del PQ:
@@ -143,15 +146,15 @@ Segue il diagramma di flusso che riassume la procedura di verifica del software:
 Il processo di validazione ha lo scopo di accertare se il prodotto software e relativa documentazione verificati sono conformi a quanto preventivato.
 
 \subsection{Descrizione}
-Concluso il processo di verifica, viene instanziato quello di validazione, in cui nuovi \textit{Verificatori} designati dal \textit{Responsabile} accertano che i risultati prodotti siano conformi agli obiettivi di qualità. Se l'esito del processo di validazione è positivo, il \textit{Responsabile di Progetto} provvede all'approvazione dei documenti e/o del software a lui sottoposti.
+Concluso il processo di verifica, viene istanziato quello di validazione, in cui nuovi \textit{Verificatori} designati dal \textit{Responsabile} accertano che i risultati prodotti siano conformi agli obiettivi di qualità. Se l'esito del processo di validazione è positivo, il \textit{Responsabile di Progetto} provvede all'approvazione dei documenti e/o del software a lui sottoposti.
 
-Questo processo consta di due principali attività:
+\noindent Questo processo consta di due principali attività:
 \begin{itemize}
     \item Test di sistema e di validazione;
     \item Collaudo.
 \end{itemize}
 
-Le attività svolte nel processo di validazione sono dunque le seguenti:
+\noindent Le attività svolte nel processo di validazione sono dunque le seguenti:
 
 \begin{itemize}
     \item Pianificazione dei test da eseguire e relativo tracciamento;
@@ -184,10 +187,6 @@ Segue il diagramma di flusso che riassume la procedura di validazione dei docume
 \subsection{Procedura di validazione del software}
 
 \begin{enumerate}
-    \item Esecuzione dei test di unità;
-    
-    \item Esecuzione dei test di integrazione;
-    
     \item Esecuzione dei test di sistema;
     
     \item Esecuzione dei test di validazione.
