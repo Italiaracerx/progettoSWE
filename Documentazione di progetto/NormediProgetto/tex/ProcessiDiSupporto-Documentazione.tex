@@ -662,7 +662,7 @@ Segue dunque l'esposizione nel dettaglio delle metriche applicate e delle rispet
 	\[\frac{\textrm{\textit{numero linee di commento}}}{\textrm{\textit{numero linee di codice (non vuote)}}} \]
 \end{itemize}
 
-\subsection{Politica della Qualità}
+\subsection{Politica della qualità}
 Il gruppo intende perseguire gli obiettivi di qualità definiti nel PQ (§2.1) attraverso:
 
 \begin{itemize}
@@ -716,6 +716,35 @@ Nello specifico, rappresentano un'anomalia:
 	\item Incongruenze tra il prodotto e le sue funzionalità determinate nell'\textit{Analisi dei Requisiti}.
 \end{itemize}
 
-\section{Integrazione Continua}
-\subsection{Flusso di integrazione continua}
+\subsection{Integrazione Continua}
+
+L'integrazione continua è un metodo di sviluppo software in cui gli sviluppatori aggiungono regolarmente modifiche al codice in un repository centralizzato, quindi la creazione di build e i test vengono eseguiti per mezzo di strumenti automatici e contestualmente si eseguono misurazioni atte a certificare la qualità del software. Gli obiettivi principali dell'integrazione continua sono:
+\begin{itemize}
+	\item Individuazione e risoluzione di bug con maggiore tempestività;
+	\item Incremento della qualità del software;
+	\item Riduzione del tempo richiesto per convalidare e pubblicare nuovi aggiornamenti.
+\end{itemize} 
+
+Il gruppo intende fare uso dell'integrazione continua al fine di perseguire i succitati obiettivi. Segue la presentazione del flusso di integrazione continua (si noti che gli strumenti citati sono approfonditi in §4.7)
+
+\subsubsection{Flusso di integrazione continua}
+
+Il flusso dell'integrazione continua instaurata è il seguente:
+\begin{enumerate}
+	\item Scrittura del codice all'interno dell'ambiente di sviluppo;
+	\item Push dei dati modificati verso il repository \textit{GitHub};
+	\item Esecuzione automatica della build e della suite di test mediante \textit{Travis CI}, con eventuale notifica su \textit{Slack} relativa a problemi di building o di mancato superamento dei test;
+	\item Rilascio dei dati sul code coverage a \textit{coveralls.io};
+	\item Calcolo dei valori per le ulteriori metriche relative alla qualità del software da parte di \textit{Codacy} e \textit{Better Code Hub}.
+\end{enumerate}
+
+Il seguente diagramma riassume il flusso di integrazione continua:
+
+
+\begin{figure}[H]
+	\includegraphics[scale=0.25]{CI}
+	\centering
+	\caption{Diagramma del flusso di integrazione continua}
+\end{figure}
+
 \end{document}
