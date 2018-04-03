@@ -15,49 +15,51 @@
 	I casi d'uso sono identificati da un codice descritto nelle NP alla sezione §2.2.3.4. 
 	
  	
-	\section{UC0: Avvio Applicazione}
+	\section{UC0: Visualizzazione pagina iniziale}
 	\begin{figure}[H]
  
 		\centering
  
 		\includegraphics[width=\textwidth]{../img/UC0.png}
  
-		\caption{UC0: Avvio Applicazione}
+		\caption{UC0: Visualizzazione pagina iniziale}
  
 	\end{figure}
 	\UserCase
 	{UC0}
 	{Utente}
 	{Non previsto}
-	{L'attore avvia l'applicazione DeSpeect}
-	{Il software Despeect è correttamente installato}
-	{L'applicazione è correttamente avviata}
-	{Viene visualizzata la pagina iniziale \refer{UC0.1}}
+	{L'attore visualizza la pagina iniziale di DeSpeect dalla quale può aprire il menu File, caricare un file JSon, selezionare l'Utterance Type, scrivere del testo in input, eseguire Speect}
+	{Il sistema funziona correttamente e visualizza la pagina iniziale di Despeect}
+	{Il sistema ha ricevuto gli input dall'attore}
+	{\begin{itemize}
+			\item{} L'attore può aprire il menu File \refer{UC1};
+			\item{} L'attore può caricare un file JSon \refer{UC2};
+			\item{} L'attore può selezionare l'Utterance Type \refer{UC12};
+			\item{} L'attore può scrivere del testo in input;
+			\item{} L'attore può eseguire Speect \refer{UC7}.
+	\end{itemize}}
 	{Non previsti}
 	
-	\section{UC0.1: Visualizzazione pagina iniziale}
-	\UserCase
-	{UC0.1}
-	{Utente}
-	{Non previsto}
-	{L'attore visualizza la pagina iniziale}
-	{Il software DeSpeect è correttamente avviato \refer{UC0}}
-	{L'applicazione visualizza la pagina iniziale}
-	{L'applicazione si avvia e l'attore visualizza la pagina iniziale}
-	{Non previsti}
 	
-	\section{UC1: Apertura menu file}
+	\section{UC1: Apertura menu File}
+	\begin{figure}[H]
+		
+		\centering
+		
+		\includegraphics[width=\textwidth]{../img/UC0.png}
+		
+		\caption{UC1: Apertura menu File}
+		
+	\end{figure}
 	\UserCase
 	{UC1}
 	{Utente}
 	{Non previsto}
-	{L'attore vuole visualizzare il menu File}
-	{L'applicazione è correttamente avviata \refer{UC0}}
-	{Vengono visualizzate le voci del menu File}
-	{	\begin{enumerate}
-			\item{} L'attore preme sul menu File
-			\item{} Il menu File si apre e offre le seguenti scelte:
-		\begin{itemize}
+	{L'attore visualizza il menu File dalla quale può caricare o salvare un file JSon, caricare o salvare un grafo, salvare l'audio prodotto, cercare il percorso di un nodo nel grafo e chiudere l'applicazione}
+	{Il sistema funziona correttamente e visualizza il menu File}
+	{Il sistema ha ricevuto gli input dall'attore}
+	{	\begin{itemize}
 		\item{} L'attore può caricare un file JSon \refer{UC2}
 		\item{} L'attore può salvare le modifiche al file JSon \refer{UC11}
 		\item{} L'attore può caricare un grafo \refer{UC8}
@@ -66,7 +68,6 @@
 		\item{} L'attore può cercare il percorso di un nodo nel grafo \refer{UC10}
 		\item{} L'attore può chiudere l'applicazione \refer{UC5}
 		\end{itemize}
-	\end{enumerate}
 	}
 	{Non previsti}
 
@@ -74,7 +75,7 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\textwidth]{../img/UC2.png}
-		\caption{UC2: Caricamento File JSon}
+		\caption{UC2: Caricamento file JSon}
 	\end{figure}
 	\UserCase
 	{UC2}
@@ -85,8 +86,8 @@
 	{Viene inizializzato Speect con il file JSon selezionato e aggiornata la GUI}
 	{
 		\begin{itemize}
-			\item{} Viene aperto il file browser \refer{UC3}
-			\item{} L'attore seleziona il file \refer{UC3.2}
+			\item{} Viene aperto il file browser
+			\item{} L'attore seleziona il file
 			\item{} L'attore preme Carica
 			\item{} Il file viene dato a Speect che prova l'inizializzazione
 			\item{} Viene visualizzato il percorso del file nell'apposito spazio \ref{fig:GUI}
@@ -105,113 +106,6 @@
 	{L'attore ha caricato un file JSon non corretto e viene visualizzato un messaggio di errore}
 	{Non previsti}
 
-	\section{UC3: File browser}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=\textwidth]{../img/UC3.png}
-		\caption{UC3: File Browser}
-	\end{figure}
-	\UserCase
-	{UC3}
-	{Utente}
-	{Non previsto}
-	{L'attore deve navigare nel file system alla ricerca di un file o di una cartella}
-	{L'attore deve selezionare un file o raggiungere una cartella}
-	{Viene selezionato il file da caricare o la cartella in cui salvare}
-	{
-		\begin{itemize}
-			\item{} L'attore naviga nel \glossario{file system}{file system} cercando un file o una cartella \refer{UC3.1}
-			\item{} L'attore seleziona un file \refer{UC3.2}
-		\end{itemize}
-	}
-	{Non previsti}
-	
-	\section{UC3.1: Navigazione nel file system}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=\textwidth]{../img/UC3_1.png}
-		\caption{UC3.1: Navigazione nel file system}
-	\end{figure}
-	\UserCase
-	{UC3.1}
-	{Utente}
-	{Non previsto}
-	{L'attore può navigare nel file system per cercare un file o una cartella}
-	{L'applicazione ha accesso al file system}
-	{La directory selezionata è quella desiderata dall'utente}
-	{
-		L'attore cerca un file o una cartella spostandosi tra le
-		certelle del file system
-	}
-	{Il file o la cartella cercati non esistono. La ricerca viene annullata}	
-	
-	\section{UC3.1.1: Modifica del path di ricerca}
-	\UserCase
-	{UC3.1.1}
-	{Utente}
-	{Non previsto}
-	{L'attore può modificare il path nel quale cercare selezionando una cartella o tornando al passo precedente}
-	{L'attore sta navigando nel file system \refer{UC3.1}}
-	{Il path nel quale cercare il documento è stato modificato}
-	{L'attore si sposta nel file system accedendo ad una cartella o tornando alla directory padre}
-	{Se non è possibile accedere alla cartella viene visualizzato un messaggio di errore \refer{UC3.1.2}}
-	
-	\section{UC3.1.2: Visualizzazione messaggio cartella non accessibile}
-	\UserCase
-	{UC3.1.2}
-	{Utente}
-	{Non previsto}
-	{L'applicazione visualizza un messaggio di errore per avvisare l'attore che la cartella selezionata non è accessibile}
-	{L'attore sta navigando nel file system \refer{UC3.1}}
-	{Il path di ricerca corrisponde ad una cartella accessibile}
-	{L'attore cerca di accedere ad una cartella che non può essere visitata e l'applicazione visualizza un messaggio di errore}
-	{Non previsti}
-
-	\section{UC3.2: Scelta di un file}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=\textwidth]{../img/UC3_2.png}
-		\caption{UC3.2: Scelta di un file}
-	\end{figure}
-\UserCase
-{UC3.2}
-{Utente}
-{Non previsto}
-{L'attore sceglie un file tra quelli disponibili nella directory di ricerca}
-{L'attore si trova in una directory nella quale c'è almeno un file da selezionare}
-{Un file è stato selezionato}
-{
-	\begin{itemize}
-		\item{} L'attore clicca sul file
-		\item{} Il file selezionato viene evidenziato
-	\end{itemize}
-}
-{Viene visualizzato un messaggio di errore se il file selezionato non ha un formato supportato \refer{UC3.2.1} o se l'applicazione non ha i permessi per accedere al file \refer{UC3.2.2}}
-
-\section{UC3.2.1: Visualizzazione messaggio file non supportato}
-\UserCase
-{UC3.2.1}
-{Utente}
-{Non previsto}
-{L'applicazione visualizza un messaggio di errore per avvisare l'attore che il file non è supportato}
-{L'attore ha selezionato un file \refer{UC3.2}}
-{Il file non viene importato e l'attore può continuare la navigazione nel file system}
-{L'attore ha selezionato un file con formato non supportato e viene visualizzato un messaggio di errore}
-{Non previsti}
-
-\section{UC3.2.2: Visualizzazione messaggio file non accessibile}
-\UserCase
-{UC3.2.2}
-{Utente}
-{Non previsto}
-{L'applicazione visualizza un messaggio di errore per avvisare l'attore che il file non è accessibile}
-{L'attore ha selezionato un file \refer{UC3.2}}
-{Il file non viene importato e l'attore può continuare la navigazione nel file system}
-{L'attore ha selezionato un file al quale l'applicazione non può accedere e viene visualizzato un messaggio di errore}
-{Non previsti}
-
-
-
 \section{UC4: Salvataggio audio prodotto}
 \begin{figure}[H]
 	\centering
@@ -227,8 +121,8 @@
 {L'audio è salvato in un file}
 {
 		\begin{itemize}
-		\item{} Viene aperto il file browser \refer{UC3}
-		\item{} L'attore si sposta nella cartella di destinazione \refer{UC3.1}
+		\item{} Viene aperto il file browser 
+		\item{} L'attore si sposta nella cartella di destinazione 
 		\item{} L'attore scrive il nome del file nella barra di testo
 		\item{} L'attore preme su Salva 
 		\item{} Speect compila producendo il file desiderato
@@ -249,33 +143,17 @@
 {Non previsti}
 
 \section{UC5: Uscita applicazione}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{../img/UC5.png}
-	\caption{UC5: Uscita Applicazione}
-\end{figure}
 \UserCase
 {UC5}
 {Utente}
 {Non previsto}
-{L'attore vuole chiudere l'applicazione}
-{Viene confermata la chiusura dell'applicazione \refer{UC5.1}}
-{L'applicazione viene terminata}
-{Chiusura dell'applicazione}
-{L'attore annulla la chiusura dell'applicazione \refer{UC5.1}}
-
-\section{UC5.1: Chiusura interfaccia grafica}
-\UserCase
-{UC5.1}
-{Utente}
-{Non previsto}
-{L'attore visualizza una finestra di conferma}
+{L'attore che vuole chiudere l'applicazione, visualizza una finestra di conferma e conferma la chiusura dell'applicazione}
 {L'applicazione è in esecuzione}
-{L'attore conferma la chiusura dell'applicazione}
-{L'attore visualizza una finestra di conferma e richiede la chiusura dell'applicazione}
-{L'attore visualizza una finestra di conferma e annulla la chiusura dell'applicazione}
+{L'attore conferma la chiusura dell'applicazione e l'applicazione viene terminata}
+{Chiusura dell'applicazione}
+{L'attore annulla la chiusura dell'applicazione}
 
-\section{UC6: Modifica utterance type}
+\section{UC6: Modifica Utterance Type}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC6.png}
@@ -298,7 +176,7 @@
 }
 {Non previsti}
 
-\section{UC6.1: Selezione utterance processor}
+\section{UC6.1: Selezione Utterance Processor}
 \UserCase
 {UC6.1}
 {Utente}
@@ -314,7 +192,7 @@
 }
 {Non previsti}
 
-\section{UC6.2: Riordino utterance processor}
+\section{UC6.2: Riordino Utterance Processor}
 \UserCase
 {UC6.2}
 {Utente}
@@ -333,7 +211,7 @@
 }
 {Non previsti}
 
-\section{UC6.3: Rimozione utterance processor}
+\section{UC6.3: Rimozione Utterance Processor}
 \UserCase
 {UC6.3}
 {Utente}
@@ -399,7 +277,7 @@
 }
 {Non previsti}
 
-\section{UC7.3: Esecuzione singolo utterance processor}
+\section{UC7.3: Esecuzione singolo Utterance Processor}
 \UserCase
 {UC7.3}
 {Utente}
@@ -431,8 +309,8 @@
 {Il grafo viene esportato in file}
 {
 	\begin{itemize}
-			\item{} Viene aperto il file browser \refer{UC3}
-			\item{} L'attore si sposta nella cartella in cui salvare il grafo \refer{UC3.1}
+			\item{} Viene aperto il file browser
+			\item{} L'attore si sposta nella cartella in cui salvare il grafo
 			\item{} L'attore scrive il nome del file nella barra di testo
 			\item{} L'attore preme su Salva Grafo
 	\end{itemize}
@@ -465,8 +343,8 @@
 {Il grafo viene importato da file}
 {
 	\begin{itemize}
-			\item{} Viene aperto il file browser \refer{UC3}
-			\item{} L'attore seleziona il file da importare \refer{UC3.2}
+			\item{} Viene aperto il file browser
+			\item{} L'attore seleziona il file da importare
 			\item{} L'attore preme su Apri Grafo
 	\end{itemize}
 }
@@ -549,7 +427,7 @@
 {L'operazione di salvataggio fallisce e viene visualizzato un errore}
 {Non previsti}
 
-\section{UC12: Selezione utterance type}
+\section{UC12: Selezione Utterance Type}
 \UserCase
 {UC12}
 {Utente}
@@ -649,7 +527,7 @@
 }
 {Non previsti}
 
-\section{UC13.4: Modifica pos nodo}
+\section{UC13.4: Modifica PoS nodo}
 \UserCase
 {UC13.4}
 {Utente}
