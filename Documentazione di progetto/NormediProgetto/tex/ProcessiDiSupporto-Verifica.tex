@@ -12,9 +12,9 @@ Il processo di verifica ha lo scopo di accertare che non vengano introdotti erro
 
 \subsection{Descrizione}
 
-Il processo di verifica viene instanziato per ogni processo in esecuzione, qualora esso raggiunga un livello di maturità significativo o vi fossero modiche sostanziali al suo stato. Per ogni processo viene verificata la qualità dello stesso e dei suoi prodotti. Ognuno dei periodi descritti nel PP produce degli esiti diversi, dunque le procedure di verifica saranno specializzate per ognuno di essi. Gli esiti delle attività di
+Il processo di verifica viene istanziato per ogni processo in esecuzione, qualora esso raggiunga un livello di maturità significativo o vi fossero modiche sostanziali al suo stato. Per ogni processo viene verificata la qualità dello stesso e dei suoi prodotti. Ognuno dei periodi descritti nel PP produce degli esiti diversi, dunque le procedure di verifica saranno specializzate per ognuno di essi. Gli esiti delle attività di
 verifica sono riportati in un'appendice dedicata nel PQ. 
-In relazione alle attività di verifica, il gruppo si riferisce alle metriche descritte nel capitolo §3.3 di questo documento.
+In relazione alle attività di verifica, il gruppo si riferisce alle metriche descritte in §3.3 di questo documento.
 
 \subsection{Verifica dei processi} 
 L'esecuzione dei processi viene monitorata e documentato a fine periodo nell'appendice §C "Resoconto delle attività di verifica di periodo" nel PQ, secondo le metodologie indicate dallo standard \glossario{ISO/IEC 15504}{ISO/IEC 15504} illustrato in appendice §A.1 dello stesso.
@@ -34,7 +34,7 @@ L’analisi statica è una tecnica che permette di individuare anomalie all’in
     \item \textbf{Inspection:} viene svolta una lettura mirata e strutturata, volta a localizzare gli errori segnalati nella lista di controllo con il minor costo possibile. Con l'incremento dell'esperienza, la lista di controllo viene progressivamente estesa rendendo l’\textit{inspection} via via più efficacie.
 \end{itemize}
 
-Il gruppo utilizza entrambe le tecniche di analisi statica e fa inoltre uso di uno script apposito per il calcolo dell'\glossario{indice Gulpease}{indice Gulpease}, la cui descrizione è illustrata di seguito in questo documento.
+Il gruppo utilizza entrambe le tecniche di analisi statica.
 
 \subsubsection{Procedura di verifica dei documenti}
 
@@ -79,6 +79,7 @@ trattazione più approfondita, assieme al tracciamento, è reperibile nel PQ (Ap
 
 \subsubsection{Test}
 
+La tecnologia utilizzata per la realizzazione dei test è \textit{Google Test}, approfondita in §4.7.4 di questo documento. 
 Di seguito vengono riportate le tipologie di test eseguite sul software prodotto, le cui specifiche sono dettagliate nell'appendice §B del PQ:
 
 \begin{itemize}

@@ -22,7 +22,7 @@
 	
 	Ogni ruolo viene ricoperto da ciascun componente del gruppo a turno, dando la possibilità ad ogni membro di fare esperienza in ognuno di essi. L'organizzazione e la pianificazione delle attività da svolgere in ogni ruolo è regolata dal PP. La descrizione dei ruoli viene approfondita nelle sezioni seguenti.
 	
-	\subsection {Amministratore di Progetto}
+	\subsection {Amministratore di progetto}
 	
 	L’\textit{Amministratore di Progetto} deve controllare e amministrare tutto l’ambiente di lavoro con piena responsabilità sulla capacità operativa e sull’efficienza. 
 	\\ \noindent Le sue mansioni sono: 
@@ -35,7 +35,7 @@
 		\item controllo della \glossario{qualità}{qualita} sul prodotto.
 	\end{itemize}
 	
-	\subsection {Responsabile di Progetto}
+	\subsection {Responsabile di progetto}
 	
 	Il \textit{Responsabile di Progetto} è il punto di riferimento sia per il \glossario{committente}{committente} che per il \textit{fornitore}. Esso deve anche approvare le scelte prese dal gruppo e se ne assume la responsabilità. 
 	\\ \noindent Le sue mansioni sono:
@@ -97,20 +97,20 @@
 	All'inizio di ogni incremento il \textit{Responsabile di Progetto} è tenuto a pianificare un insieme di task da assegnare ai componenti del gruppo sulla base di:
 	 
 	\begin{itemize}
-	 	\item una stima delle risorse disponibili per suddetto incremento;
-	 	\item una stima dei possibili rischi;
-	 	\item rispetto degli obiettivi di qualità definiti.
+	 	\item Una stima delle risorse disponibili per suddetto incremento;
+	 	\item Una stima dei possibili rischi;
+	 	\item Rispetto degli obiettivi di qualità definiti.
 	\end{itemize}
 	 
 	\noindent Per l'assegnazione del carico di lavoro in Task equamente distribuiti tra i componenti viene utilizzata la piattaforma \glossario{Wrike}{Wrike}, che mostra in modo efficace nella propria interfaccia il quadro completo di tutti i Task inseriti con relativo status (completato, in corso o libero), persona assegnata e scadenza. Quando viene inserito, viene assegnato o cambia stato un Task viene inviata una mail ad ogni componente del gruppo e, per tutti i componenti che fanno uso dell'applicazione mobile, viene inviata una notifica sugli smartphone collegati a \textit{Wrike}.
 	\\ \noindent L'assegnazione dei Task avviene secondo il seguente schema:
 	
 	\begin{itemize}
-		\item inserire un titolo al Task;
-		\item dividere in più Subtask il Task e titolarli;
-		\item indicare la persona a cui è stato assegnato ogni Subtask;
-		\item inserire la data entro cui consegnare i documenti/file nella repository prefissata;
-		\item inserire una descrizione che contiene un breve riassunto del compito assegnato e il ruolo assunto in quella fase del progetto.
+		\item Inserire un titolo al Task;
+		\item Dividere in più Subtask il Task e titolarli;
+		\item Indicare la persona a cui è stato assegnato ogni Subtask;
+		\item Inserire la data entro cui consegnare i documenti/file nella repository prefissata;
+		\item Inserire una descrizione che contiene un breve riassunto del compito assegnato e il ruolo assunto in quella fase del progetto.
 	\end{itemize}
 	
 	Segue il diagramma di flusso che riassume la procedura di individuazione e assegnazione dei task:
@@ -144,7 +144,7 @@
 	\\ \noindent Per mantenere sotto continuo controllo l'avanzamento dei lavori è previsto almeno un incontro settimanale con l'intero gruppo.
 	\\ \noindent Ogni componente del gruppo ha diritto di presentare una richiesta di organizzazione di un incontro al \textit{Responsabile di progetto} il quale può accogliere o meno la proposta.
 	
-	\subsubsection{Incontri Esterni}
+	\subsubsection{Incontri esterni}
 	
 	Il \textit{Responsabile di Progetto} deve organizzare gli incontri esterni con il committente e comunicare al proprio gruppo data e ora in cui essi avvengono. Come per gli incontri interni, ogni componente del gruppo ha diritto ad una richiesta di organizzazione di un incontro esterno.
 	\\ \noindent Per ogni incontro esterno deve essere preventivamente stilata una serie di domande tale da giustificare la richiesta di un appuntamento con il committente.
@@ -383,7 +383,6 @@
 		\item \textbf{Verifica ortografica:} Per eseguire controlli ortografici sulla documentazione viene utilizzata la verifica dell’ortografia in tempo reale, strumento integrato in TexStudio che sottolinea in rosso le parole errate secondo la lingua italiana;
 		
 		\item \textbf{Verifica della leggibilità:} Per calcolare l'\glossario{indice Gulpease}{indice Gulpease} a verifica della leggibilità dei documenti viene utilizzato uno script apposito reperibile al link seguente:
-		
 		\begin{center}
 			\centerline{\url{https://github.com/LeafSWE/Leaf/tree/master/Documents/Gulpease}}
 		\end{center}
@@ -392,9 +391,13 @@
 	\subsubsection{Verifica del software}
 	
 	\begin{itemize}
+		\item \textbf{Test:} Google Test è un framework per la realizzazione di test per il linguaggio C++. Il gruppo intende utilizzare questa tecnologia per la realizzazione dei test del software, ulteriori informazioni sono reperibili al seguente link:
+		\begin{center}
+			\url{https://github.com/google/googletest/blob/master/googletest/docs/Primer.md}
+		\end{center}
 		\item \textbf{Testing Automatico:} Travis CI è un servizio di integrazione continua distribuito utilizzato per costruire e testare progetti software ospitati su GitHub. I progetti open source possono essere testati gratuitamente attraverso il sito web \url{travis-ci.org}. Il gruppo intende utilizzare questa tecnologia per l'esecuzione di test automatici a seguito del caricamento di codice sulla repository relativa al progetto, così da garantirne la correttezza. Travis CI è accessibile al seguente link:
 		\begin{center}
-			\url{travis-ci.org}
+			\url{https://docs.travis-ci.com/}
 		\end{center}
 		
 		\item \textbf{Analisi statica:} Per l’analisi statica del codice viene usato il software \glossario{Valgrind}{Valgrind}. La \glossario{suite}{suite} di strumenti Valgrind fornisce numerosi strumenti di \glossario{debugging}{debugging} e di \glossario{profiling}{profiling} che aiutano a rendere i programmi più performanti e più corretti. Il più popolare di questi strumenti è chiamato Memcheck, ed è in grado di rilevare molti errori relativi alla memoria comuni nei programmi C e C++ e che possono causare arresti anomali e comportamenti imprevedibili. Valgrind è accessibile al seguente link: 
@@ -407,10 +410,18 @@
 			\url{https://www.sonarqube.org/}
 		\end{center}
 		
-		\item \textbf{Metriche legate al software:} Per il controllo delle varie metriche viene utilizzato il software \glossario{Better Code Hub}{Better Code Hub}. Better Code Hub è un servizio di analisi del codice sorgente web-based che controlla il codice per la conformità rispetto a 10 linee guida per l'ingegneria del software e fornisce un \glossario{feedback}{feedback} immediato per capire dove concentrarsi per miglioramenti di qualità. Better Code Hub è accessibile al seguente link:
-		\begin{center}
-			\url{https://bettercodehub.com/}
-		\end{center}
+		\item \textbf{Metriche legate al software:} Per il controllo delle varie metriche vengono utilizzati i software:
+		\begin{itemize}
+			\item \textbf{Better Code Hub}: \glossario{Better Code Hub}{Better Code Hub} è un servizio di analisi del codice sorgente web-based che controlla il codice per la conformità rispetto a 10 linee guida per l'ingegneria del software e fornisce un \glossario{feedback}{feedback} immediato per capire dove concentrarsi per miglioramenti di qualità. Better Code Hub è accessibile al seguente link:
+			\begin{center}
+				\url{https://bettercodehub.com/}
+			\end{center}
+		
+			\item \textbf{Codacy}: Codacy è uno strumento di analisi / qualità del codice automatizzato, con cui si ottengono analisi statiche, complessità ciclomatica, indicazioni sulla duplicazione e le variazioni della copertura dei test dell'unità di codice in ogni richiesta di commit e pull. È inoltre possibile utilizzare Codacy per applicare uno standard di qualità del codice e applicare le best practice sulla sicurezza, il tutto integrato con GitHub. Ulteriori informazioni su Codacy sono disponibili al seguente link:
+			\begin{center}
+				\url{https://www.codacy.com/features}
+			\end{center}
+		\end{itemize} 
 	\end{itemize}
 
 	
