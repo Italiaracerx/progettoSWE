@@ -138,28 +138,138 @@ A seguito dell'ultimo periodo terminato si è verificata una diminuzione del pre
 
 \section{Introduzione}
 
-In questa appendice si intende riportare l'esito della rilevazione dei rischi concretizzatisi durante il progetto. L'incorrere dei rischi viene monitorato costantemente e questa appendice viene incrementata ogni qualvolta ne venga rilevato uno. Nella sezione successiva si riporta dunque una tabella riepilogativa che riporta le seguenti voci:
+In questa appendice si intende riportare l'esito della rilevazione dei rischi concretizzatisi durante il progetto. L'incorrere dei rischi viene monitorato costantemente e questa appendice viene incrementata ogni qualvolta ne venga rilevato uno. \\
+Nelle sezioni successive per ogni periodo si riporta una tabella che riporta le seguenti voci:
 
 \begin{itemize}
-	\item \textbf{Codice}: il codice del rischio concretizzatosi durante il progetto;
-	\item \textbf{Descrizione}: una breve descrizione del modo in cui il rischio si è concretizzato;
+	\item \textbf{Rischio}: il codice del rischio concretizzatosi durante il periodo del progetto;
+	\item \textbf{Riscontro effettivo}: una breve descrizione del modo in cui il rischio si è concretizzato;
 	\item \textbf{Contromisure}: le contromisure adottate al fine di mitigare e/o eliminare le conseguenze della succitata concretizzazione del rischio.
 \end{itemize}
 
-\section{Analisi e contromisure}
+\section{Analisi}
 
 \setlength\LTleft{-5.5mm}
 
 \begin{longtable}{|p{15mm}|p{60mm}|p{60mm}|}
-	\hline \textbf{Codice} & \textbf{Descrizione} & \textbf{Contromisure} \\
+	\hline \textbf{Rischio} & \textbf{Riscontro effettivo} & \textbf{Contromisure} \\
+	
 	\hline RT0 & Alcuni membri del gruppo non erano pratici con Git e \LaTeX &  È stato spiegato loro l'utilizzo di queste tecnologie \\
+	
 	\hline RS0 & Sono stati riscontrati alcuni guasti hardware da parte di alcuni componenti del gruppo & Nel ripristino del funzionamento dei dispositivi è stato possibile riscaricare dalla \textit{repository Github} i file utili per lavorare da dove era stato lasciato il lavoro precedentemente svolto \\
-	\hline RS0 & Il portale che ospita documentazione e download di Speect è stato offline per due giorni & Una volta ripristinatosi il funzionamento del portale, tutto il materiale reperibile online è stato scaricato in locale e condiviso tra i membri così da tutelarsi nel caso il problema dovesse occorrere nuovamente \\
+	
+	\hline RS1 & Nessuno & Nessuna \\
+	
 	\hline RG0 & A causa delle festività invernali e/o problemi personali, alcuni membri del gruppo si sono assentati per alcuni giorni & Le eventuali assenze sono state comunicate con largo anticipo, ciò ha permesso di organizzare il lavoro in modo ottimale tenendo conto delle assenze \\
-	\hline RR0 & Il gruppo di analisti ha sollevato vari dubbi prima di iniziare il proprio lavoro & È stato organizzato un incontro con il proponente per risolvere prontamente ogni dubbio sollevato; è stato anche creato un canale Slack con la Proponente affinchè siano risolti dei futuri dubbi nello sviluppo del software \\
+	
+	\hline RG1 & Nessuno & Nessuna \\
+	
+	\hline RR0 & Il gruppo di analisti ha sollevato vari dubbi prima di iniziare il proprio lavoro & È stato organizzato un incontro con il proponente per risolvere prontamente ogni dubbio sollevato \\
+	
 	\hline RO0 & La sottostima dei tempi necessari ha causato ritardi nel compimento di alcuni task & Si è deciso di allungare il lasso di tempo di slack relativo a ciascun task in maniera proporzionale all'entità dello stesso \\
+	
 	\hline
-	\caption{Riepilogo dell'esito della rilevazione dei rischi}
+	\caption{Esito della rilevazione dei rischi - \textit{Analisi}}
+\end{longtable}
+
+\section{Consolidamento dei requisiti}
+
+\setlength\LTleft{-5.5mm}
+
+\begin{longtable}{|p{15mm}|p{60mm}|p{60mm}|}
+	\hline \textbf{Rischio} & \textbf{Riscontro effettivo} & \textbf{Contromisure} \\
+	
+	\hline RT0 & Nessuno & Nessuna \\
+		
+	\hline RS0 & Il portale che ospita documentazione e download di Speect è stato offline per due giorni & Una volta ripristinatosi il funzionamento del portale, tutto il materiale reperibile online è stato scaricato in locale e condiviso tra i membri così da tutelarsi nel caso il problema dovesse occorrere nuovamente \\
+	
+	\hline RS1 & Nessuno & Nessuna \\
+	
+	\hline RG0 & Nessuno & Nessuna \\
+	
+	\hline RG1 & Nessuno & Nessuna \\
+	
+	\hline RR0 & Il gruppo di analisti ha sollevato vari dubbi & \'E stato anche creato un canale Slack con la Proponente affinchè siano risolti dei futuri dubbi nello sviluppo del software \\
+	
+	\hline RO0 & Nessuno & Nessuna \\
+	
+	\hline
+	\caption{Esito della rilevazione dei rischi - \textit{Consolidamento dei requisiti}}
+\end{longtable}
+
+\section{Consolidamento delle tecnologie}
+
+\setlength\LTleft{-5.5mm}
+
+\begin{longtable}{|p{15mm}|p{60mm}|p{60mm}|}
+	\hline \textbf{Rischio} & \textbf{Riscontro effettivo} & \textbf{Contromisure} \\
+	
+	\hline RT0 & Alcuni membri del gruppo non erano pratici con CMAKE e Travis CI &  È stato spiegato loro l'utilizzo di queste tecnologie \\
+	
+	\hline RS0 & Nessuno & Nessuna \\
+	
+	\hline RS1 & Nessuno & Nessuna \\
+	
+	\hline RG0 & Nessuno & Nessuna \\
+	
+	\hline RG1 & Nessuno & Nessuna \\
+	
+	\hline RR0 & Nessuno & Nessuna \\
+	
+	\hline RO0 & La sottostima dei tempi necessari ha causato ritardi nel compimento di alcuni task & Si è deciso di allungare il lasso di tempo di slack relativo a ciascun task in maniera proporzionale all'entità dello stesso \\
+	
+	\hline
+	\caption{Esito della rilevazione dei rischi - \textit{Consolidamento delle tecnologie}}
+\end{longtable}
+
+\section{Progettazione e codifica}
+
+\setlength\LTleft{-5.5mm}
+
+\begin{longtable}{|p{15mm}|p{60mm}|p{60mm}|}
+	\hline \textbf{Rischio} & \textbf{Riscontro effettivo} & \textbf{Contromisure} \\
+	
+	\hline RT0 & Nessuno & Nessuna \\
+	
+	\hline RS0 & Sono stati riscontrati alcuni guasti hardware da parte di alcuni componenti del gruppo & Nel ripristino del funzionamento dei dispositivi è stato possibile riscaricare dalla \textit{repository Github} i file utili per lavorare da dove era stato lasciato il lavoro precedentemente svolto \\
+	
+	\hline RS1 & Nessuno & Nessuna \\
+	
+	\hline RG0 & A causa delle festività pasquali e/o problemi personali, alcuni membri del gruppo si sono assentati per alcuni giorni & Le eventuali assenze sono state comunicate con largo anticipo, ciò ha permesso di organizzare il lavoro in modo ottimale tenendo conto delle assenze \\
+	
+	\hline RG1 & Nessuno & Nessuna \\
+	
+	\hline RR0 & Nessuno & Nessuna \\
+	
+	\hline RO0 & Nessuno & Nessuna \\
+	
+	\hline
+	\caption{Esito della rilevazione dei rischi - \textit{Progettazione e codifica}}
+\end{longtable}
+
+\section{Riepilogo}
+
+\setlength\LTleft{40mm}
+
+\begin{longtable}{|c|c|}
+	\hline \textbf{Rischio} & \textbf{Numero riscontri} \\
+	
+	\hline RT0 & 2 \\
+	
+	\hline RS0 & 3 \\
+	
+	\hline RS1 & 0 \\
+	
+	\hline RG0 & 2 \\
+	
+	\hline RG1 & 0 \\
+	
+	\hline RR0 & 2 \\
+	
+	\hline RO0 & 2 \\
+	
+	\hline
+	\caption{Riepilogo dei rischi riscontrati durante il progetto}
 \end{longtable}
 
 \chapter{Organigramma}
