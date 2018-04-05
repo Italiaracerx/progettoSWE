@@ -29,7 +29,7 @@
 	{UC0}
 	{Utente}
 	{Non previsto}
-	{L'attore visualizza la pagina iniziale di DeSpeect dalla quale può aprire il menu File, caricare un file JSon, selezionare l'Utterance Type, scrivere del testo in input, eseguire Speect}
+	{L'attore visualizza la pagina iniziale di DeSpeect dalla quale può aprire il menu File, caricare un file JSon, selezionare l'Utterance Type, scrivere del testo in input, eseguire Speect, modificare l'Utterance Type e modificare il grafo}
 	{Il sistema funziona correttamente e visualizza la pagina iniziale di Despeect}
 	{Il sistema ha ricevuto gli input dall'attore}
 	{\begin{itemize}
@@ -37,7 +37,9 @@
 			\item{} L'attore può caricare un file JSon \refer{UC2};
 			\item{} L'attore può selezionare l'Utterance Type \refer{UC12};
 			\item{} L'attore può scrivere del testo in input;
-			\item{} L'attore può eseguire Speect \refer{UC7}.
+			\item{} L'attore può eseguire Speect \refer{UC7};
+			\item{} L'attore può modificare l'Utterance Type \refer{UC6}.
+			\item{} L'attore può modificare il grafo \refer{UC13}.
 	\end{itemize}}
 	{Non previsti}
 	
@@ -47,7 +49,7 @@
 		
 		\centering
 		
-		\includegraphics[width=\textwidth]{../img/UC0.png}
+		\includegraphics[width=\textwidth]{../img/UC1.png}
 		
 		\caption{UC1: Apertura menu File}
 		
@@ -60,13 +62,13 @@
 	{Il sistema funziona correttamente e visualizza il menu File}
 	{Il sistema ha ricevuto gli input dall'attore}
 	{	\begin{itemize}
-		\item{} L'attore può caricare un file JSon \refer{UC2}
-		\item{} L'attore può salvare le modifiche al file JSon \refer{UC11}
-		\item{} L'attore può caricare un grafo \refer{UC8}
-		\item{} L'attore può salvare un grafo \refer{UC9}
-		\item{} L'attore può salvare l'audio prodotto da Speect \refer{UC4}
-		\item{} L'attore può cercare il percorso di un nodo nel grafo \refer{UC10}
-		\item{} L'attore può chiudere l'applicazione \refer{UC5}
+		\item{} L'attore può caricare un file JSon \refer{UC2};
+		\item{} L'attore può salvare le modifiche al file JSon \refer{UC11};
+		\item{} L'attore può caricare un grafo \refer{UC8};
+		\item{} L'attore può salvare un grafo \refer{UC9};
+		\item{} L'attore può salvare l'audio prodotto da Speect \refer{UC4};
+		\item{} L'attore può cercare il percorso di un nodo nel grafo \refer{UC10};
+		\item{} L'attore può chiudere l'applicazione \refer{UC5}.
 		\end{itemize}
 	}
 	{Non previsti}
@@ -86,11 +88,11 @@
 	{Viene inizializzato Speect con il file JSon selezionato e aggiornata la GUI}
 	{
 		\begin{itemize}
-			\item{} Viene aperto il file browser
-			\item{} L'attore seleziona il file
-			\item{} L'attore preme Carica
-			\item{} Il file viene dato a Speect che prova l'inizializzazione
-			\item{} Viene visualizzato il percorso del file nell'apposito spazio \ref{fig:GUI}
+			\item{} Viene aperto il file browser;
+			\item{} L'attore seleziona il file;
+			\item{} L'attore preme Carica;
+			\item{} Il file viene dato a Speect che prova l'inizializzazione;
+			\item{} Viene visualizzato il percorso del file nell'apposito spazio \ref{fig:GUI}.
 		\end{itemize}
 	}
 	{Speect fallisce l'inizializzazione e l'attore visualizza il messaggio dell'errore relativo al file \refer{UC2.1}}
@@ -110,7 +112,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC4.png}
-	\caption{UC4: Salvataggio Audio Prodotto}
+	\caption{UC4: Salvataggio audio prodotto}
 \end{figure}
 \UserCase
 {UC4}
@@ -121,12 +123,12 @@
 {L'audio è salvato in un file}
 {
 		\begin{itemize}
-		\item{} Viene aperto il file browser 
-		\item{} L'attore si sposta nella cartella di destinazione 
-		\item{} L'attore scrive il nome del file nella barra di testo
-		\item{} L'attore preme su Salva 
-		\item{} Speect compila producendo il file desiderato
-		\item{} Il file viene salvato nella destinazione con estensione .WAV
+		\item{} Viene aperto il file browser;
+		\item{} L'attore si sposta nella cartella di destinazione;
+		\item{} L'attore scrive il nome del file nella barra di testo;
+		\item{} L'attore preme su Salva;
+		\item{} Speect compila producendo il file desiderato;
+		\item{} Il file viene salvato nella destinazione con estensione .WAV .
 		\end{itemize}
 }
 {Avviene un errore durante il salvataggio dell'audio e l'attore visualizza il messaggio di errore relativo \refer{UC4.1}}
@@ -168,10 +170,10 @@
 {L'Utterance Type è stato modificato e il file JSon viene aggiornato}
 {
 	\begin{itemize}
-		\item{} L'attore seleziona un Utterance Processor
-		\item{} L'attore riordina o rimuove l'Utterance Processor	
-		\item{} Le operazioni vengono eseguite	
-		\item{} Il file JSon relativo viene aggiornato		
+		\item{} L'attore seleziona un Utterance Processor;
+		\item{} L'attore riordina o rimuove l'Utterance Processor;	
+		\item{} Le operazioni vengono eseguite;
+		\item{} Il file JSon relativo viene aggiornato.	
 	\end{itemize}
 }
 {Non previsti}
@@ -186,8 +188,8 @@
 {Vengono visualizzati i bottoni per modificare tale Utterance Processor}
 {
 	\begin{itemize}
-		\item{} L'attore clicca sul nome dell'Utterance Processor
-		\item{} Vengono visualizzati due bottoni che permettono lo spostamento grafico del Utterance Processor \refer{UC6.2} e un bottone che ne permette la rimozione \refer{UC6.3} 		
+		\item{} L'attore clicca sul nome dell'Utterance Processor;
+		\item{} Vengono visualizzati due bottoni che permettono lo spostamento grafico del Utterance Processor \refer{UC6.2} e un bottone che ne permette la rimozione \refer{UC6.3}. 		
 	\end{itemize}
 }
 {Non previsti}
@@ -202,10 +204,10 @@
 {Il file JSon viene aggiornato}
 {
 	\begin{itemize}
-		\item{} L'attore clicca sull'Utterance Processor \refer{UC6.1}
-		\item{} L'attore riordina tramite i pulsanti forniti	
-		\item{} Le operazioni vengono eseguite
-		\item{} Se esisteva un grafo, esso non viene modificato
+		\item{} L'attore clicca sull'Utterance Processor \refer{UC6.1};
+		\item{} L'attore riordina tramite i pulsanti forniti;
+		\item{} Le operazioni vengono eseguite;
+		\item{} Se esisteva un grafo, esso non viene modificato.
 		
 	\end{itemize}
 }
@@ -221,10 +223,10 @@
 {Il file JSon viene aggiornato}
 {
 	\begin{itemize}
-		\item{} L'attore clicca sull'Utterance Processor \refer{UC6.1}
-		\item{} L'attore lo rimuove tramite il pulsante fornito	
-		\item{} L'operazione viene eseguita
-		\item{} Se esisteva un grafo, esso non viene modificato
+		\item{} L'attore clicca sull'Utterance Processor \refer{UC6.1};
+		\item{} L'attore lo rimuove tramite il pulsante fornito;
+		\item{} L'operazione viene eseguita;
+		\item{} Se esisteva un grafo, esso non viene modificato.
 		
 	\end{itemize}
 }
@@ -244,11 +246,11 @@
 {Il file JSon è stato caricato correttamente \refer{UC2}}
 {Speect elabora il testo selezionato e viene visualizzato il grafo}
 {\begin{itemize}
-		\item{} L'attore seleziona l'Utterance Type \refer{UC12}
-		\item{} L'attore compila il campo di testo o inserisce un grafo hrg
-		\item{} L'attore preme sul tasto di esecuzione
-		\item{} Vengono eseguiti gli Utterance Processor designati dall'Utterance Type \refer{UC7.3}
-		\item{} Viene mostrato il grafo risultante dall'esecuzione \refer{UC7.2}
+		\item{} L'attore seleziona l'Utterance Type \refer{UC12};
+		\item{} L'attore compila il campo di testo o inserisce un grafo hrg;
+		\item{} L'attore preme sul tasto di esecuzione;
+		\item{} Vengono eseguiti gli Utterance Processor designati dall'Utterance Type \refer{UC7.3};
+		\item{} Viene mostrato il grafo risultante dall'esecuzione \refer{UC7.2}.
 	\end{itemize}
 }
 {Speect ha fallito l'esecuzione e l'attore visualizza un messaggio di errore \refer{UC7.1}}
@@ -287,9 +289,9 @@
 {Viene eseguito l'Utterance Processor partendo dal grafo già presente o dal campo di testo scritto}
 {
 	\begin{itemize}
-		\item{} L'attore seleziona l'Utterance Processor \refer{UC6.1}
-		\item{} L'attore può compilare il campo di testo
-		\item{} L'attore preme sul tasto di esecuzione per il singolo processor \ref{fig:GUI}
+		\item{} L'attore seleziona l'Utterance Processor \refer{UC6.1};
+		\item{} L'attore può compilare il campo di testo;
+		\item{} L'attore preme sul tasto di esecuzione per il singolo processor \ref{fig:GUI}.
 	\end{itemize}
 }
 {Speect ha fallito l'esecuzione}
@@ -298,7 +300,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC8.png}
-	\caption{UC8: Esportazione Stato del Grafo}
+	\caption{UC8: Esportazione grafo}
 \end{figure}
 \UserCase
 {UC8}
@@ -309,10 +311,10 @@
 {Il grafo viene esportato in file}
 {
 	\begin{itemize}
-			\item{} Viene aperto il file browser
-			\item{} L'attore si sposta nella cartella in cui salvare il grafo
-			\item{} L'attore scrive il nome del file nella barra di testo
-			\item{} L'attore preme su Salva Grafo
+			\item{} Viene aperto il file browser;
+			\item{} L'attore si sposta nella cartella in cui salvare il grafo;
+			\item{} L'attore scrive il nome del file nella barra di testo;
+			\item{} L'attore preme su Salva Grafo.
 	\end{itemize}
 }
 {L'esportazione fallisce e l'attore visualizza un messaggio di errore \refer{UC8.1}}
@@ -332,7 +334,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC9.png}
-	\caption{UC9: Importazione Grafo}
+	\caption{UC9: Importazione grafo}
 \end{figure}
 \UserCase
 {UC9}
@@ -343,9 +345,9 @@
 {Il grafo viene importato da file}
 {
 	\begin{itemize}
-			\item{} Viene aperto il file browser
-			\item{} L'attore seleziona il file da importare
-			\item{} L'attore preme su Apri Grafo
+			\item{} Viene aperto il file browser;
+			\item{} L'attore seleziona il file da importare;
+			\item{} L'attore preme su Apri Grafo.
 	\end{itemize}
 }
 {L'importazione fallisce e l'attore visualizza un messaggio di errore \refer{UC9.1}}
@@ -365,7 +367,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC10.png}
-	\caption{UC10: Ricerca Path}
+	\caption{UC10: Ricerca path}
 \end{figure}
 \UserCase
 {UC10}
@@ -376,10 +378,10 @@
 {Se il path porta ad un nodo definito, esso viene evidenziato \refer{UC7.2.1}}
 {
 	\begin{itemize}
-		\item{} Viene visualizzata una finestra con una casella di testo e un pulsante
-		\item{} L'attore inserisce il percorso da cercare
-		\item{} L'attore preme il pulsante di Ricerca
-		\item{} Se il percorso inizia dal nodo selezionato e finisce in un nodo esistente, il nodo di arrivo viene evidenziato \refer{UC7.2.1}
+		\item{} Viene visualizzata una finestra con una casella di testo e un pulsante;
+		\item{} L'attore inserisce il percorso da cercare;
+		\item{} L'attore preme il pulsante di Ricerca;
+		\item{} Se il percorso inizia dal nodo selezionato e finisce in un nodo esistente, il nodo di arrivo viene evidenziato \refer{UC7.2.1}.
  	\end{itemize}
 }
 {Il percorso inserito dall'attore non è corretto e viene visualizzato un errore \refer{UC10.1}}
@@ -410,8 +412,8 @@
 {Le modifiche vengono salvate}
 {
 	\begin{itemize}
-		\item{} L'attore apre il menu File \refer{UC1}
-		\item{} L'attore preme su Salva File JSon
+		\item{} L'attore apre il menu File \refer{UC1};
+		\item{} L'attore preme su Salva File JSon.
 	\end{itemize}
 }
 {L'operazione di salvataggio fallisce e viene visualizzato un errore \refer{UC11.1}}
@@ -437,9 +439,9 @@
 {Vengono mostrati gli Utterance Processors utilizzati da Speect per tale Utterance Type}
 {
 	\begin{itemize}
-		\item{} L'attore apre il menu a tendina relativo
-		\item{} L'attore clicca sull'Utterance Type desiderato
-		\item{} Vengono mostrati a schermo i nomi degli Utterance Processor utilizzati, negli appositi spazi \ref{fig:GUI}		
+		\item{} L'attore apre il menu a tendina relativo;
+		\item{} L'attore clicca sull'Utterance Type desiderato;
+		\item{} Vengono mostrati a schermo i nomi degli Utterance Processor utilizzati, negli appositi spazi \ref{fig:GUI}.
 	\end{itemize}
 }
 {Non previsti}
@@ -448,7 +450,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../img/UC13.png}
-	\caption{UC13: Modifica Grafo}
+	\caption{UC13: Modifica grafo}
 \end{figure}
 \UserCase
 {UC13}
@@ -460,9 +462,9 @@
 {
 	L'attore per modificare un grafo può:
 	\begin{itemize}
-		\item{} selezionare un nodo \refer{UC13.1}
-		\item{} spostare un nodo \refer{UC13.2}	
-		\item{} modificare la visualizzazione delle relazioni \refer{UC13.5}		
+		\item{} selezionare un nodo \refer{UC13.1};
+		\item{} spostare un nodo \refer{UC13.2};	
+		\item{} modificare la visualizzazione delle relazioni \refer{UC13.5}.		
 	\end{itemize}
 }
 {Non previsti}
@@ -477,15 +479,15 @@
 {Viene evidenziato il nodo del grafo e vengono mostrate le sue informazioni nella finestra apposita}
 {
 	\begin{itemize}
-		\item{} L'attore clicca una volta sul nodo
-		\item{} Il nodo viene evidenziato con un contorno giallo
+		\item{} L'attore clicca una volta sul nodo;
+		\item{} Il nodo viene evidenziato con un contorno giallo;
 		\item{} Nel riquadro apposito \ref{fig:GUI} vengono visualizzati i dati del grafo:
 		\begin{enumerate}
-			\item{} Name
-			\item{} Part of Speech
+			\item{} Name;
+			\item{} Part of Speech;
 		\end{enumerate}
-		\item{} L'attore può modificare il name del nodo selezionato \refer{UC13.3}
-		\item{} L'attore può modificare il PoS del nodo selezionato \refer{UC13.4} 
+		\item{} L'attore può modificare il name del nodo selezionato \refer{UC13.3};
+		\item{} L'attore può modificare il PoS del nodo selezionato \refer{UC13.4}.
 	\end{itemize}
 }
 {Non previsti}
@@ -500,10 +502,10 @@
 {Il nodo viene spostato}
 {
 	\begin{itemize}
-		\item{} L'attore trascina il nodo cliccando senza rilasciare
-		\item{} Il nodo si sposta
-		\item{} L'attore rilascia il click
-		\item{} Il nodo rimane nella nuova posizione
+		\item{} L'attore trascina il nodo cliccando senza rilasciare;
+		\item{} Il nodo si sposta;
+		\item{} L'attore rilascia il click;
+		\item{} Il nodo rimane nella nuova posizione.
 	\end{itemize}
 }
 {Non previsti}
@@ -518,11 +520,11 @@
 {Il nodo cambia name}
 {
 	\begin{itemize}
-		\item{} L'attore seleziona la casella di testo del name
-		\item{} L'attore cancella il name precedente
-		\item{} L'attore rimuove il focus dalla casella di testo
-		\item{} Il name viene aggiornato
-		\item{} Il grafo viene aggiornato e ristampato a schermo \refer{UC7.2}
+		\item{} L'attore seleziona la casella di testo del name;
+		\item{} L'attore cancella il name precedente;
+		\item{} L'attore rimuove il focus dalla casella di testo;
+		\item{} Il name viene aggiornato;
+		\item{} Il grafo viene aggiornato e ristampato a schermo \refer{UC7.2}.
 	\end{itemize}
 }
 {Non previsti}
@@ -537,11 +539,11 @@
 {Il nodo cambia PoS}
 {
 	\begin{itemize}
-		\item{} L'attore seleziona la casella di testo del PoS
-		\item{} L'attore cancella il PoS precedente
-		\item{} L'attore rimuove il focus dalla casella di testo
-		\item{} Il PoS viene aggiornato
-		\item{} Il grafo viene aggiornato e ristampato a schermo \refer{UC7.2}
+		\item{} L'attore seleziona la casella di testo del PoS;
+		\item{} L'attore cancella il PoS precedente;
+		\item{} L'attore rimuove il focus dalla casella di testo;
+		\item{} Il PoS viene aggiornato;
+		\item{} Il grafo viene aggiornato e ristampato a schermo \refer{UC7.2}.
 	\end{itemize}
 }
 {Non previsti}
@@ -556,9 +558,9 @@
 {Vengono mostrati nel grafo tutti i layer di relazione selezionati}
 {
 	\begin{itemize}
-		\item{} L'attore seleziona/deseleziona una select box adiacente ad una relazione
-		\item{} La relazione in questione viene visualizzata/nascosta
-		\item{} Il grafo viene aggiornato e ristampato a schermo \refer{UC7.2}
+		\item{} L'attore seleziona/deseleziona una select box adiacente ad una relazione;
+		\item{} La relazione in questione viene visualizzata/nascosta;
+		\item{} Il grafo viene aggiornato e ristampato a schermo \refer{UC7.2}.
 	\end{itemize}
 }
 {Non previsti}
