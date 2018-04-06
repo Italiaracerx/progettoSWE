@@ -20,7 +20,7 @@
       \bgroup 
       \def\arraystretch{1.5} 
       \begin{tabular}{l|l} 
-        \textbf{Data approvazione} & 29 marzo 2018 \\ 
+        \textbf{Data approvazione} & 2 aprile 2018 \\ 
         \textbf{Responsabile} & Marco Focchiatti \\ 
         \textbf{Redattore} & Matteo Rizzo \\ 
         \textbf{Verificatore} & Kevin Silvestri \\ 
@@ -47,9 +47,9 @@
    
   \begin{itemize}  
       \item \textbf{Luogo:} Videochiamata;
-      \item \textbf{Data:} 2018-03-29; 
-      \item \textbf{Orari} 9:30 - 11.00;
-      \item \textbf{Partecipanti del gruppo:} Marco Focchiatti, Samuele Modena, Matteo Rizzo, Giulio Rossetti, Kevin Silvestri, Manfredi Smaniotto, Cristiano Tessarolo; 
+      \item \textbf{Data:} 2018-04-02; 
+      \item \textbf{Orari} 9:30 - 12.00;
+      \item \textbf{Partecipanti del gruppo:} Samuele Modena, Matteo Rizzo, Giulio Rossetti, Manfredi Smaniotto, Cristiano Tessarolo; 
       \item \textbf{Partecipanti esterni:} nessuno. 
   \end{itemize} 
  
@@ -57,22 +57,22 @@
   Confronto su stato di avanzamento lavori per quanto riguarda progettazione e codifica in relazione alla \textit{Product Baseline}.
  
   \section{Resoconto} 
-  Nel corso dell'incontro sono state discusse alcune scelte progettuali inerenti l'uso di design pattern, nonché la coerenza in termini di relazione tra la parte di presentazione e di modello dell'architettura. Nello specifico, sono stati affrontati i seguenti punti:
+  Nel corso dell'incontro sono state discusse alcune scelte progettuali inerenti l'implementazione dei design pattern esaminati nella precedente riunione (verbalizzata in VI-2018-03-29). Nello specifico, sono stati affrontati i seguenti punti:
 	
   \begin{itemize}
 	\item Riepilogo dell'architettura progettata e dello stato della stessa;
-	\item Confronto sulle scelte progettuali attuate in termini di design pattern;
-	\item Esternazione di dubbi sull'architettura \textit{Model–view–viewmodel};
+	\item Confronto sulle scelte implementative attuate in termini di design pattern;
+	\item Revisione collaborativa dei diagrammi delle classi prodotti;
 	\item Richiesta di ulteriori pareri o suggerimenti all'interno del gruppo.
   \end{itemize}
 
-  In particolare, sono stati evidenziati errori concettuali dovuti ad una parziale incomprensione del design pattern \textit{Model–view–viewmodel} da parte di alcuni componenti del gruppo. L'esternazione del problema ha permesso di risolverlo grazie ad un confronto interno e alla condivisone di maggiore documentazione a riguardo. 
+  In particolare, è stata discussa la bontà dei pattern selezionati in termini di obiettivi di progetto, per poi confermare la decisione di utilizzarli. I diagrammi delle classi hanno subito modifiche notevoli come conseguenza di tale decisione. 
  
   \section{Tracciamento delle decisioni} 
    
   \begin{itemize} 
-      \item \textbf{VI-2018-03-29.1:} Rivisitazione della progettazione relativa alla parte \textit{View-viewmodel} secondo indicazioni contenute nella documentazione condivisa a questo proposito;
-      \item \textbf{VI-2018-03-29.2:} Adozione del design pattern \textit{Command} all'interno del \textit{Model}. 
+      \item \textbf{VI-2018-04-02.1:} Utilizzo dei design pattern \textit{Command} (confermato) e \textit{Builder} per quanto riguarda il package \textit{Model};
+      \item \textbf{VI-2018-04-02.2:} Modifica dei diagrammi delle classi sulla base dei design pattern adottati.
   \end{itemize} 
    
   \end{document}
