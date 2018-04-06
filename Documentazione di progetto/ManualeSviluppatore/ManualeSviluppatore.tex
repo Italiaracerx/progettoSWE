@@ -123,24 +123,227 @@
 
 	\chapter{Requisiti di sistema}
 	
-	\chapter{Tecnologie utilizzate}
+	L'installazione ed esecuzione del software DeSpeect richiede i seguenti prerequisiti:
 	
-	\chapter{Configurazione dell'ambiente \\ di lavoro}
+	\begin{itemize}
+		\item Sistema operativo Unix / Unix-like (il software è stato testato solo per piattaforma Ubuntu 16.04 LTS)
+			\subitem \url{https://www.ubuntu.com/download/desktop}
+		\item CMake (versione minima 2.8)
+			\subitem \url{https://cmake.org/download/}
+		\item Compilatore ANSI C/ISO C90 GCC (versione minima 5.0)
+			\subitem \url{https://gcc.gnu.org/install/binaries.html}
+		\item Qt 5.9.0
+			\subitem \url{https://www.qt.io/download}
+	\end{itemize}
+
+	\chapter{Tecnologie impiegate}
+	
+	Vengono di seguito illustrate le tecnologie impiegate dal software DeSpeect e nella verifica e monitoraggio del suo codice.
+	
+	\section{Tecnologie utilizzate da DeSpeect}
+	
+	\subsection{Libreria di riferimento}
+	Speect è un sistema di \textit{Text To Speech} (TTS) multilingua. Esso offre un sistema TTS completo (analisi e decodifica del testo e sintesi vocale) con annesse varie API, nonché un ambiente per la ricerca e lo sviluppo di sistemi e voci TTS. Speect è scritto in linguaggio C, con una stretta conformità allo standard ISO / IEC 9899: 1990, consentendo così la massima portabilità su diverse piattaforme di calcolo. Le chiamate di sistema specifiche della piattaforma sono astratte per consentire le porte a nuove piattaforme. Speect v1.1.0-69-g65f4 rappresenta il cuore di DeSpeect, che in particolare ne realizza un'interfaccia grafica atta a semplificarne l'utilizzo e il debug. La tecnologia è open source e la sua documentazione è accessibile al seguente link:
+	\begin{center}
+	\url{http://speect.sourceforge.net/contents.html}
+	\end{center}
+	
+	\subsection{IDE}
+	
+	QT è una libreria multipiattaforma per lo sviluppo di programmi con interfaccia grafica tramite l'uso di widget (congegni o elementi grafici). La libreria è scritta in C++ e gode di ampia diffusione e supporto. L'interfaccia grafica di DeSpeect è stata sviluppata mediante questa tecnologia nella versione v5.9 LTS. Maggiori informazioni su Qt sono reperibili al seguente link:
+	\begin{center}
+	\centerline{\url{https://www.qt.io/what-is-qt/}}
+	\end{center}
+	Tale IDE è consigliato qualora si volesse lavorare su DeSpeect, e un approfondimento sulla sua installazione e sull'importazione del progetto è reperibile in §4.2 di questo documento. 
+	
+	\subsection{Compilazione}
+	
+	Per la compilazione di DeSpeect vengono utilizzati i seguenti strumenti:
+	
+	\begin{itemize}
+	\item \textbf{GCC}: il compilatore che viene usato per la compilazione del software è il \glossario{GCC}{GCC} (GNU Compiler Collection). Maggiori informazioni sul compilatore sono reperibili al seguente link:
+	\begin{center}
+		\centerline{\url{https://gcc.gnu.org/}}
+	\end{center}
+	
+	\item \textbf{CMake}: CMake è una famiglia di strumenti open source e multipiattaforma progettati per creare, testare e pacchettizzare software. CMake viene utilizzato per controllare il processo di compilazione del software utilizzando semplici file di configurazione indipendenti dalla piattaforma e dal compilatore e generare makefile e aree di lavoro nativi che possono essere utilizzati nell'ambiente del compilatore di propria scelta. DeSpeect utilizza questa tecnologia nella versione v3.10.2 per l’automazione della compilazione. Maggiori informazioni su CMake sono reperibili al seguente link:
+	\begin{center}
+		\centerline{\url{https://cmake.org/overview/}}
+	\end{center}
+	
+	\end{itemize}
+	
+	\subsection{GUI}
+	
+	Per progettare l'interfaccia grafica viene utilizzato \glossario{Qt Creator}{Qt Creator}. Questo strumento permette di realizzare interfacce grafiche mediante le librerie grafiche Qt, diventate in questo ambito quasi uno standard per piattaforme Linux Based.  Maggiori informazioni su Qt Creator sono disponibili al seguente link:: 
+	\begin{center}
+	\centerline{\url{https://www.qt.io/qt-features-libraries-apis-tools-and-ide/}}
+	\end{center}
+
+	
+	\section{Verifica e monitoraggio di DeSpeect}
+	
+	
+	\subsection{Test}
+	Google Test è un framework per la realizzazione di test per il linguaggio C++. DeSpeect utilizza questa tecnologia per la realizzazione dei test del software, ulteriori informazioni sulla stessa sono reperibili al seguente link:
+	\begin{center}
+		\url{https://github.com/google/googletest/blob/master/googletest/docs/Primer.md}
+	\end{center}
+
+	\subsection{Verifica della build e testing automatico}
+	Travis CI è un servizio di integrazione continua distribuito utilizzato per costruire e testare progetti software ospitati su GitHub. I progetti open source possono essere testati gratuitamente attraverso il sito web \url{travis-ci.org}. Questa tecnologia viene utilizzata per l'esecuzione di test automatici su DeSpeect a seguito del caricamento di codice sul repository relativo al progetto, così da garantirne la correttezza. Documentazione relativa a Travis CI è accessibile al seguente link:
+	\begin{center}
+		\url{https://docs.travis-ci.com/}
+	\end{center}
+	
+	\subsection{Misurazioni metriche}
+	Per il controllo delle varie metriche legate al codice vengono utilizzati i software integrati con il repository GitHub:
+	\begin{itemize}
+		\item \textbf{Better Code Hub}: \glossario{Better Code Hub}{Better Code Hub} è un servizio di analisi del codice sorgente web-based che controlla il codice per la conformità rispetto a 10 linee guida per l'ingegneria del software e fornisce un \glossario{feedback}{feedback} immediato per capire dove concentrarsi per miglioramenti di qualità. Better Code Hub è accessibile al seguente link:
+		\begin{center}
+			\url{https://bettercodehub.com/}
+		\end{center}
+		
+		\item \textbf{Codacy}: Codacy è uno strumento di analisi / qualità del codice automatizzato, con cui si ottengono analisi statiche, complessità ciclomatica, indicazioni sulla duplicazione e le variazioni della copertura dei test dell'unità di codice in ogni richiesta di commit e pull. È inoltre possibile utilizzare Codacy per applicare uno standard di qualità del codice e applicare le best practice sulla sicurezza, il tutto integrato con GitHub. Ulteriori informazioni su Codacy sono disponibili al seguente link:
+		\begin{center}
+			\url{https://www.codacy.com/features}
+		\end{center}
+	\end{itemize} 
+	
+	\chapter{Ambiente di sviluppo}
+	
+	Vengono di seguito illustrate le modalità di installazione e configurazione del software DeSpeect, nonché le modalità di installazione e importazione del progetto in relazione all'IDE consigliato per lavorare con lo stesso.
+	
+	\section{Installazione e configurazione}
+	
+	DeSpeect è reperibile su \glossario{GitHub}{GitHub} al seguente link:
+	\begin{center}
+		\url{https://github.com/graphiteSWE/DeSpeect}
+	\end{center}
+	
+	\noindent Una volta soddisfatti i prerequisiti descritti in §2 "Requisiti di sistema" di questo documento, per installare ed eseguire il software è necessario seguire la seguente procedura:
+	\begin{enumerate}
+		\item Clonare o scaricare la repository sulla propria macchina;
+		\item Entrare nella cartella scaricata ed eseguire lo script \verb|build.sh|.
+	\end{enumerate}
+	Tale procedura installerà la libreria Speect e genererà una build del software nella directory \verb|DeSpeect/build|, nonché avvierà automaticamente un'esecuzione di DeSpeect.
+	
+	\section{IDE}
+	
+	Il progetto DeSpeect non è necessariamente legato ad alcun \glossario{IDE}{IDE}, tuttavia si consiglia l'uso di \glossario{Qt}{Qt} e \textit{Qt Creator}. Le librerie Qt sono infatti utilizzate all'interno del prodotto per la realizzazione dell'interfaccia grafica, e l'adozione dei succitati IDE ne agevola notevolmente l'impiego nell'ottica di modifiche e/o estensioni alla stessa. Viene di seguito illustrata la procedura per l'installazione dell'IDE e l'importazione del progetto.
+	
+	\subsection{Installare Qt}
+	
+	Il pacchetto d'installazione di Qt è reperibile gratuitamente per progetti open source al seguente link:
+	\begin{center}
+		\url{https://www.qt.io/download}
+	\end{center}
+	
+	\noindent Una volta eseguito l'installer, previa configurazione dei pacchetti d'installazione, l'IDE sarà installato sulla macchina desiderata. Ulteriori informazioni sull'installazione e procedure alternative sono reperibili al seguente link:
+	\begin{center}
+		\url{http://doc.qt.io/qt-5/linux.html}
+	\end{center} 
+	
+	\subsection{Importare il progetto}  
+	
+	Per importare i file di DeSpeect all'interno dell'IDE, è necessario seguire la seguente procedura:
+	\begin{enumerate}
+		\item Installare Speect sulla propria macchina. Un modo per farlo consiste nell'eseguire lo script \verb|install.sh| contenuto all'interno della directory \verb|SpeectInstaller/| di DeSpeect;
+		\item Aprire l'IDE installato seguendo le indicazioni riportate nella precedente sezione (§3.2.1);
+		\item Dalla barra dei menù selezionare "File / Apri progetto" (ctrl + o);
+		\item Selezionare il file \verb|CMakeLists.txt| contenuto nella directory \verb|DeSpeect/|;
+		\item Confermare l'importazione all'interno dell'IDE.
+	\end{enumerate}
 	
 	\chapter{Architettura}
 	
-	\chapter{Descrizione delle classi}
+	\section{Model-View-ViewModel}
 	
-	\section{Front-end}
+	\section{Model}
 	
-	\section{Back-end}
+	\section{View}
 	
+	\section{ViewModel}
+		
 	\chapter{Estensione delle funzionalità}
 	
-	\chapter{Estensione del codice}
+	\section{Modificare l'interfaccia grafica}
+	
+	\section{Aggiungere un plug-in}
+	
+	\chapter{Verifica delle estensioni}
+	
+	\section{Aggiungere un test}
+	
+	Quando DeSpeect viene esteso con una nuova funzionalità è opportuno creare i relativi test di unità per verificare la correttezza. I test per DeSpeect sono implementati mediante la tecnologia Google Test, come citato in §3.2.1 di questo documento. Per completezza viene di seguito riportato il link alla documentazione di tale tecnologia:
+	\begin{center}
+		\url{https://github.com/google/googletest/blob/master/googletest/docs/Primer.md}
+	\end{center}
+	Si rimanda a tale documentazione per la corretta sintassi e configurazione dei file di test, che vanno inseriti nella cartella \verb|DeSpeect/Test/| del progetto affinché vengano correttamente eseguiti automaticamente da Travis CI (tecnologia approfondita in §3.2.2 di questo documento). 
+	
+	\section{Eseguire un test}
+	
+	\subsection{Esecuzione automatica dei test}
+	Il servizio Travis CI, integrato con il repository GitHub relativo al progetto, testa la build ed esegue i test automaticamente ad ogni modifica del codice sul repository. Lo stesso rilascia successivamente i dati sul \textit{code coverage} al servizio web \textit{coveralls.io}, anch'esso collegato al repository GitHub, che aggiorna così i propri report. É possibile prendere spunto dal file \verb|.travis.yml| presente nel repository e dalla documentazione reperibile al link:
+	\begin{center}
+		\url{https://docs.travis-ci.com/user/languages/cpp/}
+	\end{center}
+	Per predisporre il proprio sistema di integrazione continua con Travis CI qualora non si volesse creare una fork del progetto originale. Per la corretta integrazione del testing con Google Test e coveralls.io si suggerisce la presa visione della seguente documentazione esemplificativa:
+	\begin{center}
+		\url{https://github.com/bast/gtest-demo}
+	\end{center} 
+	
+	\subsection{Esecuzione manuale dei test}
+	A seguito dell'esecuzione dello script \verb|build.sh| citato in §4.1 di questo documento viene generata automaticamente una build e un'esecuzione dei test contenuti nella directory \verb|DeSpeect/Test/|. I test sono eseguibili sia con il comando \verb|ctest| che con il comando \verb|unit_tests| e la loro esecuzione mostra sinteticamente il code coverage relativo. 
 	
 	\appendix
 	
+	\chapter{Contribuire a DeSpeect}
+	
+	DeSpeect è software open source e permette quindi di
+	essere modificato. Se si vuole contribuire al progetto originale è possibile farlo mediante la creazione di fork sul repository GitHub. Risulta inoltre possibile aprire dei ticket per segnalare errori, malfunzionamenti o la richiesta di nuove funzionalità.
+	
+	\section{Aprire un ticket}
+	
+	Per aprire un \textit{ticket} è sufficiente recarsi nella sezione \textit{Issues} del repository GitHub del progetto e cliccare il pulsante \textit{New Issue}. A questo punto verrà chiesto di inserire un titolo e una descrizione per il ticket.
+	Si segnala che è obbligatorio aggiungere allo stesso delle \textit{labels}, atte a rendere facilmente reperibili e categorizzabili i ticket aperti. Un ticket privo di labels
+	viene automaticamente rifiutato. 
+	Per agevolare la pronta risoluzione di un ticket, si invita a seguire i seguenti accorgimenti:
+	\begin{itemize}
+		\item Per segnalare un malfunzionamento, comunicare nella descrizione del ticket le seguenti informazioni:
+			\begin{itemize}
+				\item Sistema operativo completo di specifiche tecniche;
+				\item Versione utilizzata di Qt;
+				\item Versione utilizzata di CMake;
+				\item Versione utilizzata di GCC.
+			\end{itemize}
+		\item Per richiedere una nuova funzionalità è necessario attendere l'approvazione di uno degli amministratori del repository e l'assegnamento del relativo ticket;
+		\item La descrizione del ticket deve essere esaustiva, chiara e rilevante.
+	\end{itemize}
+	Non rispettare uno dei punti precedenti comporta l'automatica cancellazione del ticket. 
+	
+	\section{Creare una Pull Request}
+	
+	Per configurare il progetto DeSpeect è possibile creare una fork del repository originale, il che consente di lavorare in completa autonomia su una certa funzionalità che si vuole aggiungere all'applicazione. In seguito, se si vuole inserire tale funzionalità nel progetto originale, è necessario creare una \textit{Pull Request} all'interno di GitHub. Una volta creata la Pull Request cliccando sulla relativa tab all'interno del repository e successivamente sul pulsante \textit{Create pull request}, è sufficiente attendere l'approvazione di uno degli amministratori del repository originale per poter eseguire il merge delle modifiche. Di seguito sono riportati i passi da eseguire per creare una Pull
+	Request utilizzando la fork di DeSpeect:
+	\begin{enumerate}
+		\item Creare la fork di DeSpeect;
+		\item Recarsi nella sezione \textit{Pull Request} del repository originale;
+		\item Selezionare \textit{compare across forks};
+		\item Su \textit{base fork} e relativo \textit{base} lasciare invariati i valori inseriti (riguardano il branch master del progetto originale);
+		\item Su \textit{head fork} selezionare la propria fork e di conseguenza sul relativo \textit{head} scegliere
+		il branch dove sono state apportate le modifiche;
+		\item Infine selezionare \textit{Create pull request} aggiungendovi titolo e commento.
+	\end{enumerate}
+	Anche in questo caso valgono gli stessi accorgimenti illustrati in relazione ai ticket, sintetizzati in descrizioni esaustive, chiare e rilevanti.
+	
+	\chapter{Licenza}
+	
+	Il codice di DeSpeect, fatta eccezione per le librerie esterne quali Speect e Qt, è rilasciato sotto licenza \textit{MIT}. Tale licenza è visualizzabile nella sua interezza al seguente link:
+	\begin{center}
+		\url{https://choosealicense.com/licenses/mit/}
+	\end{center} 
+		
 	\chapter{Glossario}
 	
 \end{document}
