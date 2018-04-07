@@ -15,26 +15,26 @@
 	I casi d'uso sono identificati da un codice descritto nelle NP alla sezione §2.2.3.4. 
 	
  	
-	\section{UC0: Visualizzazione pagina iniziale}
+	\section{UC1: Visualizzazione pagina iniziale}
 	\begin{figure}[H]
  
 		\centering
  
-		\includegraphics[width=\textwidth]{../img/UC0.png}
+		\includegraphics[width=\textwidth]{../img/UC1.png}
  
-		\caption{UC0: Visualizzazione pagina iniziale}
+		\caption{UC1: Visualizzazione pagina iniziale}
  
 	\end{figure}
 	\UserCase
-	{UC0}
+	{UC1}
 	{Utente}
 	{Non previsto}
 	{L'attore visualizza la pagina iniziale di DeSpeect dalla quale può aprire il menu File, caricare un file JSon, selezionare l'Utterance Type, scrivere del testo in input, eseguire Speect, modificare l'Utterance Type e modificare il grafo}
 	{Il sistema funziona correttamente e visualizza la pagina iniziale di Despeect}
 	{Il sistema ha ricevuto gli input dall'attore}
 	{\begin{itemize}
-			\item{} L'attore può aprire il menu File \refer{UC1};
-			\item{} L'attore può caricare un file JSon \refer{UC2};
+			\item{} L'attore può aprire il menu File \refer{UC2};
+			\item{} L'attore può caricare un file JSon \refer{UC3};
 			\item{} L'attore può selezionare l'Utterance Type \refer{UC12};
 			\item{} L'attore può scrivere del testo in input;
 			\item{} L'attore può eseguire Speect \refer{UC7};
@@ -44,25 +44,25 @@
 	{Non previsti}
 	
 	
-	\section{UC1: Apertura menu File}
+	\section{UC2: Apertura menu File}
 	\begin{figure}[H]
 		
 		\centering
 		
-		\includegraphics[width=\textwidth]{../img/UC1.png}
+		\includegraphics[width=\textwidth]{../img/UC2.png}
 		
-		\caption{UC1: Apertura menu File}
+		\caption{UC2: Apertura menu File}
 		
 	\end{figure}
 	\UserCase
-	{UC1}
+	{UC2}
 	{Utente}
 	{Non previsto}
 	{L'attore visualizza il menu File dalla quale può caricare o salvare un file JSon, caricare o salvare un grafo, salvare l'audio prodotto, cercare il percorso di un nodo nel grafo e chiudere l'applicazione}
 	{Il sistema funziona correttamente e visualizza il menu File}
 	{Il sistema ha ricevuto gli input dall'attore}
 	{	\begin{itemize}
-		\item{} L'attore può caricare un file JSon \refer{UC2};
+		\item{} L'attore può caricare un file JSon \refer{UC3};
 		\item{} L'attore può salvare le modifiche al file JSon \refer{UC11};
 		\item{} L'attore può caricare un grafo \refer{UC8};
 		\item{} L'attore può salvare un grafo \refer{UC9};
@@ -73,18 +73,18 @@
 	}
 	{Non previsti}
 
-	\section{UC2: Caricamento file JSon}
+	\section{UC3: Caricamento file JSon}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=\textwidth]{../img/UC2.png}
-		\caption{UC2: Caricamento file JSon}
+		\includegraphics[width=\textwidth]{../img/UC3.png}
+		\caption{UC3: Caricamento file JSon}
 	\end{figure}
 	\UserCase
-	{UC2}
+	{UC3}
 	{Utente}
 	{Non previsto}
 	{L'attore vuole caricare un file JSon}
-	{L'attore ha selezionato la voce relativa nel menu \refer{UC1}}
+	{L'attore ha selezionato la voce relativa nel menu \refer{UC2}}
 	{Viene inizializzato Speect con il file JSon selezionato e aggiornata la GUI}
 	{
 		\begin{itemize}
@@ -95,11 +95,11 @@
 			\item{} Viene visualizzato il percorso del file nell'apposito spazio \ref{fig:GUI}.
 		\end{itemize}
 	}
-	{Speect fallisce l'inizializzazione e l'attore visualizza il messaggio dell'errore relativo al file \refer{UC2.1}}
+	{Speect fallisce l'inizializzazione e l'attore visualizza il messaggio dell'errore relativo al file \refer{UC3.1}}
 	
-	\section{UC2.1: Errore caricamento file JSon}
+	\section{UC3.1: Errore caricamento file JSon}
 	\UserCase
-	{UC2.1}
+	{UC3.1}
 	{Utente}
 	{Non previsto}
 	{Durante l'inizializzazione Speect fallisce ritornando un errore}
@@ -119,7 +119,7 @@
 {Utente}
 {Non previsto}
 {L'attore vuole salvare l'audio prodotto}
-{Speect è inizializzato \refer{UC2}}
+{Speect è inizializzato \refer{UC3}}
 {L'audio è salvato in un file}
 {
 		\begin{itemize}
@@ -184,7 +184,7 @@
 {Utente}
 {Non previsto}
 {L'attore vuole selezionare un Utterance Processor per spostarlo}
-{Un file JSon è stato caricato correttamente \refer{UC2}}
+{Un file JSon è stato caricato correttamente \refer{UC3}}
 {Vengono visualizzati i bottoni per modificare tale Utterance Processor}
 {
 	\begin{itemize}
@@ -243,7 +243,7 @@
 {Utente}
 {Non previsto}
 {L'attore vuole eseguire Speect}
-{Il file JSon è stato caricato correttamente \refer{UC2}}
+{Il file JSon è stato caricato correttamente \refer{UC3}}
 {Speect elabora il testo selezionato e viene visualizzato il grafo}
 {\begin{itemize}
 		\item{} L'attore seleziona l'Utterance Type \refer{UC12};
@@ -408,7 +408,7 @@
 {Utente}
 {Non previsto}
 {L'attore ha modificato gli Utterance Processor e vuole salvare il nuovo file JSon}
-{Esiste un file Json correttamente caricato \refer{UC2} e l'attore ha modificato gli Utterance Processor \refer{UC6.2} \refer{UC6.3}}
+{Esiste un file Json correttamente caricato \refer{UC3} e l'attore ha modificato gli Utterance Processor \refer{UC6.2} \refer{UC6.3}}
 {Le modifiche vengono salvate}
 {
 	\begin{itemize}
@@ -435,7 +435,7 @@
 {Utente}
 {Non previsto}
 {L'attore vuole selezionare l'Utterance Type desiderato}
-{Un file JSon è stato caricato correttamente \refer{UC2}}
+{Un file JSon è stato caricato correttamente \refer{UC3}}
 {Vengono mostrati gli Utterance Processors utilizzati da Speect per tale Utterance Type}
 {
 	\begin{itemize}
