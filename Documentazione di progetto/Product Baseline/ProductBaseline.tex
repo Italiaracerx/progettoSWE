@@ -11,8 +11,7 @@
 \loadglsentries{../Glossario/Definizioni}
 %Ultima versione documento
 
-\newcommand{\versione}{0.0.0}
-
+\newcommand{\versione}{}
 
 \begin{document}
 	\makeatletter
@@ -25,12 +24,6 @@
 			\bgroup
 			\def\arraystretch{1.5}
 			\begin{tabular}{l|l}
-				\textbf{Data approvazione} & 10 Marzo 2018 \\
-				\textbf{Responsabile} & Marco Focchiatti\\
-				\textbf{Redattori} &  Manfredi Smaniotto, Marco Focchiatti,\\
-				& Cristiano Tessarolo, Giulio Rossetti, \\
-				& Kevin Silvestri \\
-				\textbf{Verificatori} & Manfredi Smaniotto, Marco Focchiatti \\
 				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
 				& Prof. Riccardo Cardin \\
 				& Gruppo Graphite \\
@@ -44,39 +37,6 @@
 	
 	\thispagestyle{empty}
 	\newpage
-	
-	%REGISTRO DELLE MODIFICHE
-	
-	\chapter*{Registro delle modifiche}
-	\setlength\LTleft{-22mm}
-	\begin{longtable}{|p{20mm}|p{20mm}|p{40mm}|p{30mm}|p{50mm}|}
-		\hline
-		\textbf{Versione} & \textbf{Data} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Descrizione} \\
-		
-		\hline 2.0.0 & 10-03-2018 & Marco Focchiatti & Responsabile & Approvazione \\
-		\hline 1.2.0 & 09-03-2018 & Giulio Rossetti & Verificatore & Verifica \\
-		\hline 1.1.1 & 08-03-2018 & Kevin Silvestri & Verificatore & Stesura appendice §C.3 e §D  \\
-		\hline 1.1.0 & 25-02-2018 & Marco Focchiatti & Verificatore & Verifica \\
-		\hline 1.0.6 & 23-02-2018 & Manfredi Smaniotto & Verificatore & Stesura appendice §B \\
-		\hline 1.0.5 & 22-02-2018 & Manfredi Smaniotto & Verificatore & Spostamento appendice §B in appendice §C \\
-		\hline 1.0.4 & 16-02-2018 & Giulio Rossetti & Verificatore & Rivisto e modificato §3 \\
-		\hline 1.0.3 & 13-02-2018 & Cristiano Tessarolo & Verificatore & Rivisti obiettivi di qualità (§2.2) e aggiunta politica della qualità (§2.4) \\
-		\hline 1.0.2 & 11-02-2018 & Kevin Silvestri & Verificatore & Spostate definizioni metriche (§3) in NP\\
-		\hline 1.0.1 & 09-02-2018 & Marco Focchiatti & Verificatore & Rivista struttura generale e ampliata §2 \\
-		\hline 1.0.0 & 12-01-2018 & Samuele Modena & Responsabile & Approvazione \\
-		\hline 0.2.0 & 11-01-2018 & Giulio Rossetti & Verificatore & Verifica \\
-		\hline 0.1.2 & 10-01-2018 & Samuele Modena & Verificatore & Stesura appendice §B \\
-		\hline 0.1.1 & 20-12-2017 & Matteo Rizzo & Verificatore & Aggiornata §3 \\
-		\hline 0.1.0 & 19-12-2017 & Manfredi Smaniotto & Verificatore & Verifica \\		
-		\hline 0.0.6 & 18-12-2017 & Kevin Silvestri & Verificatore & Stesura appendice §A \\
-		\hline 0.0.5 & 17-12-2017 & Kevin Silvestri & Verificatore & Stesura §4 \\	
-		\hline 0.0.4 & 15-12-2017 & Matteo Rizzo & Verificatore & Stesura §3 \\
-		\hline 0.0.3 & 14-12-2017 & Samuele Modena & Verificatore & Stesura §2 \\
-		\hline 0.0.2 & 13-12-2017 & Matteo Rizzo & Verificatore & Stesura §1 \\
-		\hline 0.0.1 & 13-12-2017 & Matteo Rizzo & Verificatore & Creazione del template \\
-		\hline
-		
-	\end{longtable}
 	
 	\tableofcontents
 	
@@ -160,7 +120,7 @@
 
 	\noindent Segue una tabella che evidenzia le differenze tra le caratteristiche del PoC, contestualizzato nel suo scopo, e quelle della PB. \\
 	
-	\begin{longtable}{|p{80mm}|p{80mm}|}
+	\begin{longtable}{|p{70mm}|p{70mm}|}
 		\caption {Tabella di confronto tra PoC e PB} \label{tab:Tabella di confronto tra PoC e PB} \\
 		\hline
 		\textbf{Proof of Concept} & \textbf{Product Baseline} \\
@@ -185,26 +145,127 @@
 
 	\chapter{Architettura}
 	
-	\section{Model-View-ViewModel}
+	\section{Architettura generale del prodotto}
+	
+	L'architettura generale del prodotto segue il pattern Model-View-ViewModel. Questo pattern è basato su tre componenti principali:
+	
+	\begin{itemize}
+		\item \textbf{Model}: un'implementazione del modello del dominio dei dati;
+		\item \textbf{View}: la struttura, il layout e l'aspetto di ciò che l'utente visualizza a schermo;
+		\item \textbf{ViewModel}: un'astrazione della view che espone proprietà pubbliche e comandi.
+	\end{itemize}
+	
+	\noindent Esso permette tra le altre cose un totale disaccoppiamento tra logica di business e presentazione, informazioni più dettagliate a riguardo sono reperibili nell'appendice §A "Model-View-ViewModel" di questo documento. I seguenti diagrammi illustrano sinteticamente la struttura del software con livello di dettaglio crescente.
+	
+	\newpage
+	
+	\begin{figure}[H]
+		\includegraphics[scale=1.4]{PackageDiagram1}
+		\centering
+		\caption{Struttura generale dell'architettura}
+	\end{figure}
+	
+	\newpage
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.63]{PackageDiagram2}
+		\centering
+		\caption{Struttura dei package}
+	\end{figure}
+	
+	\section{Implementazione Model-View-ViewModel}
+	
+	Vengono di seguito illustrate le implementazioni per le componenti del pattern Model-View-ViewModel in relazione all'architettura della Product Baseline. Per ogni componente, vengono illustrati:
+	
+	\begin{itemize}
+		\item \textbf{Contestualizzazione}: spiegazione generale dell'architettura del componente.
+		\item \textbf{Diagramma delle classi}: diagramma generale delle classi per il componente. Per motivi di spazio, il diagramma qui riportato è una versione semplificata priva dell'indicazione di tutti i metodi. Un link al diagramma completo viene riportato in questa sezione, ed è inoltre presente sul repository un'apposita directory \\ \verb|Diagrammi/Diagrammi delle classi/| contenente la totalità degli stessi;
+		\item \textbf{Design Pattern}: una descrizione e contestualizzazione esaustiva dei design pattern impiegati all'interno del componente.
+	\end{itemize} 
+	
+	\section{View}
+	
+	La View, conseguentemente all’uso del framework Qt, consiste di un file qml trasformato durante la compilazione in classi compatibili C++. Il comportamento della View è indi gestito dal package ViewModel. 
 	
 	\section{Model}
+	
+	\subsection{Contestualizzazione}
+	
+	Nella progettazione del Model è emersa la necessità di interagire con la libreria Speect incapsulandone alcune funzionalità rilevanti. Per realizzare ciò il Model è stato diviso in due package corrispondenti all'implementazione dei design pattern Façade (SpeectWrapper), per quanto riguarda l'incapsulamento della libreria, e Command, per quanto riguarda la suddivisione delle funzionalità implementate in un'ottica di componibilità ed estendibilità.  
+	
+	\subsection{Diagramma delle classi}
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.45]{ModelDiagram}
+		\centering
+		\caption{Struttura dei package}
+	\end{figure}
 		
 	\subsection{Design pattern}
 	
 	\subsubsection{Command}
+	Permette la suddivisione delle funzionalità implementate in un'ottica di componibilità ed estendibilità. I comandi concreti sono aggregati in una lista (\verb|CommandList|) che si interfaccia con la componente ViewModel. Tali comandi interagiscono a loro volta con il package SpeectWrapper per ottere i dati da elaborare dalla libreria.
 	
 	\subsubsection{Builder}
+	Questo design pattern separa la costruzione di un oggetto complesso dalla sua rappresentazione cosicché il processo di costruzione stesso possa creare diverse rappresentazioni. Contestualizzato nel sistema della PB, esso si interfaccia con il ViewModel per la configurazione e costruzione della \verb|CommandList|.
 	
-	\subsubsection{Adapter}
+	\subsubsection{Façade} 
+	Il design pattern Façade permette, attraverso un'interfaccia più semplice, l'accesso a sottosistemi che espongono interfacce complesse e molto diverse tra loro, nonché a blocchi di codice complessi. In questo contesto, il package SpeectWrapper incapsula la libreria Speect rendendola accessibile tramite omonima classe proprietaria.
 	
-	\section{View}
+	\newpage
 	
 	\section{ViewModel}
 	
-	\subsubsection{Observer}
+	\subsection{Contestualizzazione}
+	Il package ViewModel funge da tramite tra Model e View, prelevando i dati dal primo per aggiornare il secondo. Per quanto riguarda la stampa del grafo, la classe \verb|GraphManager| si occupa di aggiornarne la presentazione interfacciandosi con le librerie Qt e con le classi \verb|Line| \verb|Arc| e \verb|Node|.  
 	
-	\subsection{Design pattern}
+	\subsection{Diagramma delle classi}
+		
+	\begin{figure}[H]
+		\includegraphics[scale=0.5]{ViewModelDiagram}
+		\centering
+		\caption{Struttura dei package}
+	\end{figure}
 
+	\subsection{Design pattern}
+	
+	\subsubsection{Observer}
+	Il framework Qt, attraverso il sistema di signal e slot, implementa tale design pattern. Esso permette di reagire efficientemente ad un cambiamento dell'interfaccia grafica, chiedendo se necessario l'aggiornamento dei dati del Model attraverso il ViewModel. Il meccanismo di signal e slot è implementato dalle classi pertinenti all'interno del package.  
+
+	\section{Diagrammi di sequenza}
+	
+	Vengono qui presentati i diagrammi di sequenza per alcune richieste notevoli. Si noti che tali diagrammi sono disponibili all'interno del repository nella directory \verb|Diagrammi/Diagrammi di sequenza/|.
+	
+	\section{Caricamento voice}
+	
+	Il seguente diagramma di sequenza rappresenta il processo di caricamento e configurazione di una voice all'interno del sistema. 
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.43]{CaricamentoVoice}
+		\centering
+		\caption{Diagramma di sequenza del processo di caricamento della voice}
+	\end{figure}
+	
+	\section{Esecuzione utterance processor \\ selezionati}
+	
+	Il seguente diagramma di sequenza rappresenta il processo di esecuzione della lista di comandi selezionati dall'utente mediante l'interfaccia grafica.
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.37]{EsecuzioneProcessor}
+		\centering
+		\caption{Diagramma di sequenza del processo di esecuzione degli utterance processor}
+	\end{figure}
+	
+	\section{Stampa grafo}
+	
+	Il seguente diagramma di sequenza rappresenta il processo di stampa di un grafo.
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.6]{StampaGrafo}
+		\centering
+		\caption{Diagramma di sequenza del processo di stampa del grafo}
+	\end{figure}
+	
 	\chapter{Use case coperti}
 	
 	\section{Tabella della copertura degli use case}
@@ -247,25 +308,5 @@
 		\item È facile riprogettare l'interfaccia grafica dell'applicazione senza toccare il resto del codice, una nuova versione della vista dovrebbe poter funzionare con il modello di presentazione esistente;
 		\item Se esiste un'implementazione del modello che incapsula la logica di business, potrebbe essere difficile o rischioso cambiarla. In questo scenario, il ViewModel funge da adattatore per le classi del Model e consente di evitare modifiche importanti al codice dello stesso.	
 	\end{itemize}
-	
-	\chapter{Design Pattern}
-	
-	Vengono di seguito illustrati sinteticamente i design pattern implementati dal prodotto DeSpeect.
-	
-	\section{Command}
-	
-	Il Command pattern è un design pattern che permette di isolare la porzione di codice che effettua un'azione (eventualmente molto complessa) dal codice che ne richiede l'esecuzione; l'azione è incapsulata nell'oggetto Command. L'obiettivo è rendere variabile l'azione del client senza però conoscere i dettagli dell'operazione stessa. Altro aspetto importante è che il destinatario della richiesta può non essere deciso staticamente all'atto dell'istanziazione del comando ma ricavato a tempo di esecuzione. Segue il diagramma UML rappresentativo del pattern. \\
-	
-	\begin{figure}[H]
-		\includegraphics[scale=0.6]{CommandPattern}
-		\centering
-		\caption{Diagramma UML del design pattern Command}
-	\end{figure}
-	
-	\section{Builder}
-	
-	\section{Adapter}
-	
-	\section{Observer}
 	
 \end{document}
