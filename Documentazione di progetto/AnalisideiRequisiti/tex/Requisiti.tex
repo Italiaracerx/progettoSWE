@@ -320,17 +320,17 @@
 			\hline
 			\endhead
 							
-			\newline ROQ0&\newline Obbligario&
+			\newline ROQ0&\newline Obbligatorio&
 			\newline Deve essere fornito un manuale utente&
 			\newline Capitolato
 			\\[1em]
 			\hline
-			\newline ROQ0.1&\newline Obbligario&
+			\newline ROQ0.1&\newline Obbligatorio&
 			\newline Il manuale deve essere in lingua italiana&
 			\newline Interno
 			\\[1em]
 			\hline
-			\newline ROQ1&\newline Obbligario&
+			\newline ROQ1&\newline Obbligatorio&
 			\newline Lo sviluppo del prodotto deve rispettare i criteri definiti nei documenti \textit{Norme di Progetto v 2.0.0} e \textit{Piano di Qualifica v2.0.0}&
 			\newline Interno
 			\\[1em]
@@ -350,17 +350,24 @@
 			\\[1em]
 			\hline	
 			\newline
-			ROQ2&\newline Obbligario&
+			ROQ2&\newline Obbligatorio&
 			\newline 
 			L'applicazione deve essere rilasciata con interfaccia grafica in lingua inglese&
 			\newline VE-2018-03-17
 			\\[1em]
 			\hline	
 			\newline
-			ROQ3&\newline Obbligario&
+			ROQ3&\newline Obbligatorio&
 			\newline 
 			Il codice dell'applicazione deve essere rilasciato con commenti in lingua inglese&
 			\newline VE-2018-03-17
+			\\[1em]
+			\hline	
+			\newline
+			ROQ4&\newline Obbligatorio&
+			\newline 
+			Il file \verb|README.md| del repository definitivo deve essere scritto in lingua inglese.&
+			\newline VE-2018-04-06
 			\\[1em]
 			\hline
 	\end{longtable}
@@ -371,14 +378,14 @@
 			\textbf{Codice} & \textbf{Importanza} & \textbf{Descrizione} & \textbf{Fonti}\\
 			\hline
 			\endhead
-				\newline ROV0&\newline Obbligario&
+				\newline ROV0&\newline Obbligatorio&
 			\newline 
 			L'applicativo deve usare Speect modificato da Mivoq &
 			\newline Capitolato
 			\\[1em]
 			\hline	
 			\newline 
-			ROV1&\newline Obbligario&
+			ROV1&\newline Obbligatorio&
 			\newline 
 			L'applicativo deve essere sviluppato con QT 5.9 LTS &
 			\newline Capitolato
@@ -386,7 +393,7 @@
 			\\[1em]
 			\hline
 			\newline 
-			ROV2&\newline Obbligario&
+			ROV2&\newline Obbligatorio&
 			\newline 
 			L'applicativo deve essere utilizzabile su sistema operativo Linux Ubuntu 16.04 LTS&
 			\newline Capitolato
@@ -415,7 +422,9 @@
 	\hline
 		\newline VE-2018-01-03 & \newline ROF9.2 \newline RDF9.2.1 \newline RDF9.4.1 \newline ROF9.6 \\[1em]
 	\hline
-		\newline VE-2018-03-17 & \newline ROQ2 \newline ROQ3 \\[1em]	
+		\newline VE-2018-03-17 & \newline ROQ2 \newline ROQ3 \\[1em]
+	\hline
+		\newline VE-2018-04-06 & \newline ROQ4 \\[1em]	
 		
 
 	\hline
@@ -783,6 +792,10 @@ ROQ2&\newline VE-2018-03-17
 \newline
 ROQ3&\newline VE-2018-03-17
 \\[1em]
+\hline	
+\newline
+ROQ4&\newline VE-2018-04-06
+\\[1em]
 \hline
 \newline 
 ROV0&\newline Capitolato
@@ -815,11 +828,11 @@ RDV2.1&\newline Capitolato
 
 \hline\textbf{Prestazionale} &0& 0& 0 &0  \\
 
-\hline\textbf{Qualità} &5& 0&2&7 \\
+\hline\textbf{Qualità} &6& 0&2&8 \\
 
 \hline\textbf{Vincolo}&3& 0& 1 & 4 \\
 
-\hline\textbf{Totale}&32& 14& 13 & 59 \\
+\hline\textbf{Totale}&33& 14& 13 & 60 \\
 
 \hline
 \caption{Riepilogo requisiti}
