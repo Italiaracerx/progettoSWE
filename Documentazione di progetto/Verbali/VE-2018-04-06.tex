@@ -1,0 +1,96 @@
+\documentclass[openany,12pt,a4paper]{article} 
+\usepackage{subfiles} 
+\usepackage[]{graphicx} 
+\usepackage{float} 
+\graphicspath{{./img/}{./../img/}} 
+\usepackage{../StileDoc} 
+\title{Verbale Esterno} 
+\author{} 
+\newcommand{\versione}{} 
+\loadglsentries{../Glossario/Definizioni} 
+ 
+\begin{document} 
+  \makeatletter 
+  \begin{titlepage} 
+    \setlength{\headsep}{0pt}   
+    \begin{center} 
+      \includegraphics[width=0.5\linewidth]{Logo.png}\\[1em] 
+      {\huge \bfseries  \@title }\\[10ex] 
+      \textbf{\Large Informazioni Documento} \\[2em] 
+      \bgroup 
+      \def\arraystretch{1.5} 
+      \begin{tabular}{l|l} 
+        \textbf{Data approvazione} & 6 aprile 2018 \\ 
+        \textbf{Responsabile} & Marco Focchiatti \\ 
+        \textbf{Redattore} & Matteo Rizzo \\ 
+        \textbf{Verificatore} & Kevin Silvestri \\ 
+        \textbf{Distribuzione} & Prof. Tullio Vardanega \\ 
+         & Prof. Riccardo Cardin \\ 
+         & Gruppo Graphite \\ 
+        \textbf{Uso} & Esterno \\ 
+        \textbf{Recapito} & graphite.swe@gmail.com \\ 
+      \end{tabular} 
+    \egroup 
+    \end{center} 
+  \end{titlepage} 
+  \makeatother 
+ 
+  \thispagestyle{empty} 
+  \newpage 
+   
+  \tableofcontents 
+  \newpage 
+   
+  \section{Informazioni generali} 
+   
+  \subsection{Informazioni sull'incontro} 
+   
+  \begin{itemize}  
+      \item \textbf{Luogo:} Videochiamata;
+      \item \textbf{Data:} 2018-04-06; 
+      \item \textbf{Orari} 17:00 - 17:45;
+      \item \textbf{Partecipanti del gruppo:} Marco Focchiatti, Samuele Modena, Matteo Rizzo, Giulio Rossetti, Kevin Silvestri, Manfredi Smaniotto, Cristiano Tessarolo; 
+      \item \textbf{Partecipanti esterni:} Dottor Giulio Paci. 
+  \end{itemize} 
+ 
+  \subsection{Ragioni dell'incontro} 
+  Presentazione della \textit{Product Baseline} e richiesta di chiarimenti relativi a problemi emersi. 
+ 
+  \section{Resoconto} 
+  Nel corso dell'incontro sono stati chiariti i dubbi sorti nel gruppo a seguito della realizzazione della \textit{Product Baseline}, nello specifico sono stati affrontati i seguenti punti:
+	
+  \begin{itemize}
+	\item Presentazione della \textit{Product Baseline} e delle sue funzionalità;
+	\item Richiesta di delucidazioni relative a dubbi sulla struttura dell'interfaccia grafica;
+	\item Richiesta di ulteriori pareri o suggerimenti sull'andamento del progetto.
+  \end{itemize}
+	
+  \noindent Seguono le principali domande poste durante l'incontro e la sintesi delle relative risposte ricevute:
+
+  \begin{enumerate}
+  	
+  	\item \textbf{Condividiamo con lei il codice sorgente relativo alla PB e le mostriamo un'esecuzione del software illustrando le funzionalità finora sviluppate. Che cosa ne pensa di quanto realizzato?} \\
+  	Sono soddisfatto dell'andamento del progetto e del prodotto allo stato attuale. Ho tuttavia notato che la barra inferiore, dedita a contenere le informazioni specifiche di ogni nodo, non ha una struttura coerente con il fatto che tali informazioni abbiano natura e struttura variabile. Questo errore potrebbe essere stato indotto dalla GUI proposta nel capitolato;
+  	
+  	\item \textbf{La libreria Speect produce un log di errori durante la propria esecuzione. Pensavamo di salvare questo log su di un file e di affiancare gli errori di Speect a quelli prodotti da DeSpeect, anche nell'ottica dello scopo del prodotto. Può essere un'idea interessante?} \\  
+  	Sì, potrebbe senz'altro rivelarsi utile un simile log;
+  	
+  	\item \textbf{Che cosa ne pensa in particolare della resa della stampa del grafo?} \\
+  	La stampa è essenzialmente soddisfacente, ma differenziare le frecce in base alla tipologia (ex: padre-figlio, fratello-fratello) renderebbe la sua consultazione più agevole. Gradirei inoltre fosse possibile spostare contemporaneamente gruppi omogenei di nodi, come ad esempio quelli appartenenti alla stessa relazione;
+  	
+  	\item \textbf{Ha ulteriori critiche o suggerimenti relativi a quanto illustrato?} \\
+  	Accedendo al repository ho notato che il file \verb|README.md| è scritto in lingua italiana: preferirei fosse scritto in lingua inglese.
+  \end{enumerate} 
+ 
+  \section{Tracciamento delle decisioni} 
+   
+  \begin{itemize} 
+      \item \textbf{VE-2018-04-06.1:} Aggiunta di un log contenete gli errori di Speect e DeSpeect; 
+      \item \textbf{VE-2018-04-06.2:} Differenziazione delle frecce in base alla loro tipologia; 
+      \item \textbf{VE-2018-04-06.3:} Spostamento simultaneo di gruppi omogenei di nodi; 
+      \item \textbf{VE-2018-04-06.4:} Modifica della struttura della barra inferiore cosicché risulti coerente con le informazioni che deve contenere; 
+      \item \textbf{VE-2018-04-06.5:} Aggiunta di un requisito di qualità relativo alla necessità che il file \verb|README.md| del repository definitivo sia scritto in lingua inglese.
+  \end{itemize} 
+   
+  \end{document}
+ \ No newline at end of file 
