@@ -98,12 +98,15 @@
 	
 	\section{Informazioni utili}
 	
-	La stesura di questo documento assume come utente target del prodotto un programmatore esperto nell'utilizzo di \textit{Speect} e dei linguaggi di programmazione C e C++.
-	Per completezza, viene riportato in appendice A un glossario comprensivo di termini tecnici o riguardanti particolari funzionalità di \textit{DeSpeect}. Per identificare i termini
-	presenti nel glossario, la loro prima occorrenza all’interno del documento è riportata in corsivo e
-	marcata con una G al pedice.
+	La stesura di questo documento assume come utente target del prodotto un programmatore esperto nell'utilizzo di \textit{Speect} e dei linguaggi di programmazione C e C++. \\
+	\noindent Per completezza, viene riportato in appendice A un glossario comprensivo di termini tecnici o riguardanti particolari funzionalità di \textit{DeSpeect}. Per identificare i termini presenti nel glossario, la loro prima occorrenza all’interno del documento è riportata in corsivo e marcata con una G al pedice. 
 	
-	\section*{Riferimenti informativi}
+	%quando caricheremo su github in una repo apposita il manuale sviluppatore
+	\begin{comment}
+	\\ \noindent Per i manutentori del prodotto o per chi fosse interessato alla sua integrazione/incremento, può invece consultare il manuale sviluppatore reperibile all'indirizzo: \url{...}
+	\end{comment}
+	
+	\section{Riferimenti informativi}
 
 	\begin{itemize}
 		\item \textbf{Documentazione Speect:} \\
@@ -120,27 +123,52 @@
 	\end{itemize}
 
 	\chapter{Requisiti di sistema}
-	DeSpeect è un'interfaccia grafica per Speect funzionante su tutti i dispositivi desktop con sistema operativo Linux.
+	L'installazione ed esecuzione del software DeSpeect richiede i seguenti prerequisiti:
 	
-	\section{Sistema operativo}
-	
+	\begin{itemize}
+		\item Sistema operativo Unix / Unix-like (il software è stato testato solo per piattaforma Ubuntu 16.04 LTS)
+		\subitem \url{https://www.ubuntu.com/download/desktop}
+		\item CMake (versione minima 2.8)
+		\subitem \url{https://cmake.org/download/}
+		\item Compilatore ANSI C/ISO C90 GCC (versione minima 5.0)
+		\subitem \url{https://gcc.gnu.org/install/binaries.html}
+		\item Qt 5.9.0
+		\subitem \url{https://www.qt.io/download}
+	\end{itemize}	
 	 
+	\chapter{Installazione e configurazione} 
 	
-	\chapter{Manuale d'uso}
+	DeSpeect è reperibile su \glossario{GitHub}{GitHub} al seguente link:
+	\begin{center}
+		\url{https://github.com/graphiteSWE/DeSpeect}
+	\end{center}
 	
-	\section{Accesso all'applicazione}
-	Per accedere all'applicazione l'utente deve
+	\noindent Una volta soddisfatti i prerequisiti descritti in §2 "Requisiti di sistema" di questo documento, per installare ed eseguire il software è necessario seguire la seguente procedura:
+	\begin{enumerate}
+		\item Clonare o scaricare la repository sulla propria macchina;
+		\item Entrare nella cartella scaricata ed eseguire lo script \verb|build.sh|.
+	\end{enumerate}
+	Tale procedura installerà la libreria Speect e genererà una build del software nella directory \verb|DeSpeect/build|, nonché avvierà automaticamente un'esecuzione di DeSpeect.
 	
-	\section{L'interfaccia grafica}
+	\chapter{Guida all'utilizzo}
+	Di seguito è presentata una guida all'utilizzo di DeSpeect.
+	I termini evidenziati in \textbf{questo modo} corrispondono a pulsanti presenti all'interno dell'applicazione.
+	
+	\section{Interfaccia grafica}
+	All'avvio dell'applicazione viene presentata una schermata come in Figura 1.
 	\begin{figure}[H]
 		
 		\centering
 		
 		\includegraphics[width=\textwidth]{./img/avvio.png}
 		
-		\caption{Visualizzazione pagina iniziale}
+		\caption{Interfaccia grafica - pagina iniziale}
 		
 	\end{figure}
+ 	L'interfaccia grafica sarà sempre generalmente composta dalle seguenti componenti:
+ 	\begin{itemize}
+ 		\item 
+ 	\end{itemize}
 	
 	\subsection{Struttura dell'interfaccia grafica}
 	
