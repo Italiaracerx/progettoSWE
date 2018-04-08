@@ -18,7 +18,7 @@
 	\begin{titlepage}
 		\setlength{\headsep}{0pt}  
 		\begin{center}
-			\includegraphics[width=0.5\linewidth]{img/logo.png}\\[1em]
+			\includegraphics[width=0.5\linewidth]{img/Logo.png}\\[1em]
 			{\huge \bfseries  \@title }\\[10ex]
 			\textbf{\Large Informazioni Documento} \\[2em]
 			\bgroup
@@ -276,15 +276,102 @@
 	
 	\section{Tabella della copertura degli use case}
 	
-	\section{Grafico della copertura degli use case}
+	\begin{longtable}{|p{40mm}|p{40mm}|p{40mm}|}
+		\hline
+		\centering \textbf{Caso d'uso} & \textbf{Copertura architettura} &  \textbf{Copertura codice}\\
+		
+		\hline \centering UC1 & SODDISFATTO & SODDISFATTO \\
+		\hline \centering UC2 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering UC3 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering UC3.1 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering UC4 & SODDISFATTO & \\
+		\hline \centering UC4.1 & SODDISFATTO & \\
+		\hline \centering UC5 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering UC6 &  &\\
+		\hline \centering UC6.1 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering UC6.2 &  &\\
+		\hline \centering UC6.3 &  &\\
+		\hline \centering UC7 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering UC7.1 &  & \\
+		\hline \centering UC7.2 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering UC7.3 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering UC8 &  & \\
+		\hline \centering UC8.1 &  & \\
+		\hline \centering UC9 &  & \\
+		\hline \centering UC9.1 &  & \\
+		\hline \centering UC10 & SODDISFATTO & \\
+		\hline \centering UC10.1 &  & \\
+		\hline \centering UC11 &  & \\
+		\hline \centering UC11.1 &  & \\
+		\hline \centering UC12 & SODDISFATTO & \\
+		\hline \centering UC13 &  & \\
+		\hline \centering \textbf{Caso d'uso} & \textbf{Copertura architettura} &  \textbf{Copertura codice}\\
+		\hline \centering UC13.1 & SODDISFATTO & \\
+		\hline \centering UC13.2 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering UC13.3 &  & \\
+		\hline \centering UC13.4 &  & \\
+		\hline \centering UC13.5 & SODDISFATTO & SODDISFATTO\\
+		\hline
+		
+	\end{longtable}
 	
+	\section{Grafico della copertura degli use case}
+		\begin{figure}[H]
+		\includegraphics[scale=0.38]{casi_d'uso_Architettura}
+		\centering
+		\caption{Casi d’uso coperti nell'architettura}
+	\end{figure}
+	\begin{figure}[H]
+		\includegraphics[scale=0.38]{casi_d'uso_codice}
+		\centering
+		\caption{Casi d’uso coperti nel codice}
+	\end{figure}
 	\chapter{Requisiti soddisfatti}
 	
 	\section{Tabella del soddisfacimento dei requisiti}
-	
+	\begin{longtable}{|p{40mm}|p{40mm}|p{40mm}|}
+		\hline
+		\centering \textbf{Requisito} & \textbf{Soddisfacimento architettura} &  \textbf{Soddisfacimento codice}\\
+		
+		\hline \centering ROF0 & SODDISFATTO & SODDISFATTO \\
+		\hline \centering ROF1 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF2 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF2.1 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF3 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF3.1 & SODDISFATTO & \\
+		\hline \centering ROF4 & SODDISFATTO &\\
+		\hline \centering ROF4.1 & SODDISFATTO &\\
+		\hline \centering ROF4.1.1 & SODDISFATTO &\\
+		\hline \centering ROF4.2 & SODDISFATTO &\\
+		\hline \centering ROF6 & SODDISFATTO &\\
+		\hline \centering ROF7 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF8 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF8.1 & SODDISFATTO & \\
+		\hline \centering ROF9 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF9.1 & SODDISFATTO & \\
+		\hline \centering ROF9.2 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF9.3 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF9.3.1 & SODDISFATTO & \\
+		\hline \centering ROF9.5 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF9.6 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF9.7 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF9.9 & SODDISFATTO & \\
+		\hline \centering ROF14 & SODDISFATTO & SODDISFATTO\\
+		\hline
+		
+	\end{longtable}
 	\section{Grafico del soddisfacimento dei requisiti}
+	\begin{figure}[H]
+		\includegraphics[scale=0.38]{Requisiti_obbligatori_architettura}
+		\centering
+		\caption{Requisiti obbligatori funzionali soddisfatti nell'architettura}
+	\end{figure}
+	\begin{figure}[H]
+		\includegraphics[scale=0.38]{Requisiti_obbligatori_codice}
+		\centering
+		\caption{Requisiti obbligatori funzionali soddisfatti nel codice}
+	\end{figure}
 	
-	\appendix
 	
 	\chapter{Model-View-ViewModel}
 	
