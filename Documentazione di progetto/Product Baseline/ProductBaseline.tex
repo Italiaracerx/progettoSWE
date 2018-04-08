@@ -49,14 +49,7 @@
 	
 	\section{Scopo del prodotto}
 	
-	Lo scopo del progetto è la realizzazione di un’interfaccia grafica per \glossario{Speect}{Speect} [Meraka Institute(2008-2013)], una libreria per la creazione di sistemi di sintesi vocale, che agevoli l’ispezione del suo stato interno durante il funzionamento e la scrittura di test per le sue funzionalità.
-
-
-	\section{Glossario}
-	
-	Per completezza, viene riportato in appendice §B un glossario comprensivo di termini tecnici o riguardanti particolari funzionalità di \textit{Speect}. Per identificare i termini
-	presenti nel glossario, la loro prima occorrenza all’interno del documento è riportata in corsivo e
-	marcata con una G al pedice.
+	Lo scopo del progetto è la realizzazione di un’interfaccia grafica per Speect [Meraka Institute(2008-2013)], una libreria per la creazione di sistemi di sintesi vocale, che agevoli l’ispezione del suo stato interno durante il funzionamento e la scrittura di test per le sue funzionalità.
 
 	\section{Riferimenti}
 	
@@ -116,7 +109,7 @@
 		\item Eseguire da terminale il comando \verb|cd DeSpeect/build/|;
 		\item Avviare l'eseguibile con il comando \verb|./main|.
 	\end{enumerate}
-	Tale procedura installerà la libreria Speect e genererà una build del software nella directory \verb|DeSpeect/build/|, nonché avvierà automaticamente un'esecuzione dello stesso. Ulteriori informazioni sono reperibili nel file \verb|README.md| del repository.
+	Tale procedura installerà la libreria Speect e genererà una build del software nella directory \verb|DeSpeect/build/|, nonché avvierà automaticamente un'esecuzione dello stesso. Ulteriori informazioni, nonché un esempio di procedura di stampa di un grafo, sono reperibili nel file \verb|README.md| del repository.
 
 	\chapter{Rapporto con il PoC}
 	Precedentemente alla Product Baseline, è stato realizzato un \textit{Proof of Concept} (PoC in breve) a dimostrazione della fattibilità del prodotto DeSpeect. Tale PoC, che ha rappresentato il punto di partenza per la realizzazione della PB, è tuttora reperibile al seguente link:
@@ -149,9 +142,7 @@
 		\hline
 	\end{longtable}
 
-	\chapter{Architettura}
-	
-	\section{Architettura generale del prodotto}
+	\chapter{Architettura generale del prodotto}
 	
 	L'architettura generale del prodotto segue il pattern Model-View-ViewModel. Questo pattern è basato su tre componenti principali:
 	
@@ -179,13 +170,13 @@
 		\caption{Diagramma dei package nel dettaglio}
 	\end{figure}
 	
-	\section{Implementazione Model-View-ViewModel}
+	\chapter{Implementazione MVVM}
 	
 	Vengono di seguito illustrate le implementazioni per le componenti del pattern Model-View-ViewModel in relazione all'architettura della Product Baseline. Per ogni componente, vengono illustrati:
 	
 	\begin{itemize}
 		\item \textbf{Contestualizzazione}: spiegazione generale dell'architettura del componente all'interno del sistema.
-		\item \textbf{Diagramma delle classi}: diagramma generale delle classi per il componente. Per motivi di spazio, il diagramma qui riportato è una versione semplificata priva dell'indicazione di tutti i metodi. Un link al diagramma completo viene riportato in questa sezione, ed è inoltre presente sul repository un'apposita directory \\ \verb|Diagrammi/Diagrammi delle classi/| contenente la totalità degli stessi;
+		\item \textbf{Diagramma delle classi}: diagramma generale delle classi per il componente. Per motivi di spazio e leggibilità, il diagramma qui riportato è una versione semplificata priva dell'indicazione di tutti i metodi. I diagrammi completi sono disponibili sul repository dedicato alla PB nell'apposita directory \verb|Diagrammi/DiagrammiClassi/|;
 		\item \textbf{Design Pattern}: una descrizione e contestualizzazione esaustiva dei design pattern impiegati all'interno del componente.
 	\end{itemize} 
 	
@@ -202,7 +193,8 @@
 	\subsection{Diagramma delle classi}
 	
 	\begin{figure}[H]
-		\includegraphics[scale=0.45]{ModelDiagram}
+		\hspace*{-20mm}
+		\includegraphics[scale=0.5]{ModelDiagram}
 		\centering
 		\caption{Diagramma delle classi del componente Model}
 	\end{figure}
@@ -244,36 +236,39 @@
 
 	\section{Diagrammi di sequenza}
 	
-	Vengono qui presentati i diagrammi di sequenza per alcune richieste notevoli. Si noti che tali diagrammi sono disponibili all'interno del repository nella directory \verb|Diagrammi/Diagrammi di sequenza/|.
+	Vengono qui presentati i diagrammi di sequenza per alcune richieste notevoli. Si noti che tali diagrammi sono disponibili all'interno del repository nella directory \verb|Diagrammi/DiagrammiSequenza/|.
 	
-	\section{Caricamento voice}
+	\subsection{Caricamento voice}
 	
 	Il seguente diagramma di sequenza rappresenta il processo di caricamento e configurazione di una voice all'interno del sistema. 
 	
 	\begin{figure}[H]
-		\includegraphics[scale=0.43]{CaricamentoVoice}
+		\hspace*{-20mm}
+		\includegraphics[scale=0.5]{CaricamentoVoice}
 		\centering
 		\caption{Diagramma di sequenza del processo di caricamento della voice}
 	\end{figure}
 	
-	\section{Esecuzione utterance processor \\ selezionati}
+	\subsection{Esecuzione utterance processor \\ selezionati}
 	
 	Il seguente diagramma di sequenza rappresenta il processo di esecuzione della lista di comandi selezionati dall'utente mediante l'interfaccia grafica.
 	
 	\begin{figure}[H]
-		\includegraphics[scale=0.37]{EsecuzioneProcessor}
+		\hspace*{-30mm}
+		\includegraphics[scale=0.47]{EsecuzioneProcessor}
 		\centering
 		\caption{Diagramma di sequenza del processo di esecuzione degli utterance processor}
 	\end{figure}
 
 	\newpage
 	
-	\section{Stampa grafo}
+	\subsection{Stampa grafo}
 	
 	Il seguente diagramma di sequenza rappresenta il processo di stampa di un grafo.
 	
 	\begin{figure}[H]
-		\includegraphics[scale=0.6]{StampaGrafo}
+		\hspace*{-25mm}
+		\includegraphics[scale=0.67]{StampaGrafo}
 		\centering
 		\caption{Diagramma di sequenza del processo di stampa del grafo}
 	\end{figure}
