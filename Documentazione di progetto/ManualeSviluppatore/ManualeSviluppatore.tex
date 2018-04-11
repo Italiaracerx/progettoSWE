@@ -181,8 +181,7 @@
 	\end{center}
 
 	
-	\section{Verifica e monitoraggio di DeSpeect}
-	
+	\section{Verifica e monitoraggio di DeSpeect}	
 	
 	\subsection{Test}
 	Google Test è un framework per la realizzazione di test per il linguaggio C++. DeSpeect utilizza questa tecnologia per la realizzazione dei test del software, ulteriori informazioni sulla stessa sono reperibili al seguente link:
@@ -255,15 +254,102 @@
 		\item Confermare l'importazione all'interno dell'IDE.
 	\end{enumerate}
 	
-	\chapter{Architettura}
-	
-	\section{Model-View-ViewModel}
-	
-	\section{Model}
-	
-	\section{View}
-	
-	\section{ViewModel}
+
+\chapter{Architettura generale del prodotto}
+
+L'architettura generale del prodotto segue il pattern Model-View-ViewModel. Questo pattern è basato su tre componenti principali:
+
+\begin{itemize}
+	\item \textbf{Model}: un'implementazione del modello del dominio dei dati;
+	\item \textbf{View}: la struttura, il layout e l'aspetto di ciò che l'utente visualizza a schermo;
+	\item \textbf{ViewModel}: un'astrazione della view che espone proprietà pubbliche e comandi.
+\end{itemize}
+
+\noindent Esso permette tra le altre cose un totale disaccoppiamento tra logica di business e presentazione, informazioni più dettagliate a riguardo sono reperibili nell'appendice §A "Model-View-ViewModel" di questo documento. I seguenti diagrammi illustrano sinteticamente la struttura del software attraverso i package che lo costituiscono, con livello di dettaglio crescente. Tali diagrammi sono consultabili anche all'interno del repository nella directory \verb|AllegatoTecnico/Diagrammi/DiagrammiPackage/|. 
+
+\newpage
+
+\begin{figure}[H]
+	\includegraphics[scale=1.4]{PackageDiagram1}
+	\centering
+	\caption{Diagramma generale dei package}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+	\includegraphics[scale=0.63]{PackageDiagram2}
+	\centering
+	\caption{Diagramma dei package nel dettaglio}
+\end{figure}
+
+\chapter{Implementazione MVVM}
+
+Vengono di seguito illustrate le implementazioni per le componenti del pattern Model-View-ViewModel in relazione all'architettura della Product Baseline. Per ogni componente, vengono illustrati:
+
+\begin{itemize}
+	\item \textbf{Contestualizzazione}: spiegazione generale dell'architettura del componente all'interno del sistema.
+	\item \textbf{Diagramma delle classi}: diagramma generale delle classi per il componente. Per motivi di spazio e leggibilità, il diagramma qui riportato è una versione semplificata priva dell'indicazione di tutti i metodi. I diagrammi completi sono disponibili sul repository dedicato alla PB nell'apposita directory \verb|AllegatoTecnico/Diagrammi/DiagrammiClassi/|;
+	\item \textbf{Design Pattern}: una descrizione e contestualizzazione esaustiva dei design pattern impiegati all'interno del componente.
+\end{itemize} 
+
+\section{View}
+
+La View, conseguentemente all’uso del framework Qt, consiste di un file \textit{qml} trasformato durante la compilazione in classi compatibili C++. Il comportamento della View è indi gestito dal package ViewModel. 
+
+\section{Model}
+
+\subsection{Contestualizzazione}
+
+Nella progettazione del Model è emersa la necessità di interagire con la libreria Speect incapsulandone alcune funzionalità rilevanti. Per realizzare ciò il Model è stato diviso in due package corrispondenti all'implementazione dei design pattern Façade (SpeectWrapper), per quanto riguarda l'incapsulamento della libreria, e Command, per quanto riguarda la suddivisione delle funzionalità implementate in un'ottica di componibilità ed estendibilità.  
+
+\subsection{Diagramma delle classi}
+
+\begin{figure}[H]
+	\hspace*{-20mm}
+	\includegraphics[scale=0.5]{ModelDiagram}
+	\centering
+	\caption{Diagramma delle classi del componente Model}
+\end{figure}
+
+\subsection{Dettaglio delle classi}
+
+\newpage
+
+\subsection{Design pattern}
+
+\subsubsection{Command}
+Permette la suddivisione delle funzionalità implementate in un'ottica di componibilità ed estendibilità. I comandi concreti sono aggregati in una lista (\verb|CommandList|) che si interfaccia con la componente ViewModel. Tali comandi interagiscono a loro volta con il package SpeectWrapper per ottere i dati da elaborare dalla libreria Speect. Ai comandi è delegata l'esecuzione degli utterance processor per la successiva stampa dei dati nel grafo, ma anche l'implementazione di funzionalità quali il caricamento dei plug-in e della configurazione di Speect.
+
+\subsubsection{Builder}
+Questo design pattern separa la costruzione di un oggetto complesso dalla sua rappresentazione, cosicché il processo di costruzione stesso possa creare diverse rappresentazioni. Contestualizzato nel sistema della PB, esso si interfaccia con il ViewModel per la configurazione e costruzione di una specifica \verb|CommandList|.
+
+\subsubsection{Façade} 
+Il design pattern Façade permette, attraverso un'interfaccia più semplice, l'accesso a sottosistemi che espongono interfacce complesse e molto diverse tra loro, nonché a blocchi di codice complessi. In questo contesto, il package SpeectWrapper incapsula la libreria Speect rendendola accessibile tramite omonima classe proprietaria.
+
+\newpage
+
+\section{ViewModel}
+
+\subsection{Contestualizzazione}
+Il package ViewModel funge da tramite tra Model e View, prelevando i dati dal primo per aggiornare il secondo. Per quanto riguarda la stampa del grafo, la classe \verb|GraphManager| si occupa di aggiornarne la presentazione interfacciandosi con le librerie Qt e con le classi \verb|Line|, \verb|Arc| e \verb|Node|.  
+
+\subsection{Diagramma delle classi}
+
+\begin{figure}[H]
+	\includegraphics[scale=0.5]{ViewModelDiagram}
+	\centering
+	\caption{Diagramma delle classi del componente ViewModel}
+\end{figure}
+
+\subsection{Dettaglio delle classi}
+
+\subsection{Design pattern}
+
+\subsubsection{Observer}
+Il framework Qt, attraverso il sistema di signal e slot, implementa tale design pattern. Esso permette di reagire efficientemente ad un cambiamento dell'interfaccia grafica, chiedendo se necessario l'aggiornamento dei dati del Model attraverso il ViewModel. Il meccanismo di signal e slot è implementato dalle classi pertinenti all'interno del package.  
+
+\newpage
 		
 	\chapter{Estensione delle funzionalità}
 	
@@ -332,9 +418,22 @@
 	DeSpeect è software open source e permette quindi di
 	essere modificato. Se si vuole contribuire al progetto originale è possibile farlo mediante la creazione di fork sul repository GitHub. Risulta inoltre possibile aprire dei ticket per segnalare errori, malfunzionamenti o la richiesta di nuove funzionalità.
 	
+	\begin{figure}[H]
+		\includegraphics[scale=0.5]{github-home}
+		\centering
+		\caption{Diagramma delle classi del componente ViewModel}
+	\end{figure}
+
 	\section{Aprire un ticket}
 	
 	Per aprire un \textit{ticket} è sufficiente recarsi nella sezione \textit{Issues} del repository GitHub del progetto e cliccare il pulsante \textit{New Issue}. A questo punto verrà chiesto di inserire un titolo e una descrizione per il ticket.
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.5]{ViewModelDiagram}
+		\centering
+		\caption{Diagramma delle classi del componente ViewModel}
+	\end{figure}
+	
 	Si segnala che è obbligatorio aggiungere allo stesso delle \textit{labels}, atte a rendere facilmente reperibili e categorizzabili i ticket aperti. Un ticket privo di labels
 	viene automaticamente rifiutato. 
 	Per agevolare la pronta risoluzione di un ticket, si invita a seguire i seguenti accorgimenti:
