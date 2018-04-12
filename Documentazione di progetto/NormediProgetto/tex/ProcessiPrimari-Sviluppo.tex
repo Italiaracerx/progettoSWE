@@ -173,6 +173,34 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 	\subsubsection{Progettazione in dettaglio}
 	La progettazione in dettaglio deve definire per ogni componente software il progetto della stessa e i relativi test. Quest'ultimi devono essere pensati per garantire il funzionamento del software ed essere contemporaneamente coerenti con le scelte tecnologiche effettuate nell'ambito dell'integrazione continua e delle misurazioni metriche relative alla qualità di prodotto. 
 	
+	\subsubsection{Diagrammi}
+	
+	La progettazione deve utilizzare le seguenti tipologie di diagrammi UML:
+	
+	\begin{itemize}
+		\item \textbf{Diagrammi delle classi}: illustrano una collezione di elementi che rappresenta un modello come classi e tipi, con i loro contenuti e relazioni;
+		\item \textbf{Diagrammi dei package}: raggruppamenti di classi in una unità ad un livello più alto;
+		\item \textbf{Diagrammi delle attività}: rappresentano il flusso di operazioni relativo ad
+		un’attività e vengono utilizzati in particolare per descrivere la logica di un algoritmo. Tali diagrammi vengono utilizzati solo se ne sopraggiunge la necessità;
+		\item \textbf{Diagrammi di sequenza}: descrivono una determinata sequenza di azioni. Nel diagramma non compaiono scelte, nè flussi
+		alternativi.
+	\end{itemize}
+
+	\noindent L’utilizzo dei succitati diagrammi rispetta la notazione del linguaggio UML v2.0.
+	
+	\subsubsection{Linee guida per i progettisti}
+	Al fine di implementare le qualità dell’architettura descritte in §2.2.5.2, ai \textit{Progettisti} viene
+	richiesto di seguire le seguenti linee guida:
+	\begin{itemize}
+		\item evitare package vuoti, classi e parametri non utilizzati e parametri senza tipo;
+		\item evitare la presenza di dipendenze circolari;
+		\item evitare modifiche ai servizi offerti dalle librerie esterne utilizzate;
+		\item utilizzare ove possibile classi astratte;
+		\item utilizzare nomi significativi per le classi e i metodi in esse contenuti, in modo da
+		facilitare la comprensione immediata di ogni componente;
+		\item assegnare ad ogni metodo e attributo minor visibilità possibile.
+	\end{itemize}
+	
 	\subsection{Codifica}
 	
 	\subsubsection{Scopo}
@@ -181,7 +209,46 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 	\subsubsection{Descrizione}
 	L'attività di codifica deve sviluppare il software e i test per le componenti descritti dalla progettazione in dettaglio assicurandosi che sia conforme a quanto definito. 
 	
-	\subsubsection{Norme di Codifica}
+	\subsubsection{Nomenclatura dei file}
+	I file contenenti il codice sorgente devono essere suddivisi in cartelle, in modo tale che la
+	loro struttura rispecchi l’architettura del sistema. I nomi dei file devono essere univoci
+	e in minuscolo.
+	
+	\subsubsection{Intestazione dei file}
+	Ogni file contenente codice deve avere la seguente intestazione:
+	
+	\begin{verbatim}
+		/*
+		* 	File : nome file
+		* 	Version : versione file
+		* 	Type : tipo file
+		* 	Date : data di creazione
+		* 	Author : nome cognome autore/i
+		* 	E- mail : email gruppo
+		* 	License : tipo licenza
+		*/
+	\end{verbatim}
+
+	\subsubsection{Commenti}
+	Ogni metodo del codice del prodotto, al netto delle librerie esterne deve avere un commento la cui struttura segue la seguente sintassi:
+	
+	\begin{verbatim}
+		/**
+		* 	Descrizione del metodo
+		* 	@param { TipoParametro } NomeParametro - Descrizione parametro
+		*/
+	\end{verbatim}
+
+	Nella stesura del commento il \textit{Programmatore} è tenuto a rispettare le seguenti convenzioni:
+	\begin{itemize}
+		\item Documentare con un commento in linea parti di codice non immediatamente comprensibili;
+		\item Usare frasi di senso compiuto in modo da essere più chiari possibili;
+		\item Porre il commento sopra una riga di codice anziché alla fine di essa (in
+		particolare all’inizio della porzione di codice interessata), per una miglior facilità
+		di lettura.
+	\end{itemize}
+	
+	\subsubsection{Stile di codifica}
 	Il gruppo aderisce alle \textit{GNU GCC Coding Conventions}, reperibili al seguente link:
 	
 	\begin{center}
@@ -190,10 +257,10 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 
 	\noindent Segue quindi nelle successive sezioni una descrizione delle principali tra tali convenzioni di codifica.   
 	
-	\subsubsection{Linee di codice}
+	\subsubsection*{Linee di codice}
 		Le linee di codice devono essere lunghe al massimo 80 colonne.
 		
-	\subsubsection{Nomi}
+	\subsubsection*{Nomi}
 	\begin{itemize}
 		\item \textbf{Univocità dei nomi:} classi, metodi e variabili devono avere un nome univoco e quanto più possibile esplicativo della loro funzione al fine di evitare ambiguità;
 		
@@ -210,7 +277,7 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 		\item \textbf{Altri nomi:} devono essere minuscoli e separati dal trattino basso.
 	\end{itemize}	
 	
-	\subsubsection{Espressioni}
+	\subsubsection*{Espressioni}
 	\begin{center}
 	\begin{tabular}{|l|c|c|}
 		\hline
@@ -223,7 +290,7 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 	\end{tabular}
 	\end{center}
 	
-	\subsubsection{Ereditarietà}
+	\subsubsection*{Ereditarietà}
 	Per quanto riguarda l'ereditarietà è necessario attenersi ai seguenti accorgimenti:
 	\begin{itemize}
 		\item È consentita l'ereditarietà singola;
@@ -233,7 +300,7 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 		\item L'ereditarietà multipla deve essere trattata con molta attenzione e nel caso venga usata deve essere scritta una documentazione particolarmente chiara dell'intera gerarchia. In generale, è preferibile non usarla.
 	\end{itemize}
 	
-	\subsubsection{Definizioni}
+	\subsubsection*{Definizioni}
 	\begin{itemize}
 		\item \textbf{Variabili:} le variabili devono essere definite nel momento del loro primo utilizzo. Possono essere definite e testate simultaneamente nelle espressioni di controllo;
 		
@@ -348,32 +415,32 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 	
 	\end{itemize}
 	
-	\subsubsection{Costruttori} 
+	\subsubsection*{Costruttori} 
 	Ogni costruttore deve inizializzare i membri dei dati nell'elenco di inizializzazione dei membri, piuttosto che nel corpo del costruttore.
 		
-	\subsubsection{Distruttori}
+	\subsubsection*{Distruttori}
 	Una classe con funzioni virtuali deve necessariamente avere un distruttore virtuale.
 		
-	\subsubsection{Conversioni} 
+	\subsubsection*{Conversioni} 
 	I costruttori a singolo argomento devono essere sempre dichiarati esplicitamente.	Gli operatori di conversione devono essere il quanto più possibile evitati.
 	
-	\subsubsection{Overloading}
+	\subsubsection*{Overloading}
 	\begin{itemize}
 		\item \textbf{Overloading delle funzioni:} è consentito fare \glossario{overloading}{overloading} di funzioni. Non tuttavia è consigliato farlo per le funzioni virtuali;
 		
 		\item \textbf{Overloading degli operatori:} è consentito fare overloading degli operatori. L'overloading degli operatori, ad eccezione dell'operatore di chiamata, non deve essere utilizzato per implementazioni costose.
 	\end{itemize}
 
-	\subsubsection{Argomenti di default} 
+	\subsubsection*{Argomenti di default} 
 	Gli argomenti di default sono un altro tipo di overloading di funzioni, per cui vi si applicano le medesime regole. Gli argomenti di default devono sempre essere valori POD, cioè non possono eseguire costruttori. Le funzioni virtuali non devono avere argomenti di default.
 		
-	\subsubsection{Funzioni inline}
+	\subsubsection*{Funzioni inline}
 	 Sono preferite funzioni non in linea, a meno che non si abbia prova che la versione in linea della stessa funzione sia significativamente più piccola o meno impattante sulle prestazioni.
 	
-	\subsubsection{Template} 
+	\subsubsection*{Template} 
 	Una dichiarazione che segue un elenco di parametri del template non dovrebbe avere indentazione aggiuntiva, ed è preferito il typename sulla classe nella lista di parametri del template. Per non gravare eccessivamente sulle prestazioni, si raccomanda di fare uso parsimonioso dei template.
 	
-	\subsubsection{Namespace} 
+	\subsubsection*{Namespace} 
 	I namespace sono incoraggiati, tutte le librerie separabili devono avere un unico namespace globale. I nomi delle directory annidate devono essere associati a namespace annidati quando possibile. I file header non devono avere direttive \textit{using}.
 	
 	\noindent Un namespace va aperto con il nome seguito da una parentesi graffa sinistra e una nuova riga e chiuso con una parentesi graffa destra, un commento di chiusura facoltativo e una nuova riga, come evidenziato nel seguente esempio:
@@ -386,7 +453,7 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 	
 	\noindent Le definizioni all'interno del corpo di un namespace non sono indentate.
 	
-	\subsubsection{Extern} è preferito un blocco extern al posto di un qualificatore di dichiarazione.
+	\subsubsection*{Extern} è preferito un blocco extern al posto di un qualificatore di dichiarazione.
 	
 	\noindent Un blocco extern va aperto e chiuso nel modo seguente:
 	
