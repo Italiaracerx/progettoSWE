@@ -134,6 +134,16 @@
 			\subitem \url{https://gcc.gnu.org/install/binaries.html}
 		\item Qt 5.9.0
 			\subitem \url{https://www.qt.io/download}
+		\item Git
+			\subitem \url{https://git-scm.com/} 
+		\item Curl 
+			\subitem \url{https://curl.haxx.se/}
+		\item Swig 
+			\subitem \url{http://www.swig.org/}
+		\item libxml2-dev
+			\subitem \url{https://packages.debian.org/stretch/libxml2-dev} 
+		\item python-dev
+			\subitem \url{https://pypi.python.org/pypi/dev/0.4.0}
 	\end{itemize}
 
 	\chapter{Tecnologie impiegate}
@@ -289,7 +299,8 @@ Vengono di seguito illustrate le implementazioni per le componenti del pattern M
 
 \begin{itemize}
 	\item \textbf{Contestualizzazione}: spiegazione generale dell'architettura del componente all'interno del sistema.
-	\item \textbf{Diagramma delle classi}: diagramma generale delle classi per il componente. Per motivi di spazio e leggibilità, il diagramma qui riportato è una versione semplificata priva dell'indicazione di tutti i metodi. I diagrammi completi sono disponibili sul repository dedicato alla PB nell'apposita directory \verb|AllegatoTecnico/Diagrammi/DiagrammiClassi/|;
+	\item \textbf{Diagramma delle classi}: diagramma generale delle classi per il componente;
+	\item \textbf{Dettaglio delle classi}
 	\item \textbf{Design Pattern}: una descrizione e contestualizzazione esaustiva dei design pattern impiegati all'interno del componente.
 \end{itemize} 
 
@@ -313,6 +324,37 @@ Nella progettazione del Model è emersa la necessità di interagire con la libre
 \end{figure}
 
 \subsection{Dettaglio delle classi}
+
+Nelle sezioni successive vengono illustrate le classi costituenti il componente Model del prodotto. Tali classi sono aggregate in due principali package:
+\begin{itemize}
+	\item \textbf{SpeectWrapper}: incapsula la libreria Speect gestendone la memoria. 
+	\item \textbf{Command}: offre la possibilità di creare i comandi che, aggregando funzioni Speect, rappresentano le funzionalità base di DeSpeect.
+\end{itemize}
+
+\subsubsection{SpeectWrapper}
+
+\begin{itemize}
+	\item \textbf{Speect}: incapsula le componenti base della libreria Speect e ne gestisce la memoria;
+	\item \textbf{Configuration}: incapsula la configurazione della libreria Speect per garantirne il corretto funzionamento;
+	\item \textbf{Utterance}: incapsula i dati relativi all'utterance e ne gestisce la memoria;
+	\item \textbf{Relation}: incapsula i dati relativi alla relation e ne gestisce la memoria;
+	\item \textbf{Item}: un'iteratore per scorrere una relation di Speect, fornendo inoltre un path relativo al nodo di partenza per raggiungere il nodo attualmente selezionato. 
+\end{itemize}
+
+\subsubsection{Command}
+
+\begin{itemize}
+	\item \textbf{AbstractCommand}: definisce l'interfaccia base di un comando;
+	\item \textbf{CommandList}: aggrega i comandi in una lista, di cui permette l'esecuzione completa o step-by-step;
+	\item \textbf{CommandBuilder}: permette la costruzione di una CommandList;
+	\item \textbf{SearchByPathCommand}: implementazione del comando che esegue la ricerca di un nodo dato un path;
+	\item \textbf{EditDataCommand}: implementazione del comando che esegue la modifica dei dati relativi ad un nodo;
+	\item \textbf{SetSpeectConfigCommand}: implementazione del comando che esegue l'impostazione di una data configurazione di Speect;
+	\item \textbf{LoadPluginCommand}: implementazione del comando che esegue il caricamento di un plugin;
+	\item \textbf{CreateAudioCommand}: implementazione del comando che genera il file audio dall'utterance attuale;
+	\item \textbf{UttToFileCommand}: implementazione del comando che esegue il salvataggio dell'utterance in un file secondo il formato desiderato;
+	\item \textbf{UttProcessorCommand}: implementazione del comando che esegue un dato utterance processor.
+\end{itemize}
 
 \newpage
 
@@ -344,6 +386,21 @@ Il package ViewModel funge da tramite tra Model e View, prelevando i dati dal pr
 
 \subsection{Dettaglio delle classi}
 
+Nelle sezione successive verranno illustrate le classi che costituiscono il package ViewModel.
+
+\subsubsection{ViewModel}
+
+\begin{itemize}
+	\item \textbf{ModelView}: gestisce le richieste fatte dal client tramite la View;
+	\item \textbf{GraphManager}: gestisce il modello del grafo;
+	\item \textbf{ProcessorManager}: gestisce la selezione dei processor per l'esecuzione;
+	\item \textbf{DataNodeManager}: gestisce i dati relativi ad uno specifico nodo;
+	\item \textbf{Line}: modella una linea;
+	\item \textbf{Arc}: modella un arco orientato del grafo;
+	\item \textbf{Node}: modella un nodo del grafo;
+	\item \textbf{ID}:  rappresenta una struttura dati che definisce l'identificatore specifico di un nodo.
+\end{itemize}
+
 \subsection{Design pattern}
 
 \subsubsection{Observer}
@@ -354,14 +411,21 @@ Il framework Qt, attraverso il sistema di signal e slot, implementa tale design 
 	\chapter{Estensione delle funzionalità}
 	
 	\section{Modificare l'interfaccia grafica}
+	Per modificare l'attuale interfaccia grafica, è sufficiente apportare le modifiche desiderate al file qml \verb|view.ui| contenuto in \verb|DeSpeect/Qt/src/|. Le modifiche da apportare a tale file vanno eseguite tramite Qt Creator, ulteriori informazioni riguardo i file qml sono reperibili al seguente link:
+	\begin{center}
+		\url{https://doc.qt.io/qt-5.10/qtqml-index.html}
+	\end{center}
+
+	\noindent Qualora le modifiche all'interfaccia grafica corrispondano all'implementazione di nuove funzionalità, è necessario estendere i package Model e ViewModel per garantirne la coerenza.
 	
 	\section{Aggiungere un plug-in}
+	L'architettura di DeSpeect prevede un apposito comando per il caricamento di nuovi plug-in all'interno del package Command. Qualora il plug-in richiedesse l'invocazione di metodi specifici, sarà necessario incapsularli in un nuovo comando che definisce la corretta procedura d'esecuzione del plug-in stesso. Sarà dunque necessario implementare un nuovo comando concreto estendendo la classe AbstractCommand.
 	
 	\chapter{Verifica delle estensioni}
 	
 	\section{Aggiungere un test}
 	
-	Quando DeSpeect viene esteso con una nuova funzionalità è opportuno creare i relativi test di unità per verificare la correttezza. I test per DeSpeect sono implementati mediante la tecnologia Google Test, come citato in §3.2.1 di questo documento. Per completezza viene di seguito riportato il link alla documentazione di tale tecnologia:
+	Quando DeSpeect viene esteso con una nuova funzionalità è opportuno creare i relativi test di unità per verificarne la correttezza. I test per DeSpeect sono implementati mediante la tecnologia Google Test, come citato in §3.2.1 di questo documento. Per completezza viene di seguito riportato il link alla documentazione di tale tecnologia:
 	\begin{center}
 		\url{https://github.com/google/googletest/blob/master/googletest/docs/Primer.md}
 	\end{center}
