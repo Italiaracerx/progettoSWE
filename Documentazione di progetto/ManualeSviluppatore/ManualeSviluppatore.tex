@@ -5,16 +5,30 @@
 \usepackage{multirow}
 \graphicspath{{./img/}{./../img/}}
 \usepackage{../StileDoc}
+\usepackage{glossaries}
 \title{Manuale Sviluppatore}
 \author{}
 
-\loadglsentries{../Glossario/Definizioni}
 %Ultima versione documento
+\newcommand{\versione}{1.0.0}
 
-\newcommand{\versione}{0.0.0}
 
+\makeglossaries
+
+%Term definitions
+\newglossaryentry{Speect}{name=Speect, description={Libreria di Text-To-Speech di riferimento per il progetto DeSpeect}}
+\newglossaryentry{GCC}{name=GCC, description={Compilatore C++ di riferimento per il progetto DeSpeect}}
+\newglossaryentry{Qt Creator}{name={Qt Creator}, description={Ambiente di sviluppo integrato (IDE) multipiattaforma per creare applicazioni C ++ e QML}}
+\newglossaryentry{GitHub}{name=GitHub, description={Servizio di versionamento per progetti software}}
+\newglossaryentry{Qt}{name=Qt, description={Libreria multipiattaforma per lo sviluppo di programmi con interfaccia grafica tramite l'uso di widget}}
+\newglossaryentry{IDE}{name=IDE, description={un ambiente di sviluppo integrato (in lingua inglese integrated development environment ovvero IDE) è un software che, in fase di programmazione, aiuta i programmatori nello sviluppo del codice sorgente di un programma}}
+\newglossaryentry{utterance}{name={Utterance}, description={La più piccola unità del discorso, una parte di esso che inizia e termina con una pausa chiara}}
+\newglossaryentry{Relation}{name={Relation}, description={Rappresentano strutture come parole, sillabe, fonemi o anche obiettivi di durata e gli item sono il contenuto di queste strutture.}}
+\newglossaryentry{plug-in}{name={Plug-in}, description={Un programma non autonomo che interagisce con un altro programma per ampliarne o estenderne le funzionalità originarie}}
+\newglossaryentry{framework}{name={Framework}, description={Piattaforma che funge da strato intermedio tra un sistema operativo e il software che lo utilizza.}}
 
 \begin{document}
+	
 	\makeatletter
 	\begin{titlepage}
 		\setlength{\headsep}{0pt}  
@@ -54,27 +68,18 @@
 		\hline
 		\textbf{Versione} & \textbf{Data} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Descrizione} \\
 		
-		\hline 2.0.0 & 10-03-2018 & Marco Focchiatti & Responsabile & Approvazione \\
-		\hline 1.2.0 & 09-03-2018 & Giulio Rossetti & Verificatore & Verifica \\
-		\hline 1.1.1 & 08-03-2018 & Kevin Silvestri & Verificatore & Stesura appendice §C.3 e §D  \\
-		\hline 1.1.0 & 25-02-2018 & Marco Focchiatti & Verificatore & Verifica \\
-		\hline 1.0.6 & 23-02-2018 & Manfredi Smaniotto & Verificatore & Stesura appendice §B \\
-		\hline 1.0.5 & 22-02-2018 & Manfredi Smaniotto & Verificatore & Spostamento appendice §B in appendice §C \\
-		\hline 1.0.4 & 16-02-2018 & Giulio Rossetti & Verificatore & Rivisto e modificato §3 \\
-		\hline 1.0.3 & 13-02-2018 & Cristiano Tessarolo & Verificatore & Rivisti obiettivi di qualità (§2.2) e aggiunta politica della qualità (§2.4) \\
-		\hline 1.0.2 & 11-02-2018 & Kevin Silvestri & Verificatore & Spostate definizioni metriche (§3) in NP\\
-		\hline 1.0.1 & 09-02-2018 & Marco Focchiatti & Verificatore & Rivista struttura generale e ampliata §2 \\
-		\hline 1.0.0 & 12-01-2018 & Samuele Modena & Responsabile & Approvazione \\
-		\hline 0.2.0 & 11-01-2018 & Giulio Rossetti & Verificatore & Verifica \\
-		\hline 0.1.2 & 10-01-2018 & Samuele Modena & Verificatore & Stesura appendice §B \\
-		\hline 0.1.1 & 20-12-2017 & Matteo Rizzo & Verificatore & Aggiornata §3 \\
-		\hline 0.1.0 & 19-12-2017 & Manfredi Smaniotto & Verificatore & Verifica \\		
-		\hline 0.0.6 & 18-12-2017 & Kevin Silvestri & Verificatore & Stesura appendice §A \\
-		\hline 0.0.5 & 17-12-2017 & Kevin Silvestri & Verificatore & Stesura §4 \\	
-		\hline 0.0.4 & 15-12-2017 & Matteo Rizzo & Verificatore & Stesura §3 \\
-		\hline 0.0.3 & 14-12-2017 & Samuele Modena & Verificatore & Stesura §2 \\
-		\hline 0.0.2 & 13-12-2017 & Matteo Rizzo & Verificatore & Stesura §1 \\
-		\hline 0.0.1 & 13-12-2017 & Matteo Rizzo & Verificatore & Creazione del template \\
+		\hline 1.0.0 & 2018-04-15 &  & Responsabile & Approvazione \\
+		\hline 0.2.0 & 2018-04-15 & - & Verificatore & Verifica da §5 a §8 e appendici \\
+		\hline 0.1.4 & 2018-04-14 & - & Amministratore & Stesura appendici \\
+		\hline 0.1.3 & 2018-04-13 & - & Amministratore & Stesura §8 \\
+		\hline 0.1.2 & 2018-04-12 & - & Progettista & Stesura §7 §3 \\		
+		\hline 0.1.1 & 2018-04-12 & - & Progettista & Stesura §5 - §6 \\
+		\hline 0.1.0 & 2018-04-11 & - & Verificatore & Verifica da §1 a §4 \\
+		\hline 0.0.5 & 2018-04-08 & - & Amministratore & Stesura §4 \\	
+		\hline 0.0.4 & 2018-04-08 & - & Amministratore & Stesura §3 \\
+		\hline 0.0.3 & 2018-04-07 & - & Amministratore & Stesura §2 \\
+		\hline 0.0.2 & 2018-04-06 & - & Amministratore & Stesura §1 \\
+		\hline 0.0.1 & 2018-04-05 & - & Amministratore & Creata struttura documento \\
 		\hline
 		
 	\end{longtable}
@@ -90,13 +95,13 @@
 	\section{Scopo del documento}
 	
 	Il documento ha la finalità di illustrare a coloro che volessero interfacciarsi con l’applicazione
-	\textit{"DeSpeect: un'interfaccia grafica per Speect"} le modalità di installazione e di utilizzo, i requisiti necessari per poterlo utilizzare, le librerie e i framework esterni utilizzati per lo sviluppo dell’applicazione,
+	\textit{"DeSpeect: un'interfaccia grafica per Speect"} le modalità di installazione e di utilizzo, i requisiti necessari per poterlo utilizzare, le librerie e i \Gls{framework} esterni utilizzati per lo sviluppo dell’applicazione,
 	oltre alla sua architettura, così da aiutare
 	nella ricerca o eventuale estensione delle sue funzionalità. Nonostante la versione attuale rappresenti una prima bozza del documento, una volta concluso esso rappresenterà un riferimento completo per l’utilizzo del prodotto da parte di uno sviluppatore.
 	
 	\section{Scopo del prodotto}
 	
-	Lo scopo del progetto è la realizzazione di un’interfaccia grafica per \glossario{Speect}{Speect} [Meraka Institute(2008-2013)], una libreria per la creazione di sistemi di sintesi vocale, che agevoli l’ispezione del suo stato interno durante il funzionamento e la scrittura di test per le sue funzionalità.
+	Lo scopo del progetto è la realizzazione di un’interfaccia grafica per \Gls{Speect} [Meraka Institute(2008-2013)], una libreria per la creazione di sistemi di sintesi vocale, che agevoli l’ispezione del suo stato interno durante il funzionamento e la scrittura di test per le sue funzionalità.
 	
 	\section{Informazioni utili}
 	
@@ -130,9 +135,9 @@
 			\subitem \url{https://www.ubuntu.com/download/desktop}
 		\item CMake (versione minima 2.8)
 			\subitem \url{https://cmake.org/download/}
-		\item Compilatore ANSI C/ISO C90 GCC (versione minima 5.0)
+		\item Compilatore ANSI C/ISO C90 \gls{GCC} (versione minima 5.0)
 			\subitem \url{https://gcc.gnu.org/install/binaries.html}
-		\item Qt 5.9.0
+		\item \Gls{Qt} 5.9.0
 			\subitem \url{https://www.qt.io/download}
 		\item Git
 			\subitem \url{https://git-scm.com/} 
@@ -164,7 +169,7 @@
 	\begin{center}
 	\centerline{\url{https://www.qt.io/what-is-qt/}}
 	\end{center}
-	Tale IDE è consigliato qualora si volesse lavorare su DeSpeect, e un approfondimento sulla sua installazione e sull'importazione del progetto è reperibile in §4.2 di questo documento. 
+	Tale \gls{IDE} è consigliato qualora si volesse lavorare su DeSpeect, e un approfondimento sulla sua installazione e sull'importazione del progetto è reperibile in §4.2 di questo documento. 
 	
 	\subsection{Compilazione}
 	
@@ -185,7 +190,7 @@
 	
 	\subsection{GUI}
 	
-	Per progettare l'interfaccia grafica viene utilizzato \glossario{Qt Creator}{Qt Creator}. Questo strumento permette di realizzare interfacce grafiche mediante le librerie grafiche Qt, diventate in questo ambito quasi uno standard per piattaforme Linux Based.  Maggiori informazioni su Qt Creator sono disponibili al seguente link:: 
+	Per progettare l'interfaccia grafica viene utilizzato \Gls{Qt Creator}. Questo strumento permette di realizzare interfacce grafiche mediante le librerie grafiche Qt, diventate in questo ambito quasi uno standard per piattaforme Linux Based.  Maggiori informazioni su Qt Creator sono disponibili al seguente link:: 
 	\begin{center}
 	\centerline{\url{https://www.qt.io/qt-features-libraries-apis-tools-and-ide/}}
 	\end{center}
@@ -200,7 +205,7 @@
 	\end{center}
 
 	\subsection{Verifica della build e testing automatico}
-	Travis CI è un servizio di integrazione continua distribuito utilizzato per costruire e testare progetti software ospitati su GitHub. I progetti open source possono essere testati gratuitamente attraverso il sito web \url{travis-ci.org}. Questa tecnologia viene utilizzata per l'esecuzione di test automatici su DeSpeect a seguito del caricamento di codice sul repository relativo al progetto, così da garantirne la correttezza. Documentazione relativa a Travis CI è accessibile al seguente link:
+	Travis CI è un servizio di integrazione continua distribuito utilizzato per costruire e testare progetti software ospitati su \Gls{GitHub}. I progetti open source possono essere testati gratuitamente attraverso il sito web \url{travis-ci.org}. Questa tecnologia viene utilizzata per l'esecuzione di test automatici su DeSpeect a seguito del caricamento di codice sul repository relativo al progetto, così da garantirne la correttezza. Documentazione relativa a Travis CI è accessibile al seguente link:
 	\begin{center}
 		\url{https://docs.travis-ci.com/}
 	\end{center}
@@ -208,7 +213,7 @@
 	\subsection{Misurazioni metriche}
 	Per il controllo delle varie metriche legate al codice vengono utilizzati i software integrati con il repository GitHub:
 	\begin{itemize}
-		\item \textbf{Better Code Hub}: \glossario{Better Code Hub}{Better Code Hub} è un servizio di analisi del codice sorgente web-based che controlla il codice per la conformità rispetto a 10 linee guida per l'ingegneria del software e fornisce un \glossario{feedback}{feedback} immediato per capire dove concentrarsi per miglioramenti di qualità. Better Code Hub è accessibile al seguente link:
+		\item \textbf{Better Code Hub}: Better Code Hub è un servizio di analisi del codice sorgente web-based che controlla il codice per la conformità rispetto a 10 linee guida per l'ingegneria del software e fornisce un feedback immediato per capire dove concentrarsi per miglioramenti di qualità. Better Code Hub è accessibile al seguente link:
 		\begin{center}
 			\url{https://bettercodehub.com/}
 		\end{center}
@@ -238,8 +243,7 @@
 	Tale procedura installerà la libreria Speect e genererà una build del software nella directory \verb|DeSpeect/build|, nonché avvierà automaticamente un'esecuzione di DeSpeect.
 	
 	\section{IDE}
-	
-	Il progetto DeSpeect non è necessariamente legato ad alcun \glossario{IDE}{IDE}, tuttavia si consiglia l'uso di \glossario{Qt}{Qt} e \textit{Qt Creator}. Le librerie Qt sono infatti utilizzate all'interno del prodotto per la realizzazione dell'interfaccia grafica, e l'adozione dei succitati IDE ne agevola notevolmente l'impiego nell'ottica di modifiche e/o estensioni alla stessa. Viene di seguito illustrata la procedura per l'installazione dell'IDE e l'importazione del progetto.
+	Il progetto DeSpeect non è necessariamente legato ad alcun \gls{IDE}, tuttavia si consiglia l'uso di \glossario{Qt}{Qt} e \textit{Qt Creator}. Le librerie Qt sono infatti utilizzate all'interno del prodotto per la realizzazione dell'interfaccia grafica, e l'adozione dei succitati IDE ne agevola notevolmente l'impiego nell'ottica di modifiche e/o estensioni alla stessa. Viene di seguito illustrata la procedura per l'installazione dell'IDE e l'importazione del progetto.
 	
 	\subsection{Installare Qt}
 	
@@ -265,7 +269,7 @@
 	\end{enumerate}
 	
 
-\chapter{Architettura generale del prodotto}
+\chapter{Architettura generale di DeSpeect}
 
 L'architettura generale del prodotto segue il pattern Model-View-ViewModel. Questo pattern è basato su tre componenti principali:
 
@@ -275,8 +279,7 @@ L'architettura generale del prodotto segue il pattern Model-View-ViewModel. Ques
 	\item \textbf{ViewModel}: un'astrazione della view che espone proprietà pubbliche e comandi.
 \end{itemize}
 
-\noindent Esso permette tra le altre cose un totale disaccoppiamento tra logica di business e presentazione, informazioni più dettagliate a riguardo sono reperibili nell'appendice §A "Model-View-ViewModel" di questo documento. I seguenti diagrammi illustrano sinteticamente la struttura del software attraverso i package che lo costituiscono, con livello di dettaglio crescente. Tali diagrammi sono consultabili anche all'interno del repository nella directory \verb|AllegatoTecnico/Diagrammi/DiagrammiPackage/|. 
-
+\noindent Esso permette tra le altre cose un totale disaccoppiamento tra logica di business e presentazione, informazioni più dettagliate a riguardo sono reperibili nell'appendice §A "Model-View-ViewModel" di questo documento. I seguenti diagrammi illustrano sinteticamente la struttura del software attraverso i package che lo costituiscono, con livello di dettaglio crescente.
 \newpage
 
 \begin{figure}[H]
@@ -336,8 +339,8 @@ Nelle sezioni successive vengono illustrate le classi costituenti il componente 
 \begin{itemize}
 	\item \textbf{Speect}: incapsula le componenti base della libreria Speect e ne gestisce la memoria;
 	\item \textbf{Configuration}: incapsula la configurazione della libreria Speect per garantirne il corretto funzionamento;
-	\item \textbf{Utterance}: incapsula i dati relativi all'utterance e ne gestisce la memoria;
-	\item \textbf{Relation}: incapsula i dati relativi alla relation e ne gestisce la memoria;
+	\item \textbf{Utterance}: incapsula i dati relativi all'\Gls{utterance} e ne gestisce la memoria;
+	\item \Gls{Relation}: incapsula i dati relativi alla relation e ne gestisce la memoria;
 	\item \textbf{Item}: un'iteratore per scorrere una relation di Speect, fornendo inoltre un path relativo al nodo di partenza per raggiungere il nodo attualmente selezionato. 
 \end{itemize}
 
@@ -361,7 +364,7 @@ Nelle sezioni successive vengono illustrate le classi costituenti il componente 
 \subsection{Design pattern}
 
 \subsubsection{Command}
-Permette la suddivisione delle funzionalità implementate in un'ottica di componibilità ed estendibilità. I comandi concreti sono aggregati in una lista (\verb|CommandList|) che si interfaccia con la componente ViewModel. Tali comandi interagiscono a loro volta con il package SpeectWrapper per ottere i dati da elaborare dalla libreria Speect. Ai comandi è delegata l'esecuzione degli utterance processor per la successiva stampa dei dati nel grafo, ma anche l'implementazione di funzionalità quali il caricamento dei plug-in e della configurazione di Speect.
+Permette la suddivisione delle funzionalità implementate in un'ottica di componibilità ed estendibilità. I comandi concreti sono aggregati in una lista (\verb|CommandList|) che si interfaccia con la componente ViewModel. Tali comandi interagiscono a loro volta con il package SpeectWrapper per ottere i dati da elaborare dalla libreria Speect. Ai comandi è delegata l'esecuzione degli utterance processor per la successiva stampa dei dati nel grafo, ma anche l'implementazione di funzionalità quali il caricamento dei \Gls{plug-in} e della configurazione di Speect.
 
 \subsubsection{Builder}
 Questo design pattern separa la costruzione di un oggetto complesso dalla sua rappresentazione, cosicché il processo di costruzione stesso possa creare diverse rappresentazioni. Contestualizzato nel sistema della PB, esso si interfaccia con il ViewModel per la configurazione e costruzione di una specifica \verb|CommandList|.
@@ -419,7 +422,10 @@ Il framework Qt, attraverso il sistema di signal e slot, implementa tale design 
 	\noindent Qualora le modifiche all'interfaccia grafica corrispondano all'implementazione di nuove funzionalità, è necessario estendere i package Model e ViewModel per garantirne la coerenza.
 	
 	\section{Aggiungere un plug-in}
-	L'architettura di DeSpeect prevede un apposito comando per il caricamento di nuovi plug-in all'interno del package Command. Qualora il plug-in richiedesse l'invocazione di metodi specifici, sarà necessario incapsularli in un nuovo comando che definisce la corretta procedura d'esecuzione del plug-in stesso. Sarà dunque necessario implementare un nuovo comando concreto estendendo la classe AbstractCommand.
+	L'architettura di DeSpeect prevede un apposito comando per il caricamento di nuovi plug-in all'interno del package Command. Qualora il plug-in richiedesse l'invocazione di metodi specifici, sarà necessario incapsularli in un nuovo comando che definisce la corretta procedura d'esecuzione del plug-in stesso. Sarà dunque necessario implementare un nuovo comando concreto estendendo la classe AbstractCommand. Maggiori informazioni su struttura e funzionamento dei plug-in di Speect sono reperibili all'interno della documentazione ufficiale, nello specifico al seguente link:
+	\begin{center}
+		\url{http://speect.sourceforge.net/topics/plugins_topic.html}
+	\end{center}
 	
 	\chapter{Verifica delle estensioni}
 	
@@ -480,12 +486,15 @@ Il framework Qt, attraverso il sistema di signal e slot, implementa tale design 
 	\chapter{Contribuire a DeSpeect}
 	
 	DeSpeect è software open source e permette quindi di
-	essere modificato. Se si vuole contribuire al progetto originale è possibile farlo mediante la creazione di fork sul repository GitHub. Risulta inoltre possibile aprire dei ticket per segnalare errori, malfunzionamenti o la richiesta di nuove funzionalità.
+	essere modificato. Se si vuole contribuire al progetto originale è possibile farlo mediante la creazione di fork sul repository GitHub. Risulta inoltre possibile aprire dei ticket per segnalare errori, malfunzionamenti o la richiesta di nuove funzionalità. Il link al repository è il seguente:
+	\begin{center}
+		\url{https://github.com/graphiteSWE/DeSpeect}
+	\end{center}
 	
 	\begin{figure}[H]
 		\includegraphics[scale=0.5]{github-home}
 		\centering
-		\caption{Diagramma delle classi del componente ViewModel}
+		\caption{Schermata principale del repository GitHub}
 	\end{figure}
 
 	\section{Aprire un ticket}
@@ -493,9 +502,15 @@ Il framework Qt, attraverso il sistema di signal e slot, implementa tale design 
 	Per aprire un \textit{ticket} è sufficiente recarsi nella sezione \textit{Issues} del repository GitHub del progetto e cliccare il pulsante \textit{New Issue}. A questo punto verrà chiesto di inserire un titolo e una descrizione per il ticket.
 	
 	\begin{figure}[H]
-		\includegraphics[scale=0.5]{ViewModelDiagram}
+		\includegraphics[scale=0.5]{github-new-issue}
 		\centering
-		\caption{Diagramma delle classi del componente ViewModel}
+		\caption{Tab del repository relativa agli issue}
+	\end{figure}
+
+	\begin{figure}[H]
+		\includegraphics[scale=0.5]{github-new-issue-writing}
+		\centering
+		\caption{Schermata di scrittura del nuovo issue}
 	\end{figure}
 	
 	Si segnala che è obbligatorio aggiungere allo stesso delle \textit{labels}, atte a rendere facilmente reperibili e categorizzabili i ticket aperti. Un ticket privo di labels
@@ -516,7 +531,21 @@ Il framework Qt, attraverso il sistema di signal e slot, implementa tale design 
 	
 	\section{Creare una Pull Request}
 	
-	Per configurare il progetto DeSpeect è possibile creare una fork del repository originale, il che consente di lavorare in completa autonomia su una certa funzionalità che si vuole aggiungere all'applicazione. In seguito, se si vuole inserire tale funzionalità nel progetto originale, è necessario creare una \textit{Pull Request} all'interno di GitHub. Una volta creata la Pull Request cliccando sulla relativa tab all'interno del repository e successivamente sul pulsante \textit{Create pull request}, è sufficiente attendere l'approvazione di uno degli amministratori del repository originale per poter eseguire il merge delle modifiche. Di seguito sono riportati i passi da eseguire per creare una Pull
+	Per configurare il progetto DeSpeect è possibile creare una fork del repository originale, il che consente di lavorare in completa autonomia su una certa funzionalità che si vuole aggiungere all'applicazione. In seguito, se si vuole inserire tale funzionalità nel progetto originale, è necessario creare una \textit{Pull Request} all'interno di GitHub. Una volta creata la Pull Request cliccando sulla relativa tab all'interno del repository e successivamente sul pulsante \textit{Create pull request}, è sufficiente attendere l'approvazione di uno degli amministratori del repository originale per poter eseguire il merge delle modifiche.
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.5]{github-new-pull-request}
+		\centering
+		\caption{Tab del repository relativo alle pull request}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.5]{github-new-pull-request-branch}
+		\centering
+		\caption{Schermata di creazione della pull request e selezione branch}
+	\end{figure}
+
+	Di seguito sono riportati i passi da eseguire per creare una Pull
 	Request utilizzando la fork di DeSpeect:
 	\begin{enumerate}
 		\item Creare la fork di DeSpeect;
@@ -531,11 +560,22 @@ Il framework Qt, attraverso il sistema di signal e slot, implementa tale design 
 	
 	\chapter{Licenza}
 	
-	Il codice di DeSpeect, fatta eccezione per le librerie esterne quali Speect e Qt, è rilasciato sotto licenza \textit{MIT}. Tale licenza è visualizzabile nella sua interezza al seguente link:
+	Il codice di DeSpeect, fatta eccezione per le librerie esterne impiegate (quali Speect e Qt), è rilasciato sotto licenza \textit{MIT}. L'immagine seguente riassume brevemente i punti salienti di tale licenza:
+	
+	\begin{figure}[H]
+		\hspace*{-5mm}
+		\includegraphics[scale=1]{licenza}
+		\centering
+		\caption{Punti salienti della licenza MIT}
+	\end{figure}
+	
+	La licenza è visualizzabile nella sua interezza al seguente link:
 	\begin{center}
 		\url{https://choosealicense.com/licenses/mit/}
 	\end{center} 
 		
 	\chapter{Glossario}
+	
+	\printglossaries
 	
 \end{document}
