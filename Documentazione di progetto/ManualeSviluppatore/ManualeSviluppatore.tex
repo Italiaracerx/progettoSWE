@@ -12,6 +12,20 @@
 %Ultima versione documento
 \newcommand{\versione}{1.0.0}
 
+% Tolgo la numerazione per l'indice
+\setcounter{secnumdepth}{0}
+% Stile per il glossario
+\newglossarystyle{glossaryStyle}{
+	\setglossarystyle{altlistgroup}
+	\renewcommand*{\glsgroupheading}[1]{
+		\section{##1}
+		\vspace*{-\baselineskip}
+		% Solo per fare un po' di spazio tra la lettera e le voci
+		\item\makebox[\linewidth]{\hspace*{2cm}}
+	}
+}
+
+\glsaddall
 
 \makeglossaries
 
@@ -23,9 +37,10 @@
 \newglossaryentry{Qt}{name=Qt, description={Libreria multipiattaforma per lo sviluppo di programmi con interfaccia grafica tramite l'uso di widget}}
 \newglossaryentry{IDE}{name=IDE, description={un ambiente di sviluppo integrato (in lingua inglese integrated development environment ovvero IDE) è un software che, in fase di programmazione, aiuta i programmatori nello sviluppo del codice sorgente di un programma}}
 \newglossaryentry{utterance}{name={Utterance}, description={La più piccola unità del discorso, una parte di esso che inizia e termina con una pausa chiara}}
-\newglossaryentry{Relation}{name={Relation}, description={Rappresentano strutture come parole, sillabe, fonemi o anche obiettivi di durata e gli item sono il contenuto di queste strutture.}}
+\newglossaryentry{relation}{name={Relation}, description={Rappresenta una struttura come una parola, sillaba, fonema o anche un obiettivo di durata e gli item sono il contenuto di questa struttura.}}
 \newglossaryentry{plug-in}{name={Plug-in}, description={Un programma non autonomo che interagisce con un altro programma per ampliarne o estenderne le funzionalità originarie}}
 \newglossaryentry{framework}{name={Framework}, description={Piattaforma che funge da strato intermedio tra un sistema operativo e il software che lo utilizza.}}
+
 
 \begin{document}
 	
@@ -43,11 +58,11 @@
 				\textbf{Data approvazione} & 10 Marzo 2018 \\
 				\textbf{Responsabile} & Marco Focchiatti\\
 				\textbf{Redattori} &  Manfredi Smaniotto, Marco Focchiatti,\\
-				& Cristiano Tessarolo, Giulio Rossetti, \\
-				& Kevin Silvestri \\
+				& Cristiano Tessarolo, Giulio Rossetti \\
 				\textbf{Verificatori} & Manfredi Smaniotto, Marco Focchiatti \\
 				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
 				& Prof. Riccardo Cardin \\
+				& Mivoq S.R.L. \\
 				& Gruppo Graphite \\
 				\textbf{Uso} & Esterno \\
 				\textbf{Recapito} & graphite.swe@gmail.com \\
@@ -95,18 +110,18 @@
 	\section{Scopo del documento}
 	
 	Il documento ha la finalità di illustrare a coloro che volessero interfacciarsi con l’applicazione
-	\textit{"DeSpeect: un'interfaccia grafica per Speect"} le modalità di installazione e di utilizzo, i requisiti necessari per poterlo utilizzare, le librerie e i \Gls{framework} esterni utilizzati per lo sviluppo dell’applicazione,
+	\textit{"DeSpeect: un'interfaccia grafica per Speect"} le modalità di installazione e di utilizzo, i requisiti necessari per poterlo utilizzare, le librerie e i \glossario{framework}{framework} esterni utilizzati per lo sviluppo dell’applicazione,
 	oltre alla sua architettura, così da aiutare
 	nella ricerca o eventuale estensione delle sue funzionalità. Nonostante la versione attuale rappresenti una prima bozza del documento, una volta concluso esso rappresenterà un riferimento completo per l’utilizzo del prodotto da parte di uno sviluppatore.
 	
 	\section{Scopo del prodotto}
 	
-	Lo scopo del progetto è la realizzazione di un’interfaccia grafica per \Gls{Speect} [Meraka Institute(2008-2013)], una libreria per la creazione di sistemi di sintesi vocale, che agevoli l’ispezione del suo stato interno durante il funzionamento e la scrittura di test per le sue funzionalità.
+	Lo scopo del progetto è la realizzazione di un’interfaccia grafica per \glossario{Speect}{Speect} [Meraka Institute(2008-2013)], una libreria per la creazione di sistemi di sintesi vocale, che agevoli l’ispezione del suo stato interno durante il funzionamento e la scrittura di test per le sue funzionalità.
 	
 	\section{Informazioni utili}
 	
 	La stesura di questo documento assume come utente target del prodotto un programmatore esperto nell'utilizzo di \textit{Speect} e dei linguaggi di programmazione C e C++.
-	Per completezza, viene riportato in appendice §A un glossario comprensivo di termini tecnici o riguardanti particolari funzionalità di \textit{DeSpeect}. Per identificare i termini
+	Per completezza, viene riportato in appendice D un glossario comprensivo di termini tecnici o riguardanti particolari funzionalità di \textit{DeSpeect}. Per identificare i termini
 	presenti nel glossario, la loro prima occorrenza all’interno del documento è riportata in corsivo e
 	marcata con una G al pedice.
 	
@@ -135,9 +150,9 @@
 			\subitem \url{https://www.ubuntu.com/download/desktop}
 		\item CMake (versione minima 2.8)
 			\subitem \url{https://cmake.org/download/}
-		\item Compilatore ANSI C/ISO C90 \gls{GCC} (versione minima 5.0)
+		\item Compilatore ANSI C/ISO C90 \glossario{GCC}{GCC} (versione minima 5.0)
 			\subitem \url{https://gcc.gnu.org/install/binaries.html}
-		\item \Gls{Qt} 5.9.0
+		\item \glossario{Qt}{Qt} 5.9.0
 			\subitem \url{https://www.qt.io/download}
 		\item Git
 			\subitem \url{https://git-scm.com/} 
@@ -169,14 +184,14 @@
 	\begin{center}
 	\centerline{\url{https://www.qt.io/what-is-qt/}}
 	\end{center}
-	Tale \gls{IDE} è consigliato qualora si volesse lavorare su DeSpeect, e un approfondimento sulla sua installazione e sull'importazione del progetto è reperibile in §4.2 di questo documento. 
+	Tale \glossario{IDE}{IDE} è consigliato qualora si volesse lavorare su DeSpeect, e un approfondimento sulla sua installazione e sull'importazione del progetto è reperibile in §4.2 di questo documento. 
 	
 	\subsection{Compilazione}
 	
 	Per la compilazione di DeSpeect vengono utilizzati i seguenti strumenti:
 	
 	\begin{itemize}
-	\item \textbf{GCC}: il compilatore che viene usato per la compilazione del software è il \glossario{GCC}{GCC} (GNU Compiler Collection). Maggiori informazioni sul compilatore sono reperibili al seguente link:
+	\item \textbf{GCC}: il compilatore che viene usato per la compilazione del software è il GCC (GNU Compiler Collection). Maggiori informazioni sul compilatore sono reperibili al seguente link:
 	\begin{center}
 		\centerline{\url{https://gcc.gnu.org/}}
 	\end{center}
@@ -190,7 +205,7 @@
 	
 	\subsection{GUI}
 	
-	Per progettare l'interfaccia grafica viene utilizzato \Gls{Qt Creator}. Questo strumento permette di realizzare interfacce grafiche mediante le librerie grafiche Qt, diventate in questo ambito quasi uno standard per piattaforme Linux Based.  Maggiori informazioni su Qt Creator sono disponibili al seguente link:: 
+	Per progettare l'interfaccia grafica viene utilizzato \glossario{Qt Creator}{Qt Creator}. Questo strumento permette di realizzare interfacce grafiche mediante le librerie grafiche Qt, diventate in questo ambito quasi uno standard per piattaforme Linux Based.  Maggiori informazioni su Qt Creator sono disponibili al seguente link:: 
 	\begin{center}
 	\centerline{\url{https://www.qt.io/qt-features-libraries-apis-tools-and-ide/}}
 	\end{center}
@@ -205,7 +220,7 @@
 	\end{center}
 
 	\subsection{Verifica della build e testing automatico}
-	Travis CI è un servizio di integrazione continua distribuito utilizzato per costruire e testare progetti software ospitati su \Gls{GitHub}. I progetti open source possono essere testati gratuitamente attraverso il sito web \url{travis-ci.org}. Questa tecnologia viene utilizzata per l'esecuzione di test automatici su DeSpeect a seguito del caricamento di codice sul repository relativo al progetto, così da garantirne la correttezza. Documentazione relativa a Travis CI è accessibile al seguente link:
+	Travis CI è un servizio di integrazione continua distribuito utilizzato per costruire e testare progetti software ospitati su \glossario{GitHub}{GitHub}. I progetti open source possono essere testati gratuitamente attraverso il sito web \url{travis-ci.org}. Questa tecnologia viene utilizzata per l'esecuzione di test automatici su DeSpeect a seguito del caricamento di codice sul repository relativo al progetto, così da garantirne la correttezza. Documentazione relativa a Travis CI è accessibile al seguente link:
 	\begin{center}
 		\url{https://docs.travis-ci.com/}
 	\end{center}
@@ -230,7 +245,7 @@
 	
 	\section{Installazione e configurazione}
 	
-	DeSpeect è reperibile su \glossario{GitHub}{GitHub} al seguente link:
+	DeSpeect è reperibile su GitHub al seguente link:
 	\begin{center}
 		\url{https://github.com/graphiteSWE/DeSpeect}
 	\end{center}
@@ -243,7 +258,7 @@
 	Tale procedura installerà la libreria Speect e genererà una build del software nella directory \verb|DeSpeect/build|, nonché avvierà automaticamente un'esecuzione di DeSpeect.
 	
 	\section{IDE}
-	Il progetto DeSpeect non è necessariamente legato ad alcun \gls{IDE}, tuttavia si consiglia l'uso di \glossario{Qt}{Qt} e \textit{Qt Creator}. Le librerie Qt sono infatti utilizzate all'interno del prodotto per la realizzazione dell'interfaccia grafica, e l'adozione dei succitati IDE ne agevola notevolmente l'impiego nell'ottica di modifiche e/o estensioni alla stessa. Viene di seguito illustrata la procedura per l'installazione dell'IDE e l'importazione del progetto.
+	Il progetto DeSpeect non è necessariamente legato ad alcun IDE, tuttavia si consiglia l'uso di Qt e \textit{Qt Creator}. Le librerie Qt sono infatti utilizzate all'interno del prodotto per la realizzazione dell'interfaccia grafica, e l'adozione dei succitati IDE ne agevola notevolmente l'impiego nell'ottica di modifiche e/o estensioni alla stessa. Viene di seguito illustrata la procedura per l'installazione dell'IDE e l'importazione del progetto.
 	
 	\subsection{Installare Qt}
 	
@@ -339,8 +354,8 @@ Nelle sezioni successive vengono illustrate le classi costituenti il componente 
 \begin{itemize}
 	\item \textbf{Speect}: incapsula le componenti base della libreria Speect e ne gestisce la memoria;
 	\item \textbf{Configuration}: incapsula la configurazione della libreria Speect per garantirne il corretto funzionamento;
-	\item \textbf{Utterance}: incapsula i dati relativi all'\Gls{utterance} e ne gestisce la memoria;
-	\item \Gls{Relation}: incapsula i dati relativi alla relation e ne gestisce la memoria;
+	\item \textbf{Utterance}: incapsula i dati relativi all'\glossario{utterance}{utterance} e ne gestisce la memoria;
+	\item \textbf{Relation}: incapsula i dati relativi alla \glossario{relation}{relation} e ne gestisce la memoria;
 	\item \textbf{Item}: un'iteratore per scorrere una relation di Speect, fornendo inoltre un path relativo al nodo di partenza per raggiungere il nodo attualmente selezionato. 
 \end{itemize}
 
@@ -364,7 +379,7 @@ Nelle sezioni successive vengono illustrate le classi costituenti il componente 
 \subsection{Design pattern}
 
 \subsubsection{Command}
-Permette la suddivisione delle funzionalità implementate in un'ottica di componibilità ed estendibilità. I comandi concreti sono aggregati in una lista (\verb|CommandList|) che si interfaccia con la componente ViewModel. Tali comandi interagiscono a loro volta con il package SpeectWrapper per ottere i dati da elaborare dalla libreria Speect. Ai comandi è delegata l'esecuzione degli utterance processor per la successiva stampa dei dati nel grafo, ma anche l'implementazione di funzionalità quali il caricamento dei \Gls{plug-in} e della configurazione di Speect.
+Permette la suddivisione delle funzionalità implementate in un'ottica di componibilità ed estendibilità. I comandi concreti sono aggregati in una lista (\verb|CommandList|) che si interfaccia con la componente ViewModel. Tali comandi interagiscono a loro volta con il package SpeectWrapper per ottere i dati da elaborare dalla libreria Speect. Ai comandi è delegata l'esecuzione degli utterance processor per la successiva stampa dei dati nel grafo, ma anche l'implementazione di funzionalità quali il caricamento dei \glossario{plug-in}{plug-in} e della configurazione di Speect.
 
 \subsubsection{Builder}
 Questo design pattern separa la costruzione di un oggetto complesso dalla sua rappresentazione, cosicché il processo di costruzione stesso possa creare diverse rappresentazioni. Contestualizzato nel sistema della PB, esso si interfaccia con il ViewModel per la configurazione e costruzione di una specifica \verb|CommandList|.
@@ -573,7 +588,7 @@ Il framework Qt, attraverso il sistema di signal e slot, implementa tale design 
 	\begin{center}
 		\url{https://choosealicense.com/licenses/mit/}
 	\end{center} 
-	
-	\printglossaries
+
+	\printglossary[style=glossaryStyle, nonumberlist]
 	
 \end{document}
