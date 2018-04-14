@@ -1731,7 +1731,7 @@ Vengono infine controllati prodotti software e documentali e relativi processi p
 
 \subsection{Processi}
 
-Essendo l'Analisi il primo periodo di progetto, prima di essa non esistevano processi all'interno del gruppo e dunque essi si collocavano ad un livello iniziale 0 secondo lo standard SPICE. Attuando tuttavia una valutazione retrospettiva, si nota come l'introduzione delle \textit{Norme di Progetto v1.0.0} abbiano portato al miglioramento di seguito illustrato:
+Essendo l'Analisi il primo periodo di progetto, prima di essa non esistevano processi all'interno del gruppo e dunque essi si collocavano ad un livello iniziale 0 secondo lo standard SPICE. Attuando tuttavia una valutazione retrospettiva, si nota come l'introduzione delle \textit{Norme di Progetto v1.0.0} abbia portato al miglioramento di seguito illustrato:
 
 \begin{table}[h]
 	\begin{center}
@@ -1890,6 +1890,92 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 	Dalla tabella e dal grafico si evince che tutti i documenti presentano un indice nei limiti preferibili.	
 \end{itemize}
 
+%PROGETTAZIONE E CODIFICA
+
+\section{Progettazione e codifica}
+
+\subsection{Processi}
+
+A seguito di numerosi miglioramenti apportati durante la revisione delle NP, giunta alla redazione del documento \textit{Norme di Progetto v3.0.0}, sono stati apportati ulteriori miglioramenti nello svolgimento dei processi visibili nella tabella sottostante
+
+\newpage
+
+\begin{table}[h]
+	\begin{center}
+		\setlength\LTleft{-22mm}
+		\begin{longtable}{|p{35mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
+			\hline
+			\textbf{Nome Processo} & \textbf{Attr. L1} & \textbf{Attr. L2} & \textbf{Attr. L3} & \textbf{Attr. L4} & \textbf{Attr. L5} & \textbf{SPICE}\\
+			\hline
+			\multirow{2}{*}{\textit{Fornitura}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: P & PCH: N & Inizio: 0\\  
+			\cline{3-7}
+			&          & WPM: F & PDIS: F & PC: N & PI: N & Fine: 3 \\ 
+			\hline
+			\multirow{2}{*}{\textit{Sviluppo}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: N & PCH: N & Inizio: 0\\  \cline{3-7}
+			&          & WPM: F & PDIS: N & PC: N & PI: N & Fine: 2\\
+			\hline\multirow{2}{*}{\textit{Documentazione}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: F & PCH: P & Inizio: 0\\  \cline{3-7}
+			&          & WPM: F & PDIS: F & PC: L & PI: N & Fine: 4\\ 
+			\hline\multirow{2}{*}{\textit{Versionamento}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: P & PCH: N & Inizio: 0\\  \cline{3-7}
+			&          & WPM: F & PDIS: F & PC: P & PI: N & Fine: 3\\ 
+			\hline\multirow{2}{*}{\textit{Verifica}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: L & PMS: P & PCH: N & Inizio: 0\\  \cline{3-7}
+			&          & WPM: F & PDIS: L & PC: N & PI: N & Fine: 3\\ 
+			\hline       
+		\end{longtable}
+	\end{center}
+	\caption{Valori SPICE, periodo di Progettazione e codifica} 
+\end{table}
+
+\begin{figure}[H]
+	\includegraphics[scale=0.5]{verifica-consolidamento-spice}
+	\centering
+	\caption{Andamento dei valori SPICE, periodo di Progettazione e codifica}
+\end{figure}
+
+\subsection{Prodotti}
+
+\subsubsection{Documenti}
+
+Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle e frontespizio) e di quello del numero di Errori ortografici corretti [MPPD001].
+
+\begin{itemize}
+	\item \textbf{Errori ortografici corretti [MPPD001]}: tramite le funzionalità di rilevazione d'errori di TexStudio sono stati rilevati e corretti complessivamente 17 errori all'interno dei documenti;
+	
+	\item \textbf{Indice Gulpease [MPPD002]}: Viene qui riportata una tabella contenente il valore Gulpease calcolato per ciascun documento.
+	Per il calcolo di tale indice sono state escluse eventuali tabelle presenti nei documenti, le pagine di frontespizio e i diari delle modifiche, in quanto una loro inclusione avrebbe portato a valori errati. L'esito della misurazione è Positivo, se l'indice è maggiore o uguale a 50, o Negativo nel caso fosse inferiore a tale valore.
+	
+	\begin{table}[h]
+		\begin{center}
+			\setlength\LTleft{6mm}
+			\begin{longtable}{|p{60mm}|p{30mm}|p{25mm}|}
+				\hline  
+				\textbf{Nome Documento} & \textbf{Valore Indice} & \textbf{Esito} \\ \hline    
+				\textit{Glossario v 3.0.0} & 56 & Positivo\\ \hline    
+				\textit{Norme di Progetto v 3.0.0} & 59 & Positivo\\ \hline    
+				\textit{Piano di Progetto v 3.0.0} & 57 & Positivo\\ \hline    
+				\textit{Analisi dei Requisiti v 3.0.0} & 60 & Positivo\\ \hline    
+				\textit{Piano di Qualifica v 3.0.0} & 58 & Positivo\\ \hline    
+				\textit{Verbale Esterno 2018-03-17} & 54 & Positivo\\ \hline
+				\textit{Verbale Interno 2018-03-21} & 55 & Positivo\\ \hline
+				\textit{Verbale Interno 2018-03-29} & 54 & Positivo\\ \hline
+				\textit{Verbale Interno 2018-04-02} & 59 & Positivo\\ \hline
+				\textit{Verbale Esterno 2018-04-06} & 53 & Positivo\\ \hline    
+				\textit{Verbale Interno 2018-04-09} & 55 & Positivo\\ \hline
+				\textit{Verbale Interno 2018-04-14} & 56 & Positivo\\ \hline
+				\textit{Lettera di Presentazione} & 80 & Positivo\\ \hline
+			\end{longtable}
+		\end{center}
+		\caption{Valori Indice Gulpease, periodo di Progettazione e codifica} 
+	\end{table} 
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.5]{verifica-consolidamento-gulpease}
+		\centering
+		\caption{Andamento dei valori Indice Gulpease, periodo di Progettazione e codifica}
+	\end{figure}
+	
+	Dalla tabella e dal grafico si evince che tutti i documenti presentano un indice nei limiti preferibili.	
+\end{itemize}
+
 %\subsubsection{Software}
 
 \chapter{Valutazioni per il miglioramento}
@@ -1970,8 +2056,8 @@ A seguito dell'esito della Revisione di Progettazione sono state apportate le se
 \begin{itemize}
 	\item Ristrutturazione profonda dei documenti in base al feedback ricevuto:
 	\begin{itemize}
-		\item \textbf{Norme di Progetto}: ;
-		\item \textbf{Piano di Progetto}: ;
+		\item \textbf{Norme di Progetto}: correzione di errori di digitazione e grammaticali. Aggiunta contenuti riguardanti il PdQ e la sua scrittura. Precisazione dell'insieme di comportamenti da adottare per il conseguimento dei requisiti di qualità e miglioramento della definizione di validazione;
+		\item \textbf{Piano di Progetto}: aggiunta tipologia di rischi e riscontri effettuati nella fase di progettazione. Corretti alcuni errori nell'uso poco oculato di alcuni termini all'interno del documento;
 		\item \textbf{Piano di Qualifica}: ;
 		\item \textbf{Analisi dei Requisiti}: .
 	\end{itemize}
