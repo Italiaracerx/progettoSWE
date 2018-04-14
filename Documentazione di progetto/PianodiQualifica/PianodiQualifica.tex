@@ -1907,18 +1907,18 @@ A seguito di numerosi miglioramenti apportati durante la revisione delle NP, giu
 			\hline
 			\textbf{Nome Processo} & \textbf{Attr. L1} & \textbf{Attr. L2} & \textbf{Attr. L3} & \textbf{Attr. L4} & \textbf{Attr. L5} & \textbf{SPICE}\\
 			\hline
-			\multirow{2}{*}{\textit{Fornitura}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: P & PCH: N & Inizio: 0\\  
+			\multirow{2}{*}{\textit{Fornitura}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: P & PCH: P & Inizio: 3\\  
 			\cline{3-7}
-			&          & WPM: F & PDIS: F & PC: N & PI: N & Fine: 3 \\ 
+			&          & WPM: F & PDIS: F & PC: P & PI: P & Fine: 4 \\ 
 			\hline
-			\multirow{2}{*}{\textit{Sviluppo}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: N & PCH: N & Inizio: 0\\  \cline{3-7}
-			&          & WPM: F & PDIS: N & PC: N & PI: N & Fine: 2\\
-			\hline\multirow{2}{*}{\textit{Documentazione}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: F & PCH: P & Inizio: 0\\  \cline{3-7}
-			&          & WPM: F & PDIS: F & PC: L & PI: N & Fine: 4\\ 
-			\hline\multirow{2}{*}{\textit{Versionamento}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: P & PCH: N & Inizio: 0\\  \cline{3-7}
-			&          & WPM: F & PDIS: F & PC: P & PI: N & Fine: 3\\ 
-			\hline\multirow{2}{*}{\textit{Verifica}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: L & PMS: P & PCH: N & Inizio: 0\\  \cline{3-7}
-			&          & WPM: F & PDIS: L & PC: N & PI: N & Fine: 3\\ 
+			\multirow{2}{*}{\textit{Sviluppo}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: P & PCH: P & Inizio: 2\\  \cline{3-7}
+			&          & WPM: F & PDIS: N & PC: N & PI: N & Fine: 3\\
+			\hline\multirow{2}{*}{\textit{Documentazione}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: F & PCH: P & Inizio: 4\\  \cline{3-7}
+			&          & WPM: F & PDIS: F & PC: L & PI: P & Fine: 4\\ 
+			\hline\multirow{2}{*}{\textit{Versionamento}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: P & PCH: P & Inizio: 3\\  \cline{3-7}
+			&          & WPM: F & PDIS: F & PC: P & PI: P & Fine: 4\\ 
+			\hline\multirow{2}{*}{\textit{Verifica}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: L & PMS: P & PCH: P & Inizio: 3\\  \cline{3-7}
+			&          & WPM: F & PDIS: L & PC: P & PI: P & Fine: 3\\ 
 			\hline       
 		\end{longtable}
 	\end{center}
@@ -1926,7 +1926,7 @@ A seguito di numerosi miglioramenti apportati durante la revisione delle NP, giu
 \end{table}
 
 \begin{figure}[H]
-	\includegraphics[scale=0.5]{verifica-consolidamento-spice}
+	\includegraphics[scale=0.5]{verifica-progettazione-spice}
 	\centering
 	\caption{Andamento dei valori SPICE, periodo di Progettazione e codifica}
 \end{figure}
@@ -1968,7 +1968,7 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 	\end{table} 
 	
 	\begin{figure}[H]
-		\includegraphics[scale=0.5]{verifica-consolidamento-gulpease}
+		\includegraphics[scale=0.5]{verifica-progettazione-gulpease}
 		\centering
 		\caption{Andamento dei valori Indice Gulpease, periodo di Progettazione e codifica}
 	\end{figure}
@@ -2056,10 +2056,10 @@ A seguito dell'esito della Revisione di Progettazione sono state apportate le se
 \begin{itemize}
 	\item Ristrutturazione profonda dei documenti in base al feedback ricevuto:
 	\begin{itemize}
-		\item \textbf{Norme di Progetto}: correzione di errori di digitazione e grammaticali. Aggiunta contenuti riguardanti il PdQ e la sua scrittura. Precisazione dell'insieme di comportamenti da adottare per il conseguimento dei requisiti di qualità e miglioramento della definizione di validazione;
+		\item \textbf{Norme di Progetto}: correzione di errori di digitazione e grammaticali. Aggiunta contenuti precedentemente presenti nel PdQ. Precisazione dell'insieme di comportamenti da adottare per il conseguimento dei requisiti di qualità e miglioramento della definizione di validazione;
 		\item \textbf{Piano di Progetto}: aggiunta tipologia di rischi e riscontri effettuati nella fase di progettazione. Corretti alcuni errori nell'uso poco oculato di alcuni termini all'interno del documento;
-		\item \textbf{Piano di Qualifica}: ;
-		\item \textbf{Analisi dei Requisiti}: .
+		\item \textbf{Piano di Qualifica}: rimozione contenuti non attinenti al documento;
+		\item \textbf{Analisi dei Requisiti}: risoluzione problemi di compilazione e correzione nella descrizione di alcuni casi d'uso.
 	\end{itemize}
 \end{itemize}
 
