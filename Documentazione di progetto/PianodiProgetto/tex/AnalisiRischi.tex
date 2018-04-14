@@ -30,23 +30,34 @@
 	\noindent La progettazione e l'implementazione dovranno tener conto della manutenibilità e dell'estensibilità dell'applicazione, cercando di conciliare i vari casi d'uso (sviluppatore che vuole ispezionare lo stato interno della libreria, sviluppatore che vuole creare dei test, sviluppatore che vuole creare configurazioni particolari). 
 	
 	\section{Glossario}
-	Al fine di evitare ogni ambiguità di linguaggio e massimizzare la comprensione dei documenti, i termini tecnici, di dominio, gli acronimi e le parole che necessitano di essere chiarite, sono riportate nel documento \textit{Glossario v2.0.0}. Ogni termine presente nel glossario è marcato da una "G" maiuscola in pedice.
+	Al fine di evitare ogni ambiguità di linguaggio e massimizzare la comprensione dei documenti, i termini tecnici, di dominio, gli acronimi e le parole che necessitano di essere chiarite, sono riportate nel documento \textit{Glossario v3.0.0}. Ogni termine presente nel glossario è marcato da una "G" maiuscola in pedice.
 	
 	\section{Riferimenti}
 	
 	\subsection*{Normativi}
 	\begin{itemize}
-		\item \textbf{Norme di Progetto:} \textit{Norme di Progetto v2.0.0};
-		\item \textbf{\textit{Capitolato\ped{G}} d'appalto C3:}\\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Progetto/C3.pdf};
+		\item \textbf{Norme di Progetto:} documento \textit{Norme di Progetto v3.0.0};
+		\begin{itemize}
+			\subitem §2.1.5 "Definizione del modello di sviluppo";
+			\subitem §3.1 "Documentazione";
+			\subitem §4.4.5 "Gestione dei rischi".
+		\end{itemize}
+		\item \textbf{Capitolato d'appalto C3:} \\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Progetto/C3.pdf};
+		\subitem Capitolato d'appalto per il progetto DeSpeect.
 		\item \textbf{Regole del progetto:}\\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Dispense/P01.pdf};
-		\item \textbf{Vincoli Organigramma e Offerta tecnico-economica:}\\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Progetto/RO.html}.
+		\subitem Definizione delle regole e delle scadenze del progetto didattico.
+		\item \textbf{Vincoli organigramma e offerta tecnico-economica:}\\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/Progetto/RO.html}.
+		\subitem Definizione di ruoli e costi di progetto e dell'organigramma.
 	\end{itemize}
 	
 	\subsection*{Informativi}
 	\begin{itemize}
-		\item \textbf{Slide del corso:} \url{http://www.math.unipd.it/~tullio/IS-1/2017/};
-		\item \textbf{Studio di Fattibilità:} \textit{Studio di Fattibilità v1.0.0};
-		\item \textbf{Analisi dei Requisiti:} \textit{Analisi dei Requisiti v2.0.0}.
+		\item \textbf{Slide del corso:} \\ \url{http://www.math.unipd.it/~tullio/IS-1/2017/};
+		\subitem Slide del corso di Ingegneria del Software per l'a.a. 17/18
+		\item \textbf{Studio di Fattibilità:} documento \textit{Studio di Fattibilità v1.0.0};
+		\subitem Studio di fattibilità per il progetto DeSpeect e analisi dei capitolati.
+		\item \textbf{Analisi dei Requisiti:} documento \textit{Analisi dei Requisiti v3.0.0}.
+		\subitem Definizione di requisiti e use case per il progetto DeSpeect.
 	\end{itemize}
 	
 	\section{Scadenze}
@@ -62,7 +73,7 @@
 	
 	\section{Visione generale dell'analisi dei rischi}
 	
-	Per una buona riuscita del \glossario{prodotto}{prodotto} è necessario effettuare un'approfondita analisi dei rischi che si possono incontrare durante lo svolgimento dell'intero progetto. I rischi vengono dunque brevemente descritti, analizzati per probabilità di frequenza e fattore di rischio e viene infine proposto un metodo di controllo e delle contromisure per ognuno di essi. Le convenzioni per la catalogazione dei rischi sono presenti nella sezione §2.1.5.3 di \textit{Norme di Progetto v2.0.0} mentre i rischi effettivamente riscontrati vengono riportati nell'appendice §A "Esito della rilevazione dei rischi" di questo documento.
+	Per una buona riuscita del \glossario{prodotto}{prodotto} è necessario effettuare un'approfondita analisi dei rischi che si possono incontrare durante lo svolgimento dell'intero progetto. I rischi vengono dunque brevemente descritti, analizzati per probabilità di frequenza e fattore di rischio e viene infine proposto un metodo di controllo e delle contromisure per ognuno di essi. Le convenzioni per la catalogazione dei rischi sono presenti in §2.1.5.3 delle NP, mentre i rischi effettivamente riscontrati vengono riportati nell'appendice §A "Esito della rilevazione dei rischi" di questo documento.
 	
 	\section{Procedura di analisi dei rischi}
 	
@@ -84,11 +95,11 @@
 
 	I rischi si dividono in:
 		\begin{itemize}
-			\item rischi inerenti le tecnologie;
-			\item rischi inerenti gli strumenti;
-			\item rischi inerenti il gruppo di progetto;
-			\item rischi inerenti i requisiti;
-			\item rischi inerenti l'organizzazione.
+			\item Rischi inerenti le tecnologie;
+			\item Rischi inerenti gli strumenti;
+			\item Rischi inerenti il gruppo di progetto;
+			\item Rischi inerenti i requisiti;
+			\item Rischi inerenti l'organizzazione.
 		\end{itemize}
 
 	Ogni rischio è inoltre corredato da:
@@ -106,27 +117,24 @@
 	\section{Descrizione dei rischi}
 
 	\begin{longtable}[c]{|p{15mm}|p{24mm}|p{50mm}|p{22mm}|p{16mm}|}
+		\caption{Descrizione dei rischi} \\
 		\hline \textbf{Codice} & \textbf{Nome} & \textbf{Descrizione} & \textbf{Probabilità} & \textbf{Gravità} \\
 		
-		\hline RT0 & Inesperienza delle tecnologie da utilizzare & Le tecnologie adottate per sviluppare il prodotto sono solamente in parte note ai componenti del gruppo, ciò non toglie che vi possano essere delle mancanze & Bassa & Medio-alto \\
+		\hline RT0 & Inesperienza delle tecnologie da utilizzare & Le tecnologie adottate per sviluppare il prodotto sono solamente in parte note ai componenti del gruppo & Bassa & Medio-alto \\
 		
-		\hline RS0 & Guasti hardware e problematiche software & La strumentazione usata dal gruppo potrebbe avere dei malfunzionamenti o guastarsi durante lo sviluppo del progetto, rendendo difficoltoso l'avanzamento del progetto o fermarlo & Bassa & Basso  \\
+		\hline RS0 & Guasti hardware e problematiche software & La strumentazione usata dal gruppo potrebbe avere dei malfunzionamenti o guastarsi durante lo sviluppo del progetto, rendendone difficoltoso l'avanzamento o fermandolo & Bassa & Basso  \\
 		
 		\hline RS1 & Inesperienza degli strumenti da utilizzare &  L'approccio al metodo di lavoro risulta nuovo. Sono richieste capacità di pianificazione e di analisi che il gruppo non possiede a causa dell'inesperienza. Alcune conoscenze richieste richiedono tempo per essere apprese & Alta & Alto  \\ \hline
-
-		\newpage
 		
-		\hline RG0 & Problemi personali dei membri del gruppo & Ogni membro del gruppo ha degli impegni personali o potrebbe avere dei problemi di salute. Questo implica la possibilità che qualche componente non sia disponibile in certi momenti creando eventualmente dei rallentamenti al progetto & Media & Medio \\ 
+		\hline RG0 & Problemi personali dei membri del gruppo & Ogni membro del gruppo ha degli impegni personali o potrebbe avere dei problemi di salute. Questo implica la possibilità che qualche componente non sia disponibile in certi momenti, creando eventualmente dei rallentamenti al progetto & Media & Medio \\ 
 
 		\hline RG1 & Problemi tra membri del gruppo & La maggior parte dei membri del gruppo non si conosceva prima di questo progetto. Questo può portare a delle incomprensioni causate anche da diversi punti di vista & Bassa & Alto \\ 
 
-		\hline  RR0 & Comprensione dei requisiti & Data l'inesperienza dei componenti del gruppo nell'analisi dei requisiti, è possibile un'errata comprensione dei requisiti comportando un'offerta non conforme alle richieste & Medio-bassa & Alto \\ 
+		\hline  RR0 & Comprensione dei requisiti & Data l'inesperienza dei componenti del gruppo nell'analisi dei requisiti, può verificarsi un'errata comprensione degli stessi che comporti un'offerta non conforme alle richieste & Medio-bassa & Alto \\ 
 		
 		\hline RO0 & Sottostima dei tempi necessari & Data l'inesperienza dei componenti del gruppo nella pianificazione di progetto e l'attuazione della stessa su una arco di tempo medio-lungo, può verificarsi la sottostima dei tempi necessari alla realizzazione del progetto & Media & Alto \\
 
 		\hline
-		
-	\caption{Descrizione dei rischi}
 	\end{longtable}
 	\newpage
 
@@ -134,6 +142,7 @@
 	
 
 		\begin{longtable}{|p{15mm}|p{60mm}|p{60mm}|}
+			\caption{Strategie di rilevazione e contromisure dei rischi} \\
 			\hline
 			 \textbf{Rischio}& \textbf{Modalità di rilevazione}&\textbf{Contromisure}\\ \hline
 			 RT0& Viene verificato il grado di conoscenza di ciascun componente controllando settimanalmente l'efficacia dei contenuti aggiunti da esso e verificando che essi soddisfino, nelle loro parti funzionanti o visibili, i criteri di qualità scelti & Ciascun componente è tenuto a documentarsi in maniera autonoma sulle tecnologie adottate e a richiedere informazioni ai colleghi nel caso siano sorti dei dubbi durante il proprio lavoro. Se necessario vengono sfruttati canali telematici con i detentori delle tecnologie (come ad esempio le e-mail) per ricevere spiegazioni riguardanti le tecnologie utilizzate\\ \hline
@@ -144,7 +153,6 @@
 			  \newpage
 			 \hline RR0& Le persone aventi dei dubbi comunicano le proprie difficoltà a dei colleghi addetti all'analisi dei requisiti, i quali si occupano di risolvere le perplessità sollevate. I verificatori possono al contempo segnalare la scarsa chiarezza di una sezione del testo da essi letto affinchè vengano subito corretti gli errori commessi da un collega, consigliando ad esso una rivisitazione degli argomenti & Per ridurre al minimo gli errori dell'analisi, vengono organizzati incontri con il proponente al fine di sciogliere ogni dubbio e capire a fondo le sue esigenze. A seguito di tali incontri viene reddatto un verbale affinchè le informazioni vengano fissate e possano essere rilette rapidamente\\ \hline
 			 RO0& Vengono tracciati i progressi all'interno di una attività tramite strumenti di project management atti all'organizzazione puntuale del lavoro tra una revisione di progetto ed un altra & Vengono inviate a cadenza giornaliera delle mail dal software di project management affinchè sia esplicito il tempo rimanente per completare la propria attività. Prevedendo in anticipo dei ritardi vengono attribuiti dei periodi di \glossario{slack}{Slack} affinchè il ritardo nel terminare una attività non interferisca con l'inizio di un'altra\\ \hline
-			 \caption{Strategie di rilevazione e contromisure dei rischi}
 		\end{longtable}
 
 
