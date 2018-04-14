@@ -10,7 +10,7 @@
 \author{}
 
 %Ultima versione documento
-\newcommand{\versione}{1.0.0}
+\newcommand{\versione}{0.2.0}
 
 % Stile per il glossario
 \newglossarystyle{glossaryStyle}{
@@ -52,7 +52,6 @@
 			\def\arraystretch{1.5}
 			\begin{tabular}{l|l}
 				\textbf{Versione} & \versione{} \\
-				\textbf{Data approvazione} & 10 Marzo 2018 \\
 				\textbf{Responsabile} & Marco Focchiatti\\
 				\textbf{Redattori} &  Manfredi Smaniotto, Marco Focchiatti,\\
 				& Cristiano Tessarolo, Giulio Rossetti \\
@@ -80,7 +79,6 @@
 		\hline
 		\textbf{Versione} & \textbf{Data} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Descrizione} \\
 		
-		\hline 1.0.0 & 2018-04-15 &  & Responsabile & Approvazione \\
 		\hline 0.2.0 & 2018-04-15 & - & Verificatore & Verifica da §5 a §8 e appendici \\
 		\hline 0.1.4 & 2018-04-14 & - & Amministratore & Stesura appendici \\
 		\hline 0.1.3 & 2018-04-13 & - & Amministratore & Stesura §8 \\
@@ -116,7 +114,7 @@
 	\section{Informazioni utili}
 	
 	La stesura di questo documento assume come utente target del prodotto un programmatore esperto nell'utilizzo di \textit{Speect} e dei linguaggi di programmazione C e C++. \\
-	\noindent Per completezza, viene riportato in appendice A un glossario comprensivo di termini tecnici o riguardanti particolari funzionalità di \textit{DeSpeect}. Per identificare i termini presenti nel glossario, la loro prima occorrenza all’interno del documento è riportata in corsivo e marcata con una G al pedice. 
+	\noindent Per completezza, viene riportato in appendice §A un glossario comprensivo di termini tecnici o riguardanti particolari funzionalità di \textit{DeSpeect}. Per identificare i termini presenti nel glossario, la loro prima occorrenza all’interno del documento è riportata in corsivo e marcata con una G al pedice. 
 	
 	%quando caricheremo su github in una repository apposita il manuale sviluppatore
 	\begin{comment}
@@ -134,7 +132,7 @@
 		\url{http://doc.qt.io/};
 		\subitem Documentazione ufficiale del \glossario{framework}{framework} utilizzato per lo sviluppo dell'interfaccia grafica.
 		
-		\item \textit{Documentazione CMAKE:} \\
+		\item \textbf{Documentazione CMake:} \\
 		\url{https://cmake.org/documentation/}.
 		\subitem Documentazione ufficiale del framework utilizzato per la build del prodotto. 
 	\end{itemize}
@@ -166,21 +164,21 @@
 	 
 	\chapter{Installazione e configurazione} 
 	
-	DeSpeect è reperibile su \glossario{GitHub}{GitHub} al seguente link:
+	DeSpeect è reperibile su GitHub al seguente link:
 	\begin{center}
 		\url{https://github.com/graphiteSWE/DeSpeect}
 	\end{center}
 	
 	\noindent Una volta soddisfatti i prerequisiti descritti in §2 "Requisiti di sistema" di questo documento, per installare ed eseguire il software è necessario seguire la seguente procedura:
 	\begin{enumerate}
-		\item Clonare o scaricare la repository sulla propria macchina;
-		\item Entrare nella cartella scaricata ed eseguire lo script \verb|build.sh|.
+		\item Clonare o scaricare il repository sulla propria macchina;
+		\item Entrare nella cartella scaricata ed eseguire lo script \verb|build.sh| presente al suo interno. Tale script installerà Speect ed effettuerà una build del progetto all'interno nella directory \verb|DeSpeect/build/|.
+		\item Per eseguire DeSpeect, entrare nella directory \verb|DeSpeect/build/| ed eseguire il comando \verb|./main|.
 	\end{enumerate}
-	Tale procedura installerà la libreria Speect e genererà una build del software nella directory \verb|DeSpeect/build|, nonché avvierà automaticamente un'esecuzione di DeSpeect.
 	
 	\chapter{Guida all'utilizzo}
-	Di seguito è presentata una guida all'utilizzo di DeSpeect.
-	I termini evidenziati in \textbf{questo modo} corrispondono a pulsanti presenti all'interno dell'applicazione.
+	Viene di seguito illustrata la guida all'utilizzo del software DeSpeect. \\
+	Si fa notare che i termini evidenziati in \textit{corsivo} corrispondono a pulsanti specifici presenti all'interno dell'applicazione.
 	
 	\section{Interfaccia grafica}
 	
@@ -188,27 +186,54 @@
 		
 		\centering
 		
-		\includegraphics[width=\textwidth]{./img/avvio}
+		\includegraphics[scale=0.45]{./img/avvio}
 		
 		\caption{Interfaccia grafica - Schermata iniziale}
 	
 	\end{figure}
 
-	All'avvio dell'applicazione viene presentata una schermata come in Figura 4.1.\\
- 	L'interfaccia grafica sarà sempre generalmente composta dalle seguenti componenti:
- 	\begin{itemize}
- 		\item \textbf{Menù dell'applicazione}: situato nella parte superiore della schermata, dal quale è possibile interagire con \textit{Speect} e con le funzionalità offerte dal sistema (vedi Figura 4.2);
+	All'avvio dell'applicazione viene presentata la schermata riportata in Figura 4.1. L'interfaccia grafica è costituita dalle componenti illustrate nelle sezioni seguenti:
+ 	
+ 	\subsection{Menù dell'applicazione}
+ 	Menù situato nella parte superiore della schermata. Tramite il menù \textit{File} è possibile interagire con alcune funzionalità offerte dal sistema, mentre tramite il menù \textit{Help} è possibile visualizzare manuale utente e licenza del prodotto (vedi Figura 4.2). Il menù è sempre disponibile in qualunque posizione all'interno dell'applicazione e al suo interno è possibile selezionare le seguenti voci:
+ 	
+ 	\subsubsection{File} 
+ 		\begin{itemize}
+ 			\item \textbf{Save Voice JSon}: salva il file JSon;
+ 			\item \textbf{Load HRG Graph}: carica un grafo HRG;
+ 			\item \textbf{Save HRG Graph}: salva un grafo HRG;
+ 			\item \textbf{Save Audio file}: salva il file audio prodotto in seguito all'esecuzione di \textit{Speect};
+ 			\item \textbf{Search from path}: cerca un nodo inserendo come input un percorso specifico (es. Words.parent.n);
+ 			\item \textbf{Exit}: chiude l'interfaccia \textit{DeSpeect}.
+ 		\end{itemize}
+ 		
  		\begin{figure}[H]
  			
  			\centering
  			
- 			\includegraphics[width=.3\textwidth]{./img/menu}
+ 			\includegraphics[width=.4\textwidth]{./img/menu_file}
  			
- 			\caption{Interfaccia grafica - Menù dell'applicazione}
+ 			\caption{Menù dell'applicazione - Sezione "File"}
  			
  		\end{figure}
  	
- 		\item \textbf{Pannello di configurazione}: situato sotto il menù, nella parte superiore della schermata, dove è possibile caricare una voice, inserire input testuale, selezionare l'\glossario{utterance}{utterance} type e avviare l'esecuzione di \textit{Speect} eseguendo singolarmente ogni utterance processors o tutti assieme in una volta (vedi Figura 4.3);
+ 	\subsubsection{Help}
+ 		\begin{itemize}
+ 			\item \textbf{Manual}: apre il manuale utente;
+ 			\item \textbf{Licence}: visualizza la licenza di \textit{DeSpeect}.
+ 		\end{itemize}
+ 		\begin{figure}[H]
+ 			
+ 			\centering
+ 			
+ 			\includegraphics[width=.4\textwidth]{./img/menu_help}
+ 			
+ 			\caption{Menù dell'applicazione - Sezione "Help"}
+ 			
+ 		\end{figure}
+ 	
+ 	\subsection{Pannello di configurazione}
+ 	Situato nella parte superiore della schermata sotto il menù citato al punto precedente. Qui è possibile caricare una voice (tramite pulsante \textit{Load Voice}), inserire input testuale (tramite area di testo dedicata), selezionare l'\glossario{utterance}{utterance} type e avviare l'esecuzione di \textit{Speect} eseguendo singolarmente ogni utterance processor (pulsante \textit{Run step}) o tutti assieme in sequenza (pulsante \textit{Run all}). Il pulsante \textit{Load selected processors}, infine, permette il caricamento della configurazione degli utterance processor selezionati tramite apposito pannello illustrato al punto successivo (vedi Figura 4.3);
  		\begin{figure}[H]
  			
  			\centering
@@ -219,18 +244,20 @@
  			
  		\end{figure}
  	
- 		\item \textbf{Pannello degli Utterance Processors}: situato sulla sinistra appena sotto al pannello di configurazione, dove è possibile visualizzare ogni processor e capire quali sono stati eseguiti osservando le caselle relative sulla sinistra (vedi Figura 4.4);
+ 	\subsection{Pannello degli utterance processor}
+ 	Situato sulla sinistra, sotto al pannello di configurazione. Qui è presente una lista degli utterance processor relativi alla voice caricata, a ognuno dei quali è assegnata una checkbox. Spuntando le checkbox l'utente seleziona gli utterance processor che desidera eseguire per un dato input tramite i pulsanti dedicati presenti nel pannello di configurazione (pulsanti \textit{Run all} e \textit{Run step}). Avviata l'esecuzione, i processor eseguiti verranno evidenziati dal colore verde, mentre quello corrente è riportato in grassetto (vedi Figura 4.4);
  		\begin{figure}[H]
  			
  			\centering
  			
  				\includegraphics[width=.4\textwidth]{./img/pannello_processors}
  			
- 			\caption{Interfaccia grafica - Pannello degli Utterance Processors}
+ 			\caption{Interfaccia grafica - Pannello degli utterance processors}
  			
  		\end{figure}
  		
- 		\item \textbf{Pannello delle Relations}: situato sulla sinistra sotto al pannello degli utterance processors dove è possibile visualizzare le relations presenti nel grafo. Qui l'utente può, deselezionando una \glossario{relation}{relation}, togliere i relativi nodi dal grafo (vedi Figura 4.5);
+ 	\subsection{Pannello delle relations}
+ 	Situato sulla sinistra, sotto al pannello degli utterance processor. Qui è possibile selezionare quali \glossario{relation}{relation} visualizzare nel grafo. Di default, il grafo mostra ogni relation disponibile, rimuovendo la spunta dalla checkbox della relation desiderata le componenti del grafo relative vengono rimosse dalla visualizzazione (vedi Figura 4.5);
  		\begin{figure}[H]
  			
  			\centering
@@ -241,7 +268,8 @@
  			
  		\end{figure}
  	
- 		\item \textbf{Area del grafo}: situato sulla destra sotto al pannello di configurazione, dove viene visualizzato il grafo quando viene eseguito \textit{Speect}. I nodi sono selezionabili e si possono spostare (vedi Figura 4.6);
+ 	\subsection{Area del grafo}
+ 	Situata sulla destra, sotto al pannello di configurazione. Qui viene visualizzato il grafo relativo ad una data voice, input testuale e configurazione di utterance processor. I nodi sono selezionabili (nel cui caso, le informazioni relative al nodo vengono visualizzate nell'apposita barra approfondita al punto seguente) e spostabili (vedi Figura 4.6);
  		\begin{figure}[H]
  			
  			\centering
@@ -252,7 +280,8 @@
  			
  		\end{figure}
  	
- 		\item \textbf{Proprietà del nodo}: situato nella parte inferiore della schermata, dove vengono visualizzate le informazioni del nodo selezionato (vedi Figura 4.7).
+ 	\subsection{Proprietà del nodo}
+ 	Situato nella parte inferiore dell'interfaccia. Qui vengono visualizzate le informazioni specifiche relative al nodo selezionato (vedi Figura 4.7).
  		\begin{figure}[H]
  			
  			\centering
@@ -262,126 +291,72 @@
  			\caption{Interfaccia grafica - Proprietà del nodo}
  			
  		\end{figure}
- 		
- 	\end{itemize}
-	
-	\subsection{Menù dell'applicazione}
-	Il menù è sempre disponibile in qualunque posizione vi troviate all'interno dell'applicazione e al suo interno è possibile selezionare le seguenti voci:
-	\begin{itemize}
-		\item \textbf{File} 
-			\begin{itemize}
-				\item \textbf{Save Voice JSon}: salva il file JSon;
-				\item \textbf{Load HRG Graph}: carica un grafo HRG;
-				\item \textbf{Save HRG Graph}: salva un grafo HRG;
-				\item \textbf{Save Audio file}: salva il file audio prodotto in seguito all'esecuzione di \textit{Speect};
-				\item \textbf{Search from path}: cerca un nodo inserendo come input un percorso specifico (es. Words.parent.n);
-				\item \textbf{Exit}: chiude l'interfaccia \textit{DeSpeect};
-			\end{itemize}
-		
-		\begin{figure}[H]
-			
-			\centering
-			
-				\includegraphics[width=.4\textwidth]{./img/menu_file}
-			
-			\caption{Menù dell'applicazione - Sezione "File"}
-			
-		\end{figure}
-		\item \textbf{Help}
-			\begin{itemize}
-				\item \textbf{Manual}: apre il manuale utente;
-				\item \textbf{Licence}: visualizza la licenza di \textit{DeSpeect}.
-			\end{itemize}
-	\begin{figure}[H]
-		
-		\centering
-		
-			\includegraphics[width=.4\textwidth]{./img/menu_help}
-		
-		\caption{Menù dell'applicazione - Sezione "Help"}
-		
-	\end{figure}
-
-	\end{itemize}
-	
-	\subsection{Visualizzare il manuale utente}
-	Per visualizzare il manuale utente è sufficiente cliccare \textbf{Help} dal menù e selezionare la prima voce "Manual". 
-	
-	\subsection{Uscire dall'applicazione}
-	Per uscire dall'applicazione è sufficiente cliccare \textbf{File} dal menù e selezionare l'ultima voce "Exit". 
 	
 	\section{Interagire con la voice}
-	Questa sezione tratta l'utilizzo della voice, ovvero di un file JSon a partire dal caricamento fino a ciò che riguarda l'audio prodotto da \textit{Speect}.
+	Questa sezione tratta dell'interazione con la voice (rappresentata da un file \verb|.json|), dal suo caricamento alla generazione dell'audio prodotto da \textit{Speect}.
 	
 	\subsection{Caricare la voice}
-	Per caricare la voice è sufficiente cliccare \textbf{Load Voice}, pulsante situato nell'angolo in alto a sinistra del pannello di configurazione o in alternativa cliccare \textbf{File} dal menù e selezionare la prima voce "Load Voice".\\
-	Una volta fatto ciò, si aprirà una finestra di ricerca del file browser dove cercare il file JSon. Una volta trovato basterà selezionarlo, cliccandoci sopra e cliccare \textbf{Apri}.\\
-	A questo punto se verrà visualizzato il percorso del file JSon subito dopo "Path Voice", vicino al pulsante di caricamento voice, significa che il caricamento della voice ha avuto successo.\\
-	Nel caso in cui il caricamento del file abbia avuto esito negativo, ripetere la procedura.
+	Per caricare la voice è sufficiente cliccare il pulsante \textit{Load Voice}, situato nell'angolo in alto a sinistra del pannello di configurazione (vedi §4.1.2) o, in alternativa, cliccare sul menù \textit{File} e, successivamente, sulla voce \textit{Load Voice}.\\
+	Una volta fatto ciò si aprirà il file browser del sistema operativo, che permetterà la ricerca di un file \verb|.json| corrispondente alla voice desiderata. Una volta reperito il file, sarà sufficiente aprirlo mediante file browser.\\
+	A questo punto, se verrà visualizzato il percorso del file \verb|.json| subito dopo l'etichetta "Path Voice", vicino al pulsante di caricamento della voice, allora il caricamento della stessa avrà avuto successo.\\
+	Nel caso in cui il caricamento del file abbia avuto esito negativo, è necessario ripetere la procedura assicurandosi si averla eseguita correttamente.
 	
-	\subsection{Generare l'audio relativo alla voice}
-	Dopo aver caricato la voice, per generare l'audio relativo alla voice è sufficiente cliccare \textbf{Run all}. In questo modo verrà eseguito Speect che eseguirà tutti gli utterance processors, visualizzando il grafo risultante, la lista degli utterance processors e la lista delle relations.\\
-	\'E possibile inserire un input testuale prima di procedere con l'esecuzione di \textit{Speect} e anche selezionare un diverso utterance type, nel caso fosse presente.\\
-	\'E possibile anche eseguire ogni singolo utterance processor uno alla volta e vedere man mano come evolve il grafo. Per ulteriori dettagli si rimanda alla sezione 4.3.3.1 di questo manuale.
+	\subsection{Generare l'audio relativo alla voice caricata}
+	Successivamente al caricamento della voice, per generare l'audio relativo è sufficiente cliccare il pulsante \textit{Run all}. In questo modo verranno eseguiti gli utterance processor selezionati e visualizzato il grafo risultante, e \textit{Speect} genererà il file audio desiderato.\\
+	Prima di procedere con l'esecuzione di \textit{Speect}, è possibile inserire un input testuale nell'apposita area di testo, nonché selezionare una diversa utterance type (nel caso fosse presente).
 	
 	\subsection{Salvare l'audio relativo alla voice}
-	Uno volta eseguito \textit{Speect}, per salvare l'audio è sufficiente cliccare \textbf{File} dal menù e selezionare la voce "Save Audio file".\\
-	Una volta fatto ciò, si aprirà una finestra di ricerca del file browser dove cercare la cartella in cui salvare il file. Una volta trovata basterà selezionarla, cliccandoci sopra, scrivere il nome del file nella barra di testo apposita e cliccare \textbf{Salva}.\\
-	Il file audio prodotto avrà l'estensione .wav .
+	Uno volta eseguito \textit{Speect}, per salvare l'audio è sufficiente cliccare sul pulsante \textit{File} del menù e selezionare la voce \textit{Save Audio file}.\\
+	Fatto ciò, si aprirà una finestra di ricerca del file browser dove cercare la cartella in cui salvare il file. Una volta trovata basterà selezionarla, cliccandoci sopra, scrivere il nome del file nella barra di testo dedicata e confermare.\\
+	Il file audio prodotto avrà l'estensione \verb|.wav|.
 	
-	\section{Stampare il grafo}
-	Per stampare/visualizzare il grafo è necessario aver caricato una voice e aver eseguito \textit{Speect} tramite \textbf{Run all} o \textbf{Run step}.\\
-	Se sono state fatte queste azioni, allora nell'area del grafo si dovrebbe visualizzare un grafo e a lato la lista degli utterance processors e delle relations.
-	
-	\subsection{Importare il grafo}
-	Per importare un grafo è sufficiente cliccare \textbf{File} dal menù e selezionare la voce "Load HRG Graph".\\
-	Una volta fatto ciò, si aprirà una finestra di ricerca del file browser dove cercare il file. Una volta trovato basterà selezionarlo, cliccandoci sopra e cliccare \textbf{Apri}.\\
-	
-	\subsection{Selezionare gli utterance processors}
-	Nel pannello degli utterance processors è possibile interagire con i processors tramite le caselle di spunta a lato.\\
-	Togliendo la spunta da un processor, esso non verrà eseguito da \textit{Speect}.
-	
-	\subsection{Visualizzare il grafo}
-	Il grafo è visualizzato nell'area del grafo ed è composto da:
+	\section{Visualizzare il grafo}
+	Per visualizzare il grafo è necessario aver caricato una voice, inserito un input testuale ed eseguito \textit{Speect} tramite pulsante \textit{Run all} o \textit{Run step}.\\
+	Se sono state compiute tali azioni, viene visualizzato il grafo nell'area dedicata (§4.1.5), nonché la lista delle relation (§4.1.4).
+	Il grafo è composto da:
 	\begin{itemize}
-		\item \textbf{Nodi}: visualizzati tramite cerchi con sopra scritto il loro name, cioè quello a cui si riferiscono. Hanno diversi colori e la lista delle relations a lato funge da legenda, in questo modo si identificano i nodi relativi ad ogni relation;
-		\item \textbf{Archi}: visualizzati tramite freccie direzionali che collegano due nodi. Anche gli archi sono di diversi colori e si rifanno alla lista delle relations a lato.
+		\item \textbf{Nodi}: visualizzati tramite cerchi con relativo name, i nodi hanno colori diversi a seconda della relazione a cui appartengono (la lista delle relation funge da legenda);
+		\item \textbf{Archi}: visualizzati tramite frecce direzionali che collegano due nodi, anche gli archi sono di colori diversi a seconda della relazione a cui fanno riferimento.
 	\end{itemize}
-	 
-	\subsubsection{Visualizzare il grafo step-by-step}
-	Eseguendo \textit{Speect} con \textbf{Run step} è possibile eseguire un utterance processor per volta e vederne il risultato sul grafo che ad ogni step si aggiorna aggiungendo nodi.
 	
-	\subsubsection{Visualizzare l'intero grafo}
-	Eseguendo \textit{Speect} con \textbf{Run all} è possibile eseguire tutti gli utterance processors in una sola volta e vedere subito il grafo completo.
+	\subsection{Visualizzare il grafo step-by-step}
+	Eseguendo \textit{Speect} tramite pulsante \textit{Run step}, è possibile eseguire un utterance processor alla volta e vederne il risultato sul grafo, che ad ogni step si aggiorna aggiungendo nuove relazioni.
+	
+	\subsection{Visualizzare l'intero grafo}
+	Eseguendo \textit{Speect} tramite pulsante \textit{Run all} è possibile eseguire tutti gli utterance processor in una sola volta e vedere subito il grafo completo.
 	
 	\section{Interagire con il grafo}
-	Questa sezione spiega come poter interagire col grafo spostando nodi e archi, togliendo i nodi e gli archi relativi a determinate relations e come esportare il grafo.
+	Questa sezione spiega come poter interagire col grafo spostando nodi e archi, rimuovendo nodi e archi relativi a determinate relation dalla visualizzazione e come esportare il grafo.
 	
 	\subsection{Esportare il grafo generato}
-	Per esportare un grafo è sufficiente cliccare \textbf{File} dal menù e selezionare la voce "Save HRG Graph".\\
-	Una volta fatto ciò, si aprirà una finestra di ricerca del file browser dove cercare la cartella in cui salvare il file. Una volta trovata basterà selezionarla, cliccandoci sopra, scrivere il nome del file nella barra di testo apposita e cliccare \textbf{Salva}.\\
+	Per esportare un grafo è sufficiente cliccare \textit{File} dal menù e selezionare la voce \textit{Save HRG Graph}.\\
+	Una volta fatto ciò, si aprirà una finestra di ricerca del file browser dove cercare la cartella in cui salvare il file. Una volta trovata basterà selezionarla, cliccandoci sopra, scrivere il nome del file nella barra di testo dedicata e confermare.
+	
+	\subsection{Importare il grafo}
+	Per importare un grafo è sufficiente cliccare \textit{File} dal menù e selezionare la voce \textit{Load HRG Graph}.\\
+	Una volta fatto ciò, si aprirà una finestra di ricerca del file browser dove cercare il file. Sarà dunque sufficiente reperirlo, selezionarlo e confermarne l'apertura.
+	
+	\subsection{Selezionare gli utterance processor}
+	Nel pannello degli utterance processor (§4.1.3) è possibile interagire con i processor tramite le caselle di spunta a lato.\\
+	Togliendo la spunta da un processor, esso non verrà eseguito da \textit{Speect}, e viceversa.
+	
+	\subsection{Interagire con le relation}
+	Nel pannello delle relation è possibile interagire con esse tramite le caselle di spunta a lato.\\
+	Togliendo la spunta da una relation, i relativi nodi verranno rimossi dalla visualizzazione del grafo, viceversa se si aggiunge la spunta, verranno aggiunti i relativi nodi al grafo.
 	
 	\subsection{Traslare elementi grafici}
 	Questa sezione spiega come traslare gli elementi grafici che compongono il grafo, ovvero nodi e archi.
 	
 	\subsubsection{Traslare nodi}
-	Per traslare i nodi è sufficiente cliccare tenendo premuto su di un nodo e spostando il cursore, posizionare il nodo dove si desidera all'interno dell'area del grafo.
+	Per traslare un nodo è sufficiente cliccare su di esso tenendo premuto e, spostando il cursore, trascinarlo dove si desidera all'interno dell'area del grafo.
 	
 	\subsubsection{Traslare archi}
 	Quando si trasla un nodo, gli archi che sono coinvolti direttamente con quel nodo si adatteranno alla nuova posizione del nodo.
 	
-	\subsection{Interagire con le relation}
-	Nel pannello delle relations è possibile interagire con le relations tramite le caselle di spunta a lato.\\
-	Togliendo la spunta da una relation, i relativi nodi verrano tolti dal grafo e viceversa se si aggiunge la spunta, verranno aggiunti i relativi nodi al grafo.
-	
 	\chapter{Risoluzione dei problemi}
 	
 	\section{Errori in DeSpeect}
-	
-	In questa sezione viene fornito un elenco di tutti i possibili errori che si possono riscontrare utilizzando l’applicazione \textit{DeSpeect}:
-	\begin{itemize}
-		\item \textbf{E01 - ...}:l'utente visualizza un opportuno messaggio di errore nel caso in cui tenti di ...;
-	\end{itemize}
+	In questa sezione viene fornito un elenco di tutti i possibili errori che si possono riscontrare utilizzando l’applicazione \textit{DeSpeect}.
 	
 	\subsection{Struttura dei codici di errore} 
 	%Credo vada nelle norme di progetto
