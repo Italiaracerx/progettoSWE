@@ -2,6 +2,7 @@
 \documentclass[openany,12pt,a4paper]{report}
 \usepackage{subfiles}
 \usepackage[]{graphicx}
+\usepackage{xcolor-patch}
 \usepackage{float}
 \usepackage{multirow}
 \graphicspath{{./img/}{./../img/}}
@@ -188,7 +189,7 @@
     \subsection{Obiettivi di qualità di processo}
     
     	\begin{longtable}{| p{2cm} | p{3.5cm} |p{5.5cm} | p{5.5cm} |}
-    		\caption {Tabella obiettivi di qualità di processo} \label{tab:Tabella obiettivi di qualità di processo} \\
+    		\caption {Tabella obiettivi di qualità di processo} \label{tab:Tabella obiettivi di qualita di processo} \\
     		\hline
     		\textbf{Codice} & \textbf{Nome} & \textbf{Descrizione} & \textbf{Metriche associate}\\
     		\hline
@@ -206,7 +207,7 @@
     \subsection{Obiettivi di qualità di prodotto}
         
         \begin{longtable}{| p{2cm} | p{3.5cm} |p{5.5cm} | p{5.5cm} |}
-        	\caption {Tabella obiettivi di qualità di prodotto} \label{tab:Tabella obiettivi di qualità di prodotto} \\
+        	\caption {Tabella obiettivi di qualità di prodotto} \label{tab:Tabella obiettivi di qualita di prodotto} \\
         	\hline
         	\textbf{Codice} & \textbf{Nome} & \textbf{Descrizione} & \textbf{Metriche associate}\\
         	\hline
@@ -262,7 +263,7 @@
 	\subsection{Metriche per i processi}
 	
 	\begin{longtable}{| p{2cm} | p{3.5cm} |p{5.5cm} | p{5.5cm} |}
-		\caption {Tabella metriche per i processi} \label{tab:title} \\
+		\caption {Tabella metriche per i processi} \label{tab:tabella metriche per i processi} \\
 		\hline
 		\textbf{Codice} & \textbf{Nome} & \textbf{Range di accettabilità} & \textbf{Obiettivi associati}\\
 		\hline
@@ -283,7 +284,7 @@
 	\subsection{Metriche per i documenti}
 	
 	\begin{longtable}{| p{2cm} | p{3.5cm} |p{5.5cm} | p{5.5cm} |}
-		\caption {Tabella metriche per i processi} \label{tab:title} \\
+		\caption {Tabella metriche per i documenti} \label{tab:tabella metriche per i documenti} \\
 		\hline
 		\textbf{Codice} & \textbf{Nome} & \textbf{Range di accettabilità} & \textbf{Obiettivi associati}\\
 		\hline
@@ -313,7 +314,7 @@
 	\subsection{Metriche per il software}
 	
 	\begin{longtable}{| p{2cm} | p{3.5cm} |p{5.5cm} | p{5.5cm} |}
-		\caption {Tabella metriche per i processi} \label{tab:title} \\
+		\caption {Tabella metriche per i processi} \label{tab:metriche} \\
 		\hline
 		\textbf{Codice} & \textbf{Nome} & \textbf{Range di accettabilità} & \textbf{Obiettivi associati}\\
 		\hline
@@ -577,32 +578,32 @@ In questa appendice vengono illustrati nel dettaglio i test da eseguirsi sul pro
 Vengono di seguito elencati i test previsti per assicurare che il sistema rispetti le specifiche esplicitate dai requisiti (elencati nell'AR) e per garantire il buon funzionamento del prodotto.
 
 \setlength\LTleft{6mm}
-	\begin{longtable}{| p{2cm} |p{5cm} | p{2.5cm} |}
+	\begin{longtable}{| p{2cm} |p{8cm} | p{2.5cm} |}
 	\hline
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}\\
 	\hline
 	\endhead
 	\newline TSOF0&
 	\newline L'utente può avviare DeSpeect visualizzandone la pagina iniziale&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	\newline TSOF1&
 	\newline L'utente può accedere al menu file&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]	
 	
 	\hline
 	
 	\newline TSOF2&
 	\newline L'utente può caricare un file Json&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]	
 	\hline	
 	
 	\newline TSOF2.1&
 	\newline L'utente può visualizzare il percorso del file JSon caricato&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]	
 	\hline	
 	
@@ -626,7 +627,7 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	
 	\newline TSOF3&		
 	\newline L'utente può inizializzare Speect con il file json&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]	
 	\hline	
 	
@@ -638,19 +639,19 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	
 	\newline TSOF4&
 	\newline L'utente può salvare l'audio risultante con estensione WAV&
-	\newline Non implementato
+	\newline Implementato
 	\\[1em]
 	\hline
 	
 	\newline TSOF4.1&
 	\newline L'utente può selezionare dove salvare il file&
-	\newline Non implementato
+	\newline Implementato
 	\\[1em]
 	
 	\hline	
 	\newline TSOF4.1.1&
 	\newline L'utente può scrivere il nome del file da salvare&
-	\newline Non implementato
+	\newline Implementato
 	\\[1em]
 	
 	\hline
@@ -668,13 +669,13 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	
 	\newline TSOF5&
 	\newline L'utente può cercare il file tramite file browser&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
 	\newline TSOF5.1&
 	\newline L'utente può selezionare un file tramite file browser&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]	
 	\hline
 	
@@ -698,22 +699,22 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	
 	\newline TSDF5.5&
 	\newline Il file browser mostra solo file di estensione corretta&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	\newline TSDF5.6&
 	\newline L'utente può modificare il nome di una cartella tramite file browser&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	\newline TSDF5.7&
 	\newline L'utente può modificare il nome di un file tramite file browser&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	\newline TSOF6&
 	\newline L'utente può selezionare la Utterance Type&
-	\newline Non implementato
+	\newline Implementato
 	\\[1em]
 	\hline
 	
@@ -731,13 +732,13 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	
 	\newline TSOF7&
 	\newline L'utente può inserire un testo da tradurre in voce&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	
 	\hline
 	\newline TSOF8&
 	\newline L'utente può eseguire il testo inserito&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	\newline TSOF8.1&
@@ -748,20 +749,20 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	
 	\newline TSOF9&
 	\newline L'utente può visualizzare il grafo ottenuto eseguendo Speect&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
 	
 	\newline TSOF9.1&
 	\newline L'utente può visualizzare l'informazione generale di ogni nodo sul grafo&
-	\newline Non implementato
+	\newline Implementato
 	\\[1em]
 	\hline
 	
 	\newline TSOF9.2&
 	\newline L'utente vede ogni relazione del grafo di un colore diverso, relativo al colore in legenda&
-	\newline  Non implementato
+	\newline  \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -773,25 +774,25 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	
 	\newline TSOF9.3&
 	\newline L'utente può selezionare il nodo del grafo tramite click&
-	\newline \refer{UC13.1} \newline Capitolato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
 	\newline TSOF9.3.1&
 	\newline L'utente può visualizzare tutte le informazioni del nodo selezionato&
-	\newline Non implementato
+	\newline Implementato
 	\\[1em]
 	\hline
 	
 	\newline TSDF9.3.1.1&
 	\newline L'utente può modificare il name del nodo selezionato&
-	\newline Non implementato
+	\newline Implementato
 	\\[1em]
 	\hline
 	
 	\newline TSDF9.3.1.2&
 	\newline L'utente può modificare il PoS del nodo selezionato&
-	\newline Non implementato
+	\newline Implementato
 	\\[1em]
 	\hline
 	
@@ -809,7 +810,7 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	
 	\newline TSOF9.5&
 	\newline I nodi selezionati dall'utente vengono evidenziati&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -821,13 +822,13 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	
 	\newline TSOF9.6&
 	\newline L'utente può spostare i nodi del grafo graficamente&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
 	\newline TSOF9.7&
 	\newline L'utente può visualizzare gli strati di relazione del grafo selezionati&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -851,7 +852,7 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	
 	\newline TSFF10&
 	\newline L'utente può eseguire ogni Utterance Processor singolarmente&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -897,7 +898,7 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	\newline TSOV2&
 	\newline 
 	L'applicativo deve essere utilizzabile su sistema operativo Linux Ubuntu 16.04 LTS&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	\newline TSDV2.1&
@@ -1087,7 +1088,7 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 
 Vengono di seguito descritti i test per il collaudo del software, con i quali si accerta che il prodotto sia conforme alle attese del Committente. Ogni test ha un codice, descrizione, passi dell'utente per svolgerlo e stato di implementazione.
 
-\begin{longtable}{| p{2cm} |p{5cm} | p{2.5cm} |}
+\begin{longtable}{| p{2cm} |p{8cm} | p{2.5cm} |}
 	\hline
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}\\
 	\hline
@@ -1702,9 +1703,188 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 
 Verranno qui presentati i test previsti per le più piccole unità software, ovvero i metodi indipendentemente dal sistema di cui fanno parte.
 
+\setlength\LTleft{6mm}
+\begin{longtable}{| p{2cm} |p{8cm} | p{2.5cm} |}
+	\hline
+	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}\\
+	\hline
+	\endhead
+	\newline TU1&
+	\newline Viene verificato che la voice è caricata correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU2&
+	\newline Viene verificato che l'audio viene salvato correttamente&
+	\newline Implementato
+	\\[1em]
+	\hline
+	\newline TU3&
+	\newline Viene verificato che viene caricata l'utterance type corretta&
+	\newline Implementato
+	\\[1em]
+	\hline
+	\newline TU4&
+	\newline Viene verificato che il testo venga caricato su \textit{Speect} correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU5&
+	\newline Viene verificato che vengano caricati gli utterance processors corretti&
+	\newline Implementato
+	\\[1em]
+	\hline
+	\newline TU6&
+	\newline Viene verificato che l'esecuzione degli utterance processors selezionati avvenga correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU7&
+	\newline Viene verificato che il grafo venga stampato correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU8&
+	\newline Viene verificato che ogni relazione venga visualizzata correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU9&
+	\newline Viene verificato che ogni nodo venga visualizzato correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU10&
+	\newline Viene verificato che ogni linea venga visualizzata correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU11&
+	\newline Viene verificato che ogni arco venga visualizzato correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU12&
+	\newline Viene verificato che ogni dato di un nodo venga visualizzato correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU13&
+	\newline Viene verificato che ogni modifica ai dati di un nodo avvenga correttamente&
+	\newline Implementato
+	\\[1em]
+	\hline
+\end{longtable}
+
+\subsection{Tracciamento test di unità-metodi}
+
+\begin{longtable}{| p{2cm} |p{11cm}|}
+	\hline
+	\textbf{Test} & \textbf{Metodo}\\
+	\hline
+	\endhead
+	TU1&\verb|ViewModel::ModelView::LoadConfiguration()|,
+	\verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::SetSpectConfigCommand()::execute()|
+	\\[1em]	
+	\hline	
+	TU2&\verb|ViewModel::ModelView::SaveAudio()|, \verb|Model::Command::CommandBuilder::SaveAudio()|, \verb|Model::Command::CreateAudioCommand()::execute()|
+	\\[1em]	
+	\hline	
+	TU3&\verb|ViewModel::ModelView::LoadConfiguration()|, \verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::SetSpectConfigCommand()::execute()|
+	\\[1em]	
+	\hline	
+	TU4&\verb|ViewModel::ModelView::LoadConfiguration()|, \verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::SetSpectConfigCommand()::execute()|
+	\\[1em]	
+	\hline	
+	TU5&\verb|ViewModel::ModelView::LoadConfiguration()|, \verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::SetSpectConfigCommand()::execute()|
+	\\[1em]
+	\hline	
+	TU6&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::UttProcessorCommand()::execute()|
+	\\[1em]
+	\hline	
+	TU7&\verb|ViewModel::GraphManager::printRelation()|
+	\\[1em]
+	\hline	
+	TU8&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|ViewModel::GraphManager::printRelation()|
+	\\[1em]
+	\hline	
+	TU9&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|ViewModel::GraphManager::printRelation()|
+	\\[1em]
+	\hline	
+	TU10&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|ViewModel::GraphManager::printRelation()|
+	\\[1em]
+	\hline	
+	TU11&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|ViewModel::GraphManager::printRelation()|
+	\\[1em]
+	\hline	
+	TU12&
+	\\[1em]
+	\hline	
+	TU13&
+	\\[1em]
+	\hline
+\end{longtable}
+
 \section{Test di Integrazione}
 
-Verranno qui presentati i test d'integrazione previsti per le varie componenti, al fine di accertarne il corretto funzionamento quando messe in relazione l'una con le altre.
+Vengono di seguito presentati i test d'integrazione previsti per le varie componenti, al fine di accertarne il corretto funzionamento quando messe in relazione l'una con le altre.
+
+\setlength\LTleft{6mm}
+\begin{longtable}{| p{2cm} |p{5cm} | p{2.5cm} |}
+	\hline
+	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}\\
+	\hline
+	\endhead
+	\newline TI1&
+	\newline Test d'integrazione finale del sistema \verb|Model|, \verb|View|, \verb|ViewModel|&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TI2&
+	\newline Viene verificata la corretta integrazione tra il  \verb|Model| e \textit{Speect}&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TI3&
+	\newline Viene verificata la corretta integrazione tra il  \verb|ViewModel| e il framework \textit{Qt}&
+	\newline \textcolor{green}{Superato} 
+	\\[1em]
+	\hline
+	\newline TI4&
+	\newline Viene verificata la corretta integrazione tra il  \verb|ViewModel| e \verb|Model|&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TI5&
+	\newline Viene verificata la corretta integrazione tra il  \verb|Command| e \verb|SpeectWrapper|&
+	\newline \color{green}{Superato}
+	\\[1em]
+	\hline
+\end{longtable}
+
+\subsection{Tracciamento test di integrazione-componenti}
+
+\begin{longtable}{| p{3cm} |p{6cm}|}
+	\hline
+	\textbf{Test} & \textbf{Componente}\\
+	\hline
+	\endhead
+	TI1&\verb|DeSpeect|
+	\\[1em]	
+	\hline	
+	TI2&\verb|Model|
+	\\[1em]	
+	\hline	
+	TI3&\verb|ViewModel|
+	\\[1em]	
+	\hline	
+	TI4&\verb|ViewModel|
+	\\[1em]	
+	\hline	
+	TI5&\verb|Model::Command|
+	\\[1em]
+	\hline
+\end{longtable}
 
 % RESOCONTO DELLE ATTIVITà DI VERIFICA
 
