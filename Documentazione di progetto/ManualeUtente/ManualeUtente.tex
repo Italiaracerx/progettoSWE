@@ -1,5 +1,6 @@
 \documentclass[openany,12pt,a4paper]{report}
 \usepackage{subfiles}
+\usepackage[numberedsection]{glossaries}
 \usepackage[]{graphicx}
 \usepackage{float}
 \usepackage{multirow}
@@ -8,10 +9,38 @@
 \title{Manuale Utente}
 \author{}
 
-\loadglsentries{../Glossario/Definizioni}
 %Ultima versione documento
+\newcommand{\versione}{1.0.0}
 
-\newcommand{\versione}{0.0.0}
+% Stile per il glossario
+\newglossarystyle{glossaryStyle}{
+	\setglossarystyle{altlistgroup}
+	\renewcommand*{\glsgroupheading}[1]{
+		% Tolgo la numerazione per l'indice
+		\setcounter{secnumdepth}{0}
+		\section{##1}
+		\vspace*{-\baselineskip}
+		% Solo per fare un po' di spazio tra la lettera e le voci
+		\item\makebox[\linewidth]{\hspace*{2cm}}
+	}
+}
+
+\glsaddall
+
+\makeglossaries
+
+%Term definitions
+\newglossaryentry{Speect}{name=Speect, description={Libreria di Text-To-Speech di riferimento per il progetto DeSpeect}}
+\newglossaryentry{GCC}{name=GCC, description={Compilatore C++ di riferimento per il progetto DeSpeect}}
+\newglossaryentry{Qt Creator}{name={Qt Creator}, description={Ambiente di sviluppo integrato (IDE) multipiattaforma per creare applicazioni C ++ e QML}}
+\newglossaryentry{GitHub}{name=GitHub, description={Servizio di versionamento per progetti software}}
+\newglossaryentry{Qt}{name=Qt, description={Libreria multipiattaforma per lo sviluppo di programmi con interfaccia grafica tramite l'uso di widget}}
+\newglossaryentry{IDE}{name=IDE, description={un ambiente di sviluppo integrato (in lingua inglese integrated development environment ovvero IDE) è un software che, in fase di programmazione, aiuta i programmatori nello sviluppo del codice sorgente di un programma}}
+\newglossaryentry{utterance}{name={Utterance}, description={La più piccola unità del discorso, una parte di esso che inizia e termina con una pausa chiara}}
+\newglossaryentry{relation}{name={Relation}, description={Rappresenta una struttura come una parola, sillaba, fonema o anche un obiettivo di durata e gli item sono il contenuto di questa struttura.}}
+\newglossaryentry{plug-in}{name={Plug-in}, description={Un programma non autonomo che interagisce con un altro programma per ampliarne o estenderne le funzionalità originarie}}
+\newglossaryentry{framework}{name={Framework}, description={Piattaforma che funge da strato intermedio tra un sistema operativo e il software che lo utilizza.}}
+\newglossaryentry{issue}{name={Issue}, description={Unità di lavoro per realizzare un miglioramento in un sistema. Un issue potrebbe essere un bug, una funzionalità richiesta, attività, documentazione mancante e così via.}}
 
 
 \begin{document}
@@ -46,39 +75,29 @@
 	\thispagestyle{empty}
 	\newpage
 	
-	%REGISTRO DELLE MODIFICHE (nella versione 0.0.0 non è stato inserito)
-	\begin{comment}
+	%REGISTRO DELLE MODIFICHE
+	
 	\chapter*{Registro delle modifiche}
 	\setlength\LTleft{-22mm}
 	\begin{longtable}{|p{20mm}|p{20mm}|p{40mm}|p{30mm}|p{50mm}|}
 		\hline
 		\textbf{Versione} & \textbf{Data} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Descrizione} \\
 		
-		\hline 2.0.0 & 10-03-2018 & Marco Focchiatti & Responsabile & Approvazione \\
-		\hline 1.2.0 & 09-03-2018 & Giulio Rossetti & Verificatore & Verifica \\
-		\hline 1.1.1 & 08-03-2018 & Kevin Silvestri & Verificatore & Stesura appendice §C.3 e §D  \\
-		\hline 1.1.0 & 25-02-2018 & Marco Focchiatti & Verificatore & Verifica \\
-		\hline 1.0.6 & 23-02-2018 & Manfredi Smaniotto & Verificatore & Stesura appendice §B \\
-		\hline 1.0.5 & 22-02-2018 & Manfredi Smaniotto & Verificatore & Spostamento appendice §B in appendice §C \\
-		\hline 1.0.4 & 16-02-2018 & Giulio Rossetti & Verificatore & Rivisto e modificato §3 \\
-		\hline 1.0.3 & 13-02-2018 & Cristiano Tessarolo & Verificatore & Rivisti obiettivi di qualità (§2.2) e aggiunta politica della qualità (§2.4) \\
-		\hline 1.0.2 & 11-02-2018 & Kevin Silvestri & Verificatore & Spostate definizioni metriche (§3) in NP\\
-		\hline 1.0.1 & 09-02-2018 & Marco Focchiatti & Verificatore & Rivista struttura generale e ampliata §2 \\
-		\hline 1.0.0 & 12-01-2018 & Samuele Modena & Responsabile & Approvazione \\
-		\hline 0.2.0 & 11-01-2018 & Giulio Rossetti & Verificatore & Verifica \\
-		\hline 0.1.2 & 10-01-2018 & Samuele Modena & Verificatore & Stesura appendice §B \\
-		\hline 0.1.1 & 20-12-2017 & Matteo Rizzo & Verificatore & Aggiornata §3 \\
-		\hline 0.1.0 & 19-12-2017 & Manfredi Smaniotto & Verificatore & Verifica \\		
-		\hline 0.0.6 & 18-12-2017 & Kevin Silvestri & Verificatore & Stesura appendice §A \\
-		\hline 0.0.5 & 17-12-2017 & Kevin Silvestri & Verificatore & Stesura §4 \\	
-		\hline 0.0.4 & 15-12-2017 & Matteo Rizzo & Verificatore & Stesura §3 \\
-		\hline 0.0.3 & 14-12-2017 & Samuele Modena & Verificatore & Stesura §2 \\
-		\hline 0.0.2 & 13-12-2017 & Matteo Rizzo & Verificatore & Stesura §1 \\
-		\hline 0.0.1 & 13-12-2017 & Matteo Rizzo & Verificatore & Creazione del template \\
+		\hline 1.0.0 & 2018-04-15 &  & Responsabile & Approvazione \\
+		\hline 0.2.0 & 2018-04-15 & - & Verificatore & Verifica da §5 a §8 e appendici \\
+		\hline 0.1.4 & 2018-04-14 & - & Amministratore & Stesura appendici \\
+		\hline 0.1.3 & 2018-04-13 & - & Amministratore & Stesura §8 \\
+		\hline 0.1.2 & 2018-04-12 & - & Progettista & Stesura §7 §3 \\		
+		\hline 0.1.1 & 2018-04-12 & - & Progettista & Stesura §5 - §6 \\
+		\hline 0.1.0 & 2018-04-11 & - & Verificatore & Verifica da §1 a §4 \\
+		\hline 0.0.5 & 2018-04-08 & - & Amministratore & Stesura §4 \\	
+		\hline 0.0.4 & 2018-04-08 & - & Amministratore & Stesura §3 \\
+		\hline 0.0.3 & 2018-04-07 & - & Amministratore & Stesura §2 \\
+		\hline 0.0.2 & 2018-04-06 & - & Amministratore & Stesura §1 \\
+		\hline 0.0.1 & 2018-04-05 & - & Amministratore & Creata struttura documento \\
 		\hline
 		
 	\end{longtable}
-	\end{comment}
 	
 	% INDICE
 	\tableofcontents
@@ -89,8 +108,9 @@
 	
 	\section{Scopo del documento}
 	
-	Il documento ha la finalità di spiegare le funzionalità e le modalità di utilizzo dell’applicazione
-	\textit{"DeSpeect: un'interfaccia grafica per Speect"}. Nonostante la versione attuale rappresenti una prima bozza del documento, una volta concluso esso rappresenterà sia una guida che un riferimento completo per l’utilizzo del prodotto da parte di un utente.
+	Il documento ha la finalità di illustrare, a coloro che volessero interfacciarsi con l’applicazione
+	\textit{"DeSpeect: un'interfaccia grafica per Speect"}, i requisiti necessari per poterlo utilizzare e le modalità di installazione e di utilizzo. 
+	Nonostante la versione attuale rappresenti una prima bozza del documento, una volta concluso esso rappresenterà sia una guida che un riferimento completo per l’utilizzo del prodotto da parte di un utente.
 	
 	\section{Scopo del prodotto}
 	
@@ -101,7 +121,7 @@
 	La stesura di questo documento assume come utente target del prodotto un programmatore esperto nell'utilizzo di \textit{Speect} e dei linguaggi di programmazione C e C++. \\
 	\noindent Per completezza, viene riportato in appendice A un glossario comprensivo di termini tecnici o riguardanti particolari funzionalità di \textit{DeSpeect}. Per identificare i termini presenti nel glossario, la loro prima occorrenza all’interno del documento è riportata in corsivo e marcata con una G al pedice. 
 	
-	%quando caricheremo su github in una repo apposita il manuale sviluppatore
+	%quando caricheremo su github in una repository apposita il manuale sviluppatore
 	\begin{comment}
 	\\ \noindent Per i manutentori del prodotto o per chi fosse interessato alla sua integrazione/incremento, può invece consultare il manuale sviluppatore reperibile all'indirizzo: \url{...}
 	\end{comment}
@@ -115,7 +135,7 @@
 		
 		\item \textbf{Documentazione Qt:} \\
 		\url{http://doc.qt.io/};
-		\subitem Documentazione ufficiale del framework utilizzato per lo sviluppo dell'interfaccia grafica.
+		\subitem Documentazione ufficiale del \glossario{framework}{framework} utilizzato per lo sviluppo dell'interfaccia grafica.
 		
 		\item \textit{Documentazione CMAKE:} \\
 		\url{https://cmake.org/documentation/}.
@@ -123,6 +143,7 @@
 	\end{itemize}
 
 	\chapter{Requisiti di sistema}
+	
 	L'installazione ed esecuzione del software DeSpeect richiede i seguenti prerequisiti:
 	
 	\begin{itemize}
@@ -130,10 +151,20 @@
 		\subitem \url{https://www.ubuntu.com/download/desktop}
 		\item CMake (versione minima 2.8)
 		\subitem \url{https://cmake.org/download/}
-		\item Compilatore ANSI C/ISO C90 GCC (versione minima 5.0)
+		\item Compilatore ANSI C/ISO C90 \glossario{GCC}{GCC} (versione minima 5.0)
 		\subitem \url{https://gcc.gnu.org/install/binaries.html}
-		\item Qt 5.9.0
+		\item \glossario{Qt}{Qt} 5.9.0
 		\subitem \url{https://www.qt.io/download}
+		\item Git
+		\subitem \url{https://git-scm.com/} 
+		\item Curl 
+		\subitem \url{https://curl.haxx.se/}
+		\item Swig 
+		\subitem \url{http://www.swig.org/}
+		\item libxml2-dev
+		\subitem \url{https://packages.debian.org/stretch/libxml2-dev} 
+		\item python-dev
+		\subitem \url{https://pypi.python.org/pypi/dev/0.4.0}
 	\end{itemize}	
 	 
 	\chapter{Installazione e configurazione} 
@@ -155,22 +186,100 @@
 	I termini evidenziati in \textbf{questo modo} corrispondono a pulsanti presenti all'interno dell'applicazione.
 	
 	\section{Interfaccia grafica}
-	All'avvio dell'applicazione viene presentata una schermata come in Figura 1.
+	
 	\begin{figure}[H]
 		
 		\centering
 		
-		\includegraphics[width=\textwidth]{./img/avvio.png}
+		\includegraphics[width=\textwidth]{./img/avvio}
 		
-		\caption{Interfaccia grafica - pagina iniziale}
-		
+		\caption{Interfaccia grafica - Schermata iniziale}
+	
 	\end{figure}
+
+	All'avvio dell'applicazione viene presentata una schermata come in Figura 1.\\
  	L'interfaccia grafica sarà sempre generalmente composta dalle seguenti componenti:
  	\begin{itemize}
- 		\item 
+ 		\item \textbf{Menù dell'applicazione}: situato nella parte superiore della schermata, dal quale è possibile interagire con \textit{Speect} e con le funzionalità offerte dal sistema (vedi Figura 2);
+ 		\begin{figure}[H]
+ 			
+ 			\centering
+ 			
+ 		%	\includegraphics[width=\textwidth]{./img/menu}
+ 			
+ 			\caption{Interfaccia grafica - Menù dell'applicazione}
+ 			
+ 		\end{figure}
+ 	
+ 		\item \textbf{Pannello di configurazione}: situato sotto il menù, nella parte superiore della schermata, dove è possibile caricare una voice, inserire input testuale, selezionare l'utterance type e avviare l'esecuzione di \textit{Speect} eseguendo singolarmente ogni utterance processors o tutti assieme in una volta (vedi Figura 3);
+ 		\begin{figure}[H]
+ 			
+ 			\centering
+ 			
+ 			%	\includegraphics[width=\textwidth]{./img/area}
+ 			
+ 			\caption{Interfaccia grafica - Pannello di configurazione}
+ 			
+ 		\end{figure}
+ 	
+ 		\item \textbf{Pannello degli Utterance Processors}: situato sulla sinistra appena sotto al pannello di configurazione, dove è possibile visualizzare ogni processor e capire quali sono stati eseguiti osservando le caselle relative sulla sinistra (vedi Figura 4);
+ 		\begin{figure}[H]
+ 			
+ 			\centering
+ 			
+ 			%	\includegraphics[width=\textwidth]{./img/area}
+ 			
+ 			\caption{Interfaccia grafica - Pannello degli Utterance Processors}
+ 			
+ 		\end{figure}
+ 		
+ 		\item \textbf{Pannello delle Relations}: situato sulla sinistra sotto al pannello degli utterance processors dove è possibile visualizzare le relazioni presenti nel grafo. Qui l'utente può, deselezionando una relazione, togliere i relativi nodi dal grafo (vedi Figura 5);
+ 		\begin{figure}[H]
+ 			
+ 			\centering
+ 			
+ 			%	\includegraphics[width=\textwidth]{./img/area}
+ 			
+ 			\caption{Interfaccia grafica - Pannello delle Relations}
+ 			
+ 		\end{figure}
+ 	
+ 		\item \textbf{Area del grafo}: situato sulla destra sotto al pannello di configurazione, dove viene visualizzato il grafo quando viene eseguito \textit{Speect}. I nodi sono selezionabili e si possono spostare (vedi Figura 6);
+ 		\begin{figure}[H]
+ 			
+ 			\centering
+ 			
+ 			%	\includegraphics[width=\textwidth]{./img/area}
+ 			
+ 			\caption{Interfaccia grafica - Area del grafo}
+ 			
+ 		\end{figure}
+ 	
+ 		\item \textbf{Proprietà del nodo}: situato nella parte inferiore della schermata, dove vengono visualizzate le informazioni del nodo selezionato (vedi Figura 7);
+ 		\begin{figure}[H]
+ 			
+ 			\centering
+ 			
+ 			%	\includegraphics[width=\textwidth]{./img/area}
+ 			
+ 			\caption{Interfaccia grafica - Proprietà del nodo}
+ 			
+ 		\end{figure}
+ 		
  	\end{itemize}
 	
-	\subsection{Struttura dell'interfaccia grafica}
+	\subsection{Menù dell'applicazione}
+	Il menù è sempre disponibile in qualunque posizione vi troviate all'interno dell'applicazione e al suo interno è possibile selezionare le seguenti voci:
+	\begin{itemize}
+		\item File 
+			\begin{itemize}
+				\item 
+			\end{itemize}
+		\item Help
+			\begin{itemize}
+				\item 
+			\end{itemize}
+	\end{itemize}
 	
 	\subsection{Visualizzare il manuale utente}
 	
@@ -212,7 +321,13 @@
 	
 	\section{Errori in DeSpeect}
 	
-	\subsection{Struttura dei codici di errore}
+	In questa sezione viene fornito un elenco di tutti i possibili errori che si possono riscontrare utilizzando l’applicazione \textit{DeSpeect}:
+	\begin{itemize}
+		\item \textbf{E01 - ...}:l'utente visualizza un opportuno messaggio di errore nel caso in cui tenti di ...;
+	\end{itemize}
+	
+	\subsection{Struttura dei codici di errore} 
+	%Credo vada nelle norme di progetto
 	
 	\subsection{Log degli errori}
 	
@@ -220,7 +335,7 @@
 	
 	\section{Segnalazione di bug}
 	
-	\textit{DeSpeect} potrebbe contenere bug o potrebbe essere desiderabile apportare modifiche e ampliamenti alle sue funzionalità. \\ È possibile segnalare malfunzionamenti o richieste di nuove funzionalità sotto forma di GitHub issue all’indirizzo:
+	\textit{DeSpeect} potrebbe contenere bug o potrebbe essere desiderabile apportare modifiche e ampliamenti alle sue funzionalità. \\ È possibile segnalare malfunzionamenti o richieste di nuove funzionalità sotto forma di GitHub \glossario{issue}{issue} all’indirizzo:
 	\begin{center}
 		\url{https://github.com/graphiteSWE/DeSpeect}
 	\end{center}
@@ -231,6 +346,6 @@
 	
 	\appendix
 	
-	\chapter{Glossario}
+	\printglossary[style=glossaryStyle, nonumberlist]
 	
 \end{document}

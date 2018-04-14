@@ -1,0 +1,76 @@
+\documentclass[openany,12pt,a4paper]{article} 
+\usepackage{subfiles} 
+\usepackage[]{graphicx} 
+\usepackage{float} 
+\graphicspath{{./img/}{./../img/}} 
+\usepackage{../StileDoc} 
+\title{Verbale Interno} 
+\author{} 
+\newcommand{\versione}{} 
+\loadglsentries{../Glossario/Definizioni} 
+ 
+\begin{document} 
+  \makeatletter 
+  \begin{titlepage} 
+    \setlength{\headsep}{0pt}   
+    \begin{center} 
+      \includegraphics[width=0.5\linewidth]{Logo.png}\\[1em] 
+      {\huge \bfseries  \@title }\\[10ex] 
+      \textbf{\Large Informazioni Documento} \\[2em] 
+      \bgroup 
+      \def\arraystretch{1.5} 
+      \begin{tabular}{l|l} 
+        \textbf{Data approvazione} & 14 aprile 2018 \\ 
+        \textbf{Responsabile} & Marco Focchiatti \\ 
+        \textbf{Redattore} & Matteo Rizzo \\ 
+        \textbf{Verificatore} & Kevin Silvestri \\ 
+        \textbf{Distribuzione} & Prof. Tullio Vardanega \\ 
+         & Prof. Riccardo Cardin \\ 
+         & Gruppo Graphite \\ 
+        \textbf{Uso} & Interno \\ 
+        \textbf{Recapito} & graphite.swe@gmail.com \\ 
+      \end{tabular} 
+    \egroup 
+    \end{center} 
+  \end{titlepage} 
+  \makeatother 
+ 
+  \thispagestyle{empty} 
+  \newpage 
+   
+  \tableofcontents 
+  \newpage 
+   
+  \section{Informazioni generali} 
+   
+  \subsection{Informazioni sull'incontro} 
+   
+  \begin{itemize}  
+      \item \textbf{Luogo:} Videochiamata;
+      \item \textbf{Data:} 2018-04-14; 
+      \item \textbf{Orari} 9:30 - 11.00;
+      \item \textbf{Partecipanti del gruppo:} Samuele Modena, Matteo Rizzo, Giulio Rossetti, Manfredi Smaniotto, Cristiano Tessarolo; 
+      \item \textbf{Partecipanti esterni:} nessuno. 
+  \end{itemize} 
+ 
+  \subsection{Ragioni dell'incontro} 
+  Confronto su stato di avanzamento lavori e dinamiche di consegna.
+ 
+  \section{Resoconto} 
+  Nel corso dell'incontro ogni membro ha illustrato lo stato d'avanzamento dei propri task. Si è inoltre discussa la modalità di consegna del codice e si è fatto il punto della situazione per quanto riguarda la disponibilità dei membri del team per la prossima fase di progetto alla luce di possibili stage. La discussione è riassumibile secondo i seguenti punti:   
+	
+  \begin{itemize}
+	\item Riepilogo dello stato dei task correnti;
+	\item Confronto sulle modalità di consegna del codice;
+	\item Punto della situazione sulla possibilità che alcuni membri terminino il progetto prima della data della RA.
+  \end{itemize}
+
+  \section{Tracciamento delle decisioni} 
+   
+  \begin{itemize} 
+      \item \textbf{VI-2018-04-02.1:} Consegna del codice tramite link a repository in lettera di consegna;
+      \item \textbf{VI-2018-04-02.2:} Pianificazione che includa la possibilità che due membri del gruppo terminino il progetto prima del previsto.
+  \end{itemize} 
+   
+  \end{document}
+ \ No newline at end of file 

@@ -1,0 +1,73 @@
+\documentclass[openany,12pt,a4paper]{article} 
+\usepackage{subfiles} 
+\usepackage[]{graphicx} 
+\usepackage{float} 
+\graphicspath{{./img/}{./../img/}} 
+\usepackage{../StileDoc} 
+\title{Verbale Interno} 
+\author{} 
+\newcommand{\versione}{} 
+\loadglsentries{../Glossario/Definizioni} 
+ 
+\begin{document} 
+  \makeatletter 
+  \begin{titlepage} 
+    \setlength{\headsep}{0pt}   
+    \begin{center} 
+      \includegraphics[width=0.5\linewidth]{Logo.png}\\[1em] 
+      {\huge \bfseries  \@title }\\[10ex] 
+      \textbf{\Large Informazioni Documento} \\[2em] 
+      \bgroup 
+      \def\arraystretch{1.5} 
+      \begin{tabular}{l|l} 
+        \textbf{Data approvazione} & 9 aprile 2018 \\ 
+        \textbf{Responsabile} & Marco Focchiatti \\ 
+        \textbf{Redattore} & Matteo Rizzo \\ 
+        \textbf{Verificatore} & Kevin Silvestri \\ 
+        \textbf{Distribuzione} & Prof. Tullio Vardanega \\ 
+         & Prof. Riccardo Cardin \\ 
+         & Gruppo Graphite \\ 
+        \textbf{Uso} & Interno \\ 
+        \textbf{Recapito} & graphite.swe@gmail.com \\ 
+      \end{tabular} 
+    \egroup 
+    \end{center} 
+  \end{titlepage} 
+  \makeatother 
+ 
+  \thispagestyle{empty} 
+  \newpage 
+   
+  \tableofcontents 
+  \newpage 
+   
+  \section{Informazioni generali} 
+   
+  \subsection{Informazioni sull'incontro} 
+   
+  \begin{itemize}  
+      \item \textbf{Luogo:} Videochiamata;
+      \item \textbf{Data:} 2018-04-09; 
+      \item \textbf{Orari} 9:30 - 11.00;
+      \item \textbf{Partecipanti del gruppo:} Samuele Modena, Matteo Rizzo, Giulio Rossetti, Manfredi Smaniotto, Cristiano Tessarolo; 
+      \item \textbf{Partecipanti esterni:} nessuno. 
+  \end{itemize} 
+ 
+  \subsection{Ragioni dell'incontro} 
+  Confronto su stato di avanzamento lavori e riepilogo finale dell'architettura in vista della videochiamata relativa alla PB.
+ 
+  \section{Resoconto} 
+  Nel corso dell'incontro ogni membro ha illustrato lo stato d'avanzamento dei propri task. Si è inoltre fatto il punto della situazione per quanto riguarda l'architettura del prodotto e le dinamiche della presentazione relativa alla PB. La discussione è riassumibile secondo i seguenti punti:   
+	
+  \begin{itemize}
+	\item Riepilogo dello stato dei task correnti;
+	\item Riepilogo dell'architettura del prodotto;
+	\item Riepilogo delle dinamiche della presentazione relativa alla PB.
+  \end{itemize}
+
+  \section{Tracciamento delle decisioni} 
+   
+  Nel corso della riunione non è stata presa alcuna decisione rilevante.
+  
+  \end{document}
+ \ No newline at end of file 
