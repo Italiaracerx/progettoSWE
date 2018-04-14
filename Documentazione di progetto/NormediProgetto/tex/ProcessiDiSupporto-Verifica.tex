@@ -13,11 +13,11 @@ Il processo di verifica ha lo scopo di accertare che non vengano introdotti erro
 \subsection{Descrizione}
 
 Il processo di verifica viene istanziato per ogni processo in esecuzione, qualora esso raggiunga un livello di maturità significativo o vi fossero modiche sostanziali al suo stato. Per ogni processo viene verificata la qualità dello stesso e dei suoi prodotti. Ognuno dei periodi descritti nel PP produce degli esiti diversi, dunque le procedure di verifica saranno specializzate per ognuno di essi. Gli esiti delle attività di
-verifica sono riportati in un'appendice dedicata nel PQ. 
+verifica sono riportati in un'appendice dedicata nel PQ (§C). 
 In relazione alle attività di verifica, il gruppo si riferisce alle metriche descritte in §3.3 di questo documento. Il processo di verifica agisce su:
 \begin{itemize}
-	\item \textbf{Processi}: L'esecuzione dei processi viene monitorata e documentato a fine periodo nell'appendice §C "Resoconto delle attività di verifica di periodo" nel PQ, secondo le metodologie indicate dallo standard \glossario{ISO/IEC 15504}{ISO/IEC 15504} illustrato in appendice §A.1 dello stesso;
-	\item \textbf{Prodotti}: La verifica dei prodotti assume connotazioni differenti a seconda della tipologia di prodotto in esame: per i documenti si prediligono tecniche di analisi statica, per il software tecniche di analisi dinamica, di seguito approfondite.
+	\item \textbf{Processi}: l'esecuzione dei processi viene monitorata e documentato secondo le metodologie indicate dallo standard \glossario{ISO/IEC 15504}{ISO/IEC 15504} illustrato in appendice §A.1 del PQ;
+	\item \textbf{Prodotti}: la verifica dei prodotti assume connotazioni differenti a seconda della tipologia di prodotto in esame: per i documenti si prediligono tecniche di analisi statica, per il software tecniche di analisi dinamica, di seguito approfondite.
 \end{itemize}
 
 \subsection{Analisi}
@@ -29,7 +29,7 @@ L’analisi statica è una tecnica che permette di individuare anomalie all’in
 \begin{itemize}
 	\item \textbf{Walkthrough:} viene svolta effettuando una lettura a largo spettro. Si tratta di un’attività collaborativa onerosa e poco efficiente. Essa viene utilizzata principalmente durante la fase iniziale del progetto, in cui non tutti i membri del gruppo hanno piena padronanza e conoscenza delle NP e del PQ. Tramite analisi \textit{Walkthrough} è possibile stilare una lista di controllo contenente gli errori più comuni;
 	
-	\item \textbf{Inspection:} viene svolta una lettura mirata e strutturata, volta a localizzare gli errori segnalati nella lista di controllo con il minor costo possibile. Con l'incremento dell'esperienza, la lista di controllo viene progressivamente estesa rendendo l’\textit{inspection} via via più efficacie.
+	\item \textbf{Inspection:} viene svolta una lettura mirata e strutturata, volta a localizzare gli errori segnalati nella lista di controllo con il minor costo possibile. Con l'incremento dell'esperienza, la lista di controllo viene progressivamente estesa rendendo l’ispezione via via più efficace.
 \end{itemize}
 
 Il gruppo utilizza entrambe le tecniche di analisi statica. Seguono le liste di controllo per gli errori comuni relativi a documentazione e codice.
@@ -81,7 +81,7 @@ L’analisi dinamica è una tecnica di analisi del prodotto software che richied
 	\item \textbf{Istruzioni aggiuntive:} ulteriori istruzioni su come eseguire il test e su come interpretare i risultati ottenuti.
 \end{itemize}
 
-I test verranno eseguite automaticamente ad ogni commit effettuato tramite l'integrazione continua attuata grazie a \textit{Travis CI}, mentre la copertura del codice verrà assicurata dal servizio web \textit{coveralls.io}, anch'esso integrabile con Travis CI e Github, che permette di ottenere viste immediate circa la copertura del codice dopo ogni build. Tali test si differenziano tra loro secondo quanto illustrato nei paragrafi che seguono; una
+I test verranno eseguite automaticamente ad ogni commit effettuato tramite l'integrazione continua attuata grazie a \textit{Travis CI}, mentre la copertura del codice verrà assicurata dal servizio web \textit{codcov.io}, anch'esso integrabile con Github, che permette di ottenere viste immediate circa la copertura del codice dopo ogni build. Tali test si differenziano tra loro secondo quanto illustrato nei paragrafi che seguono; una
 trattazione più approfondita, assieme al tracciamento, è reperibile nel PQ (Appendice §B).
 
 \subsection{Procedure}
@@ -103,10 +103,12 @@ trattazione più approfondita, assieme al tracciamento, è reperibile nel PQ (Ap
 Segue il diagramma di flusso che riassume la procedura di verifica dei documenti:
 
 \begin{figure}[H]
-	\includegraphics[scale=0.75]{verifica-documenti}
+	\includegraphics[scale=0.8]{verifica-documenti}
 	\centering
 	\caption{Diagramma della procedura di verifica dei documenti}
 \end{figure}
+
+\newpage
 
 \subsubsection{Verifica del software}
 
@@ -142,16 +144,12 @@ Il controllo della qualità del prodotto viene garantito dai processi di verific
 	\item \textbf{Validazione}: questo processo viene svolto come azione conclusiva per accertare
 	che il prodotto rispecchi le aspettative utilizzando un metodo sistematico, disciplinato
 	e quantificabile;
-	\item \textbf{Rispetto delle norme} il prodotto deve rispettare le norme e gli strumenti descritti dal
+	\item \textbf{Rispetto delle norme}: il prodotto deve rispettare le norme e gli strumenti descritti dal
 	presente documento.
 \end{itemize}
 
 \subsubsection{Accertamento di qualità di processo}
-La qualità di un processo viene raffinata attraverso al miglioramento continuo indotto dal modello PDCAG (Plan-Do-Check-Act) che apporta in modo incrementale qualità sempre maggiore. Ogni attività del modello deve avere una scrupolosa pianificazione ed un’ottima
-strategia di verifica che, all’interno di una determinata attività, permetta una serie di iterazioni fino al raggiungimento di un grado di qualità
-accettabile per poter procedere ad un ulteriore incremento. Per poter parlare di un possibile miglioramento della qualità di un processo, bisogna
-quantificare la qualità studiandone caratteristiche
-di interesse. Ciò viene attuato sulla base dello standard SPICE.
+La qualità di un processo viene raffinata attraverso il miglioramento continuo indotto dal modello PDCA (Plan-Do-Check-Act) che apporta in modo incrementale qualità sempre maggiore. Ogni attività del modello deve avere una scrupolosa pianificazione ed un’ottima strategia di verifica che, all’interno di una determinata attività, permetta una serie di iterazioni fino al raggiungimento di un grado di qualità accettabile per poter procedere ad un ulteriore incremento. Per poter parlare di un possibile miglioramento della qualità di un processo, bisogna quantificare la qualità studiandone caratteristiche di interesse. Ciò viene attuato sulla base dello standard SPICE approfondito in §A.1 del PQ.
 
 \subsection{Test}
 

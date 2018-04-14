@@ -140,7 +140,7 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 		\item Organizzare e dividere le parti del progetto in modo da poter ottenere componenti singole e facili da implementare attraverso la codifica. 
 	\end{itemize}
 
-	La progettazione si colloca nel periodo "Progettazione e codifica" dettagliato nel PP (§4.4), qui vengono individuati i design pattern e costruita l'architettura del prodotto realizzando diagrammi di classi e di sequenza: il lavoro svolto rappresenta la \textit{Product Baseline}. \\
+	La progettazione si colloca nel periodo "Progettazione e codifica" dettagliato nel PP (§4.6), qui vengono individuati i design pattern e costruita l'architettura del prodotto realizzando diagrammi di classi e di sequenza: il lavoro svolto rappresenta la \textit{Product Baseline}. \\
 	E' compito dei \textit{Progettisti} svolgere l'attività di progettazione, definendo l'architettura logica del prodotto identificando componenti chiare, riusabili e coese, rimanendo nei costi fissati. L'architettura definita deve attenersi alle seguenti qualità:
 	\begin{itemize}
 		\item \textbf{Sufficienza:} soddisfare i requisiti definiti nel documento \textit{Analisi dei Requisiti};
@@ -192,13 +192,13 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 	Al fine di implementare le qualità dell’architettura descritte in §2.2.5.2, ai \textit{Progettisti} viene
 	richiesto di seguire le seguenti linee guida:
 	\begin{itemize}
-		\item evitare package vuoti, classi e parametri non utilizzati e parametri senza tipo;
+		\item Evitare package vuoti, classi e parametri non utilizzati e parametri senza tipo;
 		\item evitare la presenza di dipendenze circolari;
-		\item evitare modifiche ai servizi offerti dalle librerie esterne utilizzate;
-		\item utilizzare ove possibile classi astratte;
-		\item utilizzare nomi significativi per le classi e i metodi in esse contenuti, in modo da
+		\item Evitare modifiche ai servizi offerti dalle librerie esterne utilizzate;
+		\item Utilizzare ove possibile classi astratte;
+		\item Utilizzare nomi significativi per le classi e i metodi in esse contenuti, in modo da
 		facilitare la comprensione immediata di ogni componente;
-		\item assegnare ad ogni metodo e attributo minor visibilità possibile.
+		\item Assegnare ad ogni metodo e attributo minor visibilità possibile.
 	\end{itemize}
 	
 	\subsection{Codifica}
@@ -230,7 +230,7 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 	\end{verbatim}
 
 	\subsubsection{Commenti}
-	Ogni metodo del codice del prodotto, al netto delle librerie esterne deve avere un commento la cui struttura segue la seguente sintassi:
+	Ogni metodo del codice del prodotto, al netto delle librerie esterne, deve avere un commento la cui struttura segue la seguente sintassi:
 	
 	\begin{verbatim}
 		/**
@@ -239,7 +239,7 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 		*/
 	\end{verbatim}
 
-	Nella stesura del commento il \textit{Programmatore} è tenuto a rispettare le seguenti convenzioni:
+	\noindent Nella stesura del commento il \textit{Programmatore} è tenuto a rispettare le seguenti convenzioni:
 	\begin{itemize}
 		\item Documentare con un commento in linea parti di codice non immediatamente comprensibili;
 		\item Usare frasi di senso compiuto in modo da essere più chiari possibili;

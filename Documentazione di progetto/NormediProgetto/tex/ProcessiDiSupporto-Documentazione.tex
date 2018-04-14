@@ -384,7 +384,7 @@ Per poter applicare correttamente SPICE, viene utilizzato il \textit{ciclo di De
 \subsubsection{Qualità di prodotto - ISO/IEC 9126}
 
 \glossario{ISO/IEC 9126}{ISO/IEC 9126} è lo standard scelto per la definizione degli obiettivi di prodotto. Si rimanda all'appendice §A.2 del PQ per un'approfondita descrizione di tale standard.
-La scelta di ISO/IEC 9126 è motivata dal fatto che esso definisce criteri di applicazione nell'ambito di metriche per la qualità interna esterna e in uso del software, qui approfondite in §3,3.4 \textit{Misure e metriche} e successive, utili a valutare il grado di raggiungimento degli obiettivi prefissati.
+La scelta di ISO/IEC 9126 è motivata dal fatto che esso definisce criteri di applicazione nell'ambito di metriche per la qualità interna esterna e in uso del software, qui approfondite in §3.3.4 \textit{Misure e metriche} e successive, utili a valutare il grado di raggiungimento degli obiettivi prefissati.
 I prodotti realizzati durante lo svolgimento del progetto sono di due tipologie:
 
 \begin{itemize}
@@ -395,7 +395,7 @@ I prodotti realizzati durante lo svolgimento del progetto sono di due tipologie:
 		\item Possedere funzionalità che soddisfino i requisiti fissati;
 		\item \glossario{Manutenibilità}{manutenibilita};
 		\item Essere ampiamente testato;
-		\item \glossario{Robustezza}{robustezza};
+		\item \glossario{Robustezza}{robustezza}.
 	\end{itemize}
 \end{itemize}
 
@@ -664,7 +664,7 @@ Il gruppo intende perseguire gli obiettivi di qualità definiti nel PQ (§2.1) a
 
 \begin{itemize}
 	\item Applicazione del principio del miglioramento continuo, da effettuarsi per tutta la durata del progetto a livello personale e di team;
-	\item Stretta collaborazione con la proponente che si sviluppi in rapporti caratterizzati da una cooperazione attenta e propositiva orientata alla fornitura di un servizio di qualità;
+	\item Stretta collaborazione con la Proponente che si sviluppi in rapporti caratterizzati da una cooperazione attenta e propositiva orientata alla fornitura di un servizio di qualità;
 	\item Utilizzo di appositi strumenti automatici;
 	\item Costante verifica, validazione e conseguente miglioramento del sistema qualità attraverso l'istanziazione di processi specializzati supportati da strumenti appropriati;
 	\item Lauto investimento temporale in termini di formazione dei membri del gruppo attraverso studio personale e condivisione delle conoscenze specifiche dei membri.
@@ -686,7 +686,7 @@ Tale obiettivo viene perseguito mediante il rilevamento degli errori ortografici
 Per ogni incremento, l'insieme dei task da assegnare ai membri del gruppo durante lo sviluppo viene pianificato in modo tale che il suo completamento porti al soddisfacimento di almeno un requisito obbligatorio.   
 
 \subsubsection{OQPPS002: Copertura del codice}
-Tale obiettivo viene perseguito mediante l'applicazione dei test definiti in fase di progettazione attuata tramite lo strumento automatico \textit{Travis}\ped{G}, che assicura che il codice caricato sulla repository superi tali test, e monitorato attraverso i report automatici generati da \textit{coveralls.io} (tali tecnologie sono approfondite in §4.7.4.2 di questo documento).
+Tale obiettivo viene perseguito mediante l'applicazione dei test definiti in fase di progettazione attuata tramite lo strumento automatico \textit{Travis}\ped{G}, che assicura che il codice caricato sulla repository superi tali test, e monitorato attraverso i report automatici generati da \textit{codcov.io} (tali tecnologie sono approfondite in §4.7.4.2 di questo documento).
 
 \subsubsection{OQPPS003: Manutenzione e comprensione del codice}
 Tale obiettivo viene perseguito mediante la messa in pratica delle norme relative alla codifica definite nelle NP, garantita dagli strumenti di integrazione continua approfonditi in §3.3.10 di questo documento.
@@ -721,17 +721,17 @@ L'integrazione continua è un metodo di sviluppo software in cui gli sviluppator
 	\item Riduzione del tempo richiesto per convalidare e pubblicare nuovi aggiornamenti.
 \end{itemize} 
 
-Il gruppo intende fare uso dell'integrazione continua al fine di perseguire i succitati obiettivi. Segue la presentazione del flusso di integrazione continua (si noti che gli strumenti citati sono approfonditi in §4.7)
+Il gruppo intende fare uso dell'integrazione continua al fine di perseguire i succitati obiettivi. Segue la presentazione del flusso di integrazione continua (si noti che gli strumenti citati sono approfonditi in §4.7).
 
 \subsubsection{Flusso di integrazione continua}
 
 Il flusso dell'integrazione continua instaurata è il seguente:
 \begin{enumerate}
 	\item Scrittura del codice all'interno dell'ambiente di sviluppo;
-	\item Push dei dati modificati verso il repository \textit{GitHub};
+	\item Push dei dati modificati verso il repository \textit{GitHub}, notificato su apposito canale \textit{Slack};
 	\item Esecuzione automatica della build e della suite di test mediante \textit{Travis CI}, con eventuale notifica su \textit{Slack} relativa a problemi di building o di mancato superamento dei test;
-	\item Rilascio dei dati sul code coverage a \textit{coveralls.io};
-	\item Calcolo dei valori per le ulteriori metriche relative alla qualità del software da parte di \textit{Codacy} e \textit{Better Code Hub}.
+	\item Rilascio dei dati sul code coverage a \textit{codcov.io};
+	\item Calcolo dei valori per le ulteriori metriche relative alla qualità del software da parte di \textit{Better Code Hub}.
 \end{enumerate}
 
 Il seguente diagramma riassume il flusso di integrazione continua:
