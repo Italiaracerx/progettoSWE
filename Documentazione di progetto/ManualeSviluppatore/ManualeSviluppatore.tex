@@ -12,12 +12,12 @@
 %Ultima versione documento
 \newcommand{\versione}{1.0.0}
 
-% Tolgo la numerazione per l'indice
-\setcounter{secnumdepth}{0}
 % Stile per il glossario
 \newglossarystyle{glossaryStyle}{
 	\setglossarystyle{altlistgroup}
 	\renewcommand*{\glsgroupheading}[1]{
+		% Tolgo la numerazione per l'indice
+		\setcounter{secnumdepth}{0}
 		\section{##1}
 		\vspace*{-\baselineskip}
 		% Solo per fare un po' di spazio tra la lettera e le voci
