@@ -10,7 +10,7 @@
 \author{}
 
 %Ultima versione documento
-\newcommand{\versione}{1.0.0}
+\newcommand{\versione}{0.2.0}
 
 % Stile per il glossario
 \newglossarystyle{glossaryStyle}{
@@ -83,7 +83,6 @@
 		\hline
 		\textbf{Versione} & \textbf{Data} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Descrizione} \\
 		
-		\hline 1.0.0 & 2018-04-15 &  & Responsabile & Approvazione \\
 		\hline 0.2.0 & 2018-04-15 & - & Verificatore & Verifica da §5 a §8 e appendici \\
 		\hline 0.1.4 & 2018-04-14 & - & Amministratore & Stesura appendici \\
 		\hline 0.1.3 & 2018-04-13 & - & Amministratore & Stesura §8 \\
@@ -121,7 +120,7 @@
 	\section{Informazioni utili}
 	
 	La stesura di questo documento assume come utente target del prodotto un programmatore esperto nell'utilizzo di \textit{Speect} e dei linguaggi di programmazione C e C++.
-	Per completezza, viene riportato in appendice D un glossario comprensivo di termini tecnici o riguardanti particolari funzionalità di \textit{DeSpeect}. Per identificare i termini
+	Per completezza, viene riportato in appendice §D un glossario comprensivo di termini tecnici o riguardanti particolari funzionalità di \textit{DeSpeect}. Per identificare i termini
 	presenti nel glossario, la loro prima occorrenza all’interno del documento è riportata in corsivo e
 	marcata con una G al pedice.
 	
@@ -180,7 +179,7 @@
 	
 	\subsection{IDE}
 	
-	QT è una libreria multipiattaforma per lo sviluppo di programmi con interfaccia grafica tramite l'uso di widget (congegni o elementi grafici). La libreria è scritta in C++ e gode di ampia diffusione e supporto. L'interfaccia grafica di DeSpeect è stata sviluppata mediante questa tecnologia nella versione v5.9 LTS. Maggiori informazioni su Qt sono reperibili al seguente link:
+	Qt è una libreria multipiattaforma per lo sviluppo di programmi con interfaccia grafica tramite l'uso di widget. La libreria è scritta in C++ e gode di ampia diffusione e supporto. L'interfaccia grafica di DeSpeect è stata sviluppata mediante questa tecnologia nella versione v5.9 LTS. Maggiori informazioni su Qt sono reperibili al seguente link:
 	\begin{center}
 	\centerline{\url{https://www.qt.io/what-is-qt/}}
 	\end{center}
@@ -205,7 +204,7 @@
 	
 	\subsection{GUI}
 	
-	Per progettare l'interfaccia grafica viene utilizzato \glossario{Qt Creator}{Qt Creator}. Questo strumento permette di realizzare interfacce grafiche mediante le librerie grafiche Qt, diventate in questo ambito quasi uno standard per piattaforme Linux Based.  Maggiori informazioni su Qt Creator sono disponibili al seguente link:: 
+	Per progettare l'interfaccia grafica viene utilizzato \glossario{Qt Creator}{Qt Creator}. Questo strumento permette di realizzare interfacce grafiche mediante le librerie grafiche Qt, diventate in questo ambito quasi uno standard per piattaforme Linux Based.  Maggiori informazioni su Qt Creator sono disponibili al seguente link:
 	\begin{center}
 	\centerline{\url{https://www.qt.io/qt-features-libraries-apis-tools-and-ide/}}
 	\end{center}
@@ -220,7 +219,7 @@
 	\end{center}
 
 	\subsection{Verifica della build e testing automatico}
-	Travis CI è un servizio di integrazione continua distribuito utilizzato per costruire e testare progetti software ospitati su \glossario{GitHub}{GitHub}. I progetti open source possono essere testati gratuitamente attraverso il sito web \url{travis-ci.org}. Questa tecnologia viene utilizzata per l'esecuzione di test automatici su DeSpeect a seguito del caricamento di codice sul repository relativo al progetto, così da garantirne la correttezza. Documentazione relativa a Travis CI è accessibile al seguente link:
+	Travis CI è un servizio di integrazione continua distribuito utilizzato per costruire e testare progetti software ospitati su \glossario{GitHub}{GitHub}. \\ I progetti open source possono essere testati gratuitamente attraverso il sito web  \url{travis-ci.org}. Questa tecnologia viene utilizzata per l'esecuzione di test automatici su DeSpeect a seguito del caricamento di codice sul repository relativo al progetto, così da garantirne la correttezza. Documentazione relativa a Travis CI è accessibile al seguente link:
 	\begin{center}
 		\url{https://docs.travis-ci.com/}
 	\end{center}
@@ -233,9 +232,9 @@
 			\url{https://bettercodehub.com/}
 		\end{center}
 		
-		\item \textbf{Codacy}: Codacy è uno strumento di analisi / qualità del codice automatizzato, con cui si ottengono analisi statiche, complessità ciclomatica, indicazioni sulla duplicazione e le variazioni della copertura dei test dell'unità di codice in ogni richiesta di commit e pull. È inoltre possibile utilizzare Codacy per applicare uno standard di qualità del codice e applicare le best practice sulla sicurezza, il tutto integrato con GitHub. Ulteriori informazioni su Codacy sono disponibili al seguente link:
+		\item \textbf{Codecov}: Codecov offre un pacchetto di strumenti altamente integrati per raggruppare, unificare, archiviare e confrontare report sulla copertura del codice. Il servizio è accessibile gratuitamente al seguente link: 
 		\begin{center}
-			\url{https://www.codacy.com/features}
+			\url{https://codecov.io/}
 		\end{center}
 	\end{itemize} 
 	
@@ -243,7 +242,7 @@
 	
 	Vengono di seguito illustrate le modalità di installazione e configurazione del software DeSpeect, nonché le modalità di installazione e importazione del progetto in relazione all'IDE consigliato per lavorare con lo stesso.
 	
-	\section{Installazione e configurazione}
+	\section{Installazione e configurazione di DeSpeect}
 	
 	DeSpeect è reperibile su GitHub al seguente link:
 	\begin{center}
@@ -252,13 +251,13 @@
 	
 	\noindent Una volta soddisfatti i prerequisiti descritti in §2 "Requisiti di sistema" di questo documento, per installare ed eseguire il software è necessario seguire la seguente procedura:
 	\begin{enumerate}
-		\item Clonare o scaricare la repository sulla propria macchina;
-		\item Entrare nella cartella scaricata ed eseguire lo script \verb|build.sh|.
+		\item Clonare o scaricare il repository sulla propria macchina;
+		\item Entrare nella cartella scaricata ed eseguire lo script \verb|build.sh| presente al suo interno. Tale script installerà Speect ed effettuerà una build del progetto all'interno nella directory \verb|DeSpeect/build/|.
+		\item Per eseguire DeSpeect, entrare nella directory \verb|DeSpeect/build/| ed eseguire il comando \verb|./main|.
 	\end{enumerate}
-	Tale procedura installerà la libreria Speect e genererà una build del software nella directory \verb|DeSpeect/build|, nonché avvierà automaticamente un'esecuzione di DeSpeect.
 	
-	\section{IDE}
-	Il progetto DeSpeect non è necessariamente legato ad alcun IDE, tuttavia si consiglia l'uso di Qt e \textit{Qt Creator}. Le librerie Qt sono infatti utilizzate all'interno del prodotto per la realizzazione dell'interfaccia grafica, e l'adozione dei succitati IDE ne agevola notevolmente l'impiego nell'ottica di modifiche e/o estensioni alla stessa. Viene di seguito illustrata la procedura per l'installazione dell'IDE e l'importazione del progetto.
+	\section{IDE suggerito}
+	Il progetto DeSpeect non è necessariamente legato ad alcun IDE, tuttavia si consiglia l'uso di Qt e Qt Creator. Le librerie Qt sono infatti utilizzate all'interno del prodotto per la realizzazione dell'interfaccia grafica, e l'adozione dei succitati IDE ne agevola notevolmente l'impiego nell'ottica di modifiche e/o estensioni alla stessa. Viene di seguito illustrata la procedura per l'installazione dell'IDE e l'importazione del progetto.
 	
 	\subsection{Installare Qt}
 	
@@ -277,7 +276,7 @@
 	Per importare i file di DeSpeect all'interno dell'IDE, è necessario seguire la seguente procedura:
 	\begin{enumerate}
 		\item Installare Speect sulla propria macchina. Un modo per farlo consiste nell'eseguire lo script \verb|install.sh| contenuto all'interno della directory \verb|SpeectInstaller/| di DeSpeect;
-		\item Aprire l'IDE installato seguendo le indicazioni riportate nella precedente sezione (§3.2.1);
+		\item Aprire l'IDE installato seguendo le indicazioni riportate nella precedente sezione;
 		\item Dalla barra dei menù selezionare "File / Apri progetto" (ctrl + o);
 		\item Selezionare il file \verb|CMakeLists.txt| contenuto nella directory \verb|DeSpeect/|;
 		\item Confermare l'importazione all'interno dell'IDE.
@@ -286,7 +285,7 @@
 
 \chapter{Architettura generale di DeSpeect}
 
-L'architettura generale del prodotto segue il pattern Model-View-ViewModel. Questo pattern è basato su tre componenti principali:
+L'architettura generale del prodotto segue il pattern Model-View-ViewModel (MVVM). Questo pattern è basato su tre componenti principali:
 
 \begin{itemize}
 	\item \textbf{Model}: un'implementazione del modello del dominio dei dati;
@@ -313,12 +312,12 @@ L'architettura generale del prodotto segue il pattern Model-View-ViewModel. Ques
 
 \chapter{Implementazione MVVM}
 
-Vengono di seguito illustrate le implementazioni per le componenti del pattern Model-View-ViewModel in relazione all'architettura della Product Baseline. Per ogni componente, vengono illustrati:
+Vengono di seguito illustrate le implementazioni per le componenti del pattern Model-View-ViewModel in relazione all'architettura di DeSpeect. Per ogni componente, vengono illustrati:
 
 \begin{itemize}
-	\item \textbf{Contestualizzazione}: spiegazione generale dell'architettura del componente all'interno del sistema.
+	\item \textbf{Contestualizzazione}: spiegazione generale dell'architettura del componente all'interno del sistema;
 	\item \textbf{Diagramma delle classi}: diagramma generale delle classi per il componente;
-	\item \textbf{Dettaglio delle classi}
+	\item \textbf{Dettaglio delle classi}: elencazione delle responsabilità di ogni singola classe;
 	\item \textbf{Design Pattern}: una descrizione e contestualizzazione esaustiva dei design pattern impiegati all'interno del componente.
 \end{itemize} 
 
@@ -345,8 +344,8 @@ Nella progettazione del Model è emersa la necessità di interagire con la libre
 
 Nelle sezioni successive vengono illustrate le classi costituenti il componente Model del prodotto. Tali classi sono aggregate in due principali package:
 \begin{itemize}
-	\item \textbf{SpeectWrapper}: incapsula la libreria Speect gestendone la memoria. 
-	\item \textbf{Command}: offre la possibilità di creare i comandi che, aggregando funzioni Speect, rappresentano le funzionalità base di DeSpeect.
+	\item \textbf{SpeectWrapper}: incapsula la libreria Speect gestendone la memoria;
+	\item \textbf{Command}: offre la possibilità di creare i comandi che, aggregando funzioni di Speect, rappresentano le funzionalità base di DeSpeect.
 \end{itemize}
 
 \subsubsection{SpeectWrapper}
@@ -363,12 +362,12 @@ Nelle sezioni successive vengono illustrate le classi costituenti il componente 
 
 \begin{itemize}
 	\item \textbf{AbstractCommand}: definisce l'interfaccia base di un comando;
-	\item \textbf{CommandList}: aggrega i comandi in una lista, di cui permette l'esecuzione completa o step-by-step;
-	\item \textbf{CommandBuilder}: permette la costruzione di una CommandList;
+	\item \textbf{CommandList}: aggrega i comandi in una lista e ne permette l'esecuzione completa o step-by-step;
+	\item \textbf{CommandBuilder}: crea specifici comandi in base alle richieste del client e li inserisce in una CommandList;
 	\item \textbf{SearchByPathCommand}: implementazione del comando che esegue la ricerca di un nodo dato un path;
 	\item \textbf{EditDataCommand}: implementazione del comando che esegue la modifica dei dati relativi ad un nodo;
 	\item \textbf{SetSpeectConfigCommand}: implementazione del comando che esegue l'impostazione di una data configurazione di Speect;
-	\item \textbf{LoadPluginCommand}: implementazione del comando che esegue il caricamento di un plugin;
+	\item \textbf{LoadPluginCommand}: implementazione del comando che esegue il caricamento di un plug-in;
 	\item \textbf{CreateAudioCommand}: implementazione del comando che genera il file audio dall'utterance attuale;
 	\item \textbf{UttToFileCommand}: implementazione del comando che esegue il salvataggio dell'utterance in un file secondo il formato desiderato;
 	\item \textbf{UttProcessorCommand}: implementazione del comando che esegue un dato utterance processor.
@@ -379,10 +378,10 @@ Nelle sezioni successive vengono illustrate le classi costituenti il componente 
 \subsection{Design pattern}
 
 \subsubsection{Command}
-Permette la suddivisione delle funzionalità implementate in un'ottica di componibilità ed estendibilità. I comandi concreti sono aggregati in una lista (\verb|CommandList|) che si interfaccia con la componente ViewModel. Tali comandi interagiscono a loro volta con il package SpeectWrapper per ottere i dati da elaborare dalla libreria Speect. Ai comandi è delegata l'esecuzione degli utterance processor per la successiva stampa dei dati nel grafo, ma anche l'implementazione di funzionalità quali il caricamento dei \glossario{plug-in}{plug-in} e della configurazione di Speect.
+Permette la suddivisione delle funzionalità implementate in un'ottica di componibilità ed estendibilità. I comandi concreti sono aggregati in una lista (CommandList) che si interfaccia con la componente ViewModel. Tali comandi interagiscono a loro volta con il package SpeectWrapper per ottere i dati da elaborare dalla libreria Speect. Ai comandi è delegata l'esecuzione degli utterance processor per la successiva stampa dei dati nel grafo, ma anche l'implementazione di funzionalità quali il caricamento dei \glossario{plug-in}{plug-in} e della configurazione di Speect.
 
 \subsubsection{Builder}
-Questo design pattern separa la costruzione di un oggetto complesso dalla sua rappresentazione, cosicché il processo di costruzione stesso possa creare diverse rappresentazioni. Contestualizzato nel sistema della PB, esso si interfaccia con il ViewModel per la configurazione e costruzione di una specifica \verb|CommandList|.
+Questo design pattern separa la costruzione di un oggetto complesso dalla sua rappresentazione, cosicché il processo di costruzione stesso possa creare diverse rappresentazioni. Contestualizzato nel sistema del prodotto, esso si interfaccia con il ViewModel per la configurazione e costruzione di una specifica CommandList.
 
 \subsubsection{Façade} 
 Il design pattern Façade permette, attraverso un'interfaccia più semplice, l'accesso a sottosistemi che espongono interfacce complesse e molto diverse tra loro, nonché a blocchi di codice complessi. In questo contesto, il package SpeectWrapper incapsula la libreria Speect rendendola accessibile tramite omonima classe proprietaria.
@@ -392,7 +391,7 @@ Il design pattern Façade permette, attraverso un'interfaccia più semplice, l'a
 \section{ViewModel}
 
 \subsection{Contestualizzazione}
-Il package ViewModel funge da tramite tra Model e View, prelevando i dati dal primo per aggiornare il secondo. Per quanto riguarda la stampa del grafo, la classe \verb|GraphManager| si occupa di aggiornarne la presentazione interfacciandosi con le librerie Qt e con le classi \verb|Line|, \verb|Arc| e \verb|Node|.  
+Il package ViewModel funge da tramite tra Model e View, prelevando i dati dal primo per aggiornare il secondo. Per quanto riguarda la stampa del grafo, la classe GraphManager si occupa di aggiornarne la presentazione interfacciandosi con le librerie Qt e con le classi Line, Arc e Node.  
 
 \subsection{Diagramma delle classi}
 
@@ -450,19 +449,16 @@ Il framework Qt, attraverso il sistema di signal e slot, implementa tale design 
 	\begin{center}
 		\url{https://github.com/google/googletest/blob/master/googletest/docs/Primer.md}
 	\end{center}
-	Si rimanda a tale documentazione per la corretta sintassi e configurazione dei file di test, che vanno inseriti nella cartella \verb|DeSpeect/Test/| del progetto affinché vengano correttamente eseguiti automaticamente da Travis CI (tecnologia approfondita in §3.2.2 di questo documento). 
+	Si rimanda a tale documentazione per la corretta sintassi e configurazione dei file di test, che vanno inseriti nella cartella \verb|DeSpeect/Test/| del progetto affinché vengano correttamente eseguiti da Travis CI (tecnologia approfondita in §3.2.2 di questo documento). 
 	
 	\section{Eseguire un test}
 	
 	\subsection{Esecuzione automatica dei test}
-	Il servizio Travis CI, integrato con il repository GitHub relativo al progetto, testa la build ed esegue i test automaticamente ad ogni modifica del codice sul repository. Lo stesso rilascia successivamente i dati sul \textit{code coverage} al servizio web \textit{coveralls.io}, anch'esso collegato al repository GitHub, che aggiorna così i propri report. É possibile prendere spunto dal file \verb|.travis.yml| presente nel repository e dalla documentazione reperibile al link:
+	Il servizio Travis CI, integrato con il repository GitHub relativo al progetto, testa la build ed esegue i test automaticamente ad ogni modifica del codice sul repository. Lo stesso rilascia successivamente i dati sul code coverage al servizio web \textit{codcov.io}, anch'esso collegato al repository GitHub, che aggiorna così i propri report. É possibile prendere spunto dal file \verb|.travis.yml| presente nel repository e dalla documentazione reperibile al link:
 	\begin{center}
 		\url{https://docs.travis-ci.com/user/languages/cpp/}
 	\end{center}
-	Per predisporre il proprio sistema di integrazione continua con Travis CI qualora non si volesse creare una fork del progetto originale. Per la corretta integrazione del testing con Google Test e coveralls.io si suggerisce la presa visione della seguente documentazione esemplificativa:
-	\begin{center}
-		\url{https://github.com/bast/gtest-demo}
-	\end{center} 
+	Per predisporre il proprio sistema di integrazione continua con Travis CI qualora non si volesse creare una fork del progetto originale. 
 	
 	\subsection{Esecuzione manuale dei test}
 	A seguito dell'esecuzione dello script \verb|build.sh| citato in §4.1 di questo documento viene generata automaticamente una build e un'esecuzione dei test contenuti nella directory \verb|DeSpeect/Test/|. I test sono eseguibili sia con il comando \verb|ctest| che con il comando \verb|unit_tests| e la loro esecuzione mostra sinteticamente il code coverage relativo. 
@@ -473,7 +469,7 @@ Il framework Qt, attraverso il sistema di signal e slot, implementa tale design 
 	
 	\section{Struttura del pattern}
 	
-	Il design pattern architetturale \textit{Model-View-ViewModel} (MVVM in breve) facilita la separazione dell'interfaccia grafica, che si tratti di linguaggio di markup o codice GUI, dallo sviluppo della logica di business o della logica di back-end, ovvero dal modello dei dati. Il \textit{view model} di MVVM è un convertitore di valori, nel senso che il view model è responsabile dell'esposizione (conversione) degli oggetti dati dal modello così da renderli facilmente gestibili e presentabili. In quest'ottica, la view è più un modello che una vista e gestisce la maggior parte se non tutta la logica di visualizzazione della vista. Il pattern è riassunto dal seguente schema ed i suoi componenti principali sono di seguito approfonditi.
+	Il design pattern architetturale \textit{Model-View-ViewModel} (MVVM) facilita la separazione dell'interfaccia grafica, che si tratti di linguaggio di markup o codice GUI, dallo sviluppo della logica di business o della logica di back-end, ovvero dal modello dei dati. Il \textit{view model} di MVVM è un convertitore di valori, nel senso che il view model è responsabile dell'esposizione (conversione) degli oggetti dati dal modello così da renderli facilmente gestibili e presentabili. In quest'ottica, la view è più un modello che una vista e gestisce la maggior parte se non tutta la logica di visualizzazione della stessa. Il pattern è riassunto dal seguente schema ed i suoi componenti principali sono di seguito approfonditi.
 	
 	\begin{figure}[H]
 		\includegraphics[scale=0.7]{MVVMPattern}
@@ -575,7 +571,7 @@ Il framework Qt, attraverso il sistema di signal e slot, implementa tale design 
 	
 	\chapter{Licenza}
 	
-	Il codice di DeSpeect, fatta eccezione per le librerie esterne impiegate (quali Speect e Qt), è rilasciato sotto licenza \textit{MIT}. L'immagine seguente riassume brevemente i punti salienti di tale licenza:
+	Il codice di DeSpeect, fatta eccezione per le librerie esterne impiegate (quali Speect e Qt), è rilasciato sotto licenza MIT. L'immagine seguente riassume brevemente i punti salienti di tale licenza:
 	
 	\begin{figure}[H]
 		\hspace*{-5mm}
