@@ -38,7 +38,13 @@
 \newglossaryentry{relation}{name={Relation}, description={Rappresenta una struttura come una parola, sillaba, fonema o anche un obiettivo di durata e gli item sono il contenuto di questa struttura.}}
 \newglossaryentry{framework}{name={Framework}, description={Piattaforma che funge da strato intermedio tra un sistema operativo e il software che lo utilizza.}}
 \newglossaryentry{issue}{name={Issue}, description={Unità di lavoro per realizzare un miglioramento in un sistema. Un issue potrebbe essere un bug, una funzionalità richiesta, attività, documentazione mancante e così via.}}
-
+\newglossaryentry{Curl}{name={Curl}, description={Curl è un tool da linea di comando o script utilizzato per trasferire dati.}}
+\newglossaryentry{Swig}{name={Swig}, description={SWIG è un tool per lo sviluppo software che consente di collegare programmi scritti in C e C++ con una grande varietà di linguaggi ad alto livello}}
+\newglossaryentry{label}{name={name},description={description}}
+\newglossaryentry{libxml2-dev}{name={libxml2-dev}, description={File di sviluppo in proprio di programmi che utilizzano la libreria Gnome XML}}
+\newglossaryentry{python-dev}{name={python-dev}, description={è una collezione di tool per sviluppatori Python presentata come alternativa a ciò che viene offerto dalla libreria standard.}}
+\newglossaryentry{HRG}{name={HRG}, description={Heterogeneous Relation Graph: struttura dati per memorizzare le informazioni di un utterance in Speect.}}
+\newglossaryentry{JSon}{name={JSon}, description={Formato di file leggero adatto allo scambio dati, autodescrittivo e indipendente dalla lingua usata.}}
 
 \begin{document}
 	\makeatletter
@@ -149,13 +155,13 @@
 		\subitem \url{https://www.qt.io/download}
 		\item Git
 		\subitem \url{https://git-scm.com/} 
-		\item Curl 
+		\item \glossario{Curl}{Curl}
 		\subitem \url{https://curl.haxx.se/}
-		\item Swig 
+		\item \glossario{Swig}{Swig}
 		\subitem \url{http://www.swig.org/}
-		\item libxml2-dev
+		\item \glossario{libxml2-dev}{libxml2-dev}
 		\subitem \url{https://packages.debian.org/stretch/libxml2-dev} 
-		\item python-dev
+		\item \glossario{python-dev}{python-dev}
 		\subitem \url{https://pypi.python.org/pypi/dev/0.4.0}
 	\end{itemize}	
 	 
@@ -196,8 +202,8 @@
  	
  	\subsubsection{File} 
  		\begin{itemize}
- 			\item \textbf{Save Voice JSon}: salva il file JSon;
- 			\item \textbf{Load HRG Graph}: carica un grafo HRG;
+ 			\item \textbf{Save Voice JSon}: salva il file \glossario{JSon}{JSon};
+ 			\item \textbf{Load HRG Graph}: carica un grafo \glossario{HRG}{HRG};
  			\item \textbf{Save HRG Graph}: salva un grafo HRG;
  			\item \textbf{Save Audio file}: salva il file audio prodotto in seguito all'esecuzione di \textit{Speect};
  			\item \textbf{Search from path}: cerca un nodo inserendo come input un percorso specifico (es. Words.parent.n);
