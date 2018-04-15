@@ -344,7 +344,6 @@
 	\end{center}
 
 	\subsubsection{IDE}
-
 	QT è una libreria multipiattaforma per lo sviluppo di programmi con interfaccia grafica tramite l'uso di widget (congegni o elementi grafici). La libreria è scritta in C++ e gode di ampia diffusione e supporto. Il gruppo intende utilizzare questa tecnologia nella versione v5.9 LTS per lo sviluppo dell'interfaccia grafica del prodotto. Qt è reperibile al seguente link:
 	\begin{center}
 		\centerline{\url{https://www.qt.io/what-is-qt/}}
@@ -381,9 +380,9 @@
 	\subsubsection{Verifica della documentazione}
 	
 	\begin{itemize}
-		\item \textbf{Verifica ortografica:} Per eseguire controlli ortografici sulla documentazione viene utilizzata la verifica dell’ortografia in tempo reale, strumento integrato in TexStudio che sottolinea in rosso le parole errate secondo la lingua italiana;
+		\item \textbf{Verifica ortografica:} per eseguire controlli ortografici sulla documentazione viene utilizzata la verifica dell’ortografia in tempo reale, strumento integrato in TexStudio che sottolinea in rosso le parole errate secondo la lingua italiana;
 		
-		\item \textbf{Verifica della leggibilità:} Per calcolare l'\glossario{indice Gulpease}{indice Gulpease} a verifica della leggibilità dei documenti viene utilizzato uno script apposito reperibile al link seguente:
+		\item \textbf{Verifica della leggibilità:} per calcolare l'\glossario{indice Gulpease}{indice Gulpease} a verifica della leggibilità dei documenti viene utilizzato uno script apposito reperibile al link seguente:
 		\begin{center}
 			\centerline{\url{https://github.com/LeafSWE/Leaf/tree/master/Documents/Gulpease}}
 		\end{center}
@@ -401,16 +400,6 @@
 			\url{https://docs.travis-ci.com/}
 		\end{center}
 		
-		\item \textbf{Analisi statica:} Per l’analisi statica del codice viene usato il software \glossario{Valgrind}{Valgrind}. La \glossario{suite}{suite} di strumenti Valgrind fornisce numerosi strumenti di \glossario{debugging}{debugging} e di \glossario{profiling}{profiling} che aiutano a rendere i programmi più performanti e più corretti. Il più popolare di questi strumenti è chiamato Memcheck, ed è in grado di rilevare molti errori relativi alla memoria comuni nei programmi C e C++ e che possono causare arresti anomali e comportamenti imprevedibili. Valgrind è accessibile al seguente link: 
-		\begin{center}
-			\url{http://valgrind.org/}
-		\end{center}
-		
-		\item \textbf{Analisi dinamica:} Per l’esecuzione dei test di analisi dinamica viene usato il software \glossario{SonarQube}{SonarQube}, una piattaforma open source per la gestione della qualità del codice. SonarQube è un’applicazione web che produce report sul codice duplicato, sugli standard di programmazione, i test di unità, il \glossario{code coverage}{code coverage}, la complessità, i bug potenziali, i commenti, la progettazione e l’architettura. SonarQube è accessibile al seguente link:
-		\begin{center}
-			\url{https://www.sonarqube.org/}
-		\end{center}
-		
 		\item \textbf{Metriche legate al codice:} Per il controllo delle varie metriche vengono utilizzati i software:
 		\begin{itemize}
 			\item \textbf{Better Code Hub}: \glossario{Better Code Hub}{Better Code Hub} è un servizio di analisi del codice sorgente web-based che controlla il codice per la conformità rispetto a 10 linee guida per l'ingegneria del software e fornisce un \glossario{feedback}{feedback} immediato per capire dove concentrarsi per miglioramenti di qualità. Better Code Hub è accessibile al seguente link:
@@ -419,9 +408,14 @@
 			\end{center}
 		
 			
-			\item \textbf{Codecov}: Codecov offre un pacchetto di strumenti altamente integrati per raggruppare, unificare, archiviare e confrontare report sulla copertura del codice. Il servizio è accessibile gratuitamente al seguente link: 
+			\item \textbf{SonarQube}: per l’esecuzione dei test di analisi dinamica viene usato il software \glossario{SonarQube}{SonarQube}, una piattaforma open source per la gestione della qualità del codice. SonarQube è un’applicazione web che produce report sul codice duplicato, sugli standard di programmazione, i test di unità, il \glossario{code coverage}{code coverage}, la complessità, i bug potenziali, i commenti, la progettazione e l’architettura. SonarQube è accessibile al seguente link:
 			\begin{center}
-				\url{https://codecov.io/}
+				\url{https://www.sonarqube.org/}
+			\end{center}
+		
+			I report generati da SonarQube vengono visualizzati nell'interfaccia web SonarCloud, accessibile al seguente link:
+			\begin{center}
+				\url{https://sonarcloud.io/}
 			\end{center}
 		\end{itemize} 
 	\end{itemize}

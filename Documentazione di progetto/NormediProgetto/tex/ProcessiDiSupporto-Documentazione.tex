@@ -730,12 +730,10 @@ Il flusso dell'integrazione continua instaurata è il seguente:
 	\item Scrittura del codice all'interno dell'ambiente di sviluppo;
 	\item Push dei dati modificati verso il repository \textit{GitHub}, notificato su apposito canale \textit{Slack};
 	\item Esecuzione automatica della build e della suite di test mediante \textit{Travis CI}, con eventuale notifica su \textit{Slack} relativa a problemi di building o di mancato superamento dei test;
-	\item Rilascio dei dati sul code coverage a \textit{codcov.io};
-	\item Calcolo dei valori per le ulteriori metriche relative alla qualità del software da parte di \textit{Better Code Hub}.
+	\item Calcolo dei valori per le metriche relative alla qualità del software da parte di \textit{SonarQube} e \textit{Better Code Hub}.
 \end{enumerate}
 
 Il seguente diagramma riassume il flusso di integrazione continua:
-
 
 \begin{figure}[H]
 	\includegraphics[scale=0.25]{CI}
