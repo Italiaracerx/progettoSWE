@@ -3,7 +3,7 @@
 \begin{document}
 	\chapter{Requisiti}
 	\section{Classificazione dei requisiti}
-	I requisiti sono identificati da un codice descritto nelle NP alla sezione §2.2.3.3.
+	I requisiti sono identificati da un codice descritto nelle NP (§2.2.3.3).
 	
 	\section{Requisiti funzionali}
 	\begin{longtable}{| p{2cm} | p{2.5cm} |p{5cm} | p{2.5cm} |}
@@ -27,29 +27,29 @@
 			
 		\newline ROF2&
 		\newline Obbligatorio&
-		\newline L'utente può caricare un file Json&
+		\newline L'utente può caricare un file \verb|.json|&
 		\newline \refer{UC2} \newline \refer{UC3} \newline Capitolato
 		\\[1em]	
 			\hline	
 			
 		\newline ROF2.1&
 		\newline Obbligatorio&
-		\newline L'utente può visualizzare il percorso del file JSon caricato&
+		\newline L'utente può visualizzare il percorso del file \verb|.json| caricato&
 		\newline \refer{UC3} \newline  VE-2017-12-15
 		\\[1em]	
 		\hline	
 		
 		\newline RFF2.2&
 		\newline Facoltativo&
-		\newline L'utente può modificare il file Json cambiando l'ordine o rimuovendo gli Utterance Processor nell'Utterance Type&
+		\newline L'utente può modificare il file \verb|.json| cambiando l'ordine o rimuovendo gli utterance processor nell'utterance type&
 	 	\newline \refer{UC6.2} \newline \refer{UC6.3} \newline Capitolato
 		\\[1em]	
 		\hline
 				
 		\newline RFF2.2.1&
 		\newline Facoltativo&
-		\newline L'utente può salvare nel file JSon le modifiche agli Utterance Processor&
-			\newline \refer{UC2} \newline \refer{UC11} \newline  VE-2017-12-15
+		\newline L'utente può salvare nel file \verb|.json| le modifiche agli utterance processor&
+		\newline \refer{UC2} \newline \refer{UC11} \newline  VE-2017-12-15
 		\\[1em]	
 		\hline
 		
@@ -60,8 +60,9 @@
 		\\[1em]	
 		\hline
 
-		\newline ROF3&		\newline Obbligatorio&
-		\newline L'utente può inizializzare Speect con il file json&
+		\newline ROF3&		
+		\newline Obbligatorio&
+		\newline L'utente può inizializzare Speect con il file \verb|.json|&
 		\newline \refer{UC3} \newline  VE-2017-12-15
 		\\[1em]	
 			\hline	
@@ -73,7 +74,7 @@
 		\hline
 		
 		\newline ROF4&\newline Obbligatorio&
-		\newline L'utente può salvare l'audio risultante con estensione WAV&
+		\newline L'utente può salvare l'audio risultante con estensione \verb|.wav|&
 		\newline \refer{UC4} \newline Interno
 		\\[1em]
 			\hline
@@ -103,25 +104,25 @@
 		\hline
 		
 		\newline ROF6&\newline Obbligatorio&
-		\newline L'utente può selezionare la Utterance Type&
+		\newline L'utente può selezionare l'utterance type&
 		\newline \refer{UC12} \newline  VE-2017-12-15
 		\\[1em]
 		\hline
 				
 		\newline RDF6.1&\newline Desiderabile&
-		\newline L'utente può modificare gli Utterance Processor di un Utterance Type&
+		\newline L'utente può modificare gli utterance processor di un'utterance type&
 		\newline \newline \refer{UC6}  \newline \refer{UC6.2} \newline \refer{UC6.3} \newline  VE-2017-12-15
 		\\[1em]
 		\hline	
 				
 		\newline RDF6.1.1&\newline Desiderabile&
-		\newline L'utente può spostare gli Utterance Processor di un Utterance Type&
+		\newline L'utente può spostare gli utterance processor di un'utterance type&
 		\newline \refer{UC6.1} \newline \refer{UC6.2} \newline Interno
 		\\[1em]
 		\hline	
 				
 		\newline RDF6.1.2&\newline Desiderabile&
-		\newline L'utente può rimuovere gli Utterance Processor di un Utterance Type&
+		\newline L'utente può rimuovere gli utterance processor di un'utterance type&
 		\newline \refer{UC6.1} \newline \refer{UC6.3} \newline Interno
 		\\[1em]
 		\hline	
@@ -217,7 +218,7 @@
 		\hline
 		
 		\newline RDF9.5.1&\newline Desiderabile&
-		\newline L'utente può modificare il colore con il quale si evidenzia il focus&
+		\newline L'utente può modificare il colore con cui si evidenzia il focus&
 		\newline Interno
 		\\[1em]
 		\hline
@@ -259,7 +260,7 @@
 		\hline	
 		
 		\newline RFF10&\newline Facoltativo&
-		\newline L'utente può eseguire ogni Utterance Processor singolarmente&
+		\newline L'utente può eseguire ogni utterance processor singolarmente&
 		\newline \refer{UC7.3} \newline Capitolato
 		\\[1em]
 		\hline
@@ -331,14 +332,14 @@
 			\\[1em]
 			\hline
 			\newline ROQ1&\newline Obbligatorio&
-			\newline Lo sviluppo del prodotto deve rispettare i criteri definiti nei documenti \textit{Norme di Progetto v 2.0.0} e \textit{Piano di Qualifica v2.0.0}&
+			\newline Lo sviluppo del prodotto deve rispettare i criteri definiti nei documenti NP e PQ&
 			\newline Interno
 			\\[1em]
 			\hline
 			\newline
 			RDQ1&\newline Desiderabile&
 			\newline 
-			L'applicazione deve essere rilasciata con licenze opensource&
+			L'applicazione deve essere rilasciata con licenze open source&
 			\newline Capitolato \newline Interno
 			\\[1em]
 			\hline	
@@ -410,13 +411,14 @@
 \newpage
 	\section{Tracciamento fonte-requisiti}
 	\begin{longtable}{| p{4cm} | p{4cm} |}
+		\caption{Tracciamento fonte-requisiti} \\
 		\hline
 		\textbf{Fonte} & \textbf{Requisti} \\
 			\hline
 		\endhead
 		\newline Capitolato & \newline ROF0 \newline ROF2 \newline RFF2.2 \newline ROF7 \newline ROF8 \newline ROF9 \newline ROF9.1 \newline ROF9.2 \newline ROF9.3 \newline ROF9.3 \newline ROF9.3.1 \newline ROF9.3.1.1 \newline ROF9.3.1.2 \newline RDF9.4 \newline RDF9.4.1 \newline RDF9.5 \newline ROF9.7 \newline RFF9.8 \newline RFF9.8.1 \newline RFF9.8.2 \newline ROF9.9 \newline RFF10 \newline RFF12.2 \newline ROQ0 \newline RDQ1 \newline RDQ1.1 \newline ROV0 \newline ROV1 \newline ROV2 \newline ROV2.1 \\[1em]
 	\hline	
-		\newline Interno &  \newline ROF1 \newline RFF2.2.1.1 \newline ROF3.1 \newline ROF4 \newline ROF4.1  \newline ROF4.1.1  \newline ROF4.2  \newline RFF4.3 \newline RDF5.5  \newline RDF5.6  \newline RDF5.7 \newline ROF6.1 \newline RDF6.1.1 \newline RDF6.1.2 \newline RDF9.4.2 \newline ROF 9.6  \newline ROF 8.1  \newline RDF9.5.1  \newline RFF9.8.1  \newline RFF9.8.2 \newline ROF14 \newline ROQ0.1 \newline ROQ1 \newline RDQ1  \newline ROV1 \\[1em]
+		\newline Interno & \newline ROF1 \newline RFF2.2.1.1 \newline ROF3.1 \newline ROF4 \newline ROF4.1  \newline ROF4.1.1  \newline ROF4.2  \newline RFF4.3 \newline RDF5.5  \newline RDF5.6  \newline RDF5.7 \newline ROF6.1 \newline RDF6.1.1 \newline RDF6.1.2 \newline RDF9.4.2 \newline ROF9.6  \newline ROF8.1  \newline RDF9.5.1  \newline RFF9.8.1  \newline RFF9.8.2 \newline ROF14 \newline ROQ0.1 \newline ROQ1 \newline RDQ1  \newline ROV1 \\[1em]
 	\hline
 		\newline  VE-2017-12-15 & \newline ROF2.1 \newline RFF2.2.1 \newline ROF5 \newline ROF5.2 \newline ROF5.3 \newline ROF5.4 \newline ROF6 \newline RDF6.1 \newline RDF9.3.1.1 \newline RDF9.3.1.2 \newline RDF9.4 \newline ROF9.5 \newline RFF9.8 \newline RFF11 \newline RFF11.1 \newline RFF12 \newline RFF12.1 \newline RFF13 \\[1em]
 	\hline
@@ -488,15 +490,15 @@
 		\hline
 		\newline UC13.5 &  \newline ROF9.7 \\[1em]
 		\hline
-		
-		\caption{Tracciamento Fonte Requisiti}
 	\end{longtable}
 \newpage
+
 	\section{Tracciamento requisito-fonti}
 	\begin{longtable}{| p{4cm} | p{4cm} |}
+	\caption{Tracciamento requisito-fonti} \\
 	
 	\hline
-\textbf{Requisiti} & \textbf{Fonte} \\
+\textbf{Requisito} & \textbf{Fonti} \\
 \hline
 \endhead
 	\newline ROF0&
@@ -813,13 +815,13 @@ ROV2&\newline Capitolato
 RDV2.1&\newline Capitolato
 \\[1em]
 \hline
-\caption{Tracciamento Requisito Fonti}
 \end{longtable}
 
 \newpage
 
 \section{Riepilogo dei requisiti}
 	\begin{longtable}{| c | c | c | c | c |}
+	\caption{Riepilogo requisiti} \\
 	\hline
 	\textbf{Tipo} & \textbf{Obbligatorio}& \textbf{Facoltativo} &\textbf{Desiderabile} &\textbf{Totale} \\
 	\hline
@@ -835,6 +837,5 @@ RDV2.1&\newline Capitolato
 \hline\textbf{Totale}&33& 14& 13 & 60 \\
 
 \hline
-\caption{Riepilogo requisiti}
 \end{longtable}
 \end{document}
