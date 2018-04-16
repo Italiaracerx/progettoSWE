@@ -401,8 +401,8 @@
 		
 		\newline MPPS09 &
 		\newline Altezza albero della gerarchia &
-		\newline \textbf{Accettazione:} \newline $ \textrm{\textit{rapporto}} \geq 0.3\% $
-		\newline \textbf{Ottimale:} $ \textrm{\textit{rapporto}} \geq 0.5\% $&
+		\newline \textbf{Accettazione:} $ \leq 3 $
+		\newline \textbf{Ottimale:} $ \leq 2 $&
 		\newline OQPPS004: Manutenzione e comprensione del codice 
 		\\[1em]
 		
@@ -2162,8 +2162,10 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 Si riportano i valori delle metriche sul software, con alcune considerazioni atte al miglioramento del processo di codifica e implementazione e alla verifica del raggiungimento degli obiettivi di qualità relativi al prodotto software.
 
 \begin{itemize}
-	\item \textbf{MPPS001 - Copertura requisiti obbligatori}:
+	\item \textbf{MPPS001 - Copertura requisiti obbligatori}: seguono le tabelle riassuntive della copertura dei requisiti obbligatori. Si noti che l'architettura è stata predisposta per coprire la totalità dei requisiti funzionali obbligatori, di cui più della metà è stata implementata dal codice.
+	
 	\begin{longtable}{|p{40mm}|p{40mm}|p{40mm}|}
+		\caption{Tabella riepilogativa copertura requisiti funzionali obbligatori} \\
 		\hline
 		\centering \textbf{Requisito} & \textbf{Soddisfacimento architettura} &  \textbf{Soddisfacimento codice}\\
 		
@@ -2194,27 +2196,44 @@ Si riportano i valori delle metriche sul software, con alcune considerazioni att
 		\hline
 		
 	\end{longtable}
-	\section{Grafico del soddisfacimento dei requisiti}
-	\begin{figure}[H]
-		\includegraphics[scale=0.38]{Requisiti_obbligatori_architettura}
-		\centering
-		\caption{Requisiti obbligatori funzionali soddisfatti nell'architettura}
-	\end{figure}
-	\begin{figure}[H]
-		\includegraphics[scale=0.38]{Requisiti_obbligatori_codice}
-		\centering
-		\caption{Requisiti obbligatori funzionali soddisfatti nel codice}
-	\end{figure}
-	 ;
-	\item \textbf{MPPS002 - Copertura del codice}: ;
-	\item \textbf{MPPS003 - Percentuale superamento test}: ;
-	\item \textbf{MPPS004 - Numero di parametri per metodo}: ;
-	\item \textbf{MPPS005 - Numero di attributi per classe}: ;
-	\item \textbf{MPPS006 - Numero di metodi per classe}: ;
-	\item \textbf{MPPS007 - Complessità ciclomatica}: ;
-	\item \textbf{MPPS008 - Grado di instabilità}: ;
-	\item \textbf{MPPS009 - Altezza albero della gerarchia}: ;
-	\item \textbf{MPPS010 - Rapporto tra linee di codice e linee di commento}: .
+
+	\begin{longtable}{|p{60mm}|p{60mm}|}
+	\caption{Tabella riepilogativa copertura requisiti di qualità obbligatori} \\
+	\hline
+	\centering \textbf{Requisito} &  \textbf{Soddisfacimento}\\
+	
+	\hline \centering ROQ0 & SODDISFATTO \\
+	\hline \centering ROQ0.1 & SODDISFATTO\\
+	\hline \centering ROQ1 & SODDISFATTO\\
+	\hline \centering ROQ2 & SODDISFATTO\\
+	\hline \centering ROQ3 & \\
+	\hline \centering ROQ4 & \\
+	\hline
+	
+	\end{longtable}
+
+
+	\begin{longtable}{|p{60mm}|p{60mm}|}
+	\caption{Tabella riepilogativa copertura requisiti di vincolo obbligatori} \\
+	\hline
+	\centering \textbf{Requisito} &  \textbf{Soddisfacimento}\\
+	
+	\hline \centering ROV0 & SODDISFATTO \\
+	\hline \centering ROV1 & SODDISFATTO\\
+	\hline \centering ROV2 & SODDISFATTO\\
+	\hline
+	
+	\end{longtable}
+
+	\item \textbf{MPPS002 - Copertura del codice}: la copertura del codice è attualmente del \textit{10.6\%}, decisamente inferiore a quanto stimato dal gruppo per il periodo corrente. Tale valore è dovuto ad un problema di implementazione dei test che, sebbene il framework relativo sia stato correttamente predisposto e configurato, presentano difficoltà di integrazione con la libreria Speect (in fase di discussione con la Proponente). Il gruppo è tuttavia fiducioso di riuscire ad implementare i test necessari in breve tempo una volta risolto il succitato problema tecnico;
+	\item \textbf{MPPS003 - Percentuale superamento test}: valgono per tale metrica le considerazioni fatte per MPPS002, che rendono difficile specificare una percentuale esatta;
+	\item \textbf{MPPS004 - Numero di parametri per metodo}: il numero medio di parametri per metodo è \textit{1.4}, entro il range ottimale definito;
+	\item \textbf{MPPS005 - Numero di attributi per classe}: il numero medio di attributi per classe è \textit{2.6}, entro il range ottimale definito;
+	\item \textbf{MPPS006 - Numero di metodi per classe}: il numero medio di metodi per classe è \textit{6.7}, entro il range di accettabilità ma fuori da quello di ottimalità;
+	\item \textbf{MPPS007 - Complessità ciclomatica}: la complessità ciclomatica media del codice è attualmente \textit{10.2}, valore al limite del range di ottimalità stabilito che il gruppo intende ridurre ulteriormente;
+	\item \textbf{MPPS008 - Grado di instabilità}: il grado di instabilità è \textit{0.4}, ai margini del range di ottimalità definito;
+	\item \textbf{MPPS009 - Altezza albero della gerarchia}: la gerarchia di altezza massima all'interno dell'architettura ha altezza \textit{2}, valore che rientra nel range di ottimalità definito;
+	\item \textbf{MPPS010 - Rapporto tra linee di codice e linee di commento}: la media dei rapporti tra linee di codice e linee di commento è \textit{12.1\%}, valore fuori dal range di accettabilità definito, che il gruppo intende abbassare drasticamente nel corso dell'ultimo periodo di progetto.
 \end{itemize}
 
 %\subsubsection{Software}
