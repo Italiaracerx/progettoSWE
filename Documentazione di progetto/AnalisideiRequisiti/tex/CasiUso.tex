@@ -15,11 +15,14 @@
 	I casi d'uso sono identificati da un codice descritto nelle NP (§2.2.3.4).
 	Di seguito viene visualizzato il diagramma generale dei casi d'uso del sistema. 
 	
+	\section{Visione generale del sistema}
+	Segue un diagramma dei casi d'uso che riassume la visione generale del sistema da sviluppare. Le sezioni successive esaminano invece i singoli casi d'uso individuati.
+	
 	\begin{figure}[H]
 	\centering	
 	\includegraphics[scale=0.52]{../img/UC.png}
 	
-	\caption{Visione generale sistema}
+	\caption{Visione generale del sistema}
 	
 	\end{figure}
  	
@@ -30,29 +33,29 @@
 	{Utente}
 	{Non previsto}
 	{L'attore visualizza la pagina iniziale di DeSpeect dalla quale può aprire il menu File, caricare un file \verb|.json|, selezionare l'utterance type, scrivere del testo in input, eseguire Speect, modificare l'utterance type e modificare il grafo}
-	{Il sistema funziona correttamente e visualizza la pagina iniziale di Despeect}
-	{Il sistema ha ricevuto gli input dall'attore}
+	{DeSpeect è stato avviato}
+	{Viene visualizzata la pagina iniziale di DeSpeect}
 	{\begin{itemize}
-			\item{} L'attore può aprire il menu File \refer{UC2};
+			\item{} L'attore può aprire il menù File \refer{UC2};
 			\item{} L'attore può caricare un file \verb|.json| \refer{UC3};
-			\item{} L'attore può selezionare l'utterance type \refer{UC12};
+			\item{} L'attore può selezionare l'utterance type \refer{UC22};
+			\item{} L'attore può modificare l'utterance type \refer{UC8};
 			\item{} L'attore può scrivere del testo in input;
-			\item{} L'attore può eseguire Speect \refer{UC7};
-			\item{} L'attore può modificare l'utterance type \refer{UC6}.
-			\item{} L'attore può modificare il grafo \refer{UC13}.
+			\item{} L'attore può eseguire Speect \refer{UC9};
+			\item{} L'attore può modificare il grafo \refer{UC23}.
 	\end{itemize}}
 	{Non previsti}
 	
 	
-	\section{UC2: Apertura menu File}
+	\section{UC2: Apertura menù File}
 
 	\UserCase
 	{UC2}
 	{Utente}
 	{Non previsto}
-	{L'attore visualizza il menu File dalla quale può caricare o salvare un file \verb|.json|, caricare o salvare un grafo, salvare l'audio prodotto, cercare il percorso di un nodo nel grafo e chiudere l'applicazione}
-	{Il sistema funziona correttamente e visualizza il menù File}
-	{Il sistema ha ricevuto gli input dall'attore}
+	{L'attore visualizza il menù File, dal quale può caricare o salvare un file \verb|.json|, caricare o salvare un grafo, salvare l'audio prodotto, cercare il percorso di un nodo nel grafo e chiudere l'applicazione}
+	{L'attore clicca sul menù File}
+	{Il menù File è aperto e visualizza le voci corrispondenti}
 	{	\begin{itemize}
 		\item{} L'attore può caricare un file \verb|.json| \refer{UC3};
 		\item{} L'attore può salvare le modifiche al file \verb|.json| \refer{UC20};
@@ -71,7 +74,7 @@
 	{Utente}
 	{Non previsto}
 	{L'attore vuole caricare un file \verb|.json|}
-	{L'attore ha selezionato la voce relativa nel menu \refer{UC2}}
+	{L'attore ha selezionato la voce relativa nel menù \refer{UC2}}
 	{Viene inizializzato Speect con il file \verb|.json| selezionato e aggiornata la GUI}
 	{
 		\begin{itemize}
@@ -298,7 +301,7 @@
 {Non previsto}
 {L'attore vuole esportare il grafo visualizzato}
 {Esiste un grafo esportabile}
-{Il grafo viene esportato in file}
+{Il grafo viene esportato in un file}
 {
 	\begin{itemize}
 			\item{} Viene aperto il file browser;
@@ -327,7 +330,7 @@
 {Utente}
 {Non previsto}
 {L'attore vuole importare un grafo}
-{Esiste un grafo e l'attore ha cliccato su Carica Grafo}
+{Esiste un grafo e l'attore ha cliccato su Carica Grafo \refer{UC2}}
 {Il grafo viene importato da file}
 {
 	\begin{itemize}
@@ -375,7 +378,7 @@
 {Non previsto}
 {L'attore vuole cercare un nodo tramite un percorso nel grafo}
 {Il percorso inserito dall'attore è sintatticamente errato}
-{Viene visualizzato l'errore a schermo e si riapre la finestra di Ricerca \refer{UC10}}
+{Viene visualizzato l'errore a schermo e si riapre la finestra di Ricerca \refer{UC18}}
 {Il percorso inserito dall'attore non è corretto e viene visualizzato un messaggio di errore}
 {Non previsti}
 
@@ -442,6 +445,7 @@
 	\begin{itemize}
 		\item{} selezionare un nodo \refer{UC23.1};
 		\item{} spostare un nodo \refer{UC23.2};	
+		\item{} modificare un nodo \refer{UC23.3} \refer{UC23.4};	
 		\item{} modificare la visualizzazione delle relazioni \refer{UC23.5}.		
 	\end{itemize}
 }
