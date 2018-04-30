@@ -140,7 +140,26 @@
 
 	\chapter{Requisiti di sistema}
 	
-	L'installazione ed esecuzione del software DeSpeect richiede i seguenti prerequisiti:
+	\section{Requisiti hardware}
+	
+	L'installazione ed esecuzione del software DeSpeect richiede una macchina con i seguenti requisiti:
+	\begin{center}
+		\begin{longtable}{| p{40mm} | p{60mm} | p{60mm} |}
+			\hline
+			\textbf{Hardware} & \textbf{Requisiti minimi} & \textbf{Requisiti consigliati} \\
+			\hline CPU & 2 GHz dual core x86 & 3GHz quad core x64 \\
+			\hline RAM & 4 GB & 8GB \\
+			\hline Spazio libero su disco & 256MB & 1GB \\
+			\hline  \multirow{3}{*}{GPU}
+			& accelerazione video 3D & accelerazione video 3D \\ 
+			& risoluzione 1280x1024 & risoluzione 1920x1080 \\
+			& 256 MiB di memoria & 512 MiB di memoria \\
+			\hline
+		\end{longtable}
+	\end{center}
+	\section{Requisiti software}
+	
+	L'installazione ed esecuzione del software DeSpeect richiede i seguenti programmi preinstallati:
 	
 	\begin{itemize}
 		\item Sistema operativo Unix / Unix-like (il software è stato testato solo per piattaforma Ubuntu 16.04 LTS)
@@ -175,13 +194,12 @@
 	\url{http://speect.sourceforge.net/contents.html}
 	\end{center}
 	
-	\subsection{IDE}
+	\subsection{GUI}
 	
 	Qt è una libreria multipiattaforma per lo sviluppo di programmi con interfaccia grafica tramite l'uso di widget. La libreria è scritta in C++ e gode di ampia diffusione e supporto. L'interfaccia grafica di DeSpeect è stata sviluppata mediante questa tecnologia nella versione v5.9 LTS. Maggiori informazioni su Qt sono reperibili al seguente link:
 	\begin{center}
 	\centerline{\url{https://www.qt.io/what-is-qt/}}
 	\end{center}
-	Tale \glossario{IDE}{IDE} è consigliato qualora si volesse lavorare su DeSpeect, e un approfondimento sulla sua installazione e sull'importazione del progetto è reperibile in §4.2 di questo documento. 
 	
 	\subsection{Compilazione}
 	
@@ -200,12 +218,13 @@
 	
 	\end{itemize}
 	
-	\subsection{GUI}
+	\subsection{IDE}
 	
 	Per progettare l'interfaccia grafica viene utilizzato \glossario{Qt Creator}{Qt Creator}. Questo strumento permette di realizzare interfacce grafiche mediante le librerie grafiche Qt, diventate in questo ambito quasi uno standard per piattaforme Linux Based.  Maggiori informazioni su Qt Creator sono disponibili al seguente link:
 	\begin{center}
 	\centerline{\url{https://www.qt.io/qt-features-libraries-apis-tools-and-ide/}}
 	\end{center}
+	Tale \glossario{IDE}{IDE} è consigliato qualora si volesse lavorare su DeSpeect, e un approfondimento sulla sua installazione e sull'importazione del progetto è reperibile in §4.2 di questo documento. 
 
 	
 	\section{Verifica e monitoraggio di DeSpeect}	
