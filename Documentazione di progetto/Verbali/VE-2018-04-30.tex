@@ -1,0 +1,88 @@
+\documentclass[openany,12pt,a4paper]{article} 
+\usepackage{subfiles} 
+\usepackage[]{graphicx} 
+\usepackage{float} 
+\graphicspath{{./img/}{./../img/}} 
+\usepackage{../StileDoc} 
+\title{Verbale Esterno} 
+\author{} 
+\newcommand{\versione}{} 
+\loadglsentries{../Glossario/Definizioni} 
+ 
+\begin{document} 
+  \makeatletter 
+  \begin{titlepage} 
+    \setlength{\headsep}{0pt}   
+    \begin{center} 
+      \includegraphics[width=0.5\linewidth]{Logo.png}\\[1em] 
+      {\huge \bfseries  \@title }\\[10ex] 
+      \textbf{\Large Informazioni Documento} \\[2em] 
+      \bgroup 
+      \def\arraystretch{1.5} 
+      \begin{tabular}{l|l} 
+        \textbf{Data approvazione} & 30 aprile 2018 \\ 
+        \textbf{Responsabile} & Manfredi Smaniotto \\ 
+        \textbf{Redattore} & Kevin Silvestri \\ 
+        \textbf{Verificatore} & Cristiano Tessarolo \\ 
+        \textbf{Distribuzione} & Prof. Tullio Vardanega \\ 
+         & Prof. Riccardo Cardin \\ 
+         & Gruppo Graphite \\ 
+        \textbf{Uso} & Esterno \\ 
+        \textbf{Recapito} & graphite.swe@gmail.com \\ 
+      \end{tabular} 
+    \egroup 
+    \end{center} 
+  \end{titlepage} 
+  \makeatother 
+ 
+  \thispagestyle{empty} 
+  \newpage 
+   
+  \tableofcontents 
+  \newpage 
+   
+  \section{Informazioni generali} 
+   
+  \subsection{Informazioni sull'incontro} 
+   
+  \begin{itemize}  
+      \item \textbf{Luogo:} Videochiamata;
+      \item \textbf{Data:} 2018-04-30; 
+      \item \textbf{Orari} 16:00 - 16:45;
+      \item \textbf{Partecipanti del gruppo:} Marco Focchiatti, Samuele Modena, Matteo Rizzo, Giulio Rossetti, Kevin Silvestri, Manfredi Smaniotto, Cristiano Tessarolo; 
+      \item \textbf{Partecipanti esterni:} Dottor Giulio Paci. 
+  \end{itemize} 
+ 
+  \subsection{Ragioni dell'incontro} 
+  Richiesta di chiarimenti relativi al raffinamento di alcuni requisiti e sulla conclusione del progetto. 
+ 
+  \section{Resoconto} 
+  Nel corso dell'incontro ... , nello specifico sono stati affrontati i seguenti punti:
+	
+  \begin{itemize}
+  	
+	\item Presentazione di \textit{DeSpeect} e delle sue funzionalità;
+	\item ...
+	\item Richiesta di ulteriori pareri o suggerimenti sull'andamento del progetto.
+	
+  \end{itemize}
+	
+  \noindent Seguono le principali domande poste durante l'incontro e la sintesi delle relative risposte ricevute:
+
+  \begin{enumerate}
+  	
+  	\item \textbf{...?} \\
+  	...;
+  	
+  \end{enumerate} 
+ 
+  \section{Tracciamento delle decisioni} 
+   
+  \begin{itemize} 
+  	
+      \item \textbf{VE-2018-04-30.1:} ...;
+      
+  \end{itemize} 
+   
+  \end{document}
+ \ No newline at end of file 
