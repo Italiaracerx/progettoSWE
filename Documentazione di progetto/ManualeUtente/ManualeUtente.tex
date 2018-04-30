@@ -45,6 +45,7 @@
 \newglossaryentry{python-dev}{name={python-dev}, description={è una collezione di tool per sviluppatori Python presentata come alternativa a ciò che viene offerto dalla libreria standard.}}
 \newglossaryentry{HRG}{name={HRG}, description={Heterogeneous Relation Graph: struttura dati per memorizzare le informazioni di un utterance in Speect.}}
 \newglossaryentry{JSon}{name={JSon}, description={Formato di file leggero adatto allo scambio dati, autodescrittivo e indipendente dalla lingua usata.}}
+\newglossaryentry{file Voice}{name={File Voice}, description={File di inizializzazione di Speect}, nonumberlist }
 
 \begin{document}
 	\makeatletter
@@ -116,7 +117,7 @@
 	
 	\section{Informazioni utili}
 	
-	La stesura di questo documento assume come utente target del prodotto un programmatore esperto nell'utilizzo di \textit{Speect} e dei linguaggi di programmazione C e C++. \\
+	La stesura di questo documento assume come utente target del prodotto un programmatore esperto nell'utilizzo di \textit{Speect}. \\
 	\noindent Per completezza, viene riportato in appendice §A un glossario comprensivo di termini tecnici o riguardanti particolari funzionalità di \textit{DeSpeect}. Per identificare i termini presenti nel glossario, la loro prima occorrenza all’interno del documento è riportata in corsivo e marcata con una G al pedice. 
 	
 	%quando caricheremo su github in una repository apposita il manuale sviluppatore
@@ -236,7 +237,7 @@
  		\end{figure}
  	
  	\subsection{Pannello di configurazione}
- 	Situato nella parte superiore della schermata sotto il menù citato al punto precedente. Qui è possibile caricare una voice (tramite pulsante \textit{Load Voice}), inserire input testuale (tramite area di testo dedicata), selezionare l'\glossario{utterance}{utterance} type e avviare l'esecuzione di \textit{Speect} eseguendo singolarmente ogni utterance processor (pulsante \textit{Run step}) o tutti assieme in sequenza (pulsante \textit{Run all}). Il pulsante \textit{Load selected processors}, infine, permette il caricamento della configurazione degli utterance processor selezionati tramite apposito pannello illustrato al punto successivo (vedi Figura 4.3);
+ 	Situato nella parte superiore della schermata sotto il menù citato al punto precedente. Qui è possibile caricare un \glossario{file Voice}{file Voice} (tramite pulsante \textit{Load Voice}), inserire input testuale (tramite area di testo dedicata), selezionare l'\glossario{utterance}{utterance} type e avviare l'esecuzione di \textit{Speect} eseguendo singolarmente ogni utterance processor (pulsante \textit{Run step}) o tutti assieme in sequenza (pulsante \textit{Run all}). Il pulsante \textit{Load selected processors}, infine, permette il caricamento della configurazione degli utterance processor selezionati tramite apposito pannello illustrato al punto successivo (vedi Figura 4.3);
  		\begin{figure}[H]
  			
  			\centering
