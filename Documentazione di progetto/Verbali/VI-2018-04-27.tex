@@ -1,0 +1,74 @@
+\documentclass[openany,12pt,a4paper]{article}
+\usepackage{subfiles}
+\usepackage[]{graphicx}
+\usepackage{float}
+\graphicspath{{./img/}{./../img/}}
+\usepackage{../StileDoc}
+\title{Verbale Interno}
+\author{}
+\newcommand{\versione}{}
+\loadglsentries{../Glossario/Definizioni}
+
+\begin{document}
+	\makeatletter
+	\begin{titlepage}
+		\setlength{\headsep}{0pt}  
+		\begin{center}
+			\includegraphics[width=0.5\linewidth]{Logo.png}\\[1em]
+			{\huge \bfseries  \@title }\\[10ex]
+			\textbf{\Large Informazioni Documento} \\[2em]
+			\bgroup
+			\def\arraystretch{1.5}
+			\begin{tabular}{l|l}
+				\textbf{Data approvazione} & 27 aprile 2018 \\
+				\textbf{Responsabile} & Cristiano Tessarolo \\
+				\textbf{Redattore} & Marco Focchiatti \\
+				\textbf{Verificatore} & Manfredi Smaniotto \\
+				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
+				 & Prof. Riccardo Cardin \\
+				 & Gruppo Graphite \\
+				\textbf{Uso} & Interno \\
+				\textbf{Recapito} & graphite.swe@gmail.com \\
+			\end{tabular}
+		\egroup
+		\end{center}
+	\end{titlepage}
+	\makeatother
+
+	\thispagestyle{empty}
+	\newpage
+	
+	\tableofcontents
+	\newpage
+	
+	\section{Informazioni generali}
+	
+	\subsection{Informazioni sull'incontro}
+	
+	\begin{itemize} 
+	    \item \textbf{Luogo:} Aula 1C150, Torre Archimede;
+	    \item \textbf{Data:} 2018-04-27;
+	    \item \textbf{Orari} 9:00 - 11:30;
+	    \item \textbf{Partecipanti del gruppo:} Marco Focchiatti, Samuele Modena, Matteo Rizzo, Giulio Rossetti, Kevin Silvestri, Manfredi Smaniotto, Cristiano Tessarolo;
+	    \item \textbf{Partecipanti esterni:} nessuno.
+	\end{itemize}
+	
+	\subsection{Ragioni dell'incontro}
+	
+	Discussione e confronto sull'esito della RQ.
+
+	\section{Resoconto}
+	
+	Durante la riunione è stato analizzato nel dettaglio l'esito della RQ, discutendo della ragione di determinate osservazioni e della strategia con cui ovviare ai problemi riscontrati.  
+	
+	\section{Tracciamento delle decisioni}
+	
+	\begin{itemize}
+	    \item \textbf{VI-2018-04-27.1:} Revisione dell'appendice B del PQ sulla base dell'esito della RQ;
+	    \item \textbf{VI-2018-04-27.2:} Revisione del consuntivo di periodo, preventivo a finire sulla base dell'esito della RQ;
+	    \item \textbf{VI-2018-04-27.3:} Revisione dei manuali utente e sviluppatore sulla base dell'esito della RQ;
+	    \item \textbf{VI-2018-04-27.4:} Revisione della AR sulla base dell'esito della RQ;
+	    \item \textbf{VI-2018-04-27.5:} Correzioni generali sulla base dell'esito della RQ.
+	\end{itemize}	
+
+	\end{document}    
