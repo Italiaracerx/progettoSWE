@@ -203,9 +203,7 @@
  	
  	\subsubsection{File} 
  		\begin{itemize}
- 			\item \textbf{Save Voice JSon}: salva il file \glossario{JSon}{JSon};
- 			\item \textbf{Load HRG Graph}: carica un grafo \glossario{HRG}{HRG};
- 			\item \textbf{Save HRG Graph}: salva un grafo HRG;
+ 			\item \textbf{Load Voice JSon}: carica il file voice \glossario{JSon}{JSon};
  			\item \textbf{Save Audio file}: salva il file audio prodotto in seguito all'esecuzione di \textit{Speect};
  			\item \textbf{Search from path}: cerca un nodo inserendo come input un percorso specifico (es. Words.parent.n);
  			\item \textbf{Exit}: chiude l'interfaccia \textit{DeSpeect}.
@@ -237,7 +235,7 @@
  		\end{figure}
  	
  	\subsection{Pannello di configurazione}
- 	Situato nella parte superiore della schermata sotto il menù citato al punto precedente. Qui è possibile caricare un \glossario{file Voice}{file Voice} (tramite pulsante \textit{Load Voice}), inserire input testuale (tramite area di testo dedicata), selezionare l'\glossario{utterance}{utterance} type e avviare l'esecuzione di \textit{Speect} eseguendo singolarmente ogni utterance processor (pulsante \textit{Run step}) o tutti assieme in sequenza (pulsante \textit{Run all}). Il pulsante \textit{Load selected processors}, infine, permette il caricamento della configurazione degli utterance processor selezionati tramite apposito pannello illustrato al punto successivo (vedi Figura 4.3);
+ 	Situato nella parte superiore della schermata sotto il menù citato al punto precedente. Qui è possibile caricare un \glossario{file Voice}{file Voice} (tramite pulsante \textit{Load Voice}), inserire input testuale (tramite area di testo dedicata), selezionare l'\glossario{utterance}{utterance} type e avviare l'esecuzione di \textit{Speect} eseguendo singolarmente ogni utterance processor (pulsante \textit{Run step}) o tutti assieme in sequenza (pulsante \textit{Run all}).
  		\begin{figure}[H]
  			
  			\centering
@@ -249,7 +247,7 @@
  		\end{figure}
  	
  	\subsection{Pannello degli utterance processor}
- 	Situato sulla sinistra, sotto al pannello di configurazione. Qui è presente una lista degli utterance processor relativi alla voice caricata, a ognuno dei quali è assegnata una checkbox. Spuntando le checkbox l'utente seleziona gli utterance processor che desidera eseguire per un dato input tramite i pulsanti dedicati presenti nel pannello di configurazione (pulsanti \textit{Run all} e \textit{Run step}). Avviata l'esecuzione, i processor eseguiti verranno evidenziati dal colore verde, mentre quello corrente è riportato in grassetto (vedi Figura 4.4);
+ 	Situato sulla sinistra, sotto al pannello di configurazione. Qui è presente una lista degli utterance processor relativi alla voice caricata e all'utterance type selezionata, a ognuno dei quali è assegnata una checkbox. Spuntando le checkbox l'utente seleziona gli utterance processor che desidera eseguire per un dato input tramite i pulsanti dedicati presenti nel pannello di configurazione (pulsanti \textit{Run all} e \textit{Run step}). Avviata l'esecuzione, i processor eseguiti verranno evidenziati dal colore verde, mentre quello corrente è riportato in grassetto (vedi Figura 4.4);
  		\begin{figure}[H]
  			
  			\centering
@@ -305,14 +303,12 @@
 	A questo punto, se verrà visualizzato il percorso del file \verb|.json| subito dopo l'etichetta "Path Voice", vicino al pulsante di caricamento della voice, allora il caricamento della stessa avrà avuto successo.\\
 	Nel caso in cui il caricamento del file abbia avuto esito negativo, è necessario ripetere la procedura assicurandosi si averla eseguita correttamente.
 	
-	\subsection{Generare l'audio relativo alla voice caricata}
-	Successivamente al caricamento della voice, per generare l'audio relativo è sufficiente cliccare il pulsante \textit{Run all}. In questo modo verranno eseguiti gli utterance processor selezionati e visualizzato il grafo risultante, e \textit{Speect} genererà il file audio desiderato.\\
-	Prima di procedere con l'esecuzione di \textit{Speect}, è possibile inserire un input testuale nell'apposita area di testo, nonché selezionare una diversa utterance type (nel caso fosse presente).
 	
 	\subsection{Salvare l'audio relativo alla voice}
 	Uno volta eseguito \textit{Speect}, per salvare l'audio è sufficiente cliccare sul pulsante \textit{File} del menù e selezionare la voce \textit{Save Audio file}.\\
-	Fatto ciò, si aprirà una finestra di ricerca del file browser dove cercare la cartella in cui salvare il file. Una volta trovata basterà selezionarla, cliccandoci sopra, scrivere il nome del file nella barra di testo dedicata e confermare.\\
+	Fatto ciò, si aprirà una finestra di ricerca del file browser dove cercare la cartella in cui salvare il file. Una volta trovata basterà selezionarla, cliccandoci sopra o scrivere il nome del nuovo file nella barra di testo dedicata e confermare, con attenzione di riportare l'estensione \verb|.wav|.\\
 	Il file audio prodotto avrà l'estensione \verb|.wav|.
+	Questa operazione controllerà se è possibile salvare l'audio e come ogni altra operazione darà un report nella log di errore.
 	
 	\section{Visualizzare il grafo}
 	Per visualizzare il grafo è necessario aver caricato una voice, inserito un input testuale ed eseguito \textit{Speect} tramite pulsante \textit{Run all} o \textit{Run step}.\\
@@ -320,7 +316,8 @@
 	Il grafo è composto da:
 	\begin{itemize}
 		\item \textbf{Nodi}: visualizzati tramite cerchi con relativo name, i nodi hanno colori diversi a seconda della relazione a cui appartengono (la lista delle relation funge da legenda);
-		\item \textbf{Archi}: visualizzati tramite frecce direzionali che collegano due nodi, anche gli archi sono di colori diversi a seconda della relazione a cui fanno riferimento.
+		\item \textbf{Archi}: visualizzati tramite frecce direzionali che collegano due nodi, anche gli archi sono di colori diversi a seconda della relazione a cui fanno riferimento e sono differenziati in base alla tipologia:
+		Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione
 	\end{itemize}
 	
 	\subsection{Visualizzare il grafo step-by-step}
@@ -330,15 +327,7 @@
 	Eseguendo \textit{Speect} tramite pulsante \textit{Run all} è possibile eseguire tutti gli utterance processor in una sola volta e vedere subito il grafo completo.
 	
 	\section{Interagire con il grafo}
-	Questa sezione spiega come poter interagire col grafo spostando nodi e archi, rimuovendo nodi e archi relativi a determinate relation dalla visualizzazione e come esportare il grafo.
-	
-	\subsection{Esportare il grafo generato}
-	Per esportare un grafo è sufficiente cliccare \textit{File} dal menù e selezionare la voce \textit{Save HRG Graph}.\\
-	Una volta fatto ciò, si aprirà una finestra di ricerca del file browser dove cercare la cartella in cui salvare il file. Una volta trovata basterà selezionarla, cliccandoci sopra, scrivere il nome del file nella barra di testo dedicata e confermare.
-	
-	\subsection{Importare il grafo}
-	Per importare un grafo è sufficiente cliccare \textit{File} dal menù e selezionare la voce \textit{Load HRG Graph}.\\
-	Una volta fatto ciò, si aprirà una finestra di ricerca del file browser dove cercare il file. Sarà dunque sufficiente reperirlo, selezionarlo e confermarne l'apertura.
+	Questa sezione spiega come poter interagire col grafo spostando nodi e archi, rimuovendo nodi e archi relativi a determinate relation dalla visualizzazione.
 	
 	\subsection{Selezionare gli utterance processors}
 	Nel pannello degli utterance processor (§4.1.3) è possibile interagire con i processor tramite le caselle di spunta a lato.\\
@@ -353,6 +342,7 @@
 	
 	\subsubsection{Traslare nodi}
 	Per traslare un nodo è sufficiente cliccare su di esso tenendo premuto e, spostando il cursore, trascinarlo dove si desidera all'interno dell'area del grafo.
+	Inoltre è possibile selezionare più nodi tenendo premuto CTRL durante la selezione
 	
 	\subsubsection{Traslare archi}
 	Quando si trasla un nodo, gli archi che sono coinvolti direttamente con quel nodo si adatteranno alla nuova posizione del nodo.
@@ -360,36 +350,26 @@
 	\chapter{Risoluzione dei problemi}
 	
 	\section{Errori in DeSpeect}
-	In questa sezione viene fornito un elenco di tutti i possibili errori che si possono riscontrare utilizzando l’applicazione \textit{DeSpeect}:
-	\begin{itemize}
-		\item \textbf{E01 - Errore di caricamento del file .json}: l'utente visualizza un opportuno messaggio di errore durante il caricamento del file nel caso in cui questo non vada a buon fine; 
-		\item \textbf{E02 - Errore di salvataggio dell'audio}: l'utente visualizza un opportuno messaggio di errore durante il salvataggio dell'audio prodotto nel caso in cui questo non vada a buon fine; 
-		\item \textbf{E03 - Errore di esecuzione di Speect}: l'utente visualizza un opportuno messaggio di errore durante l'esecuzione di \textit{Speect} nel caso in cui questa non vada a buon fine;
-		\item \textbf{E04 - Errore di esecuzione del singolo utterance processor}: l'utente visualizza un opportuno messaggio di errore durante l'esecuzione di un singolo utterance processor di \textit{Speect} nel caso in cui questa non vada a buon fine;
-		\item \textbf{E05 - Errore di esportazione del grafo}: l'utente visualizza un opportuno messaggio di errore durante l'esportazione del grafo nel caso in cui questa non vada a buon fine;
-		\item \textbf{E06 - Errore di importazione del grafo}: l'utente visualizza un opportuno messaggio di errore durante l'importazione del grafo nel caso in cui questa non vada a buon fine;
-		\item \textbf{E07 - Errore di ricerca del path}: l'utente visualizza un opportuno messaggio di errore durante la ricerca del path nel caso in cui questa non vada a buon fine;
-		\item \textbf{E08 - Errore di salvataggio del file .json}: l'utente visualizza un opportuno messaggio di errore durante il salvataggio del file nel caso in cui questo non vada a buon fine. 
-	\end{itemize} 
-	
+	Gli errori che si possono riscontrare utilizzando l’applicazione verrano stampati nella log di errore, nel caso l'errore sia dell'engine Speect il suo errore verrà riportato nel file ErrorLog.txt \textit{DeSpeect}.
 	\subsection{Struttura dei codici di errore}
 	Gli errori rispettano la seguente notazione:
 	
 	\begin{center}
-		E[ID] - [Titolo]
+		Operazione in esecuzione,Operation Status: stato di Speect in seguito all'operazione.
+		Gli stati sono:
+		\begin{itemize}
+			\item {No error} Successo, nessun errore;
+			\item {Failure} Una failure non specificata è avvenuta;
+			\item {Memory allocation failed} Errore di allocazione di memoria;
+			\item {Function argument(s) invalid} Errore negli argomenti della funzione;
+			\item {Class/object method does not exist} Classe/Oggetto non esistono;
+			\item {End of file/stream} Fine del file o dello stream raggiunta;
+			\item {Warning, possible error} Attenzione possibile errore;
+			\item {Error context continued} Errore il contesto continua;
+			\item {Undefined error} Errore non definito.
+		\end{itemize}
+	 	Se l'operazione finisce in uno stato diverso da No error, nel file ErrorLog.txt verrà descritto in maniera più dettagliata.
 	\end{center}
-	
-	Dove:
-	
-	\begin{itemize}
-		
-		\item \textbf{ID}: identifica univocamente l'errore tramite un codice numerico incrementale;
-		
-		\item \textbf{Titolo}: titolo dell'errore.
-	\end{itemize}
-	
-	\subsection{Log degli errori}
-	In caso di errori viene prodotto un log di errori che viene salvato su di un file apposito e contiene sia gli errori della libreria \textit{Speect} che quelli prodotti dall'interfaccia \textit{DeSpeect}.
 	
 	\section{Problemi con il reperimento di Speect}	
 	Il portale che ospita documentazione e download di \textit{Speect} può occasionalmente risultare offline per dei giorni.\\
