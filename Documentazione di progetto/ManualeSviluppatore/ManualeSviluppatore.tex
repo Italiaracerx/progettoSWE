@@ -10,7 +10,7 @@
 \author{}
 
 %Ultima versione documento
-\newcommand{\versione}{0.2.0}
+\newcommand{\versione}{1.0.0}
 
 % Stile per il glossario
 \newglossarystyle{glossaryStyle}{
@@ -189,17 +189,18 @@
 	\section{Tecnologie utilizzate da DeSpeect}
 	
 	\subsection{Libreria di riferimento}
-	Speect è un sistema di \textit{Text To Speech} (TTS) multilingua. Esso offre un sistema TTS completo (analisi e decodifica del testo e sintesi vocale) con annesse varie API, nonché un ambiente per la ricerca e lo sviluppo di sistemi e voci TTS. Speect è scritto in linguaggio C, con una stretta conformità allo standard ISO / IEC 9899: 1990, consentendo così la massima portabilità su diverse piattaforme di calcolo. Le chiamate di sistema specifiche della piattaforma sono astratte per consentire le porte a nuove piattaforme. Speect v1.1.0-69-g65f4 rappresenta il cuore di DeSpeect, che in particolare ne realizza un'interfaccia grafica atta a semplificarne l'utilizzo e il debug. La tecnologia è open source e la sua documentazione è accessibile al seguente link:
+	Speect è un sistema di \textit{Text To Speech} (TTS) multilingua. Esso offre un sistema TTS completo (analisi e decodifica del testo e sintesi vocale) con annesse varie API, nonché un ambiente per la ricerca e lo sviluppo di sistemi e voci TTS. Speect è scritto in linguaggio C, con una stretta conformità allo standard ISO / IEC 9899: 1990, consentendo così la massima portabilità su diverse piattaforme di calcolo. Speect v1.1.0-69-g65f4 rappresenta il cuore di DeSpeect, che in particolare ne realizza un'interfaccia grafica atta a semplificarne l'utilizzo e il debug. La tecnologia è open source e la sua documentazione è accessibile al seguente link:
 	\begin{center}
 	\url{http://speect.sourceforge.net/contents.html}
 	\end{center}
 	
 	\subsection{GUI}
 	
-	Qt è una libreria multipiattaforma per lo sviluppo di programmi con interfaccia grafica tramite l'uso di widget. La libreria è scritta in C++ e gode di ampia diffusione e supporto. L'interfaccia grafica di DeSpeect è stata sviluppata mediante questa tecnologia nella versione v5.9 LTS. Maggiori informazioni su Qt sono reperibili al seguente link:
+	Per progettare l'interfaccia grafica viene utilizzato \glossario{Qt Creator}{Qt Creator}. Questo strumento permette di realizzare interfacce grafiche mediante le librerie grafiche Qt, diventate in questo ambito quasi uno standard per piattaforme Linux Based.  Maggiori informazioni su Qt Creator sono disponibili al seguente link:
 	\begin{center}
-	\centerline{\url{https://www.qt.io/what-is-qt/}}
+		\centerline{\url{http://doc.qt.io/qtcreator/}}
 	\end{center}
+	Tale \glossario{IDE}{IDE} è consigliato qualora si volesse lavorare su DeSpeect, e un approfondimento sulla sua installazione e sull'importazione del progetto è reperibile in §4.2 di questo documento.
 	
 	\subsection{Compilazione}
 	
@@ -216,16 +217,7 @@
 		\centerline{\url{https://cmake.org/overview/}}
 	\end{center}
 	
-	\end{itemize}
-	
-	\subsection{IDE}
-	
-	Per progettare l'interfaccia grafica viene utilizzato \glossario{Qt Creator}{Qt Creator}. Questo strumento permette di realizzare interfacce grafiche mediante le librerie grafiche Qt, diventate in questo ambito quasi uno standard per piattaforme Linux Based.  Maggiori informazioni su Qt Creator sono disponibili al seguente link:
-	\begin{center}
-	\centerline{\url{https://www.qt.io/qt-features-libraries-apis-tools-and-ide/}}
-	\end{center}
-	Tale \glossario{IDE}{IDE} è consigliato qualora si volesse lavorare su DeSpeect, e un approfondimento sulla sua installazione e sull'importazione del progetto è reperibile in §4.2 di questo documento. 
-
+	\end{itemize} 
 	
 	\section{Verifica e monitoraggio di DeSpeect}	
 	
@@ -270,7 +262,7 @@
 	\begin{enumerate}
 		\item Clonare o scaricare il repository sulla propria macchina;
 		\item Entrare nella cartella scaricata ed eseguire lo script \verb|build.sh| presente al suo interno. Tale script installerà Speect ed effettuerà una build del progetto all'interno nella directory \verb|DeSpeect/build/|.
-		\item Per eseguire DeSpeect, entrare nella directory \verb|DeSpeect/build/| ed eseguire il comando \verb|./main|.
+		\item Per eseguire DeSpeect, entrare nella directory \verb|DeSpeect/build/bin/| ed eseguire il comando \verb|./main|.
 	\end{enumerate}
 	
 	\section{IDE suggerito}
@@ -471,11 +463,10 @@ Il framework Qt, attraverso il sistema di signal e slot, implementa tale design 
 	\section{Eseguire un test}
 	
 	\subsection{Esecuzione automatica dei test}
-	Il servizio Travis CI, integrato con il repository GitHub relativo al progetto, testa la build ed esegue i test automaticamente ad ogni modifica del codice sul repository. Lo stesso rilascia successivamente i dati sul code coverage al servizio web \textit{codcov.io}, anch'esso collegato al repository GitHub, che aggiorna così i propri report. É possibile prendere spunto dal file \verb|.travis.yml| presente nel repository e dalla documentazione reperibile al link:
+	Il servizio Travis CI, integrato con il repository GitHub relativo al progetto, testa la build ed esegue i test automaticamente ad ogni modifica del codice sul repository. Lo stesso rilascia successivamente i dati sul code coverage al servizio web \textit{sonarcloud.io}, anch'esso collegato al repository GitHub, che aggiorna così i propri report. Per predisporre il proprio sistema di integrazione continua con Travis CI qualora non si volesse creare una fork del progetto originale, è possibile prendere spunto dal file \verb|.travis.yml| presente nel repository e dalla documentazione reperibile al link:
 	\begin{center}
 		\url{https://docs.travis-ci.com/user/languages/cpp/}
 	\end{center}
-	Per predisporre il proprio sistema di integrazione continua con Travis CI qualora non si volesse creare una fork del progetto originale. 
 	
 	\subsection{Esecuzione manuale dei test}
 	A seguito dell'esecuzione dello script \verb|build.sh| citato in §4.1 di questo documento viene generata automaticamente una build e un'esecuzione dei test contenuti nella directory \verb|DeSpeect/Test/|. I test sono eseguibili sia con il comando \verb|ctest| che con il comando \verb|unit_tests| e la loro esecuzione mostra sinteticamente il code coverage relativo. 
