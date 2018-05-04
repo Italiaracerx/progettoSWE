@@ -1723,60 +1723,85 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 	\\[1em]
 	\hline
 	\newline TU2&
+	\newline Viene verificato che la voice è caricata erroneamente ritorni un messaggio d'errore.&
+	\newline Non implementato
+	\\[1em]
+	\hline
+	\newline TU3&
 	\newline Viene verificato che l'audio viene salvato correttamente&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
-	\newline TU3&
+	\newline TU4&
 	\newline Viene verificato che viene caricata l'utterance type corretta&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
-	\newline TU4&
+	\newline TU5&
 	\newline Viene verificato che il testo venga caricato su \textit{Speect} correttamente&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
-	\newline TU5&
+	\newline TU6&
 	\newline Viene verificato che vengano caricati gli utterance processors corretti&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
-	\newline TU6&
+	\newline TU7&
 	\newline Viene verificato che l'esecuzione degli utterance processors selezionati avvenga correttamente&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
-	\newline TU7&
+	\newline TU8&
 	\newline Viene verificato che il grafo venga stampato correttamente&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
-	\newline TU8&
+	\newline TU9&
 	\newline Viene verificato che ogni relazione venga visualizzata correttamente&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
-	\newline TU9&
+	\newline TU10&
 	\newline Viene verificato che ogni nodo venga visualizzato correttamente&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
-	\newline TU10&
+	\newline TU11&
 	\newline Viene verificato che ogni linea venga visualizzata correttamente&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
-	\newline TU11&
+	\newline TU12&
 	\newline Viene verificato che ogni arco venga visualizzato correttamente&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
- 	\newline TU12&
- 	\newline Viene verificato che ogni dato di un nodo venga visualizzato correttamente&
- 	\newline \textcolor{green}{Superato}
- 	\\[1em]
- 	\hline
+	\newline TU13&
+	\newline Viene verificato che un plugin venga caricato correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU14&
+	\newline Viene verificato che un nodo abbia il campo name corretto&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU15&
+	\newline Viene verificato che una relazione abbia il campo name corretto&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU16&
+	\newline Viene verificato che un utterance processor abbia il campo name corretto&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU17&
+	\newline Viene verificato che ogni dato di un nodo venga visualizzato correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
 %	\newline TU13&
 %	\newline Viene verificato che ogni modifica ai dati di un nodo avvenga correttamente&
 %	\newline Non implementato
@@ -1791,29 +1816,30 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 	\textbf{Test} & \textbf{Metodo}\\
 	\hline
 	\endhead
-	TU1&\verb|ViewModel::ModelView::LoadConfiguration()|,
-	\verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::SetSpectConfigCommand()::execute()|
+	TU1&
+	 \verb|Model::Command::SetSpectConfigCommand()::execute()|
+	\\[1em]	
+	\hline
+	TU2&
+	\verb|Model::Command::SetSpectConfigCommand()::execute()|
 	\\[1em]	
 	\hline	
-	TU2&\verb|ViewModel::ModelView::SaveAudio()|, \verb|Model::Command::CommandBuilder::SaveAudio()|, \verb|Model::Command::CreateAudioCommand()::execute()|
-	\\[1em]	
-	\hline	
-	TU3&\verb|ViewModel::ModelView::LoadConfiguration()|, \verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::SetSpectConfigCommand()::execute()|
+	TU3& \verb|Model::Command::CommandBuilder::SaveAudio()|, \verb|Model::Command::CreateAudioCommand()::execute()|
 	\\[1em]	
 	\hline	
 	TU4&\verb|ViewModel::ModelView::LoadConfiguration()|, \verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::SetSpectConfigCommand()::execute()|
 	\\[1em]	
 	\hline	
-	TU5&\verb|ViewModel::ModelView::LoadConfiguration()|, \verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::SetSpectConfigCommand()::execute()|
+	TU5& \verb|Model::Command::SetSpectConfigCommand()::execute()|
+	\\[1em]	
+	\hline	
+	TU6&\verb|ViewModel::ModelView::LoadConfiguration()|, \verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::SetSpectConfigCommand()::execute()|
 	\\[1em]
 	\hline	
-	TU6&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::UttProcessorCommand()::execute()|
+	TU7&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::UttProcessorCommand()::execute()|
 	\\[1em]
 	\hline	
-	TU7&\verb|ViewModel::GraphManager::printRelation()|
-	\\[1em]
-	\hline	
-	TU8&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|ViewModel::GraphManager::printRelation()|
+	TU8&\verb|ViewModel::GraphManager::printRelation()|
 	\\[1em]
 	\hline	
 	TU9&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|ViewModel::GraphManager::printRelation()|
@@ -1825,6 +1851,26 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 	TU11&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|ViewModel::GraphManager::printRelation()|
 	\\[1em]
 	\hline	
+	TU12&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|ViewModel::GraphManager::printRelation()|
+	\\[1em]
+	\hline
+	TU13&\verb|ViewModel::ModelView::requestProcessorRun()|
+	\\[1em]
+	\hline
+	TU14&\verb|Model::SpeectWrapper::Item::getName()|
+	\\[1em]
+	\hline	
+	TU15&\verb|Model::SpeectWrapper::Relation::getName()|,
+	\verb|Model::CommandList::getRelationNames()|
+	\\[1em]
+	\hline
+	TU16&\verb|Model::SpeectWrapper::Speect::getUttProcessorNames()|,
+	\verb|Model::CommandList::getUttProcessorsNames()|
+	\\[1em]
+	\hline
+	TU17&
+	\\[1em]
+	\hline			
 \end{longtable}
 
 \section{Test di Integrazione}
