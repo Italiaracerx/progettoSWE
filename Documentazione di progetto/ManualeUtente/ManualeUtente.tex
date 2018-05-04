@@ -10,7 +10,7 @@
 \author{}
 
 %Ultima versione documento
-\newcommand{\versione}{0.2.0}
+\newcommand{\versione}{1.0.0}
 
 % Stile per il glossario
 \newglossarystyle{glossaryStyle}{
@@ -45,6 +45,7 @@
 \newglossaryentry{python-dev}{name={python-dev}, description={è una collezione di tool per sviluppatori Python presentata come alternativa a ciò che viene offerto dalla libreria standard.}}
 \newglossaryentry{HRG}{name={HRG}, description={Heterogeneous Relation Graph: struttura dati per memorizzare le informazioni di un utterance in Speect.}}
 \newglossaryentry{JSon}{name={JSon}, description={Formato di file leggero adatto allo scambio dati, autodescrittivo e indipendente dalla lingua usata.}}
+\newglossaryentry{voice}{name={voice},description={Una voice definisce gli utterance type che possono essere utilizzati per la sintesi con la voce specifica}}
 \newglossaryentry{file Voice}{name={File Voice}, description={File di inizializzazione di Speect}, nonumberlist }
 
 \begin{document}
@@ -124,6 +125,8 @@
 	\begin{comment}
 	\\ \noindent Per i manutentori del prodotto o per chi fosse interessato alla sua integrazione/incremento, può invece consultare il manuale sviluppatore reperibile all'indirizzo: \url{...}
 	\end{comment}
+
+	\newpage
 	
 	\section{Riferimenti informativi}
 
@@ -143,7 +146,26 @@
 
 	\chapter{Requisiti di sistema}
 	
-	L'installazione ed esecuzione del software DeSpeect richiede i seguenti prerequisiti:
+	\section{Requisiti hardware}
+	
+	L'installazione ed esecuzione del software DeSpeect richiede una macchina con i seguenti requisiti:
+	\begin{center}
+		\begin{longtable}{| p{40mm} | p{60mm} | p{60mm} |}
+			\hline
+			\textbf{Hardware} & \textbf{Requisiti minimi} & \textbf{Requisiti consigliati} \\
+			\hline CPU & 2 GHz dual core x86 & 3GHz quad core x64 \\
+			\hline RAM & 4 GB & 8GB \\
+			\hline Spazio libero su disco & 256MB & 1GB \\
+			\hline  \multirow{3}{*}{GPU}
+			& accelerazione video 3D & accelerazione video 3D \\ 
+			& risoluzione 1280x1024 & risoluzione 1920x1080 \\
+			& 256 MiB di memoria & 512 MiB di memoria \\
+			\hline
+		\end{longtable}
+	\end{center}
+	\section{Requisiti software}
+	
+	L'installazione ed esecuzione del software DeSpeect richiede i seguenti programmi preinstallati:
 	
 	\begin{itemize}
 		\item Sistema operativo Unix / Unix-like (il software è stato testato solo per piattaforma Ubuntu 16.04 LTS)
@@ -156,19 +178,20 @@
 		\subitem \url{https://www.qt.io/download}
 		\item Git
 		\subitem \url{https://git-scm.com/} 
-		\item \glossario{Curl}{Curl}
+		\item Curl 
 		\subitem \url{https://curl.haxx.se/}
-		\item \glossario{Swig}{Swig}
+		\item Swig 
 		\subitem \url{http://www.swig.org/}
-		\item \glossario{libxml2-dev}{libxml2-dev}
+		\item libxml2-dev
 		\subitem \url{https://packages.debian.org/stretch/libxml2-dev} 
-		\item \glossario{python-dev}{python-dev}
+		\item python-dev
 		\subitem \url{https://pypi.python.org/pypi/dev/0.4.0}
-	\end{itemize}	
+	\end{itemize}
+	
 	 
 	\chapter{Installazione e configurazione} 
 	
-	DeSpeect è reperibile su \glossario{GitHub}{GitHub} al seguente link:
+	DeSpeect è reperibile su GitHub al seguente link:
 	\begin{center}
 		\url{https://github.com/graphiteSWE/DeSpeect}
 	\end{center}
@@ -177,35 +200,48 @@
 	\begin{enumerate}
 		\item Clonare o scaricare il repository sulla propria macchina;
 		\item Entrare nella cartella scaricata ed eseguire lo script \verb|build.sh| presente al suo interno. Tale script installerà Speect ed effettuerà una build del progetto all'interno nella directory \verb|DeSpeect/build/|.
-		\item Per eseguire DeSpeect, entrare nella directory \verb|DeSpeect/build/| ed eseguire il comando \verb|./main|.
+		\item Per eseguire DeSpeect, entrare nella directory \verb|DeSpeect/build/bin/| ed eseguire il comando \verb|./main|.
 	\end{enumerate}
 	
 	\chapter{Guida all'utilizzo}
 	Viene di seguito illustrata la guida all'utilizzo del software DeSpeect. \\
 	Si fa notare che i termini evidenziati in \textit{corsivo} corrispondono a pulsanti specifici presenti all'interno dell'applicazione.
 	
-	\section{Interfaccia grafica}
+	\section{Struttura dell'interfaccia grafica}
 	
 	\begin{figure}[H]
 		
 		\centering
 		
-		\includegraphics[scale=0.45]{./img/avvio}
+		\includegraphics[scale=0.3]{./img/main-window}
 		
 		\caption{Interfaccia grafica - Schermata iniziale}
 	
 	\end{figure}
 
-	All'avvio dell'applicazione viene presentata la schermata riportata in Figura 4.1. L'interfaccia grafica è costituita dalle componenti illustrate nelle sezioni seguenti:
+	All'avvio dell'applicazione viene presentata la schermata riportata in Figura 4.1. L'interfaccia grafica è costituita dalle componenti illustrate nelle sezioni seguenti.
  	
  	\subsection{Menù dell'applicazione}
+ 	
+ 	\begin{figure}[H]
+ 		
+ 		\centering
+ 		
+ 		\includegraphics{./img/menu}
+ 		
+ 		\caption{Menù dell'applicazione - Visione generale}
+ 		
+ 	\end{figure}
+ 
  	Menù situato nella parte superiore della schermata. Tramite il menù \textit{File} è possibile interagire con alcune funzionalità offerte dal sistema, mentre tramite il menù \textit{Help} è possibile visualizzare manuale utente e licenza del prodotto (vedi Figura 4.2). Il menù è sempre disponibile in qualunque posizione all'interno dell'applicazione e al suo interno è possibile selezionare le seguenti voci:
+ 	
+ 	\newpage
  	
  	\subsubsection{File} 
  		\begin{itemize}
- 			\item \textbf{Load Voice JSon}: carica il file voice \glossario{JSon}{JSon};
+ 			\item \textbf{Load Voice JSon}: carica il \glossario{file Voice}{file Voice} \glossario{JSon}{JSon};
  			\item \textbf{Save Audio file}: salva il file audio prodotto in seguito all'esecuzione di \textit{Speect};
- 			\item \textbf{Search from path}: cerca un nodo inserendo come input un percorso specifico (es. Words.parent.n);
+ 			\item \textbf{Search path}: cerca un nodo inserendo come input un percorso specifico (es. Words.parent.n);
  			\item \textbf{Exit}: chiude l'interfaccia \textit{DeSpeect}.
  		\end{itemize}
  		
@@ -213,11 +249,13 @@
  			
  			\centering
  			
- 			\includegraphics[width=.4\textwidth]{./img/menu_file}
+ 			\includegraphics[scale=0.3]{./img/file}
  			
  			\caption{Menù dell'applicazione - Sezione "File"}
  			
  		\end{figure}
+ 	
+ 	\newpage
  	
  	\subsubsection{Help}
  		\begin{itemize}
@@ -228,31 +266,35 @@
  			
  			\centering
  			
- 			\includegraphics[width=.4\textwidth]{./img/menu_help}
+ 			\includegraphics[scale=0.3]{./img/help}
  			
  			\caption{Menù dell'applicazione - Sezione "Help"}
  			
  		\end{figure}
  	
+ 	\newpage
+ 	
  	\subsection{Pannello di configurazione}
- 	Situato nella parte superiore della schermata sotto il menù citato al punto precedente. Qui è possibile caricare un \glossario{file Voice}{file Voice} (tramite pulsante \textit{Load Voice}), inserire input testuale (tramite area di testo dedicata), selezionare l'\glossario{utterance}{utterance} type e avviare l'esecuzione di \textit{Speect} eseguendo singolarmente ogni utterance processor (pulsante \textit{Run step}) o tutti assieme in sequenza (pulsante \textit{Run all}).
+ 	Situato nella parte superiore della schermata sotto il menù citato al punto precedente. Qui è possibile caricare un file Voice (tramite pulsante \textit{Load Voice}), inserire input testuale (tramite area di testo dedicata), selezionare l'\glossario{utterance}{utterance} type e avviare l'esecuzione di \textit{Speect} eseguendo singolarmente ogni utterance processor (pulsante \textit{Run step}) o tutti assieme in sequenza (pulsante \textit{Run all}).
  		\begin{figure}[H]
  			
  			\centering
  			
- 			\includegraphics[width=\textwidth]{./img/pannello_configurazione}
+ 			\includegraphics[width=\textwidth]{./img/config-panel}
  			
  			\caption{Interfaccia grafica - Pannello di configurazione}
  			
  		\end{figure}
  	
+ 	\newpage
+ 	
  	\subsection{Pannello degli utterance processor}
- 	Situato sulla sinistra, sotto al pannello di configurazione. Qui è presente una lista degli utterance processor relativi alla voice caricata e all'utterance type selezionata, a ognuno dei quali è assegnata una checkbox. Spuntando le checkbox l'utente seleziona gli utterance processor che desidera eseguire per un dato input tramite i pulsanti dedicati presenti nel pannello di configurazione (pulsanti \textit{Run all} e \textit{Run step}). Avviata l'esecuzione, i processor eseguiti verranno evidenziati dal colore verde, mentre quello corrente è riportato in grassetto (vedi Figura 4.4);
+ 	Situato sulla sinistra, sotto al pannello di configurazione. Qui è presente una lista degli utterance processor relativi alla \glossario{voice}{voice} caricata e all'utterance type selezionata, a ognuno dei quali è assegnata una checkbox. Spuntando le checkbox l'utente seleziona gli utterance processor che desidera eseguire per un dato input tramite i pulsanti dedicati presenti nel pannello di configurazione (pulsanti \textit{Run all} e \textit{Run step}). Avviata l'esecuzione, i processor eseguiti verranno evidenziati dal colore verde, mentre quello corrente è riportato in grassetto (vedi Figura 4.4);
  		\begin{figure}[H]
  			
  			\centering
  			
- 				\includegraphics[width=.4\textwidth]{./img/pannello_processors}
+ 				\includegraphics[width=.4\textwidth]{./img/utterance-processors}
  			
  			\caption{Interfaccia grafica - Pannello degli utterance processors}
  			
@@ -264,7 +306,7 @@
  			
  			\centering
  			
- 				\includegraphics[width=.4\textwidth]{./img/pannello_relations}
+ 				\includegraphics[width=.4\textwidth]{./img/relations}
  			
  			\caption{Interfaccia grafica - Pannello delle Relations}
  			
@@ -276,7 +318,7 @@
  			
  			\centering
  			
- 				\includegraphics[width=\textwidth]{./img/area_grafo}
+ 				\includegraphics[scale=0.3]{./img/graph-area}
  			
  			\caption{Interfaccia grafica - Area del grafo}
  			
@@ -288,7 +330,7 @@
  			
  			\centering
  			
- 				\includegraphics[width=\textwidth]{./img/proprieta_nodo}
+ 				\includegraphics[width=\textwidth]{./img/node-properties}
  			
  			\caption{Interfaccia grafica - Proprietà del nodo}
  			
@@ -303,6 +345,12 @@
 	A questo punto, se verrà visualizzato il percorso del file \verb|.json| subito dopo l'etichetta "Path Voice", vicino al pulsante di caricamento della voice, allora il caricamento della stessa avrà avuto successo.\\
 	Nel caso in cui il caricamento del file abbia avuto esito negativo, è necessario ripetere la procedura assicurandosi si averla eseguita correttamente.
 	
+	\subsubsection*{Esempio}
+	
+	In questo esempio, si mostra come caricare una voice open source fornita con Speect. Sarà necessario attenersi alla seguente procedura:
+	\begin{enumerate}
+		\item cliccare il pulsante \textit{Load Voice} o su \textit{File} e successivamente  \textit{Load Voice}";
+	\end{enumerate} 
 	
 	\subsection{Salvare l'audio relativo alla voice}
 	Uno volta eseguito \textit{Speect}, per salvare l'audio è sufficiente cliccare sul pulsante \textit{File} del menù e selezionare la voce \textit{Save Audio file}.\\
