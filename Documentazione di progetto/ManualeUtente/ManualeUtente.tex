@@ -163,6 +163,7 @@
 			\hline
 		\end{longtable}
 	\end{center}
+
 	\section{Requisiti software}
 	
 	L'installazione ed esecuzione del software DeSpeect richiede i seguenti programmi preinstallati:
@@ -199,9 +200,9 @@
 	\noindent Una volta soddisfatti i prerequisiti descritti in §2 "Requisiti di sistema" di questo documento, per installare ed eseguire il software è necessario seguire la seguente procedura:
 	\begin{enumerate}
 		\item Clonare o scaricare il repository sulla propria macchina;
-		\item Entrare nella cartella clonata/scaricata ed eseguire lo script \verb|installer.sh| presente al suo interno;
+		\item Entrare nella cartella clonata/scaricata ed eseguire lo script \verb|Installer.sh| presente al suo interno;
 		\item Selezionare la cartella di destinazione per l'installazione: lo script installerà Speect ed effettuerà una build del progetto all'interno di tale directory;
-		\item Per eseguire DeSpeect, entrare nella directory di installazione, successivamente in \verb|/build/bin/| ed eseguire il file \verb|main|.
+		\item Per eseguire DeSpeect, entrare nella directory di installazione ed avviare l'eseguibile \verb|DeSpeect|.
 	\end{enumerate}
 	
 	\chapter{Guida all'utilizzo}
@@ -286,7 +287,16 @@
  			\caption{Interfaccia grafica - Pannello di configurazione}
  			
  		\end{figure}
- 	
+	 	
+	 	\begin{figure}[H]
+	 		
+	 		\centering
+	 		
+	 		\includegraphics[width=\textwidth]{./img/utterance-type}
+	 		
+	 		\caption{Interfaccia grafica - Selezione utterance type}
+	 		
+	 	\end{figure}
  	\newpage
  	
  	\subsection{Pannello degli utterance processor}
@@ -325,8 +335,10 @@
  			
  		\end{figure}
  	
+ 	\newpage
+ 	
  	\subsection{Proprietà del nodo}
- 	Situato nella parte inferiore dell'interfaccia. Qui vengono visualizzate le informazioni specifiche relative al nodo selezionato (vedi Figura 4.7).
+ 	Situato nella parte inferiore dell'interfaccia, in corrispondenza del primo tab. Qui vengono visualizzate le informazioni specifiche relative al nodo selezionato (vedi Figura 4.7).
  		\begin{figure}[H]
  			
  			\centering
@@ -336,6 +348,18 @@
  			\caption{Interfaccia grafica - Proprietà del nodo}
  			
  		\end{figure}
+ 	
+ 	\subsection{Log errori}
+ 	Situato nella parte inferiore dell'interfaccia, in corrispondeza del secondo tab. Qui vengono visualizzate le informazioni relative allo stato delle operazioni eseguite, ed in particolare degli errori di Speect (vedi Figura 4.7).
+ 	\begin{figure}[H]
+ 		
+ 		\centering
+ 		
+ 		\includegraphics[width=\textwidth]{./img/error-log}
+ 		
+ 		\caption{Interfaccia grafica - Log errori}
+ 		
+ 	\end{figure}
 	
 	\section{Interagire con la voice}
 	Viene di seguito trattata l'interazione con la voice (rappresentata da un file \verb|.json|), dal suo caricamento alla generazione dell'audio prodotto da \textit{Speect}.
@@ -384,17 +408,58 @@
 	Se sono state compiute tali azioni, viene visualizzato il grafo nell'area dedicata (§4.1.5), nonché la lista delle relation (§4.1.4).
 	Il grafo è composto da:
 	\begin{itemize}
-		\item \textbf{Nodi}: visualizzati tramite cerchi con relativo name, i nodi hanno colori diversi a seconda della relazione a cui appartengono (la lista delle relation funge da legenda);
-		\item \textbf{Archi}: visualizzati tramite frecce direzionali che collegano due nodi, anche gli archi sono di colori diversi a seconda della relazione a cui fanno riferimento e sono differenziati in base alla tipologia:
-		Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione	Inserire Immagine archi con descrizione
+		\item \textbf{Nodi}: visualizzati tramite cerchi con relativo name, i nodi hanno colori diversi a seconda della relazione a cui appartengono (la lista delle relation funge da legenda, vedi §4.1.4);
+		\item \textbf{Archi}: visualizzati tramite frecce direzionali che collegano due nodi, anche gli archi sono di colori diversi a seconda della relazione a cui fanno riferimento. Gli archi sono differenziati in base al rapporto tra i nodi che collegano, come evidenziato dagli schemi seguenti.
 	\end{itemize}
+
+		\begin{figure}[H]
+			
+			\centering
+			
+			\includegraphics[scale=0.4]{img/arrows/arrows-legend.png}
+			
+			\caption{Legenda frecce grafo}
+			
+		\end{figure}
+		
+		
+		\begin{figure}[H]
+			
+			\centering
+			
+			\includegraphics[scale=0.4]{img/arrows/arrows-scheme.png}
+			
+			\caption{Schema frecce grafo}
+			
+		\end{figure}
 	
 	\subsection{Visualizzare il grafo step-by-step}
 	Eseguendo \textit{Speect} tramite pulsante \textit{Run step}, è possibile eseguire un utterance processor alla volta e vederne il risultato sul grafo, che ad ogni step si aggiorna aggiungendo nuove relazioni.
 	
+	\subsubsection*{Esempio}
+	
+	In questo esempio viene mostrato come visualizzare il grafo step-by-step, ovvero eseguendo gli utterance processor selezionati uno alla volta sequenzialmente. La procedura è la seguente:
+	\begin{enumerate}
+		\item Caricare una voice (vedi §4.2.1);
+		\item Inserire un input testuale nell'apposita area di testo del pannello di configurazione (§4.1.2). Si inserisca ad esempio l'input "Hi everybody!";
+		\item Selezionare un utterance type dall'apposito menù a tendina del del pannello di configurazione (§4.1.2 - Figura 4.6). Si selezioni ad esempio "text-to-segments";
+		\item Cliccare ripetutamente il pulsante \textit{Run step} del pannello di configurazione (§4.1.2), ad ogni click l'area del grafo (§4.1.5) verrà arricchita con le relazioni appropriate secondo la lista d'esecuzione degli utterance processor (§4.1.3) che si aggiornerà man mano. Seguendo gli input inseriti, verrà eseguito prima "Tokenize", successivamente "Normalize" e così via.
+	\end{enumerate}
+	
 	\subsection{Visualizzare l'intero grafo}
 	Eseguendo \textit{Speect} tramite pulsante \textit{Run all} è possibile eseguire tutti gli utterance processor in una sola volta e vedere subito il grafo completo.
 	
+	\subsubsection*{Esempio}
+	
+	In questo esempio viene mostrato come visualizzare direttamente l'intero grafo, ovvero eseguendo tutti gli utterance processor selezionati. La procedura è la seguente:
+	
+	\begin{enumerate}
+		\item Caricare una voice (vedi §4.2.1);
+		\item Inserire un input testuale nell'apposita area di testo del pannello di configurazione (§4.1.2). Si inserisca ad esempio l'input "Hi everybody!";
+		\item Selezionare un utterance type dall'apposito menù a tendina del del pannello di configurazione (§4.1.2 - Figura 4.6). Si selezioni ad esempio "text-to-segments";
+		\item Cliccare il pulsante \textit{Run all} del pannello di configurazione (§4.1.2): l'area del grafo (§4.1.5) mostrerà immediatamente tutte le relazioni appropriate secondo la lista d'esecuzione degli utterance processor (§4.1.3).
+	\end{enumerate}
+
 	\section{Interagire con il grafo}
 	Questa sezione spiega come poter interagire col grafo spostando nodi e archi, rimuovendo nodi e archi relativi a determinate relation dalla visualizzazione.
 	

@@ -258,11 +258,27 @@
 		\url{https://github.com/graphiteSWE/DeSpeect}
 	\end{center}
 	
-	\noindent Una volta soddisfatti i prerequisiti descritti in §2 "Requisiti di sistema" di questo documento, per installare ed eseguire il software è necessario seguire la seguente procedura:
+	\noindent Una volta soddisfatti i prerequisiti descritti in §2 "Requisiti di sistema" di questo documento, per installare ed eseguire il software è possibile seguire due procedure, una comprensiva di esecuzione dei test (orientata agli sviluppatori) e una semplificata priva di tale esecuzione (orientata agli utenti generici). Segue l'approfondimento di tali procedure.
+	
+	\subsection{Build sviluppatore}
+	
+	La build sviluppatore permette di eseguire i test relativi a DeSpeect in fase di build, non permette invece di specificare una directory per l'installazione del software. La procedura è la seguente:
+	
 	\begin{enumerate}
 		\item Clonare o scaricare il repository sulla propria macchina;
-		\item Entrare nella cartella scaricata ed eseguire lo script \verb|build.sh| presente al suo interno. Tale script installerà Speect ed effettuerà una build del progetto all'interno nella directory \verb|DeSpeect/build/|.
-		\item Per eseguire DeSpeect, entrare nella directory \verb|DeSpeect/build/bin/| ed eseguire il comando \verb|./main|.
+		\item Entrare nella cartella clonata/scaricata ed eseguire lo script \verb|build.sh| presente al suo interno. Tale script installerà Speect ed effettuerà una build del progetto all'interno nella directory \verb|DeSpeect/build/|.
+		\item Per eseguire DeSpeect, entrare nella directory \verb|DeSpeect/build/bin/| ed eseguire il file \verb|main|.
+	\end{enumerate}
+
+	\subsection{Build utente}
+	
+	La build utente permette di specificare una directory per l'installazione del software e costruisce una struttura di directory semplificata. La procedura è la seguente:
+	
+	\begin{enumerate}
+		\item Clonare o scaricare il repository sulla propria macchina;
+		\item Entrare nella cartella clonata/scaricata ed eseguire lo script \verb|Installer.sh| presente al suo interno;
+		\item Selezionare la cartella di destinazione per l'installazione: lo script installerà Speect ed effettuerà una build del progetto all'interno di tale directory;
+		\item Per eseguire DeSpeect, entrare nella directory di installazione ed avviare l'eseguibile \verb|DeSpeect|.
 	\end{enumerate}
 	
 	\section{IDE suggerito}
