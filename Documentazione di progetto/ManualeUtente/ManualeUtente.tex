@@ -199,8 +199,9 @@
 	\noindent Una volta soddisfatti i prerequisiti descritti in §2 "Requisiti di sistema" di questo documento, per installare ed eseguire il software è necessario seguire la seguente procedura:
 	\begin{enumerate}
 		\item Clonare o scaricare il repository sulla propria macchina;
-		\item Entrare nella cartella scaricata ed eseguire lo script \verb|build.sh| presente al suo interno. Tale script installerà Speect ed effettuerà una build del progetto all'interno nella directory \verb|DeSpeect/build/|.
-		\item Per eseguire DeSpeect, entrare nella directory \verb|DeSpeect/build/bin/| ed eseguire il comando \verb|./main|.
+		\item Entrare nella cartella clonata/scaricata ed eseguire lo script \verb|installer.sh| presente al suo interno;
+		\item Selezionare la cartella di destinazione per l'installazione: lo script installerà Speect ed effettuerà una build del progetto all'interno di tale directory;
+		\item Per eseguire DeSpeect, entrare nella directory di installazione, successivamente in \verb|/build/bin/| ed eseguire il file \verb|main|.
 	\end{enumerate}
 	
 	\chapter{Guida all'utilizzo}
@@ -337,7 +338,7 @@
  		\end{figure}
 	
 	\section{Interagire con la voice}
-	Questa sezione tratta dell'interazione con la voice (rappresentata da un file \verb|.json|), dal suo caricamento alla generazione dell'audio prodotto da \textit{Speect}.
+	Viene di seguito trattata l'interazione con la voice (rappresentata da un file \verb|.json|), dal suo caricamento alla generazione dell'audio prodotto da \textit{Speect}.
 	
 	\subsection{Caricare la voice}
 	Per caricare la voice è sufficiente cliccare il pulsante \textit{Load Voice}, situato nell'angolo in alto a sinistra del pannello di configurazione (vedi §4.1.2) o, in alternativa, cliccare sul menù \textit{File} e, successivamente, sulla voce \textit{Load Voice}.\\
@@ -347,16 +348,36 @@
 	
 	\subsubsection*{Esempio}
 	
-	In questo esempio, si mostra come caricare una voice open source fornita con Speect. Sarà necessario attenersi alla seguente procedura:
+	In questo esempio si mostra come caricare una delle voice open source fornite con Speect. Sarà necessario attenersi alla seguente procedura:
+	
 	\begin{enumerate}
-		\item cliccare il pulsante \textit{Load Voice} o su \textit{File} e successivamente  \textit{Load Voice}";
+		\item Cliccare il pulsante \textit{Load Voice} del pannello di configurazione (si noti che accanto a tale pulsante, se non è ancora stata caricata alcuna voice, è riportata un'etichetta "Voice not loaded") o sulla voce \textit{Load Voice} del menù \textit{File};
+		\item Navigare tramite file browser secondo il path \\ \verb|SpeectInstaller/voices/cmu_arctic_slt/|;
+		\item Aprire il file \verb|voice.json| presente all'interno della directory raggiunta al punto precedente. 
 	\end{enumerate} 
+
+	\noindent Al termine della procedura, si noterà che accanto al pulsante \textit{Load Voice} viene mostrato il path corrispondente alla voice caricata, a conferma della buona riuscita dell'operazione.
 	
 	\subsection{Salvare l'audio relativo alla voice}
 	Uno volta eseguito \textit{Speect}, per salvare l'audio è sufficiente cliccare sul pulsante \textit{File} del menù e selezionare la voce \textit{Save Audio file}.\\
 	Fatto ciò, si aprirà una finestra di ricerca del file browser dove cercare la cartella in cui salvare il file. Una volta trovata basterà selezionarla, cliccandoci sopra o scrivere il nome del nuovo file nella barra di testo dedicata e confermare, con attenzione di riportare l'estensione \verb|.wav|.\\
 	Il file audio prodotto avrà l'estensione \verb|.wav|.
 	Questa operazione controllerà se è possibile salvare l'audio e come ogni altra operazione darà un report nella log di errore.
+	
+	\subsubsection*{Esempio}
+	
+	In questo esempio si mostra come salvare l'audio relativo generato da Speect in relazione alla voice caricata. Sarà necessario attenersi alla seguente procedura:
+	
+	\begin{enumerate}
+		\item Caricare la voice desiderata (vedi §4.2.1);
+		\item Avviare un esecuzione di Speect, è possibile fare ciò inserendo un input testuale nell'apposita area di testo del pannello di configurazione e cliccare su \textit{Run all} o \textit{Run step} (vedi §4.3.1 - §4.3.2);
+		\item Cliccare sul pulsante \textit{File} del menù e selezionare la voce \textit{Save Audio file}; 
+		\item Scegliere una cartella di destinazione per il file tramite file browser;
+		\item Digitare un nome per il file assicurandosi che abbia estensione \verb|.wav|;
+		\item Confermare il salvataggio.
+	\end{enumerate} 
+	
+	\noindent Al termine della procedura, il file audio generato da Speect (in formato \verb|.wav|) sarà reperibile nella directory selezionata al punto 4 della precedente procedura.
 	
 	\section{Visualizzare il grafo}
 	Per visualizzare il grafo è necessario aver caricato una voice, inserito un input testuale ed eseguito \textit{Speect} tramite pulsante \textit{Run all} o \textit{Run step}.\\
@@ -377,11 +398,11 @@
 	\section{Interagire con il grafo}
 	Questa sezione spiega come poter interagire col grafo spostando nodi e archi, rimuovendo nodi e archi relativi a determinate relation dalla visualizzazione.
 	
-	\subsection{Selezionare gli utterance processors}
+	\subsection{Selezionare gli utterance processor}
 	Nel pannello degli utterance processor (§4.1.3) è possibile interagire con i processor tramite le caselle di spunta a lato.\\
 	Togliendo la spunta da un processor, esso non verrà eseguito da \textit{Speect}, e viceversa.
 	
-	\subsection{Interagire con le relations}
+	\subsection{Interagire con le relation}
 	Nel pannello delle relation è possibile interagire con esse tramite le caselle di spunta a lato.\\
 	Togliendo la spunta da una relation, i relativi nodi verranno rimossi dalla visualizzazione del grafo, viceversa se si aggiunge la spunta, verranno aggiunti i relativi nodi al grafo.
 	
@@ -416,12 +437,12 @@
 			\item {Error context continued} Errore il contesto continua;
 			\item {Undefined error} Errore non definito.
 		\end{itemize}
-	 	Se l'operazione finisce in uno stato diverso da No error, nel file ErrorLog.txt verrà descritto in maniera più dettagliata.
+	 	Se l'operazione finisce in uno stato diverso da No error, nel file \verb|ErrorLog.txt| verrà descritto in maniera più dettagliata.
 	\end{center}
 	
 	\section{Problemi con il reperimento di Speect}	
 	Il portale che ospita documentazione e download di \textit{Speect} può occasionalmente risultare offline per dei giorni.\\
-	Si consiglia di scaricare in locale  tutto il materiale reperibile online così da tutelarsi nel caso il problema dovesse occorrere.
+	Si consiglia di scaricare in locale tutto il materiale reperibile online così da tutelarsi nel caso il problema dovesse occorrere.
 	
 	\section{Segnalazione di bug}
 	
