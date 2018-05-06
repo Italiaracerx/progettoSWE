@@ -219,13 +219,12 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 	
 	\begin{verbatim}
 		/*
-		* 	File : nome file
-		* 	Version : versione file
-		* 	Type : tipo file
-		* 	Date : data di creazione
-		* 	Author : nome cognome autore/i
-		* 	E- mail : email gruppo
-		* 	License : tipo licenza
+		* 	File : [Nome file]
+		* 	Type : [Tipo file (ex: header)]
+		* 	Date : [Data di creazione]
+		* 	E- mail : [Email gruppo]
+		* 	
+		* 	Description: [Breve descrizione della classe di riferimento o del contenuto del file]
 		*/
 	\end{verbatim}
 
@@ -233,9 +232,10 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 	Ogni metodo del codice del prodotto, al netto delle librerie esterne, deve avere un commento la cui struttura segue la seguente sintassi:
 	
 	\begin{verbatim}
-		/**
-		* 	Descrizione del metodo
-		* 	@param { TipoParametro } NomeParametro - Descrizione parametro
+		/*
+		* 	Description: [Descrizione del metodo]
+		* 	@param [Tipo del parametro] [Nome del parametro] - [Descrizione del parametro]
+		*  @return [Tipo di ritorno]
 		*/
 	\end{verbatim}
 
@@ -243,8 +243,7 @@ I \glossario{casi d'uso}{caso d'uso} verranno identificati nel seguente modo:
 	\begin{itemize}
 		\item Documentare con un commento in linea parti di codice non immediatamente comprensibili;
 		\item Usare frasi di senso compiuto in modo da essere più chiari possibili;
-		\item Porre il commento sopra una riga di codice anziché alla fine di essa (in
-		particolare all’inizio della porzione di codice interessata), per una miglior facilità
+		\item Porre il commento sopra una riga di codice anziché alla fine di essa (in particolare all’inizio della porzione di codice interessata), per una miglior facilità
 		di lettura.
 	\end{itemize}
 	
