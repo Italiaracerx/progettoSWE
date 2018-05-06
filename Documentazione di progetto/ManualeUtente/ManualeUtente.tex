@@ -405,7 +405,7 @@
 	Viene di seguito trattata l'interazione con la voice (rappresentata da un file \verb|.json|), dal suo caricamento alla generazione dell'audio prodotto da \textit{Speect}.
 	
 	\subsection{Caricare la voice}
-	Per caricare la voice è sufficiente cliccare il pulsante \textit{Load Voice}, situato nell'angolo in alto a sinistra del pannello di configurazione (vedi §4.1.2) o, in alternativa, cliccare sul menù \textit{File} e, successivamente, sulla voce \textit{Load Voice}.\\
+	Per caricare la voice è sufficiente cliccare il pulsante \textit{Load Voice}, situato nell'angolo in alto a sinistra del pannello di configurazione (§4.1.2) o, in alternativa, cliccare sul menù \textit{File} e, successivamente, sulla voce \textit{Load Voice}.\\
 	Una volta fatto ciò si aprirà il file browser del sistema operativo, che permetterà la ricerca di un file \verb|.json| corrispondente alla voice desiderata. Una volta reperito il file, sarà sufficiente aprirlo mediante file browser.\\
 	A questo punto, se verrà visualizzato il percorso del file \verb|.json| subito dopo l'etichetta "Path Voice", vicino al pulsante di caricamento della voice, allora il caricamento della stessa avrà avuto successo.\\
 	Nel caso in cui il caricamento del file abbia avuto esito negativo, è necessario ripetere la procedura assicurandosi si averla eseguita correttamente.
@@ -416,7 +416,7 @@
 	
 	\begin{enumerate}
 		\item Cliccare il pulsante \textit{Load Voice} del pannello di configurazione (si noti che accanto a tale pulsante, se non è ancora stata caricata alcuna voice, è riportata un'etichetta "Voice not loaded") o sulla voce \textit{Load Voice} del menù \textit{File};
-		\item Navigare tramite file browser secondo il path \\ \verb|SpeectInstaller/voices/cmu_arctic_slt/|;
+		\item Navigare tramite file browser secondo il path \\ \verb|DeSpeectInstall/Test/cmu_arctic_slt/|;
 		\item Aprire il file \verb|voice.json| presente all'interno della directory raggiunta al punto precedente. 
 	\end{enumerate} 
 
@@ -424,8 +424,7 @@
 	
 	\subsection{Salvare l'audio relativo alla voice}
 	Uno volta eseguito \textit{Speect}, per salvare l'audio è sufficiente cliccare sul pulsante \textit{File} del menù e selezionare la voce \textit{Save Audio file}.\\
-	Fatto ciò, si aprirà una finestra di ricerca del file browser dove cercare la cartella in cui salvare il file. Una volta trovata basterà selezionarla, cliccandoci sopra o scrivere il nome del nuovo file nella barra di testo dedicata e confermare, con attenzione di riportare l'estensione \verb|.wav|.\\
-	Il file audio prodotto avrà l'estensione \verb|.wav|.
+	Fatto ciò, si aprirà una finestra di ricerca del file browser dove cercare la cartella in cui salvare il file. Una volta trovata basterà selezionarla cliccandoci sopra e scrivere il nome del nuovo file nella barra di testo dedicata, dopodiché confermare avendo attenzione di riportare l'estensione \verb|.wav| (Il file audio prodotto avrà l'estensione \verb|.wav|).\\
 	Questa operazione controllerà se è possibile salvare l'audio e come ogni altra operazione darà un report nella log di errore.
 	
 	\subsubsection*{Esempio}
@@ -434,7 +433,7 @@
 	
 	\begin{enumerate}
 		\item Caricare la voice desiderata (vedi §4.2.1);
-		\item Avviare un esecuzione di Speect, è possibile fare ciò inserendo un input testuale nell'apposita area di testo del pannello di configurazione e cliccare su \textit{Run all} o \textit{Run step} (vedi §4.3.1 - §4.3.2);
+		\item Avviare l'esecuzione di Speect inserendo un input testuale nell'apposita area di testo del pannello di configurazione e cliccando poi su \textit{Run all} (vedi §4.3.1 - §4.3.2);
 		\item Cliccare sul pulsante \textit{File} del menù e selezionare la voce \textit{Save Audio file}; 
 		\item Scegliere una cartella di destinazione per il file tramite file browser;
 		\item Digitare un nome per il file assicurandosi che abbia estensione \verb|.wav|;
@@ -483,18 +482,18 @@
 	
 	\subsubsection*{Esempio}
 	
-	In questo esempio viene mostrato come selezionare/deselezionare gli utterance processor dall'apposito elenco. Nello specifico, si mostra come eseguire Speect utilizzando i soli processor "Tokenize" e "HTS Engine Synthesizer", secondo la seguente procedura:
+	In questo esempio viene mostrato come selezionare/deselezionare gli utterance processor dall'apposito elenco. Nello specifico, si mostra come eseguire Speect utilizzando i soli processor "Tokenize" e "Normalize", secondo la seguente procedura:
 	
 	\begin{enumerate}
 		
 		\item Caricare una voice (vedi §4.2.1);
 		\item Inserire un input testuale nell'apposita area di testo del pannello di configurazione (§4.1.2). Si inserisca ad esempio l'input "Hi everybody!";
 		\item Selezionare un utterance type dall'apposito menù a tendina del pannello di configurazione (§4.1.2 - Figura 4.6). Si selezioni ad esempio "text-to-segments";
-		\item Nel pannello degli utterance processor (§4.1.3) lasciare spuntati i soli processor "Tokenize" e "HTS Engine Synthesizer" cliccando sulla checkbox relativa agli altri elementi della lista;
+		\item Nel pannello degli utterance processor (§4.1.3) lasciare spuntati i soli processor "Tokenize" e "Normalize" cliccando sulla checkbox relativa agli altri elementi della lista;
 		\item Cliccare su \textit{Run step} (per un'esecuzione step-by-step, vedi §4.3.1) o \textit{Run all} (per un'esecuzione completa, vedi §4.3.2).
 	\end{enumerate}
 
-	\noindent Se eseguita correttamente la procedura, il grafo mostrerà i soli nodi e archi relativi ai processor selezionati.
+	\noindent Se eseguita correttamente la procedura, il grafo mostrerà i soli nodi e archi relativi ai processor selezionati. Si noti che tra l'esecuzione di alcuni processor intercorre un vincolo di dipendenza, si rimanda alla documentazione di Speect per ulteriori informazioni a riguardo.
 	
 	\subsection{Interagire con le relation}
 	Nel pannello delle relation (§4.1.4), è possibile interagire con esse tramite le caselle di spunta a lato.\\
@@ -519,15 +518,17 @@
 	
 	\subsubsection*{Esempio}
 	
-	In questo esempio viene mostrato come ricercare un nodo all'interno del grafo visualizzato. Nello specifico, si mostra come evidenziare il nodo, secondo la seguente procedura:
+	In questo esempio viene mostrato come ricercare un nodo all'interno del grafo visualizzato. Nello specifico, si mostra come evidenziare il nodo con etichetta "hi" della relation "Word", secondo la seguente procedura:
 	
 	\begin{enumerate}
 		\item Caricare una voice (vedi §4.2.1);
 		\item Inserire un input testuale nell'apposita area di testo del pannello di configurazione (§4.1.2). Si inserisca ad esempio l'input "Hi everybody!";
 		\item Selezionare un utterance type dall'apposito menù a tendina del pannello di configurazione (§4.1.2 - Figura 4.6). Si selezioni ad esempio "text-to-segments";
 		\item Cliccare su \textit{Run all} per un'esecuzione completa (vedi §4.3.2);
+		\item Selezionare un nodo. Si selezioni ad esempio il nodo con etichetta "hi" della relation "Token";
 		\item Dal menù \textit{File} (§4.1.1.1), selezionare la voce \textit{Search path};
 		\item Nella finestra apertasi, inserire il path del nodo da ricercare. Si inserisca ad esempio il path "parent.n.daughter.R:Word.p".
+		\item Confermare la ricerca cliccando su \textit{Search}
 	\end{enumerate}
 	
 	\noindent Se eseguita correttamente, la procedura evidenzierà il nodo della relation "Word" denotato dall'etichetta "hi" (per la natura dell'evidenziazione del nodo, si veda la Figura 4.10).
