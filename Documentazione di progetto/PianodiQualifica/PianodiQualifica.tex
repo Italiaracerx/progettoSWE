@@ -585,7 +585,7 @@ In questa appendice vengono illustrati nel dettaglio i test da eseguirsi sul pro
 Vengono di seguito elencati i test previsti per assicurare che il sistema rispetti le specifiche esplicitate dai requisiti (elencati nell'AR) e per garantire il buon funzionamento del prodotto.
 
 \setlength\LTleft{6mm}
-	\begin{longtable}{| p{2cm} |p{8cm} | p{2.5cm} |}
+	\begin{longtable}[c]{| p{2cm} |p{8cm} | p{2.5cm} |}
 	\hline
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}\\
 	\hline
@@ -673,52 +673,6 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	\newline Non implementato
 	\\[1em]
 	\hline
-	
-	\newline TSOF5&
-	\newline L'utente può cercare il file tramite file browser&
-	\newline \textcolor{green}{Superato}
-	\\[1em]
-	\hline
-	
-	\newline TSOF5.1&
-	\newline L'utente può selezionare un file tramite file browser&
-	\newline \textcolor{green}{Superato}
-	\\[1em]	
-	\hline
-	
-	\newline TSOF5.2&
-	\newline Il sistema visualizza un errore se si cerca di accedere ad una cartella senza i permessi necessari&
-	\newline Non implementato
-	\\[1em]	
-	\hline
-	
-	\newline TSOF5.3&
-	\newline Il sistema visualizza un errore se si cerca di accedere ad un file non supportato&
-	\newline \textcolor{green}{Superato}
-	\\[1em]	
-	\hline
-	
-	\newline TSOF5.4&
-	\newline Il sistema visualizza un errore se si cerca di accedere ad un file senza i permessi necessari&
-	\newline \textcolor{green}{Superato}
-	\\[1em]	
-	\hline
-	
-	\newline TSDF5.5&
-	\newline Il file browser mostra solo file di estensione corretta&
-	\newline \textcolor{green}{Superato}
-	\\[1em]
-	\hline
-	\newline TSDF5.6&
-	\newline L'utente può modificare il nome di una cartella tramite file browser&
-	\newline \textcolor{green}{Superato}
-	\\[1em]
-	\hline
-	\newline TSDF5.7&
-	\newline L'utente può modificare il nome di un file tramite file browser&
-	\newline \textcolor{green}{Superato}
-	\\[1em]
-	\hline
 	\newline TSOF6&
 	\newline L'utente può selezionare la Utterance Type&
 	\newline \textcolor{green}{Superato}
@@ -793,13 +747,13 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	
 	\newline TSDF9.3.1.1&
 	\newline L'utente può modificare il name del nodo selezionato&
-	\newline Implementato
+	\newline Non implementato
 	\\[1em]
 	\hline
 	
 	\newline TSDF9.3.1.2&
 	\newline L'utente può modificare il PoS del nodo selezionato&
-	\newline Implementato
+	\newline Non implementato
 	\\[1em]
 	\hline
 	
@@ -967,30 +921,6 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	 TSFF4.3&RFF4.3
 	\\[1em]
 	\hline
-	 TSOF5&ROF5
-	\\[1em]
-	\hline
-	 TSOF5.1&ROF5.1
-	\\[1em]	
-	\hline
-	 TSOF5.2&ROF5.2
-	\\[1em]	
-	\hline
-	 TSOF5.3&ROF5.3
-	\\[1em]	
-	\hline
-	 TSOF5.4&ROF5.4
-	\\[1em]	
-	\hline
-	TSDF5.5&RD5.5
-	\\[1em]
-	\hline
-	 TSDF5.6&RDF5.6
-	\\[1em]
-	\hline
-	 TSDF5.7&RDF5.7
-	\\[1em]
-	\hline
 	 TSOF6&ROF6
 	\\[1em]
 	\hline
@@ -1095,7 +1025,8 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 
 Vengono di seguito descritti i test per il collaudo del software, con i quali si accerta che il prodotto sia conforme alle attese del Committente. Ogni test ha un codice, descrizione, passi dell'utente per svolgerlo e stato di implementazione.
 
-\begin{longtable}{| p{3cm} |p{8cm} | p{2.5cm} |}
+
+\begin{longtable}[c]{| p{2.5cm} |p{8cm} | p{2.5cm} |}
 	\hline
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}\\
 	\hline
@@ -1108,7 +1039,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item selezionare il file Json:
 		\item premere su Carica.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]	
 	\hline	
 	
@@ -1146,13 +1077,13 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item selezionare il file Json:
 		\item premere su Carica.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]	
 	\hline	
 	
 	\newline TVOF3.1&
 	\newline Il sistema deve visualizzare un errore in caso Speect fallisca l'inizializzazione. L'utente deve caricare un file non corretto.&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]		
 	\hline
 	
@@ -1164,7 +1095,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item scrivere il nome del file nella barra di testo;
 		\item premere su Salva.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -1174,7 +1105,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item aprire il file browser;
 		\item spostarsi sulla cartella di destinazione;
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	
 	\hline	
@@ -1186,87 +1117,15 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item scrivere il nome del file nella barra di testo;
 		\item premere su Salva.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	
 	\hline
 	\newline TVOF4.2&
 	\newline Il sistema deve visualizzare un errore in caso il salvataggio dell'audio fallisca. L'utente deve salvare il file con un estensione sbagliata&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
-	\hline
 	
-	\newline TVOF5&
-	\newline L'utente può cercare il file tramite file browser. L'utente deve:
-	\begin{itemize}
-		\item aprire il file browser;
-		\item spostarsi tra le cartelle.
-	\end{itemize}&
-	\newline Non implementato
-	\\[1em]
-	\hline
-	
-	\newline TVOF5.1&
-	\newline L'utente può selezionare un file tramite file browser. L'utente deve:
-	\begin{itemize}
-		\item aprire il file browser;
-		\item spostarsi sulla cartella di destinazione;
-		\item selezionare il file desiderato.
-	\end{itemize}&
-	\newline Non implementato
-	\\[1em]	
-	\hline
-	
-	\newline TVOF5.2&
-	\newline Il sistema visualizza un errore se si cerca di accedere ad una cartella senza i permessi necessari. L'utente deve:
-	\begin{itemize}
-		\item aprire il file browser;
-		\item selezionare una cartella non accessibile.
-	\end{itemize}&
-	\newline Non implementato
-	\\[1em]	
-	\hline
-	
-	\newline TVOF5.3&
-	\newline Il sistema visualizza un errore se si cerca di accedere ad un file non supportato. L'utente deve:
-	\begin{itemize}
-		\item aprire il file browser;
-		\item selezionare un file non supportato;
-		\item premere su Carica.
-	\end{itemize}&
-	\newline Non implementato
-	\\[1em]	
-	\hline
-	
-	\newline TVOF5.4&
-	\newline Il sistema visualizza un errore se si cerca di accedere ad un file senza i permessi necessari. L'utente deve:
-	\begin{itemize}
-		\item aprire il file browser;
-		\item selezionare un file non accessibile.
-	\end{itemize}&
-	\newline Non implementato
-	\\[1em]	
-	\hline
-	
-	\newline TVDF5.6&
-	\newline L'utente può modificare il nome di una cartella tramite file browser. L'utente deve:
-	\begin{itemize}
-		\item aprire il file browser;
-		\item selezionare una cartella;
-		\item modificare il nome.
-	\end{itemize}&
-	\newline Non implementato
-	\\[1em]
-	\hline
-	\newline TVDF5.7&
-	\newline L'utente può modificare il nome di un file tramite file browser. L'utente deve:
-	\begin{itemize}
-		\item aprire il file browser;
-		\item selezionare un file;
-		\item modificare il nome.
-	\end{itemize}&
-	\newline Non implementato
-	\\[1em]
 	\hline
 	\newline TVOF6&
 	\newline L'utente può selezionare la Utterance Type. L'utente deve:
@@ -1274,7 +1133,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item aprire il menu a tendina relativo;
 		\item cliccare sull'Utterance Type desiderato.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -1294,13 +1153,13 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item selezionare un Utterance Processor;
 		\item rimuovere l'Utterance Processor selezionato.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline	
 	
 	\newline TVOF7&
 	\newline L'utente può inserire un testo da tradurre in voce. L'utente inserisce del testo nello spazio apposito.&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	
 	\hline
@@ -1310,7 +1169,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item inserire del testo nello spazio apposito;
 		\item premere sul tasto di esecuzione.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	\newline TVOF8.1&
@@ -1319,7 +1178,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item inserire del testo nello spazio apposito che crei un errore in Speect;
 		\item premere sul tasto di esecuzione.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -1329,7 +1188,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item inserire del testo nello spazio apposito;
 		\item premere sul tasto di esecuzione.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -1339,7 +1198,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\begin{itemize}
 		\item selezionare il nodo desiderato;
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -1355,7 +1214,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item posizionarsi sul nodo desiderato;
 		\item cliccare.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -1364,7 +1223,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\begin{itemize}
 		\item selezionare il nodo desiderato;
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -1401,7 +1260,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item inserire il percorso da cercare;
 		\item premere su Ricerca.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -1414,7 +1273,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item inserire un percorso da cercare non valido;
 		\item premere su Ricerca.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -1423,7 +1282,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\begin{itemize}
 		\item selezionare il nodo desiderato;
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -1446,7 +1305,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item trascinare il nodo cliccando senza rilasciare;
 		\item rilasciare il click.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -1455,7 +1314,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\begin{itemize}
 		\item selezionare/deselezionare una select box adiacente ad una relazione.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
@@ -1486,6 +1345,18 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\\[1em]
 	\hline
 	
+	\newline TVFF9.9&
+	\newline L'utente può modificare il grafo prodotto durante l'esecuzione di Speect . L'utente deve:
+	\begin{itemize}
+		\item{} selezionare un nodo;
+		\item{} spostare un nodo;
+		\item{} modificare un nodo;
+		\item{} modificare la visualizzazione delle relazioni.
+	\end{itemize}&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	
 	\newline TVFF10&
 	\newline L'utente può eseguire ogni Utterance Processor singolarmente. L'utente deve:
 	\begin{itemize}
@@ -1493,10 +1364,9 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 		\item compilare il campo di testo;
 		\item premere sul tasto di esecuzione.
 	\end{itemize}&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
-	
 	
 	\newline TVFF11&
 	\newline L'utente può salvare il grafo. L'utente deve:
@@ -1583,40 +1453,16 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	 TVOF4&ROF4
 	\\[1em]
 	\hline
-	
 	 TVOF4.1&ROF4.1
 	\\[1em]
-	
 	\hline	
 	TVOF4.1.1&ROF4.1.1
 	\\[1em]
-	
 	\hline
 	TVOF4.2&ROF4.2
 	\\[1em]
 	\hline
-	 TVOF5&ROF5
-	\\[1em]
-	\hline
-	 TVOF5.1&ROF5.1
-	\\[1em]	
-	\hline
-	 TVOF5.2&ROF5.2
-	\\[1em]	
-	\hline
-	 TVOF5.3&ROF5.3
-	\\[1em]	
-	\hline
-	 TVOF5.4&ROF5.4
-	\\[1em]	
-	\hline
-	 TVDF5.6&RDF5.6
-	\\[1em]
-	\hline
-	 TVDF5.7&RDF5.7
-	\\[1em]
-	\hline
-	\newline TVOF6&ROF6
+	TVOF6&ROF6
 	\\[1em]
 	\hline
 	 TVDF6.1.1&RDF6.1.1
@@ -1682,6 +1528,9 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	TVFF9.8.2&RFF9.8.2
 	\\[1em]
 	\hline
+	TVFF9.9&RFF9.9
+	\\[1em]
+	\hline
 	 TVFF10&RFF10
 	\\[1em]
 	\hline
@@ -1712,7 +1561,7 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 
 
 \setlength\LTleft{6mm}
-\begin{longtable}{| p{2.5cm} |p{8cm} | p{2.5cm} |}
+\begin{longtable}[c]{| p{2.5cm} |p{8cm} | p{2.5cm} |}
 	\hline
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}\\
 	\hline
@@ -1724,7 +1573,7 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 	\hline
 	\newline TU2&
 	\newline Viene verificato che la voice è caricata erroneamente ritorni un messaggio d'errore.&
-	\newline Non implementato
+	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	\newline TU3&
@@ -1798,79 +1647,166 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 	\\[1em]
 	\hline
 	\newline TU17&
-	\newline Viene verificato che ogni dato di un nodo venga visualizzato correttamente&
+	\newline Viene verificato che venga ritornato il corretto errore dopo un'esecuzione senza Utterance Type&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
-%	\newline TU13&
-%	\newline Viene verificato che ogni modifica ai dati di un nodo avvenga correttamente&
-%	\newline Non implementato
-%	\\[1em]
-%	\hline
+	\newline TU18&
+	\newline Viene verificato che venga ritornato il corretto errore per un tentato salvataggio dell'audio senza Utterance Type&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU19&
+	\newline Viene verificato che venga ritornato il corretto errore dopo il mancato caricamento del testo su Speect&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU20&
+	\newline Viene verificato che venga caricato correttamente un plugin&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU21&
+	\newline Viene verificato che venga ritornato il corretto errore dopo il mancato caricamento di un plugin su Speect&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU22&
+	\newline Viene verificato che l'Utterance Type venga modificata correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU23&
+	\newline Viene verificato che la corretta evidenziazione del nodo ricercato&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU24&
+	\newline Viene verificata la corretta configurazione&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU25&
+	\newline Viene verificata la corretta configurazione dopo la modifica&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
 \end{longtable}
 
 \subsection{Tracciamento test di unità-metodi}
 
-\begin{longtable}{| p{2.5cm} |p{11cm}|}
+\begin{longtable}[c]{| p{2.5cm} |p{11cm}|}
 	\hline
 	\textbf{Test} & \textbf{Metodo}\\
 	\hline
 	\endhead
 	TU1&
-	 \verb|Model::Command::SetSpectConfigCommand()::execute()|
+	\verb|Model::Command::SetSpectConfigCommand()::execute()|
 	\\[1em]	
 	\hline
 	TU2&
 	\verb|Model::Command::SetSpectConfigCommand()::execute()|
 	\\[1em]	
 	\hline	
-	TU3& \verb|Model::Command::CommandBuilder::SaveAudio()|, \verb|Model::Command::CreateAudioCommand()::execute()|
+	TU3&
+	\verb|Model::Command::CommandBuilder::SaveAudio()|, \verb|Model::Command::CreateAudioCommand()::execute()|
 	\\[1em]	
 	\hline	
-	TU4&\verb|ViewModel::ModelView::LoadConfiguration()|, \verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::SetSpectConfigCommand()::execute()|
+	TU4&
+	\verb|Model::Command::SetSpectConfigCommand()::execute()|
 	\\[1em]	
 	\hline	
-	TU5& \verb|Model::Command::SetSpectConfigCommand()::execute()|
+	TU5&
+	\verb|Model::Command::SetSpectConfigCommand()::execute()|
 	\\[1em]	
 	\hline	
-	TU6&\verb|ViewModel::ModelView::LoadConfiguration()|, \verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::SetSpectConfigCommand()::execute()|
+	TU6&
+	\verb|Qt::ModelView::LoadConfiguration()|, \verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::SetSpectConfigCommand()::execute()|
 	\\[1em]
 	\hline	
-	TU7&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|Model::Command::CommandBuilder::LoadConfig()|, \verb|Model::Command::UttProcessorCommand()::execute()|
+	TU7&
+	\verb|Qt::ModelView::requestProcessorRun()|,
+	\verb|Model::Command::CommandBuilder::LoadConfig()|,
+	\verb|Model::Command::UttProcessorCommand()::execute()|
 	\\[1em]
 	\hline	
-	TU8&\verb|ViewModel::GraphManager::printRelation()|
+	TU8&
+	\verb|Qt::GraphManager::printRelation()|
 	\\[1em]
 	\hline	
-	TU9&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|ViewModel::GraphManager::printRelation()|
+	TU9&
+	\verb|Qt::ModelView::runSingleStep()|,
+	\verb|Qt::GraphManager::printRelation()|
 	\\[1em]
 	\hline	
-	TU10&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|ViewModel::GraphManager::printRelation()|
+	TU10&
+	\verb|Qt::ModelView::requestProcessorRun()|,
+	\verb|Qt::GraphManager::printRelation()|
 	\\[1em]
 	\hline	
-	TU11&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|ViewModel::GraphManager::printRelation()|
+	TU11&
+	\verb|Qt::ModelView::requestProcessorRun()|,
+	\verb|Qt::GraphManager::printRelation()|
 	\\[1em]
 	\hline	
-	TU12&\verb|ViewModel::ModelView::requestProcessorRun()|, \verb|ViewModel::GraphManager::printRelation()|
+	TU12&
+	\verb|Qt::Arc::Arc()|,
+	\verb|Qt::Arc::paint()|
 	\\[1em]
 	\hline
-	TU13&\verb|ViewModel::ModelView::requestProcessorRun()|
+	TU13&
+	\verb|Qt::ModelView::requestProcessorRun()|
 	\\[1em]
 	\hline
-	TU14&\verb|Model::SpeectWrapper::Item::getName()|
+	TU14&
+	\verb|Model::SpeectWrapper::Item::getName()|
 	\\[1em]
 	\hline	
-	TU15&\verb|Model::SpeectWrapper::Relation::getName()|,
-	\verb|Model::CommandList::getRelationNames()|
+	TU15&
+	\verb|Model::SpeectWrapper::Relation::getName()|, \verb|Model::CommandList::getRelationNames()|
 	\\[1em]
 	\hline
-	TU16&\verb|Model::SpeectWrapper::Speect::getUttProcessorNames()|,
-	\verb|Model::CommandList::getUttProcessorsNames()|
+	TU16&
+	\verb|Model::SpeectWrapper::Speect::getUttProcessorNames()|, \verb|Model::CommandList::getUttProcessorsNames()|
 	\\[1em]
 	\hline
 	TU17&
+	\verb|Model::Command::UttProcessorCommand::execute()|
 	\\[1em]
-	\hline			
+	\hline
+	TU18&
+	\verb|Model::Command::CreateAudioCommand::execute()|
+	\\[1em]
+	\hline
+	TU19&
+	\verb|Model::Command::SetSpeectConfigCommand::execute()|
+	\\[1em]
+	\hline
+	TU20&
+	\verb|Model::Command::LoadPluginCommand::execute()|
+	\\[1em]
+	\hline
+	TU21&
+	\verb|Model::Command::LoadPluginCommand::execute()|
+	\\[1em]
+	\hline
+	TU22&
+	\verb|Qt::ModelView::utteranceTypeChanged()|
+	\\[1em]
+	\hline
+	TU23&
+	\verb|Qt::ModelView::Search()|
+	\\[1em]
+	\hline
+	TU24&
+	\verb|Model::SpeectWrapper::Configuration::setConfig()|
+	\\[1em]
+	\hline
+	TU25&
+	\verb|Model::SpeectWrapper::Configuration::hasChanged()|,
+	\verb|Model::SpeectWrapper::Configuration::getConfig()|
+	\\[1em]
+	\hline
 \end{longtable}
 
 \section{Test di Integrazione}
