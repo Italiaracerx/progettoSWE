@@ -311,7 +311,7 @@
  			
  		\end{figure}
  		
- 	\subsection{Pannello delle relations}
+ 	\subsection{Pannello delle relation}
  	Situato sulla sinistra, sotto al pannello degli utterance processor. Qui è possibile selezionare quali \glossario{relation}{relation} visualizzare nel grafo. Di default, il grafo mostra ogni relation disponibile, rimuovendo la spunta dalla checkbox della relation desiderata le componenti del grafo relative vengono rimosse dalla visualizzazione (vedi Figura 4.5);
  		\begin{figure}[H]
  			
@@ -324,7 +324,7 @@
  		\end{figure}
  	
  	\subsection{Area del grafo}
- 	Situata sulla destra, sotto al pannello di configurazione. Qui viene visualizzato il grafo relativo ad una data voice, input testuale e configurazione di utterance processor. I nodi sono selezionabili (nel cui caso, le informazioni relative al nodo vengono visualizzate nell'apposita barra approfondita al punto seguente) e spostabili (vedi Figura 4.6);
+ 	Situata sulla destra, sotto al pannello di configurazione. Qui viene visualizzato il grafo relativo ad una data voice, input testuale e configurazione di utterance processor (vedi Figura 4.6).
  		\begin{figure}[H]
  			
  			\centering
@@ -334,6 +334,46 @@
  			\caption{Interfaccia grafica - Area del grafo}
  			
  		\end{figure}
+ 	
+ 	\newpage
+ 	
+ 	Il grafo è composto da:
+ 	\begin{itemize}
+ 		\item \textbf{Nodi}: visualizzati tramite cerchi con relativa etichetta, hanno colori diversi a seconda della relazione a cui appartengono (la lista delle relation funge da legenda, vedi §4.1.4), sono selezionabili (nel cui caso, le informazioni relative al nodo vengono visualizzate nell'apposita barra approfondita nella prossima sezione) e spostabili. I nodi sono differenziati in base al loro stato, come evidenziato dallo schema seguente (nel quale il colore è arbitrario):
+ 		
+ 		\begin{figure}[H]
+ 			
+ 			\centering
+ 			
+ 			\includegraphics[scale=0.5]{img/arrows/nodes.png}
+ 			
+ 			\caption{Legenda nodi grafo}
+ 			
+ 		\end{figure}
+ 	
+ 		\item \textbf{Archi}: visualizzati tramite frecce direzionali che collegano due nodi, anche gli archi sono di colori diversi a seconda della relazione a cui fanno riferimento. Gli archi sono differenziati in base al rapporto tra i nodi che collegano, come evidenziato dagli schemi seguenti:
+ 	\end{itemize}
+ 	
+ 	\begin{figure}[H]
+ 		
+ 		\centering
+ 		
+ 		\includegraphics[scale=0.4]{img/arrows/arrows-legend.png}
+ 		
+ 		\caption{Legenda frecce grafo}
+ 		
+ 	\end{figure}
+ 	
+ 	
+ 	\begin{figure}[H]
+ 		
+ 		\centering
+ 		
+ 		\includegraphics[scale=0.4]{img/arrows/arrows-scheme.png}
+ 		
+ 		\caption{Schema frecce grafo}
+ 		
+ 	\end{figure}
  	
  	\newpage
  	
@@ -406,32 +446,6 @@
 	\section{Visualizzare il grafo}
 	Per visualizzare il grafo è necessario aver caricato una voice, inserito un input testuale ed eseguito \textit{Speect} tramite pulsante \textit{Run all} o \textit{Run step}.\\
 	Se sono state compiute tali azioni, viene visualizzato il grafo nell'area dedicata (§4.1.5), nonché la lista delle relation (§4.1.4).
-	Il grafo è composto da:
-	\begin{itemize}
-		\item \textbf{Nodi}: visualizzati tramite cerchi con relativo name, i nodi hanno colori diversi a seconda della relazione a cui appartengono (la lista delle relation funge da legenda, vedi §4.1.4);
-		\item \textbf{Archi}: visualizzati tramite frecce direzionali che collegano due nodi, anche gli archi sono di colori diversi a seconda della relazione a cui fanno riferimento. Gli archi sono differenziati in base al rapporto tra i nodi che collegano, come evidenziato dagli schemi seguenti.
-	\end{itemize}
-
-		\begin{figure}[H]
-			
-			\centering
-			
-			\includegraphics[scale=0.4]{img/arrows/arrows-legend.png}
-			
-			\caption{Legenda frecce grafo}
-			
-		\end{figure}
-		
-		
-		\begin{figure}[H]
-			
-			\centering
-			
-			\includegraphics[scale=0.4]{img/arrows/arrows-scheme.png}
-			
-			\caption{Schema frecce grafo}
-			
-		\end{figure}
 	
 	\subsection{Visualizzare il grafo step-by-step}
 	Eseguendo \textit{Speect} tramite pulsante \textit{Run step}, è possibile eseguire un utterance processor alla volta e vederne il risultato sul grafo, che ad ogni step si aggiorna aggiungendo nuove relazioni.
@@ -442,8 +456,8 @@
 	\begin{enumerate}
 		\item Caricare una voice (vedi §4.2.1);
 		\item Inserire un input testuale nell'apposita area di testo del pannello di configurazione (§4.1.2). Si inserisca ad esempio l'input "Hi everybody!";
-		\item Selezionare un utterance type dall'apposito menù a tendina del del pannello di configurazione (§4.1.2 - Figura 4.6). Si selezioni ad esempio "text-to-segments";
-		\item Cliccare ripetutamente il pulsante \textit{Run step} del pannello di configurazione (§4.1.2), ad ogni click l'area del grafo (§4.1.5) verrà arricchita con le relazioni appropriate secondo la lista d'esecuzione degli utterance processor (§4.1.3) che si aggiornerà man mano. Seguendo gli input inseriti, verrà eseguito prima "Tokenize", successivamente "Normalize" e così via.
+		\item Selezionare un utterance type dall'apposito menù a tendina del pannello di configurazione (§4.1.2 - Figura 4.6). Si selezioni ad esempio "text-to-segments";
+		\item Cliccare ripetutamente il pulsante \textit{Run step} del pannello di configurazione (§4.1.2), ad ogni click l'area del grafo (§4.1.5) verrà arricchita con le relazioni appropriate secondo la lista d'esecuzione degli utterance processor (§4.1.3), che si aggiornerà man mano. Seguendo gli input inseriti, verrà eseguito prima "Tokenize", successivamente "Normalize" e così via.
 	\end{enumerate}
 	
 	\subsection{Visualizzare l'intero grafo}
@@ -451,32 +465,79 @@
 	
 	\subsubsection*{Esempio}
 	
-	In questo esempio viene mostrato come visualizzare direttamente l'intero grafo, ovvero eseguendo tutti gli utterance processor selezionati. La procedura è la seguente:
+	In questo esempio viene mostrato come visualizzare direttamente l'intero grafo eseguendo tutti gli utterance processor selezionati. La procedura è la seguente:
 	
 	\begin{enumerate}
 		\item Caricare una voice (vedi §4.2.1);
 		\item Inserire un input testuale nell'apposita area di testo del pannello di configurazione (§4.1.2). Si inserisca ad esempio l'input "Hi everybody!";
-		\item Selezionare un utterance type dall'apposito menù a tendina del del pannello di configurazione (§4.1.2 - Figura 4.6). Si selezioni ad esempio "text-to-segments";
+		\item Selezionare un utterance type dall'apposito menù a tendina del pannello di configurazione (§4.1.2 - Figura 4.6). Si selezioni ad esempio "text-to-segments";
 		\item Cliccare il pulsante \textit{Run all} del pannello di configurazione (§4.1.2): l'area del grafo (§4.1.5) mostrerà immediatamente tutte le relazioni appropriate secondo la lista d'esecuzione degli utterance processor (§4.1.3).
 	\end{enumerate}
 
 	\section{Interagire con il grafo}
-	Questa sezione spiega come poter interagire col grafo spostando nodi e archi, rimuovendo nodi e archi relativi a determinate relation dalla visualizzazione.
+	Questa sezione spiega come poter interagire col grafo spostando nodi e archi o rimuovendo quelli relativi a determinate relation dalla visualizzazione.
 	
 	\subsection{Selezionare gli utterance processor}
 	Nel pannello degli utterance processor (§4.1.3) è possibile interagire con i processor tramite le caselle di spunta a lato.\\
 	Togliendo la spunta da un processor, esso non verrà eseguito da \textit{Speect}, e viceversa.
 	
+	\subsubsection*{Esempio}
+	
+	In questo esempio viene mostrato come selezionare/deselezionare gli utterance processor dall'apposito elenco. Nello specifico, si mostra come eseguire Speect utilizzando i soli processor "Tokenize" e "HTS Engine Synthesizer", secondo la seguente procedura:
+	
+	\begin{enumerate}
+		
+		\item Caricare una voice (vedi §4.2.1);
+		\item Inserire un input testuale nell'apposita area di testo del pannello di configurazione (§4.1.2). Si inserisca ad esempio l'input "Hi everybody!";
+		\item Selezionare un utterance type dall'apposito menù a tendina del pannello di configurazione (§4.1.2 - Figura 4.6). Si selezioni ad esempio "text-to-segments";
+		\item Nel pannello degli utterance processor (§4.1.3) lasciare spuntati i soli processor "Tokenize" e "HTS Engine Synthesizer" cliccando sulla checkbox relativa agli altri elementi della lista;
+		\item Cliccare su \textit{Run step} (per un'esecuzione step-by-step, vedi §4.3.1) o \textit{Run all} (per un'esecuzione completa, vedi §4.3.2).
+	\end{enumerate}
+
+	\noindent Se eseguita correttamente la procedura, il grafo mostrerà i soli nodi e archi relativi ai processor selezionati.
+	
 	\subsection{Interagire con le relation}
-	Nel pannello delle relation è possibile interagire con esse tramite le caselle di spunta a lato.\\
+	Nel pannello delle relation (§4.1.4), è possibile interagire con esse tramite le caselle di spunta a lato.\\
 	Togliendo la spunta da una relation, i relativi nodi verranno rimossi dalla visualizzazione del grafo, viceversa se si aggiunge la spunta, verranno aggiunti i relativi nodi al grafo.
 	
+	\subsubsection*{Esempio}
+	
+	In questo esempio viene mostrato come selezionare/deselezionare le relation dall'apposito elenco. Nello specifico, si mostra come nascondere la relation "Token", secondo la seguente procedura:
+	
+	\begin{enumerate}
+		\item Caricare una voice (vedi §4.2.1);
+		\item Inserire un input testuale nell'apposita area di testo del pannello di configurazione (§4.1.2). Si inserisca ad esempio l'input "Hi everybody!";
+		\item Selezionare un utterance type dall'apposito menù a tendina del pannello di configurazione (§4.1.2 - Figura 4.6). Si selezioni ad esempio "text-to-segments";
+		\item Cliccare su \textit{Run step} (per un'esecuzione step-by-step, vedi §4.3.1) o \textit{Run all} (per un'esecuzione completa, vedi §4.3.2);
+		\item Nel pannello delle relation (§4.1.4), togliere la spunta alla checkbox relativa alla relation "Token".
+	\end{enumerate}
+	
+	\noindent Se eseguita correttamente, la procedura nasconderà dal grafo nodi e archi relativi alla relation "Token".
+	
+	\subsection{Ricercare un nodo}
+	Tramite menù \textit{File} (§4.1.1.1), alla voce \textit{Search path}, è possibile ricercare un nodo specifico all'interno del grafo visualizzato, previo inserimento di un path corretto (si rimanda alla documentazione ufficiale di Speect per maggiori informazioni su tali path).
+	
+	\subsubsection*{Esempio}
+	
+	In questo esempio viene mostrato come ricercare un nodo all'interno del grafo visualizzato. Nello specifico, si mostra come evidenziare il nodo, secondo la seguente procedura:
+	
+	\begin{enumerate}
+		\item Caricare una voice (vedi §4.2.1);
+		\item Inserire un input testuale nell'apposita area di testo del pannello di configurazione (§4.1.2). Si inserisca ad esempio l'input "Hi everybody!";
+		\item Selezionare un utterance type dall'apposito menù a tendina del pannello di configurazione (§4.1.2 - Figura 4.6). Si selezioni ad esempio "text-to-segments";
+		\item Cliccare su \textit{Run all} per un'esecuzione completa (vedi §4.3.2);
+		\item Dal menù \textit{File} (§4.1.1.1), selezionare la voce \textit{Search path};
+		\item Nella finestra apertasi, inserire il path del nodo da ricercare. Si inserisca ad esempio il path "parent.n.daughter.R:Word.p".
+	\end{enumerate}
+	
+	\noindent Se eseguita correttamente, la procedura evidenzierà il nodo della relation "Word" denotato dall'etichetta "hi" (per la natura dell'evidenziazione del nodo, si veda la Figura 4.10).
+
 	\subsection{Traslare elementi grafici}
 	Questa sezione spiega come traslare gli elementi grafici che compongono il grafo, ovvero nodi e archi.
 	
 	\subsubsection{Traslare nodi}
 	Per traslare un nodo è sufficiente cliccare su di esso tenendo premuto e, spostando il cursore, trascinarlo dove si desidera all'interno dell'area del grafo.
-	Inoltre è possibile selezionare più nodi tenendo premuto CTRL durante la selezione
+	Inoltre è possibile selezionare più nodi tenendo premuto il tasto CTRL durante la selezione
 	
 	\subsubsection{Traslare archi}
 	Quando si trasla un nodo, gli archi che sono coinvolti direttamente con quel nodo si adatteranno alla nuova posizione del nodo.
@@ -484,26 +545,29 @@
 	\chapter{Risoluzione dei problemi}
 	
 	\section{Errori in DeSpeect}
-	Gli errori che si possono riscontrare utilizzando l’applicazione verrano stampati nella log di errore, nel caso l'errore sia dell'engine Speect il suo errore verrà riportato nel file ErrorLog.txt \textit{DeSpeect}.
+	Gli errori che si possono riscontrare utilizzando l’applicazione verrano stampati nel log errori (§4.1.7), nel caso l'errore sia dell'engine Speect il suo errore verrà riportato nel file ErrorLog.txt \textit{DeSpeect}.
+	
 	\subsection{Struttura dei codici di errore}
 	Gli errori rispettano la seguente notazione:
 	
 	\begin{center}
-		Operazione in esecuzione,Operation Status: stato di Speect in seguito all'operazione.
-		Gli stati sono:
-		\begin{itemize}
-			\item {No error} Successo, nessun errore;
-			\item {Failure} Una failure non specificata è avvenuta;
-			\item {Memory allocation failed} Errore di allocazione di memoria;
-			\item {Function argument(s) invalid} Errore negli argomenti della funzione;
-			\item {Class/object method does not exist} Classe/Oggetto non esistono;
-			\item {End of file/stream} Fine del file o dello stream raggiunta;
-			\item {Warning, possible error} Attenzione possibile errore;
-			\item {Error context continued} Errore il contesto continua;
-			\item {Undefined error} Errore non definito.
-		\end{itemize}
-	 	Se l'operazione finisce in uno stato diverso da No error, nel file \verb|ErrorLog.txt| verrà descritto in maniera più dettagliata.
+		[Operazione in esecuzione],Operation Status: [Stato di Speect in seguito all'operazione.]
 	\end{center}
+	
+	\noindent Dove gli stati possibili sono:
+	\begin{itemize}
+		\item \textbf{No error}: successo, nessun errore;
+		\item \textbf{Failure}: si è verificato un failure non specificato;
+		\item \textbf{Memory allocation failed}: errore di allocazione di memoria;
+		\item \textbf{Function argument(s) invalid}: errore negli argomenti della funzione;
+		\item \textbf{Class/object method does not exist}: classe/Oggetto non esiste;
+		\item \textbf{End of file/stream}: fine del file o dello stream raggiunta;
+		\item \textbf{Warning, possible error}: attenzione possibile errore;
+		\item \textbf{Error context continued}: errore il contesto continua;
+		\item \textbf{Undefined error}: errore non definito.
+	\end{itemize}
+
+	\noindent Se l'operazione finisce in uno stato diverso da No error, nel file \verb|ErrorLog.txt| verrà descritto in maniera più dettagliata. Si rimanda alla documentazione ufficiale di Speect per ulteriori informazioni riguardanti i suoi errori.
 	
 	\section{Problemi con il reperimento di Speect}	
 	Il portale che ospita documentazione e download di \textit{Speect} può occasionalmente risultare offline per dei giorni.\\
