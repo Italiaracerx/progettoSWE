@@ -2178,7 +2178,7 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 				\textit{Lettera di Presentazione} & 80 & Positivo\\ \hline
 			\end{longtable}
 		\end{center}
-		\caption{Valori Indice Gulpease, periodo di Consolidamento requisiti e tecnologie} 
+		\caption{Valori Indice Gulpease, periodo di consolidamento requisiti e tecnologie} 
 	\end{table} 
 	
 	\begin{figure}[H]
@@ -2196,7 +2196,7 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 
 \subsection{Processi}
 
-A seguito di numerosi miglioramenti apportati durante la revisione delle NP, giunta alla redazione del documento \textit{Norme di Progetto v3.0.0}, sono stati apportati ulteriori miglioramenti nello svolgimento dei processi visibili nella tabella sottostante
+A seguito di numerosi miglioramenti apportati durante la revisione delle NP, sono stati concretizzati ulteriori miglioramenti nello svolgimento dei processi visibili nella tabella sottostante:
 
 \newpage
 
@@ -2264,7 +2264,7 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 				\textit{Lettera di Presentazione} & 80 & Positivo\\ \hline
 			\end{longtable}
 		\end{center}
-		\caption{Valori Indice Gulpease, periodo di Progettazione e codifica} 
+		\caption{Valori Indice Gulpease, periodo di progettazione e codifica} 
 	\end{table} 
 	
 	\begin{figure}[H]
@@ -2355,7 +2355,165 @@ Si riportano i valori delle metriche sul software, con alcune considerazioni att
 	\item \textbf{MPPS010 - Rapporto tra linee di codice e linee di commento}: la media dei rapporti tra linee di commento e linee di codice è \textit{18\%}, valore fuori dal range di accettabilità definito, il gruppo intende aumentare drasticamente la percentuale nel corso dell'ultimo periodo di progetto.
 \end{itemize}
 
-%\subsubsection{Software}
+% VALIDAZIONE E COLLAUDO
+
+\section{Validazione e collaudo}
+
+\subsection{Processi}
+
+A seguito ad un ulteriore raffinamento delle RP, sono stati apportati miglioramenti nello svolgimento dei processi, come visibile nella tabella sottostante:
+
+\newpage
+
+\begin{table}[h]
+	\begin{center}
+		\setlength\LTleft{-22mm}
+		\begin{longtable}{|p{35mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
+			\hline
+			\textbf{Nome Processo} & \textbf{Attr. L1} & \textbf{Attr. L2} & \textbf{Attr. L3} & \textbf{Attr. L4} & \textbf{Attr. L5} & \textbf{SPICE}\\
+			\hline
+			\multirow{2}{*}{\textit{Fornitura}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: P & PCH: P & Inizio: 3\\  
+			\cline{3-7}
+			&          & WPM: F & PDIS: F & PC: P & PI: P & Fine: 4 \\ 
+			\hline
+			\multirow{2}{*}{\textit{Sviluppo}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: P & PCH: P & Inizio: 2\\  \cline{3-7}
+			&          & WPM: F & PDIS: N & PC: N & PI: N & Fine: 3\\
+			\hline\multirow{2}{*}{\textit{Documentazione}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: F & PCH: P & Inizio: 4\\  \cline{3-7}
+			&          & WPM: F & PDIS: F & PC: L & PI: P & Fine: 4\\ 
+			\hline\multirow{2}{*}{\textit{Versionamento}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: P & PCH: P & Inizio: 3\\  \cline{3-7}
+			&          & WPM: F & PDIS: F & PC: P & PI: P & Fine: 4\\ 
+			\hline\multirow{2}{*}{\textit{Verifica}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: L & PMS: P & PCH: P & Inizio: 3\\  \cline{3-7}
+			&          & WPM: F & PDIS: L & PC: P & PI: P & Fine: 3\\ 
+			\hline       
+		\end{longtable}
+	\end{center}
+	\caption{Valori SPICE, periodo di Progettazione e codifica} 
+\end{table}
+
+\begin{figure}[H]
+	\includegraphics[scale=0.5]{verifica-progettazione-spice}
+	\centering
+	\caption{Andamento dei valori SPICE, periodo di Progettazione e codifica}
+\end{figure}
+
+\subsection{Prodotti}
+
+\subsubsection{Documenti}
+
+Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle e frontespizio) e di quello del numero di Errori ortografici corretti [MPPD001].
+
+\begin{itemize}
+	\item \textbf{Errori ortografici corretti [MPPD001]}: tramite le funzionalità di rilevazione d'errori di TexStudio sono stati rilevati e corretti complessivamente 32 errori all'interno dei documenti;
+	
+	\item \textbf{Indice Gulpease [MPPD002]}: Viene qui riportata una tabella contenente il valore Gulpease calcolato per ciascun documento.
+	Per il calcolo di tale indice sono state escluse eventuali tabelle presenti nei documenti, le pagine di frontespizio e i diari delle modifiche, in quanto una loro inclusione avrebbe portato a valori errati. L'esito della misurazione è Positivo, se l'indice è maggiore o uguale a 50, o Negativo nel caso fosse inferiore a tale valore.
+	
+	\begin{table}[h]
+		\begin{center}
+			\setlength\LTleft{6mm}
+			\begin{longtable}{|p{60mm}|p{30mm}|p{25mm}|}
+				\hline  
+				\textbf{Nome Documento} & \textbf{Valore Indice} & \textbf{Esito} \\ \hline    
+				\textit{Glossario v 3.0.0} & 56 & Positivo\\ \hline    
+				\textit{Norme di Progetto v 3.0.0} & 62 & Positivo\\ \hline    
+				\textit{Piano di Progetto v 3.0.0} & 58 & Positivo\\ \hline    
+				\textit{Analisi dei Requisiti v 3.0.0} & 65 & Positivo\\ \hline    
+				\textit{Piano di Qualifica v 3.0.0} & 58 & Positivo\\ \hline    
+				\textit{Verbale Esterno 2018-04-30} & 54 & Positivo\\ \hline
+				\textit{Verbale Interno 2018-04-27} & 55 & Positivo\\ \hline
+				\textit{Verbale Interno 2018-05-01} & 54 & Positivo\\ \hline
+			\end{longtable}
+		\end{center}
+		\caption{Valori Indice Gulpease, periodo di validazione e collaudo} 
+	\end{table} 
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.5]{verifica-progettazione-gulpease}
+		\centering
+		\caption{Andamento dei valori Indice Gulpease, periodo di verifica e validazione}
+	\end{figure}
+	
+	Dalla tabella e dal grafico si evince che tutti i documenti presentano un indice nei limiti preferibili.	
+\end{itemize}
+
+\subsubsection{Software}
+
+Si riportano i valori delle metriche sul software, con alcune considerazioni atte al miglioramento del processo di codifica e implementazione e alla verifica del raggiungimento degli obiettivi di qualità relativi al prodotto software.
+
+\begin{itemize}
+	\item \textbf{MPPS001 - Copertura requisiti obbligatori}: seguono le tabelle riassuntive della copertura dei requisiti obbligatori. Si noti che l'architettura è stata predisposta per coprire la totalità dei requisiti funzionali obbligatori, di cui più della metà è stata implementata dal codice.
+	
+	\begin{longtable}{|p{40mm}|p{40mm}|p{40mm}|}
+		\caption{Tabella riepilogativa copertura requisiti funzionali obbligatori} \\
+		\hline
+		\centering \textbf{Requisito} & \textbf{Soddisfacimento architettura} &  \textbf{Soddisfacimento codice}\\
+		
+		\hline \centering ROF0 & SODDISFATTO & SODDISFATTO \\
+		\hline \centering ROF1 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF2 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF2.1 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF3 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF3.1 & SODDISFATTO & \\
+		\hline \centering ROF4 & SODDISFATTO &\\
+		\hline \centering ROF4.1 & SODDISFATTO &\\
+		\hline \centering ROF4.1.1 & SODDISFATTO &\\
+		\hline \centering ROF4.2 & SODDISFATTO &\\
+		\hline \centering ROF6 & SODDISFATTO &\\
+		\hline \centering ROF7 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF8 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF8.1 & SODDISFATTO & \\
+		\hline \centering ROF9 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF9.1 & SODDISFATTO & \\
+		\hline \centering ROF9.2 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF9.3 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF9.3.1 & SODDISFATTO & \\
+		\hline \centering ROF9.5 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF9.6 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF9.7 & SODDISFATTO & SODDISFATTO\\
+		\hline \centering ROF9.9 & SODDISFATTO & \\
+		\hline \centering ROF14 & SODDISFATTO & SODDISFATTO\\
+		\hline
+		
+	\end{longtable}
+	
+	\begin{longtable}{|p{60mm}|p{60mm}|}
+		\caption{Tabella riepilogativa copertura requisiti di qualità obbligatori} \\
+		\hline
+		\centering \textbf{Requisito} &  \textbf{Soddisfacimento}\\
+		
+		\hline \centering ROQ0 & SODDISFATTO \\
+		\hline \centering ROQ0.1 & SODDISFATTO\\
+		\hline \centering ROQ1 & SODDISFATTO\\
+		\hline \centering ROQ2 & SODDISFATTO\\
+		\hline \centering ROQ3 & \\
+		\hline \centering ROQ4 & \\
+		\hline
+		
+	\end{longtable}
+	
+	
+	\begin{longtable}{|p{60mm}|p{60mm}|}
+		\caption{Tabella riepilogativa copertura requisiti di vincolo obbligatori} \\
+		\hline
+		\centering \textbf{Requisito} &  \textbf{Soddisfacimento}\\
+		
+		\hline \centering ROV0 & SODDISFATTO \\
+		\hline \centering ROV1 & SODDISFATTO\\
+		\hline \centering ROV2 & SODDISFATTO\\
+		\hline
+		
+	\end{longtable}
+	
+	\item \textbf{MPPS002 - Copertura del codice}: la copertura del codice è attualmente del \textit{10.6\%}, decisamente inferiore a quanto stimato dal gruppo per il periodo corrente. Tale valore è dovuto ad un problema di implementazione dei test che, sebbene il framework relativo sia stato correttamente predisposto e configurato, presentano difficoltà di integrazione con la libreria Speect (in fase di discussione con la Proponente). Il gruppo è tuttavia fiducioso di riuscire ad implementare i test necessari in breve tempo una volta risolto il succitato problema tecnico;
+	\item \textbf{MPPS003 - Percentuale superamento test}: valgono per tale metrica le considerazioni fatte per MPPS002, che rendono difficile specificare una percentuale esatta;
+	\item \textbf{MPPS004 - Numero di parametri per metodo}: il numero medio di parametri per metodo è \textit{1.4}, entro il range ottimale definito;
+	\item \textbf{MPPS005 - Numero di attributi per classe}: il numero medio di attributi per classe è \textit{2.6}, entro il range ottimale definito;
+	\item \textbf{MPPS006 - Numero di metodi per classe}: il numero medio di metodi per classe è \textit{6.7}, entro il range di accettabilità ma fuori da quello di ottimalità;
+	\item \textbf{MPPS007 - Complessità ciclomatica}: la complessità ciclomatica media del codice è attualmente \textit{10.2}, valore al limite del range di ottimalità stabilito che il gruppo intende ridurre ulteriormente;
+	\item \textbf{MPPS008 - Grado di instabilità}: il grado di instabilità è \textit{0.4}, ai margini del range di ottimalità definito;
+	\item \textbf{MPPS009 - Altezza albero della gerarchia}: la gerarchia di altezza massima all'interno dell'architettura ha altezza \textit{2}, valore che rientra nel range di ottimalità definito;
+	\item \textbf{MPPS010 - Rapporto tra linee di codice e linee di commento}: la media dei rapporti tra linee di commento e linee di codice è \textit{18\%}, valore fuori dal range di accettabilità definito, il gruppo intende aumentare drasticamente la percentuale nel corso dell'ultimo periodo di progetto.
+\end{itemize}
 
 \chapter{Valutazioni per il miglioramento}
 
@@ -2431,9 +2589,9 @@ Questa appendice si propone di riepilogare le valutazioni orientate al miglioram
 
 In questa appendice vengono indicate le modifiche apportate dal gruppo al proprio way of working, alle proprie strategie e ai propri documenti formali a seguito degli esiti delle revisioni.
 
-\section{Revisione dei Requisiti}
+\section{Revisione dei requisiti}
 
-A seguito dell'esito della Revisione dei Requisiti sono state apportate le seguenti modifiche:
+A seguito dell'esito della RR sono state apportate le seguenti modifiche:
 
 \begin{itemize}
 	\item Eliminata a livello normativo l’ambiguità tra prodotti e processi e chiarita la relazione tra processi primari e di supporto. In particolare, normata in maniera più dettagliata la gestione di progetto;
@@ -2447,9 +2605,9 @@ A seguito dell'esito della Revisione dei Requisiti sono state apportate le segue
 	\end{itemize}
 \end{itemize}
 
-\section{Revisione di Progettazione}
+\section{Revisione di progettazione}
 
-A seguito dell'esito della Revisione di Progettazione sono state apportate le seguenti modifiche:
+A seguito dell'esito della RP sono state apportate le seguenti modifiche:
 
 \begin{itemize}
 	\item Ristrutturazione profonda dei documenti in base al feedback ricevuto:
@@ -2462,4 +2620,19 @@ A seguito dell'esito della Revisione di Progettazione sono state apportate le se
 	\end{itemize}
 \end{itemize}
 
+\section{Revisione di qualifica}
+
+A seguito dell'esito della RQ sono state apportate le seguenti modifiche:
+
+\begin{itemize}
+	\item Correzione di errori di digitazione, grammaticali e di violazioni delle norme tipografiche;
+	\item Ristrutturazione dei documenti in base al feedback ricevuto:
+	\begin{itemize}
+		\item \textbf{Piano di Progetto}: rivista relazione tra consuntivo di periodo e preventivo a finire;
+		\item \textbf{Piano di Qualifica}: rivisto stato di avanzamento delle verifiche e modalità di presentazione del resoconto delle attività di verifica;
+		\item \textbf{Analisi dei Requisiti}: revisione dei casi d'uso sulla base delle indicazioni ricevute dal docente nel colloquio suggerito in sede di RQ.
+		\item \textbf{Manuale sviluppatore}: inseriti requisiti hardware e rivista sezione riguardante l'IDE;
+		\item \textbf{Manuale utente}: inseriti i requisiti hardware e numerosi esempi che guidino l'utente nell'esecuzione di funzionalità specifiche dell'applicazione. 
+	\end{itemize}
+\end{itemize}
 \end{document}
