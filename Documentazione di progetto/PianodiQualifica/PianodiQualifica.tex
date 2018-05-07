@@ -1642,7 +1642,7 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 	\\[1em]
 	\hline
 	\newline TU16&
-	\newline Viene verificato che un utterance processor abbia il campo name corretto&
+	\newline Viene verificato che un utterance processor abbia il campo \verb|name| corretto&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
@@ -1688,6 +1688,81 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 	\hline
 	\newline TU25&
 	\newline Viene verificata la corretta configurazione dopo la modifica&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU26&
+	\newline Viene verificato che avvenga la generazione corretta di una \verb|relation|&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU27&
+	\newline Viene verificato che la ricerca restituisca il nodo corretto&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU28&
+	\newline Viene verificato che la costruzione dell'arco avvenga correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU29&
+	\newline Viene verificato che avvenga correttamente la pulizia dei dettagli del nodo&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU30&
+	\newline Viene verificata la corretta visualizzazione dei dettagli relativi ad un nodo&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU31&
+	\newline Viene verificata la corretta costruzione di \verb|GraphManager|&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU32&
+	\newline Viene verificata la corretta stampa delle relazioni selezionate&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU33&
+	\newline Viene verificata la corretta stampa delle relazioni in seguito alla modifica della selezione&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU34&
+	\newline Viene verificata la corretta uguaglianza dei nodi di relazioni diverse&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU35&
+	\newline Viene verificato che il nodo si muova correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU36&
+	\newline Viene verificato che il nodo notifichi correttamente lo stato di visualizzazione&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU37&
+	\newline Viene verificato che l'elenco dei \verb|processor| siano correttamente pulito&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU38&
+	\newline Viene verificato che l'elenco dei \verb|processor| sia riempito correttamente&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU39&
+	\newline Viene verificato che sia evidenziato il singolo \verb|processor| corretto&
+	\newline \textcolor{green}{Superato}
+	\\[1em]
+	\hline
+	\newline TU40&
+	\newline Viene verificato che siano evidenziati i \verb|processor|&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
@@ -1805,6 +1880,67 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 	TU25&
 	\verb|Model::SpeectWrapper::Configuration::hasChanged()|,
 	\verb|Model::SpeectWrapper::Configuration::getConfig()|
+	\\[1em]
+	\hline
+	TU26&
+	\verb|Model::SpeectWrapper::Relation::Relation()|
+	\\[1em]
+	\hline
+	TU27&
+	\verb|Model::SpeectWrapper::Relation::Relation()|
+	\\[1em]
+	\hline
+	TU28&
+	\verb|Qt::Arc::Arc()|
+	\\[1em]
+	\hline
+	TU29&
+	\verb|Qt::DataNodeManager::clear()|
+	\\[1em]
+	\hline
+	TU30&
+	\verb|Qt::DataNodeManager::getNodeId()|
+	\\[1em]
+	\hline
+	TU31&
+	\verb|Qt::GraphManager::GraphManager()|
+	\\[1em]
+	\hline
+	TU32&
+	\verb|Qt::GraphManager::changeRelationVisibility()|
+	\\[1em]
+	\hline
+	TU33&
+	\verb|Qt::GraphManager::notifySelection()|
+	\\[1em]
+	\hline
+	TU34&
+	\verb|Qt::Node::operator==()|
+	\\[1em]
+	\hline
+	TU35&
+	\verb|Qt::Node::mouseReleseEvent()|
+	\\[1em]
+	\hline
+	TU36&
+	\verb|Qt::Node::catchVisibilityChange()|
+	\\[1em]
+	\hline
+	TU37&
+	\verb|Qt::ProcessorManager::ProcessorManager()|,
+	\verb|Qt::ProcessorManager::clear()|
+	\\[1em]
+	\hline
+	TU38&
+	\verb|Qt::ProcessorManager::addProcessor()|
+	\\[1em]
+	\hline
+	TU39&
+	\verb|Qt::ProcessorManager::evidenceNextProcessor()|
+	\\[1em]
+	\hline
+	TU40&
+	\verb|Qt::ProcessorManager::evidenceAllProcessor()|
 	\\[1em]
 	\hline
 \end{longtable}
