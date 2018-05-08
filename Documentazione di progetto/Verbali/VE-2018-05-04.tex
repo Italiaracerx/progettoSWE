@@ -1,0 +1,82 @@
+\documentclass[openany,12pt,a4paper]{article} 
+\usepackage{subfiles} 
+\usepackage[]{graphicx} 
+\usepackage{float} 
+\graphicspath{{./img/}{./../img/}} 
+\usepackage{../StileDoc} 
+\title{Verbale Esterno} 
+\author{} 
+\newcommand{\versione}{} 
+\loadglsentries{../Glossario/Definizioni} 
+ 
+\begin{document} 
+  \makeatletter 
+  \begin{titlepage} 
+    \setlength{\headsep}{0pt}   
+    \begin{center} 
+      \includegraphics[width=0.5\linewidth]{Logo.png}\\[1em] 
+      {\huge \bfseries  \@title }\\[10ex] 
+      \textbf{\Large Informazioni Documento} \\[2em] 
+      \bgroup 
+      \def\arraystretch{1.5} 
+      \begin{tabular}{l|l} 
+        \textbf{Data approvazione} & 5 maggio 2018 \\ 
+        \textbf{Responsabile} & Manfredi Smaniotto \\ 
+        \textbf{Redattore} & Kevin Silvestri \\ 
+        \textbf{Verificatore} & Cristiano Tessarolo \\ 
+        \textbf{Distribuzione} & Prof. Tullio Vardanega \\ 
+         & Prof. Riccardo Cardin \\ 
+         & Gruppo Graphite \\ 
+        \textbf{Uso} & Esterno \\ 
+        \textbf{Recapito} & graphite.swe@gmail.com \\ 
+      \end{tabular} 
+    \egroup 
+    \end{center} 
+  \end{titlepage} 
+  \makeatother 
+ 
+  \thispagestyle{empty} 
+  \newpage 
+   
+  \tableofcontents 
+  \newpage 
+   
+  \section{Informazioni generali} 
+   
+  \subsection{Informazioni sull'incontro} 
+   
+  \begin{itemize}  
+      \item \textbf{Luogo:} videochiamata;
+      \item \textbf{Data:} 2018-05-04; 
+      \item \textbf{Orari} 13:10 - 13:45;
+      \item \textbf{Partecipanti del gruppo:} Marco Focchiatti, Samuele Modena, Matteo Rizzo, Giulio Rossetti, Kevin Silvestri, Manfredi Smaniotto, Cristiano Tessarolo; 
+      \item \textbf{Partecipanti esterni:} Professor Riccardo Cardin. 
+  \end{itemize} 
+ 
+  \subsection{Ragioni dell'incontro} 
+  Richiesta di chiarimenti relativi ad errori nell'AR segnalati in sede di RQ. 
+ 
+  \section{Resoconto} 
+  Nel corso dell'incontro con il professor Cardin, è emerso un costruttivo confronto su alcuni errori concettuali e sintattici presenti nei casi d'uso dell'AR. Nello specifico, sono stati trattati i seguenti argomenti: 
+  
+  \begin{itemize}
+  	\item Presentazione dello stato attuale dell'AR;
+    \item Chiarimenti sugli errori segnalati;
+    \item Richiesta di ulteriori pareri o suggerimenti sull'andamento del progetto.
+    
+  \end{itemize}
+  
+  L'incontro ha confermato la necessità di inserire estensioni ai casi d'uso per quanto riguarda la visualizzazione degli errori, e ha evidenziato l'erroneità di alcuni casi d'uso proposti dal gruppo che non rappresentavano reali funzionalità offerte dal sistema.
+  
+  \section{Tracciamento delle decisioni} 
+   
+  \begin{itemize} 
+  	
+      \item \textbf{VE-2018-04-30.1:} Revisione generale dell'AR;
+      \item \textbf{VE-2018-04-30.2:} Inserimento delle estensioni per gestione visualizzazione errori;
+      \item \textbf{VE-2018-04-30.3:} Rimozione casi d'uso che non rappresentino reali funzionalità offerte dall'applicazione.
+      
+  \end{itemize} 
+   
+  \end{document}
+ \ No newline at end of file 
