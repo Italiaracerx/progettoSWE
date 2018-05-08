@@ -2013,10 +2013,10 @@ Vengono di seguito presentati i test d'integrazione previsti per le varie compon
 
 \section{Introduzione}
 
-Nel periodo precedente alla consegna per una revisione vengono verificati i documenti redatti ed i processi eseguiti. I documenti sono verificati dai \textit{Verificatori} secondo i criteri per l'analisi statica definiti nel documento \textit{Norme di Progetto v3.0.0}, applicando il sistema \glossario{Walkthrough}{Walkthrough} ed \glossario{Inspection}{Inspection}. In primo luogo, viene verificato il documento nella sua interezza, cercando eventuali errori presenti e trattandoli nel modo seguente:
+Nel periodo precedente alla consegna per una revisione vengono verificati i documenti redatti ed i processi eseguiti. I documenti sono verificati dai \textit{Verificatori} secondo i criteri per l'analisi statica definiti nel documento NP, applicando il sistema \glossario{Walkthrough}{Walkthrough} ed \glossario{Inspection}{Inspection}. In primo luogo, viene verificato il documento nella sua interezza, cercando eventuali errori presenti e trattandoli nel modo seguente:
 
 \begin{enumerate}
-	\item Correzione di errori grammaticali o di eventuali violazioni delle norme tipografiche definite nelle \textit{Norme di Progetto v2.0.0};
+	\item Correzione di errori grammaticali o di eventuali violazioni delle norme tipografiche definite nelle NP;
 	\item Segnalazione ed aggiunta alla lista di controllo degli errori più frequenti;
 	\item Applicazione del ciclo PDCA allo scopo di migliorare e velocizzare le future verifiche.
 \end{enumerate}
@@ -2285,7 +2285,7 @@ Si riportano i valori delle metriche sul software, con alcune considerazioni att
 	\item \textbf{MPPS001 - Copertura requisiti obbligatori}: seguono le tabelle riassuntive della copertura dei requisiti obbligatori. Si noti che l'architettura è stata predisposta per coprire la totalità dei requisiti funzionali obbligatori, di cui più della metà è stata implementata dal codice.
 	
 	\begin{longtable}{|p{40mm}|p{40mm}|p{40mm}|}
-		\caption{Tabella riepilogativa copertura requisiti funzionali obbligatori} \\
+		\caption{Tabella riepilogativa copertura requisiti funzionali obbligatori - periodo di progettazione e codifica} \\
 		\hline
 		\centering \textbf{Requisito} & \textbf{Soddisfacimento architettura} &  \textbf{Soddisfacimento codice}\\
 		
@@ -2377,24 +2377,24 @@ A seguito ad un ulteriore raffinamento delle RP, sono stati apportati migliorame
 			\cline{3-7}
 			&          & WPM: F & PDIS: F & PC: P & PI: P & Fine: 4 \\ 
 			\hline
-			\multirow{2}{*}{\textit{Sviluppo}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: P & PCH: P & Inizio: 2\\  \cline{3-7}
-			&          & WPM: F & PDIS: N & PC: N & PI: N & Fine: 3\\
+			\multirow{2}{*}{\textit{Sviluppo}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: P & PCH: P & Inizio: 3\\  \cline{3-7}
+			&          & WPM: F & PDIS: P & PC: L & PI: L & Fine: 4\\
 			\hline\multirow{2}{*}{\textit{Documentazione}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: F & PCH: P & Inizio: 4\\  \cline{3-7}
 			&          & WPM: F & PDIS: F & PC: L & PI: P & Fine: 4\\ 
 			\hline\multirow{2}{*}{\textit{Versionamento}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: P & PCH: P & Inizio: 3\\  \cline{3-7}
 			&          & WPM: F & PDIS: F & PC: P & PI: P & Fine: 4\\ 
-			\hline\multirow{2}{*}{\textit{Verifica}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: L & PMS: P & PCH: P & Inizio: 3\\  \cline{3-7}
-			&          & WPM: F & PDIS: L & PC: P & PI: P & Fine: 3\\ 
+			\hline\multirow{2}{*}{\textit{Verifica}} & \multirow{2}{*}{PP: F} & PM: F & PDEF: F & PMS: P & PCH: P & Inizio: 3\\  \cline{3-7}
+			&          & WPM: F & PDIS: L & PC: L & PI: L & Fine: 4\\ 
 			\hline       
 		\end{longtable}
 	\end{center}
-	\caption{Valori SPICE, periodo di Progettazione e codifica} 
+	\caption{Valori SPICE, periodo di validazione e collaudo} 
 \end{table}
 
 \begin{figure}[H]
-	\includegraphics[scale=0.5]{verifica-progettazione-spice}
+	\includegraphics[scale=0.5]{/Spice/spice-verifica}
 	\centering
-	\caption{Andamento dei valori SPICE, periodo di Progettazione e codifica}
+	\caption{Andamento dei valori SPICE, periodo di validazione e collaudo}
 \end{figure}
 
 \subsection{Prodotti}
@@ -2416,10 +2416,12 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 				\hline  
 				\textbf{Nome Documento} & \textbf{Valore Indice} & \textbf{Esito} \\ \hline    
 				\textit{Glossario v 3.0.0} & 56 & Positivo\\ \hline    
-				\textit{Norme di Progetto v 3.0.0} & 62 & Positivo\\ \hline    
-				\textit{Piano di Progetto v 3.0.0} & 58 & Positivo\\ \hline    
-				\textit{Analisi dei Requisiti v 3.0.0} & 65 & Positivo\\ \hline    
-				\textit{Piano di Qualifica v 3.0.0} & 58 & Positivo\\ \hline    
+				\textit{Norme di Progetto v 4.0.0} & 62 & Positivo\\ \hline    
+				\textit{Piano di Progetto v 4.0.0} & 58 & Positivo\\ \hline    
+				\textit{Analisi dei Requisiti v 4.0.0} & 65 & Positivo\\ \hline    
+				\textit{Piano di Qualifica v 4.0.0} & 58 & Positivo\\ \hline    
+				\textit{Manuale utente v 1.0.0} & 60 & Positivo\\ \hline    
+				\textit{Manuale sviluppatore v 1.0.0} & 62 & Positivo\\ \hline    
 				\textit{Verbale Esterno 2018-04-30} & 54 & Positivo\\ \hline
 				\textit{Verbale Interno 2018-04-27} & 55 & Positivo\\ \hline
 				\textit{Verbale Interno 2018-05-01} & 54 & Positivo\\ \hline
@@ -2429,7 +2431,7 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 	\end{table} 
 	
 	\begin{figure}[H]
-		\includegraphics[scale=0.5]{verifica-progettazione-gulpease}
+		\includegraphics[scale=0.5]{/Gulpease/gulpease-verifica}
 		\centering
 		\caption{Andamento dei valori Indice Gulpease, periodo di verifica e validazione}
 	\end{figure}
@@ -2442,79 +2444,134 @@ Segue riassunto del calcolo dell'Indice Gulpease [MPPD002] (al netto di tabelle 
 Si riportano i valori delle metriche sul software, con alcune considerazioni atte al miglioramento del processo di codifica e implementazione e alla verifica del raggiungimento degli obiettivi di qualità relativi al prodotto software.
 
 \begin{itemize}
-	\item \textbf{MPPS001 - Copertura requisiti obbligatori}: seguono le tabelle riassuntive della copertura dei requisiti obbligatori. Si noti che l'architettura è stata predisposta per coprire la totalità dei requisiti funzionali obbligatori, di cui più della metà è stata implementata dal codice.
+	\item \textbf{MPPS001 - Copertura requisiti obbligatori}: la copertura dei requisiti è del 100\%, valore ottimale.
 	
-	\begin{longtable}{|p{40mm}|p{40mm}|p{40mm}|}
-		\caption{Tabella riepilogativa copertura requisiti funzionali obbligatori} \\
-		\hline
-		\centering \textbf{Requisito} & \textbf{Soddisfacimento architettura} &  \textbf{Soddisfacimento codice}\\
-		
-		\hline \centering ROF0 & SODDISFATTO & SODDISFATTO \\
-		\hline \centering ROF1 & SODDISFATTO & SODDISFATTO\\
-		\hline \centering ROF2 & SODDISFATTO & SODDISFATTO\\
-		\hline \centering ROF2.1 & SODDISFATTO & SODDISFATTO\\
-		\hline \centering ROF3 & SODDISFATTO & SODDISFATTO\\
-		\hline \centering ROF3.1 & SODDISFATTO & \\
-		\hline \centering ROF4 & SODDISFATTO &\\
-		\hline \centering ROF4.1 & SODDISFATTO &\\
-		\hline \centering ROF4.1.1 & SODDISFATTO &\\
-		\hline \centering ROF4.2 & SODDISFATTO &\\
-		\hline \centering ROF6 & SODDISFATTO &\\
-		\hline \centering ROF7 & SODDISFATTO & SODDISFATTO\\
-		\hline \centering ROF8 & SODDISFATTO & SODDISFATTO\\
-		\hline \centering ROF8.1 & SODDISFATTO & \\
-		\hline \centering ROF9 & SODDISFATTO & SODDISFATTO\\
-		\hline \centering ROF9.1 & SODDISFATTO & \\
-		\hline \centering ROF9.2 & SODDISFATTO & SODDISFATTO\\
-		\hline \centering ROF9.3 & SODDISFATTO & SODDISFATTO\\
-		\hline \centering ROF9.3.1 & SODDISFATTO & \\
-		\hline \centering ROF9.5 & SODDISFATTO & SODDISFATTO\\
-		\hline \centering ROF9.6 & SODDISFATTO & SODDISFATTO\\
-		\hline \centering ROF9.7 & SODDISFATTO & SODDISFATTO\\
-		\hline \centering ROF9.9 & SODDISFATTO & \\
-		\hline \centering ROF14 & SODDISFATTO & SODDISFATTO\\
-		\hline
-		
-	\end{longtable}
-	
-	\begin{longtable}{|p{60mm}|p{60mm}|}
-		\caption{Tabella riepilogativa copertura requisiti di qualità obbligatori} \\
-		\hline
-		\centering \textbf{Requisito} &  \textbf{Soddisfacimento}\\
-		
-		\hline \centering ROQ0 & SODDISFATTO \\
-		\hline \centering ROQ0.1 & SODDISFATTO\\
-		\hline \centering ROQ1 & SODDISFATTO\\
-		\hline \centering ROQ2 & SODDISFATTO\\
-		\hline \centering ROQ3 & \\
-		\hline \centering ROQ4 & \\
-		\hline
-		
-	\end{longtable}
-	
-	
-	\begin{longtable}{|p{60mm}|p{60mm}|}
-		\caption{Tabella riepilogativa copertura requisiti di vincolo obbligatori} \\
-		\hline
-		\centering \textbf{Requisito} &  \textbf{Soddisfacimento}\\
-		
-		\hline \centering ROV0 & SODDISFATTO \\
-		\hline \centering ROV1 & SODDISFATTO\\
-		\hline \centering ROV2 & SODDISFATTO\\
-		\hline
-		
-	\end{longtable}
-	
-	\item \textbf{MPPS002 - Copertura del codice}: la copertura del codice è attualmente del \textit{10.6\%}, decisamente inferiore a quanto stimato dal gruppo per il periodo corrente. Tale valore è dovuto ad un problema di implementazione dei test che, sebbene il framework relativo sia stato correttamente predisposto e configurato, presentano difficoltà di integrazione con la libreria Speect (in fase di discussione con la Proponente). Il gruppo è tuttavia fiducioso di riuscire ad implementare i test necessari in breve tempo una volta risolto il succitato problema tecnico;
-	\item \textbf{MPPS003 - Percentuale superamento test}: valgono per tale metrica le considerazioni fatte per MPPS002, che rendono difficile specificare una percentuale esatta;
+	\begin{figure}[H]
+		\includegraphics[scale=0.4]{/CoperturaRequisiti/copertura-requisiti-verifica}
+		\centering
+		\caption{Andamento della copertura dei requisiti, periodo di verifica e validazione}
+	\end{figure}
+
+	\item \textbf{MPPS002 - Copertura del codice}: la copertura del codice assume due connotazioni:
+	\begin{itemize}
+		\item \textit{Line coverage}: 97.3\%, valore ottimale, indica il numero di linee di codice effettivamente coperte dai test;
+		\item \textit{Condition coverage}: 66.5\%, valore non ottimale ma difficilmente incrementabile a causa di problematiche legate alla libreria Speect, indica il numero di condizioni coperte dai test. 
+	\end{itemize}
+
+	\begin{figure}[H]
+		\includegraphics[scale=0.4]{/CoperturaCodice/copertura-codice-verifica}
+		\centering
+		\caption{Andamento della copertura del codice, periodo di verifica e validazione}
+	\end{figure}
+
+	\item \textbf{MPPS003 - Percentuale superamento test}: la percentuale di superamento test è del 100\%, valore ottimale;
 	\item \textbf{MPPS004 - Numero di parametri per metodo}: il numero medio di parametri per metodo è \textit{1.4}, entro il range ottimale definito;
 	\item \textbf{MPPS005 - Numero di attributi per classe}: il numero medio di attributi per classe è \textit{2.6}, entro il range ottimale definito;
-	\item \textbf{MPPS006 - Numero di metodi per classe}: il numero medio di metodi per classe è \textit{6.7}, entro il range di accettabilità ma fuori da quello di ottimalità;
-	\item \textbf{MPPS007 - Complessità ciclomatica}: la complessità ciclomatica media del codice è attualmente \textit{10.2}, valore al limite del range di ottimalità stabilito che il gruppo intende ridurre ulteriormente;
+	\item \textbf{MPPS006 - Numero di metodi per classe}: il numero medio di metodi per classe è \textit{6.8}, entro il range di accettabilità ma fuori da quello di ottimalità;
+	\item \textbf{MPPS007 - Complessità ciclomatica}: la complessità ciclomatica media del codice è attualmente \textit{10.0}, valore al limite del range di ottimalità stabilito;
 	\item \textbf{MPPS008 - Grado di instabilità}: il grado di instabilità è \textit{0.4}, ai margini del range di ottimalità definito;
 	\item \textbf{MPPS009 - Altezza albero della gerarchia}: la gerarchia di altezza massima all'interno dell'architettura ha altezza \textit{2}, valore che rientra nel range di ottimalità definito;
-	\item \textbf{MPPS010 - Rapporto tra linee di codice e linee di commento}: la media dei rapporti tra linee di commento e linee di codice è \textit{18\%}, valore fuori dal range di accettabilità definito, il gruppo intende aumentare drasticamente la percentuale nel corso dell'ultimo periodo di progetto.
+	\item \textbf{MPPS010 - Rapporto tra linee di codice e linee di commento}: il rapporto tra linee di commento e linee di codice è \textit{38.5\%}, valore entro i range di ottimalità definiti.
 \end{itemize}
+
+\subsubsection*{Tabella riepilogativa delle rilevazioni metriche}
+\begin{longtable}{| p{2cm} | p{3.5cm} |p{5.5cm} | p{3cm} |}
+	\caption {Tabella rilevazioni metriche per i processi} \label{tab:metriche} \\
+	\hline
+	\textbf{Codice} & \textbf{Nome} & \textbf{Range di accettabilità} & \textbf{Valore rilevato}\\
+	\hline
+	\endhead
+	
+	\newline MPPS001 &
+	\newline Copertura requisiti obbligatori &
+	\newline \textbf{Accettazione:} [65\% - 100\%]
+	\newline \textbf{Ottimale:} [80\% - 100\%] &
+	\newline 100\%
+	\\[1em]
+	
+	\hline
+	
+	\newline MPPS002 &
+	\newline Copertura del codice &
+	\newline \textbf{Accettazione:} [65\% - 100\%]
+	\newline \textbf{Ottimale:} [85\% - 100\%] &
+	\newline 97.3\% (line coverage) - 66.5\% (condition coverage)
+	\\[1em]
+	
+	\hline
+	
+	\newline MPPS003 &
+	\newline Percentuale superamento test &
+	\newline \textbf{Accettazione:} [85\% - 100\%] 
+	\newline \textbf{Ottimale:} [100\% - 100\%] &
+	\newline 100\%
+	\\[1em]
+	
+	\hline
+	
+	\newline MPPS004 &
+	\newline Numero di parametri per metodo &
+	\newline \textbf{Accettazione:} [0, 5]
+	\newline \textbf{Ottimale:} [0, 3] &
+	\newline 1.4
+	\\[1em]
+	
+	\hline
+	
+	\newline MPPS005 &
+	\newline Numero di attributi per classe &
+	\newline \textbf{Accettazione:} [0, 15] 
+	\newline \textbf{Ottimale:} [0, 8] &
+	\newline 2.6
+	\\[1em]
+	
+	\hline
+	
+	\newline MPPS006 &
+	\newline Numero di metodi per classe &
+	\newline \textbf{Accettazione:} [0, 15] 
+	\newline \textbf{Ottimale:} [0, 5] &
+	\newline 6.8 
+	\\[1em]
+	
+	\hline
+	
+	\newline MPPS007 &
+	\newline Complessità ciclomatica &
+	\newline \textbf{Accettazione:} [0, 15] 
+	\newline \textbf{Ottimale:} [0, 10] &
+	\newline 10.0
+	\\[1em]
+	
+	\hline
+	
+	\newline MPPS008 &
+	\newline Grado di instabilità &
+	\newline \textbf{Accettazione:} [0.0 - 0.8] 
+	\newline \textbf{Ottimale:} [0.0 - 0.4]&
+	\newline 0.4
+	\\[1em]
+	
+	\hline
+	
+	\newline MPPS09 &
+	\newline Altezza albero della gerarchia &
+	\newline \textbf{Accettazione:} $ \leq 3 $
+	\newline \textbf{Ottimale:} $ \leq 2 $&
+	\newline 2
+	\\[1em]
+	
+	\hline
+	
+	\newline MPPS010 &
+	\newline Rapporto tra linee di commento e linee di codice &
+	\newline \textbf{Accettazione:} \newline $ \textrm{\textit{rapporto}} \geq 0.25 $
+	\newline \textbf{Ottimale:} $ \textrm{\textit{rapporto}} \geq 0.3 $ &
+	\newline 38.5\%
+	\\[1em]
+	
+	\hline
+\end{longtable}
 
 \chapter{Valutazioni per il miglioramento}
 
