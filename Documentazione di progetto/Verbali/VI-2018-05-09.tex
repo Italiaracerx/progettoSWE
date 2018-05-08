@@ -1,0 +1,76 @@
+\documentclass[openany,12pt,a4paper]{article}
+\usepackage{subfiles}
+\usepackage[]{graphicx}
+\usepackage{float}
+\graphicspath{{./img/}{./../img/}}
+\usepackage{../StileDoc}
+\title{Verbale Interno}
+\author{}
+\newcommand{\versione}{}
+\loadglsentries{../Glossario/Definizioni}
+
+\begin{document}
+	\makeatletter
+	\begin{titlepage}
+		\setlength{\headsep}{0pt}  
+		\begin{center}
+			\includegraphics[width=0.5\linewidth]{Logo.png}\\[1em]
+			{\huge \bfseries  \@title }\\[10ex]
+			\textbf{\Large Informazioni Documento} \\[2em]
+			\bgroup
+			\def\arraystretch{1.5}
+			\begin{tabular}{l|l}
+				\textbf{Data approvazione} & 9 maggio 2018 \\
+				\textbf{Responsabile} & Cristiano Tessarolo \\
+				\textbf{Redattore} & Marco Focchiatti \\
+				\textbf{Verificatore} & Manfredi Smaniotto \\
+				\textbf{Distribuzione} & Prof. Tullio Vardanega \\
+				 & Prof. Riccardo Cardin \\
+				 & Gruppo Graphite \\
+				\textbf{Uso} & Interno \\
+				\textbf{Recapito} & graphite.swe@gmail.com \\
+			\end{tabular}
+		\egroup
+		\end{center}
+	\end{titlepage}
+	\makeatother
+
+	\thispagestyle{empty}
+	\newpage
+	
+	\tableofcontents
+	\newpage
+	
+	\section{Informazioni generali}
+	
+	\subsection{Informazioni sull'incontro}
+	
+	\begin{itemize} 
+	    \item \textbf{Luogo:} videochiamata;
+	    \item \textbf{Data:} 2018-05-09;
+	    \item \textbf{Orari} 9:00 - 10:00;
+	    \item \textbf{Partecipanti del gruppo:} Marco Focchiatti, Samuele Modena, Matteo Rizzo, Giulio Rossetti, Kevin Silvestri, Manfredi Smaniotto, Cristiano Tessarolo;
+	    \item \textbf{Partecipanti esterni:} nessuno.
+	\end{itemize}
+	
+	\subsection{Ragioni dell'incontro}
+	
+	Stato di avanzamento del progetto e sua conclusione.
+
+	\section{Resoconto}
+	
+	Durante la riunione è stato analizzato lo stato di avanzamento del progetto, con particolare confronto sulle ultime operazioni di verifica in vista della consegna finale. Nello specifico, sono stati trattati i seguenti argomenti:
+	
+	\begin{itemize}
+		\item Stato generale di avanzamento del progetto, per sviluppo e documentazione;
+		\item Analisi delle ultime attività di verifica;
+		\item Modalità di consegna del software.
+	\end{itemize}  
+	
+	\section{Tracciamento delle decisioni}
+	
+	\begin{itemize}
+	    \item \textbf{VI-2018-05-09.1:} Consegna del software tramite DVD/CD con documentazione allegata.
+	\end{itemize}	
+
+	\end{document}    
