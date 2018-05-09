@@ -1,4 +1,3 @@
-
 \documentclass[openany,12pt,a4paper]{report}
 \usepackage{subfiles}
 \usepackage[]{graphicx}
@@ -54,11 +53,11 @@
 	\hline
 	\textbf{Versione} & \textbf{Data} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Descrizione} \\
 		
-		\hline 4.0.0 & 2018-05-10 & Giulio Rossetti & Amministratore & Approvazione \\ 
+		\hline 4.0.0 & 2018-05-10 & Giulio Rossetti & Responsabile & Approvazione \\ 
 		\hline 3.2.0 & 2018-05-02 & Marco Focchiatti & Verificatore & Verifica appendice §C \\ 
 		\hline 3.1.1 & 2018-04-30 & Manfredi Smaniotto & Programmatore & Ampliamento appendice §C \\
-		\hline 3.1.0 & 2018-04-28 & Cristiano Tessarolo & Verificatore & Verifica appendice §B e sezione 2.2 \\
-		\hline 3.0.2 & 2018-04-26 & Manfredi Smaniotto & Programmatore & Rivisitazione sezione §2.2 \\
+		\hline 3.1.0 & 2018-04-28 & Cristiano Tessarolo & Verificatore & Verifica appendice §B e §2.2 \\
+		\hline 3.0.2 & 2018-04-26 & Manfredi Smaniotto & Programmatore & Rivisita §2.2 \\
 		\hline 3.0.1 & 2018-04-24 & Samuele Modena & Programmatore & Ampliamento appendice §B \\
 		\hline 3.0.0 & 2018-04-10 & Cristiano Tessarolo & Responsabile & Approvazione \\
 		\hline 2.2.0 & 2018-04-09 & Kevin Silvestri & Verificatore & Verifica \\
@@ -581,14 +580,16 @@ Il ciclo di Deming (anche conosciuto come ciclo PDCA, l'acronimo di Plan-Do-Chec
 
 \section{Introduzione}
 
-In questa appendice vengono illustrati nel dettaglio i test da eseguirsi sul prodotto software, secondo classificazione introdotta nelle NP (§3.4.6.2 "Test"). Si vuole sottolineare l'incrementalità della presente appendice, che andrà ad espandersi in maniera proporzionale allo sviluppo del software.
+In questa appendice vengono illustrati nel dettaglio i test da eseguirsi sul prodotto software, secondo classificazione introdotta nelle NP (§3.4.5 "Test"). Si vuole sottolineare l'incrementalità della presente appendice, che andrà ad espandersi in maniera proporzionale allo sviluppo del software.
 
-\section{Test di Sistema}
+\section{Test di sistema}
 
 Vengono di seguito elencati i test previsti per assicurare che il sistema rispetti le specifiche esplicitate dai requisiti (elencati nell'AR) e per garantire il buon funzionamento del prodotto.
 
 \setlength\LTleft{6mm}
 	\begin{longtable}[c]{| p{2cm} |p{8cm} | p{2.5cm} |}
+	\caption{Test di sistema}
+	\\
 	\hline
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}\\
 	\hline
@@ -599,14 +600,14 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	\\[1em]
 	\hline
 	\newline TSOF1&
-	\newline L'utente può accedere al menu file&
+	\newline L'utente può accedere al menù file&
 	\newline \textcolor{green}{Superato}
 	\\[1em]	
 	
 	\hline
 	
 	\newline TSOF2&
-	\newline L'utente può caricare un file Json&
+	\newline L'utente può caricare un file JSon&
 	\newline \textcolor{green}{Superato}
 	\\[1em]	
 	\hline	
@@ -618,13 +619,13 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	\hline	
 	
 	\newline TSFF2.2&
-	\newline L'utente può modificare il file Json cambiando l'ordine o rimuovendo gli Utterance Processor nell'Utterance Type&
+	\newline L'utente può modificare il file JSon cambiando l'ordine o rimuovendo gli utterance processor nell'utterance type&
 	\newline Non implementato
 	\\[1em]	
 	\hline
 	
 	\newline TSFF2.2.1&
-	\newline L'utente può salvare nel file JSon le modifiche agli Utterance Processor&
+	\newline L'utente può salvare nel file JSon le modifiche agli utterance processor&
 	\newline Non implementato
 	\\[1em]	
 	\hline
@@ -636,7 +637,7 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	\hline
 	
 	\newline TSOF3&		
-	\newline L'utente può inizializzare Speect con il file json&
+	\newline L'utente può inizializzare Speect con il file JSon&
 	\newline \textcolor{green}{Superato}
 	\\[1em]	
 	\hline	
@@ -648,7 +649,7 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	\hline
 	
 	\newline TSOF4&
-	\newline L'utente può salvare l'audio risultante con estensione WAV&
+	\newline L'utente può salvare l'audio risultante con estensione \verb|.wav|&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
@@ -677,19 +678,19 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	\\[1em]
 	\hline
 	\newline TSOF6&
-	\newline L'utente può selezionare la Utterance Type&
+	\newline L'utente può selezionare l'utterance type&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
 	\newline TSDF6.1.1&
-	\newline L'utente può spostare gli Utterance Processor di un Utterance Type&
+	\newline L'utente può spostare gli utterance processor di un ttterance type&
 	\newline Non implementato
 	\\[1em]
 	\hline	
 	
 	\newline TSDF6.1.2&
-	\newline L'utente può rimuovere gli Utterance Processor di un Utterance Type&
+	\newline L'utente può rimuovere gli utterance processor di un utterance type&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline	
@@ -701,12 +702,12 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	
 	\hline
 	\newline TSOF8&
-	\newline L'utente può eseguire il testo inserito&
+	\newline L'utente può eseguire Speect per il testo inserito&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	\newline TSOF8.1&
-	\newline Il sistema visualizza l'errore di esecuzione se Speect fallisce l'esecuzione&
+	\newline Il sistema visualizza un errore di esecuzione se Speect fallisce l'esecuzione&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
@@ -749,7 +750,7 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	\hline
 	
 	\newline TSDF9.3.1.1&
-	\newline L'utente può modificare il name del nodo selezionato&
+	\newline L'utente può modificare il \textit{name} del nodo selezionato&
 	\newline Non implementato
 	\\[1em]
 	\hline
@@ -779,7 +780,7 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	\hline
 	
 	\newline TSDF9.5.1&
-	\newline L'utente può modificare il colore con il quale si evidenzia il focus&
+	\newline L'utente può modificare il colore con cui si evidenzia il focus&
 	\newline Non implementato
 	\\[1em]
 	\hline
@@ -815,7 +816,7 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	\hline	
 	
 	\newline TSFF10&
-	\newline L'utente può eseguire ogni Utterance Processor singolarmente&
+	\newline L'utente può eseguire ogni utterance processor singolarmente&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
@@ -871,12 +872,13 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	\newline Non implementato
 	\\[1em]
 	\hline
-\caption{Test di sistema}
 \end{longtable}
 
 \subsection{Tracciamento test di sistema-requisiti}
 
 \begin{longtable}{| p{4cm} |p{4cm}  |}
+	\caption{Tracciamento test di sistema-requisiti}
+	\\
 	\hline
 	\textbf{Test} & \textbf{Requisito}\\
 	\hline
@@ -1021,15 +1023,16 @@ Vengono di seguito elencati i test previsti per assicurare che il sistema rispet
 	TSDV2.1&RDV2.1
 	\\[1em]
 	\hline
-\caption{Tracciamento test di sistema-requisiti}
 \end{longtable}
 
-\section{Test di Validazione}
+\section{Test di validazione}
 
 Vengono di seguito descritti i test per il collaudo del software, con i quali si accerta che il prodotto sia conforme alle attese del Committente. Ogni test ha un codice, descrizione, passi dell'utente per svolgerlo e stato di implementazione.
 
 
 \begin{longtable}[c]{| p{2.5cm} |p{8cm} | p{2.5cm} |}
+	\caption{Test di validazione}
+	\\
 	\hline
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}\\
 	\hline
@@ -1038,18 +1041,18 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\newline TVOF2&
 	\newline L'utente può caricare un file Json. L'utente deve:
 	\begin{itemize}
+		\item premere su Load;
 		\item aprire il file browser;
-		\item selezionare il file Json:
-		\item premere su Carica.
+		\item selezionare il file Json.
 	\end{itemize}&
 	\newline \textcolor{green}{Superato}
 	\\[1em]	
 	\hline	
 	
 	\newline TVFF2.2&
-	\newline L'utente può modificare il file Json cambiando l'ordine o rimuovendo gli Utterance Processor nell'Utterance Type. L'utente deve:
+	\newline L'utente può modificare il file Json cambiando l'ordine o rimuovendo gli utterance processor nell'utterance type. L'utente deve:
 	\begin{itemize}
-		\item cliccare sull'Utterance Processor;
+		\item cliccare sull'utterance processor;
 		\item se vuole cambiare l'ordine, riordinare tramite i pulsanti forniti;
 		\item se vuole rimuovere, preme sull'apposito pulsante. 
 	\end{itemize}&
@@ -1058,10 +1061,10 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\hline
 	
 	\newline TVFF2.2.1&
-	\newline L'utente può salvare nel file JSon le modifiche agli Utterance Processor. L'utente deve:
+	\newline L'utente può salvare nel file JSon le modifiche agli utterance processor. L'utente deve:
 	\begin{itemize}
 		\item aprire il menu File;
-		\item premere su Salva File Json.
+		\item premere su Save Json File.
 	\end{itemize}&
 	\newline Non implementato
 	\\[1em]	
@@ -1074,11 +1077,11 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\hline
 	
 	\newline TVOF3&		
-	\newline L'utente può inizializzare Speect con il file json. L'utente deve:
+	\newline L'utente può inizializzare Speect con il file JSon. L'utente deve:
 	\begin{itemize}
+		\item premere su Load;
 		\item aprire il file browser;
-		\item selezionare il file Json:
-		\item premere su Carica.
+		\item selezionare il file JSon.
 	\end{itemize}&
 	\newline \textcolor{green}{Superato}
 	\\[1em]	
@@ -1091,12 +1094,13 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\hline
 	
 	\newline TVOF4&
-	\newline L'utente può salvare l'audio risultante con estensione WAV. L'utente deve:
+	\newline L'utente può salvare l'audio risultante con estensione \verb|.wav|. L'utente deve:
 	\begin{itemize}
+		\item selezionare Save Audio File da menù File;
 		\item aprire il file browser;
-		\item spostarsi sulla cartella di destinazione;
+		\item spostarsi nella cartella di destinazione;
 		\item scrivere il nome del file nella barra di testo;
-		\item premere su Salva.
+		\item confermare il salvataggio.
 	\end{itemize}&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
@@ -1105,6 +1109,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\newline TVOF4.1&
 	\newline L'utente può selezionare dove salvare il file. L'utente deve:
 	\begin{itemize}
+		\item selezionare Save Audio File da menù File;
 		\item aprire il file browser;
 		\item spostarsi sulla cartella di destinazione;
 	\end{itemize}&
@@ -1115,10 +1120,10 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\newline TVOF4.1.1&
 	\newline L'utente può scrivere il nome del file da salvare. L'utente deve:
 	\begin{itemize}
+		\item selezionare Save Audio File da menù File;
 		\item aprire il file browser;
 		\item spostarsi sulla cartella di destinazione;
-		\item scrivere il nome del file nella barra di testo;
-		\item premere su Salva.
+		\item scrivere il nome del file nella barra di testo.
 	\end{itemize}&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
@@ -1131,30 +1136,30 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	
 	\hline
 	\newline TVOF6&
-	\newline L'utente può selezionare la Utterance Type. L'utente deve:
+	\newline L'utente può selezionare l'utterance type. L'utente deve:
 	\begin{itemize}
-		\item aprire il menu a tendina relativo;
-		\item cliccare sull'Utterance Type desiderato.
+		\item aprire il menù a tendina relativo;
+		\item cliccare sull'utterance type desiderato.
 	\end{itemize}&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
 	\newline TVDF6.1.1&
-	\newline L'utente può spostare gli Utterance Processor di un Utterance Type. L'utente deve:
+	\newline L'utente può spostare gli utterance processor di un utterance type. L'utente deve:
 	\begin{itemize}
-		\item selezionare un Utterance Processor;
-		\item riordinare l'Utterance Processor selezionato.
+		\item selezionare un utterance processor;
+		\item riordinare l'utterance processor selezionato.
 	\end{itemize}&
 	\newline Non implementato
 	\\[1em]
 	\hline	
 	
 	\newline TVDF6.1.2&
-	\newline L'utente può rimuovere gli Utterance Processor di un Utterance Type. L'utente deve:
+	\newline L'utente può rimuovere gli utterance processor di un utterance type. L'utente deve:
 	\begin{itemize}
-		\item selezionare un Utterance Processor;
-		\item rimuovere l'Utterance Processor selezionato.
+		\item selezionare un utterance processor;
+		\item rimuovere l'utterance processor selezionato.
 	\end{itemize}&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
@@ -1176,7 +1181,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\\[1em]
 	\hline
 	\newline TVOF8.1&
-	\newline Il sistema visualizza l'errore di esecuzione se Speect fallisce l'esecuzione. L'utente deve:
+	\newline Il sistema visualizza un errore di esecuzione se Speect fallisce l'esecuzione. L'utente deve:
 	\begin{itemize}
 		\item inserire del testo nello spazio apposito che crei un errore in Speect;
 		\item premere sul tasto di esecuzione.
@@ -1199,7 +1204,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\newline TVOF9.1&
 	\newline L'utente può visualizzare l'informazione generale di ogni nodo sul grafo. L'utente deve:
 	\begin{itemize}
-		\item selezionare il nodo desiderato;
+		\item selezionare il nodo desiderato.
 	\end{itemize}&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
@@ -1224,18 +1229,18 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\newline TVOF9.3.1&
 	\newline L'utente può visualizzare tutte le informazioni del nodo selezionato. L'utente deve:
 	\begin{itemize}
-		\item selezionare il nodo desiderato;
+		\item selezionare il nodo desiderato.
 	\end{itemize}&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
 	\newline TVDF9.3.1.1&
-	\newline L'utente può modificare il name del nodo selezionato. L'utente deve:
+	\newline L'utente può modificare il \textit{name} del nodo selezionato. L'utente deve:
 	\begin{itemize}
 		\item selezionare il nodo desiderato;
-		\item selezionare la casella di testo del name;
-		\item modificare il name;
+		\item selezionare la casella di testo del \textit{name};
+		\item modificare il \textit{name};
 		\item rimuovere il focus dalla casella di testo.
 	\end{itemize}&
 	\newline Non implementato
@@ -1258,10 +1263,10 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\newline L'utente può evidenziare un nodo del grafo tramite percorso partendo da un nodo selezionato. L'utente deve:
 	\begin{itemize}
 		\item selezionare il nodo desiderato;
-		\item premere su menu File;
-		\item premere su Ricerca Path;
+		\item premere su menù File;
+		\item premere su Search Path;
 		\item inserire il percorso da cercare;
-		\item premere su Ricerca.
+		\item premere su Search.
 	\end{itemize}&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
@@ -1271,10 +1276,10 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\newline Il sistema visualizza un errore se il path porta fuori dal grafo e riapre la ricerca. L'utente deve:
 	\begin{itemize}
 		\item selezionare il nodo desiderato;
-		\item premere su menu File;
-		\item premere su Ricerca Path;
+		\item premere su menù File;
+		\item premere su Search Path;
 		\item inserire un percorso da cercare non valido;
-		\item premere su Ricerca.
+		\item premere su Search.
 	\end{itemize}&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
@@ -1283,14 +1288,14 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\newline TVOF9.5&
 	\newline I nodi selezionati dall'utente vengono evidenziati. L'utente deve:
 	\begin{itemize}
-		\item selezionare il nodo desiderato;
+		\item selezionare il nodo desiderato.
 	\end{itemize}&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	
 	\newline TVDF9.5.1&
-	\newline L'utente può modificare il colore con il quale si evidenzia il focus. L'utente deve:
+	\newline L'utente può modificare il colore con cui si evidenzia il focus. L'utente deve:
 	\begin{itemize}
 		\item selezionare il nodo desiderato;
 		\item selezionare la casella del colore;
@@ -1331,7 +1336,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\newline L'utente può cancellare gli archi dei nodi del grafo. L'utente deve:
 	\begin{itemize}
 		\item selezionare l'arco desiderato;
-		\item premere su Rimuovi.
+		\item premere su Remove.
 	\end{itemize}&
 	\newline Non implementato
 	\\[1em]
@@ -1340,7 +1345,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\newline TVFF9.8.2&
 	\newline L'utente può aggiungere archi a dei nodi del grafo. L'utente deve:
 	\begin{itemize}
-		\item premere su Aggiungi Arco;
+		\item premere su Add Arc;
 		\item selezionare il nodo di partenza;
 		\item selezionare il nodo di arrivo.
 	\end{itemize}&
@@ -1349,7 +1354,7 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\hline
 	
 	\newline TVFF9.9&
-	\newline L'utente può modificare il grafo prodotto durante l'esecuzione di Speect . L'utente deve:
+	\newline L'utente può modificare il grafo prodotto durante l'esecuzione di Speect. L'utente deve:
 	\begin{itemize}
 		\item{} selezionare un nodo;
 		\item{} spostare un nodo;
@@ -1361,9 +1366,9 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\hline
 	
 	\newline TVFF10&
-	\newline L'utente può eseguire ogni Utterance Processor singolarmente. L'utente deve:
+	\newline L'utente può eseguire ogni utterance processor singolarmente. L'utente deve:
 	\begin{itemize}
-		\item selezionare L'Utterance Processor desiderato;
+		\item selezionare L'utterance processor desiderato;
 		\item compilare il campo di testo;
 		\item premere sul tasto di esecuzione.
 	\end{itemize}&
@@ -1374,8 +1379,8 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\newline TVFF11&
 	\newline L'utente può salvare il grafo. L'utente deve:
 	\begin{itemize}
-		\item aprire il menu File;
-		\item premere su Salva File JSon.
+		\item aprire il menù File;
+		\item premere su Save JSon File.
 	\end{itemize}&
 	\newline Non implementato
 	\\[1em]
@@ -1396,9 +1401,10 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\newline TVFF12&
 	\newline L'utente può caricare un grafo. L'utente deve:
 	\begin{itemize}
+		\item selezionare Import Graph da menù File;
 		\item aprire il file browser;
 		\item selezionare il file da importare;
-		\item premere su Apri Grafo.
+		\item confermare l'importazione.
 	\end{itemize}&
 	\newline Non implementato
 	\\[1em]
@@ -1407,9 +1413,10 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\newline TVFF12.1&
 	\newline Il sistema deve visualizzare un errore se non riesce a caricare il grafo. L'utente deve:
 	\begin{itemize}
+		\item selezionare Import Graph da menù File;
 		\item aprire il file browser;
 		\item selezionare il file non compatibile da importare;
-		\item premere su Apri Grafo.
+		\item confermare l'importazione.
 	\end{itemize}&
 	\newline Non implementato
 	\\[1em]
@@ -1424,12 +1431,13 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	\newline Non implementato
 	\\[1em]
 	\hline
-\caption{Test di validazione}
 \end{longtable}
 
 \subsection{Tracciamento test di validazione-requisiti}
 
 \begin{longtable}{| p{4cm} |p{4cm}|}
+	\caption{Tracciamento test di validazione-requisiti}
+	\\
 	\hline
 	\textbf{Test} & \textbf{Requisito}\\
 	\hline
@@ -1555,15 +1563,16 @@ Vengono di seguito descritti i test per il collaudo del software, con i quali si
 	 TVFF13&RFF13
 	\\[1em]
 	\hline
-\caption{Tracciamento test di validazione-requisiti}
 \end{longtable}
 
-\section{Test di Unità}
+\section{Test di unità}
 
 Verranno qui presentati i test previsti per le più piccole unità software, ovvero i metodi indipendentemente dal sistema di cui fanno parte. I test a seguire sono quelli previsti per lo stato attuale del prodotto, verranno successivamente incrementati durante lo sviluppo dello stesso.
 
 \setlength\LTleft{6mm}
 \begin{longtable}[c]{| p{2.5cm} |p{8cm} | p{2.5cm} |}
+	\caption{Test di unità}
+	\\
 	\hline
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}\\
 	\hline
@@ -1584,12 +1593,12 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 	\\[1em]
 	\hline
 	\newline TU4&
-	\newline Viene verificato il corretto carica dell'\verb|utterance type|&
+	\newline Viene verificato il corretto caricamento dell'\verb|utterance type|&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	\newline TU5&
-	\newline Viene verificato che il testo venga caricato su \textit{Speect} correttamente&
+	\newline Viene verificato che il testo venga caricato in \textit{Speect} correttamente&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
@@ -1599,7 +1608,7 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 	\\[1em]
 	\hline
 	\newline TU7&
-	\newline Viene verificato che l'esecuzione degli utterance processors selezionati avvenga correttamente&
+	\newline Viene verificato che l'esecuzione degli utterance processor selezionati avvenga correttamente&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
@@ -1619,22 +1628,22 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 	\\[1em]
 	\hline
 	\newline TU11&
-	\newline Viene verificato il caricamento di un plugin&
+	\newline Viene verificato il caricamento di un plug-in&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	\newline TU12&
-	\newline Viene verificata la corretta emissione di un errore in caso di mancato caricamento di un plugin su \textit{Speect}&
+	\newline Viene verificata la corretta emissione di un errore in caso di mancato caricamento di un plug-in su \textit{Speect}&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	\newline TU13&
-	\newline Viene verificata la corretta configurazione&
+	\newline Viene verificata la corretta configurazione di Speect&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
 	\newline TU14&
-	\newline Viene verificata la corretta configurazione dopo la modifica&
+	\newline Viene verificata la corretta configurazione di Speect dopo la modifica&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
@@ -1664,7 +1673,7 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 	\\[1em]
 	\hline
 	\newline TU20&
-	\newline Viene verificato la corretta visualizzazione di ogni arco&
+	\newline Viene verificata la corretta visualizzazione di ogni arco&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
@@ -1719,7 +1728,7 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 	\\[1em]
 	\hline
 	\newline TU31&
-	\newline Viene verificata la corretta richiesta di processo&
+	\newline Viene verificata la corretta richiesta di esecuzione di un processor&
 	\newline \textcolor{green}{Superato}
 	\\[1em]
 	\hline
@@ -1773,6 +1782,8 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 \subsection{Tracciamento test di unità-metodi}
 
 \begin{longtable}[c]{| p{2.5cm} |p{11.5cm}|}
+	\caption{Tracciamento test di unità-metodi}
+	\\
 	\hline
 	\textbf{Test} & \textbf{Metodo}\\
 	\hline
@@ -1951,12 +1962,14 @@ Verranno qui presentati i test previsti per le più piccole unità software, ovv
 	\hline
 \end{longtable}
 
-\section{Test di Integrazione}
+\section{Test di integrazione}
 
 Vengono di seguito presentati i test d'integrazione previsti per le varie componenti, al fine di accertarne il corretto funzionamento quando messe in relazione l'una con le altre.
 
 \setlength\LTleft{6mm}
 \begin{longtable}{| p{2.5cm} |p{5cm} | p{2.5cm} |}
+	\caption{Test di integrazione}
+	\\
 	\hline
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}\\
 	\hline
@@ -1991,6 +2004,8 @@ Vengono di seguito presentati i test d'integrazione previsti per le varie compon
 \subsection{Tracciamento test di integrazione-componenti}
 
 \begin{longtable}{| p{3cm} |p{6cm}|}
+	\caption{Tracciamento test di integrazione-componenti}
+	\\
 	\hline
 	\textbf{Test} & \textbf{Componente}\\
 	\hline
@@ -2026,7 +2041,7 @@ Nel periodo precedente alla consegna per una revisione vengono verificati i docu
 	\item Applicazione del ciclo PDCA allo scopo di migliorare e velocizzare le future verifiche.
 \end{enumerate}
 
-\noindent In secondo luogo, viene applicato il metodo Inspection mediante l'uso della lista di controllo stilata sulla base dei documenti già sottoposti a verifica, con particolare enfasi sugli errori più comuni.
+\noindent In secondo luogo, viene applicato il metodo inspection mediante l'uso della lista di controllo stilata sulla base dei documenti già sottoposti a verifica, con particolare enfasi sugli errori più comuni.
 
 \noindent Il tracciamento dei requisiti viene effettuato tramite il software \glossario{SWEgo}{SWEgo} e successivamente controllato manualmente per assicurarne la correttezza.
 Vengono infine controllati prodotti software e documentali e relativi processi ponendo attenzione sul rispetto delle metriche proposte in questo documento.
